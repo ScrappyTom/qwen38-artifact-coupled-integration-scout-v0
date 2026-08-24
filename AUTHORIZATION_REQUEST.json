@@ -1,10 +1,12 @@
 {
-  "schema_version": "artifact-coupled-live-authorization-request-v0",
+  "schema_version": "northstar-transfer-live-authorization-request-v0",
   "authorized": false,
-  "scope": "artifact_coupled_maintenance_expression_qualification_v0",
-  "run_id": "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0",
+  "selected_next_gate": false,
+  "scope": "northstar_transfer_expression_qualification_v0",
+  "run_id": "2026-08-24-northstar-transfer-expression-qualification-v0",
   "maximum_model_calls": 4,
   "attempts_per_call": 1,
   "retries": 0,
-  "expected_user_quote_template": "I authorize the frozen four-call artifact-coupled expression qualification at commit {commit}, run ID 2026-08-24-artifact-coupled-maintenance-expression-qualification-v0: at most 4 model calls, one attempt per call, zero retries."
+  "note": "Retained only as an optional task-specific expression diagnostic. Offline Stage 0 selects the ordinary pressure screen, not this run.",
+  "expected_user_quote_template": "I authorize the frozen four-call Northstar transfer expression qualification at commit {commit}, run ID 2026-08-24-northstar-transfer-expression-qualification-v0: at most 4 model calls, one attempt per call, zero retries."
 }

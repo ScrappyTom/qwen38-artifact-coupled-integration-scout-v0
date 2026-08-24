@@ -1,87 +1,113 @@
-# Qwen3.8 artifact-coupled integration scout v0
+# Qwen3.8 Northstar artifact-coupling transfer scout
 
-Status: measured interaction scout complete. Both sealed configurations,
-the independent mechanical audit, and the candidate-bound semantic
-adjudication passed their validation procedures. Neither configuration
-produced a closure-ready artifact; no architecture promotion is claimed.
+Status: offline Stage 0 implemented; GPU withheld. The next eligible live
+operation is the frozen ordinary pressure screen. No authentic pressure or
+measured treatment effect is claimed yet.
 
-This repository implements the next whole-system interaction scout in the
-bounded-context experimental program. It does not compare an isolated memory
-component. It compares two viable operating systems over the same pressured
-evidence-to-artifact loop:
+This branch transfers the artifact-coupling interaction to a fresh synthetic
+task/world. It does not isolate a note, digest, eviction rule, or edit action.
+It compares two complete evidence-to-work systems after the same authentic
+pre-treatment pressure boundary:
 
-| System | Semantic integration maintenance | Task-native effect |
+| Configuration | Bounded integration | Exact task-world effect |
 |---|---|---|
-| `D0_DETACHED` | Complete bounded replacement ledger | Remains a non-authoritative model-facing sidecar |
-| `A1_COUPLED` | The same bounded replacement operation and budget | Becomes the exact versioned `EVIDENCE_INTEGRATION_LEDGER.md` candidate file |
+| `D0_DETACHED` | Complete replacement evidence ledger | Model-facing, non-authoritative sidecar; maintenance does not mutate the candidate |
+| `A1_COUPLED` | The same operation, input rule, and budget | Replaces the exact versioned `EVIDENCE_INTEGRATION_LEDGER.md` candidate file and emits a candidate effect |
 
-Both systems keep evidence ingress, exact custody, positive-savings first-fit
-relief, exact reopen, incremental decision-section edits, checks, repair, and
-submission live. The causal unit is the complete trajectory.
+Both configurations retain actor-selected single and batch ingress, exact
+custody and reopen, strictly positive deterministic first-fit relief,
+maintenance, incremental task-artifact edits, effect uptake, candidate-bound
+checks, repair, recheck, and closure proposal. The unit of analysis is the
+whole trajectory.
 
-The fresh task asks the actor to produce two exact deliverables from fourteen
-source documents taken from the prior program at a pinned commit:
+## Fresh task and world
 
-1. an evidence-integration ledger; and
-2. a bounded-agent architecture decision.
+The actor must produce a Northstar event-ingestion migration architecture
+package from fourteen independently authored synthetic source documents. The
+world contains 146,617 bytes and 61,500 offline-tokenizer tokens. It includes
+cross-source constraints and conflicts around delivery identity, a 31-hour
+retry versus a 48-hour deduplication requirement, the schema-v3 rollback
+boundary, EU data residency, an 11.1-hour vendor outage, twelve-hour local
+spooling, per-tenant tail latency, full tenant-hour reconciliation, capacity,
+security, and readiness.
 
-This creates the interaction E40 could not test. E40's maintenance output was
-semantic prose beside an unchanged nine-word candidate. Here semantic
-integration can either remain detached or cross an exact task-world boundary,
-be checked against the current composite candidate version, influence later
-actor decisions, be repaired, and reach or fail closure.
+The generator in `tools/materialize_transfer_world.py` is the source of truth.
+`task/TASK_SOURCE_LOCK.json` binds every task, evaluator, candidate, world, and
+source byte. The active catalog references only `task/transfer_sources/`; the
+prior program-document task remains historical repository evidence and is not
+actor-accessible in this transfer.
 
-## Scientific question
+## Offline Stage 0 disposition
 
-> Under authentic context pressure, does coupling bounded model-authored
-> integration to an exact, inspectable, incrementally revisable task artifact
-> improve evidence conversion, effect uptake, verification, repair, and useful
-> completion relative to an equally costly detached semantic sidecar?
+Offline Stage 0 establishes:
 
-The study does **not** claim that artifact coupling is always useful. It can
-anchor errors, consume candidate and prompt budget, create stale checks, or
-accelerate false closure. Those are measured system outcomes.
+- a fresh task/world and deterministic source custody;
+- viable detached and coupled comparators through a full provider-free loop;
+- exact result delivery, positive relief, maintenance, candidate effects,
+  stale-check detection, repair, current recheck, and submission plumbing;
+- a mechanical candidate-bound evaluator plus a separately frozen
+  condition-blinded R01–R12 adjudication and readiness rule;
+- an event-contingent trajectory budget: up to 22 actor calls to cross a
+  mechanical construction milestone, then exactly eight more actor decisions;
+- enough protected tail for the clean four-decision sequence of check, repair,
+  recheck, and closure, plus four additional decisions for targeted repair or
+  action loss;
+- frozen screen and measured runners, authorization scopes, tests, audit, and
+  handoff verification; and
+- explicit rejection of the placeholder boundary, measured authorization, and
+  any claim that accessible-world size proves realized pressure.
 
-## Stage 0 gates
+The construction milestone grants decisions only. It requires the exact title,
+all eight headings in order, at least 1,100 decision words, and at least eight
+source citations. It sets semantic readiness to `not_adjudicated`; it is not a
+quality or closure judgment.
 
-No provider call may occur until the frozen offline preflight establishes:
+## Authentic activation gate
 
-- exact source/task/candidate custody;
-- a viable pressure-active trajectory geometry;
-- identical accessible evidence and ordinary actions across systems;
-- no post-trajectory evidence injection;
-- strictly positive first-fit substitutions only;
-- version-bound effects and current/stale checks;
-- provider-free full-loop fixtures for both systems;
-- a bounded maintenance-expression contract; and
-- explicit actor, maintenance, token, wall-time, and reentry budgets.
+Offline work cannot establish authentic model-driven pressure. The next live
+screen therefore runs ordinary chronology only—no relief, maintenance,
+sidecar, coupling, or reentry—and stops at a qualifying undeliverable source
+observation. A boundary qualifies only if:
 
-The four-call expression qualification passed at frozen commit
-`7d71c7d666403da7f0be9494a77a771435144f69`: both bounded maintenance
-operations and both new task-artifact action shapes passed their frozen
-admission rules. This qualifies expression transport only; it does not
-establish task utility or authorize a measured actor.
+- at least four prior source observations crossed model boundaries;
+- the pending result is a source observation;
+- the candidate is still exact-initial;
+- no check or submission occurred;
+- the next ordinary prompt exceeds 20,992 tokens; and
+- the post-run audit proves a strictly positive first-fit relief substitution
+  exists while the pending result remains protected.
 
-The ordinary no-relief screen reached authentic result-delivery pressure after
-eight actor calls. The pending `RESULT-008` would make the next prompt 21,959
-tokens against a 20,992-token allowance, an overflow of 967 tokens. The exact
-boundary and audit are recorded in `PRESSURE_BOUNDARY_HANDOFF.json` and
-`PRESSURE_SCREEN_RESULT.md`.
+That last condition ensures the selected fork can activate the D0/A1
+interaction. Total corpus size is not activation evidence.
 
-The matched continuation is now implemented against that exact fork. Its
-provider-free fixture exercises relief, maintenance, actor uptake, candidate
-effects, incremental edits, stale/current checks, repair, and submission in
-both configurations. `MEASURED_STUDY_PLAN.md` and
-`MEASURED_INTERACTION_CONTRACT.json` define the whole-system contrast.
+The screen permits at most 18 actor calls, 500,000 serialized tokens, one
+attempt per call, and zero retries. A valid screen is committed and audited
+before the measured continuation can be preflighted or authorized.
 
-The final offline preflight passed, including the exact boundary handoff,
-provider-free two-arm loop, frozen budgets, treatment semantics, and
-authorization contract. The owner subsequently authorized and completed the
-frozen measured run at
-`4937083f29df3247a84b3b399c0a7ae922ddb020`.
+## Evaluation and readiness
 
-Across 40 actor calls and 19 maintenance calls, artifact coupling accelerated
-full construction and checking but did not produce useful completion. Both
-arms exhausted their actor-call budgets and ended with strong-partial,
-not-ready candidates. See `MEASURED_INTERACTION_RESULT.md` and the exact
-candidate-bound `SEMANTIC_ADJUDICATION.json`.
+The mechanical evaluator is bound to the exact composite candidate and exposes
+stable, version-bound diagnostics. Mechanical success still yields
+`not_adjudicated`: it cannot authorize closure. The frozen semantic protocol
+requires every R01–R12 criterion to be met, no unsupported or forbidden claim,
+no unresolved blocker, and a current candidate-bound final check. Submission
+behavior never changes readiness.
+
+Useful completion jointly requires complete artifact quality, correct
+readiness/closure, and final-effect uptake or independent reconciliation.
+Fewer reads, lower cost, or submission alone are not wins.
+
+## Active files
+
+- `STAGE0_PLAN.md` — offline and live qualification ladder
+- `STAGE0_PREFLIGHT.json` — offline disposition
+- `STAGE0_GEOMETRY.json` — task and decision-budget geometry
+- `STAGE0_INTERACTION_FIXTURE.json` — small provider-free lifecycle fixture
+- `STAGE0_MEASURED_FIXTURE.json` — full two-configuration dry run
+- `PRESSURE_SCREEN_CONTRACT.json` — authentic activation gate
+- `NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json` — intentionally invalid placeholder
+- `MEASURED_INTERACTION_CONTRACT.json` — future matched continuation
+- `SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json` — candidate quality/readiness governance
+
+Files describing the completed prior artifact-coupling study are retained as
+append-only historical evidence. They are not active Northstar qualifications.

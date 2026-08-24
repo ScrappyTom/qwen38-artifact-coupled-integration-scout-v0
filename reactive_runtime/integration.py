@@ -98,7 +98,7 @@ Return only a complete replacement Markdown evidence-integration ledger whose
 first line is exactly `{INTEGRATION_PREFIX}`. Do not take an ordinary task
 action. Integrate source-grounded findings, qualifications, cross-source
 relationships, requirement bindings R01-R12, contradictions, and unresolved
-evidence useful for the authoritative task.
+evidence useful for the Northstar migration decision.
 
 The output is model-authored and lossy. It cannot authorize readiness or
 submission. Replace prior material rather than appending indefinitely. Keep it

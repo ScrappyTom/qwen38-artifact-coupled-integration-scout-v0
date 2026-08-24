@@ -27,8 +27,8 @@ from tools.live_common import (
 from tools.verify_runtime_assets import verify as verify_runtime_assets
 
 
-RUN_ID = "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0"
-SCOPE = "artifact_coupled_maintenance_expression_qualification_v0"
+RUN_ID = "2026-08-24-northstar-transfer-expression-qualification-v0"
+SCOPE = "northstar_transfer_expression_qualification_v0"
 MAX_CALLS = 4
 
 
@@ -137,7 +137,7 @@ def main() -> int:
             row = {"case_id": case.case_id, "seed": case.seed, "prompt_tokens": prompt_tokens, "finish_reason": provider["finish_reason"], "accepted": accepted, "required_action": case.required_action, "parsed_action": parsed, "error": error, "output_sha256": sha256_bytes(output.encode("utf-8")), "usage": provider["usage"]}
             rows.append(row)
             write_json(call_root / "RESULT.json", row)
-        result = {"schema": "artifact-coupled-maintenance-expression-result-v0", "run_id": RUN_ID, "freeze_commit": git_commit(), "model_calls": len(rows), "passed": len(rows) == MAX_CALLS and all(row["accepted"] for row in rows), "cases": rows, "measured_actor_authorized": False}
+        result = {"schema": "northstar-transfer-expression-result-v0", "run_id": RUN_ID, "freeze_commit": git_commit(), "model_calls": len(rows), "passed": len(rows) == MAX_CALLS and all(row["accepted"] for row in rows), "cases": rows, "measured_actor_authorized": False}
         qualified = bool(result["passed"])
         write_json(run_root / "QUALIFICATION_RESULT.json", result)
     except BaseException as exc:

@@ -111,6 +111,38 @@ class ArchitectureWorld:
             chunks.append(f"--- exact candidate file: {name} ---\n" + (self.candidate_root / name).read_text(encoding="utf-8"))
         return "\n".join(chunks)
 
+    def construction_milestone(self) -> dict[str, Any]:
+        """Return the frozen mechanical construction milestone for budgeting.
+
+        This grants post-construction decisions; it does not assert semantic
+        quality, readiness, or closure.
+        """
+        config = json.loads(
+            (self.task_root / "EVALUATOR.json").read_text(encoding="utf-8")
+        )
+        decision = (
+            self.candidate_root / "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
+        ).read_text(encoding="utf-8")
+        headings = re.findall(r"(?m)^## ([^\r\n]+)\s*$", decision)
+        without_citations = re.sub(r"\[S\d{2}\]", "", decision)
+        words = len(re.findall(r"\b[\w’'-]+\b", without_citations))
+        sources = sorted(set(re.findall(r"\[(S(?:0[1-9]|1[0-4]))\]", decision)))
+        passed = (
+            decision.startswith(config["decision_title"])
+            and headings == config["decision_headings"]
+            and words >= config["construction_milestone_minimum_words"]
+            and len(sources) >= config["construction_milestone_minimum_sources"]
+        )
+        return {
+            "passed": passed,
+            "word_count": words,
+            "source_ids": sources,
+            "heading_order_passed": headings == config["decision_headings"],
+            "minimum_words": config["construction_milestone_minimum_words"],
+            "minimum_sources": config["construction_milestone_minimum_sources"],
+            "semantic_readiness": "not_adjudicated",
+        }
+
     def _snapshot(self, cause: str) -> None:
         destination = self.cell_root / "candidate_versions" / f"version-{self.version_index:03d}"
         destination.mkdir(parents=True, exist_ok=False)
@@ -228,6 +260,9 @@ class ArchitectureWorld:
 
     def _run_check(self, result_id: str) -> ExecutionResult:
         evaluated = self.candidate_sha256
+        evaluator_id = json.loads(
+            (self.task_root / "EVALUATOR.json").read_text(encoding="utf-8")
+        )["evaluator_id"]
         raw_handle = f"raw-tool://{result_id}/evaluator"
         command = (sys.executable, str(self.task_root / "evaluator" / "evaluate.py"), str(self.candidate_root))
         process = subprocess.run(command, cwd=self.task_root, capture_output=True, check=False, timeout=180)
@@ -242,9 +277,9 @@ class ArchitectureWorld:
                 raise ValueError("evaluator candidate hash mismatch")
             projection = project_check(evaluation, evaluated_candidate_sha256=evaluated, raw_result_handle=raw_handle, returncode=process.returncode)
         except ValueError as exc:
-            projection = {"blocking_requirements": ["evaluator_protocol_error"], "closure_readiness": "not_ready", "criterion_results": [], "evaluated_candidate_sha256": evaluated, "evaluator_id": "bounded-agent-architecture-evaluator-v0", "passed": False, "protocol_error_class": type(exc).__name__, "raw_result_handle": raw_handle, "raw_result_preserved_exactly": True, "returncode_class": "zero" if process.returncode == 0 else "nonzero", "schema": "architecture-stable-check-projection-v0", "volatile_fields_excluded": True}
+            projection = {"blocking_requirements": ["evaluator_protocol_error"], "closure_readiness": "not_ready", "criterion_results": [], "evaluated_candidate_sha256": evaluated, "evaluator_id": evaluator_id, "passed": False, "protocol_error_class": type(exc).__name__, "raw_result_handle": raw_handle, "raw_result_preserved_exactly": True, "returncode_class": "zero" if process.returncode == 0 else "nonzero", "schema": "northstar-stable-check-projection-v0", "volatile_fields_excluded": True}
         self.last_check_projection = projection
-        return ExecutionResult("check_observation", "evaluator:bounded-agent-architecture-evaluator-v0", evaluated, render_check_projection(projection), self.candidate_sha256, evaluated_candidate_sha256=evaluated, raw_tool_custody=raw, metadata={"check_projection": projection})
+        return ExecutionResult("check_observation", f"evaluator:{evaluator_id}", evaluated, render_check_projection(projection), self.candidate_sha256, evaluated_candidate_sha256=evaluated, raw_tool_custody=raw, metadata={"check_projection": projection})
 
     def current_check_binding(self) -> dict[str, Any] | None:
         if self.last_check_projection is None:

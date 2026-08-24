@@ -1,13 +1,14 @@
 {
-  "schema_version": "artifact-coupled-interaction-authorization-request-v0",
+  "schema_version": "northstar-artifact-coupling-transfer-authorization-request-v0",
   "authorized": false,
-  "scope": "artifact_coupled_interaction_measured_v0",
-  "run_id": "2026-08-24-artifact-coupled-interaction-measured-v0",
+  "scope": "northstar_artifact_coupling_transfer_measured_v0",
+  "run_id": "2026-08-24-northstar-artifact-coupling-transfer-measured-v0",
   "configuration_order": ["D0_DETACHED", "A1_COUPLED"],
-  "maximum_actor_calls": 40,
-  "maximum_maintenance_calls": 24,
-  "maximum_provider_calls": 64,
+  "maximum_actor_calls": 60,
+  "maximum_maintenance_calls": 32,
+  "maximum_provider_calls": 92,
   "attempts_per_call": 1,
   "retries": 0,
-  "expected_user_quote_template": "I authorize the frozen artifact-coupled interaction run at commit {commit}, run ID 2026-08-24-artifact-coupled-interaction-measured-v0: configurations D0_DETACHED then A1_COUPLED; at most 40 actor calls and 24 maintenance calls, at most 64 provider calls total, one attempt per call, zero retries."
+  "prerequisite": "a separately committed qualifying Northstar pressure boundary and a regenerated measured preflight",
+  "expected_user_quote_template": "I authorize the frozen Northstar artifact-coupling transfer run at commit {commit}, run ID 2026-08-24-northstar-artifact-coupling-transfer-measured-v0: configurations D0_DETACHED then A1_COUPLED; at most 60 actor calls and 32 maintenance calls, at most 92 provider calls total, one attempt per call, zero retries."
 }

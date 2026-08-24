@@ -45,6 +45,7 @@ from reactive_runtime.interaction_state import (  # noqa: E402
 from reactive_runtime.policy import positive_savings_first_fit_step  # noqa: E402
 from reactive_runtime.records import ResultLedger, ResultRecord  # noqa: E402
 from reactive_runtime.seal import seal_tree  # noqa: E402
+from reactive_runtime.trajectory_budget import ConstructionBudget  # noqa: E402
 from reactive_runtime.world import ActionRejected, ArchitectureWorld  # noqa: E402
 from tools.live_common import (  # noqa: E402
     LiveTokenizer,
@@ -58,22 +59,26 @@ from tools.live_common import (  # noqa: E402
 from tools.verify_runtime_assets import verify as verify_runtime_assets  # noqa: E402
 
 
-RUN_ID = "2026-08-24-artifact-coupled-interaction-measured-v0"
-SCOPE = "artifact_coupled_interaction_measured_v0"
+RUN_ID = "2026-08-24-northstar-artifact-coupling-transfer-measured-v0"
+SCOPE = "northstar_artifact_coupling_transfer_measured_v0"
 CONFIGURATION_ORDER = ("D0_DETACHED", "A1_COUPLED")
-ACTOR_SEED = 271_830
-MAINTENANCE_SEED = 271_831
+ACTOR_SEED = 860_242
+MAINTENANCE_SEED = 860_243
 PROMPT_LIMIT = 20_992
 CONTEXT_TOKENS = 25_088
 ACTOR_MAX_TOKENS = 4_096
-MAX_ACTOR_CALLS_PER_CELL = 20
-MAX_MAINTENANCE_CALLS_PER_CELL = 12
+MAX_PRECONSTRUCTION_CALLS_PER_CELL = 22
+POSTCONSTRUCTION_CALLS_PER_CELL = 8
+MAX_ACTOR_CALLS_PER_CELL = (
+    MAX_PRECONSTRUCTION_CALLS_PER_CELL + POSTCONSTRUCTION_CALLS_PER_CELL
+)
+MAX_MAINTENANCE_CALLS_PER_CELL = 16
 MAX_REENTRIES_PER_CELL = 2
 MAX_PROVIDER_CALLS = len(CONFIGURATION_ORDER) * (
     MAX_ACTOR_CALLS_PER_CELL + MAX_MAINTENANCE_CALLS_PER_CELL
 )
-MAX_SERIALIZED_TOKENS_PER_CELL = 1_000_000
-MAX_WALL_SECONDS_PER_CELL = 7_200
+MAX_SERIALIZED_TOKENS_PER_CELL = 1_400_000
+MAX_WALL_SECONDS_PER_CELL = 10_800
 
 
 class BudgetStop(RuntimeError):
@@ -91,6 +96,8 @@ def load(path: Path) -> dict[str, Any]:
 
 def verify_task_lock() -> None:
     lock = load(ROOT / "task" / "TASK_SOURCE_LOCK.json")
+    if lock.get("task_id") != "northstar-migration-architecture-package-v0":
+        raise RuntimeError("task lock identity mismatch")
     for row in lock.get("files", []):
         path = ROOT / "task" / str(row["path"])
         if not path.is_file() or sha256_file(path) != row.get("sha256"):
@@ -241,6 +248,10 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
         latest_rejection: str | None = None
         next_result = boundary.next_result_ordinal
         actor_calls = 0
+        trajectory_budget = ConstructionBudget(
+            maximum_preconstruction_calls=MAX_PRECONSTRUCTION_CALLS_PER_CELL,
+            postconstruction_calls=POSTCONSTRUCTION_CALLS_PER_CELL,
+        )
         maintenance_calls = 0
         reentries = 0
         serialized_tokens = 0
@@ -257,8 +268,8 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
                 raise BudgetStop("wall_clock_budget_exhausted")
             if serialized_tokens + prompt_tokens + maximum > MAX_SERIALIZED_TOKENS_PER_CELL:
                 raise BudgetStop("serialized_token_budget_exhausted")
-            if kind == "actor" and actor_calls >= MAX_ACTOR_CALLS_PER_CELL:
-                raise BudgetStop("actor_call_budget_exhausted")
+            if kind == "actor" and not trajectory_budget.can_call():
+                raise BudgetStop(trajectory_budget.exhaustion_disposition())
             if kind == "maintenance" and maintenance_calls >= MAX_MAINTENANCE_CALLS_PER_CELL:
                 raise BudgetStop("maintenance_call_budget_exhausted")
 
@@ -560,6 +571,7 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
                     for event in lifecycle
                 ),
                 "reactive_reentry_count": reentries,
+                "trajectory_budget": trajectory_budget.as_dict(),
                 "action_counts": action_counts,
                 "final_prompt_tokens": count_messages(tokenizer, messages),
                 "mechanical_final_evaluation": mechanical,
@@ -593,8 +605,8 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
             },
         )
 
-        terminal = "actor_call_budget_exhausted"
-        while actor_calls < MAX_ACTOR_CALLS_PER_CELL:
+        terminal = "construction_milestone_not_reached"
+        while trajectory_budget.can_call():
             prompt_tokens, rendered = tokenizer.count_messages(messages)
             if prompt_tokens > PROMPT_LIMIT:
                 raise RuntimeError("unstabilized actor prompt")
@@ -715,6 +727,24 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
                 result_record is not None and result_record.result_kind == "check_observation"
             ):
                 refresh_interaction_state()
+            milestone = world.construction_milestone()
+            crossed_milestone = trajectory_budget.record_call(
+                construction_milestone_passed=bool(milestone["passed"])
+            )
+            if trajectory_budget.actor_calls != actor_calls:
+                raise RuntimeError("trajectory and actor call budgets diverged")
+            if crossed_milestone:
+                lifecycle.append(
+                    {
+                        "event": "construction_milestone_crossed",
+                        "actor_call": actor_calls,
+                        "logical_call": logical_call,
+                        "candidate_sha256": world.candidate_sha256,
+                        "milestone": milestone,
+                        "postconstruction_calls_granted": POSTCONSTRUCTION_CALLS_PER_CELL,
+                        "semantic_readiness": "not_adjudicated",
+                    }
+                )
             row = {
                 "actor_call": actor_calls,
                 "logical_call": logical_call,
@@ -729,6 +759,9 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
                 "result_kind": None if result_record is None else result_record.result_kind,
                 "candidate_sha256_before": before_candidate,
                 "candidate_sha256_after": world.candidate_sha256,
+                "construction_milestone": milestone,
+                "crossed_construction_milestone": crossed_milestone,
+                "trajectory_budget_after": trajectory_budget.as_dict(),
             }
             trace.append(row)
             write_json(call_root / "RESULT.json", row)
@@ -739,10 +772,10 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
             ):
                 terminal = "submitted"
                 break
-            if actor_calls < MAX_ACTOR_CALLS_PER_CELL:
+            if trajectory_budget.can_call():
                 stabilize("post_actor_result_delivery")
         else:
-            terminal = "actor_call_budget_exhausted"
+            terminal = trajectory_budget.exhaustion_disposition()
         result = finalize(terminal)
     except BudgetStop as exc:
         write_json(
@@ -820,6 +853,16 @@ def main() -> int:
             "pressure_handoff": pressure,
             "runtime_assets": assets,
             "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"),
+            "model_profile_lock_sha256": sha256_file(ROOT / "MODEL_PROFILE_LOCK.json"),
+            "measured_contract_sha256": sha256_file(
+                ROOT / "MEASURED_INTERACTION_CONTRACT.json"
+            ),
+            "semantic_adjudication_protocol_sha256": sha256_file(
+                ROOT / "SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json"
+            ),
+            "pressure_handoff_sha256": sha256_file(
+                ROOT / "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
+            ),
         },
     )
     results: list[dict[str, Any]] = []

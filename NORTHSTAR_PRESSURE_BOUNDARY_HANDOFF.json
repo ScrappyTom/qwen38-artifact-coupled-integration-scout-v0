@@ -1,0 +1,10 @@
+{
+  "schema_version": "northstar-pressure-boundary-handoff-v0",
+  "status": "pending_live_screen",
+  "run_id": "2026-08-24-northstar-transfer-pressure-screen-v0",
+  "task_id": "northstar-migration-architecture-package-v0",
+  "pressure_qualified": false,
+  "interaction_trigger_qualified": false,
+  "measured_fork_authorized": false,
+  "note": "This placeholder is intentionally rejected until a qualifying sealed live screen is committed and audited."
+}

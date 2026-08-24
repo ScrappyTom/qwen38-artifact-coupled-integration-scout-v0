@@ -1,20 +1,22 @@
 {
-  "schema_version": "artifact-coupled-interaction-measured-contract-v0",
-  "status": "offline_preflight_passed_pending_frozen_commit_and_explicit_gpu_authorization",
-  "run_id": "2026-08-24-artifact-coupled-interaction-measured-v0",
-  "scope": "artifact_coupled_interaction_measured_v0",
+  "schema_version": "northstar-artifact-coupling-transfer-contract-v0",
+  "status": "offline_stage0_passed_pending_authentic_pressure_boundary_binding",
+  "run_id": "2026-08-24-northstar-artifact-coupling-transfer-measured-v0",
+  "scope": "northstar_artifact_coupling_transfer_measured_v0",
   "configuration_order": ["D0_DETACHED", "A1_COUPLED"],
   "common_boundary": {
-    "run_id": "2026-08-24-artifact-coupled-pressure-screen-v0",
-    "result_commit": "84037853555362380125a244619894535768056f",
-    "pending_result_id": "RESULT-008",
-    "prospective_prompt_tokens": 21959,
-    "prompt_limit": 20992,
-    "overflow_tokens": 967
+    "status": "must_be_generated_by_frozen_ordinary_pressure_screen",
+    "required_task_id": "northstar-migration-architecture-package-v0",
+    "required_pending_result_kind": "source_observation",
+    "minimum_prior_delivered_source_observations": 4,
+    "candidate_must_remain_initial": true,
+    "check_must_not_have_run": true,
+    "submission_must_not_have_occurred": true,
+    "prompt_limit": 20992
   },
   "causal_contrast": {
-    "D0_DETACHED": "accepted bounded integration remains a model-facing non-authoritative sidecar; maintenance does not change the task candidate",
-    "A1_COUPLED": "the same accepted bounded integration becomes the exact versioned EVIDENCE_INTEGRATION_LEDGER.md task artifact and produces an exact candidate effect"
+    "D0_DETACHED": "accepted bounded integration remains a model-facing non-authoritative sidecar and maintenance does not change the exact task candidate",
+    "A1_COUPLED": "the same accepted bounded integration becomes the exact versioned EVIDENCE_INTEGRATION_LEDGER.md task artifact and produces exact candidate effects"
   },
   "common_interacting_system": [
     "actor-selected exact single or batch evidence ingress",
@@ -28,19 +30,28 @@
     "reactive exact reentry only after positive relief is exhausted",
     "external candidate-bound evaluation"
   ],
-  "actor_seed": 271830,
-  "maintenance_seed": 271831,
+  "actor_seed": 860242,
+  "maintenance_seed": 860243,
   "context_tokens": 25088,
   "prompt_limit": 20992,
   "ordinary_response_reserve": 4096,
-  "maximum_actor_calls_per_configuration": 20,
-  "maximum_maintenance_calls_per_configuration": 12,
+  "maximum_preconstruction_actor_calls_per_configuration": 22,
+  "construction_milestone": {
+    "decision_title_exact": "# Northstar Migration Architecture Decision",
+    "all_eight_headings_in_exact_order": true,
+    "minimum_decision_words": 1100,
+    "minimum_distinct_source_citations": 8,
+    "semantic_readiness": "not_adjudicated"
+  },
+  "postconstruction_actor_calls_per_configuration": 8,
+  "maximum_actor_calls_per_configuration": 30,
+  "maximum_maintenance_calls_per_configuration": 16,
   "maximum_reentries_per_configuration": 2,
-  "maximum_serialized_tokens_per_configuration": 1000000,
-  "maximum_wall_seconds_per_configuration": 7200,
-  "maximum_actor_calls": 40,
-  "maximum_maintenance_calls": 24,
-  "maximum_provider_calls": 64,
+  "maximum_serialized_tokens_per_configuration": 1400000,
+  "maximum_wall_seconds_per_configuration": 10800,
+  "maximum_actor_calls": 60,
+  "maximum_maintenance_calls": 32,
+  "maximum_provider_calls": 92,
   "attempts_per_call": 1,
   "retries": 0,
   "maintenance_trigger": "a previously model-visible exact evidence result is externalized by a strictly positive pressure-relief substitution",
@@ -48,7 +59,8 @@
   "maintenance_failure_policy": "retain the prior accepted integration state, expose a compact exact failure receipt, and continue only if the actor packet is feasible",
   "terminal_conditions": [
     "submission",
-    "actor_call_budget_exhausted",
+    "construction_milestone_not_reached",
+    "postconstruction_budget_exhausted",
     "maintenance_call_budget_exhausted",
     "serialized_token_budget_exhausted",
     "wall_clock_budget_exhausted",
@@ -63,6 +75,7 @@
     "useful completion"
   ],
   "secondary_outcomes": [
+    "construction-milestone timing and postconstruction decisions",
     "evidence conversion into the task ledger",
     "integration maintenance acceptance and source coverage",
     "novel reads and exact reopens",
@@ -70,7 +83,7 @@
     "incremental candidate mutations",
     "checks, repair, and submission",
     "prompt, completion, cache, latency, and wall-time costs",
-    "failure migration"
+    "anchoring, interference, and failure migration"
   ],
-  "claim_limit": "This is one matched exploratory whole-system contrast at one authentic boundary. A result supports only configuration-local interaction claims, not component isolation, general architecture promotion, or transfer."
+  "claim_limit": "This is one fresh-world matched exploratory whole-system transfer. A result supports configuration-local transfer evidence, not component isolation or general architecture promotion."
 }

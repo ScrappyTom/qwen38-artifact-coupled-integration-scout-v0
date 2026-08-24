@@ -1,55 +1,63 @@
-# Task: bounded-agent architecture decision package
+# Task: Northstar migration architecture decision package
 
-Produce two exact deliverables from the source catalog:
+Northstar is moving a multi-region event-ingestion service from LegacyQueue to
+StreamCore. Produce two exact deliverables from the source catalog:
 
 1. `EVIDENCE_INTEGRATION_LEDGER.md`
 2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
 
-The decision is for the next phase of a bounded-context agent research program.
-It must distinguish mechanisms that earned a role from mechanisms that were
-only behaviorally active, locally harmful, blocked, or still untested.
+The package must decide a safe, source-grounded ninety-day migration route. It
+must reconcile service objectives, event identity, schema compatibility,
+regional residency, incident history, capacity, vendor limits, rollout gates,
+verification, rollback, and readiness. Do not merely summarize sources.
 
-## Evidence ledger requirements
+## Evidence-ledger contract
 
-The ledger must begin with `# Evidence Integration Ledger` and contain rows or
-sections for `R01` through `R12`. Each requirement entry must state a current
-disposition, cite exact observed sources as `[SNN]`, preserve important
-qualifications or conflicts, and identify unresolved evidence where present.
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, and identify
+unresolved evidence or blockers. A model-authored ledger is lossy and is never
+readiness authority.
 
-## Decision document requirements
+## Decision-document contract
 
-Use exactly these level-two headings, in this order:
+The decision must begin with `# Northstar Migration Architecture Decision` and
+use exactly these level-two headings, in this order:
 
 1. `## Decision and scope`
-2. `## Earned mechanical substrate`
-3. `## Information interactions and failure migration`
-4. `## State, relationships, chronology, and control`
-5. `## Runtime policy`
-6. `## Experimental roadmap`
+2. `## Protocol, topology, and authority`
+3. `## Delivery, identity, and schema safety`
+4. `## Residency, continuity, and failure response`
+5. `## Capacity, observability, and reconciliation`
+6. `## Ninety-day rollout and rollback plan`
 7. `## Verification, readiness, and governance`
-8. `## Uncertainties and falsifiers`
+8. `## Risks, uncertainties, and falsifiers`
 
-The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
-must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
-`S08`, and `S13`.
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least ten distinct source IDs, and cite `S01`, `S03`, `S04`, `S06`, `S07`,
+`S08`, `S10`, `S11`, `S12`, and `S14`.
 
-The package must substantively cover these twelve requirements:
+The complete package must substantively resolve these requirements:
 
-- `R01`: exact external custody and reopenability;
-- `R02`: response/control reserves and positive-savings relief;
-- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
-  distinct boundaries;
-- `R04`: recoverability, residency, behavioral accessibility, and working-set
-  adequacy as distinct properties;
-- `R05`: chronology's external and resident lifecycle;
-- `R06`: cache/prefill and decision-bandwidth costs;
-- `R07`: semantic derivatives as endogenous demand/control inputs;
-- `R08`: the source-digest negative and progress-state false-closure risk;
-- `R09`: host/model ownership supported by manager and paging results;
-- `R10`: E40's detached-sidecar versus task-artifact gap;
-- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
-- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+- `R01`: authoritative topology, regional scope, and authority transitions;
+- `R02`: service objectives, including tenant-local and regional tail gates;
+- `R03`: producer_id:event_id identity, acknowledgement, at-least-once effects,
+  and a deduplication horizon covering the observed 31-hour retry;
+- `R04`: schema-v3 compatibility and the boundary between safe rollback and
+  forward-fix;
+- `R05`: staged cohort rollout, dwell, hold, and advancement gates;
+- `R06`: EU payload residency and the override of generic global failover;
+- `R07`: continuity sized against the observed vendor outage rather than the
+  contractual target alone;
+- `R08`: candidate-bound telemetry and full tenant-hour reconciliation;
+- `R09`: us-west capacity sequencing, spool expansion, and retirement of
+  migration-only cost;
+- `R10`: security, retention, access, audit, and deletion controls;
+- `R11`: a concrete ninety-day sequence with owners, effects, checks, repair,
+  and recheck;
+- `R12`: readiness authority, blocking evidence, uncertainties, and explicit
+  falsifiers.
 
-Do not claim that artifact coupling, notes, digests, progress state, model-owned
-eviction, automatic phase discovery, or a general architecture is already
-validated. Name conditions that would falsify the recommended next policy.
+Do not claim exactly-once delivery, lossless schema-v3 failback through
+LegacyQueue, unrestricted EU-to-US failover, guaranteed four-hour vendor
+recovery, or readiness established by a stale or fleet-average-only check.

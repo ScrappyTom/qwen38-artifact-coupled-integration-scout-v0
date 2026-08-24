@@ -1,46 +1,55 @@
 {
-  "schema_version": "artifact-coupled-integration-scout-v0",
-  "status": "authentic_boundary_and_measured_offline_preflight_passed_gpu_withheld",
+  "schema_version": "northstar-artifact-coupling-transfer-design-v0",
+  "status": "offline_stage0_qualified_live_activation_pending",
+  "task_id": "northstar-migration-architecture-package-v0",
   "unit_of_analysis": "whole_configuration_trajectory",
-  "research_question": "Under authentic context pressure, does coupling bounded semantic integration to exact versioned task work improve evidence conversion, effect uptake, verification, repair, and useful completion relative to an equally costly detached semantic sidecar?",
+  "research_question": "At authentic result-delivery pressure in a fresh large evidence world, does coupling bounded integration to exact revisable task work improve evidence conversion, effect uptake, verification, repair, readiness, and useful completion relative to an equally costly detached sidecar?",
   "configurations": [
     {
       "id": "D0_DETACHED",
       "maintenance": "bounded_complete_replacement_integration_ledger",
-      "maintenance_residency": "model_facing_non_authoritative_sidecar",
-      "candidate_effect": false
+      "residency": "model_facing_non_authoritative_sidecar",
+      "maintenance_candidate_effect": false
     },
     {
       "id": "A1_COUPLED",
       "maintenance": "bounded_complete_replacement_integration_ledger",
-      "maintenance_residency": "exact_task_required_candidate_file",
-      "candidate_effect": true
+      "residency": "exact_versioned_task_ledger",
+      "maintenance_candidate_effect": true
     }
   ],
-  "common_live_loop": [
+  "common_interacting_functions": [
     "actor_selected_single_or_batch_evidence_ingress",
-    "exact_result_delivery",
-    "positive_savings_first_fit_pressure_relief",
-    "bounded_semantic_integration_on_externalization",
-    "actor_uptake_of_maintenance_result_or_effect",
+    "exact_external_custody_and_reopen",
+    "strictly_positive_deterministic_first_fit_relief",
+    "bounded_source_integration_on_externalization",
+    "actor_visible_maintenance_state_or_candidate_effect",
     "incremental_task_artifact_revision",
-    "version_bound_check",
-    "repair",
-    "submission_or_budget_exhaustion",
-    "external_candidate_bound_adjudication"
+    "candidate_version_bound_check_and_currency",
+    "repair_recheck_and_closure_proposal",
+    "independent_candidate_bound_evaluation"
   ],
   "not_isolated_components": true,
-  "interaction_outcomes": [
-    "substitution",
-    "complementarity",
-    "interference",
-    "anchoring",
-    "false_closure",
-    "failure_migration",
-    "nonactivation",
-    "apparatus_censoring"
-  ],
-  "common_boundary": "PRESSURE_BOUNDARY_HANDOFF.json",
+  "authentic_activation": {
+    "status": "pending_live_screen",
+    "screen_contract": "PRESSURE_SCREEN_CONTRACT.json",
+    "handoff": "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json",
+    "requires_positive_relief_trigger": true,
+    "accessible_world_size_is_not_activation": true
+  },
+  "trajectory_budget": {
+    "maximum_preconstruction_actor_calls_per_configuration": 22,
+    "construction_milestone_is_semantically_non_authoritative": true,
+    "postconstruction_actor_calls_per_configuration": 8,
+    "minimum_clean_check_repair_recheck_closure_path": 4,
+    "additional_allowance": 4
+  },
+  "evaluation": {
+    "mechanical_evaluator": "task/EVALUATOR.json",
+    "semantic_protocol": "SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json",
+    "submission_is_not_readiness": true,
+    "condition_blinded_where_feasible": true
+  },
   "measured_contract": "MEASURED_INTERACTION_CONTRACT.json",
-  "measured_gpu_authorized": false
+  "gpu_authorized": false
 }

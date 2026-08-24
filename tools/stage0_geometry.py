@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT))
 
 from reactive_runtime.canonical import write_json
 from reactive_runtime.qualification import build_action_cases, build_cases
+from reactive_runtime.trajectory_budget import ConstructionBudget
 from reactive_runtime.world import ArchitectureWorld
 from tools.offline_tokenizer import OfflineTokenizer
 
@@ -29,7 +30,8 @@ def main() -> int:
         cases = [{"case_id": case.case_id, "prompt_tokens": tokenizer.count_messages(case.messages), "headroom_after_max_completion": 25088 - tokenizer.count_messages(case.messages) - 1900} for case in build_cases(ROOT)]
         action_cases = [{"case_id": case.case_id, "prompt_tokens": tokenizer.count_messages(case.messages), "headroom_after_max_completion": 25088 - tokenizer.count_messages(case.messages) - 4096} for case in build_action_cases(ROOT)]
     result = {
-        "schema": "artifact-coupled-stage0-geometry-v0",
+        "schema": "northstar-transfer-stage0-geometry-v0",
+        "task_id": "northstar-migration-architecture-package-v0",
         "base_actor_prompt_tokens": base_prompt,
         "source_corpus_tokens": sum(row["tokens"] for row in source_rows),
         "source_rows": source_rows,
@@ -37,6 +39,17 @@ def main() -> int:
         "action_qualification_cases": action_cases,
         "task_declared_minimum_distinct_sources": 10,
         "minimum_batch_actions_to_touch_ten_sources": 4,
+        "trajectory_budget": {
+            **ConstructionBudget().as_dict(),
+            "clean_postconstruction_path_calls": 4,
+            "clean_path": [
+                "receive construction effect and run current-candidate check",
+                "receive check and repair exact candidate",
+                "receive repair effect and rerun check",
+                "receive current recheck and propose closure",
+            ],
+            "additional_error_or_repair_allowance_calls": 4,
+        },
         "activation_qualified": False,
         "activation_blocker": "A live ordinary screening trajectory must demonstrate authentic pressure; accessible-world size is not treated as realized context pressure.",
         "measured_gpu_authorized": False,

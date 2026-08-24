@@ -113,7 +113,7 @@ def project_check(
     expected = None if expected_criterion_ids is None else sorted(set(expected_criterion_ids))
     if expected is not None and sorted(seen) != expected:
         raise ValueError(f"criterion identity mismatch: expected {expected}, observed {sorted(seen)}")
-    evaluator_id = evaluation.get("evaluator_id", "ceiba-charter-evaluator-v1")
+    evaluator_id = evaluation.get("evaluator_id", "unspecified-evaluator")
     if not isinstance(evaluator_id, str) or not evaluator_id:
         raise ValueError("evaluator_id must be a non-empty string")
 
@@ -127,7 +127,7 @@ def project_check(
         "raw_result_handle": raw_result_handle,
         "raw_result_preserved_exactly": True,
         "returncode_class": "zero" if returncode == 0 else "nonzero",
-        "schema": "ceiba-stable-check-projection-v1",
+        "schema": "stable-candidate-bound-check-projection-v1",
         "volatile_fields_excluded": True,
     }
 

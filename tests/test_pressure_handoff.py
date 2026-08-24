@@ -1,16 +1,33 @@
 from __future__ import annotations
 
+import json
 import unittest
+from pathlib import Path
 
-from tools.run_pressure_screen import verify_qualification_handoff
+from tools import run_pressure_screen as runner
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class PressureHandoffTests(unittest.TestCase):
-    def test_committed_expression_handoff_is_exactly_reconciled(self) -> None:
-        handoff = verify_qualification_handoff()
-        self.assertTrue(handoff["passed"])
-        self.assertEqual(4, handoff["model_calls"])
-        self.assertFalse(handoff["measured_actor_authorized"])
+    def test_screen_is_frozen_but_not_predeclared_as_authentic(self) -> None:
+        contract = json.loads(
+            (ROOT / "PRESSURE_SCREEN_CONTRACT.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual("frozen_offline_gpu_withheld", contract["status"])
+        self.assertEqual(runner.RUN_ID, contract["run_id"])
+        self.assertIn("four source observations", contract["qualifying_endpoint"])
+
+    def test_authorization_placeholder_does_not_authorize(self) -> None:
+        request = json.loads(
+            (ROOT / "PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertFalse(request["authorized"])
+        self.assertEqual(runner.SCOPE, request["scope"])
+        self.assertEqual(runner.MAX_CALLS, request["maximum_model_calls"])
 
 
 if __name__ == "__main__":

@@ -15,13 +15,13 @@ MAX_ARTIFACT_BYTES = 250_000
 
 DECISION_HEADINGS = (
     "Decision and scope",
-    "Earned mechanical substrate",
-    "Information interactions and failure migration",
-    "State, relationships, chronology, and control",
-    "Runtime policy",
-    "Experimental roadmap",
+    "Protocol, topology, and authority",
+    "Delivery, identity, and schema safety",
+    "Residency, continuity, and failure response",
+    "Capacity, observability, and reconciliation",
+    "Ninety-day rollout and rollback plan",
     "Verification, readiness, and governance",
-    "Uncertainties and falsifiers",
+    "Risks, uncertainties, and falsifiers",
 )
 
 ACTION_FIELDS: dict[str, dict[str, type]] = {
@@ -187,7 +187,7 @@ def action_json_schema(
     return {
         "type": "json_schema",
         "json_schema": {
-            "name": "artifact_coupled_actor_action_v0",
+            "name": "northstar_actor_action_v0",
             "strict": True,
             "schema": {"oneOf": alternatives},
         },

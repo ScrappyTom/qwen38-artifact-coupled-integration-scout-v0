@@ -14,17 +14,17 @@ from reactive_runtime.actions import MAX_BATCH_RESULT_TOKENS, action_json_schema
 from reactive_runtime.canonical import sha256_bytes, sha256_file, write_json
 from reactive_runtime.configuration import ordinary_actions
 from reactive_runtime.records import ResultLedger
-from reactive_runtime.seal import seal_tree, verify_tree_seal
+from reactive_runtime.seal import seal_tree
 from reactive_runtime.world import ActionRejected, ArchitectureWorld
 from tools.live_common import LiveTokenizer, complete_custodied, git_commit, provider_payload, require_clean_tree, start_server, stop_server
 from tools.verify_runtime_assets import verify as verify_runtime_assets
 
 
-RUN_ID = "2026-08-24-artifact-coupled-pressure-screen-v0"
-SCOPE = "artifact_coupled_pressure_screen_v0"
-SEED = 271830
-MAX_CALLS = 30
-MAX_SERIALIZED = 700_000
+RUN_ID = "2026-08-24-northstar-transfer-pressure-screen-v0"
+SCOPE = "northstar_transfer_pressure_screen_v0"
+SEED = 860_241
+MAX_CALLS = 18
+MAX_SERIALIZED = 500_000
 MAX_WALL = 7200
 PROMPT_LIMIT = 20_992
 ACTOR_MAX_TOKENS = 4096
@@ -32,6 +32,38 @@ ACTOR_MAX_TOKENS = 4096
 
 class BudgetStop(RuntimeError):
     pass
+
+
+def verify_task_lock() -> None:
+    lock = json.loads((ROOT / "task" / "TASK_SOURCE_LOCK.json").read_text(encoding="utf-8"))
+    if lock.get("task_id") != "northstar-migration-architecture-package-v0":
+        raise RuntimeError("task lock identity mismatch")
+    for row in lock.get("files", []):
+        path = ROOT / "task" / str(row.get("path"))
+        if not path.is_file() or sha256_file(path) != row.get("sha256"):
+            raise RuntimeError(f"task lock mismatch: {row.get('path')}")
+
+
+def boundary_eligibility_failures(
+    *, pending: object, ledger: ResultLedger, world: ArchitectureWorld, initial_candidate_sha256: str
+) -> list[str]:
+    """Classify a realized overflow without inferring semantic task readiness."""
+    failures: list[str] = []
+    if getattr(pending, "result_kind", None) != "source_observation":
+        failures.append("pending_result_is_not_source_observation")
+    delivered_sources = sum(
+        record.result_kind == "source_observation" and record.previously_visible
+        for record in ledger.records()
+    )
+    if delivered_sources < 4:
+        failures.append("fewer_than_four_source_observations_delivered")
+    if world.candidate_sha256 != initial_candidate_sha256:
+        failures.append("candidate_changed_before_pressure")
+    if world.submitted:
+        failures.append("candidate_submitted_before_pressure")
+    if any(record.result_kind == "check_observation" for record in ledger.records()):
+        failures.append("check_ran_before_pressure")
+    return failures
 
 
 def authorize(path: Path) -> dict[str, object]:
@@ -56,80 +88,31 @@ def authorize(path: Path) -> dict[str, object]:
     return receipt
 
 
-def verify_qualification_handoff() -> dict[str, object]:
-    path = ROOT / "QUALIFICATION_HANDOFF.json"
-    if not path.is_file():
-        raise RuntimeError("passing expression-qualification handoff is absent")
-    handoff = json.loads(path.read_text(encoding="utf-8"))
-    expected_run_root = (
-        ROOT
-        / "qualification_runs"
-        / "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0"
-    ).resolve()
-    declared_run_root = handoff.get("run_root")
-    if not isinstance(declared_run_root, str):
-        raise RuntimeError("expression handoff lacks run_root")
-    run_root = (ROOT / declared_run_root).resolve()
-    if run_root != expected_run_root:
-        raise RuntimeError("expression handoff run_root mismatch")
-    result_path = run_root / "QUALIFICATION_RESULT.json"
-    audit_path = ROOT / "QUALIFICATION_AUDIT.json"
-    errors = list(verify_tree_seal(run_root, run_root / "RUN_SEAL.json"))
-    result = json.loads(result_path.read_text(encoding="utf-8"))
-    audit = json.loads(audit_path.read_text(encoding="utf-8"))
-    expected = {
-        "run_id": "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0",
-        "freeze_commit": "7d71c7d666403da7f0be9494a77a771435144f69",
-        "passed": True,
-        "model_calls": 4,
-        "provider_attempts": 4,
-        "attempts_per_call": 1,
-        "retries": 0,
-        "measured_actor_authorized": False,
-    }
-    for key, value in expected.items():
-        observed = audit.get(key) if key == "provider_attempts" else handoff.get(key)
-        if observed != value:
-            errors.append(f"handoff {key} mismatch")
-    if result.get("run_id") != expected["run_id"]:
-        errors.append("qualification result run_id mismatch")
-    if result.get("freeze_commit") != expected["freeze_commit"]:
-        errors.append("qualification result freeze commit mismatch")
-    if result.get("passed") is not True or result.get("model_calls") != 4:
-        errors.append("qualification result did not pass exactly four calls")
-    cases = result.get("cases")
-    if not isinstance(cases, list) or len(cases) != 4 or not all(
-        isinstance(row, dict) and row.get("accepted") is True for row in cases
-    ):
-        errors.append("qualification result case admissions mismatch")
-    if result.get("measured_actor_authorized") is not False:
-        errors.append("qualification result improperly authorizes measured actor")
-    if audit.get("passed") is not True or audit.get("seal_verified") is not True:
-        errors.append("qualification audit did not pass")
-    if handoff.get("qualification_result_sha256") != sha256_file(result_path):
-        errors.append("qualification result hash mismatch")
-    if handoff.get("run_seal_sha256") != sha256_file(run_root / "RUN_SEAL.json"):
-        errors.append("qualification seal hash mismatch")
-    if handoff.get("audit_sha256") != sha256_file(audit_path):
-        errors.append("qualification audit hash mismatch")
-    if errors:
-        raise RuntimeError(f"expression handoff failed: {errors}")
-    return handoff
-
-
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--authorization-receipt", required=True, type=Path)
     args = parser.parse_args()
     require_clean_tree()
-    handoff = verify_qualification_handoff()
+    verify_task_lock()
     authorization = authorize(args.authorization_receipt)
     run_root = ROOT / "runs" / RUN_ID
     if run_root.exists():
         raise FileExistsError(f"run root exists: {run_root}")
     run_root.mkdir(parents=True)
     write_json(run_root / "AUTHORIZATION_RECEIPT.json", authorization)
-    write_json(run_root / "QUALIFICATION_HANDOFF.json", handoff)
+    write_json(
+        run_root / "FREEZE_BINDING.json",
+        {
+            "schema": "northstar-pressure-screen-freeze-binding-v0",
+            "commit": git_commit(),
+            "run_id": RUN_ID,
+            "task_source_lock_sha256": sha256_file(
+                ROOT / "task" / "TASK_SOURCE_LOCK.json"
+            ),
+            "model_profile_lock_sha256": sha256_file(ROOT / "MODEL_PROFILE_LOCK.json"),
+            "screen_contract_sha256": sha256_file(ROOT / "PRESSURE_SCREEN_CONTRACT.json"),
+        },
+    )
     assets = verify_runtime_assets()
     write_json(run_root / "RUNTIME_ASSET_VERIFICATION.json", assets)
     if assets["passed"] is not True:
@@ -144,6 +127,7 @@ def main() -> int:
         process, stdout, stderr, _ = start_server(run_root / "model")
         tokenizer = LiveTokenizer()
         world = ArchitectureWorld(ROOT / "task", run_root / "trajectory")
+        initial_candidate_sha256 = world.candidate_sha256
         ledger = ResultLedger()
         messages = [
             {"role": "system", "content": (ROOT / "task" / "SYSTEM.md").read_text(encoding="utf-8")},
@@ -160,9 +144,20 @@ def main() -> int:
             if prompt_tokens > PROMPT_LIMIT:
                 if pending_result_id is None:
                     raise RuntimeError("prompt overflow lacks a newly pending exact result")
-                boundary = {"schema": "artifact-coupled-authentic-pressure-boundary-v0", "actor_calls_completed": actor_call - 1, "pending_result_id": pending_result_id, "ordinary_prospective_prompt_tokens": prompt_tokens, "prompt_limit": PROMPT_LIMIT, "overflow_tokens": prompt_tokens - PROMPT_LIMIT, "messages": messages, "result_ledger": ledger.as_dict(include_exact_content=True), "candidate_sha256": world.candidate_sha256, "candidate_packet": world.candidate_packet()}
+                pending = ledger.get(pending_result_id)
+                delivered_sources = sum(
+                    record.result_kind == "source_observation" and record.previously_visible
+                    for record in ledger.records()
+                )
+                ineligible = boundary_eligibility_failures(
+                    pending=pending,
+                    ledger=ledger,
+                    world=world,
+                    initial_candidate_sha256=initial_candidate_sha256,
+                )
+                boundary = {"schema": "northstar-authentic-pressure-boundary-v0", "task_id": "northstar-migration-architecture-package-v0", "actor_calls_completed": actor_call - 1, "pending_result_id": pending_result_id, "ordinary_prospective_prompt_tokens": prompt_tokens, "prompt_limit": PROMPT_LIMIT, "overflow_tokens": prompt_tokens - PROMPT_LIMIT, "messages": messages, "result_ledger": ledger.as_dict(include_exact_content=True), "candidate_sha256": world.candidate_sha256, "candidate_packet": world.candidate_packet(), "delivered_source_observations": delivered_sources, "eligibility_failures": ineligible}
                 write_json(run_root / "PRESSURE_BOUNDARY.json", boundary)
-                terminal = "authentic_result_delivery_pressure"
+                terminal = "authentic_result_delivery_pressure" if not ineligible else "pressure_boundary_ineligible"
                 break
             if time.monotonic() - started >= MAX_WALL:
                 raise BudgetStop("wall_clock_budget_exhausted")
@@ -222,14 +217,14 @@ def main() -> int:
             messages.append({"role": "user", "content": pending_text})
             if result_record is not None:
                 pending_result_id = result_record.result_id
-        result = {"schema": "artifact-coupled-pressure-screen-result-v0", "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": terminal, "pressure_qualified": terminal == "authentic_result_delivery_pressure", "boundary": None if boundary is None else {key: value for key, value in boundary.items() if key not in {"messages", "result_ledger", "candidate_packet"}}, "candidate_sha256": world.candidate_sha256, "candidate_submitted": world.submitted}
+        result = {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": terminal, "pressure_qualified": terminal == "authentic_result_delivery_pressure", "boundary": None if boundary is None else {key: value for key, value in boundary.items() if key not in {"messages", "result_ledger", "candidate_packet"}}, "candidate_sha256": world.candidate_sha256, "candidate_submitted": world.submitted}
         write_json(run_root / "CALL_TRACE.json", trace)
         write_json(run_root / "FINAL_MESSAGES.json", messages)
         write_json(run_root / "RESULT_LEDGER.json", ledger.as_dict(include_exact_content=True))
         write_json(run_root / "SCREEN_RESULT.json", result)
     except BudgetStop as exc:
         write_json(run_root / "BUDGET_STOP.json", {"terminal_disposition": str(exc)})
-        write_json(run_root / "SCREEN_RESULT.json", {"schema": "artifact-coupled-pressure-screen-result-v0", "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": str(exc), "pressure_qualified": False, "candidate_sha256": None if world is None else world.candidate_sha256, "candidate_submitted": False if world is None else world.submitted})
+        write_json(run_root / "SCREEN_RESULT.json", {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": str(exc), "pressure_qualified": False, "candidate_sha256": None if world is None else world.candidate_sha256, "candidate_submitted": False if world is None else world.submitted})
     except BaseException as exc:
         failure = {"type": type(exc).__name__, "message": str(exc), "traceback": traceback.format_exc(), "no_retry": True}
         write_json(run_root / "RUN_FAILURE.json", failure)

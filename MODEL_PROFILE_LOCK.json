@@ -1,5 +1,6 @@
 {
-  "schema_version": "qwen38-pressure-qualified-model-profile-lock-v1",
+  "schema_version": "qwen38-northstar-transfer-model-profile-lock-v0",
+  "task_id": "northstar-migration-architecture-package-v0",
   "model_repository": "AtomicChat/Qwen3.8-27B-GGUF",
   "model_revision": "ca10ebceb1887be9d33b838770a36b39d75a8a4c",
   "model_path": "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.gguf",
@@ -33,9 +34,10 @@
     "jinja": true,
     "multimodal_projector": false
   },
-  "screen_seed": 271828,
-  "qualification_seeds": [91001, 91002, 91003, 91004, 91005, 91006, 91007, 91008, 91009, 91010, 91011, 91012, 91013, 91014],
-  "withheld_continuation_seeds": [42, 314159],
+  "screen_seed": 860241,
+  "optional_qualification_seeds": [93001, 93002, 93003, 93004],
+  "measured_actor_seed": 860242,
+  "measured_maintenance_seed": 860243,
   "token_count_for_live_gate": "server /apply-template then /tokenize",
   "tokenizer_projection_for_live_inference": false,
   "inherited_from": {

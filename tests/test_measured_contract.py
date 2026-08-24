@@ -22,6 +22,14 @@ class MeasuredContractTests(unittest.TestCase):
             contract["maximum_actor_calls_per_configuration"],
         )
         self.assertEqual(
+            measured.MAX_PRECONSTRUCTION_CALLS_PER_CELL,
+            contract["maximum_preconstruction_actor_calls_per_configuration"],
+        )
+        self.assertEqual(
+            measured.POSTCONSTRUCTION_CALLS_PER_CELL,
+            contract["postconstruction_actor_calls_per_configuration"],
+        )
+        self.assertEqual(
             measured.MAX_MAINTENANCE_CALLS_PER_CELL,
             contract["maximum_maintenance_calls_per_configuration"],
         )

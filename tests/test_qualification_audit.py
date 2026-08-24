@@ -1,28 +1,29 @@
 from __future__ import annotations
 
-import importlib.util
+import json
 import unittest
 from pathlib import Path
 
+from tools import run_maintenance_qualification as runner
+
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location(
-    "audit_maintenance_qualification",
-    ROOT / "tools" / "audit_maintenance_qualification.py",
-)
-MODULE = importlib.util.module_from_spec(SPEC)
-assert SPEC.loader is not None
-SPEC.loader.exec_module(MODULE)
 
 
-class MaintenanceQualificationAuditTests(unittest.TestCase):
-    def test_sealed_run_passes_independent_audit(self) -> None:
-        result = MODULE.audit(ROOT)
-        self.assertTrue(result["passed"], result["failures"])
-        self.assertEqual(4, result["model_calls"])
-        self.assertEqual(4, result["provider_attempts"])
-        self.assertEqual(0, result["retries"])
-        self.assertFalse(result["measured_actor_authorized"])
+class MaintenanceQualificationContractTests(unittest.TestCase):
+    def test_optional_live_expression_contract_is_not_authorized(self) -> None:
+        contract = json.loads(
+            (ROOT / "MAINTENANCE_QUALIFICATION_CONTRACT.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        request = json.loads(
+            (ROOT / "AUTHORIZATION_REQUEST.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(runner.RUN_ID, contract["run_id"])
+        self.assertEqual(runner.SCOPE, request["scope"])
+        self.assertEqual(4, contract["maximum_model_calls"])
+        self.assertFalse(request["authorized"])
 
 
 if __name__ == "__main__":

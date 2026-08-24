@@ -1,3 +1,3 @@
-# Bounded-Agent Architecture Decision
+# Northstar Migration Architecture Decision
 
-No decision has been constructed yet.
+No decision has been drafted yet.

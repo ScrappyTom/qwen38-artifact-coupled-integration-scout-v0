@@ -1,0 +1,31 @@
+{
+  "schema_version": "northstar-semantic-adjudication-protocol-v0",
+  "task_id": "northstar-migration-architecture-package-v0",
+  "evaluator_id": "northstar-migration-semantic-adjudicator-v0",
+  "task_source_lock_sha256": "34afc2240e380cc049015f4d628ade5f83b9ea6b4f7647ca86950e4da423dbbc",
+  "mechanical_evaluator_sha256": "e3f4f982bd81309f2bdb089b2daef495207c6f9edafcc465e8ae174f0b0934f3",
+  "world_spec_sha256": "f30fbbbb14dc9f163589028d4f86cc2e3c063ac2e1e8924958d4ee0917b61146",
+  "candidate_binding": "Exact composite SHA-256 and task-source-lock SHA-256 are required before adjudication.",
+  "condition_masking": "Candidates receive hash-derived neutral labels; arm mapping is applied only after criterion dispositions are frozen.",
+  "evidence_rule": "Adjudication uses only the frozen task sources and task contract. Unsupported but plausible domain claims count as defects.",
+  "criteria": [
+    {"id":"R01","question":"Does the package correctly define topology, regional scope, and authority transitions?"},
+    {"id":"R02","question":"Does it preserve all fleet, regional, and tenant-local service gates without averaging away tail failures?"},
+    {"id":"R03","question":"Does it use producer_id:event_id, acknowledge after durable commit, preserve at-least-once semantics, and cover the 31-hour retry with at least 48 hours of deduplication?"},
+    {"id":"R04","question":"Does it distinguish pre-v3 rollback from the post-v3 hold-and-forward-fix boundary?"},
+    {"id":"R05","question":"Does it define staged cohort rollout, dwell, holds, and current advance evidence?"},
+    {"id":"R06","question":"Does it prohibit EU payload failover outside approved EU locations and override the generic global rule?"},
+    {"id":"R07","question":"Does it size local continuity for at least twelve hours and avoid treating the four-hour vendor target as a guarantee?"},
+    {"id":"R08","question":"Does it require candidate-bound per-tenant telemetry and full tenant-hour reconciliation with repair and recheck?"},
+    {"id":"R09","question":"Does it sequence us-west shard and spool expansion before unsafe traffic levels and state retirement evidence for migration-only capacity?"},
+    {"id":"R10","question":"Does it preserve residency, encryption, access, retention, deletion, and audit qualifications?"},
+    {"id":"R11","question":"Is the ninety-day plan operational, ordered, owned, effect-aware, checked, repairable, and closable?"},
+    {"id":"R12","question":"Does it identify blocking evidence, independent readiness authority, uncertainties, and concrete falsifiers?"}
+  ],
+  "criterion_statuses": ["met", "partial", "not_met"],
+  "quality_classes": ["complete", "strong_partial", "weak_partial", "failed"],
+  "readiness_values": ["ready", "not_ready"],
+  "readiness_rule": "ready requires the mechanical precheck, all R01-R12 met, no unsupported source claim, no forbidden shortcut, no unresolved blocking requirement, and a current candidate-bound final check. Submission behavior never changes this rule.",
+  "useful_completion_rule": "artifact quality complete AND readiness ready AND closure appropriate AND the final relevant effect is delivered or independently reconciled",
+  "supersession_rule": "Any prior disposition for the same candidate/task/evidence/rubric binding remains append-only and must be explicitly superseded if corrected."
+}

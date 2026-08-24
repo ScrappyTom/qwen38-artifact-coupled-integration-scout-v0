@@ -1,19 +1,32 @@
 {
-  "schema_version": "bounded-agent-architecture-evaluator-v0",
-  "evaluator_id": "bounded-agent-architecture-evaluator-v0",
-  "task_id": "bounded-agent-architecture-decision-package-v0",
-  "decision_word_range": [1600, 2200],
+  "schema_version": "northstar-migration-evaluator-v0",
+  "evaluator_id": "northstar-migration-evaluator-v0",
+  "task_id": "northstar-migration-architecture-package-v0",
+  "decision_title": "# Northstar Migration Architecture Decision",
+  "decision_word_range": [1500, 2100],
+  "construction_milestone_minimum_words": 1100,
+  "construction_milestone_minimum_sources": 8,
   "minimum_unique_sources": 10,
-  "required_source_ids": ["S02", "S03", "S04", "S08", "S13"],
+  "required_source_ids": ["S01", "S03", "S04", "S06", "S07", "S08", "S10", "S11", "S12", "S14"],
   "required_ledger_requirements": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10", "R11", "R12"],
   "decision_headings": [
     "Decision and scope",
-    "Earned mechanical substrate",
-    "Information interactions and failure migration",
-    "State, relationships, chronology, and control",
-    "Runtime policy",
-    "Experimental roadmap",
+    "Protocol, topology, and authority",
+    "Delivery, identity, and schema safety",
+    "Residency, continuity, and failure response",
+    "Capacity, observability, and reconciliation",
+    "Ninety-day rollout and rollback plan",
     "Verification, readiness, and governance",
-    "Uncertainties and falsifiers"
-  ]
+    "Risks, uncertainties, and falsifiers"
+  ],
+  "semantic_term_gates": {
+    "identity_and_retry": ["producer_id:event_id", "48", "31"],
+    "schema_boundary": ["schema v3", "forward-fix", "rollback"],
+    "residency": ["EU", "fail closed", "residency"],
+    "continuity": ["12", "spool", "vendor"],
+    "tail_gate": ["per-tenant", "p99", "fleet"],
+    "reconciliation": ["tenant-hour", "candidate", "reconciliation"],
+    "capacity": ["us-west", "60%", "shard"],
+    "governance": ["readiness", "owner", "fals"]
+  }
 }

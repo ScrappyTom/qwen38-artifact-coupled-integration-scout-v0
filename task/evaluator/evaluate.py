@@ -57,6 +57,7 @@ def evaluate(candidate_root: Path) -> dict[str, Any]:
     ledger_sources = citations(ledger)
     rows.append(criterion("ledger_grounding", len(ledger_sources) >= 8, f"{len(ledger_sources)} distinct cited sources"))
 
+    rows.append(criterion("decision_title", decision.startswith(CONFIG["decision_title"]), "exact decision title"))
     observed_headings = re.findall(r"(?m)^## ([^\r\n]+)\s*$", decision)
     rows.append(criterion("decision_heading_order", observed_headings == CONFIG["decision_headings"], "exact ordered headings"))
     count = word_count(decision)
@@ -67,19 +68,9 @@ def evaluate(candidate_root: Path) -> dict[str, Any]:
     missing_sources = sorted(set(CONFIG["required_source_ids"]) - decision_sources)
     rows.append(criterion("required_sources", not missing_sources, "missing: " + ", ".join(missing_sources) if missing_sources else "all required sources cited"))
 
-    semantic_gates = {
-        "boundary_distinctions": ("capacity", "delivery", "effect uptake", "closure"),
-        "residency_distinctions": ("recoverability", "residency", "working-set"),
-        "economics": ("cache", "decision", "cost"),
-        "semantic_risk": ("digest", "false closure", "control"),
-        "ownership": ("host", "model", "demand"),
-        "interaction_roadmap": ("interaction", "transfer", "stopping"),
-        "governance": ("candidate", "readiness", "evaluation"),
-        "falsifiers": ("fals", "uncert"),
-    }
     lowered = decision.casefold()
-    for gate, terms in semantic_gates.items():
-        missing = [term for term in terms if term not in lowered]
+    for gate, terms in CONFIG["semantic_term_gates"].items():
+        missing = [term for term in terms if term.casefold() not in lowered]
         rows.append(criterion(gate, not missing, "missing terms: " + ", ".join(missing) if missing else "mechanical term gate passed"))
 
     blocking = [f"{row['criterion_id']}: {row['description']}" for row in rows if row["status"] != "pass"]
@@ -87,7 +78,7 @@ def evaluate(candidate_root: Path) -> dict[str, Any]:
     if mechanical_passed:
         blocking.append("independent condition-blinded semantic adjudication required")
     return {
-        "schema_version": "bounded-agent-architecture-evaluation-result-v0",
+        "schema_version": "northstar-migration-evaluation-result-v0",
         "evaluator_id": CONFIG["evaluator_id"],
         "task_id": CONFIG["task_id"],
         "candidate_sha256": composite_hash(ledger_bytes, decision_bytes),

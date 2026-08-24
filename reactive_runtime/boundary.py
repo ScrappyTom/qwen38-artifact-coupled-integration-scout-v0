@@ -12,8 +12,8 @@ from reactive_runtime.seal import verify_tree_seal
 from reactive_runtime.world import ArchitectureWorld
 
 
-SCREEN_RUN_ID = "2026-08-24-artifact-coupled-pressure-screen-v0"
-SCREEN_FREEZE = "7423d214d5d2a5b77514b0acff43d547743b422e"
+SCREEN_RUN_ID = "2026-08-24-northstar-transfer-pressure-screen-v0"
+HANDOFF_NAME = "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
 
 
 @dataclass(frozen=True)
@@ -38,50 +38,96 @@ def _load(path: Path) -> dict[str, Any]:
 
 def verify_pressure_handoff(repository_root: Path) -> dict[str, Any]:
     root = repository_root.resolve()
-    handoff = _load(root / "PRESSURE_BOUNDARY_HANDOFF.json")
+    handoff = _load(root / HANDOFF_NAME)
     run_root = (root / str(handoff.get("run_root"))).resolve()
     expected_root = (root / "runs" / SCREEN_RUN_ID).resolve()
     failures: list[str] = []
     if run_root != expected_root:
         failures.append("run_root")
-    if handoff.get("status") != "passed_authentic_pressure_boundary":
-        failures.append("status")
     expected = {
+        "status": "passed_authentic_pressure_boundary",
         "run_id": SCREEN_RUN_ID,
-        "freeze_commit": SCREEN_FREEZE,
+        "task_id": "northstar-migration-architecture-package-v0",
         "pressure_qualified": True,
-        "actor_calls": 8,
-        "provider_attempts": 8,
+        "interaction_trigger_qualified": True,
         "attempts_per_call": 1,
         "retries": 0,
-        "pending_result_id": "RESULT-008",
         "pending_result_delivered": False,
-        "ordinary_prospective_prompt_tokens": 21_959,
         "prompt_limit": 20_992,
-        "overflow_tokens": 967,
-        "candidate_sha256": "eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e",
         "candidate_changed": False,
         "candidate_submitted": False,
         "runtime_released": True,
         "measured_fork_authorized": False,
+        "task_source_lock_sha256": sha256_file(
+            root / "task" / "TASK_SOURCE_LOCK.json"
+        ),
     }
     for key, expected_value in expected.items():
         if handoff.get(key) != expected_value:
             failures.append(key)
+    freeze_commit = handoff.get("freeze_commit")
+    if not isinstance(freeze_commit, str) or len(freeze_commit) != 40:
+        failures.append("freeze_commit")
+    actor_calls = handoff.get("actor_calls")
+    if type(actor_calls) is not int or not 1 <= actor_calls <= 18:
+        failures.append("actor_calls")
+    if handoff.get("provider_attempts") != actor_calls:
+        failures.append("provider_attempts")
+    pending_result_id = handoff.get("pending_result_id")
+    if not isinstance(pending_result_id, str) or not pending_result_id.startswith("RESULT-"):
+        failures.append("pending_result_id")
+    prospective = handoff.get("ordinary_prospective_prompt_tokens")
+    overflow = handoff.get("overflow_tokens")
+    if type(prospective) is not int or prospective <= 20_992:
+        failures.append("ordinary_prospective_prompt_tokens")
+    elif overflow != prospective - 20_992:
+        failures.append("overflow_tokens")
+    delivered_sources = handoff.get("delivered_source_observations")
+    if type(delivered_sources) is not int or delivered_sources < 4:
+        failures.append("delivered_source_observations")
+    relief_ids = handoff.get("positive_relief_result_ids")
+    if not isinstance(relief_ids, list) or not relief_ids or not all(
+        isinstance(value, str) and value.startswith("RESULT-") for value in relief_ids
+    ):
+        failures.append("positive_relief_result_ids")
+    relief_after = handoff.get("positive_relief_after_tokens")
+    if (
+        type(relief_after) is not int
+        or type(prospective) is not int
+        or relief_after >= prospective
+    ):
+        failures.append("positive_relief_after_tokens")
     file_bindings = {
         "screen_result_sha256": run_root / "SCREEN_RESULT.json",
         "pressure_boundary_sha256": run_root / "PRESSURE_BOUNDARY.json",
         "final_messages_sha256": run_root / "FINAL_MESSAGES.json",
         "result_ledger_sha256": run_root / "RESULT_LEDGER.json",
         "run_seal_sha256": run_root / "RUN_SEAL.json",
-        "screen_audit_sha256": root / "PRESSURE_SCREEN_AUDIT.json",
+        "screen_audit_sha256": root / "NORTHSTAR_PRESSURE_SCREEN_AUDIT.json",
     }
     for key, path in file_bindings.items():
         if not path.is_file() or handoff.get(key) != sha256_file(path):
             failures.append(key)
-    failures.extend(f"seal:{item}" for item in verify_tree_seal(run_root, run_root / "RUN_SEAL.json"))
+    audit_path = root / "NORTHSTAR_PRESSURE_SCREEN_AUDIT.json"
+    if audit_path.is_file():
+        audit = _load(audit_path)
+        if audit.get("passed") is not True:
+            failures.append("screen_audit_passed")
+        if audit.get("run_id") != SCREEN_RUN_ID:
+            failures.append("screen_audit_run_id")
+        if audit.get("interaction_trigger_qualified") is not True:
+            failures.append("screen_audit_interaction_trigger")
+        if audit.get("positive_relief_result_ids") != relief_ids:
+            failures.append("screen_audit_positive_relief")
+    if run_root.is_dir():
+        failures.extend(
+            f"seal:{item}"
+            for item in verify_tree_seal(run_root, run_root / "RUN_SEAL.json")
+        )
     if failures:
-        raise RuntimeError(f"pressure handoff verification failed: {sorted(set(failures))}")
+        raise RuntimeError(
+            f"pressure handoff verification failed: {sorted(set(failures))}"
+        )
     return handoff
 
 
@@ -102,6 +148,10 @@ def hydrate_pressure_boundary(
         raise ValueError("pressure boundary messages are invalid")
     if not isinstance(ledger_value, dict):
         raise ValueError("pressure boundary ledger is invalid")
+    if raw.get("task_id") != "northstar-migration-architecture-package-v0":
+        raise ValueError("pressure boundary task mismatch")
+    if raw.get("eligibility_failures") != []:
+        raise ValueError("pressure boundary was not eligible")
     if raw.get("candidate_sha256") != world.candidate_sha256:
         raise ValueError("fresh world does not match frozen boundary candidate")
     if raw.get("candidate_packet") != world.candidate_packet():
@@ -113,6 +163,8 @@ def hydrate_pressure_boundary(
     ]
     pending_id = str(raw.get("pending_result_id"))
     pending = ledger.get(pending_id)
+    if pending.result_kind != "source_observation":
+        raise ValueError("pending boundary result is not a source observation")
     matches = [
         index
         for index, message in enumerate(messages)
@@ -127,7 +179,10 @@ def hydrate_pressure_boundary(
             continue
         if not record.previously_visible or not record.resident or record.message_index is None:
             raise ValueError(f"prior result residency mismatch: {record.result_id}")
-        if messages[record.message_index] != {"role": "user", "content": record.exact_content}:
+        if messages[record.message_index] != {
+            "role": "user",
+            "content": record.exact_content,
+        }:
             raise ValueError(f"prior result message binding mismatch: {record.result_id}")
     ordinals = [
         int(record.result_id.split("-", 1)[1])

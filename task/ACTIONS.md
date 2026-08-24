@@ -7,7 +7,7 @@ Return exactly one JSON object and no surrounding prose.
 - `{"action":"reopen_exact","result_id":"RESULT-001"}`
 - `{"action":"replace_evidence_ledger","content":"# Evidence Integration Ledger\n..."}`
 - `{"action":"upsert_decision_section","heading":"Decision and scope","body":"..."}`
-- `{"action":"replace_decision","content":"# Bounded-Agent Architecture Decision\n..."}`
+- `{"action":"replace_decision","content":"# Northstar Migration Architecture Decision\n..."}`
 - `{"action":"run_check"}`
 - `{"action":"submit"}`
 

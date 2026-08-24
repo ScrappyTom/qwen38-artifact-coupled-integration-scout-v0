@@ -1,0 +1,30 @@
+{
+  "schema_version": "northstar-synthetic-world-v0",
+  "task_id": "northstar-migration-architecture-package-v0",
+  "freshness": "No prior measured actor trajectory in this program used this task, candidate, or synthetic world.",
+  "authoritative_facts": {
+    "idempotency_key": "producer_id:event_id",
+    "minimum_deduplication_hours": 48,
+    "observed_late_retry_hours": 31,
+    "delivery_model": "at_least_once_with_idempotent_effects",
+    "schema_v3_legacy_roundtrip": "lossy",
+    "post_v3_failure_response": "hold_and_forward_fix_not_legacy_failback",
+    "eu_payload_failover": "approved_eu_target_or_fail_closed",
+    "observed_vendor_outage_hours": 11.1,
+    "minimum_region_local_spool_hours": 12,
+    "tenant_p99_limit_seconds": 8,
+    "us_west_expansion_before_percent": 60,
+    "raw_payload_retention_days": 30,
+    "audit_metadata_retention_days": 400
+  },
+  "forbidden_shortcuts": [
+    "batch_id_as_event_identity",
+    "exactly_once_claim",
+    "24_hour_deduplication_as_sufficient",
+    "schema_v3_failback_through_legacy_without_lossless_translation",
+    "eu_payload_failover_to_us",
+    "four_hour_vendor_target_as_continuity_control",
+    "fleet_average_only_readiness",
+    "stale_check_as_current_readiness"
+  ]
+}

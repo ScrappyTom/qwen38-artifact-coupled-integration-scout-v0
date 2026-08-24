@@ -30,7 +30,7 @@ def build_cases(repository_root: Path) -> tuple[QualificationCase, ...]:
     with tempfile.TemporaryDirectory() as temporary:
         world = ArchitectureWorld(task, Path(temporary))
         first_execution = world.execute(
-            {"action": "read_source", "source_id": "S02", "start_line": 1, "end_line": 180},
+            {"action": "read_source", "source_id": "S02", "start_line": 1, "end_line": 80},
             result_id="QUAL-RESULT-001",
         )
         first = world.make_result_record(first_execution, result_id="QUAL-RESULT-001", acquired_call=1)
@@ -43,8 +43,8 @@ def build_cases(repository_root: Path) -> tuple[QualificationCase, ...]:
         version=1,
         body=(
             "# Evidence Integration Ledger\n\n"
-            "R01: exact custody and recovery remain the strongest local substrate [S02].\n\n"
-            "R11: system interaction and fresh transfer remain unresolved [S02].\n"
+            "R02: release gates must preserve tenant-local tail objectives rather than only fleet averages [S02].\n\n"
+            "R12: candidate-bound readiness remains unresolved until exact checks and external adjudication [S02].\n"
         ),
         body_tokens=36,
         input_result_ids=(first.result_id,),
@@ -53,7 +53,7 @@ def build_cases(repository_root: Path) -> tuple[QualificationCase, ...]:
     return (
         QualificationCase(
             "Q1_INITIALIZE",
-            92001,
+            93001,
             integration_messages(
                 task_text=task_text,
                 prior=None,
@@ -64,7 +64,7 @@ def build_cases(repository_root: Path) -> tuple[QualificationCase, ...]:
         ),
         QualificationCase(
             "Q2_REPLACE",
-            92002,
+            93002,
             integration_messages(
                 task_text=task_text,
                 prior=deterministic_prior,
@@ -83,19 +83,19 @@ def build_action_cases(repository_root: Path) -> tuple[ActionQualificationCase, 
     return (
         ActionQualificationCase(
             "Q3_INCREMENTAL_SECTION_ACTION",
-            92003,
+            93003,
             [
                 {"role": "system", "content": common},
-                {"role": "user", "content": task_text + "\n\nReturn one upsert_decision_section action for heading `Decision and scope`. Its body must be one concise paragraph explaining that the current question is an exploratory interaction scout, citing [S02]."},
+                {"role": "user", "content": task_text + "\n\nReturn one upsert_decision_section action for heading `Decision and scope`. Its body must be one concise paragraph framing a cautious Northstar cohort migration, citing [S02]."},
             ],
             "upsert_decision_section",
         ),
         ActionQualificationCase(
             "Q4_TASK_LEDGER_ACTION",
-            92004,
+            93004,
             [
                 {"role": "system", "content": common},
-                {"role": "user", "content": task_text + "\n\nReturn one replace_evidence_ledger action. The content must begin `# Evidence Integration Ledger` and include concise R01 and R11 entries grounded only in [S02]. Do not authorize submission."},
+                {"role": "user", "content": task_text + "\n\nReturn one replace_evidence_ledger action. The content must begin `# Evidence Integration Ledger` and include concise R02 and R12 entries grounded only in [S02]. Do not authorize submission."},
             ],
             "replace_evidence_ledger",
         ),

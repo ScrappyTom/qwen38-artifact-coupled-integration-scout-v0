@@ -23,11 +23,14 @@ def load(path: Path) -> dict[str, Any]:
 
 def main() -> int:
     failures: list[str] = []
+    measured.verify_task_lock()
     try:
         pressure = verify_pressure_handoff(ROOT)
     except Exception as exc:
         pressure = {"error": f"{type(exc).__name__}:{exc}"}
         failures.append("pressure_handoff")
+    if pressure.get("interaction_trigger_qualified") is not True:
+        failures.append("pressure_handoff:interaction_trigger")
     contract = load(ROOT / "MEASURED_INTERACTION_CONTRACT.json")
     request = load(ROOT / "MEASURED_AUTHORIZATION_REQUEST.json")
     design = load(ROOT / "INTERACTION_DESIGN.json")
@@ -88,6 +91,14 @@ def main() -> int:
             failures.append(f"fixture:{configuration_id}:effect_uptake")
         if int(row.get("check_count", 0)) != 2:
             failures.append(f"fixture:{configuration_id}:check_repair")
+        budget = row.get("trajectory_budget", {})
+        if budget.get("milestone_call") is None or int(
+            budget.get("remaining_calls_in_current_window", 0)
+        ) < 1:
+            failures.append(f"fixture:{configuration_id}:postconstruction_tail")
+        projection = row.get("mechanical_final_evaluation", {}).get("projection", {})
+        if projection.get("closure_readiness") != "not_adjudicated":
+            failures.append(f"fixture:{configuration_id}:mechanical_precheck")
     initial = fixture.get("initial_continuation")
     boundary_hash = pressure.get("candidate_sha256")
     if not isinstance(initial, dict):
@@ -101,13 +112,13 @@ def main() -> int:
     if run_root.exists():
         failures.append("measured_run_root_already_exists")
     result = {
-        "schema": "artifact-coupled-measured-preflight-v0",
+        "schema": "northstar-artifact-coupling-measured-preflight-v0",
         "passed": not failures,
         "failures": failures,
         "apparatus_commit": measured.git_commit(),
         "pressure_boundary": pressure,
         "pressure_boundary_handoff_sha256": sha256_file(
-            ROOT / "PRESSURE_BOUNDARY_HANDOFF.json"
+            ROOT / "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
         ),
         "provider_free_fixture_sha256": sha256_file(ROOT / "STAGE0_MEASURED_FIXTURE.json"),
         "contract_sha256": sha256_file(ROOT / "MEASURED_INTERACTION_CONTRACT.json"),
