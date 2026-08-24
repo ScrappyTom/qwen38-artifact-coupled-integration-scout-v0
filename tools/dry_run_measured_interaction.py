@@ -195,6 +195,8 @@ def run_fixture() -> dict[str, object]:
         "failures": failures,
         "offline_provider_only": True,
         "gpu_authorized": False,
+        "apparatus_commit": measured.git_commit(),
+        "initial_continuation": initial,
         "cells": rows,
     }
 

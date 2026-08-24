@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import time
 import traceback
@@ -173,18 +174,25 @@ def current_maintenance_prior(
     world: ArchitectureWorld,
     integration: IntegrationArtifact | None,
     tokenizer: LiveTokenizer,
+    ledger: ResultLedger,
 ) -> IntegrationArtifact | None:
     if integration is None or configuration_id != "A1_COUPLED":
         return integration
     body = (world.candidate_root / "EVIDENCE_INTEGRATION_LEDGER.md").read_text(
         encoding="utf-8"
     )
+    delivered = set(delivered_source_ids(ledger))
+    actor_bound_sources = set(
+        re.findall(r"(?<![A-Za-z0-9])S(?:0[1-9]|1[0-4])(?![A-Za-z0-9])", body)
+    ) & delivered
     return IntegrationArtifact(
         version=integration.version,
         body=body,
         body_tokens=len(tokenizer.tokenize(body)),
         input_result_ids=integration.input_result_ids,
-        observed_source_ids=integration.observed_source_ids,
+        observed_source_ids=tuple(
+            sorted(set(integration.observed_source_ids) | actor_bound_sources)
+        ),
     )
 
 
@@ -288,9 +296,14 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
             ordinal = maintenance_calls + 1
             call_root = cell_root / "maintenance" / f"call-{ordinal:03d}-{record.result_id}"
             prior = current_maintenance_prior(
-                configuration_id, world, integration, tokenizer
+                configuration_id, world, integration, tokenizer, ledger
             )
-            allowed = delivered_source_ids(ledger, include=record)
+            allowed = tuple(
+                sorted(
+                    set(() if prior is None else prior.observed_source_ids)
+                    | set(observed_source_ids(record))
+                )
+            )
             maintenance_messages = integration_messages(
                 task_text=(ROOT / "task" / "TASK.md").read_text(encoding="utf-8"),
                 prior=prior,

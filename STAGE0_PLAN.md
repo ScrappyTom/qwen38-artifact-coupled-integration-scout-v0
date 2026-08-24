@@ -58,11 +58,14 @@ candidate. The coupled fixture must prove that maintenance does.
 
 ## 6. Live execution ladder
 
-1. Maintenance-expression qualification: one initialization and one update
-   case per configuration family; no task actor.
-2. One matched exploratory trajectory per configuration if expression passes.
-3. Independent condition-blinded artifact adjudication.
-4. A second frozen seed only when the first comparison is mechanically valid
-   and interpretable, including valid negative or harmful outcomes.
+1. Maintenance-expression qualification: completed 4/4; expression only.
+2. Ordinary no-relief pressure screen: completed after eight actor calls with
+   one exact pending result and a 967-token authentic deficit.
+3. Matched continuation from that one exact fork: `D0_DETACHED` followed by
+   `A1_COUPLED`, with the complete interacting evidence-to-artifact loop live.
+4. Independent condition-blinded artifact adjudication after exact candidate
+   custody and mechanical evaluation.
+5. No automatic second seed or prompt tuning. A successor must be selected
+   from a materially new interaction failure exposed by the matched study.
 
 Each live tranche requires a new frozen commit and explicit GPU authorization.

@@ -1,0 +1,76 @@
+{
+  "schema_version": "artifact-coupled-interaction-measured-contract-v0",
+  "status": "offline_apparatus_implemented_pending_final_preflight_freeze_and_authorization",
+  "run_id": "2026-08-24-artifact-coupled-interaction-measured-v0",
+  "scope": "artifact_coupled_interaction_measured_v0",
+  "configuration_order": ["D0_DETACHED", "A1_COUPLED"],
+  "common_boundary": {
+    "run_id": "2026-08-24-artifact-coupled-pressure-screen-v0",
+    "result_commit": "84037853555362380125a244619894535768056f",
+    "pending_result_id": "RESULT-008",
+    "prospective_prompt_tokens": 21959,
+    "prompt_limit": 20992,
+    "overflow_tokens": 967
+  },
+  "causal_contrast": {
+    "D0_DETACHED": "accepted bounded integration remains a model-facing non-authoritative sidecar; maintenance does not change the task candidate",
+    "A1_COUPLED": "the same accepted bounded integration becomes the exact versioned EVIDENCE_INTEGRATION_LEDGER.md task artifact and produces an exact candidate effect"
+  },
+  "common_interacting_system": [
+    "actor-selected exact single or batch evidence ingress",
+    "exact external custody and exact reopen",
+    "strictly positive deterministic first-fit relief at authentic result-delivery pressure",
+    "bounded complete-replacement semantic integration whenever evidence is externalized",
+    "model-visible integration state and exact maintenance effect",
+    "ordinary incremental task-artifact actions",
+    "candidate-version-bound effects and current or stale checks",
+    "repair and submission actions",
+    "reactive exact reentry only after positive relief is exhausted",
+    "external candidate-bound evaluation"
+  ],
+  "actor_seed": 271830,
+  "maintenance_seed": 271831,
+  "context_tokens": 25088,
+  "prompt_limit": 20992,
+  "ordinary_response_reserve": 4096,
+  "maximum_actor_calls_per_configuration": 20,
+  "maximum_maintenance_calls_per_configuration": 12,
+  "maximum_reentries_per_configuration": 2,
+  "maximum_serialized_tokens_per_configuration": 1000000,
+  "maximum_wall_seconds_per_configuration": 7200,
+  "maximum_actor_calls": 40,
+  "maximum_maintenance_calls": 24,
+  "maximum_provider_calls": 64,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "maintenance_trigger": "a previously model-visible exact evidence result is externalized by a strictly positive pressure-relief substitution",
+  "reentry_trigger": "the actor packet remains over limit and no strictly positive eligible evidence substitution exists",
+  "maintenance_failure_policy": "retain the prior accepted integration state, expose a compact exact failure receipt, and continue only if the actor packet is feasible",
+  "terminal_conditions": [
+    "submission",
+    "actor_call_budget_exhausted",
+    "maintenance_call_budget_exhausted",
+    "serialized_token_budget_exhausted",
+    "wall_clock_budget_exhausted",
+    "reactive_reentry_budget_exhausted",
+    "reactive_reentry_infeasible",
+    "apparatus_or_runtime_failure"
+  ],
+  "primary_outcomes": [
+    "candidate-bound artifact quality",
+    "correct readiness or false closure",
+    "candidate-effect uptake into later actor decisions",
+    "useful completion"
+  ],
+  "secondary_outcomes": [
+    "evidence conversion into the task ledger",
+    "integration maintenance acceptance and source coverage",
+    "novel reads and exact reopens",
+    "positive substitutions and reentries",
+    "incremental candidate mutations",
+    "checks, repair, and submission",
+    "prompt, completion, cache, latency, and wall-time costs",
+    "failure migration"
+  ],
+  "claim_limit": "This is one matched exploratory whole-system contrast at one authentic boundary. A result supports only configuration-local interaction claims, not component isolation, general architecture promotion, or transfer."
+}

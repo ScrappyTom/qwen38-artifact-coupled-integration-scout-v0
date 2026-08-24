@@ -1,6 +1,6 @@
 {
   "schema_version": "artifact-coupled-integration-scout-v0",
-  "status": "offline_stage0_gpu_withheld",
+  "status": "authentic_boundary_qualified_measured_apparatus_pending_final_freeze",
   "unit_of_analysis": "whole_configuration_trajectory",
   "research_question": "Under authentic context pressure, does coupling bounded semantic integration to exact versioned task work improve evidence conversion, effect uptake, verification, repair, and useful completion relative to an equally costly detached semantic sidecar?",
   "configurations": [
@@ -40,5 +40,7 @@
     "nonactivation",
     "apparatus_censoring"
   ],
-  "gpu_authorized": false
+  "common_boundary": "PRESSURE_BOUNDARY_HANDOFF.json",
+  "measured_contract": "MEASURED_INTERACTION_CONTRACT.json",
+  "measured_gpu_authorized": false
 }

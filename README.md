@@ -68,5 +68,11 @@ tokens against a 20,992-token allowance, an overflow of 967 tokens. The exact
 boundary and audit are recorded in `PRESSURE_BOUNDARY_HANDOFF.json` and
 `PRESSURE_SCREEN_RESULT.md`.
 
-The next step is to implement and freeze the matched continuation from that
-exact fork. No measured provider call is authorized by the screen receipt.
+The matched continuation is now implemented against that exact fork. Its
+provider-free fixture exercises relief, maintenance, actor uptake, candidate
+effects, incremental edits, stale/current checks, repair, and submission in
+both configurations. `MEASURED_STUDY_PLAN.md` and
+`MEASURED_INTERACTION_CONTRACT.json` define the whole-system contrast.
+
+The remaining offline gate is the final preflight and frozen authorization
+request. No measured provider call is authorized by the screen receipt.
