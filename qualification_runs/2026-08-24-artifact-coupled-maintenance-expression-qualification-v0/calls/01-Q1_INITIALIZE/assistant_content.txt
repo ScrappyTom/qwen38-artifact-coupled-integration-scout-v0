@@ -1,0 +1,37 @@
+# Evidence Integration Ledger
+
+**R01: External Custody and Reopenability**
+Current disposition confirms exact external custody as an earned safety substrate, ensuring byte-for-byte reproducibility for replay and adjudication. Exact reopen on actor demand remains a critical fallback when declared relief is insufficient, preserving the integrity of the physical world state. This mechanism distinguishes itself from local behavioral accessibility by guaranteeing that raw result bodies remain recoverable even after eviction or demotion. [S02]
+
+**R02: Response/Control Reserves and Positive-Savings Relief**
+Host-owned response and control reserves are mandatory to prevent overflow, but deterministic first-fit pressure relief is restricted strictly to prospectively rendered substitutions that yield positive savings. This constraint prevents the system from entering a state where relief actions themselves consume more resources than they save, a failure mode observed in earlier exploratory phases. [S02]
+
+**R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure**
+These boundaries are distinct and must not be conflated. The program has demonstrated that capacity opportunity (having room) is separate from task progress (making changes). Delivery of exact results does not guarantee action uptake or quality improvement. Closure is a final state that requires independent verification, not an assumption based on the absence of further actions. [S02]
+
+**R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy**
+Exact recoverability (the ability to fetch bytes) does not equate to behavioral accessibility (the actor's ability to use the data in context). Residency refers to what is currently in the prompt window, while working-set adequacy refers to whether that resident set supports the next logical step. These are distinct properties; a system can be fully recoverable yet behaviorally inaccessible if the relevant bytes are evicted. [S02]
+
+**R05: Chronology's External and Resident Lifecycle**
+Chronology is not static history but an active lifecycle with both external and resident components. Accumulated history can crowd out relevant exact sets, necessitating bounded exact reentry. The lifecycle must be managed to prevent the "chronology debt" where older entries consume budget without contributing to current task progress. [S02]
+
+**R06: Cache/Prefill and Decision-Bandwidth Costs**
+Cache/prefill costs and decision-bandwidth are critical economic constraints. Batch ingress can increase ranges per accepted decision but may accelerate turnover, exhausting reactive-reentry budgets. The cost of maintaining context must be weighed against the utility of the actions it enables. [S02]
+
+**R07: Semantic Derivatives as Endogenous Demand/Control Inputs**
+Semantic derivatives (such as notes or digests) are endogenous inputs that can drive demand and control flows. However, they are not automatically valuable; their value depends on future demand, coupling, and regime. A semantic derivative is a control input only if it effectively modulates the actor's subsequent actions. [S02]
+
+**R08: Source-Digest Negative and Progress-State False-Closure Risk**
+Source digests have shown negative utility in some contexts, inducing related-source reopens without progress. Progress states carry a high risk of false closure, where the system believes it is done when it is not. These mechanisms require strict external verification to prevent premature termination. [S02]
+
+**R09: Host/Model Ownership Supported by Manager and Paging Results**
+Host ownership of safety and control reachability is supported by manager and paging results. Model-owned eviction has been closed as a current route due to over-release and immediate demand for released sources. The host must maintain hard safety boundaries that the model cannot bypass. [S02]
+
+**R10: E40's Detached-Sidecar versus Task-Artifact Gap**
+E40 highlights the gap between detached sidecars (semantic state) and task artifacts (exact partial work). Sidecars may produce cross-source prose but shed citation grounding, remaining detached from exact effects. This distinction is critical for determining when semantic state can be treated as a reliable task artifact. [S02]
+
+**R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules**
+The active route is interaction-first exploration under fixed validity envelopes. Fresh transfer requires demonstrating that a pattern transfers to an independent world. Stopping rules are mandatory to prevent endless tuning; a frozen stop rule closes dedicated residue routes when thresholds are not met. [S02]
+
+**R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness**
+Evaluation/readiness lineage must be candidate-bound to ensure currentness. Independent candidate/task/evidence-bound evaluation is mandatory common governance. Readiness cannot be self-authorized by the system; it requires external adjudication against a stable evidence base. [S02]

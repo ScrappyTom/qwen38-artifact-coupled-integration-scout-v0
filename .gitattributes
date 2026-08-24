@@ -1,0 +1,3 @@
+# Sealed live-run artifacts must survive checkout byte-for-byte.
+qualification_runs/** -text
+runs/** -text

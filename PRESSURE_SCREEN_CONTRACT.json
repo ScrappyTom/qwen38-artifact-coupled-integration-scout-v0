@@ -1,6 +1,6 @@
 {
   "schema_version": "artifact-coupled-pressure-screen-v0",
-  "status": "implemented_but_ineligible_until_expression_handoff",
+  "status": "expression_handoff_passed_pending_new_freeze_and_authorization",
   "run_id": "2026-08-24-artifact-coupled-pressure-screen-v0",
   "scope": "artifact_coupled_pressure_screen_v0",
   "seed": 271830,

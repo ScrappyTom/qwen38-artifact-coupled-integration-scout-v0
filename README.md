@@ -1,6 +1,7 @@
 # Qwen3.8 artifact-coupled integration scout v0
 
-Status: offline Stage 0 implementation; provider/GPU execution is not authorized.
+Status: offline Stage 0 and live expression qualification passed; pressure
+screen pending a new frozen commit and separate GPU authorization.
 
 This repository implements the next whole-system interaction scout in the
 bounded-context experimental program. It does not compare an isolated memory
@@ -53,6 +54,12 @@ No provider call may occur until the frozen offline preflight establishes:
 - a bounded maintenance-expression contract; and
 - explicit actor, maintenance, token, wall-time, and reentry budgets.
 
-The first live step, if Stage 0 passes, is a small expression qualification.
-The measured interaction requires a separate frozen commit and explicit GPU
-authorization.
+The four-call expression qualification passed at frozen commit
+`7d71c7d666403da7f0be9494a77a771435144f69`: both bounded maintenance
+operations and both new task-artifact action shapes passed their frozen
+admission rules. This qualifies expression transport only; it does not
+establish task utility or authorize a measured actor.
+
+The next live step is one ordinary, no-relief pressure screen under a new
+frozen commit and explicit authorization. Only an authentic result-delivery
+overflow can qualify the later detached-versus-coupled measured fork.

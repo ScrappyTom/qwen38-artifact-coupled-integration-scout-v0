@@ -1,0 +1,271 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the authoritative task.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S02. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+No accepted evidence has been integrated yet.
+
+# Exact newly externalized observation
+
+{"object_id":"source:S02:1-180","object_version":"327c9d844cf754d18563081cec23ec84f1b4bd8f1c99bed7923034d29258b205","result_id":"QUAL-RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":180,"source_id":"S02","source_path":"sources/S02_PROGRAM_RECONCILIATION.md","source_sha256":"327c9d844cf754d18563081cec23ec84f1b4bd8f1c99bed7923034d29258b205","source_size_bytes":24173,"start_line":1}
+--- exact source range ---
+# Program reconciliation: what was planned, what was learned, and what remains
+
+Date: 2026-08-24
+Status: current program synthesis; system-interaction exploration active
+
+The detailed learned-first narrative for every phase is
+`FULL_EXPERIMENT_SEQUENCE_WRITEUP.md`.
+
+## Executive disposition
+
+The program has enough local mechanism evidence to stop searching the current
+donor trajectories for a slightly better exact layout, eviction prompt, digest format,
+frontier schema, maintenance dialogue, or longer receipt-only horizon.
+
+The strongest earned result is a mechanical observation and safety substrate,
+not a reliable end-to-end task-performance architecture:
+
+```text
+exact external custody
++ ordinary chronology while healthy
++ host-owned response and control reserves
++ deterministic first-fit pressure relief under a frozen scan order, restricted
+  to prospectively rendered strictly positive-savings substitutions
++ exact reopen on actor demand
++ reactive exact reentry as an unpromoted fallback when declared relief is
+  insufficient
+```
+
+Independent candidate/task/evidence-bound evaluation is mandatory common
+governance, not part of the runtime treatment.
+
+This is a qualified mechanical comparator, not the architecture incumbent. The
+first fresh-task scout showed that scheduled low-occupancy reentry is not an
+earned default. The later pressure-qualified Ceiba scout then exercised
+first-fit relief repeatedly on a fresh large-world task. It maintained physical
+operability for 18 continuation decisions without immediate reopen churn, but
+the actor made 16 novel reads, two rejected reads, and no mutation, check, or
+submission. Capacity remained active but was no longer terminal; the call
+budget became terminal while required evidence remained incomplete.
+
+The result shifts the active question. The program already knows that exact
+bytes can keep entering. It does not yet know how residency, semantic
+persistence, exact work-product persistence, induced demand, resumption,
+feedback, and closure alter one another inside a complete bounded trajectory.
+E37 supplied a low-pressure reference but did not activate that interaction.
+
+The active route is now interaction-first exploration under the fixed validity
+envelope in `STRUCTURED_EXPLORATION_ROADMAP.md` and
+`SYSTEM_INTERACTION_EXPLORATION.md`. Capability labels remain endpoint codes,
+not modules to test one by one. Confirmation and component ablation follow only
+after a whole configuration shows a meaningful joint effect and that pattern
+transfers to an independent world.
+
+Post-checkpoint correction: the first proposed interaction—source-bound
+semantic residue × incremental exact work—failed its prospective apparatus
+gate before any actor trajectory ran. Across v0, v1, and the declared-final v2
+gate, acceptance improved from 1/4 to 2/4 to 3/4. Provenance and
+intermediate-artifact separation were repaired, and both final work cases
+passed, but the first scaffolded residue still exceeded its fixed 256-token
+budget at 310 tokens. The frozen stop rule closes that dedicated residue route
+and the A/B/C/D design; no v3 is owed or allowed.
+
+This does not reopen isolated component scouting. E36 already exposed a whole
+pipeline in which one-read-per-call evidence ingress consumed the action
+horizon while no cumulative work formed. The next candidate interaction is
+therefore evidence-ingress bandwidth × cumulative task-native work
+externalization, with exact custody, first-fit relief, reopen, effects, checks,
+and readiness evaluation common. It is a new system design, not an A/C salvage
+cell from the failed matrix.
+
+That design is now frozen for measurement at
+`qwen38-ingress-work-interaction-scout-v0@1c041e2c55e0cc1f735e056df84a156c15bd8679`.
+Its measured unit is the complete I1–I4 configuration trajectory. The batch
+axis is actor-selected and non-oracular; the work axis is a bounded replacement
+evidence-integration artifact triggered by actual exact-body externalization.
+The preflight preserves the coupling rather than normalizing it away: carrying
+work in I3/I4 forces `RESULT-002` out after the common `RESULT-001` demotion,
+and that second externalization owes a second fully charged work update before
+the first actor decision. This is treatment economics and feedback, not a
+component-isolation defect.
+
+The two live `read_batch` expression fixtures passed 2/2 with one attempt per
+call and zero retries. Both exact results executed below the frozen batch cap;
+the gate consumed 40,676 serialized tokens. This qualifies action transport,
+not downstream utility.
+
+The owner subsequently authorized and completed that I1–I4 run. It used 98
+actor calls, 40 work-maintenance calls, and 2,112,973 serialized tokens. Both
+candidate axes activated: I2/I4 used multi-range ingress repeatedly, and I3/I4
+accepted 38 bounded work replacements. Yet every candidate remained the exact
+nine-word initial stub, with no mutation, effect uptake, check, or submission.
+
+The interaction result is not merely that two components failed. Batch ingress
+increased ranges per accepted decision while larger exact results accelerated
+turnover and exhausted the reactive-reentry budget in both batch arms. The
+work sidecar produced genuine cross-source prose, but repeated bounded
+replacement shed earlier citations; both final work records cited only four
+sources despite 13/14-source provenance allowlists. The sidecar was semantic
+state, not an exact partial charter or independently checkable task artifact.
+The actor therefore still faced an all-or-nothing final construction action.
+
+One I1 relief event replaced a one-line exact body with a receipt that cost 79
+more prompt tokens. The sealed cell remains descriptive, I2–I4 remain
+mechanically qualified local negatives, and the complete factorial is censored.
+Every successor runtime must restrict the deterministic scan to prospectively
+rendered strictly positive-savings substitutions.
+
+The active route is now an offline systems Stage 0 for semantic integration ×
+exact incremental task-artifact externalization × version-bound verification,
+with batch ingress, exact reopen, pressure relief, effects, repair, and closure
+kept live as one trajectory. This is not note, patch, and checker component
+qualification. See `E40_INGRESS_WORK_INTERACTION_RESULT.md` and
+`NEXT_SYSTEM_INTERACTION_ARTIFACT_COUPLING.md`.
+
+## Loose-ends audit
+
+The audit found no unresolved custody, publication, replay, or adjudication
+work that blocks the next program phase:
+
+- all 24 locally present `qwen38*` and `bounded-context*` Git repositories had
+  clean worktrees on 2026-08-22;
+- every checked branch had an upstream and was exactly 0 commits ahead and 0
+  behind;
+- the program evidence ledger includes the sealed dedicated-maintenance result
+  at `44bade979d0ba1f1a2df3f2c919146c29d4c6868`;
+- the superseded H05 artifact judgment remains visible but inactive under the
+  candidate-bound adjudication ledger; and
+- the cross-study analysis and dedicated-maintenance study are both complete.
+
+The remaining questions have different dispositions. They are a hypothesis
+inventory, not a queue:
+
+| Question | Disposition | Why it is not the automatic next optimization |
+|---|---|---|
+| Strict post-delivery outline demotion | Blocked by absent eligible fork | Both authentic full-outline boundaries contain a final result that had not crossed a model decision boundary; later packets no longer contain the full outline. |
+| H05 ready/not-ready close transfer | Blocked by absent matching donor | The donor search found no fresh pair with independently frozen readiness and the same stable-evidence/no-progress phenotype. |
+| Deeper fixed causal tail | Deferred | A chosen depth risks recreating recent-`N` chronology and is not justified by a new pressure boundary. |
+| Working-note lifecycle and compaction | Open but optional | Tested expression paths did not qualify utility; another note format is not selected until an independently recurring continuity boundary makes it diagnostic. |
+| More digest variants | Open but deprioritized | One package was semantically active but economically negative; another format/source/regime is possible but not presently demanded. |
+| More progress-state variants | Open but safety-constrained | The first package caused premature closure; readiness discrimination requires an eligible independently adjudicated boundary. |
+| Model-managed residency prompt variants | Current route closed | Passive controls did not activate; dedicated mode made selection reachable but produced over-release and immediate demand for the released source. |
+| Host-enumerated minimal-release semantic tie-break | Distinct but optional | It would isolate selection identity while keeping relief amount host-owned, but the mechanical baseline already works locally. Test only if independent worlds implicate release identity. |
+| Automatic phase selection and arbitrary decomposition | Open and removed from default | The v0 scout's fixed-call phase schedule fired before task-state completion and at low occupancy. Reactive v1 does not reset context merely because a phase label/call number arrived. |
+| Deterministic chronology folding beyond current materialization | Open | It may later reduce reentry cost, but no current discovery route assumes it. |
+| Longer I1–I4 sidecar/whole-final continuation | Current route closed | Both active functions were observed, all candidates remained unchanged, semantic grounding contracted, and one cell exposed a relief defect. The next question is artifact coupling, not more horizon under the same state/action geometry. |
+
+“Open” means scientifically unknown. It does not mean selected, owed, or
+authorized.
+
+## What was planned versus what was learned
+
+| Original expectation or question | What the program learned | Current consequence |
+|---|---|---|
+| A large structural outline might be the capacity bottleneck after acquisition. | Outline demotion restored physical capacity, but the strict post-delivery behavioral fork did not exist. Later, small demotions of other old exact results solved the same delivery pressure while the outline stayed resident. | Manage the complete resident budget; do not predesignate the outline as the universal eviction target. |
+| More available decisions might allow acquisition to turn into construction. | Recurrent pressure relief kept two trajectories alive for 12 decisions each, yet all 24 decisions were reads and one seed entered an exact period-three reopen loop. | Capacity opportunity and task progress are separate outcomes. |
+| Oldest-first exact-result demotion might be a long-running policy. | It repeatedly prevented overflow and supported exact recovery, but produced lifecycle churn and did not preserve a stable working set. | Keep it as conservative pressure relief, not a complete workspace policy. |
+| A better host-selected exact set or placement might orient the actor. | Directories, one-span focus, two-span focus, and update-slot variants moved or repeated demand rather than converging reliably. | Close fixed-layout tuning at these endpoints. |
+| Exact recoverability might be enough for continuity. | Reopen handles worked operationally, but recoverability did not provide simultaneous semantic co-residency. | Treat exact custody as a safety substrate, not a cognitive working state. |
+| Accumulated history could remain after result bodies were demoted. | Late audit showed 8.4–9.2K tokens of acquisition trail crowding out a relevant exact set that fit comfortably in a fresh packet. | Chronology itself has a lifecycle; bounded exact reentry is required eventually. |
+| Fresh exact reentry might preserve useful work without acquisition history. | It produced a substantive mutation in one seed and preserved continuity in older code/research phase studies, but cost and success varied by domain and phase. | Retain reentry as a conditional phase mechanism, not a universal winner. |
+| A bounded note or frontier might provide semantic continuity. | Freeform outputs exceeded their bounds; structured outputs exposed transport/schema failures; actor utility was never qualified for those interfaces. | Stop schema tuning. Semantic continuity remains open, not disproved. |
+| A source digest might substitute for repeated raw source recovery. | A bounded digest changed behavior but induced a related-source reopen followed by the original reopen, adding cost without progress. | Digests are optional investments whose value depends on future demand, coupling, and regime. |
+| A progress state might stop redundant acquisition and support closure. | It changed a reread into submission, but the unchanged artifact was a known strong partial. | Control-relative semantics have high leverage and high false-closure risk; they cannot self-authorize readiness. |
+| Optional model workspace controls might let Qwen manage residency. | The actor ignored them, and the management state later became unreachable. | Hard safety and control reachability are host responsibilities. |
+| A dedicated maintenance turn might fix the reachability problem and reveal useful selection. | Reachability and feasibility passed in both seeds, but managers released 6.5–7.0K tokens for deficits of 394 and 1,045, and both actors immediately requested the released source. | Dedicated mode does not by itself make Qwen a useful cache allocator. Close open-ended model-owned eviction as the current route. |
+| Fewer calls, fewer reads, or earlier submission would indicate success. | The H05 correction reversed utility without changing raw behavior; premature closure looked efficient until exact candidate adjudication was reconciled. | Quality, readiness, and effect uptake must govern economics. |
+| One context representation might dominate. | Value repeatedly changed with phase, co-resident evidence, candidate state, and induced future demand. | Treat the system as adaptive, path-dependent information economics, not a ranking of static memory formats. |
+| A large accessible world would make a whole-method task diagnostic. | Both full worlds exceeded context, but realized prompts stayed below 10K and no pressure mechanism activated. | Stage 0 must qualify realized/prospective pressure, not repository size. |
+| Task-authored scheduled phase reentry might add end-to-end value. | At two fixed call boundaries per treatment trajectory it reduced cache reuse, sometimes interrupted causal continuity, and produced no qualified completion lead. | Remove scheduled low-pressure reentry; retain only reactive reentry against an authentic mechanical pressure or external authority transition. |
+| Exact evaluator replay requires the external world to reproduce byte-for-byte. | Candidate-generated UUID text caused one literal replay mismatch while behavior, defect class, candidate, and repair remained stable. | Preserve exact raw result custody separately from a prospectively deterministic candidate-bound model-visible diagnostic. |
+| Broad reconnaissance would reveal whether context remained the dominant constraint. | E37 stayed below 7,110 prompt tokens, rejected 19/39 responses, produced two strong-partial artifacts with current visible checks, and closed both prematurely. Exact-state D6 repeated one donor's false closure. | Treat expression/admission, relation-to-action binding, verification coverage, and readiness as interacting system boundaries. Do not default back to context-layout tuning. |
+| A known ordinary-success calibration would expose a downstream success path under the common profile. | E37 D3 never reached construction because seven fenced tree requests consumed its horizon. | Preserve the literal failure, but classify downstream coding capability as unobserved. Qualify the observation surface before using it to compare deeper capabilities. |
+| Bounded batch ingress would convert call budget into useful evidence throughput. | Multi-range actions activated and increased ranges per accepted read, but their larger exact results accelerated turnover; both batch arms exhausted the reentry budget and neither produced artifact work. | Treat ingress bandwidth and residency pressure as coupled; do not promote batching from coverage alone. |
+| A bounded cumulative-work object would let streamed evidence become durable task work. | The replacement sidecars produced real cross-source prose, then shed earlier citation grounding and remained detached from exact partial artifact effects and checks. No candidate changed even after I4 saw all 14 sources. | Distinguish semantic sidecar state from exact incremental task work. Test their coupling with version-bound feedback in a complete trajectory, not as isolated expression components. |
+
+## Provisional ownership split for the mechanical comparator
+
+The evidence supports a conservative division of responsibility for the
+current mechanical comparator. It does not prove that these are the final
+semantic roles of a general architecture.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

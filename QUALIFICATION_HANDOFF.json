@@ -1,0 +1,21 @@
+{
+  "schema": "artifact-coupled-expression-qualification-handoff-v0",
+  "run_id": "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0",
+  "run_root": "qualification_runs/2026-08-24-artifact-coupled-maintenance-expression-qualification-v0",
+  "freeze_commit": "7d71c7d666403da7f0be9494a77a771435144f69",
+  "passed": true,
+  "model_calls": 4,
+  "provider_attempts": 4,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "prompt_tokens": 8671,
+  "completion_tokens": 2976,
+  "serialized_tokens": 11647,
+  "qualification_result_sha256": "1b7d7f0496cbe0cf5bf9045709fdeb067e20f5c655655cda36cec1ae561ca397",
+  "run_seal_sha256": "2d78bfa8e9628f5f550ad856822b1fca62c4e1ac33b7cca6867fa32408fe2e81",
+  "audit_path": "QUALIFICATION_AUDIT.json",
+  "audit_sha256": "1c92edfa1394995c66a04601b4fdcb412ec60980643786ad161cb0e335072b0e",
+  "runtime_released": true,
+  "measured_actor_authorized": false,
+  "next_gate": "ordinary no-relief pressure screen under a new frozen commit and separate authorization"
+}

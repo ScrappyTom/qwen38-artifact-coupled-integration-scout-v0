@@ -1,0 +1,46 @@
+# Evidence Integration Ledger
+
+**R01: Exact External Custody & Reopenability**
+Status: Partially Substantiated. [S02] confirms local custody mechanisms function as a substrate, but external reopenability remains unverified for cross-phase persistence. [S03] defines "exact externally available objects and reopen handles" as required state vectors, noting that exact reentry can alter orientation and create mutation opportunities. No evidence confirms durable external storage integrity across context windows. Unresolved: Verification of exact byte-for-byte recovery after eviction.
+
+**R02: Response/Control Reserves & Positive-Savings Relief**
+Status: Conceptualized, Not Validated. [S03] identifies "response reserve" and "protected control headroom" as state variables and notes that optional management controls consume prompt space but may not activate before the control surface becomes unreachable. [S02] does not provide evidence of positive-savings relief mechanisms successfully offloading pressure without degrading decision quality. Unresolved: Quantitative threshold for when reserve consumption negates task progress.
+
+**R03: Distinct Boundaries (Capacity, Delivery, Action, Effect, Quality, Closure)**
+Status: Framework Established. [S03] explicitly separates these as distinct bandwidth terms in the throughput bottleneck structure, warning against treating them as a single layer. It notes that increasing one term moves the active bottleneck (e.g., E36 removed prompt overflow but exposed ingress/mutation gaps). [S02] does not contradict this separation but lacks specific boundary metrics. Unresolved: Operational metrics for distinguishing "effect uptake" from "action organization."
+
+**R04: Recoverability, Residency, Accessibility, Working-Set Adequacy**
+Status: Distinct Properties Acknowledged. [S03] argues against judging objects by resident size alone, requiring separation of stock cost, flow costs, and recovery costs. It defines working-set adequacy via "exact bytes observed over time" and "relationships retained across replacement versions." [S02] supports local residency but does not distinguish recoverability from accessibility. Unresolved: Criteria for when a semantic derivative is "adequate" versus requiring exact re-entry.
+
+**R05: Chronology’s External and Resident Lifecycle**
+Status: Underdefined. [S03] lists "chronology/control representation" as a state vector component but does not detail its lifecycle transitions between resident and external states. It notes that history growth causes exact evidence to lose co-residency, increasing reopening churn. [S02] provides no specific chronology management evidence. Unresolved: Policy for pruning or externalizing chronology entries without losing causal context.
+
+**R06: Cache/Prefill and Decision-Bandwidth Costs**
+Status: Identified as Constraints. [S03] includes "cache state" and "prefill latency" in the accounting objective, noting that cache invalidation is a cost factor. It warns against optimizing resident tokens alone because cache loss affects maintenance flow cost. [S02] does not provide specific cache performance data. Unresolved: Quantitative impact of prefill latency on decision bandwidth under high churn.
+
+**R07: Semantic Derivatives as Endogenous Demand/Control Inputs**
+Status: Mechanism Described, Not Validated. [S03] describes semantic compression as lowering resident cost but introducing task-dependent loss. It requires decomposing resident stock into payload, identity/provenance, recovery metadata, and overhead. It warns against calling the ratio "semantic efficiency" without varying all components. [S02] does not address semantic derivatives. Unresolved: Whether specific derivative types reliably reduce downstream error versus introducing repair costs.
+
+**R08: Source-Digest Negative & Progress-State False-Closure Risk**
+Status: Risk Identified. [S03] highlights that a "newly produced digest may be valuable only after the raw source leaves residency," implying a dependency on exact state for validation. It warns against treating isolated scores as context-independent properties. No evidence confirms that digests prevent false-closure; in fact, lossy compression may mask unresolved results. [S02] does not address digest validity. Unresolved: Detection mechanism for when a digest has caused premature task closure.
+
+**R09: Host/Model Ownership Supported by Manager and Paging Results**
+Status: Unsubstantiated. [S03] describes the transition from "host representation/maintenance operation" to "model decision," implying a division of labor, but does not provide evidence of successful paging or manager-mediated ownership transfer. It notes that "calls, latency... and remaining authorization" are state variables. [S02] does not support host/model ownership claims. Unresolved: Evidence that paging mechanisms preserve exact custody during handoff.
+
+**R10: E40’s Detached-Sidecar vs Task-Artifact Gap**
+Status: Not Addressed in Current Sources. [S03] discusses "durable work-product externalization" as a bottleneck term but does not reference E40 or detached sidecars specifically. It emphasizes that artifact flow must be distinct from evidence flow. [S02] contains no information regarding E40 architecture. Unresolved: No direct evidence to evaluate the gap; requires new observation linking sidecar detachment to artifact integrity loss.
+
+**R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules**
+Status: Unresolved/Active Research Question. [S03] frames the program as an "adaptive, non-stationary, path-dependent system" and rejects scalar aggregation in favor of reporting cost vectors separately. It states that "systems thinking does not replace narrow causal experiments." This supports an interaction-first approach but does not define specific stopping rules or fresh transfer protocols. [S02] remains silent on roadmap specifics. Unresolved: Definition of "fresh transfer" conditions and empirical stopping criteria for experimental phases.
+
+**R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness**
+Status: Conceptual Requirement. [S03] emphasizes that value is conditional on "current state, co-resident set, task regime," implying that evaluation must be bound to the specific candidate state at time t. It requires recording "admitted effects" and "unresolved results." No evidence demonstrates a lineage tracking system for readiness states. [S02] does not provide lineage data. Unresolved: Mechanism for binding evaluation scores to exact candidate versions to prevent stale assessments.
+
+**Contradictions & Conflicts:**
+No direct contradictions between [S02] and [S03]. [S02] focuses on local substrate efficacy, while [S03] expands scope to system-level dynamics, identifying local success as potentially insufficient due to path-dependence. The conflict is one of scope: local mechanisms (R01 in [S02]) are necessary but not sufficient for the broader information-economic objectives defined in [S03].
+
+**Unresolved Evidence Summary:**
+- No quantitative data on reserve consumption vs. task progress (R02).
+- No validation of semantic derivative utility across different task regimes (R07).
+- No evidence of successful chronology externalization (R05).
+- No defined stopping rules for experimental phases (R11).
