@@ -1,0 +1,107 @@
+<|im_start|>system
+# System contract
+
+You are the task actor in a bounded exact-world experiment. Return exactly one
+declared JSON action and no prose. Exact sources, candidate files, actions,
+effects, checks, and history are externally custodied. Receipts identify exact
+recoverable results but do not contain their semantic substance.
+
+Use only evidence that has crossed your model boundary. A semantic integration
+ledger may be lossy and is not readiness authority. A check is current only for
+the exact composite candidate hash it evaluated. Submission is a proposal for
+external adjudication, not proof of completion.<|im_end|>
+<|im_start|>user
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.<|im_end|>
+<|im_start|>user
+# Ordinary actor actions
+
+Return exactly one JSON object and no surrounding prose.
+
+- `{"action":"read_source","source_id":"S01","start_line":1,"end_line":120}`
+- `{"action":"read_batch","requests":[{"source_id":"S01","start_line":1,"end_line":120},{"source_id":"S02","start_line":1,"end_line":120}]}`
+- `{"action":"reopen_exact","result_id":"RESULT-001"}`
+- `{"action":"replace_evidence_ledger","content":"# Evidence Integration Ledger\n..."}`
+- `{"action":"upsert_decision_section","heading":"Decision and scope","body":"..."}`
+- `{"action":"replace_decision","content":"# Bounded-Agent Architecture Decision\n..."}`
+- `{"action":"run_check"}`
+- `{"action":"submit"}`
+
+One source range is at most 240 lines. A batch contains at most three
+non-overlapping ranges, 480 total lines, and 40,000 exact source bytes. A
+section upsert changes one declared level-two section while preserving the
+other exact sections. Checks bind to the current composite candidate hash.
+
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":1072,"sha256":"a9ce64b64694b0677bebd3531515b5cae0651fc56eff16d214c6104c65fc8d55","size_bytes":52119,"source_id":"S01","title":"What we learned: the full bounded-context experimental sequence"},{"line_count":313,"sha256":"327c9d844cf754d18563081cec23ec84f1b4bd8f1c99bed7923034d29258b205","size_bytes":24173,"source_id":"S02","title":"Program reconciliation: what was planned, what was learned, and what remains"},{"line_count":662,"sha256":"95a0fe0e4e353d0d49a788db1b22d843fb9d5ce73c2c0f7e6210d47ed78f08f2","size_bytes":30254,"source_id":"S03","title":"Systems model for bounded information economics"},{"line_count":416,"sha256":"03613b837c4e8a3a889e139bba08913b2092d45a796a10a71cff58b9327d9f3f","size_bytes":47556,"source_id":"S04","title":"Evidence ledger"},{"line_count":274,"sha256":"a9f1597b10ac211418748aa13c96debc85698c597c6e85f4b54b936a959ed101","size_bytes":14848,"source_id":"S05","title":"E36 Decision-Geometry Audit"},{"line_count":121,"sha256":"69e88e3f8fe795e2eb55f53a521b2184af2cf6089c964bae734904d3902c3916","size_bytes":4731,"source_id":"S06","title":"E38 — interaction apparatus disposition"},{"line_count":115,"sha256":"809a4e2c4e4046141bbc85a2dab210f3d939e8cecc85afa14523c6d10cba42c2","size_bytes":5590,"source_id":"S07","title":"E39 — ingress × cumulative-work Stage 0 handoff"},{"line_count":223,"sha256":"4a89d656f6e35c7132d3503ebb70dd6d44947ccb35e9bd736adcb0fd253c7f99","size_bytes":9518,"source_id":"S08","title":"E40 — ingress × cumulative-work interaction result"},{"line_count":147,"sha256":"f4c5d076d0e12b736a09923f3b19bb48d3f18b590586d5a27ba57458d458033d","size_bytes":5900,"source_id":"S09","title":"Minimal runtime policy v0"},{"line_count":114,"sha256":"61824a345b43f00966f8fb9789973f7af06f4db377729cafd38181c2e5097cd4","size_bytes":5437,"source_id":"S10","title":"Mechanical pressure baseline v1"},{"line_count":168,"sha256":"c550197261ae54996b5978789a8ee160e153946b89c713a20c302681179430d7","size_bytes":19526,"source_id":"S11","title":"Capability terrain map"},{"line_count":218,"sha256":"0f13778c862fa91d79406ab854fa3c67ecc213c1506a9f24b8625e6a011622a9","size_bytes":10717,"source_id":"S12","title":"Capability-terrain reconnaissance v0: program disposition"},{"line_count":70,"sha256":"6f9a5d30b56496cce7010b8055392f4a1f33930959d672217e83b22c189028fd","size_bytes":2276,"source_id":"S13","title":"H05 artifact-disposition reconciliation"},{"line_count":131,"sha256":"80fb23325bf09b9e2529ab8a2d65e81e9dca8637a6b785256814963f4be3ec95","size_bytes":6229,"source_id":"S14","title":"Next-route prior-evidence reconciliation"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","candidate_version":"candidate-v000:eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"7e404f49ccbf0a480d19a2854e67fd9b1d8e125c8e915f891cc99ebc62b4134f","EVIDENCE_INTEGRATION_LEDGER.md":"d6d03dfefc533743178d8b4379544dccb0212dd637a610d93284dbc19ef0b505"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Evidence Integration Ledger
+
+No requirements have been integrated yet.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Bounded-Agent Architecture Decision
+
+No decision has been constructed yet.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

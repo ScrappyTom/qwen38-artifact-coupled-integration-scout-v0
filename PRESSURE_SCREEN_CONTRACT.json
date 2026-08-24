@@ -1,6 +1,6 @@
 {
   "schema_version": "artifact-coupled-pressure-screen-v0",
-  "status": "expression_handoff_passed_pending_new_freeze_and_authorization",
+  "status": "completed_passed_authentic_pressure_boundary",
   "run_id": "2026-08-24-artifact-coupled-pressure-screen-v0",
   "scope": "artifact_coupled_pressure_screen_v0",
   "seed": 271830,
@@ -16,5 +16,12 @@
   "policy": "ordinary exact chronology with no relief, maintenance, semantic sidecar, or reentry",
   "qualifying_endpoint": "a valid newly acquired exact result makes the next ordinary prompt exceed 20992 tokens",
   "non_diagnostic_endpoints": ["submitted_before_pressure", "actor_call_budget_exhausted", "serialized_token_budget_exhausted", "wall_clock_budget_exhausted"],
-  "claim_limit": "the screen selects an authentic common pre-treatment boundary; it is not a treatment result"
+  "observed_actor_calls": 8,
+  "observed_serialized_tokens": 92296,
+  "observed_pending_result_id": "RESULT-008",
+  "observed_prospective_prompt_tokens": 21959,
+  "observed_overflow_tokens": 967,
+  "pressure_boundary_handoff": "PRESSURE_BOUNDARY_HANDOFF.json",
+  "measured_fork_authorized": false,
+  "claim_limit": "the screen selected an authentic common pre-treatment boundary; it is not a treatment result and does not authorize measured continuation"
 }

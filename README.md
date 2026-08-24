@@ -1,7 +1,9 @@
 # Qwen3.8 artifact-coupled integration scout v0
 
-Status: offline Stage 0 and live expression qualification passed; pressure
-screen pending a new frozen commit and separate GPU authorization.
+Status: offline Stage 0, live expression qualification, and the authentic
+pressure screen passed. The exact common fork is frozen; the matched measured
+continuation remains unexecuted and requires a new frozen commit and separate
+GPU authorization.
 
 This repository implements the next whole-system interaction scout in the
 bounded-context experimental program. It does not compare an isolated memory
@@ -60,6 +62,11 @@ operations and both new task-artifact action shapes passed their frozen
 admission rules. This qualifies expression transport only; it does not
 establish task utility or authorize a measured actor.
 
-The next live step is one ordinary, no-relief pressure screen under a new
-frozen commit and explicit authorization. Only an authentic result-delivery
-overflow can qualify the later detached-versus-coupled measured fork.
+The ordinary no-relief screen reached authentic result-delivery pressure after
+eight actor calls. The pending `RESULT-008` would make the next prompt 21,959
+tokens against a 20,992-token allowance, an overflow of 967 tokens. The exact
+boundary and audit are recorded in `PRESSURE_BOUNDARY_HANDOFF.json` and
+`PRESSURE_SCREEN_RESULT.md`.
+
+The next step is to implement and freeze the matched continuation from that
+exact fork. No measured provider call is authorized by the screen receipt.
