@@ -74,5 +74,7 @@ effects, incremental edits, stale/current checks, repair, and submission in
 both configurations. `MEASURED_STUDY_PLAN.md` and
 `MEASURED_INTERACTION_CONTRACT.json` define the whole-system contrast.
 
-The remaining offline gate is the final preflight and frozen authorization
-request. No measured provider call is authorized by the screen receipt.
+The final offline preflight passed, including the exact boundary handoff,
+provider-free two-arm loop, frozen budgets, treatment semantics, and
+authorization contract. No measured provider call is authorized by the screen
+receipt; the frozen measured commit still requires explicit GPU authorization.

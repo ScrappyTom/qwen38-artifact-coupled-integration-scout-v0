@@ -1,6 +1,6 @@
 {
   "schema_version": "artifact-coupled-interaction-measured-contract-v0",
-  "status": "offline_apparatus_implemented_pending_final_preflight_freeze_and_authorization",
+  "status": "offline_preflight_passed_pending_frozen_commit_and_explicit_gpu_authorization",
   "run_id": "2026-08-24-artifact-coupled-interaction-measured-v0",
   "scope": "artifact_coupled_interaction_measured_v0",
   "configuration_order": ["D0_DETACHED", "A1_COUPLED"],
