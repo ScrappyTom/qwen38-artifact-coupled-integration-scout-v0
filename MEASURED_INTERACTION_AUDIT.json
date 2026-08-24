@@ -1,0 +1,44 @@
+{
+  "actor_calls": 40,
+  "aggregate_result_sha256": "1696f9085ccde51b66d71ac90be6845715d9d17615b0942287812cf061e8df7f",
+  "aggregate_seal_verified": true,
+  "attempts_per_call": 1,
+  "cells": [
+    {
+      "actor_calls": 20,
+      "candidate_changed": true,
+      "candidate_submitted": false,
+      "cell_seal_verified": true,
+      "configuration_id": "D0_DETACHED",
+      "maintenance_calls": 9,
+      "positive_externalizations": 9,
+      "provider_calls": 29,
+      "serialized_tokens": 444443,
+      "terminal_disposition": "actor_call_budget_exhausted"
+    },
+    {
+      "actor_calls": 20,
+      "candidate_changed": true,
+      "candidate_submitted": false,
+      "cell_seal_verified": true,
+      "configuration_id": "A1_COUPLED",
+      "maintenance_calls": 10,
+      "positive_externalizations": 10,
+      "provider_calls": 30,
+      "serialized_tokens": 431306,
+      "terminal_disposition": "actor_call_budget_exhausted"
+    }
+  ],
+  "failures": [],
+  "freeze_commit": "4937083f29df3247a84b3b399c0a7ae922ddb020",
+  "independent_semantic_adjudication": "not_performed_by_this_audit",
+  "maintenance_calls": 19,
+  "passed": true,
+  "provider_calls": 59,
+  "retries": 0,
+  "run_id": "2026-08-24-artifact-coupled-interaction-measured-v0",
+  "run_seal_sha256": "15f844df6e7435710767deba0a528a22555a54ac1bc4a11fc110231de82e5bfb",
+  "runtime_released": true,
+  "schema": "artifact-coupled-interaction-measured-audit-v0",
+  "serialized_tokens": 875749
+}

@@ -1,0 +1,330 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the authoritative task.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S02, S03, S04, S06, S07, S08, S09, S10, S11, S12, S13. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Exact External Custody and Reopenability**
+Disposition: Earned mechanical substrate. Both arms maintain identical exact external objects; model-facing residency changes do not alter authoritative bytes [S09]. Reactive exact reentry remains a fallback for insufficient declared relief [S02]. Scheduled low-occupancy reentry failed to earn a default role, disrupting qualified code trajectories while reducing cache reuse [S10]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02][S12].
+
+**R02: Response/Control Reserves and Positive-Savings Relief**
+Disposition: Qualified deterministic first-fit relief. Host renders/tokenizes prospective requests; model does not own hard-overflow prevention [S09]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, censors the full E40 matrix, and remains descriptive rather than validating broader utility [S02][S10]. Unresolved evidence: Broad applicability beyond narrow pressure boundaries is untested [S10][S12].
+
+**R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure**
+Disposition: Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. S12 confirms conjunctive operation where zero at any boundary precludes completion; D2/D5 crossed expression/construction but lost governing requirements [S12]. Unresolved evidence: Joint effects within a complete bounded trajectory remain untested [S02][S10][S12].
+
+**R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy**
+Disposition: Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03][S12].
+
+**R05: Chronology’s External and Resident Lifecycle**
+Disposition: Ordinary chronology is qualified while healthy. Within a phase, append ordinary model actions and literal results while the next valid packet remains feasible; do not continuously rewrite a prompt that still satisfies the arm's frozen reserves [S09]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02][S10][S12].
+
+**R06: Cache/Prefill and Decision-Bandwidth Costs**
+Disposition: Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. S12 measured 76.58% aggregate prompt-cache reuse at low occupancy with zero pressure events, establishing a baseline distinct from high-pressure churn [S12]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03][S12].
+
+**R07: Semantic Derivatives as Endogenous Demand/Control Inputs**
+Disposition: Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02][S12].
+
+**R08: Source-Digest Negative and Progress-State False-Closure Risk**
+Disposition: High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. S12 demonstrates premature closure where D2/D5 submitted strong-partial artifacts after narrower visible checks passed, and D6 repeated the same disposition without construction chronology [S12]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02][S11][S12].
+
+**R09: Host/Model Ownership Supported by Manager and Paging Results**
+Disposition: Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. S12 confirms strict host did not repair malformed actions; 19 of 39 responses rejected before environment action [S12]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02][S10][S12].
+
+**R10: E40’s Detached-Sidecar versus Task-Artifact Gap**
+Disposition: Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02][S12].
+
+**R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules**
+Disposition: Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. S12 identifies low-pressure reference regime where context pressure, semantic persistence, incremental work, and matched lifecycle alternatives never became active together [S12]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11][S12].
+
+**R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness**
+Disposition: Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. S12 provides frozen design commit, measured result commit, run ID, and multiple SHA-256 digests establishing candidate-bound currentness [S12]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02][S10][S12].
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S06:1-120+S07:1-80","object_version":"b92048ba910fe87b55842a04e4fc4dccd0ddbd574488c1f3fd1f6a3cbf255f8a","result_id":"RESULT-011","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":120,"source_id":"S06","start_line":1},{"end_line":80,"source_id":"S07","start_line":1}],"total_source_bytes":8677}
+--- exact batch segment 1 ---
+{"end_line":120,"source_id":"S06","source_path":"sources/S06_INTERACTION_APPARATUS_DISPOSITION.md","source_sha256":"69e88e3f8fe795e2eb55f53a521b2184af2cf6089c964bae734904d3902c3916","source_size_bytes":4731,"start_line":1}
+--- exact source range ---
+# E38 — interaction apparatus disposition
+
+Date: 2026-08-23
+
+Status: apparatus nonqualification; original interaction route closed; no GPU
+successor authorized
+
+Standalone repository and final result:
+[qwen38-system-interaction-persistence-scout-v0@362868a](https://github.com/ScrappyTom/qwen38-system-interaction-persistence-scout-v0/commit/362868ae25a7301a9fe34a90e59768318537c852)
+
+## Intended system interaction
+
+The planned scout crossed two persistence channels at the authentic first
+Ceiba pressure boundary:
+
+```text
+source-bound semantic residue
+×
+cumulative task-native evidence-integration work
+```
+
+Exact custody, deterministic first-fit relief, reopen, actor actions, effects,
+checks, resumption, and external readiness evaluation were common. The unit
+was intended to be each complete A/B/C/D trajectory, not a component output.
+
+Before actor measurement, four representative maintenance shapes had to
+qualify: residue bootstrap, residue replacement, work bootstrap, and joint-state
+work replacement. The gate was apparatus only.
+
+## Three-gate sequence
+
+All twelve calls used one attempt and zero retries. Together they consumed
+84,612 serialized tokens. No maintenance output entered an ordinary actor
+trajectory.
+
+| Gate | Accepted | Main finding |
+|---|---:|---|
+| v0 | 1/4 | Plain text alone did not enforce boundedness; work outputs also referenced unseen source IDs and expanded toward the final charter. |
+| v1 | 2/4 | Mechanical source allowlists and an evidence-integration discriminator fixed provenance and artifact type; both existing-state replacements passed, both cold starts failed. |
+| v2 | 3/4 | Empty work scaffolding qualified work bootstrap and update; the first source residue still produced 310 tokens against the unchanged 256-token limit. |
+
+Every v2 output stopped naturally and remained within its source allowlist.
+Both work outputs satisfied the task-native intermediate-artifact rules at 655
+and 734 tokens. The prior-residue update passed at 190 tokens. The only final
+failure was the 310-token first residue.
+
+## Supported interpretation
+
+The dedicated per-demotion 256-token source-residue interface did not qualify
+reliable bootstrap under this task/model/runtime. The larger task-native
+evidence-integration carrier qualified its two representative expression
+shapes, but its downstream utility remains untested.
+
+This is not evidence that semantic persistence is useless, that 310 tokens is
+always uneconomic, or that cumulative work improves task performance. It is
+evidence that the declared A/B/C/D comparison cannot be run faithfully through
+its frozen transport.
+
+## Prospective stopping rule
+
+V2 was declared final before inference. Therefore:
+
+- no v3 prompt, seed, cap, scaffold, or format variant;
+- no host truncation or silent semantic repair;
+- no post-hoc increase from 256 to 310 tokens;
+- no measured A/B/C/D run; and
+- no salvage comparison using only A and C under the old name.
+
+The route is closed rather than optimized indefinitely.
+
+## Failure migration and remaining system question
+
+E36 showed an authentic different bottleneck:
+
+```text
+exact evidence can keep entering
+        ↓
+one bounded read consumes one actor decision
+        ↓
+old evidence becomes identity-only receipts
+        ↓
+no cumulative task-native work forms
+        ↓
+call budget ends before construction
+```
+
+E38 adds that per-source tiny semantic maintenance is not a qualified transport,
+while task-native cumulative work expression is mechanically viable in the two
+final shapes tested.
+
+The next candidate interaction is therefore:
+
+```text
+evidence-ingress bandwidth
+×
+cumulative task-native work externalization
+```
+
+A candidate four-configuration terrain scout would compare one-range versus
+bounded multi-range acquisition and whole-final-artifact-only versus bounded
+evidence-integration work. These are whole feedback systems: ingress affects
+result size, pressure, and call budget; work affects residency, later demand,
+construction, and anchoring risk.
+
+## Stage 0 obligations for a successor
+
+Before another GPU request:
+
+1. qualify a bounded multi-range action without treatment-only evidence or
+   hidden semantic repair;
+2. freeze whether work production shares an actor response or consumes a
+   separately charged call;
+3. enforce exact evidence-source admission for work;
+4. distinguish intermediate work from the final candidate mechanically;
+5. prove a feasible horizon through acquisition, construction, effect uptake,
+   checking, repair, and closure; and
+6. retain the complete trajectory and downstream artifact/readiness outcome as
+   the primary unit.
+
+This document selects a design direction only. It freezes no runner and
+--- exact batch segment 2 ---
+{"end_line":80,"source_id":"S07","source_path":"sources/S07_INGRESS_WORK_STAGE0.md","source_sha256":"809a4e2c4e4046141bbc85a2dab210f3d939e8cecc85afa14523c6d10cba42c2","source_size_bytes":5590,"start_line":1}
+--- exact source range ---
+# E39 — ingress × cumulative-work Stage 0 handoff
+
+Date: 2026-08-24
+
+Status: historical Stage 0 handoff; batch-action qualification passed 2/2;
+the subsequently authorized measured interaction is complete
+
+Standalone repository:
+[qwen38-ingress-work-interaction-scout-v0@1c041e2](https://github.com/ScrappyTom/qwen38-ingress-work-interaction-scout-v0/commit/1c041e2c55e0cc1f735e056df84a156c15bd8679)
+
+Measured result:
+[qwen38-ingress-work-interaction-scout-v0@ea03f6c](https://github.com/ScrappyTom/qwen38-ingress-work-interaction-scout-v0/commit/ea03f6c7e5d11e0f9f1013eef573215767c58ad1)
+
+Program disposition:
+`E40_INGRESS_WORK_INTERACTION_RESULT.md`
+
+## System question
+
+At the exact E36 result-delivery pressure boundary, how do two interacting
+functions change the complete bounded-work trajectory?
+
+```text
+actor-selected evidence-ingress bandwidth
+×
+bounded cumulative task-native work
+```
+
+The four configurations cross one exact range versus a bounded actor-selected
+batch of one to three ranges with whole-final-artifact-only versus a bounded
+replacement evidence-integration record. All four retain the same exact world,
+custody, first-fit relief, reopen, actor model and budget, action/effect loop,
+candidate-bound checking, reactive capacity reentry, and independent readiness
+evaluation.
+
+This is not relief versus context death and not a set of component tests. The
+unit is the whole trajectory through acquisition, pressure, persistent work,
+construction, effect uptake, verification, repair, and closure or declared
+budget exhaustion.
+
+## Offline findings
+
+- Authentic ordinary packet: 21,442 prompt tokens against 20,992 allowed.
+- Common first-fit packet: 19,818 tokens after externalizing `RESULT-001`.
+- I1/I2 first actor packets: 20,481 / 20,529 tokens.
+- Maximum-size I3/I4 work packets initially overflow; first-fit externalizes
+  `RESULT-002`, yielding 13,984 / 14,032 tokens.
+- Because work is triggered by exact-body externalization, I3/I4 owe two work
+  updates before actor call one: `RESULT-001`, then `RESULT-002`.
+- Work bootstrap and representative large-batch update prompts remain within
+  the 25,088-token provider context including their completion ceilings.
+- A synthetic late reactive-reentry packet fits at 19,221 tokens.
+- Runtime tests: 21/21. Inherited evaluator tests: 5/5.
+- The inherited evaluation law is rebound to this experiment's exact task lock.
+
+The treatment-induced second demotion is intentionally preserved. It is the
+real residency and maintenance cost of carrying cumulative work under pressure,
+not an imbalance to erase.
+
+## Live apparatus result
+
+The new batch action passed both prospectively frozen live fixtures:
+
+1. one requested range;
+2. three requested ranges.
+
+Run `2026-08-23-ingress-action-expression-qualification-v0` used two model
+calls, one attempt per call, and zero retries. Both responses were valid bounded
+`read_batch` actions, both stopped normally, and both exact results executed
+below the 12,000-token batch-result gate. The run consumed 40,676 serialized
+tokens: Q01 used 20,268 prompt and 31 completion tokens; Q02 used 20,307 prompt
+and 70 completion tokens. The exact run is sealed in the standalone result
+commit.
+
+This is action-transport qualification only. It supplies no evidence that batch
+ingress, cumulative work, or their interaction improves a trajectory.
+
+## Measured freeze
+
+The measured run is frozen as
+`2026-08-24-ingress-work-interaction-measured-v0` in configuration order I1,<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

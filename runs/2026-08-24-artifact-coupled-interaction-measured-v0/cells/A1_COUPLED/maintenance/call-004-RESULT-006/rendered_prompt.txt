@@ -1,0 +1,245 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the authoritative task.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S02, S03, S04, S08, S09, S13. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Exact External Custody and Reopenability**
+Disposition: Qualified mechanical substrate earned. Exact external custody maintains byte integrity, but reopenability is reactive rather than scheduled. Scheduled low-occupancy reentry failed to earn a default role [S02]. Reactive exact reentry remains an unpromoted fallback for insufficient declared relief [S02]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02].
+
+**R02: Response/Control Reserves and Positive-Savings Relief**
+Disposition: Deterministic first-fit pressure relief is qualified. It is strictly restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. Reactive reentry activates only when declared relief is insufficient [S02]. Unresolved evidence: The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, remaining descriptive rather than validating broader utility [S02].
+
+**R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure**
+Disposition: Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. Unresolved evidence: Joint effects of these boundaries within a complete bounded trajectory remain untested [S02].
+
+**R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy**
+Disposition: Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03].
+
+**R05: Chronology’s External and Resident Lifecycle**
+Disposition: Ordinary chronology is qualified while healthy. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02].
+
+**R06: Cache/Prefill and Decision-Bandwidth Costs**
+Disposition: Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03].
+
+**R07: Semantic Derivatives as Endogenous Demand/Control Inputs**
+Disposition: Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02].
+
+**R08: Source-Digest Negative and Progress-State False-Closure Risk**
+Disposition: High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02].
+
+**R09: Host/Model Ownership Supported by Manager and Paging Results**
+Disposition: Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02].
+
+**R10: E40’s Detached-Sidecar versus Task-Artifact Gap**
+Disposition: Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02].
+
+**R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules**
+Disposition: Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02].
+
+**R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness**
+Disposition: Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02].
+
+# Exact newly externalized observation
+
+{"object_id":"source:S09:1-120","object_version":"f4c5d076d0e12b736a09923f3b19bb48d3f18b590586d5a27ba57458d458033d","result_id":"RESULT-006","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":120,"source_id":"S09","source_path":"sources/S09_MINIMAL_RUNTIME_POLICY.md","source_sha256":"f4c5d076d0e12b736a09923f3b19bb48d3f18b590586d5a27ba57458d458033d","source_size_bytes":5900,"start_line":1}
+--- exact source range ---
+# Minimal runtime policy v0
+
+Date: 2026-08-22
+Status: measured v0 policy; scheduled-reentry component retired after scout E35
+
+> Historical policy lock: this document records the policy tested by the v0
+> scout. It is not the current incumbent. See
+> [REACTIVE_RUNTIME_POLICY_V1.md](REACTIVE_RUNTIME_POLICY_V1.md).
+
+## Scope
+
+This is the smallest model-facing lifecycle policy supported strongly enough to
+test as an integrated system. Its reliable part is a **mechanical safety and
+operability substrate**, not an end-to-end task-performance architecture.
+
+Evaluation and research custody are deliberately excluded from this runtime
+treatment. They are common experimental governance and are specified in
+`MANDATORY_EXPERIMENTAL_GOVERNANCE.md`.
+
+## Runtime policy
+
+### 1. Exact external custody and access
+
+Both experimental arms have the same exact external task, source, world,
+candidate, event, effect, and history objects and the same access permissions.
+Changing model-facing residency never changes authoritative bytes.
+
+### 2. Ordinary chronology while healthy
+
+Within a phase, append ordinary model actions and literal results while the
+next valid packet remains feasible. Do not continuously rewrite a prompt that
+still satisfies the arm's frozen reserves.
+
+### 3. Host-owned capacity safety
+
+The host renders and tokenizes every prospective request and result delivery
+under the frozen template. The model does not own hard-overflow prevention.
+
+Both arms pay the same ordinary response reserve. Treatment additionally pays
+the exact, preflighted transition reserve required by its named transition
+object. Control is not artificially charged that reserve.
+
+### 4. Deterministic first-fit pressure relief with immediate stop
+
+When a pending exact result would violate treatment's frozen envelope, the
+host scans a frozen ordered list of mechanically eligible, previously delivered,
+exact-backed result bodies. It replaces one body with its exact reopenable
+receipt, rerenders, and stops immediately at the first feasible packet.
+
+This is **minimal under the frozen scan order**. It is not a global
+minimum-token or best-subset optimization.
+
+Eligibility requires exact external backing, unchanged object/version binding,
+actual prior model-visible delivery, and ordinary exact reopenability. The
+pending result cannot be demoted during its own delivery. No semantic relevance
+labels or model-selected release amounts are used.
+
+### 5. Actor requests reveal demand
+
+Reads and reopens remain ordinary actions. The host records reopen cost,
+repeat reopen, demote-to-reopen interval, re-demotion, novelty, and candidate
+progress. A reopen is not automatically a failure.
+
+### 6. Frozen bounded-phase reentry
+
+V0 uses only task-authored phase boundaries declared before inference. It does
+not discover phases automatically.
+
+A boundary fires through a prospectively frozen common event: a valid phase
+handoff action, completion of a required bounded intermediate artifact, a
+frozen phase call ceiling, or an externally scheduled transition.
+
+At that event:
+
+- control appends the common next-phase contract and exogenous phase payload to
+  its existing chronology;
+- treatment starts a fresh packet with the same common phase contract and
+  payload plus only admissible exact current state.
+
+Treatment reentry may include:
+
+1. exact common task and phase inputs declared before any trajectory;
+2. exact current candidate/world mechanically derived from admitted effects;
+3. a pending observation/effect whose delivery caused the transition;
+4. exact objects already delivered to that treatment actor;
+5. a predeclared mechanical causal tail; and
+6. exact handles to everything else.
+
+It may not introduce an investigator-selected useful source the actor never
+acquired, a post-outcome evidence set, or host semantic relevance judgment.
+
+If the frozen result-body relief class cannot preserve treatment's reserves and
+no authorized phase transition is available, the endpoint is
+`capacity_exhausted_without_authorized_reentry`.
+
+### 7. Hard trajectory budgets
+
+Each task freezes actor-call, transition-call, serialized-token, and wall-clock
+ceilings. Budget exhaustion terminates as
+`budget_exhausted_with_unresolved_task`; it does not force submission or add a
+semantic maintenance pass.
+
+Recurrence is measured but does not trigger a new intervention in v0.
+
+### 8. Excluded mechanisms
+
+V0 contains no default source digest, working note, progress state,
+model-managed residency, host relevance scorer, learned policy, semantic
+summary, or automatic phase detector.
+
+## Experimental arms
+
+### Control
+
+```text
+same exact external custody and access
++ ordinary model-facing chronology
++ same context window and ordinary response reserve
++ common task-authored phase events appended to chronology
++ no result-body pressure relief<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

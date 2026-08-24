@@ -1,0 +1,37 @@
+{
+  "schema_version": "artifact-coupled-semantic-adjudication-protocol-v0",
+  "task_id": "bounded-agent-architecture-decision-package-v0",
+  "evaluator_id": "bounded-agent-architecture-semantic-review-v0",
+  "inputs": [
+    "exact final EVIDENCE_INTEGRATION_LEDGER.md bytes",
+    "exact final BOUNDED_AGENT_ARCHITECTURE_DECISION.md bytes",
+    "exact task and mechanical evaluator",
+    "exact fourteen-source task lock",
+    "candidate-bound mechanical final evaluation"
+  ],
+  "criterion_order": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "allowed_dispositions": [
+    "met",
+    "partial",
+    "not_met",
+    "ambiguous"
+  ],
+  "closure_rule": "ready only when the candidate-bound mechanical evaluation passes, all twelve semantic requirements are met, and blocking_requirements is empty",
+  "comparison_rule": "score exact candidate packages under neutral hash-derived labels before applying the configuration mapping; changed behavior, earlier construction, fewer tokens, or broader citation count do not establish useful completion",
+  "independence": "post-run external governance only; no adjudication content was actor-visible or used to alter either measured trajectory",
+  "masking_limit": "The records are condition-masked and candidate-bound, but the program investigator had supervised execution and this is not an independent third-party evaluator-blind review.",
+  "claim_limit": "The adjudication supports only candidate-bound readiness and configuration-local comparison at this one task boundary. It does not validate the rubric as complete or isolate artifact coupling as a component."
+}

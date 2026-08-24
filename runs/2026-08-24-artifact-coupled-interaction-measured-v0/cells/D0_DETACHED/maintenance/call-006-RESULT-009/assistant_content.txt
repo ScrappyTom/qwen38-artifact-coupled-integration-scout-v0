@@ -1,0 +1,37 @@
+# Evidence Integration Ledger
+
+**R01: Exact External Custody and Reopenability**
+Disposition: Earned mechanical substrate. Both arms maintain identical exact external objects; model-facing residency changes do not alter authoritative bytes [S09]. Reactive exact reentry remains a fallback for insufficient declared relief [S02]. Scheduled low-occupancy reentry failed to earn a default role, disrupting qualified code trajectories while reducing cache reuse [S10]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02][S12].
+
+**R02: Response/Control Reserves and Positive-Savings Relief**
+Disposition: Qualified deterministic first-fit relief. Host renders/tokenizes prospective requests; model does not own hard-overflow prevention [S09]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, censors the full E40 matrix, and remains descriptive rather than validating broader utility [S02][S10]. Unresolved evidence: Broad applicability beyond narrow pressure boundaries is untested [S10][S12].
+
+**R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure**
+Disposition: Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. S12 confirms conjunctive operation where zero at any boundary precludes completion; D2/D5 crossed expression/construction but lost governing requirements [S12]. Unresolved evidence: Joint effects within a complete bounded trajectory remain untested [S02][S10][S12].
+
+**R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy**
+Disposition: Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03][S12].
+
+**R05: Chronology’s External and Resident Lifecycle**
+Disposition: Ordinary chronology is qualified while healthy. Within a phase, append ordinary model actions and literal results while the next valid packet remains feasible; do not continuously rewrite a prompt that still satisfies the arm's frozen reserves [S09]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02][S10][S12].
+
+**R06: Cache/Prefill and Decision-Bandwidth Costs**
+Disposition: Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. S12 measured 76.58% aggregate prompt-cache reuse at low occupancy with zero pressure events, establishing a baseline distinct from high-pressure churn [S12]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03][S12].
+
+**R07: Semantic Derivatives as Endogenous Demand/Control Inputs**
+Disposition: Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02][S12].
+
+**R08: Source-Digest Negative and Progress-State False-Closure Risk**
+Disposition: High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. S12 demonstrates premature closure where D2/D5 submitted strong-partial artifacts after narrower visible checks passed, and D6 repeated the same disposition without construction chronology [S12]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02][S11][S12].
+
+**R09: Host/Model Ownership Supported by Manager and Paging Results**
+Disposition: Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. S12 confirms strict host did not repair malformed actions; 19 of 39 responses rejected before environment action [S12]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02][S10][S12].
+
+**R10: E40’s Detached-Sidecar versus Task-Artifact Gap**
+Disposition: Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02][S12].
+
+**R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules**
+Disposition: Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. S12 identifies low-pressure reference regime where context pressure, semantic persistence, incremental work, and matched lifecycle alternatives never became active together [S12]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11][S12].
+
+**R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness**
+Disposition: Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. S12 provides frozen design commit, measured result commit, run ID, and multiple SHA-256 digests establishing candidate-bound currentness [S12]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02][S10][S12].

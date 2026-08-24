@@ -1,0 +1,557 @@
+<|im_start|>system
+# System contract
+
+You are the task actor in a bounded exact-world experiment. Return exactly one
+declared JSON action and no prose. Exact sources, candidate files, actions,
+effects, checks, and history are externally custodied. Receipts identify exact
+recoverable results but do not contain their semantic substance.
+
+Use only evidence that has crossed your model boundary. A semantic integration
+ledger may be lossy and is not readiness authority. A check is current only for
+the exact composite candidate hash it evaluated. Submission is a proposal for
+external adjudication, not proof of completion.<|im_end|>
+<|im_start|>user
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.<|im_end|>
+<|im_start|>user
+# Ordinary actor actions
+
+Return exactly one JSON object and no surrounding prose.
+
+- `{"action":"read_source","source_id":"S01","start_line":1,"end_line":120}`
+- `{"action":"read_batch","requests":[{"source_id":"S01","start_line":1,"end_line":120},{"source_id":"S02","start_line":1,"end_line":120}]}`
+- `{"action":"reopen_exact","result_id":"RESULT-001"}`
+- `{"action":"replace_evidence_ledger","content":"# Evidence Integration Ledger\n..."}`
+- `{"action":"upsert_decision_section","heading":"Decision and scope","body":"..."}`
+- `{"action":"replace_decision","content":"# Bounded-Agent Architecture Decision\n..."}`
+- `{"action":"run_check"}`
+- `{"action":"submit"}`
+
+One source range is at most 240 lines. A batch contains at most three
+non-overlapping ranges, 480 total lines, and 40,000 exact source bytes. A
+section upsert changes one declared level-two section while preserving the
+other exact sections. Checks bind to the current composite candidate hash.
+
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":1072,"sha256":"a9ce64b64694b0677bebd3531515b5cae0651fc56eff16d214c6104c65fc8d55","size_bytes":52119,"source_id":"S01","title":"What we learned: the full bounded-context experimental sequence"},{"line_count":313,"sha256":"327c9d844cf754d18563081cec23ec84f1b4bd8f1c99bed7923034d29258b205","size_bytes":24173,"source_id":"S02","title":"Program reconciliation: what was planned, what was learned, and what remains"},{"line_count":662,"sha256":"95a0fe0e4e353d0d49a788db1b22d843fb9d5ce73c2c0f7e6210d47ed78f08f2","size_bytes":30254,"source_id":"S03","title":"Systems model for bounded information economics"},{"line_count":416,"sha256":"03613b837c4e8a3a889e139bba08913b2092d45a796a10a71cff58b9327d9f3f","size_bytes":47556,"source_id":"S04","title":"Evidence ledger"},{"line_count":274,"sha256":"a9f1597b10ac211418748aa13c96debc85698c597c6e85f4b54b936a959ed101","size_bytes":14848,"source_id":"S05","title":"E36 Decision-Geometry Audit"},{"line_count":121,"sha256":"69e88e3f8fe795e2eb55f53a521b2184af2cf6089c964bae734904d3902c3916","size_bytes":4731,"source_id":"S06","title":"E38 — interaction apparatus disposition"},{"line_count":115,"sha256":"809a4e2c4e4046141bbc85a2dab210f3d939e8cecc85afa14523c6d10cba42c2","size_bytes":5590,"source_id":"S07","title":"E39 — ingress × cumulative-work Stage 0 handoff"},{"line_count":223,"sha256":"4a89d656f6e35c7132d3503ebb70dd6d44947ccb35e9bd736adcb0fd253c7f99","size_bytes":9518,"source_id":"S08","title":"E40 — ingress × cumulative-work interaction result"},{"line_count":147,"sha256":"f4c5d076d0e12b736a09923f3b19bb48d3f18b590586d5a27ba57458d458033d","size_bytes":5900,"source_id":"S09","title":"Minimal runtime policy v0"},{"line_count":114,"sha256":"61824a345b43f00966f8fb9789973f7af06f4db377729cafd38181c2e5097cd4","size_bytes":5437,"source_id":"S10","title":"Mechanical pressure baseline v1"},{"line_count":168,"sha256":"c550197261ae54996b5978789a8ee160e153946b89c713a20c302681179430d7","size_bytes":19526,"source_id":"S11","title":"Capability terrain map"},{"line_count":218,"sha256":"0f13778c862fa91d79406ab854fa3c67ecc213c1506a9f24b8625e6a011622a9","size_bytes":10717,"source_id":"S12","title":"Capability-terrain reconnaissance v0: program disposition"},{"line_count":70,"sha256":"6f9a5d30b56496cce7010b8055392f4a1f33930959d672217e83b22c189028fd","size_bytes":2276,"source_id":"S13","title":"H05 artifact-disposition reconciliation"},{"line_count":131,"sha256":"80fb23325bf09b9e2529ab8a2d65e81e9dca8637a6b785256814963f4be3ec95","size_bytes":6229,"source_id":"S14","title":"Next-route prior-evidence reconciliation"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","candidate_version":"candidate-v000:eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"7e404f49ccbf0a480d19a2854e67fd9b1d8e125c8e915f891cc99ebc62b4134f","EVIDENCE_INTEGRATION_LEDGER.md":"d6d03dfefc533743178d8b4379544dccb0212dd637a610d93284dbc19ef0b505"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Evidence Integration Ledger
+
+No requirements have been integrated yet.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Bounded-Agent Architecture Decision
+
+No decision has been constructed yet.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":120,"source_id":"S02","start_line":1},{"end_line":120,"source_id":"S03","start_line":1},{"end_line":120,"source_id":"S04","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"call_index":1,"candidate_sha256":"eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","code":"batch_source_bytes_exceeded","message":"batch exact bytes 42974 exceed 40000","repaired":false,"schema":"architecture-action-rejection-v0"}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":120,"source_id":"S02","start_line":1},{"end_line":120,"source_id":"S03","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":3,"exact_result_sha256":"f866f4a2a8140dc24c05ea2f73722ec95f62690faca2f8fab14fe7cf31591d17","exact_result_size_bytes":12205,"object_id":"batch:S02:1-120+S03:1-120","object_version":"841c28e6b82c8eeb7d49a6f7e2641a2a4677bbc256a749eb6e8d9f73600f12b5","observed_ranges":[{"end_line":120,"source_id":"S02","start_line":1},{"end_line":120,"source_id":"S03","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-002"},"reopen_handle":"result://sha256/f866f4a2a8140dc24c05ea2f73722ec95f62690faca2f8fab14fe7cf31591d17","resident":false,"result_id":"RESULT-002","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S02","S03"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":11711}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":120,"source_id":"S04","start_line":1},{"end_line":80,"source_id":"S08","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":4,"exact_result_sha256":"678d1cf82ee098d176933d36ce7c14693f1006f601a7927abdf3e770d881085d","exact_result_size_bytes":35290,"object_id":"batch:S04:1-120+S08:1-80","object_version":"8ed66e2b4e4ae15d21d3b276f0009cb361c8a0c6e8c2da9969cc02775e87e67d","observed_ranges":[{"end_line":120,"source_id":"S04","start_line":1},{"end_line":80,"source_id":"S08","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-003"},"reopen_handle":"result://sha256/678d1cf82ee098d176933d36ce7c14693f1006f601a7927abdf3e770d881085d","resident":false,"result_id":"RESULT-003","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S04","S08"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":34798}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":120,"source_id":"S13","start_line":1}<|im_end|>
+<|im_start|>user
+{"call_index":4,"candidate_sha256":"eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","code":"range_out_of_bounds","message":"S13 has 70 lines","repaired":false,"schema":"architecture-action-rejection-v0"}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":70,"source_id":"S13","start_line":1}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":6,"exact_result_sha256":"fcaa2462118dafa3be39ab401038845c7c320128a952a8e53327474f9a590a74","exact_result_size_bytes":2741,"object_id":"source:S13:1-70","object_version":"6f9a5d30b56496cce7010b8055392f4a1f33930959d672217e83b22c189028fd","observed_ranges":[{"end_line":70,"source_id":"S13","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-005"},"reopen_handle":"result://sha256/fcaa2462118dafa3be39ab401038845c7c320128a952a8e53327474f9a590a74","resident":false,"result_id":"RESULT-005","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"S13","source_ids":["S13"],"source_path":"sources/S13_H05_CORRECTION.md","source_sha256":"6f9a5d30b56496cce7010b8055392f4a1f33930959d672217e83b22c189028fd","source_size_bytes":2276,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":120,"source_id":"S09","start_line":1}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":7,"exact_result_sha256":"d1a2f500fed3f24d7b15c35ad1d093f552512600517e4eea66f061250249f2ca","exact_result_size_bytes":5310,"object_id":"source:S09:1-120","object_version":"f4c5d076d0e12b736a09923f3b19bb48d3f18b590586d5a27ba57458d458033d","observed_ranges":[{"end_line":120,"source_id":"S09","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-006"},"reopen_handle":"result://sha256/d1a2f500fed3f24d7b15c35ad1d093f552512600517e4eea66f061250249f2ca","resident":false,"result_id":"RESULT-006","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"S09","source_ids":["S09"],"source_path":"sources/S09_MINIMAL_RUNTIME_POLICY.md","source_sha256":"f4c5d076d0e12b736a09923f3b19bb48d3f18b590586d5a27ba57458d458033d","source_size_bytes":5900,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":120,"source_id":"S10","start_line":1},{"end_line":80,"source_id":"S11","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"call_index":7,"candidate_sha256":"eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","code":"range_out_of_bounds","message":"S10 has 114 lines","repaired":false,"schema":"architecture-action-rejection-v0"}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":114,"source_id":"S10","start_line":1},{"end_line":80,"source_id":"S11","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":9,"exact_result_sha256":"0ff8714644e9b09c4bd590993995b7e3dddea586f09bc85f21fa7e5524bff0ed","exact_result_size_bytes":21847,"object_id":"batch:S10:1-114+S11:1-80","object_version":"194184e44b73e83a801c38c5a46a9f237119943c6f52ffa0b5ddc833773f186c","observed_ranges":[{"end_line":114,"source_id":"S10","start_line":1},{"end_line":80,"source_id":"S11","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-008"},"reopen_handle":"result://sha256/0ff8714644e9b09c4bd590993995b7e3dddea586f09bc85f21fa7e5524bff0ed","resident":false,"result_id":"RESULT-008","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S10","S11"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":21355}<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:EVIDENCE_INTEGRATION_LEDGER.md","object_version":"candidate-v001:b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","result_id":"MAINT-EFFECT-001","result_kind":"candidate_effect","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"after_sha256":"b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","before_sha256":"eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e","candidate_version":"candidate-v001:b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","cause":"maintenance_integration_coupled","changed_file":"EVIDENCE_INTEGRATION_LEDGER.md","current_candidate_verification_status":"not_run_after_candidate_effect","prior_check_binding":null,"schema":"architecture-candidate-effect-v0"}<|im_end|>
+<|im_start|>user
+# Current exact interaction-state binding
+{"artifact_coupled":true,"candidate_sha256":"400ab73c2dfd68acd769c7aa184846e1d0dc34f05dc24d23f8dcbc5fe3f870b9","candidate_version":"candidate-v005:400ab73c2dfd68acd769c7aa184846e1d0dc34f05dc24d23f8dcbc5fe3f870b9","check_binding":null,"configuration_id":"A1_COUPLED","integration_body_embedded_below":true,"integration_body_sha256":"d2654b0714a7b49e8304dedb86c012600a2e8d22e7f59dd89e34d31f03440b06","integration_input_result_ids":["RESULT-002","RESULT-003","RESULT-005","RESULT-006","RESULT-008"],"integration_source_ids":["S02","S03","S04","S08","S09","S10","S11","S13"],"integration_version":5,"model_authored_lossy":true,"readiness_authority":false,"residency_role":"exact_task_candidate_file:EVIDENCE_INTEGRATION_LEDGER.md","resident_body_sha256":"008d51e89be3cf29ec4f3ca2c707e1f17b607caf06de5e57b79f2fb4cc5172ef","schema":"artifact-coupled-current-interaction-state-v0"}
+--- current bounded model-authored integration body ---
+# Evidence Integration Ledger
+
+## R01: Exact External Custody and Reopenability
+**Disposition:** Earned mechanical substrate. Both arms maintain identical exact external objects; model-facing residency changes do not alter authoritative bytes [S09]. Reactive exact reentry remains a fallback for insufficient declared relief [S02]. Scheduled low-occupancy reentry failed to earn a default role, disrupting qualified code trajectories while reducing cache reuse [S10]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02].
+
+## R02: Response/Control Reserves and Positive-Savings Relief
+**Disposition:** Qualified deterministic first-fit relief. Host renders/tokenizes prospective requests; model does not own hard-overflow prevention [S09]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, censors the full E40 matrix, and remains descriptive rather than validating broader utility [S02][S10]. Unresolved evidence: Broad applicability beyond narrow pressure boundaries is untested [S10].
+
+## R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure
+**Disposition:** Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. Unresolved evidence: Joint effects of these boundaries within a complete bounded trajectory remain untested [S02][S10].
+
+## R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy
+**Disposition:** Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03].
+
+## R05: Chronology’s External and Resident Lifecycle
+**Disposition:** Ordinary chronology is qualified while healthy. Within a phase, append ordinary model actions and literal results while the next valid packet remains feasible; do not continuously rewrite a prompt that still satisfies the arm's frozen reserves [S09]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02][S10].
+
+## R06: Cache/Prefill and Decision-Bandwidth Costs
+**Disposition:** Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03].
+
+## R07: Semantic Derivatives as Endogenous Demand/Control Inputs
+**Disposition:** Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02].
+
+## R08: Source-Digest Negative and Progress-State False-Closure Risk
+**Disposition:** High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02][S11].
+
+## R09: Host/Model Ownership Supported by Manager and Paging Results
+**Disposition:** Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02][S10].
+
+## R10: E40’s Detached-Sidecar versus Task-Artifact Gap
+**Disposition:** Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02].
+
+## R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules
+**Disposition:** Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11].
+
+## R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness
+**Disposition:** Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02][S10].<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:EVIDENCE_INTEGRATION_LEDGER.md","object_version":"candidate-v001:b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","result_id":"MAINT-EFFECT-002","result_kind":"candidate_state_confirmation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"artifact_coupled":true,"candidate_changed":false,"candidate_sha256":"b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","candidate_version":"candidate-v001:b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","integration_body_sha256":"7fb5ee436cf5f336d7f52092b621556c42db6e4f6ee6c2a8f36fb671847a3d1b","integration_version":2,"schema":"architecture-coupled-integration-confirmation-v0"}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":120,"source_id":"S05","start_line":1},{"end_line":80,"source_id":"S06","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":10,"exact_result_sha256":"a49bfe47333db9768b27239e81e53552d61cc03d72f6141c1ec11324de5d4f93","exact_result_size_bytes":11509,"object_id":"batch:S05:1-120+S06:1-80","object_version":"684acce4b95a85964bea48383fe7bf89211391614bdf68ec0b1ada1ba0bc692b","observed_ranges":[{"end_line":120,"source_id":"S05","start_line":1},{"end_line":80,"source_id":"S06","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-009"},"reopen_handle":"result://sha256/a49bfe47333db9768b27239e81e53552d61cc03d72f6141c1ec11324de5d4f93","resident":false,"result_id":"RESULT-009","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S05","S06"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":11017}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":120,"source_id":"S12","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:S12:1-120","object_version":"0f13778c862fa91d79406ab854fa3c67ecc213c1506a9f24b8625e6a011622a9","result_id":"RESULT-010","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":120,"source_id":"S12","source_path":"sources/S12_DISCOVERY_TRANCHE_RESULT.md","source_sha256":"0f13778c862fa91d79406ab854fa3c67ecc213c1506a9f24b8625e6a011622a9","source_size_bytes":10717,"start_line":1}
+--- exact source range ---
+# Capability-terrain reconnaissance v0: program disposition
+
+Date: 2026-08-23
+
+Status: measured breadth tranche complete; result incorporated into discovery routing
+
+## Answer first
+
+The first breadth tranche did not find a context-capacity failure or a correct
+end-to-end completion. It found a different and more immediate systems
+boundary:
+
+> At low context occupancy, the actor could sometimes integrate evidence,
+> construct a large artifact, absorb its effect, and use a current check, but
+> legal action expression and correct readiness discrimination were unreliable.
+
+Across 39 actor calls, 19 responses were rejected before an action reached the
+environment. D2 and D5 nevertheless completed substantial construction paths,
+then submitted strong-partial artifacts after narrower visible checks passed.
+D6 received D2's exact current state without its construction chronology and
+repeated the same premature-closure disposition. No cell achieved independently
+correct useful completion.
+
+This result supplies a low-pressure reference regime. It does not answer the
+program's intended interaction question. Context pressure, semantic
+persistence, incremental work, and matched lifecycle alternatives never became
+active together, so the tranche cannot establish how those functions alter one
+another. Its valid contribution is to identify boundaries that a later
+interaction study must keep inside the same closed loop.
+
+## Exact source binding
+
+- experiment repository: `ScrappyTom/qwen38-capability-terrain-reconnaissance-v0`
+- frozen design commit: `f3092c73065353d5fbdb4c3646632b6586c7e50b`
+- measured result commit: `ea8f4cfa5888998d6193f57316e9cd41cf1639b6`
+- run ID: `2026-08-23-capability-terrain-v0`
+- result narrative SHA-256:
+  `c6b6d09c5093f552dd6c225ba04ce9d66cf435a1f22b9b9f6050ea71a8721c60`
+- direct transcript audit SHA-256:
+  `7769875b9d9067f5ec1a827c9f59fdd5ec9e1f977fd6a798262a99321d96b7a8`
+- raw-run manifest content digest:
+  `b6b40c3c444348efe1bcd6a26886806d67d215d04d78283b3d456dcd63cdfd3b`
+
+The measured repository contains the complete requests, responses, results,
+candidates, checks, evaluator outputs, mechanical audit, and candidate-bound D2
+semantic adjudication. Its clean-checkout suite passed 25 tests, the mechanical
+audit, and the D2 adjudication validator.
+
+## Mechanical result
+
+| Measure | Result |
+|---|---:|
+| Actor calls | 39 |
+| Provider attempts | 39 |
+| Retries | 0 |
+| Prompt tokens | 96,407 |
+| Completion tokens | 5,250 |
+| Serialized tokens | 101,657 |
+| Cached prompt tokens | 73,830 |
+| Aggregate prompt-cache reuse | 76.58% |
+| Accepted actions | 20 |
+| Rejected responses | 19 |
+| Pressure events | 0 |
+| Result-body substitutions | 0 |
+| Exact reopens | 0 |
+| Correct useful completions | 0 |
+
+The largest prompt was 7,110 tokens against a 20,992-token prompt allowance.
+Context relief, receipt substitution, and reopen behavior were therefore
+inactive. They cannot explain the measured failures.
+
+## Literal cell outcomes
+
+| Cell | Literal trajectory | Artifact and closure disposition |
+|---|---|---|
+| D1 large-world navigation | One admitted `atlas_root`; three malformed but legible navigation actions | No memo; discovery beyond the root remained unobserved |
+| D2 paper revision | Tree, three exact reads, full replacement, current check, submit | Strong partial: 12/13 semantic criteria; premature closure |
+| D3 ordinary-success calibration | Seven fenced `tree` requests, then one admitted `tree` | Starting failure unchanged; downstream coding capability unobserved |
+| D4 rule-dense construction | Tree and two reads admitted; six malformed actions | Starting failure unchanged; construction unobserved |
+| D5 deployment-wave repair | Three reads, large full replacement, current check, submit | Strong partial: 7/8 external criteria; premature closure |
+| D6 exact current-state handoff | Two fenced submits, then admitted submit | Byte-identical D2 candidate; same premature closure |
+
+The rejected responses were not random semantic wandering. Eleven wrapped a
+plausible action object in Markdown fences, seven added extra braces, closing
+tags, or a duplicate object, and one returned a one-element array. Intent was
+usually legible, but the declared transport was not satisfied and the strict
+host correctly did not repair it.
+
+## What the tranche teaches about the low-pressure regime
+
+### 1. Useful operation is conjunctive
+
+The observed economics are better described as:
+
+```text
+accessible information
+x formed relation
+x intended operation
+x legal expression
+x admitted effect
+x discriminating feedback
+x correct readiness decision
+= useful completion
+```
+
+Ample context or successful acquisition cannot compensate for a zero at a later
+boundary. D3 and D4 spent prompt-heavy calls repeatedly expressing tiny invalid
+actions. D2 and D5 crossed expression, construction, and effect uptake, but lost
+one governing requirement apiece and then trusted incomplete verification.
+
+### 2. Action transport is part of the information economy
+
+The model-facing protocol determines whether an intended operation can become
+world state. A rejected 20-token action can consume the same scarce actor-call
+slot as a substantive edit. This makes expression/admission a first-class
+throughput boundary, not merely cosmetic output formatting.
+
+The result does not show that JSON fencing caused the D2 or D5 semantic defects,
+nor that silently repairing malformed actions would be safe. It does show that
+an observation instrument must qualify its transport well enough to expose the<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":120,"source_id":"S14","start_line":1},{"end_line":80,"source_id":"S07","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:S14:1-120+S07:1-80","object_version":"f8c583d119fb393ae5c34ddbe6b5528a978596be72b5389fcab611ae40e8483d","result_id":"RESULT-011","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":120,"source_id":"S14","start_line":1},{"end_line":80,"source_id":"S07","start_line":1}],"total_source_bytes":9575}
+--- exact batch segment 1 ---
+{"end_line":120,"source_id":"S14","source_path":"sources/S14_PRIOR_EVIDENCE_RECONCILIATION.md","source_sha256":"80fb23325bf09b9e2529ab8a2d65e81e9dca8637a6b785256814963f4be3ec95","source_size_bytes":6229,"start_line":1}
+--- exact source range ---
+# Next-route prior-evidence reconciliation
+
+Date: 2026-08-22
+
+Status: complete; proposed submission-reflection experiment not selected;
+bounded phase reentry reclassified from untested; zero GPU calls
+
+## Why this audit was necessary
+
+After H05's correction, the tentative next route was a new submission-bound
+readiness-reflection discrimination followed, if ineligible, by bounded phase
+decomposition. A direct pinned-donor search found that both functional questions
+already have substantial Qwen3.8 evidence in the older research program.
+
+Running either under a new standalone name without reconciling that evidence
+would not be a clean next experiment. It would rediscover an existing method
+class while understating its known failure modes.
+
+This audit reads 13 result objects directly from commit
+`b7e12ab21cec1ef8215e97dc9890924721651f1d` of
+`E:\research-state-integration-2026-08-18`. Their Git blobs, SHA-256 hashes,
+and byte sizes are locked in `NEXT_ROUTE_PRIOR_EVIDENCE_LOCK.json` and verify
+in `NEXT_ROUTE_PRIOR_EVIDENCE_RECEIPT.json`.
+
+## Submission readiness is already an evidence-rich boundary
+
+Four complete-audit studies tested authentic Qwen3.8 false closure with exact
+task-derived execution evidence:
+
+- the first matched scout improved all 3/3 complete-audit branches and produced
+  two complete candidates while narrow evidence improved none;
+- the held-out replication activated mutation in 6/6 complete-audit branches,
+  but won only 3/6 pairs under a four-win gate and produced two complete
+  candidates;
+- automatically refreshing the complete audit after each mutation won 1/5
+  pairs and used roughly three times the static condition's tokens; and
+- running the complete audit only when the actor attempted submission improved
+  4/5 qualified episodes, but only one reached complete admitted submission and
+  post-submit work cost 4.54 times the tokens used through first submission.
+
+The repeated bounded result is already clear: exact candidate-bound complete
+verification is a strong false-closure detector and repair activator, but not a
+reliable, economical repair-and-closure policy.
+
+Two model-authored review studies also constrain a new reflection pass:
+
+- a qualified binary assessor correctly found a real support gap, but the
+  original builder finalized the same artifact in both receipt-only and review
+  conditions; and
+- aggregate versus task-author atomic review detected only 2/7 versus 3/7
+  known violations. Both methods falsely supported multiple defect-bearing
+  requirements despite receiving the exact task and candidate.
+
+Therefore another plain model-authored readiness message would not isolate a
+new mechanism. It would revisit known questions about defect recall, optional
+review uptake, and closure cueing. H05 already supplies an additional local
+warning: a recent progress package can induce premature unchanged submission.
+
+## Bounded phase reentry is not untested
+
+The fallback H06 route also has prior evidence:
+
+- a phase-state scout showed that fresh current-world actors completed one code
+  and one research revision without the accumulated transcript;
+- a fresh replication again produced the best code artifact and a clean
+  research memo from exact current-world reentry, while the model-authored
+  checkpoint package failed promotion; and
+- a three-phase longitudinal study preserved all task-grounded code behavior
+  and required research distinctions through two authority changes. Fresh
+  world used 20.3% fewer research tokens and 34.1% lower maximum prompt
+  occupancy, but needed more calls and slightly more inference time.
+
+This supports bounded phase reentry as a removable local operating technique.
+It does not support automatic phase routing, semantic checkpoints, or the claim
+that history is useless. Transcript history remained useful for navigation and
+sometimes produced cleaner semantic output.
+
+## Reserved handoff does not reopen the simple selector route
+
+Guaranteed maintenance/control opportunity has also been exercised in a close
+method family:
+
+- scheduled handoff successfully produced and delivered a model-authored exact
+  receipt selection, but the actor selected every available receipt and reached
+  capacity before mutation; and
+- projected scheduled handoff combined selective structural navigation with
+  exact transfer. The fresh actor accepted all transferred evidence without
+  reopening it, then reconstructed 98% of the target and again reached capacity
+  before mutation.
+
+Thus `reserve a maintenance turn` solves control-plane reachability, not
+working-set selectivity or downstream acceptance. A new forced maintenance
+turn would need a materially different resource-allocation question, not a new
+label for these handoffs.
+
+## Systems interpretation
+
+The reconciled evidence strengthens a state-conditional view:
+
+```text
+exact verification at closure
+    -> strong defect visibility and repair activation
+    -> incomplete/expensive repair remains
+
+fresh exact phase reentry
+    -> bounded continuity can survive without full chronology
+    -> navigation work and semantic derivatives still have variable value
+
+reserved exact handoff
+    -> control operation becomes reachable and exact transfer works
+    -> selected state can still be globally broad or rejected as sufficient
+```
+
+These are not one failed architecture. They are different operating regimes
+with different owners, costs, and failure migrations.
+
+## Decision
+
+Do not build or run the proposed submission-bound reflection experiment. Do not
+mark bounded decomposition as untested. Do not respond by tuning review wording,
+--- exact batch segment 2 ---
+{"end_line":80,"source_id":"S07","source_path":"sources/S07_INGRESS_WORK_STAGE0.md","source_sha256":"809a4e2c4e4046141bbc85a2dab210f3d939e8cecc85afa14523c6d10cba42c2","source_size_bytes":5590,"start_line":1}
+--- exact source range ---
+# E39 — ingress × cumulative-work Stage 0 handoff
+
+Date: 2026-08-24
+
+Status: historical Stage 0 handoff; batch-action qualification passed 2/2;
+the subsequently authorized measured interaction is complete
+
+Standalone repository:
+[qwen38-ingress-work-interaction-scout-v0@1c041e2](https://github.com/ScrappyTom/qwen38-ingress-work-interaction-scout-v0/commit/1c041e2c55e0cc1f735e056df84a156c15bd8679)
+
+Measured result:
+[qwen38-ingress-work-interaction-scout-v0@ea03f6c](https://github.com/ScrappyTom/qwen38-ingress-work-interaction-scout-v0/commit/ea03f6c7e5d11e0f9f1013eef573215767c58ad1)
+
+Program disposition:
+`E40_INGRESS_WORK_INTERACTION_RESULT.md`
+
+## System question
+
+At the exact E36 result-delivery pressure boundary, how do two interacting
+functions change the complete bounded-work trajectory?
+
+```text
+actor-selected evidence-ingress bandwidth
+×
+bounded cumulative task-native work
+```
+
+The four configurations cross one exact range versus a bounded actor-selected
+batch of one to three ranges with whole-final-artifact-only versus a bounded
+replacement evidence-integration record. All four retain the same exact world,
+custody, first-fit relief, reopen, actor model and budget, action/effect loop,
+candidate-bound checking, reactive capacity reentry, and independent readiness
+evaluation.
+
+This is not relief versus context death and not a set of component tests. The
+unit is the whole trajectory through acquisition, pressure, persistent work,
+construction, effect uptake, verification, repair, and closure or declared
+budget exhaustion.
+
+## Offline findings
+
+- Authentic ordinary packet: 21,442 prompt tokens against 20,992 allowed.
+- Common first-fit packet: 19,818 tokens after externalizing `RESULT-001`.
+- I1/I2 first actor packets: 20,481 / 20,529 tokens.
+- Maximum-size I3/I4 work packets initially overflow; first-fit externalizes
+  `RESULT-002`, yielding 13,984 / 14,032 tokens.
+- Because work is triggered by exact-body externalization, I3/I4 owe two work
+  updates before actor call one: `RESULT-001`, then `RESULT-002`.
+- Work bootstrap and representative large-batch update prompts remain within
+  the 25,088-token provider context including their completion ceilings.
+- A synthetic late reactive-reentry packet fits at 19,221 tokens.
+- Runtime tests: 21/21. Inherited evaluator tests: 5/5.
+- The inherited evaluation law is rebound to this experiment's exact task lock.
+
+The treatment-induced second demotion is intentionally preserved. It is the
+real residency and maintenance cost of carrying cumulative work under pressure,
+not an imbalance to erase.
+
+## Live apparatus result
+
+The new batch action passed both prospectively frozen live fixtures:
+
+1. one requested range;
+2. three requested ranges.
+
+Run `2026-08-23-ingress-action-expression-qualification-v0` used two model
+calls, one attempt per call, and zero retries. Both responses were valid bounded
+`read_batch` actions, both stopped normally, and both exact results executed
+below the 12,000-token batch-result gate. The run consumed 40,676 serialized
+tokens: Q01 used 20,268 prompt and 31 completion tokens; Q02 used 20,307 prompt
+and 70 completion tokens. The exact run is sealed in the standalone result
+commit.
+
+This is action-transport qualification only. It supplies no evidence that batch
+ingress, cumulative work, or their interaction improves a trajectory.
+
+## Measured freeze
+
+The measured run is frozen as
+`2026-08-24-ingress-work-interaction-measured-v0` in configuration order I1,<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:EVIDENCE_INTEGRATION_LEDGER.md","object_version":"candidate-v001:b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","result_id":"MAINT-EFFECT-003","result_kind":"candidate_state_confirmation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"artifact_coupled":true,"candidate_changed":false,"candidate_sha256":"b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","candidate_version":"candidate-v001:b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","integration_body_sha256":"7fb5ee436cf5f336d7f52092b621556c42db6e4f6ee6c2a8f36fb671847a3d1b","integration_version":3,"schema":"architecture-coupled-integration-confirmation-v0"}<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:EVIDENCE_INTEGRATION_LEDGER.md","object_version":"candidate-v002:0cc24474b03abe480eb29d8a6becbaa585e212554acb45e7b435021efe058313","result_id":"MAINT-EFFECT-004","result_kind":"candidate_effect","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"after_sha256":"0cc24474b03abe480eb29d8a6becbaa585e212554acb45e7b435021efe058313","before_sha256":"b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","candidate_version":"candidate-v002:0cc24474b03abe480eb29d8a6becbaa585e212554acb45e7b435021efe058313","cause":"maintenance_integration_coupled","changed_file":"EVIDENCE_INTEGRATION_LEDGER.md","current_candidate_verification_status":"not_run_after_candidate_effect","prior_check_binding":null,"schema":"architecture-candidate-effect-v0"}<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:EVIDENCE_INTEGRATION_LEDGER.md","object_version":"candidate-v003:91870304ca26fa9a24ba10447790b9c528773c887886582d8a8a1013f7ae7a84","result_id":"MAINT-EFFECT-005","result_kind":"candidate_effect","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"after_sha256":"91870304ca26fa9a24ba10447790b9c528773c887886582d8a8a1013f7ae7a84","before_sha256":"0cc24474b03abe480eb29d8a6becbaa585e212554acb45e7b435021efe058313","candidate_version":"candidate-v003:91870304ca26fa9a24ba10447790b9c528773c887886582d8a8a1013f7ae7a84","cause":"maintenance_integration_coupled","changed_file":"EVIDENCE_INTEGRATION_LEDGER.md","current_candidate_verification_status":"not_run_after_candidate_effect","prior_check_binding":null,"schema":"architecture-candidate-effect-v0"}<|im_end|>
+<|im_start|>assistant
+{"action":"replace_evidence_ledger","content":"# Evidence Integration Ledger\n\n## R01: Exact External Custody and Reopenability\n**Disposition:** Earned mechanical substrate. Both arms maintain identical exact external objects; model-facing residency changes do not alter authoritative bytes [S09]. Reactive exact reentry remains a fallback for insufficient declared relief [S02]. Scheduled low-occupancy reentry failed to earn a default role, disrupting qualified code trajectories while reducing cache reuse [S10]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02].\n\n## R02: Response/Control Reserves and Positive-Savings Relief\n**Disposition:** Qualified deterministic first-fit relief. Host renders/tokenizes prospective requests; model does not own hard-overflow prevention [S09]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, censors the full E40 matrix, and remains descriptive rather than validating broader utility [S02][S10]. Unresolved evidence: Broad applicability beyond narrow pressure boundaries is untested [S10].\n\n## R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure\n**Disposition:** Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. Unresolved evidence: Joint effects of these boundaries within a complete bounded trajectory remain untested [S02][S10].\n\n## R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy\n**Disposition:** Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03].\n\n## R05: Chronology’s External and Resident Lifecycle\n**Disposition:** Ordinary chronology is qualified while healthy. Within a phase, append ordinary model actions and literal results while the next valid packet remains feasible; do not continuously rewrite a prompt that still satisfies the arm's frozen reserves [S09]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02][S10].\n\n## R06: Cache/Prefill and Decision-Bandwidth Costs\n**Disposition:** Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03].\n\n## R07: Semantic Derivatives as Endogenous Demand/Control Inputs\n**Disposition:** Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02].\n\n## R08: Source-Digest Negative and Progress-State False-Closure Risk\n**Disposition:** High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02][S11].\n\n## R09: Host/Model Ownership Supported by Manager and Paging Results\n**Disposition:** Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02][S10].\n\n## R10: E40’s Detached-Sidecar versus Task-Artifact Gap\n**Disposition:** Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02].\n\n## R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules\n**Disposition:** Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11].\n\n## R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness\n**Disposition:** Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02][S10].\n"}<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:EVIDENCE_INTEGRATION_LEDGER.md","object_version":"candidate-v004:44479f10495208c409224ec1b13b7b3c831d906fe44d5e725780afead53b88d3","result_id":"RESULT-012","result_kind":"candidate_effect","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"after_sha256":"44479f10495208c409224ec1b13b7b3c831d906fe44d5e725780afead53b88d3","before_sha256":"91870304ca26fa9a24ba10447790b9c528773c887886582d8a8a1013f7ae7a84","candidate_version":"candidate-v004:44479f10495208c409224ec1b13b7b3c831d906fe44d5e725780afead53b88d3","cause":"actor_replace_evidence_ledger","changed_file":"EVIDENCE_INTEGRATION_LEDGER.md","current_candidate_verification_status":"not_run_after_candidate_effect","prior_check_binding":null,"schema":"architecture-candidate-effect-v0"}<|im_end|>
+<|im_start|>assistant
+{"action":"replace_decision","content":"# Bounded-Agent Architecture Decision\n\n## Decision and scope\nThe next phase must advance only mechanisms that earned local roles, not untested general architectures. The current program has validated exact external custody [S09], deterministic first-fit relief under narrow pressure [S10], and host-owned response/control reserves [S02]. It has not validated model-owned eviction, automatic phase discovery, artifact coupling as a general mechanism, or a unified architecture for bounded agents [S14]. The decision is to proceed with an interaction-first roadmap that tests joint effects of ingress bandwidth and cumulative work externalization, while maintaining strict stopping rules and candidate-bound evaluation [S02][S13]. Scope excludes broad applicability claims beyond the tested pressure boundaries and model configurations [S10].\n\n## Earned mechanical substrate\nExact external custody is earned: both arms maintain identical exact external objects, and model-facing residency changes do not alter authoritative bytes [S09]. Reactive exact reentry remains a fallback for insufficient declared relief [S02]. Deterministic first-fit relief is qualified: host renders/tokenizes prospective requests; model does not own hard-overflow prevention [S09]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, censors the full E40 matrix, and remains descriptive rather than validating broader utility [S02][S10]. Host-owned response and control reserves are earned; manager and paging results support host ownership, but model-owned eviction is not validated [S02]. No general architecture validation exists; only local mechanism evidence supports current roles [S02][S10].\n\n## Information interactions and failure migration\nThe I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. No successful transfer of sidecar content to durable work-product externalization has occurred [S02]. Failure migration is evident: E36 showed an authentic different bottleneck where exact evidence can keep entering, one bounded read consumes one actor decision, and old evidence becomes identity-only receipts [S05]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11].\n\n## State, relationships, chronology, and control\nOrdinary chronology is qualified while healthy: within a phase, append ordinary model actions and literal results while the next valid packet remains feasible; do not continuously rewrite a prompt that still satisfies the arm's frozen reserves [S09]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Value of state properties is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03]. Bounded phase reentry is a removable local operating technique: fresh current-world actors completed one code and one research revision without the accumulated transcript [S14]. Fresh replication again produced the best code artifact and a clean research memo from exact current-world reentry, while the model-authored checkpoint package failed promotion [S14]. This does not support automatic phase routing, semantic checkpoints, or the claim that history is useless [S14].\n\n## Runtime policy\nMinimal runtime policy v0 governs current operations. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. No post-hoc increase from 256 to 310 tokens is allowed; no salvage comparison using only A and C under the old name is permitted [S06]. The route is closed rather than optimized indefinitely [S06]. Runtime policy must maintain exact candidate-bound checking, reactive capacity reentry, and independent readiness evaluation [S07].\n\n## Experimental roadmap\nThe next experiment tests how two interacting functions change the complete bounded-work trajectory: actor-selected evidence-ingress bandwidth × bounded cumulative task-native work [S07]. The four configurations cross one exact range versus a bounded actor-selected batch of one to three ranges with whole-final-artifact-only versus a bounded replacement evidence-integration record [S07]. All four retain the same exact world, custody, first-fit relief, reopen, actor model and budget, action/effect loop, candidate-bound checking, reactive capacity reentry, and independent readiness evaluation [S07]. The unit is the whole trajectory through acquisition, pressure, persistent work, construction, effect uptake, verification, repair, and closure or declared budget exhaustion [S07]. This is not relief versus context death and not a set of component tests [S07]. Fresh transfer and stopping rules are mandatory: no v3 for failed designs; no host truncation or silent semantic repair [S06][S02].\n\n## Verification, readiness, and governance\nIndependent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Exact candidate-bound complete verification is a strong false-closure detector and repair activator, but not a reliable, economical repair-and-closure policy [S14]. A recent progress package can induce premature unchanged submission [S13]. The measured result commit contains the complete requests, responses, results, candidates, checks, evaluator outputs, mechanical audit, and candidate-bound D2 semantic adjudication [S12]. Its clean-checkout suite passed 25 tests, the mechanical audit, and the D2 adjudication validator [S12]. Readiness lineage must be established for each experiment; no readiness lineage is established for general architecture [S02][S10].\n\n## Uncertainties and falsifiers\nUncertainties include: broad applicability of relief beyond narrow pressure boundaries is untested [S10]; joint effects of capacity, delivery, action, effect uptake, quality, and closure within a complete bounded trajectory remain untested [S02][S10]; interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02][S10]; false-closure risk in progress-state remains unquantified across independent worlds [S02][S11]. Falsifiers for the recommended next policy: if the I1–I4 run shows no meaningful joint effect transferring to an independent world, the interaction-first roadmap is falsified [S02][S11]. If fresh transfer fails to maintain bounded continuity without full chronology, the phase reentry technique is falsified [S14]. If candidate-bound complete verification fails to detect false closure in a fresh world, the readiness lineage is falsified [S14]. If model-owned eviction demonstrates utility beyond host-owned reserves, the current ownership boundary is falsified [S02][S10]."}<|im_end|>
+<|im_start|>user
+{"object_id":"candidate:BOUNDED_AGENT_ARCHITECTURE_DECISION.md","object_version":"candidate-v005:400ab73c2dfd68acd769c7aa184846e1d0dc34f05dc24d23f8dcbc5fe3f870b9","result_id":"RESULT-013","result_kind":"candidate_effect","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"after_sha256":"400ab73c2dfd68acd769c7aa184846e1d0dc34f05dc24d23f8dcbc5fe3f870b9","before_sha256":"44479f10495208c409224ec1b13b7b3c831d906fe44d5e725780afead53b88d3","candidate_version":"candidate-v005:400ab73c2dfd68acd769c7aa184846e1d0dc34f05dc24d23f8dcbc5fe3f870b9","cause":"actor_replace_decision","changed_file":"BOUNDED_AGENT_ARCHITECTURE_DECISION.md","current_candidate_verification_status":"not_run_after_candidate_effect","prior_check_binding":null,"schema":"architecture-candidate-effect-v0"}<|im_end|>
+<|im_start|>user
+{"accepted":false,"configuration_id":"A1_COUPLED","finish_reason":"stop","input_result_id":"RESULT-009","output_sha256":"e74d480f3b38c2f789a85ec6bdb0eaaee45f52b0f6693f9ddfc0fb409208cd57","schema":"artifact-coupled-maintenance-rejection-v0","validation_code":"token_budget_exceeded"}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

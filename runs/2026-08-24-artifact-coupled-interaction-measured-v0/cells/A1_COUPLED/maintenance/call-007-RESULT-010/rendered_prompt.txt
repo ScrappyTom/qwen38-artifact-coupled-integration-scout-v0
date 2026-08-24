@@ -1,0 +1,246 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the authoritative task.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S02, S03, S04, S08, S09, S10, S11, S12, S13. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+## R01: Exact External Custody and Reopenability
+**Disposition:** Earned mechanical substrate. Both arms maintain identical exact external objects; model-facing residency changes do not alter authoritative bytes [S09]. Reactive exact reentry remains a fallback for insufficient declared relief [S02]. Scheduled low-occupancy reentry failed to earn a default role, disrupting qualified code trajectories while reducing cache reuse [S10]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02].
+
+## R02: Response/Control Reserves and Positive-Savings Relief
+**Disposition:** Qualified deterministic first-fit relief. Host renders/tokenizes prospective requests; model does not own hard-overflow prevention [S09]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, censors the full E40 matrix, and remains descriptive rather than validating broader utility [S02][S10]. Unresolved evidence: Broad applicability beyond narrow pressure boundaries is untested [S10].
+
+## R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure
+**Disposition:** Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. Unresolved evidence: Joint effects of these boundaries within a complete bounded trajectory remain untested [S02][S10].
+
+## R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy
+**Disposition:** Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03].
+
+## R05: Chronology’s External and Resident Lifecycle
+**Disposition:** Ordinary chronology is qualified while healthy. Within a phase, append ordinary model actions and literal results while the next valid packet remains feasible; do not continuously rewrite a prompt that still satisfies the arm's frozen reserves [S09]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02][S10].
+
+## R06: Cache/Prefill and Decision-Bandwidth Costs
+**Disposition:** Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03].
+
+## R07: Semantic Derivatives as Endogenous Demand/Control Inputs
+**Disposition:** Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02].
+
+## R08: Source-Digest Negative and Progress-State False-Closure Risk
+**Disposition:** High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02][S11].
+
+## R09: Host/Model Ownership Supported by Manager and Paging Results
+**Disposition:** Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02][S10].
+
+## R10: E40’s Detached-Sidecar versus Task-Artifact Gap
+**Disposition:** Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02].
+
+## R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules
+**Disposition:** Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11].
+
+## R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness
+**Disposition:** Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02][S10].
+
+
+# Exact newly externalized observation
+
+{"object_id":"source:S12:1-120","object_version":"0f13778c862fa91d79406ab854fa3c67ecc213c1506a9f24b8625e6a011622a9","result_id":"RESULT-010","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":120,"source_id":"S12","source_path":"sources/S12_DISCOVERY_TRANCHE_RESULT.md","source_sha256":"0f13778c862fa91d79406ab854fa3c67ecc213c1506a9f24b8625e6a011622a9","source_size_bytes":10717,"start_line":1}
+--- exact source range ---
+# Capability-terrain reconnaissance v0: program disposition
+
+Date: 2026-08-23
+
+Status: measured breadth tranche complete; result incorporated into discovery routing
+
+## Answer first
+
+The first breadth tranche did not find a context-capacity failure or a correct
+end-to-end completion. It found a different and more immediate systems
+boundary:
+
+> At low context occupancy, the actor could sometimes integrate evidence,
+> construct a large artifact, absorb its effect, and use a current check, but
+> legal action expression and correct readiness discrimination were unreliable.
+
+Across 39 actor calls, 19 responses were rejected before an action reached the
+environment. D2 and D5 nevertheless completed substantial construction paths,
+then submitted strong-partial artifacts after narrower visible checks passed.
+D6 received D2's exact current state without its construction chronology and
+repeated the same premature-closure disposition. No cell achieved independently
+correct useful completion.
+
+This result supplies a low-pressure reference regime. It does not answer the
+program's intended interaction question. Context pressure, semantic
+persistence, incremental work, and matched lifecycle alternatives never became
+active together, so the tranche cannot establish how those functions alter one
+another. Its valid contribution is to identify boundaries that a later
+interaction study must keep inside the same closed loop.
+
+## Exact source binding
+
+- experiment repository: `ScrappyTom/qwen38-capability-terrain-reconnaissance-v0`
+- frozen design commit: `f3092c73065353d5fbdb4c3646632b6586c7e50b`
+- measured result commit: `ea8f4cfa5888998d6193f57316e9cd41cf1639b6`
+- run ID: `2026-08-23-capability-terrain-v0`
+- result narrative SHA-256:
+  `c6b6d09c5093f552dd6c225ba04ce9d66cf435a1f22b9b9f6050ea71a8721c60`
+- direct transcript audit SHA-256:
+  `7769875b9d9067f5ec1a827c9f59fdd5ec9e1f977fd6a798262a99321d96b7a8`
+- raw-run manifest content digest:
+  `b6b40c3c444348efe1bcd6a26886806d67d215d04d78283b3d456dcd63cdfd3b`
+
+The measured repository contains the complete requests, responses, results,
+candidates, checks, evaluator outputs, mechanical audit, and candidate-bound D2
+semantic adjudication. Its clean-checkout suite passed 25 tests, the mechanical
+audit, and the D2 adjudication validator.
+
+## Mechanical result
+
+| Measure | Result |
+|---|---:|
+| Actor calls | 39 |
+| Provider attempts | 39 |
+| Retries | 0 |
+| Prompt tokens | 96,407 |
+| Completion tokens | 5,250 |
+| Serialized tokens | 101,657 |
+| Cached prompt tokens | 73,830 |
+| Aggregate prompt-cache reuse | 76.58% |
+| Accepted actions | 20 |
+| Rejected responses | 19 |
+| Pressure events | 0 |
+| Result-body substitutions | 0 |
+| Exact reopens | 0 |
+| Correct useful completions | 0 |
+
+The largest prompt was 7,110 tokens against a 20,992-token prompt allowance.
+Context relief, receipt substitution, and reopen behavior were therefore
+inactive. They cannot explain the measured failures.
+
+## Literal cell outcomes
+
+| Cell | Literal trajectory | Artifact and closure disposition |
+|---|---|---|
+| D1 large-world navigation | One admitted `atlas_root`; three malformed but legible navigation actions | No memo; discovery beyond the root remained unobserved |
+| D2 paper revision | Tree, three exact reads, full replacement, current check, submit | Strong partial: 12/13 semantic criteria; premature closure |
+| D3 ordinary-success calibration | Seven fenced `tree` requests, then one admitted `tree` | Starting failure unchanged; downstream coding capability unobserved |
+| D4 rule-dense construction | Tree and two reads admitted; six malformed actions | Starting failure unchanged; construction unobserved |
+| D5 deployment-wave repair | Three reads, large full replacement, current check, submit | Strong partial: 7/8 external criteria; premature closure |
+| D6 exact current-state handoff | Two fenced submits, then admitted submit | Byte-identical D2 candidate; same premature closure |
+
+The rejected responses were not random semantic wandering. Eleven wrapped a
+plausible action object in Markdown fences, seven added extra braces, closing
+tags, or a duplicate object, and one returned a one-element array. Intent was
+usually legible, but the declared transport was not satisfied and the strict
+host correctly did not repair it.
+
+## What the tranche teaches about the low-pressure regime
+
+### 1. Useful operation is conjunctive
+
+The observed economics are better described as:
+
+```text
+accessible information
+x formed relation
+x intended operation
+x legal expression
+x admitted effect
+x discriminating feedback
+x correct readiness decision
+= useful completion
+```
+
+Ample context or successful acquisition cannot compensate for a zero at a later
+boundary. D3 and D4 spent prompt-heavy calls repeatedly expressing tiny invalid
+actions. D2 and D5 crossed expression, construction, and effect uptake, but lost
+one governing requirement apiece and then trusted incomplete verification.
+
+### 2. Action transport is part of the information economy
+
+The model-facing protocol determines whether an intended operation can become
+world state. A rejected 20-token action can consume the same scarce actor-call
+slot as a substantive edit. This makes expression/admission a first-class
+throughput boundary, not merely cosmetic output formatting.
+
+The result does not show that JSON fencing caused the D2 or D5 semantic defects,
+nor that silently repairing malformed actions would be safe. It does show that
+an observation instrument must qualify its transport well enough to expose the<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

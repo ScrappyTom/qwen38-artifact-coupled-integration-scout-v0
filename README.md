@@ -1,9 +1,9 @@
 # Qwen3.8 artifact-coupled integration scout v0
 
-Status: offline Stage 0, live expression qualification, and the authentic
-pressure screen passed. The exact common fork is frozen; the matched measured
-continuation remains unexecuted and requires a new frozen commit and separate
-GPU authorization.
+Status: measured interaction scout complete. Both sealed configurations,
+the independent mechanical audit, and the candidate-bound semantic
+adjudication passed their validation procedures. Neither configuration
+produced a closure-ready artifact; no architecture promotion is claimed.
 
 This repository implements the next whole-system interaction scout in the
 bounded-context experimental program. It does not compare an isolated memory
@@ -76,5 +76,12 @@ both configurations. `MEASURED_STUDY_PLAN.md` and
 
 The final offline preflight passed, including the exact boundary handoff,
 provider-free two-arm loop, frozen budgets, treatment semantics, and
-authorization contract. No measured provider call is authorized by the screen
-receipt; the frozen measured commit still requires explicit GPU authorization.
+authorization contract. The owner subsequently authorized and completed the
+frozen measured run at
+`4937083f29df3247a84b3b399c0a7ae922ddb020`.
+
+Across 40 actor calls and 19 maintenance calls, artifact coupling accelerated
+full construction and checking but did not produce useful completion. Both
+arms exhausted their actor-call budgets and ended with strong-partial,
+not-ready candidates. See `MEASURED_INTERACTION_RESULT.md` and the exact
+candidate-bound `SEMANTIC_ADJUDICATION.json`.

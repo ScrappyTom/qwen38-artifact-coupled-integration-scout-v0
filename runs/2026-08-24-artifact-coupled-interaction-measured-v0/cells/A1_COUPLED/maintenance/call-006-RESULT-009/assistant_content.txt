@@ -1,0 +1,37 @@
+# Evidence Integration Ledger
+
+## R01: Exact External Custody and Reopenability
+**Disposition:** Earned mechanical substrate. The E36 audit confirms exact custody where the candidate remained byte-identical (58 bytes) across all decisions, while `reopen_exact` remained available for previously visible results [S05]. At absolute call 22, the actor had temporally received every byte of S01–S11, with 18 exact result bodies totaling 322,887 wrapped-result bytes [S05]. Receipts retained identity and hashes but contained no model-authored semantic digests [S05]. The v2 run demonstrates that externalization preserves exactness while reducing resident cost, though reactive reentry remains a fallback for insufficient declared relief [S09]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure beyond the frozen v2 trajectory [S02].
+
+## R02: Response/Control Reserves and Positive-Savings Relief
+**Disposition:** Qualified deterministic first-fit relief. The E36 geometry shows relief occurring after specific actions, such as externalizing `RESULT-001` to reduce the next prompt from 21,442 to 19,818 tokens [S05]. Relief is restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. The v2 run consumed 18 continuation decisions, with relief events explicitly tied to token counts (e.g., call 4: 21,442 → 19,818 tokens) [S05]. Unresolved evidence: Broad applicability of relief beyond the specific first-fit scan order remains untested; the I1 relief event described in prior ledgers remains descriptive rather than validating broader utility [S02][S10].
+
+## R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure
+**Disposition:** Distinct boundaries identified but not jointly validated. The E36 audit explicitly states that no mutation, check, submission, candidate effect, or effect-uptake event occurred [S05]. Capacity remained active (18 decisions consumed) but non-terminal; call budget became terminal while evidence remained incomplete [S02][S05]. The run activated batch ingress and work sidecars, yet no mutation or closure occurred [S02]. Unresolved evidence: Joint effects of these boundaries within a complete bounded trajectory remain untested; the E36 run serves as a negative control for effect uptake [S05].
+
+## R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy
+**Disposition:** Distinct properties acknowledged. The E36 audit tracks exact bodies resident at each call start, showing residency fluctuations (e.g., max 3 exact source-result bodies resident together) [S05]. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03].
+
+## R05: Chronology’s External and Resident Lifecycle
+**Disposition:** Ordinary chronology is qualified while healthy. The E36 audit shows append-only model actions and literal results within the phase, with no continuous rewriting of prompts that still satisfy frozen reserves [S09][S05]. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories; the E36 run shows linear accumulation without semantic pruning [S02][S10].
+
+## R06: Cache/Prefill and Decision-Bandwidth Costs
+**Disposition:** Costs are path-dependent and partly endogenous. The E36 audit quantifies prompt tokens per call, showing significant variance (e.g., 15,442 to 20,172 tokens) [S05]. Cache invalidation and prefill latency are distinct accounting factors [S03]. The v2 run consumed specific token counts per decision, qualifying action transport but not downstream utility [S02]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03].
+
+## R07: Semantic Derivatives as Endogenous Demand/Control Inputs
+**Disposition:** Semantic derivatives are endogenous demand inputs. The E38 disposition confirms that the dedicated per-demotion 256-token source-residue interface did not qualify reliable bootstrap; the first residue produced 310 tokens against the unchanged 256-token limit [S06]. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route is closed; no v3 allowed [S02][S06].
+
+## R08: Source-Digest Negative and Progress-State False-Closure Risk
+**Disposition:** High risk confirmed. The E38 apparatus nonqualification shows that the original interaction route was closed due to apparatus failure, not model failure [S06]. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02][S11].
+
+## R09: Host/Model Ownership Supported by Manager and Paging Results
+**Disposition:** Host-owned response and control reserves are earned. The E36 audit shows host-side tokenization and packet selection (e.g., call 4: externalize `RESULT-001`, select 19,818-token packet) [S05]. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02][S10].
+
+## R10: E40’s Detached-Sidecar versus Task-Artifact Gap
+**Disposition:** Gap confirmed. The E38 disposition notes that work outputs referenced unseen source IDs and expanded toward the final charter in v0, though v1/v2 fixed provenance [S06]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02][S11]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02].
+
+## R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules
+**Disposition:** Active route defined. The E38 disposition declares v2 final before inference, closing the route with no v3 prompt, seed, cap, scaffold, or format variant allowed [S06]. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02][S11].
+
+## R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness
+**Disposition:** Independent candidate/task/evidence-bound evaluation is mandatory common governance. The E36 audit is offline, read-only reconstruction, using exact bindings (commit `e4dcd58`, freeze commit `9d14cfc`) [S05]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02][S10].

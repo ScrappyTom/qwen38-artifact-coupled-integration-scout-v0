@@ -1,0 +1,282 @@
+{
+  "schema_version": "artifact-coupled-semantic-adjudication-v0",
+  "adjudication_id": "2026-08-24-artifact-coupled-interaction-measured-v0-semantic",
+  "run_id": "2026-08-24-artifact-coupled-interaction-measured-v0",
+  "freeze_commit": "4937083f29df3247a84b3b399c0a7ae922ddb020",
+  "evaluator_id": "bounded-agent-architecture-semantic-review-v0",
+  "protocol": {
+    "path": "SEMANTIC_ADJUDICATION_PROTOCOL.json",
+    "sha256": "86440c721b748c003d7e276ab203b8d112c69c2d66c9ebf0faaf5e4750c89b03"
+  },
+  "bindings": {
+    "task": {
+      "path": "task/TASK.md",
+      "bytes": 2484,
+      "sha256": "7b9f4dfe691698f62ef08cc36f92bf1ffac1a519a13f5c754e6629bf95e66f3c"
+    },
+    "mechanical_evaluator": {
+      "path": "task/EVALUATOR.json",
+      "bytes": 773,
+      "sha256": "716d9920047c6caa553fb8576e0780e9c27e5deaf353841f5662f419f35c8d5b"
+    },
+    "source_lock": {
+      "path": "task/TASK_SOURCE_LOCK.json",
+      "bytes": 8526,
+      "sha256": "7422263f4ace24dcce9ec9c34f43f0ca1eded7cd026cd23ef7b506be4922c765"
+    },
+    "aggregate_result": {
+      "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/AGGREGATE_RESULT.json",
+      "bytes": 11122,
+      "sha256": "1696f9085ccde51b66d71ac90be6845715d9d17615b0942287812cf061e8df7f"
+    },
+    "aggregate_seal": {
+      "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/RUN_SEAL.json",
+      "bytes": 102456,
+      "sha256": "15f844df6e7435710767deba0a528a22555a54ac1bc4a11fc110231de82e5bfb"
+    }
+  },
+  "method": {
+    "condition_masking": "Candidate records were written against neutral labels derived from decision-file hashes; configuration names are applied only in condition_mapping and comparative_disposition.",
+    "independence": "The adjudication occurred after both sealed trajectories and was not actor-visible.",
+    "limitation": "The investigator knew the experiment and supervised the run; this is condition-masked candidate review, not an independent third-party blind panel."
+  },
+  "candidates": [
+    {
+      "candidate_label": "C-17426844",
+      "candidate_sha256": "9afbad3b08bf42b0e6557f7389568edb834c38e97979bd3ba0280dc19d552865",
+      "files": {
+        "ledger": {
+          "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/cells/D0_DETACHED/trajectory/world/candidate/EVIDENCE_INTEGRATION_LEDGER.md",
+          "bytes": 7796,
+          "sha256": "6ea6422983c59b8ca6c199e589b58e9f38be10bb98e4d79e30ab08a888996354"
+        },
+        "decision": {
+          "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/cells/D0_DETACHED/trajectory/world/candidate/BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
+          "bytes": 12026,
+          "sha256": "174268444ebe19407272237e5a0a1b9eb39789c12c9157fc8fca6b825222f1f1"
+        },
+        "mechanical_evaluation": {
+          "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/cells/D0_DETACHED/evaluation/MECHANICAL_FINAL_EVALUATION.json",
+          "bytes": 4400,
+          "sha256": "4d434810900f968abe1a8077e4e98f050098bfc98d57fa06cb9ccb2938725b28"
+        }
+      },
+      "mechanical_disposition": {
+        "passed": false,
+        "decision_word_count": 1511,
+        "decision_word_range": [1600, 2200],
+        "blocking_requirements": [
+          "decision_word_range"
+        ]
+      },
+      "criterion_dispositions": [
+        {
+          "criterion_id": "R01",
+          "disposition": "partial",
+          "evidence": "The package treats exact custody as earned and keeps reentry/recovery available, but it does not explain exact reopenability as distinct from fresh reentry and overstates reactive reentry as a qualified substrate rather than the unpromoted fallback stated in S02/S10."
+        },
+        {
+          "criterion_id": "R02",
+          "disposition": "met",
+          "evidence": "The ledger and decision correctly assign reserves and prospective token accounting to the host, state the frozen first-fit/strictly-positive-savings law, and preserve the E40 negative-savings qualification."
+        },
+        {
+          "criterion_id": "R03",
+          "disposition": "partial",
+          "evidence": "The package names capacity, delivery, action, effect uptake, quality, and closure as distinct and notes that E40 crossed none of the later boundaries, but it does not substantively explain the transition chain or the observed cases in which one boundary passed while the next failed."
+        },
+        {
+          "criterion_id": "R04",
+          "disposition": "partial",
+          "evidence": "Recoverability, residency, behavioral accessibility, and working-set adequacy are named and described as state-dependent, but their meanings and the filing-cabinet/co-residency evidence are not actually distinguished."
+        },
+        {
+          "criterion_id": "R05",
+          "disposition": "partial",
+          "evidence": "The package recommends ordinary chronology while healthy and conditional bounded reentry when history becomes costly, but it does not clearly state the earned law that full chronology remains exact externally while permanent prompt residency is not required."
+        },
+        {
+          "criterion_id": "R06",
+          "disposition": "partial",
+          "evidence": "Cache invalidation, prefill latency, serialized-token cost, and decision bandwidth appear, yet the package does not connect the E36/E40 call-bandwidth bottleneck to the proposed policy or report the cost vector with enough precision to support a decision."
+        },
+        {
+          "criterion_id": "R07",
+          "disposition": "partial",
+          "evidence": "The package states that semantic derivatives are endogenous inputs, but it does not explain the observed distinction between digest-induced acquisition demand and progress-state-induced closure behavior."
+        },
+        {
+          "criterion_id": "R08",
+          "disposition": "not_met",
+          "evidence": "The R08 entry substitutes the later semantic-residue expression-gate failure for the required source-digest utility result and does not report that the digest redirected demand to a paired audit and then back to the original source. The decision alludes to false closure but omits the candidate-bound 10-met/2-partial H05 correction and its full-package attribution limit."
+        },
+        {
+          "criterion_id": "R09",
+          "disposition": "partial",
+          "evidence": "Host ownership is recommended, but the manager evidence is only asserted: the package omits the decisive over-release amounts and the fact that both subsequent actors immediately requested the released source."
+        },
+        {
+          "criterion_id": "R10",
+          "disposition": "met",
+          "evidence": "The package accurately describes E40's substantive but citation-shedding sidecar, its four-source terminal breadth despite wider allowlists, and the absence of an exact independently checkable partial task artifact."
+        },
+        {
+          "criterion_id": "R11",
+          "disposition": "met",
+          "evidence": "It identifies the then-current semantic-persistence × incremental exact artifact × candidate-bound verification interaction, requires fresh transfer, and preserves the no-v3 stopping discipline, although several listed falsifiers are governance violations rather than empirical policy falsifiers."
+        },
+        {
+          "criterion_id": "R12",
+          "disposition": "partial",
+          "evidence": "Candidate/task/evidence-bound evaluation, readiness lineage, exact bindings, and false-closure risk are present, but observation-to-candidate current/stale semantics and supersession are only weakly developed."
+        }
+      ],
+      "score": {
+        "met": 3,
+        "partial": 8,
+        "not_met": 1,
+        "ambiguous": 0,
+        "total": 12
+      },
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "blocking_requirements": [
+        "decision is 89 words below the frozen minimum",
+        "R08 does not report the actual source-digest negative or the candidate-bound H05 false-closure result",
+        "R01/R03/R04/R05/R06/R07/R09/R12 remain only partially substantiated"
+      ],
+      "rationale": "The package is coherent, well structured, and current on the selected artifact-coupling route, but it fails the exact length contract and leaves most systems distinctions at assertion level. It is a strong partial, not a closure-ready decision package."
+    },
+    {
+      "candidate_label": "C-45ED2D1E",
+      "candidate_sha256": "72bc1cd3361b1acff66964c747187a6ebc67f87723dbc8c06053e8c60e5c1281",
+      "files": {
+        "ledger": {
+          "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/cells/A1_COUPLED/trajectory/world/candidate/EVIDENCE_INTEGRATION_LEDGER.md",
+          "bytes": 5348,
+          "sha256": "eb033f302a1b873deafb5410dd3e6ee7c930662b2cb08cae39db26b337064687"
+        },
+        "decision": {
+          "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/cells/A1_COUPLED/trajectory/world/candidate/BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
+          "bytes": 12317,
+          "sha256": "45ed2d1e85dfa0a8a24566d714ec385063e23640911ef9bd88056a1ad730bcaf"
+        },
+        "mechanical_evaluation": {
+          "path": "runs/2026-08-24-artifact-coupled-interaction-measured-v0/cells/A1_COUPLED/evaluation/MECHANICAL_FINAL_EVALUATION.json",
+          "bytes": 4400,
+          "sha256": "8d30bf50431efcd97e89f5ad7608263503a1cdde3779ff5e3dda50f976fe9c01"
+        }
+      },
+      "mechanical_disposition": {
+        "passed": false,
+        "decision_word_count": 1561,
+        "decision_word_range": [1600, 2200],
+        "blocking_requirements": [
+          "decision_word_range"
+        ]
+      },
+      "criterion_dispositions": [
+        {
+          "criterion_id": "R01",
+          "disposition": "partial",
+          "evidence": "The package treats exact custody as earned and discusses bounded reentry, but exact reopenability is not operationally distinguished from reentry and the limits of the fallback are blurred."
+        },
+        {
+          "criterion_id": "R02",
+          "disposition": "met",
+          "evidence": "It accurately assigns prospective rendering, reserves, and hard-overflow safety to the host, restricts relief to positive-savings first-fit substitutions, and preserves E40's negative-savings censoring qualification."
+        },
+        {
+          "criterion_id": "R03",
+          "disposition": "partial",
+          "evidence": "The package identifies the separate boundary names and E40's zero downstream effects, but it does not fully reconstruct the demonstrated capacity→delivery→action→effect→quality→closure failure migration."
+        },
+        {
+          "criterion_id": "R04",
+          "disposition": "partial",
+          "evidence": "All four properties are named and their state dependence is noted, but their functional differences and the exact recoverability-versus-co-residency evidence are not explained."
+        },
+        {
+          "criterion_id": "R05",
+          "disposition": "partial",
+          "evidence": "Ordinary resident chronology, history growth, and bounded fresh reentry are discussed with useful prior-program qualifications, but the package does not plainly preserve full chronology externally while denying it permanent resident status."
+        },
+        {
+          "criterion_id": "R06",
+          "disposition": "met",
+          "evidence": "It covers cache invalidation, prefill latency, serialized cost, E36 one-read-per-decision bandwidth, and the need to keep these costs distinct."
+        },
+        {
+          "criterion_id": "R07",
+          "disposition": "partial",
+          "evidence": "It recognizes semantic derivatives as endogenous demand/control inputs and warns against assumed substitution, but does not fully trace the different action-policy effects of source-relative and control-relative packages."
+        },
+        {
+          "criterion_id": "R08",
+          "disposition": "partial",
+          "evidence": "The decision names the source-digest negative and the recent progress package's premature unchanged submission, but the ledger substitutes the unrelated residue expression gate and omits the digest's paired-audit→original-source demand sequence and H05's exact 10-met/2-partial disposition."
+        },
+        {
+          "criterion_id": "R09",
+          "disposition": "partial",
+          "evidence": "The host/model ownership conclusion is sound, but the supporting manager over-release and immediate actor demand evidence is not given, and exact paging behavior is reduced to a conclusion."
+        },
+        {
+          "criterion_id": "R10",
+          "disposition": "met",
+          "evidence": "It accurately preserves E40's detached semantic-state/task-artifact distinction, citation attrition, unchanged candidate, and lack of downstream effects."
+        },
+        {
+          "criterion_id": "R11",
+          "disposition": "not_met",
+          "evidence": "The roadmap incorrectly presents the already-completed E39/E40 ingress × sidecar four-cell design as the next experiment. S02 and S08 explicitly route after E40 to semantic persistence × exact incremental task-artifact externalization × version-bound verification, so this is a material stale-state error."
+        },
+        {
+          "criterion_id": "R12",
+          "disposition": "met",
+          "evidence": "The package substantively covers independent candidate/task/evidence-bound evaluation, current checks, exact candidate bindings, false-closure detection, readiness lineage, and the limitation that verification does not itself guarantee correct repair or closure."
+        }
+      ],
+      "score": {
+        "met": 4,
+        "partial": 7,
+        "not_met": 1,
+        "ambiguous": 0,
+        "total": 12
+      },
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "blocking_requirements": [
+        "decision is 39 words below the frozen minimum",
+        "R11 routes to the already-completed E39/E40 interaction rather than the active post-E40 artifact-coupling question",
+        "R01/R03/R04/R05/R07/R08/R09 remain only partially substantiated"
+      ],
+      "rationale": "The package is broader in source use and stronger on cost and readiness governance, but it contains a material stale roadmap and remains below the exact length floor. It is a strong partial, not a closure-ready decision package."
+    }
+  ],
+  "condition_mapping": [
+    {
+      "configuration_id": "D0_DETACHED",
+      "candidate_label": "C-17426844"
+    },
+    {
+      "configuration_id": "A1_COUPLED",
+      "candidate_label": "C-45ED2D1E"
+    }
+  ],
+  "comparative_disposition": {
+    "D0_DETACHED": {
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false
+    },
+    "A1_COUPLED": {
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false
+    },
+    "semantic_dominance": "none",
+    "interaction_result": "Artifact coupling was behaviorally active and accelerated construction/checking, broadened final source citation, and changed candidate lineage. It did not produce useful completion or a closure-ready artifact, and the coupled package retained a material stale-roadmap error. The local result is mixed behavioral leverage without demonstrated task-utility advantage.",
+    "claim_limit": "One matched boundary, one task/world, one actor seed, and condition-masked investigator adjudication. This supports no component isolation or architecture promotion."
+  }
+}

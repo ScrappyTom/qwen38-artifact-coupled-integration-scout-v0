@@ -1,0 +1,195 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the authoritative task.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S02, S03, S04, S08, S13. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: bounded-agent architecture decision package
+
+Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The decision is for the next phase of a bounded-context agent research program.
+It must distinguish mechanisms that earned a role from mechanisms that were
+only behaviorally active, locally harmful, blocked, or still untested.
+
+## Evidence ledger requirements
+
+The ledger must begin with `# Evidence Integration Ledger` and contain rows or
+sections for `R01` through `R12`. Each requirement entry must state a current
+disposition, cite exact observed sources as `[SNN]`, preserve important
+qualifications or conflicts, and identify unresolved evidence where present.
+
+## Decision document requirements
+
+Use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Earned mechanical substrate`
+3. `## Information interactions and failure migration`
+4. `## State, relationships, chronology, and control`
+5. `## Runtime policy`
+6. `## Experimental roadmap`
+7. `## Verification, readiness, and governance`
+8. `## Uncertainties and falsifiers`
+
+The document must be 1,600–2,200 words excluding exact `[SNN]` citations and
+must use at least ten distinct source IDs. It must cite `S02`, `S03`, `S04`,
+`S08`, and `S13`.
+
+The package must substantively cover these twelve requirements:
+
+- `R01`: exact external custody and reopenability;
+- `R02`: response/control reserves and positive-savings relief;
+- `R03`: capacity, delivery, action, effect uptake, quality, and closure as
+  distinct boundaries;
+- `R04`: recoverability, residency, behavioral accessibility, and working-set
+  adequacy as distinct properties;
+- `R05`: chronology's external and resident lifecycle;
+- `R06`: cache/prefill and decision-bandwidth costs;
+- `R07`: semantic derivatives as endogenous demand/control inputs;
+- `R08`: the source-digest negative and progress-state false-closure risk;
+- `R09`: host/model ownership supported by manager and paging results;
+- `R10`: E40's detached-sidecar versus task-artifact gap;
+- `R11`: an interaction-first roadmap with fresh transfer and stopping rules;
+- `R12`: evaluation/readiness lineage and candidate-bound currentness.
+
+Do not claim that artifact coupling, notes, digests, progress state, model-owned
+eviction, automatic phase discovery, or a general architecture is already
+validated. Name conditions that would falsify the recommended next policy.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Exact External Custody and Reopenability**
+Disposition: Qualified mechanical substrate earned. Exact external custody maintains byte integrity, but reopenability is reactive rather than scheduled. Scheduled low-occupancy reentry failed to earn a default role [S02]. Reactive exact reentry remains an unpromoted fallback for insufficient declared relief [S02]. Unresolved evidence: No fresh-task scout has validated proactive reopen strategies under high pressure [S02].
+
+**R02: Response/Control Reserves and Positive-Savings Relief**
+Disposition: Deterministic first-fit pressure relief is qualified. It is strictly restricted to prospectively rendered, strictly positive-savings substitutions under a frozen scan order [S02]. Reactive reentry activates only when declared relief is insufficient [S02]. Unresolved evidence: The I1 relief event replaced a one-line body with a receipt costing 79 more tokens, remaining descriptive rather than validating broader utility [S02].
+
+**R03: Capacity, Delivery, Action, Effect Uptake, Quality, and Closure**
+Disposition: Distinct boundaries identified but not jointly validated. The I1–I4 run activated batch ingress and work sidecars, yet no mutation, effect uptake, check, or submission occurred [S02]. Capacity remained active but non-terminal; call budget became terminal while evidence remained incomplete [S02]. Unresolved evidence: Joint effects of these boundaries within a complete bounded trajectory remain untested [S02].
+
+**R04: Recoverability, Residency, Behavioral Accessibility, and Working-Set Adequacy**
+Disposition: Distinct properties acknowledged. Value is conditional on task phase, co-resident set, and regime, not intrinsic [S03]. Semantic compression lowers resident cost but introduces task-dependent loss [S03]. Unresolved evidence: No scalar weights are earned for these properties; costs must be reported as vectors, not aggregates [S03].
+
+**R05: Chronology’s External and Resident Lifecycle**
+Disposition: Ordinary chronology is qualified while healthy. History growth causes useful exact evidence to lose co-residency, increasing reopening churn [S03]. Unresolved evidence: Interaction between chronology lifecycle and semantic persistence remains untested in fresh trajectories [S02].
+
+**R06: Cache/Prefill and Decision-Bandwidth Costs**
+Disposition: Costs are path-dependent and partly endogenous. Cache invalidation and prefill latency are distinct accounting factors [S03]. The I1–I4 run consumed 2,112,973 serialized tokens, qualifying action transport but not downstream utility [S02]. Unresolved evidence: No mathematical chaos demonstrated; only seed sensitivity and changing bottlenecks observed [S03].
+
+**R07: Semantic Derivatives as Endogenous Demand/Control Inputs**
+Disposition: Semantic derivatives are endogenous demand inputs. A newly produced digest may be valuable only after raw source leaves residency [S03]. Unresolved evidence: The failed source-bound semantic residue route (exceeding 256-token budget at 310 tokens) is closed; no v3 allowed [S02].
+
+**R08: Source-Digest Negative and Progress-State False-Closure Risk**
+Disposition: High risk confirmed. The first proposed interaction failed its prospective apparatus gate before actor trajectory ran [S02]. Provenance repairs improved acceptance, but budget constraints closed the dedicated residue route [S02]. Unresolved evidence: False-closure risk in progress-state remains unquantified across independent worlds [S02].
+
+**R09: Host/Model Ownership Supported by Manager and Paging Results**
+Disposition: Host-owned response and control reserves are earned. Manager and paging results support host ownership, but model-owned eviction is not validated [S02]. Unresolved evidence: No general architecture validation; only local mechanism evidence exists [S02].
+
+**R10: E40’s Detached-Sidecar versus Task-Artifact Gap**
+Disposition: Gap confirmed. The work sidecar produced genuine cross-source prose but shed earlier citations, citing only four sources despite 13/14 allowlists [S02]. It functioned as semantic state, not an exact partial charter or independently checkable task artifact [S02]. Unresolved evidence: No successful transfer of sidecar content to durable work-product externalization [S02].
+
+**R11: Interaction-First Roadmap with Fresh Transfer and Stopping Rules**
+Disposition: Active route defined. The next candidate interaction is evidence-ingress bandwidth × cumulative task-native work externalization [S02]. Stopping rules are frozen; no v3 for failed designs [S02]. Unresolved evidence: No whole configuration has yet shown meaningful joint effect transferring to an independent world [S02].
+
+**R12: Evaluation/Readiness Lineage and Candidate-Bound Currentness**
+Disposition: Independent candidate/task/evidence-bound evaluation is mandatory common governance [S02]. The I1–I4 run is frozen for measurement at a specific commit hash [S02]. Unresolved evidence: No readiness lineage established for general architecture; only local negatives qualify [S02].
+
+# Exact newly externalized observation
+
+{"object_id":"source:S13:1-70","object_version":"6f9a5d30b56496cce7010b8055392f4a1f33930959d672217e83b22c189028fd","result_id":"RESULT-005","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":70,"source_id":"S13","source_path":"sources/S13_H05_CORRECTION.md","source_sha256":"6f9a5d30b56496cce7010b8055392f4a1f33930959d672217e83b22c189028fd","source_size_bytes":2276,"start_line":1}
+--- exact source range ---
+# H05 artifact-disposition reconciliation
+
+Date: 2026-08-22
+
+## Finding
+
+The H05 raw behavioral contrast is valid, but its original artifact disposition
+was wrong.
+
+The treated actor submitted candidate ID
+`38893b4df5afc252a356ff5ab79a1dcda6330b7934a252a67d2759499eb4aac6`,
+file SHA-256
+`888c142abcad4c3bd9081960bdb18b7402be6415c03b456033ed3c7aed134d39`.
+Those exact bytes had already been audited at construction-reentry donor commit
+`68a4b0b04c4557dcc459b42822e804f241565757` as a **strong partial** artifact.
+
+The prior frozen table contained 12 substantive requirement groups:
+
+- 10 met;
+- apparatus-correction coverage partial; and
+- factual precision about the timing of 11 seed-42 reopens partial.
+
+The candidate also satisfied the separate file-scope constraint. It was not a
+complete task artifact.
+
+## Corrected H05 interpretation
+
+The literal sequence remains:
+
+```text
+byte-identical control
+-> resident candidate reread
+
+169-token progress state in 464-token package
+-> admitted submit
+-> unchanged strong-partial candidate
+```
+
+The package was behaviorally active. Its trajectory utility was negative at
+this defect-bearing boundary because it induced closure without identifying or
+repairing either known partial requirement.
+
+This is the first direct not-ready discrimination result for H05. It is
+consistent with a recent self-authored closure cue and does not establish safe
+progress reconciliation.
+
+## Error classification
+
+The H05 post-run review checked headline facts at a coarser granularity and did
+not reconcile the candidate hash against the existing frozen adjudication. The
+error is investigator-side artifact classification. It does not invalidate:
+
+- the three model calls;
+- literal actions and results;
+- candidate custody;
+- tokenizer receipts;
+- replay;
+- tests; or
+- run seals.
+
+The standalone correction is published at commit
+`a3422cca49cb882ec252ba84903b856ba3cafc24`.
+
+## Governance rule
+
+Future control/progress utility experiments must freeze an independent
+candidate-readiness adjudication before maintenance output or treated actor
+behavior is observed. Candidate hashes must be reconciled against every prior
+adjudication in the donor lineage. Submission is positive only when that frozen
+adjudication says closure is appropriate.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

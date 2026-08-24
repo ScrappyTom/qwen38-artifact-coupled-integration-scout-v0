@@ -1,0 +1,1 @@
+{"candidate_sha256":"b2e34bf050956c158bffde8b8d5258940f08b6d84d86bb4afcba6cbe301ef68b","configuration_id":"A1_COUPLED","external_result_ids":["RESULT-002","RESULT-003"],"maintenance_calls_before_first_actor":2,"pending_result_ids":["RESULT-008","MAINT-EFFECT-001","MAINT-EFFECT-002"],"prompt_tokens":13030,"resident_result_ids":["RESULT-005","RESULT-006"]}
