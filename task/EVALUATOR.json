@@ -1,0 +1,19 @@
+{
+  "schema_version": "bounded-agent-architecture-evaluator-v0",
+  "evaluator_id": "bounded-agent-architecture-evaluator-v0",
+  "task_id": "bounded-agent-architecture-decision-package-v0",
+  "decision_word_range": [1600, 2200],
+  "minimum_unique_sources": 10,
+  "required_source_ids": ["S02", "S03", "S04", "S08", "S13"],
+  "required_ledger_requirements": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10", "R11", "R12"],
+  "decision_headings": [
+    "Decision and scope",
+    "Earned mechanical substrate",
+    "Information interactions and failure migration",
+    "State, relationships, chronology, and control",
+    "Runtime policy",
+    "Experimental roadmap",
+    "Verification, readiness, and governance",
+    "Uncertainties and falsifiers"
+  ]
+}

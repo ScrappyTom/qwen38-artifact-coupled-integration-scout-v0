@@ -1,0 +1,20 @@
+{
+  "schema_version": "artifact-coupled-pressure-screen-v0",
+  "status": "implemented_but_ineligible_until_expression_handoff",
+  "run_id": "2026-08-24-artifact-coupled-pressure-screen-v0",
+  "scope": "artifact_coupled_pressure_screen_v0",
+  "seed": 271830,
+  "maximum_actor_calls": 30,
+  "maximum_provider_calls": 30,
+  "maximum_serialized_tokens": 700000,
+  "maximum_wall_seconds": 7200,
+  "context_tokens": 25088,
+  "ordinary_response_reserve": 4096,
+  "prompt_limit": 20992,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "policy": "ordinary exact chronology with no relief, maintenance, semantic sidecar, or reentry",
+  "qualifying_endpoint": "a valid newly acquired exact result makes the next ordinary prompt exceed 20992 tokens",
+  "non_diagnostic_endpoints": ["submitted_before_pressure", "actor_call_budget_exhausted", "serialized_token_budget_exhausted", "wall_clock_budget_exhausted"],
+  "claim_limit": "the screen selects an authentic common pre-treatment boundary; it is not a treatment result"
+}

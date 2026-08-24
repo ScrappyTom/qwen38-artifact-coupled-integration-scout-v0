@@ -1,0 +1,10 @@
+{
+  "schema_version": "artifact-coupled-live-authorization-request-v0",
+  "authorized": false,
+  "scope": "artifact_coupled_maintenance_expression_qualification_v0",
+  "run_id": "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0",
+  "maximum_model_calls": 4,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "expected_user_quote_template": "I authorize the frozen four-call artifact-coupled expression qualification at commit {commit}, run ID 2026-08-24-artifact-coupled-maintenance-expression-qualification-v0: at most 4 model calls, one attempt per call, zero retries."
+}

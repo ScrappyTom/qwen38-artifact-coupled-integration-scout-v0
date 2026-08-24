@@ -1,0 +1,38 @@
+{
+  "schema_version": "pressure-qualified-runtime-asset-manifest-v1",
+  "status": "locked_expected_assets_pending_current_pre_call_verification",
+  "assets": [
+    {
+      "asset_id": "model_gguf",
+      "path": "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.gguf",
+      "sha256": "d416fa422c9035605c778f60d90a94b288c38b4f9ec2126b58ef938ce8d5f716",
+      "required": true,
+      "hash_reverification": "before_first_live_call"
+    },
+    {
+      "asset_id": "tokenizer_projection_gguf",
+      "path": "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.tokenizer-projection.gguf",
+      "sha256": "7047272e809b62b5c68b6427a349cba78b2f45109de04350d48f0338db68eef3",
+      "required": true,
+      "use": "offline cross-check only; live prompt counts use the running server",
+      "hash_reverification": "before_first_live_call"
+    },
+    {
+      "asset_id": "llama_server_cuda",
+      "path": "E:\\Model_Runtimes\\llama-b10434-win-cuda-13.3\\llama-server.exe",
+      "sha256": "5f1f831bc21dcbff4ca40e05cb59dbcbc0802d20b2046540bbbf3bd45cd61610",
+      "required": true,
+      "hash_reverification": "before_each_live_stage"
+    },
+    {
+      "asset_id": "llama_tokenize_cpu",
+      "path": "E:\\Model_Runtimes\\llama-b10434-win-cpu-x64\\bin\\llama-tokenize.exe",
+      "sha256": "d435fb84f60d6c21dbd2adcb0beb38555f2921894909c98f9236bf0984971b1c",
+      "required": true,
+      "hash_reverification": "before_first_live_call"
+    }
+  ],
+  "runtime_bundle_rule": "Record the server executable directory listing and DLL file hashes in each live stage runtime receipt; an unexpected executable or load failure blocks the stage.",
+  "live_identity_rule": "Static hashes are necessary but not sufficient. /props, startup logs, exact GPU offload, context size, model alias, build ID, and GPU process presence must all pass.",
+  "release_rule": "After every live stage, port 8080 must be closed, the process terminated, and its PID absent from nvidia-smi and tasklist."
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "artifact-coupled-live-authorization-request-v0",
+  "authorized": false,
+  "scope": "artifact_coupled_pressure_screen_v0",
+  "run_id": "2026-08-24-artifact-coupled-pressure-screen-v0",
+  "maximum_model_calls": 30,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "prerequisite": "a committed passing expression-qualification handoff",
+  "expected_user_quote_template": "I authorize the frozen 30-call artifact-coupled pressure screen at commit {commit}, run ID 2026-08-24-artifact-coupled-pressure-screen-v0: at most 30 actor calls, one attempt per call, zero retries."
+}

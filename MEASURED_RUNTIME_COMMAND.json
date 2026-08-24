@@ -1,0 +1,51 @@
+{
+  "schema_version": "pressure-qualified-runtime-command-v1",
+  "status": "known_good_inherited_command_must_pass_fresh_runtime_gate",
+  "executable": "E:\\Model_Runtimes\\llama-b10434-win-cuda-13.3\\llama-server.exe",
+  "arguments": [
+    "-m",
+    "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.gguf",
+    "--alias",
+    "Qwen3.8-27B-AD-IQ2_S.gguf",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8080",
+    "--gpu-layers",
+    "all",
+    "--ctx-size",
+    "25000",
+    "--parallel",
+    "1",
+    "--cache-type-k",
+    "q8_0",
+    "--cache-type-v",
+    "q8_0",
+    "--flash-attn",
+    "on",
+    "--no-context-shift",
+    "--jinja",
+    "--reasoning",
+    "off",
+    "--no-mmproj",
+    "--verbose",
+    "--metrics"
+  ],
+  "required_pre_call_gate": [
+    "no pre-existing listener on 127.0.0.1:8080",
+    "no pre-existing llama-server process",
+    "model alias equals Qwen3.8-27B-AD-IQ2_S.gguf",
+    "build equals b10434-7e4c0a968",
+    "observed context equals 25088",
+    "66 of 66 main-model layers reported offloaded",
+    "server PID appears in nvidia-smi compute processes"
+  ],
+  "fresh_process_per_stage_or_continuation": true,
+  "window_style": "hidden",
+  "inherited_from": {
+    "repository": "ScrappyTom/qwen38-fresh-task-whole-method-scout-v0",
+    "commit": "a3f718554937e7e008e3a3f7c06f0ce1e500bb74",
+    "path": "MEASURED_RUNTIME_COMMAND.json",
+    "source_sha256": "20891ed1ca10cb415f0aaedc4532bd82c3fe3afadf34e40d5e1d0156a45d03ef"
+  }
+}
