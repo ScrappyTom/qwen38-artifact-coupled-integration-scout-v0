@@ -1,8 +1,1 @@
-{
-  "schema": "northstar-pressure-screen-audit-v0",
-  "run_id": "2026-08-24-northstar-transfer-pressure-screen-v0",
-  "status": "pending_live_screen",
-  "passed": false,
-  "failures": ["live_screen_not_run"],
-  "measured_fork_authorized": false
-}
+{"actor_calls":2,"delivered_source_observations":1,"failures":["boundary:delivered_sources","boundary:eligibility","result:pressure_qualified","result:task_source_lock_sha256","result:terminal_disposition"],"freeze_commit":"40272d6cc0c5aa2eda7bb5df9394ff02d767829d","interaction_trigger_qualified":true,"measured_fork_authorized":false,"ordinary_prospective_prompt_tokens":25705,"overflow_tokens":4713,"passed":false,"pending_result_delivered":false,"pending_result_id":"RESULT-002","positive_relief_after_tokens":14654,"positive_relief_result_ids":["RESULT-001"],"prompt_limit":20992,"provider_attempts":2,"run_id":"2026-08-24-northstar-transfer-pressure-screen-v0","runtime_released":true,"schema":"northstar-pressure-screen-audit-v0","serialized_tokens":17418,"task_id":"northstar-migration-architecture-package-v0"}

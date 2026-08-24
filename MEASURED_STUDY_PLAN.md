@@ -1,7 +1,8 @@
 # Northstar artifact-coupling measured study plan
 
-Status: frozen offline design, ineligible until a qualifying Northstar pressure
-handoff is committed and the measured preflight is regenerated.
+Status: closed without measurement. The authorized Northstar screen reached
+pressure before its frozen meaningful-acquisition threshold, so no qualifying
+handoff exists and the D0/A1 continuation remains ineligible.
 
 ## System question
 

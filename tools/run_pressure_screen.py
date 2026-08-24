@@ -217,14 +217,14 @@ def main() -> int:
             messages.append({"role": "user", "content": pending_text})
             if result_record is not None:
                 pending_result_id = result_record.result_id
-        result = {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": terminal, "pressure_qualified": terminal == "authentic_result_delivery_pressure", "boundary": None if boundary is None else {key: value for key, value in boundary.items() if key not in {"messages", "result_ledger", "candidate_packet"}}, "candidate_sha256": world.candidate_sha256, "candidate_submitted": world.submitted}
+        result = {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"), "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": terminal, "pressure_qualified": terminal == "authentic_result_delivery_pressure", "boundary": None if boundary is None else {key: value for key, value in boundary.items() if key not in {"messages", "result_ledger", "candidate_packet"}}, "candidate_sha256": world.candidate_sha256, "candidate_submitted": world.submitted}
         write_json(run_root / "CALL_TRACE.json", trace)
         write_json(run_root / "FINAL_MESSAGES.json", messages)
         write_json(run_root / "RESULT_LEDGER.json", ledger.as_dict(include_exact_content=True))
         write_json(run_root / "SCREEN_RESULT.json", result)
     except BudgetStop as exc:
         write_json(run_root / "BUDGET_STOP.json", {"terminal_disposition": str(exc)})
-        write_json(run_root / "SCREEN_RESULT.json", {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": str(exc), "pressure_qualified": False, "candidate_sha256": None if world is None else world.candidate_sha256, "candidate_submitted": False if world is None else world.submitted})
+        write_json(run_root / "SCREEN_RESULT.json", {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"), "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": str(exc), "pressure_qualified": False, "candidate_sha256": None if world is None else world.candidate_sha256, "candidate_submitted": False if world is None else world.submitted})
     except BaseException as exc:
         failure = {"type": type(exc).__name__, "message": str(exc), "traceback": traceback.format_exc(), "no_retry": True}
         write_json(run_root / "RUN_FAILURE.json", failure)

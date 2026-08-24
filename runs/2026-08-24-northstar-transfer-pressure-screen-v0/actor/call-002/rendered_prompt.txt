@@ -1,0 +1,515 @@
+<|im_start|>system
+# System contract
+
+You are the task actor in a bounded exact-world experiment. Return exactly one
+declared JSON action and no prose. Exact sources, candidate files, actions,
+effects, checks, and history are externally custodied. Receipts identify exact
+recoverable results but do not contain their semantic substance.
+
+Use only evidence that has crossed your model boundary. A semantic integration
+ledger is lossy and non-authoritative. A check is current only for the exact
+composite candidate hash it evaluated. Submission is a proposal for external
+candidate-bound adjudication, not proof that migration or closure is ready.<|im_end|>
+<|im_start|>user
+# Task: Northstar migration architecture decision package
+
+Northstar is moving a multi-region event-ingestion service from LegacyQueue to
+StreamCore. Produce two exact deliverables from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The package must decide a safe, source-grounded ninety-day migration route. It
+must reconcile service objectives, event identity, schema compatibility,
+regional residency, incident history, capacity, vendor limits, rollout gates,
+verification, rollback, and readiness. Do not merely summarize sources.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, and identify
+unresolved evidence or blockers. A model-authored ledger is lossy and is never
+readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Northstar Migration Architecture Decision` and
+use exactly these level-two headings, in this order:
+
+1. `## Decision and scope`
+2. `## Protocol, topology, and authority`
+3. `## Delivery, identity, and schema safety`
+4. `## Residency, continuity, and failure response`
+5. `## Capacity, observability, and reconciliation`
+6. `## Ninety-day rollout and rollback plan`
+7. `## Verification, readiness, and governance`
+8. `## Risks, uncertainties, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least ten distinct source IDs, and cite `S01`, `S03`, `S04`, `S06`, `S07`,
+`S08`, `S10`, `S11`, `S12`, and `S14`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: authoritative topology, regional scope, and authority transitions;
+- `R02`: service objectives, including tenant-local and regional tail gates;
+- `R03`: producer_id:event_id identity, acknowledgement, at-least-once effects,
+  and a deduplication horizon covering the observed 31-hour retry;
+- `R04`: schema-v3 compatibility and the boundary between safe rollback and
+  forward-fix;
+- `R05`: staged cohort rollout, dwell, hold, and advancement gates;
+- `R06`: EU payload residency and the override of generic global failover;
+- `R07`: continuity sized against the observed vendor outage rather than the
+  contractual target alone;
+- `R08`: candidate-bound telemetry and full tenant-hour reconciliation;
+- `R09`: us-west capacity sequencing, spool expansion, and retirement of
+  migration-only cost;
+- `R10`: security, retention, access, audit, and deletion controls;
+- `R11`: a concrete ninety-day sequence with owners, effects, checks, repair,
+  and recheck;
+- `R12`: readiness authority, blocking evidence, uncertainties, and explicit
+  falsifiers.
+
+Do not claim exactly-once delivery, lossless schema-v3 failback through
+LegacyQueue, unrestricted EU-to-US failover, guaranteed four-hour vendor
+recovery, or readiness established by a stale or fleet-average-only check.<|im_end|>
+<|im_start|>user
+# Ordinary actor actions
+
+Return exactly one JSON object and no surrounding prose.
+
+- `{"action":"read_source","source_id":"S01","start_line":1,"end_line":120}`
+- `{"action":"read_batch","requests":[{"source_id":"S01","start_line":1,"end_line":120},{"source_id":"S02","start_line":1,"end_line":120}]}`
+- `{"action":"reopen_exact","result_id":"RESULT-001"}`
+- `{"action":"replace_evidence_ledger","content":"# Evidence Integration Ledger\n..."}`
+- `{"action":"upsert_decision_section","heading":"Decision and scope","body":"..."}`
+- `{"action":"replace_decision","content":"# Northstar Migration Architecture Decision\n..."}`
+- `{"action":"run_check"}`
+- `{"action":"submit"}`
+
+One source range is at most 240 lines. A batch contains at most three
+non-overlapping ranges, 480 total lines, and 40,000 exact source bytes. A
+section upsert changes one declared level-two section while preserving the
+other exact sections. Checks bind to the current composite candidate hash.
+
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":95,"sha256":"d52a4de79cc8eefc56a7ee973e39ea74ff9279bd69fa2f88d5367c91d77b4a6b","size_bytes":7012,"source_id":"S01","title":"Northstar topology and migration target"},{"line_count":89,"sha256":"09a092be1b2271e85f5409d942f3aeaf99ac6a34e2d326414eb74da99c24bab1","size_bytes":5739,"source_id":"S02","title":"Northstar service objectives and traffic evidence"},{"line_count":201,"sha256":"a9fc86604868d446c8c4ec33391b083b9dcad930f595591719b54f7d1a0e8c77","size_bytes":13257,"source_id":"S03","title":"Delivery, acknowledgement, and idempotency contract"},{"line_count":89,"sha256":"766c7ac526bce24096b07dad7db41e873f871ef90adc6457c7a7f5a29d02c6c7","size_bytes":5441,"source_id":"S04","title":"Schema compatibility and rollback boundaries"},{"line_count":39,"sha256":"7ee48b0e33e065bccb6ef34320162a38af6a807189dda0c2891d851466940c9d","size_bytes":3639,"source_id":"S05","title":"Rollout, hold, and rollback policy"},{"line_count":226,"sha256":"eb036514fa12cfe37eb7f51cdea5e91c9f4532b5a87163ee36ea56aef8bd0542","size_bytes":17344,"source_id":"S06","title":"Incident E-17: delayed replay and duplicate storm"},{"line_count":226,"sha256":"699b970f35b6cb56fcabb56185367349923fedd68cb9b138c8d66064c69294ad","size_bytes":17781,"source_id":"S07","title":"Incident E-23: EU residency failover violation"},{"line_count":226,"sha256":"186e76184a557b0be2193cb05b2a19cb1748eb8820219476408ff4a9fd34ca87","size_bytes":17387,"source_id":"S08","title":"Incident E-31: dependency outage beyond SLA"},{"line_count":76,"sha256":"b614f068d046ffa3b7387a65df23afbfcb66587c96b05e41096dd60d0505698a","size_bytes":3912,"source_id":"S09","title":"Tail-latency and cohort telemetry review"},{"line_count":256,"sha256":"70347d29366f7ca1a8306c281eb36e0b441a08c6eeb75edf4a4f5807cb4b8348","size_bytes":15956,"source_id":"S10","title":"Shadow reconciliation and data-integrity audit"},{"line_count":160,"sha256":"a8b8ae5d65a200926f29de521df2f046e13fffe954b3b028820bef47e7b349f6","size_bytes":9817,"source_id":"S11","title":"Security, privacy, retention, and audit controls"},{"line_count":79,"sha256":"6e470856b40ef482af53286c8eeb98801ae26b844c884bc9450053566262b1a2","size_bytes":4107,"source_id":"S12","title":"Capacity, spool, and migration cost model"},{"line_count":135,"sha256":"4b3f1e60d98c3312fabaaf55585a6a6996bfa8601b01c9bf5583db9fc041d967","size_bytes":8345,"source_id":"S13","title":"Vendor service objective and support history"},{"line_count":160,"sha256":"4a28f20ed816b224e776fbfff2664f4e198ad682f384111beed4a40a9cc9dc8a","size_bytes":16880,"source_id":"S14","title":"Independent migration readiness review"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"f3167bf0a0dd0ce9674a8123ddc38b685b5a123a15bb3d4de6e7e82497cdc775","candidate_version":"candidate-v000:f3167bf0a0dd0ce9674a8123ddc38b685b5a123a15bb3d4de6e7e82497cdc775","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"874cca18daab19494ca154cfc68b7a49e081a3f6b753c94bd765ff0c0cb211cd","EVIDENCE_INTEGRATION_LEDGER.md":"0d68c198d7a45cb91cf0131204046b8534fd114a10ad464abd898d48c7f14632"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Evidence Integration Ledger
+
+No evidence has been integrated yet.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Northstar Migration Architecture Decision
+
+No decision has been drafted yet.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":95,"source_id":"S01","start_line":1},{"end_line":89,"source_id":"S02","start_line":1},{"end_line":201,"source_id":"S03","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:S01:1-95+S02:1-89+S03:1-201","object_version":"a48c6c424b5ad15d160cad30ab190f8b8e05453db59455846236f70c3c45bb3b","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":95,"source_id":"S01","start_line":1},{"end_line":89,"source_id":"S02","start_line":1},{"end_line":201,"source_id":"S03","start_line":1}],"total_source_bytes":26726}
+--- exact batch segment 1 ---
+{"end_line":95,"source_id":"S01","source_path":"transfer_sources/S01_TOPOLOGY.md","source_sha256":"d52a4de79cc8eefc56a7ee973e39ea74ff9279bd69fa2f88d5367c91d77b4a6b","source_size_bytes":7012,"start_line":1}
+--- exact source range ---
+# Northstar topology and migration target
+
+## Authoritative scope
+
+Northstar accepts customer events through regional edge gateways and currently commits them to LegacyQueue. The approved migration target is StreamCore, but the cutover must preserve the externally visible event contract rather than merely keep processes running.
+The three production regions are us-east, us-west, and eu-central. EU-tagged payloads must remain inside eu-central. A regional outage may not silently convert an EU event into a US event.
+The migration unit is a tenant cohort. A global all-at-once switch is prohibited. Each cohort can be shadowed, dual-written, promoted, held, or rolled back subject to the schema and residency rules in the other sources.
+
+## Data path
+
+The edge gateway validates the envelope and assigns the authoritative producer_id:event_id idempotency key. The validator attaches tenant_policy, residency_tag, and schema_version before any durable write.
+LegacyQueue is the current authority. During dual-write, StreamCore is a candidate path and the reconciler compares both paths. After cohort promotion, StreamCore becomes authoritative only after the promotion effect is recorded in the control ledger.
+The materializer exposes committed events to downstream readers. An ingest acknowledgement is not evidence that the materializer has made the event visible.
+
+## Topology inventory
+
+| record | region | component | replicas | mode | declared revision |
+|---|---|---|---|---|---|
+| T00-0 | us-east | edge | 2 | active-active | topology-rev-7 |
+| T00-1 | us-west | validator | 3 | active-active | topology-rev-7 |
+| T00-2 | eu-central | legacy-queue | 4 | active-passive | topology-rev-7 |
+| T01-0 | us-east | validator | 3 | active-active | topology-rev-7 |
+| T01-1 | us-west | legacy-queue | 4 | active-passive | topology-rev-7 |
+| T01-2 | eu-central | streamcore | 5 | active-active | topology-rev-7 |
+| T02-0 | us-east | legacy-queue | 4 | active-passive | topology-rev-7 |
+| T02-1 | us-west | streamcore | 5 | active-active | topology-rev-7 |
+| T02-2 | eu-central | materializer | 2 | active-active | topology-rev-7 |
+| T03-0 | us-east | streamcore | 5 | active-active | topology-rev-7 |
+| T03-1 | us-west | materializer | 2 | active-active | topology-rev-7 |
+| T03-2 | eu-central | reconciler | 3 | active-active | topology-rev-7 |
+| T04-0 | us-east | materializer | 2 | active-active | topology-rev-7 |
+| T04-1 | us-west | reconciler | 3 | active-active | topology-rev-7 |
+| T04-2 | eu-central | edge | 4 | active-active | topology-rev-7 |
+| T05-0 | us-east | reconciler | 3 | active-active | topology-rev-7 |
+| T05-1 | us-west | edge | 4 | active-active | topology-rev-7 |
+| T05-2 | eu-central | validator | 5 | active-active | topology-rev-7 |
+| T06-0 | us-east | edge | 4 | active-active | topology-rev-7 |
+| T06-1 | us-west | validator | 5 | active-active | topology-rev-7 |
+| T06-2 | eu-central | legacy-queue | 2 | active-passive | topology-rev-7 |
+| T07-0 | us-east | validator | 5 | active-active | topology-rev-7 |
+| T07-1 | us-west | legacy-queue | 2 | active-passive | topology-rev-7 |
+| T07-2 | eu-central | streamcore | 3 | active-active | topology-rev-7 |
+| T08-0 | us-east | legacy-queue | 2 | active-passive | topology-rev-8 |
+| T08-1 | us-west | streamcore | 3 | active-active | topology-rev-8 |
+| T08-2 | eu-central | materializer | 4 | active-active | topology-rev-8 |
+| T09-0 | us-east | streamcore | 3 | active-active | topology-rev-8 |
+| T09-1 | us-west | materializer | 4 | active-active | topology-rev-8 |
+| T09-2 | eu-central | reconciler | 5 | active-active | topology-rev-8 |
+| T10-0 | us-east | materializer | 4 | active-active | topology-rev-8 |
+| T10-1 | us-west | reconciler | 5 | active-active | topology-rev-8 |
+| T10-2 | eu-central | edge | 2 | active-active | topology-rev-8 |
+| T11-0 | us-east | reconciler | 5 | active-active | topology-rev-8 |
+| T11-1 | us-west | edge | 2 | active-active | topology-rev-8 |
+| T11-2 | eu-central | validator | 3 | active-active | topology-rev-8 |
+| T12-0 | us-east | edge | 2 | active-active | topology-rev-8 |
+| T12-1 | us-west | validator | 3 | active-active | topology-rev-8 |
+| T12-2 | eu-central | legacy-queue | 4 | active-passive | topology-rev-8 |
+| T13-0 | us-east | validator | 3 | active-active | topology-rev-8 |
+| T13-1 | us-west | legacy-queue | 4 | active-passive | topology-rev-8 |
+| T13-2 | eu-central | streamcore | 5 | active-active | topology-rev-8 |
+| T14-0 | us-east | legacy-queue | 4 | active-passive | topology-rev-8 |
+| T14-1 | us-west | streamcore | 5 | active-active | topology-rev-8 |
+| T14-2 | eu-central | materializer | 2 | active-active | topology-rev-8 |
+| T15-0 | us-east | streamcore | 5 | active-active | topology-rev-8 |
+| T15-1 | us-west | materializer | 2 | active-active | topology-rev-8 |
+| T15-2 | eu-central | reconciler | 3 | active-active | topology-rev-8 |
+| T16-0 | us-east | materializer | 2 | active-active | topology-rev-9 |
+| T16-1 | us-west | reconciler | 3 | active-active | topology-rev-9 |
+| T16-2 | eu-central | edge | 4 | active-active | topology-rev-9 |
+| T17-0 | us-east | reconciler | 3 | active-active | topology-rev-9 |
+| T17-1 | us-west | edge | 4 | active-active | topology-rev-9 |
+| T17-2 | eu-central | validator | 5 | active-active | topology-rev-9 |
+| T18-0 | us-east | edge | 4 | active-active | topology-rev-9 |
+| T18-1 | us-west | validator | 5 | active-active | topology-rev-9 |
+| T18-2 | eu-central | legacy-queue | 2 | active-passive | topology-rev-9 |
+| T19-0 | us-east | validator | 5 | active-active | topology-rev-9 |
+| T19-1 | us-west | legacy-queue | 2 | active-passive | topology-rev-9 |
+| T19-2 | eu-central | streamcore | 3 | active-active | topology-rev-9 |
+| T20-0 | us-east | legacy-queue | 2 | active-passive | topology-rev-9 |
+| T20-1 | us-west | streamcore | 3 | active-active | topology-rev-9 |
+| T20-2 | eu-central | materializer | 4 | active-active | topology-rev-9 |
+| T21-0 | us-east | streamcore | 3 | active-active | topology-rev-9 |
+| T21-1 | us-west | materializer | 4 | active-active | topology-rev-9 |
+| T21-2 | eu-central | reconciler | 5 | active-active | topology-rev-9 |
+| T22-0 | us-east | materializer | 4 | active-active | topology-rev-9 |
+| T22-1 | us-west | reconciler | 5 | active-active | topology-rev-9 |
+| T22-2 | eu-central | edge | 2 | active-active | topology-rev-9 |
+| T23-0 | us-east | reconciler | 5 | active-active | topology-rev-9 |
+| T23-1 | us-west | edge | 2 | active-active | topology-rev-9 |
+| T23-2 | eu-central | validator | 3 | active-active | topology-rev-9 |
+
+## Known coupling
+
+The validator and materializer deploy independently, but schema v3 requires both to understand tenant_policy and residency_tag. Promoting ingest without current materializer verification can create durable but unreadable events.
+The reconciler is an operational control, not the data authority. Its reports are candidate-version-bound observations and become stale after routing, schema, or deduplication changes.
+--- exact batch segment 2 ---
+{"end_line":89,"source_id":"S02","source_path":"transfer_sources/S02_SERVICE_OBJECTIVES.md","source_sha256":"09a092be1b2271e85f5409d942f3aeaf99ac6a34e2d326414eb74da99c24bab1","source_size_bytes":5739,"start_line":1}
+--- exact source range ---
+# Northstar service objectives and traffic evidence
+
+## Frozen service objectives
+
+Successful migration requires all of the following simultaneously: monthly ingest availability at least 99.95%; event-loss probability no greater than one per million accepted events; duplicate delivery no greater than 0.02%; and commit-to-visible latency of at most four seconds at the 99.9th percentile.
+A second latency guard is tenant-local: every tenant tier must remain at or below eight seconds at p99. Fleet averages and region averages are not acceptable substitutes because they can hide a low-volume cohort regression.
+The readiness gate uses the worse of regional and tenant-cohort measurements. A rollout that improves the fleet aggregate while breaching bronze tenants is a failed rollout.
+
+## Observed load
+
+| window | region | tier | events/s | commit-visible p99 s | duplicates | classification |
+|---|---|---|---|---|---|---|
+| H000 | us-east | gold | 78000 | 3.1 | 0.006% | pass |
+| H001 | us-west | gold | 79913 | 3.8 | 0.008% | pass |
+| H002 | eu-central | gold | 81826 | 4.5 | 0.010% | pass |
+| H003 | us-east | silver | 83739 | 3.6 | 0.012% | pass |
+| H004 | us-west | silver | 85652 | 4.3 | 0.014% | pass |
+| H005 | eu-central | silver | 87565 | 3.4 | 0.007% | pass |
+| H006 | us-east | bronze | 89478 | 10.4 | 0.009% | tail-breach |
+| H007 | us-west | bronze | 91391 | 11.2 | 0.011% | tail-breach |
+| H008 | eu-central | bronze | 93304 | 12.0 | 0.013% | tail-breach |
+| H009 | us-east | gold | 95217 | 4.6 | 0.006% | pass |
+| H010 | us-west | gold | 97130 | 3.7 | 0.008% | pass |
+| H011 | eu-central | gold | 99043 | 4.4 | 0.010% | pass |
+| H012 | us-east | silver | 100956 | 3.5 | 0.012% | pass |
+| H013 | us-west | silver | 102869 | 4.2 | 0.014% | pass |
+| H014 | eu-central | silver | 104782 | 3.3 | 0.007% | pass |
+| H015 | us-east | bronze | 106695 | 9.6 | 0.009% | tail-breach |
+| H016 | us-west | bronze | 108608 | 10.4 | 0.011% | tail-breach |
+| H017 | eu-central | bronze | 110521 | 11.2 | 0.013% | tail-breach |
+| H018 | us-east | gold | 112434 | 4.5 | 0.006% | pass |
+| H019 | us-west | gold | 114347 | 3.6 | 0.008% | pass |
+| H020 | eu-central | gold | 116260 | 4.3 | 0.010% | pass |
+| H021 | us-east | silver | 118173 | 3.4 | 0.012% | pass |
+| H022 | us-west | silver | 120086 | 4.1 | 0.014% | pass |
+| H023 | eu-central | silver | 121999 | 3.2 | 0.007% | pass |
+| H024 | us-east | bronze | 79912 | 12.8 | 0.009% | tail-breach |
+| H025 | us-west | bronze | 81825 | 9.6 | 0.011% | tail-breach |
+| H026 | eu-central | bronze | 83738 | 10.4 | 0.013% | tail-breach |
+| H027 | us-east | gold | 85651 | 4.4 | 0.006% | pass |
+| H028 | us-west | gold | 87564 | 3.5 | 0.008% | pass |
+| H029 | eu-central | gold | 89477 | 4.2 | 0.010% | pass |
+| H030 | us-east | silver | 91390 | 3.3 | 0.012% | pass |
+| H031 | us-west | silver | 93303 | 4.0 | 0.014% | pass |
+| H032 | eu-central | silver | 95216 | 3.1 | 0.007% | pass |
+| H033 | us-east | bronze | 97129 | 12.0 | 0.009% | tail-breach |
+| H034 | us-west | bronze | 99042 | 12.8 | 0.011% | tail-breach |
+| H035 | eu-central | bronze | 100955 | 9.6 | 0.013% | tail-breach |
+| H036 | us-east | gold | 102868 | 4.3 | 0.006% | pass |
+| H037 | us-west | gold | 104781 | 3.4 | 0.008% | pass |
+| H038 | eu-central | gold | 106694 | 4.1 | 0.010% | pass |
+| H039 | us-east | silver | 108607 | 3.2 | 0.012% | pass |
+| H040 | us-west | silver | 110520 | 3.9 | 0.014% | pass |
+| H041 | eu-central | silver | 112433 | 4.6 | 0.007% | pass |
+| H042 | us-east | bronze | 114346 | 11.2 | 0.009% | tail-breach |
+| H043 | us-west | bronze | 116259 | 12.0 | 0.011% | tail-breach |
+| H044 | eu-central | bronze | 118172 | 12.8 | 0.013% | tail-breach |
+| H045 | us-east | gold | 120085 | 4.2 | 0.006% | pass |
+| H046 | us-west | gold | 121998 | 3.3 | 0.008% | pass |
+| H047 | eu-central | gold | 79911 | 4.0 | 0.010% | pass |
+| H048 | us-east | silver | 81824 | 3.1 | 0.012% | pass |
+| H049 | us-west | silver | 83737 | 3.8 | 0.014% | pass |
+| H050 | eu-central | silver | 85650 | 4.5 | 0.007% | pass |
+| H051 | us-east | bronze | 87563 | 10.4 | 0.009% | tail-breach |
+| H052 | us-west | bronze | 89476 | 11.2 | 0.011% | tail-breach |
+| H053 | eu-central | bronze | 91389 | 12.0 | 0.013% | tail-breach |
+| H054 | us-east | gold | 93302 | 4.1 | 0.006% | pass |
+| H055 | us-west | gold | 95215 | 3.2 | 0.008% | pass |
+| H056 | eu-central | gold | 97128 | 3.9 | 0.010% | pass |
+| H057 | us-east | silver | 99041 | 4.6 | 0.012% | pass |
+| H058 | us-west | silver | 100954 | 3.7 | 0.014% | pass |
+| H059 | eu-central | silver | 102867 | 4.4 | 0.007% | pass |
+| H060 | us-east | bronze | 104780 | 9.6 | 0.009% | tail-breach |
+| H061 | us-west | bronze | 106693 | 10.4 | 0.011% | tail-breach |
+| H062 | eu-central | bronze | 108606 | 11.2 | 0.013% | tail-breach |
+| H063 | us-east | gold | 110519 | 4.0 | 0.006% | pass |
+| H064 | us-west | gold | 112432 | 3.1 | 0.008% | pass |
+| H065 | eu-central | gold | 114345 | 3.8 | 0.010% | pass |
+| H066 | us-east | silver | 116258 | 4.5 | 0.012% | pass |
+| H067 | us-west | silver | 118171 | 3.6 | 0.014% | pass |
+| H068 | eu-central | silver | 120084 | 4.3 | 0.007% | pass |
+| H069 | us-east | bronze | 121997 | 12.8 | 0.009% | tail-breach |
+| H070 | us-west | bronze | 79910 | 9.6 | 0.011% | tail-breach |
+| H071 | eu-central | bronze | 81823 | 10.4 | 0.013% | tail-breach |
+
+## Interpretation constraints
+
+The sample includes repeated bronze tail breaches even while the blended fleet statistic remains below four seconds. Promotion gates must query per-tenant distributions, not only the dashboard headline.
+Traffic grows by cohort and time of day. Capacity claims must be bound to the candidate routing revision and tested at the planned dual-write percentage.
+--- exact batch segment 3 ---
+{"end_line":201,"source_id":"S03","source_path":"transfer_sources/S03_DELIVERY_SEMANTICS.md","source_sha256":"a9fc86604868d446c8c4ec33391b083b9dcad930f595591719b54f7d1a0e8c77","source_size_bytes":13257,"start_line":1}
+--- exact source range ---
+# Delivery, acknowledgement, and idempotency contract
+
+## Identity and acknowledgement
+
+The only authoritative idempotency key is producer_id:event_id. A transport batch ID identifies a shipment and may be reused after a producer restart; it is not an event identity and must never drive deduplication.
+The gateway may acknowledge an event only after the authoritative path has committed it to two availability zones and persisted the idempotency key. A socket write, broker receipt, or batch acceptance is not a commit acknowledgement.
+StreamCore consumers are at-least-once. Exactly-once delivery is not promised. The system objective is idempotent observable effects with auditable duplicate bounds.
+
+## Retention conflict
+
+The original StreamCore proposal set the deduplication horizon to 24 hours. Producer incident evidence contains legitimate retries 31 hours after acknowledgement. The migration decision must raise the minimum deduplication horizon to 48 hours or supply an equally explicit mechanism that covers those retries.
+A producer epoch can change only through the authenticated reset workflow. An unannounced producer restart does not authorize erasing prior idempotency state.
+
+## Replay examples
+
+| record | producer | event | condition | delay | 24h cache result |
+|---|---|---|---|---|---|
+| P000 | producer-00 | event-00000 | accepted | 0h | hit |
+| P001 | producer-01 | event-00001 | retry-before-ack | 17h | hit |
+| P002 | producer-02 | event-00002 | retry-after-ack | 34h | miss |
+| P003 | producer-03 | event-00003 | late-replay | 5h | hit |
+| P004 | producer-04 | event-00004 | producer-reset | 22h | miss |
+| P005 | producer-05 | event-00005 | accepted | 39h | miss |
+| P006 | producer-06 | event-00006 | retry-before-ack | 10h | hit |
+| P007 | producer-07 | event-00007 | retry-after-ack | 27h | miss |
+| P008 | producer-08 | event-00008 | late-replay | 44h | miss |
+| P009 | producer-09 | event-00009 | producer-reset | 15h | miss |
+| P010 | producer-10 | event-00010 | accepted | 32h | miss |
+| P011 | producer-11 | event-00011 | retry-before-ack | 3h | hit |
+| P012 | producer-00 | event-00012 | retry-after-ack | 20h | hit |
+| P013 | producer-01 | event-00013 | late-replay | 37h | miss |
+| P014 | producer-02 | event-00014 | producer-reset | 8h | miss |
+| P015 | producer-03 | event-00015 | accepted | 25h | miss |
+| P016 | producer-04 | event-00016 | retry-before-ack | 42h | miss |
+| P017 | producer-05 | event-00017 | retry-after-ack | 13h | hit |
+| P018 | producer-06 | event-00018 | late-replay | 30h | miss |
+| P019 | producer-07 | event-00019 | producer-reset | 1h | miss |
+| P020 | producer-08 | event-00020 | accepted | 18h | hit |
+| P021 | producer-09 | event-00021 | retry-before-ack | 35h | miss |
+| P022 | producer-10 | event-00022 | retry-after-ack | 6h | hit |
+| P023 | producer-11 | event-00023 | late-replay | 23h | hit |
+| P024 | producer-00 | event-00024 | producer-reset | 40h | miss |
+| P025 | producer-01 | event-00025 | accepted | 11h | hit |
+| P026 | producer-02 | event-00026 | retry-before-ack | 28h | miss |
+| P027 | producer-03 | event-00027 | retry-after-ack | 45h | miss |
+| P028 | producer-04 | event-00028 | late-replay | 16h | hit |
+| P029 | producer-05 | event-00029 | producer-reset | 33h | miss |
+| P030 | producer-06 | event-00030 | accepted | 4h | hit |
+| P031 | producer-07 | event-00031 | retry-before-ack | 21h | hit |
+| P032 | producer-08 | event-00032 | retry-after-ack | 38h | miss |
+| P033 | producer-09 | event-00033 | late-replay | 9h | hit |
+| P034 | producer-10 | event-00034 | producer-reset | 26h | miss |
+| P035 | producer-11 | event-00035 | accepted | 43h | miss |
+| P036 | producer-00 | event-00036 | retry-before-ack | 14h | hit |
+| P037 | producer-01 | event-00037 | retry-after-ack | 31h | miss |
+| P038 | producer-02 | event-00038 | late-replay | 2h | hit |
+| P039 | producer-03 | event-00039 | producer-reset | 19h | miss |
+| P040 | producer-04 | event-00040 | accepted | 36h | miss |
+| P041 | producer-05 | event-00041 | retry-before-ack | 7h | hit |
+| P042 | producer-06 | event-00042 | retry-after-ack | 24h | hit |
+| P043 | producer-07 | event-00043 | late-replay | 41h | miss |
+| P044 | producer-08 | event-00044 | producer-reset | 12h | miss |
+| P045 | producer-09 | event-00045 | accepted | 29h | miss |
+| P046 | producer-10 | event-00046 | retry-before-ack | 0h | hit |
+| P047 | producer-11 | event-00047 | retry-after-ack | 17h | hit |
+| P048 | producer-00 | event-00048 | late-replay | 34h | miss |
+| P049 | producer-01 | event-00049 | producer-reset | 5h | miss |
+| P050 | producer-02 | event-00050 | accepted | 22h | hit |
+| P051 | producer-03 | event-00051 | retry-before-ack | 39h | miss |
+| P052 | producer-04 | event-00052 | retry-after-ack | 10h | hit |
+| P053 | producer-05 | event-00053 | late-replay | 27h | miss |
+| P054 | producer-06 | event-00054 | producer-reset | 44h | miss |
+| P055 | producer-07 | event-00055 | accepted | 15h | hit |
+| P056 | producer-08 | event-00056 | retry-before-ack | 32h | miss |
+| P057 | producer-09 | event-00057 | retry-after-ack | 3h | hit |
+| P058 | producer-10 | event-00058 | late-replay | 20h | hit |
+| P059 | producer-11 | event-00059 | producer-reset | 37h | miss |
+| P060 | producer-00 | event-00060 | accepted | 8h | hit |
+| P061 | producer-01 | event-00061 | retry-before-ack | 25h | miss |
+| P062 | producer-02 | event-00062 | retry-after-ack | 42h | miss |
+| P063 | producer-03 | event-00063 | late-replay | 13h | hit |
+| P064 | producer-04 | event-00064 | producer-reset | 30h | miss |
+| P065 | producer-05 | event-00065 | accepted | 1h | hit |
+| P066 | producer-06 | event-00066 | retry-before-ack | 18h | hit |
+| P067 | producer-07 | event-00067 | retry-after-ack | 35h | miss |
+| P068 | producer-08 | event-00068 | late-replay | 6h | hit |
+| P069 | producer-09 | event-00069 | producer-reset | 23h | miss |
+| P070 | producer-10 | event-00070 | accepted | 40h | miss |
+| P071 | producer-11 | event-00071 | retry-before-ack | 11h | hit |
+| P072 | producer-00 | event-00072 | retry-after-ack | 28h | miss |
+| P073 | producer-01 | event-00073 | late-replay | 45h | miss |
+| P074 | producer-02 | event-00074 | producer-reset | 16h | miss |
+| P075 | producer-03 | event-00075 | accepted | 33h | miss |
+| P076 | producer-04 | event-00076 | retry-before-ack | 4h | hit |
+| P077 | producer-05 | event-00077 | retry-after-ack | 21h | hit |
+| P078 | producer-06 | event-00078 | late-replay | 38h | miss |
+| P079 | producer-07 | event-00079 | producer-reset | 9h | miss |
+| P080 | producer-08 | event-00080 | accepted | 26h | miss |
+| P081 | producer-09 | event-00081 | retry-before-ack | 43h | miss |
+| P082 | producer-10 | event-00082 | retry-after-ack | 14h | hit |
+| P083 | producer-11 | event-00083 | late-replay | 31h | miss |
+| P084 | producer-00 | event-00084 | producer-reset | 2h | miss |
+| P085 | producer-01 | event-00085 | accepted | 19h | hit |
+| P086 | producer-02 | event-00086 | retry-before-ack | 36h | miss |
+| P087 | producer-03 | event-00087 | retry-after-ack | 7h | hit |
+| P088 | producer-04 | event-00088 | late-replay | 24h | hit |
+| P089 | producer-05 | event-00089 | producer-reset | 41h | miss |
+| P090 | producer-06 | event-00090 | accepted | 12h | hit |
+| P091 | producer-07 | event-00091 | retry-before-ack | 29h | miss |
+| P092 | producer-08 | event-00092 | retry-after-ack | 0h | hit |
+| P093 | producer-09 | event-00093 | late-replay | 17h | hit |
+| P094 | producer-10 | event-00094 | producer-reset | 34h | miss |
+| P095 | producer-11 | event-00095 | accepted | 5h | hit |
+| P096 | producer-00 | event-00096 | retry-before-ack | 22h | hit |
+| P097 | producer-01 | event-00097 | retry-after-ack | 39h | miss |
+| P098 | producer-02 | event-00098 | late-replay | 10h | hit |
+| P099 | producer-03 | event-00099 | producer-reset | 27h | miss |
+| P100 | producer-04 | event-00100 | accepted | 44h | miss |
+| P101 | producer-05 | event-00101 | retry-before-ack | 15h | hit |
+| P102 | producer-06 | event-00102 | retry-after-ack | 32h | miss |
+| P103 | producer-07 | event-00103 | late-replay | 3h | hit |
+| P104 | producer-08 | event-00104 | producer-reset | 20h | miss |
+| P105 | producer-09 | event-00105 | accepted | 37h | miss |
+| P106 | producer-10 | event-00106 | retry-before-ack | 8h | hit |
+| P107 | producer-11 | event-00107 | retry-after-ack | 25h | miss |
+| P108 | producer-00 | event-00108 | late-replay | 42h | miss |
+| P109 | producer-01 | event-00109 | producer-reset | 13h | miss |
+| P110 | producer-02 | event-00110 | accepted | 30h | miss |
+| P111 | producer-03 | event-00111 | retry-before-ack | 1h | hit |
+| P112 | producer-04 | event-00112 | retry-after-ack | 18h | hit |
+| P113 | producer-05 | event-00113 | late-replay | 35h | miss |
+| P114 | producer-06 | event-00114 | producer-reset | 6h | miss |
+| P115 | producer-07 | event-00115 | accepted | 23h | hit |
+| P116 | producer-08 | event-00116 | retry-before-ack | 40h | miss |
+| P117 | producer-09 | event-00117 | retry-after-ack | 11h | hit |
+| P118 | producer-10 | event-00118 | late-replay | 28h | miss |
+| P119 | producer-11 | event-00119 | producer-reset | 45h | miss |
+| P120 | producer-00 | event-00120 | accepted | 16h | hit |
+| P121 | producer-01 | event-00121 | retry-before-ack | 33h | miss |
+| P122 | producer-02 | event-00122 | retry-after-ack | 4h | hit |
+| P123 | producer-03 | event-00123 | late-replay | 21h | hit |
+| P124 | producer-04 | event-00124 | producer-reset | 38h | miss |
+| P125 | producer-05 | event-00125 | accepted | 9h | hit |
+| P126 | producer-06 | event-00126 | retry-before-ack | 26h | miss |
+| P127 | producer-07 | event-00127 | retry-after-ack | 43h | miss |
+| P128 | producer-08 | event-00128 | late-replay | 14h | hit |
+| P129 | producer-09 | event-00129 | producer-reset | 31h | miss |
+| P130 | producer-10 | event-00130 | accepted | 2h | hit |
+| P131 | producer-11 | event-00131 | retry-before-ack | 19h | hit |
+| P132 | producer-00 | event-00132 | retry-after-ack | 36h | miss |
+| P133 | producer-01 | event-00133 | late-replay | 7h | hit |
+| P134 | producer-02 | event-00134 | producer-reset | 24h | miss |
+| P135 | producer-03 | event-00135 | accepted | 41h | miss |
+| P136 | producer-04 | event-00136 | retry-before-ack | 12h | hit |
+| P137 | producer-05 | event-00137 | retry-after-ack | 29h | miss |
+| P138 | producer-06 | event-00138 | late-replay | 0h | hit |
+| P139 | producer-07 | event-00139 | producer-reset | 17h | miss |
+| P140 | producer-08 | event-00140 | accepted | 34h | miss |
+| P141 | producer-09 | event-00141 | retry-before-ack | 5h | hit |
+| P142 | producer-10 | event-00142 | retry-after-ack | 22h | hit |
+| P143 | producer-11 | event-00143 | late-replay | 39h | miss |
+| P144 | producer-00 | event-00144 | producer-reset | 10h | miss |
+| P145 | producer-01 | event-00145 | accepted | 27h | miss |
+| P146 | producer-02 | event-00146 | retry-before-ack | 44h | miss |
+| P147 | producer-03 | event-00147 | retry-after-ack | 15h | hit |
+| P148 | producer-04 | event-00148 | late-replay | 32h | miss |
+| P149 | producer-05 | event-00149 | producer-reset | 3h | miss |
+| P150 | producer-06 | event-00150 | accepted | 20h | hit |
+| P151 | producer-07 | event-00151 | retry-before-ack | 37h | miss |
+| P152 | producer-08 | event-00152 | retry-after-ack | 8h | hit |
+| P153 | producer-09 | event-00153 | late-replay | 25h | miss |
+| P154 | producer-10 | event-00154 | producer-reset | 42h | miss |
+| P155 | producer-11 | event-00155 | accepted | 13h | hit |
+| P156 | producer-00 | event-00156 | retry-before-ack | 30h | miss |
+| P157 | producer-01 | event-00157 | retry-after-ack | 1h | hit |
+| P158 | producer-02 | event-00158 | late-replay | 18h | hit |
+| P159 | producer-03 | event-00159 | producer-reset | 35h | miss |
+| P160 | producer-04 | event-00160 | accepted | 6h | hit |
+| P161 | producer-05 | event-00161 | retry-before-ack | 23h | hit |
+| P162 | producer-06 | event-00162 | retry-after-ack | 40h | miss |
+| P163 | producer-07 | event-00163 | late-replay | 11h | hit |
+| P164 | producer-08 | event-00164 | producer-reset | 28h | miss |
+| P165 | producer-09 | event-00165 | accepted | 45h | miss |
+| P166 | producer-10 | event-00166 | retry-before-ack | 16h | hit |
+| P167 | producer-11 | event-00167 | retry-after-ack | 33h | miss |
+| P168 | producer-00 | event-00168 | late-replay | 4h | hit |
+| P169 | producer-01 | event-00169 | producer-reset | 21h | miss |
+| P170 | producer-02 | event-00170 | accepted | 38h | miss |
+| P171 | producer-03 | event-00171 | retry-before-ack | 9h | hit |
+| P172 | producer-04 | event-00172 | retry-after-ack | 26h | miss |
+| P173 | producer-05 | event-00173 | late-replay | 43h | miss |
+| P174 | producer-06 | event-00174 | producer-reset | 14h | miss |
+| P175 | producer-07 | event-00175 | accepted | 31h | miss |
+| P176 | producer-08 | event-00176 | retry-before-ack | 2h | hit |
+| P177 | producer-09 | event-00177 | retry-after-ack | 19h | hit |
+| P178 | producer-10 | event-00178 | late-replay | 36h | miss |
+| P179 | producer-11 | event-00179 | producer-reset | 7h | miss |
+
+## Required tests
+
+Tests must cover retries before and after acknowledgement, a 31-hour replay, producer restart with reused batch ID, duplicate delivery across a regional handoff, and expiry at the selected horizon.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

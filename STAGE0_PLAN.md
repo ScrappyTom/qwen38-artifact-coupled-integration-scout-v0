@@ -115,3 +115,16 @@ and therefore awaits, rather than bypasses, independent semantic adjudication.
 
 No step authorizes the next. A non-diagnostic screen ends this task selection;
 the task is not rewritten after observing its trajectory.
+
+## 8. Live-screen disposition
+
+The authorized screen stopped after two valid batch reads. `RESULT-001`
+delivered S01–S03; pending `RESULT-002` held S04–S06 and made the next prompt
+4,713 tokens too large. Positive first-fit relief was feasible, the candidate
+was unchanged, and no check or submission occurred.
+
+The boundary nevertheless failed the frozen requirement for four prior
+delivered source-observation result objects: only one batch result object had
+crossed a later actor boundary. This is a non-diagnostic endpoint under the
+prospective rule, so the Northstar task selection is closed without retry and
+the D0/A1 measured fork remains ineligible.

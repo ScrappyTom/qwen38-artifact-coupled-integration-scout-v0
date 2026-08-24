@@ -1,8 +1,9 @@
 # Qwen3.8 Northstar artifact-coupling transfer scout
 
-Status: offline Stage 0 implemented; GPU withheld. The next eligible live
-operation is the frozen ordinary pressure screen. No authentic pressure or
-measured treatment effect is claimed yet.
+Status: the authorized ordinary pressure screen is complete and sealed. It
+found authentic pressure after two batch reads but failed the frozen
+meaningful-acquisition gate, so this task selection is closed and no measured
+D0/A1 fork exists. See `NORTHSTAR_PRESSURE_SCREEN_RESULT.md`.
 
 This branch transfers the artifact-coupling interaction to a fresh synthetic
 task/world. It does not isolate a note, digest, eviction rule, or edit action.
@@ -81,8 +82,11 @@ That last condition ensures the selected fork can activate the D0/A1
 interaction. Total corpus size is not activation evidence.
 
 The screen permits at most 18 actor calls, 500,000 serialized tokens, one
-attempt per call, and zero retries. A valid screen is committed and audited
-before the measured continuation can be preflighted or authorized.
+attempt per call, and zero retries. A valid screen would have been committed
+and audited before the measured continuation could be preflighted or
+authorized. The observed screen was mechanically valid but scientifically
+ineligible: only one prior batch-result object had crossed a model boundary
+when the second batch overflowed. The measured continuation remains locked.
 
 ## Evaluation and readiness
 

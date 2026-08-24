@@ -8,6 +8,7 @@ from pathlib import Path
 from reactive_runtime.records import ResultLedger
 from reactive_runtime.world import ArchitectureWorld
 from tools.audit_pressure_screen import audit
+from tools.audit_ineligible_pressure_screen import audit as audit_ineligible
 from tools import run_pressure_screen as runner
 
 
@@ -15,10 +16,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PressureScreenEligibilityTests(unittest.TestCase):
-    def test_auditor_refuses_to_manufacture_a_pre_run_boundary(self) -> None:
+    def test_qualification_auditor_refuses_the_observed_early_boundary(self) -> None:
         result = audit(ROOT, write_outputs=False)
         self.assertFalse(result["passed"])
-        self.assertIn("missing:AUTHORIZATION_RECEIPT.json", result["failures"])
+        self.assertIn("boundary:delivered_sources", result["failures"])
+        self.assertIn("result:terminal_disposition", result["failures"])
+
+    def test_ineligible_run_remains_mechanically_auditable(self) -> None:
+        result = audit_ineligible(write_output=False)
+        self.assertTrue(result["mechanical_integrity_passed"], result["failures"])
+        self.assertTrue(result["pressure_observed"])
+        self.assertTrue(result["positive_relief_feasible"])
+        self.assertFalse(result["scientific_boundary_qualified"])
+        self.assertFalse(result["measured_fork_eligible"])
+        self.assertEqual(["S01", "S02", "S03"], result["delivered_source_ids"])
+        self.assertEqual(["S04", "S05", "S06"], result["pending_source_ids"])
 
     def test_live_screen_requires_realized_demand_and_clean_pretreatment_state(self) -> None:
         source = inspect.getsource(runner)
