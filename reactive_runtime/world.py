@@ -182,6 +182,27 @@ class ArchitectureWorld:
     def apply_integration(self, configuration_id: str, artifact: IntegrationArtifact) -> ExecutionResult:
         config = configuration(configuration_id)
         if config.artifact_coupled:
+            path = self.candidate_root / "EVIDENCE_INTEGRATION_LEDGER.md"
+            if path.read_bytes() == artifact.body.encode("utf-8"):
+                body = canonical_json_text(
+                    {
+                        "artifact_coupled": True,
+                        "candidate_changed": False,
+                        "candidate_sha256": self.candidate_sha256,
+                        "candidate_version": self.candidate_version,
+                        "integration_body_sha256": artifact.body_sha256,
+                        "integration_version": artifact.version,
+                        "schema": "architecture-coupled-integration-confirmation-v0",
+                    }
+                )
+                return ExecutionResult(
+                    "candidate_state_confirmation",
+                    "candidate:EVIDENCE_INTEGRATION_LEDGER.md",
+                    self.candidate_version,
+                    body,
+                    self.candidate_sha256,
+                    metadata={"artifact_coupled": True, "candidate_changed": False},
+                )
             return self._replace_file("EVIDENCE_INTEGRATION_LEDGER.md", artifact.body, "maintenance_integration_coupled")
         self.detached_integration = artifact
         body = canonical_json_text({"artifact_coupled": False, "body_sha256": artifact.body_sha256, "body_tokens": artifact.body_tokens, "candidate_sha256_unchanged": self.candidate_sha256, "integration_version": artifact.version, "schema": "architecture-detached-integration-effect-v0"})
@@ -273,4 +294,4 @@ class ArchitectureWorld:
 
     def make_result_record(self, execution: ExecutionResult, *, result_id: str, acquired_call: int) -> ResultRecord:
         exact = wrap_action_result(result_id=result_id, result_kind=execution.result_kind, object_id=execution.object_id, object_version=execution.object_version, body=execution.body)
-        return ResultRecord(result_id=result_id, result_kind=execution.result_kind, object_id=execution.object_id, object_version=execution.object_version, exact_content=exact, acquired_call=acquired_call, candidate_sha256_after=execution.candidate_sha256_after, relief_eligible=execution.result_kind == "source_observation", evaluated_candidate_sha256=execution.evaluated_candidate_sha256, raw_result_handle=None if execution.raw_tool_custody is None else execution.raw_tool_custody.raw_result_handle, metadata=execution.metadata)
+        return ResultRecord(result_id=result_id, result_kind=execution.result_kind, object_id=execution.object_id, object_version=execution.object_version, exact_content=exact, acquired_call=acquired_call, candidate_sha256_after=execution.candidate_sha256_after, relief_eligible=execution.result_kind in {"source_observation", "exact_reopen_observation"}, evaluated_candidate_sha256=execution.evaluated_candidate_sha256, raw_result_handle=None if execution.raw_tool_custody is None else execution.raw_tool_custody.raw_result_handle, metadata=execution.metadata)

@@ -140,6 +140,61 @@ class ResultRecord:
             value["exact_content"] = self.exact_content
         return value
 
+    @classmethod
+    def from_dict(cls, value: dict[str, Any]) -> "ResultRecord":
+        required = {
+            "acquired_call",
+            "candidate_sha256_after",
+            "exact_content",
+            "first_model_visible_call",
+            "message_index",
+            "metadata",
+            "object_id",
+            "object_version",
+            "relief_eligible",
+            "resident",
+            "result_id",
+            "result_kind",
+        }
+        missing = sorted(required - set(value))
+        if missing:
+            raise ValueError(f"result record lacks fields: {missing}")
+        record = cls(
+            result_id=str(value["result_id"]),
+            result_kind=str(value["result_kind"]),
+            object_id=str(value["object_id"]),
+            object_version=str(value["object_version"]),
+            exact_content=str(value["exact_content"]),
+            acquired_call=int(value["acquired_call"]),
+            candidate_sha256_after=str(value["candidate_sha256_after"]),
+            first_model_visible_call=(
+                None
+                if value["first_model_visible_call"] is None
+                else int(value["first_model_visible_call"])
+            ),
+            message_index=(
+                None if value["message_index"] is None else int(value["message_index"])
+            ),
+            resident=bool(value["resident"]),
+            relief_eligible=bool(value["relief_eligible"]),
+            evaluated_candidate_sha256=(
+                None
+                if value.get("evaluated_candidate_sha256") is None
+                else str(value["evaluated_candidate_sha256"])
+            ),
+            raw_result_handle=(
+                None
+                if value.get("raw_result_handle") is None
+                else str(value["raw_result_handle"])
+            ),
+            metadata=dict(value["metadata"]),
+        )
+        if value.get("content_sha256") not in (None, record.content_sha256):
+            raise ValueError(f"result content hash mismatch: {record.result_id}")
+        if value.get("size_bytes") not in (None, record.size_bytes):
+            raise ValueError(f"result byte size mismatch: {record.result_id}")
+        return record
+
 
 class ResultLedger:
     """Ordered exact-result custody with explicit delivery and residency state."""
@@ -222,3 +277,17 @@ class ResultLedger:
                 for record in self._records.values()
             ],
         }
+
+    @classmethod
+    def from_dict(cls, value: dict[str, Any]) -> "ResultLedger":
+        if value.get("schema") != "ceiba-result-ledger-v1":
+            raise ValueError("unsupported result-ledger schema")
+        rows = value.get("records")
+        if not isinstance(rows, list):
+            raise ValueError("result ledger records must be a list")
+        ledger = cls()
+        for row in rows:
+            if not isinstance(row, dict):
+                raise ValueError("result ledger record must be an object")
+            ledger.add(ResultRecord.from_dict(row))
+        return ledger

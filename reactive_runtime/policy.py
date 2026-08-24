@@ -4,7 +4,7 @@ from copy import deepcopy
 from dataclasses import dataclass
 from typing import Callable, Sequence
 
-from reactive_runtime.records import ResultLedger, ResultRecord
+from reactive_runtime.records import ResultLedger
 
 
 CountMessages = Callable[[list[dict[str, str]]], int]
@@ -48,7 +48,9 @@ def positive_savings_first_fit_step(
         return ReliefPass(before, True, (), ())
     protected = frozenset(protected_result_ids)
     audits: list[ReliefCandidateAudit] = []
-    for record in ledger.eligible(kinds=("source_observation",)):
+    for record in ledger.eligible(
+        kinds=("source_observation", "exact_reopen_observation")
+    ):
         if record.result_id in protected:
             audits.append(
                 ReliefCandidateAudit(
