@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from reactive_runtime.actions import MAX_BATCH_RESULT_TOKENS, action_json_schema, parse_action, render_action_rejection
-from reactive_runtime.canonical import sha256_bytes, write_json
+from reactive_runtime.canonical import sha256_bytes, sha256_file, write_json
 from reactive_runtime.configuration import ordinary_actions
 from reactive_runtime.records import ResultLedger
 from reactive_runtime.seal import seal_tree, verify_tree_seal
@@ -61,9 +61,58 @@ def verify_qualification_handoff() -> dict[str, object]:
     if not path.is_file():
         raise RuntimeError("passing expression-qualification handoff is absent")
     handoff = json.loads(path.read_text(encoding="utf-8"))
-    run_root = ROOT / handoff["run_root"]
-    errors = verify_tree_seal(run_root, run_root / "RUN_SEAL.json")
-    if errors or handoff.get("passed") is not True or handoff.get("model_calls") != 4:
+    expected_run_root = (
+        ROOT
+        / "qualification_runs"
+        / "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0"
+    ).resolve()
+    declared_run_root = handoff.get("run_root")
+    if not isinstance(declared_run_root, str):
+        raise RuntimeError("expression handoff lacks run_root")
+    run_root = (ROOT / declared_run_root).resolve()
+    if run_root != expected_run_root:
+        raise RuntimeError("expression handoff run_root mismatch")
+    result_path = run_root / "QUALIFICATION_RESULT.json"
+    audit_path = ROOT / "QUALIFICATION_AUDIT.json"
+    errors = list(verify_tree_seal(run_root, run_root / "RUN_SEAL.json"))
+    result = json.loads(result_path.read_text(encoding="utf-8"))
+    audit = json.loads(audit_path.read_text(encoding="utf-8"))
+    expected = {
+        "run_id": "2026-08-24-artifact-coupled-maintenance-expression-qualification-v0",
+        "freeze_commit": "7d71c7d666403da7f0be9494a77a771435144f69",
+        "passed": True,
+        "model_calls": 4,
+        "provider_attempts": 4,
+        "attempts_per_call": 1,
+        "retries": 0,
+        "measured_actor_authorized": False,
+    }
+    for key, value in expected.items():
+        observed = audit.get(key) if key == "provider_attempts" else handoff.get(key)
+        if observed != value:
+            errors.append(f"handoff {key} mismatch")
+    if result.get("run_id") != expected["run_id"]:
+        errors.append("qualification result run_id mismatch")
+    if result.get("freeze_commit") != expected["freeze_commit"]:
+        errors.append("qualification result freeze commit mismatch")
+    if result.get("passed") is not True or result.get("model_calls") != 4:
+        errors.append("qualification result did not pass exactly four calls")
+    cases = result.get("cases")
+    if not isinstance(cases, list) or len(cases) != 4 or not all(
+        isinstance(row, dict) and row.get("accepted") is True for row in cases
+    ):
+        errors.append("qualification result case admissions mismatch")
+    if result.get("measured_actor_authorized") is not False:
+        errors.append("qualification result improperly authorizes measured actor")
+    if audit.get("passed") is not True or audit.get("seal_verified") is not True:
+        errors.append("qualification audit did not pass")
+    if handoff.get("qualification_result_sha256") != sha256_file(result_path):
+        errors.append("qualification result hash mismatch")
+    if handoff.get("run_seal_sha256") != sha256_file(run_root / "RUN_SEAL.json"):
+        errors.append("qualification seal hash mismatch")
+    if handoff.get("audit_sha256") != sha256_file(audit_path):
+        errors.append("qualification audit hash mismatch")
+    if errors:
         raise RuntimeError(f"expression handoff failed: {errors}")
     return handoff
 
