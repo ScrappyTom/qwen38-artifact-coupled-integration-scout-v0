@@ -1,7 +1,14 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the fresh Meridian offline Stage 0 is implemented, red-teamed, and
-provider-free qualified. It is a whole-system comparison between direct
+Status: the authorized treatment-free Meridian pressure screen qualified an
+authentic common fork after six valid batch reads. Ten complete sources crossed
+actor boundaries; pending KNOLL+LOOM raised the ordinary prompt to 23,628
+tokens, 2,636 above the allowance. Replacing only `RESULT-001` restores
+feasibility at 20,774. Exact replay, token, activation, seal, authorization,
+and runtime-release audit passed. No treatment, candidate change, check,
+submission, retry, or run failure occurred.
+
+The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
 source-local semantic transformation mechanically merged into the same exact
 source/version register (`L1_LOCAL_DELTA`). Both arms share exact ingress,
@@ -17,10 +24,10 @@ also pass provider-free evidence-to-work-to-check-to-repair-to-recheck-to-
 closure loops. Every source slot is input-result-bound and both paths enforce
 the same 650-token slot ceiling.
 
-This does not establish live pressure or semantic utility. The next operation
-is only a common, treatment-free, 24-call pressure screen. It requires a clean
-frozen commit and separate explicit GPU authorization. No maintenance
-expression call or measured W0/L1 continuation is yet frozen or authorized.
+This establishes live pressure, not semantic utility. The next operation is
+offline freezing of one boundary-native L1 expression case over exact
+`RESULT-001` (AXIOM+BRAMBLE), the result first-fit actually externalizes. No
+maintenance expression call or measured W0/L1 continuation is authorized.
 
 ## Prior completed line
 
@@ -170,6 +177,10 @@ architecture promotion.
   quality/readiness contract
 - `MERIDIAN_PRESSURE_SCREEN_CONTRACT.json` — treatment-free authentic-pressure
   activation and stop rules
+- `MERIDIAN_PRESSURE_SCREEN_RESULT.md` — exact six-call behavioral result and
+  claim limits
+- `MERIDIAN_PRESSURE_SCREEN_AUDIT.json` — independent replay, token, custody,
+  activation, relief, and runtime audit
 - `MERIDIAN_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
   future commit-bound 24-call screen
 - `MERIDIAN_PRESSURE_BOUNDARY_HANDOFF.json` — invalid placeholder unless the

@@ -1,0 +1,270 @@
+<|im_start|>system
+# Meridian bounded recovery actor
+
+You are the ordinary task actor for a frozen sterile-infusion recovery world.
+Use exact source observations, exact source-bound work, candidate effects, and
+current checks to produce the requested decision package. Preserve units,
+probabilities, versions, qualifications, authority, and shared constraints.
+
+Return exactly one declared JSON action object per response. Do not add prose,
+Markdown fences, a second object, or hidden reasoning. A model-authored source
+slot is lossy task work, not source truth or readiness authority. Submission is
+only a proposal; independent candidate-bound adjudication controls readiness.<|im_end|>
+<|im_start|>user
+# Authoritative task — Meridian sterile-infusion recovery decision
+
+Meridian Therapeutics must recover production and allocate sterile infusion
+bags during a quality hold and regional shortage. Build and maintain the exact
+candidate files, then propose submission only when the package is genuinely
+ready for independent review.
+
+The world contains sixteen exact, versioned source objects with opaque IDs.
+The catalog titles help navigation but do not supply source findings. Read the
+bytes needed for the work. Cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a source/version-slot evidence
+register. Each slot must remain local to its bound source, preserve important
+qualifications and uncertainty, and identify relevant requirements Q01–Q12.
+The register is model-authored, lossy, and non-authoritative. It may guide work
+but cannot prove readiness.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,400–2,000-word
+Meridian Sterile-Infusion Recovery Decision with exactly the declared section
+headings. It must use at least twelve distinct sources and integrate—not merely
+list—the governing relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — quality, recall, procurement, execution, and closure authority;
+- Q02 — hazard thresholds, lot/line holds, investigation, and release rules;
+- Q03 — time-bound demand, overlap, uncertainty, and equitable allocation;
+- Q04 — validated manufacturing capacity and shared constraints;
+- Q05 — component qualification, supplier timing, inspection, and release;
+- Q06 — usable cold-chain distribution, routes, custody, and acknowledgment;
+- Q07 — clinical priority, substitution, pharmacy review, and protected cohorts;
+- Q08 — qualified staffing, utilities, safety, duty, relief, and continuity;
+- Q09 — lot genealogy, facility/patient linkage, privacy, retention, and deletion;
+- Q10 — seventy-two-hour execution, owners, sequencing, contingencies, and cost;
+- Q11 — candidate-bound sampling, controls, checks, currentness, repair, and recheck;
+- Q12 — explicit blockers, falsifiers, independent readiness, and closure evidence.
+
+## Relationship rules
+
+Preserve exact units and distinguish alerts from rejection limits, probabilities
+from observed values, targets from observed performance, nominal capacity from
+shared validated throughput, registry coverage from demand, dispatch from usable
+delivery, and mechanical checking from independent readiness. A change to a
+line, sterilizer, component, supplier, route, shift, lot chain, sample plan, or
+candidate can make earlier evidence stale.
+
+The decision must state owners, inputs, resources, timings, dependencies,
+effects, observations, contingencies, retirement conditions, and evidence that
+would falsify important claims. Do not infer that a green format check, source
+slot, mutation, or submission establishes safety or completeness.<|im_end|>
+<|im_start|>user
+# Action contract
+
+Return exactly one JSON object using one currently allowed action.
+
+```text
+{"action":"read_source","source_id":"AXIOM","start_line":1,"end_line":70}
+{"action":"read_batch","requests":[{"source_id":"AXIOM","start_line":1,"end_line":70},{"source_id":"BRAMBLE","start_line":1,"end_line":70}]}
+{"action":"reopen_exact","result_id":"RESULT-001"}
+{"action":"upsert_evidence_slot","source_id":"AXIOM","source_version":"<exact catalog sha256>","content":"source-local bounded work"}
+{"action":"upsert_decision_section","heading":"Decision, scope, and authority","body":"exact section body"}
+{"action":"replace_decision","content":"complete exact decision"}
+{"action":"run_check"}
+{"action":"submit"}
+```
+
+One read may contain at most 120 lines. One batch may contain one or two ranges,
+at most 160 total lines, 12,000 source bytes, and 6,500 model-visible result
+tokens. Same-source ranges may not overlap. Use exact catalog IDs and in-range
+line bounds.
+
+`upsert_evidence_slot` is available only in the direct-work configuration. It
+replaces one exact source/version slot and cannot edit any other source slot.
+The local-delta configuration receives mechanically merged source-local work
+through its separately costed maintenance channel.
+
+Checks bind to the exact candidate version. Any later candidate effect makes
+the prior check stale. Submission never self-authorizes readiness.
+
+
+# Common pre-fork action notice
+Evidence-slot mutation is not available during pressure screening.
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":70,"sha256":"968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775","size_bytes":4232,"source_id":"AXIOM","title":"Emergency manufacturing, recall, and release authority"},{"line_count":70,"sha256":"b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4","size_bytes":3686,"source_id":"BRAMBLE","title":"Endotoxin, particulate, and assay-drift thresholds"},{"line_count":70,"sha256":"d625dbfdf7573704caf7a14a78e3601654e638074e8c94ab1317690f6df2e37f","size_bytes":4330,"source_id":"CIPHER","title":"Hospital demand, registry coverage, and overlapping critical cohorts"},{"line_count":70,"sha256":"f1b10a1300f8f42742f6b3e17b8c3eb28020ce93b5ef8e382d1dc015858cfc6b","size_bytes":4407,"source_id":"DRIFT","title":"Fill-line output and shared sterilizer constraint"},{"line_count":70,"sha256":"3070015a4e1ce2a4527a1e79c8de9f6e88ecc01fb4b623d49d6bf570513de162","size_bytes":4191,"source_id":"EMBER","title":"Container components, supplier yield, and observed delivery"},{"line_count":70,"sha256":"de932f76c00ed9529577cfcb20eb79afd44b847ea9c4e543533d0d7d856dd9be","size_bytes":4054,"source_id":"FJORD","title":"Cold-chain distribution, routes, and custody"},{"line_count":70,"sha256":"ed2ee66e745b4e19bb80a2d02a46b6f173021c12d3e9b2b261601ad0d8281d7f","size_bytes":4374,"source_id":"GLINT","title":"Clinical allocation, substitution, and protected cohorts"},{"line_count":70,"sha256":"a4ba51ba048292f3850144226aa4107148c2317fbfd3c0670ea853e48dc46d5c","size_bytes":3857,"source_id":"HEATH","title":"Sampling, assay validity, and lot release evidence"},{"line_count":70,"sha256":"509fc9703a4c936cfca7cebbee08561d11112398f16a98a16dd56abe78afdd9d","size_bytes":3677,"source_id":"IRIS","title":"Power, clean utilities, and fuel continuity"},{"line_count":70,"sha256":"675adeba6d4accb64f0f1c8ec940c4b9d8de78472174da6a487b0f0972408d98","size_bytes":4367,"source_id":"JASPER","title":"Qualified staffing, shifts, and safety controls"},{"line_count":70,"sha256":"3ebd2346f68fc485a42f01b52d7e7b97c4421f74b29003e1384551424b8892d3","size_bytes":4550,"source_id":"KNOLL","title":"Alternate manufacturer capability, timing, and cost authority"},{"line_count":70,"sha256":"374004027c1e6c96150db00991a7879ee927add83ca6cf4f58f69728d7827b17","size_bytes":3700,"source_id":"LOOM","title":"Lot genealogy, patient linkage, privacy, and retention"},{"line_count":70,"sha256":"110440234faec24dcf0f0e2e71c041f1d0a2ac22372b82a3fb35b6413fcc452c","size_bytes":4543,"source_id":"MARCH","title":"Facility notification, acknowledgment, and escalation"},{"line_count":70,"sha256":"bad6b621c758f12c8ea10d44566d327a4e0ac844380263368a3aa9fe232c9e63","size_bytes":4248,"source_id":"NORTH","title":"Frozen recovery exercise defects and corrective evidence"},{"line_count":70,"sha256":"07038e1bd8a752abec7bcd0b7aea965525f777dd5c06a06924491728fbc2f5b0","size_bytes":4270,"source_id":"ONYX","title":"Demand surge and supply-loss forecast revisions"},{"line_count":70,"sha256":"0403c10933b14a017d20afebae2c044ce80e260b83c1116b7bd5b9da55826697","size_bytes":3971,"source_id":"PIVOT","title":"Independent readiness, falsification, and closure rules"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"a5adf105f06aa57e26868a4fae8422e2383ffba1bc57e50a72a077c3e534cac1","candidate_version":"candidate-v000:a5adf105f06aa57e26868a4fae8422e2383ffba1bc57e50a72a077c3e534cac1","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"08548a5f6305764c54c031dfea7e7ae0b9367d242f16269fdf2d3427f5df2bc0","EVIDENCE_INTEGRATION_LEDGER.md":"a1a4cc8b49d87602ed2ea51982569e6de92a0961ed8340f7381baf75af8ff291"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Source Evidence Register
+
+Schema: source-slot-register-v0
+Readiness authority: none; exact sources and external evaluation govern.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Meridian Sterile-Infusion Recovery Decision
+
+Candidate not yet constructed.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"AXIOM","start_line":1},{"end_line":70,"source_id":"BRAMBLE","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:AXIOM:1-70+BRAMBLE:1-70","object_version":"ff871ee116738e7a5fb554504292c6e60d76a6af51af846facf0405472cd8945","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"AXIOM","start_line":1},{"end_line":70,"source_id":"BRAMBLE","start_line":1}],"total_source_bytes":8382}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"AXIOM","source_path":"sources/AXIOM_AUTHORITY.md","source_sha256":"968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775","source_size_bytes":4232,"start_line":1}
+--- exact source range ---
+# Emergency manufacturing, recall, and release authority
+
+## Frozen findings
+
+The independent quality unit places or releases a lot hold. The incident commander coordinates recovery, the regulator receives mandatory notice, and procurement executes an approved supplier choice; none may substitute for the quality release decision.
+A field recall begins on quality-unit recommendation and accountable-executive authorization. Emergency purchasing authority does not waive validated process, sterility, labeling, or traceability controls.
+A shift handoff is valid only when the receiving owner acknowledges the same recovery-candidate, affected-lot, and assay-plan versions. An unacknowledged handoff blocks closure.
+
+## Governing relationships
+
+Hazard evidence from BRAMBLE and HEATH informs the hold or release but does not itself create legal authority. Every manufacturing, allocation, and checker effect must bind one candidate version.
+A supplier or model-authored evidence slot is advisory work, never recall or release authority.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUTH-000 | quality-unit | r2 | 1.0 | approval | hold |
+| AUTH-001 | incident-commander | r2 | 1.7 | approval | current |
+| AUTH-002 | regulator | r2 | 2.4 | approval | current |
+| AUTH-003 | procurement | r2 | 3.1 | approval | current |
+| AUTH-004 | quality-unit | r2 | 3.8 | approval | current |
+| AUTH-005 | incident-commander | r2 | 1.4 | approval | current |
+| AUTH-006 | regulator | r2 | 2.1 | approval | current |
+| AUTH-007 | procurement | r2 | 2.8 | approval | current |
+| AUTH-008 | quality-unit | r2 | 3.5 | approval | current |
+| AUTH-009 | incident-commander | r2 | 1.1 | approval | current |
+| AUTH-010 | regulator | r2 | 1.8 | approval | current |
+| AUTH-011 | procurement | r2 | 2.5 | approval | current |
+| AUTH-012 | quality-unit | r2 | 3.2 | approval | current |
+| AUTH-013 | incident-commander | r2 | 3.9 | approval | hold |
+| AUTH-014 | regulator | r2 | 1.5 | approval | current |
+| AUTH-015 | procurement | r2 | 2.2 | approval | current |
+| AUTH-016 | quality-unit | r3 | 2.9 | approval | current |
+| AUTH-017 | incident-commander | r3 | 3.6 | approval | current |
+| AUTH-018 | regulator | r3 | 1.2 | approval | current |
+| AUTH-019 | procurement | r3 | 1.9 | approval | current |
+| AUTH-020 | quality-unit | r3 | 2.6 | approval | current |
+| AUTH-021 | incident-commander | r3 | 3.3 | approval | current |
+| AUTH-022 | regulator | r3 | 4.0 | approval | current |
+| AUTH-023 | procurement | r3 | 1.6 | approval | current |
+| AUTH-024 | quality-unit | r3 | 2.3 | approval | current |
+| AUTH-025 | incident-commander | r3 | 3.0 | approval | current |
+| AUTH-026 | regulator | r3 | 3.7 | approval | hold |
+| AUTH-027 | procurement | r3 | 1.3 | approval | current |
+| AUTH-028 | quality-unit | r3 | 2.0 | approval | current |
+| AUTH-029 | incident-commander | r3 | 2.7 | approval | current |
+| AUTH-030 | regulator | r3 | 3.4 | approval | current |
+| AUTH-031 | procurement | r3 | 1.0 | approval | current |
+| AUTH-032 | quality-unit | r4 | 1.7 | approval | current |
+| AUTH-033 | incident-commander | r4 | 2.4 | approval | current |
+| AUTH-034 | regulator | r4 | 3.1 | approval | current |
+| AUTH-035 | procurement | r4 | 3.8 | approval | current |
+| AUTH-036 | quality-unit | r4 | 1.4 | approval | current |
+| AUTH-037 | incident-commander | r4 | 2.1 | approval | current |
+| AUTH-038 | regulator | r4 | 2.8 | approval | current |
+| AUTH-039 | procurement | r4 | 3.5 | approval | hold |
+| AUTH-040 | quality-unit | r4 | 1.1 | approval | current |
+| AUTH-041 | incident-commander | r4 | 1.8 | approval | current |
+| AUTH-042 | regulator | r4 | 2.5 | approval | current |
+| AUTH-043 | procurement | r4 | 3.2 | approval | current |
+| AUTH-044 | quality-unit | r4 | 3.9 | approval | current |
+| AUTH-045 | incident-commander | r4 | 1.5 | approval | current |
+| AUTH-046 | regulator | r4 | 2.2 | approval | current |
+| AUTH-047 | procurement | r4 | 2.9 | approval | current |
+
+## Decision constraints
+
+Separate detection, recommendation, authorization, execution, verification, and closure.
+Name the accountable owner and exact evidence needed to retire each hold.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"BRAMBLE","source_path":"sources/BRAMBLE_CONTAMINATION.md","source_sha256":"b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4","source_size_bytes":3686,"start_line":1}
+--- exact source range ---
+# Endotoxin, particulate, and assay-drift thresholds
+
+## Frozen findings
+
+The alert threshold is 0.25 endotoxin units per milliliter and the rejection limit is 0.50 EU/mL. Values and units must not be converted into hours, percent, or temperature.
+Two validated M41 samples measured 0.31 and 0.34 EU/mL. The lot remains held while the water-loop investigation is open even though neither value reaches the rejection limit.
+Current stability modeling assigns a 41 percent probability of assay drift after eighteen hours. That probability is not humidity, defect prevalence, or a readiness score.
+
+## Governing relationships
+
+HEATH defines valid confirmation and release rounds; DRIFT and EMBER changes make prior line samples stale for the changed candidate.
+NORTH found that particulate inspection and endotoxin sampling were previously reported under mismatched lot revisions.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| QUAL-000 | lot-M41 | r2 | 0.2 | EU/mL | hold |
+| QUAL-001 | line-A | r2 | 0.9 | EU/mL | current |
+| QUAL-002 | line-B | r2 | 1.6 | EU/mL | current |
+| QUAL-003 | water-loop | r2 | 2.4 | EU/mL | current |
+| QUAL-004 | lot-M41 | r2 | 3.0 | EU/mL | current |
+| QUAL-005 | line-A | r2 | 0.7 | EU/mL | current |
+| QUAL-006 | line-B | r2 | 1.4 | EU/mL | current |
+| QUAL-007 | water-loop | r2 | 2.0 | EU/mL | current |
+| QUAL-008 | lot-M41 | r2 | 2.8 | EU/mL | current |
+| QUAL-009 | line-A | r2 | 0.3 | EU/mL | current |
+| QUAL-010 | line-B | r2 | 1.1 | EU/mL | current |
+| QUAL-011 | water-loop | r2 | 1.8 | EU/mL | current |
+| QUAL-012 | lot-M41 | r2 | 2.5 | EU/mL | current |
+| QUAL-013 | line-A | r2 | 3.1 | EU/mL | hold |
+| QUAL-014 | line-B | r2 | 0.8 | EU/mL | current |
+| QUAL-015 | water-loop | r2 | 1.4 | EU/mL | current |
+| QUAL-016 | lot-M41 | r3 | 2.1 | EU/mL | current |
+| QUAL-017 | line-A | r3 | 2.9 | EU/mL | current |
+| QUAL-018 | line-B | r3 | 0.5 | EU/mL | current |
+| QUAL-019 | water-loop | r3 | 1.1 | EU/mL | current |
+| QUAL-020 | lot-M41 | r3 | 1.9 | EU/mL | current |
+| QUAL-021 | line-A | r3 | 2.5 | EU/mL | current |
+| QUAL-022 | line-B | r3 | 3.2 | EU/mL | current |
+| QUAL-023 | water-loop | r3 | 0.8 | EU/mL | current |
+| QUAL-024 | lot-M41 | r3 | 1.6 | EU/mL | current |
+| QUAL-025 | line-A | r3 | 2.2 | EU/mL | current |
+| QUAL-026 | line-B | r3 | 3.0 | EU/mL | hold |
+| QUAL-027 | water-loop | r3 | 0.6 | EU/mL | current |
+| QUAL-028 | lot-M41 | r3 | 1.2 | EU/mL | current |
+| QUAL-029 | line-A | r3 | 1.9 | EU/mL | current |
+| QUAL-030 | line-B | r3 | 2.6 | EU/mL | current |
+| QUAL-031 | water-loop | r3 | 0.2 | EU/mL | current |
+| QUAL-032 | lot-M41 | r4 | 0.9 | EU/mL | current |
+| QUAL-033 | line-A | r4 | 1.6 | EU/mL | current |
+| QUAL-034 | line-B | r4 | 2.4 | EU/mL | current |
+| QUAL-035 | water-loop | r4 | 3.0 | EU/mL | current |
+| QUAL-036 | lot-M41 | r4 | 0.7 | EU/mL | current |
+| QUAL-037 | line-A | r4 | 1.4 | EU/mL | current |
+| QUAL-038 | line-B | r4 | 2.0 | EU/mL | current |
+| QUAL-039 | water-loop | r4 | 2.8 | EU/mL | hold |
+| QUAL-040 | lot-M41 | r4 | 0.3 | EU/mL | current |
+| QUAL-041 | line-A | r4 | 1.1 | EU/mL | current |
+| QUAL-042 | line-B | r4 | 1.8 | EU/mL | current |
+| QUAL-043 | water-loop | r4 | 2.5 | EU/mL | current |
+| QUAL-044 | lot-M41 | r4 | 3.1 | EU/mL | current |
+| QUAL-045 | line-A | r4 | 0.8 | EU/mL | current |
+| QUAL-046 | line-B | r4 | 1.4 | EU/mL | current |
+| QUAL-047 | water-loop | r4 | 2.1 | EU/mL | current |
+
+## Decision constraints
+
+Preserve 0.25 EU/mL, 0.50 EU/mL, both observed results, and 41 percent with their exact meanings.
+State what starts, holds, expands, and retires the lot and line controls.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
