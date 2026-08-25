@@ -1,0 +1,11 @@
+{
+  "schema_version": "bluehaven-pressure-screen-authorization-request-v0",
+  "authorized": false,
+  "scope": "bluehaven_pressure_screen_v0",
+  "run_id": "2026-08-25-bluehaven-pressure-screen-v0",
+  "maximum_model_calls": 22,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "prerequisite": "passing offline Stage 0, exact task lock, admissible ingress geometry, provider-free system fixtures, and a clean frozen commit",
+  "expected_user_quote_template": "I authorize the frozen 22-call Bluehaven pressure screen at commit {commit}, run ID 2026-08-25-bluehaven-pressure-screen-v0: at most 22 actor calls, one attempt per call, zero retries."
+}

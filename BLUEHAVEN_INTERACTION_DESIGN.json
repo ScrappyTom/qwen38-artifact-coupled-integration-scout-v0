@@ -1,0 +1,50 @@
+{
+  "schema_version": "bluehaven-maintenance-work-verification-design-v0",
+  "status": "offline_stage0_passed_pressure_screen_gpu_withheld",
+  "task_id": "bluehaven-water-restoration-package-v0",
+  "unit_of_analysis": "whole_configuration_trajectory",
+  "research_question": "Under authentic context pressure, does mechanically batched coupled maintenance or direct actor-authored exact cumulative work produce more source-correct, current-verified, closure-ready work under a shared bounded actor horizon?",
+  "configurations": [
+    {
+      "id": "B1_BATCHED_COUPLED",
+      "maintenance": "one exact-ledger rewrite after every three positive source externalizations",
+      "exact_work": "coupled evidence ledger plus actor-authored decision",
+      "maintenance_candidate_effect": true,
+      "actor_may_replace_evidence_ledger": false,
+      "actor_may_incrementally_update_decision": true
+    },
+    {
+      "id": "W1_DIRECT_WORK",
+      "maintenance": "no separate maintenance provider",
+      "exact_work": "actor-authored evidence ledger and decision",
+      "maintenance_candidate_effect": false,
+      "actor_may_replace_evidence_ledger": true,
+      "actor_may_incrementally_update_decision": true
+    }
+  ],
+  "common_interacting_functions": [
+    "actor_selected_single_or_two_range_ingress",
+    "exact_external_custody_and_reopen",
+    "positive_savings_deterministic_first_fit_relief",
+    "exact_versioned_task_work",
+    "candidate_effect_delivery",
+    "relation_level_candidate_bound_check",
+    "explicit_current_or_stale_check_binding",
+    "repair_recheck_and_closure_proposal",
+    "independent_candidate_bound_readiness_adjudication"
+  ],
+  "not_isolated_components": true,
+  "maintenance_batch_size": 3,
+  "batched_maintenance_admission_tokens": 2400,
+  "batched_maintenance_provider_completion_tokens": 2700,
+  "batched_budget_selection_basis": "prospective Cedar output range, not Bluehaven behavior",
+  "maintenance_partial_batch_flush": false,
+  "maximum_preconstruction_actor_calls": 28,
+  "postconstruction_actor_calls": 8,
+  "maximum_actor_calls": 36,
+  "maximum_batched_maintenance_calls": 7,
+  "maximum_provider_calls_B1": 43,
+  "maximum_provider_calls_W1": 36,
+  "protected_tail_is_actor_opportunity_not_readiness": true,
+  "measured_gpu_authorized": false
+}

@@ -1,4 +1,4 @@
-# Qwen3.8 Cedar ingress-aligned interaction transfer
+# Qwen3.8 bounded-work system interaction scouts
 
 Status: the authorized Cedar `D0_DETACHED`/`A1_COUPLED` continuation is
 complete, sealed, audited, and independently adjudicated. A1 produced a
@@ -6,6 +6,14 @@ materially stronger partial artifact than D0 at nearly equal serialized-token
 cost, but neither arm was ready or usefully complete. Both stopped when the
 shared synchronous-maintenance budget was exhausted. See
 `CEDAR_ARTIFACT_COUPLING_TRANSFER_RESULT.md`.
+
+The current successor is Bluehaven offline Stage 0. It uses a fresh exact
+drinking-water world to compare two complete bounded-work policies after a
+common authentic pressure history: mechanically batched artifact-coupled
+maintenance (`B1_BATCHED_COUPLED`) and direct actor-authored cumulative work
+(`W1_DIRECT_WORK`). Stage 0 and provider-free feedback loops pass. The next
+eligible operation is only the separately authorized ordinary Bluehaven
+pressure screen; no Bluehaven inference is authorized by repository files.
 
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
@@ -147,6 +155,19 @@ architecture promotion.
 - `CEDAR_MEASURED_INTERACTION_AUDIT.json` — sealed-run, budget, and lifecycle audit
 - `CEDAR_SEMANTIC_ADJUDICATION.json` — candidate-bound R01–R12 quality/readiness record
 - `CEDAR_SEMANTIC_ADJUDICATION_VALIDATION.json` — deterministic adjudication receipt
+- `CEDAR_INTERACTION_ECONOMICS_AUDIT.{md,json}` — complete maintenance/work/
+  verification accounting and successor selection
+- `BLUEHAVEN_STAGE0_PLAN.md` — fresh whole-system scientific contract
+- `BLUEHAVEN_STAGE0_PREFLIGHT.json` — exact tokenizer, ingress, maintenance,
+  provider-free feedback, budget, and remaining-gate receipt
+- `BLUEHAVEN_STAGE0_RED_TEAM.md` — oracle, parity, resource, evaluator, and
+  failure-case audit
+- `BLUEHAVEN_INTERACTION_DESIGN.json` — prospective B1/W1 policy ownership and
+  resource contract
+- `BLUEHAVEN_PRESSURE_SCREEN_CONTRACT.json` — ordinary-screen activation and
+  stop rules
+- `BLUEHAVEN_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
+  future commit-bound authorization
 
 Northstar and earlier measured-result files remain append-only historical
 evidence. They are not part of the Cedar actor-visible source catalog.

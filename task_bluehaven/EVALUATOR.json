@@ -1,0 +1,39 @@
+{
+  "schema_version": "bluehaven-water-evaluator-v0",
+  "evaluator_id": "bluehaven-water-evaluator-v0",
+  "task_id": "bluehaven-water-restoration-package-v0",
+  "decision_title": "# Bluehaven Drinking-Water Restoration Decision",
+  "decision_word_range": [1400, 2000],
+  "construction_milestone_minimum_words": 1000,
+  "construction_milestone_minimum_sources": 9,
+  "minimum_unique_sources": 12,
+  "required_source_ids": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11", "S13", "S14", "S15", "S16"],
+  "required_ledger_requirements": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10", "R11", "R12"],
+  "decision_headings": [
+    "Decision, scope, and authority",
+    "Contamination triggers and service-zone sequencing",
+    "Demand, treatment, and distribution capacity",
+    "Critical customers and alternate-water continuity",
+    "Power, staffing, logistics, and mutual aid",
+    "Public warning, sampling, and accountability",
+    "Seventy-two-hour execution and contingencies",
+    "Verification, readiness, blockers, and falsifiers"
+  ],
+  "semantic_term_gates": {
+    "authority": ["public-health", "utility director", "closure authority"],
+    "contamination": ["0.2 mg/L", "5 micrograms", "38 percent", "WQ-R7"],
+    "demand": ["46,800", "94 percent", "uncertainty", "three liters"],
+    "capacity": ["15 ML/day", "13.4", "28 psi", "East trunk"],
+    "critical_continuity": ["hospital", "dialysis", "potable", "handoff"],
+    "power_staffing": ["seventeen-hour", "twelve-hour", "relief", "alternate"],
+    "communications": ["Vietnamese", "ASL", "door-knock", "receipt"],
+    "verification": ["candidate", "recheck", "blocker", "falsifier"]
+  },
+  "forbidden_relation_patterns": {
+    "residual_unit_conversion": ["0.2 hours", "0.2 ML/day", "0.2 psi"],
+    "probability_conversion": ["38 NTU", "38 percent humidity", "38 percent demand"],
+    "coverage_conversion": ["six percent demand", "6 percent demand", "94 percent readiness"],
+    "shared_capacity_sum": ["21 ML/day available", "21 ML/day capacity"],
+    "revision_count_conversion": ["one WQ revision is permitted", "one revision is permitted"]
+  }
+}

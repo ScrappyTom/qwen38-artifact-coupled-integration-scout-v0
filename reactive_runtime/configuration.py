@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 
 CONFIGURATIONS = ("D0_DETACHED", "A1_COUPLED")
+BLUEHAVEN_CONFIGURATIONS = ("B1_BATCHED_COUPLED", "W1_DIRECT_WORK")
 
 
 @dataclass(frozen=True)
@@ -32,3 +33,19 @@ def ordinary_actions() -> tuple[str, ...]:
         "run_check",
         "submit",
     )
+
+
+def bluehaven_actor_actions(configuration_id: str) -> tuple[str, ...]:
+    """Return the actor surface for one complete Bluehaven operating policy.
+
+    B1 assigns evidence-ledger replacement to the batched maintenance pass.
+    W1 has no maintenance provider, so its ordinary actor owns that exact work
+    operation. Both retain the same evidence, decision, feedback, and closure
+    actions otherwise.
+    """
+    if configuration_id not in BLUEHAVEN_CONFIGURATIONS:
+        raise ValueError(f"unknown Bluehaven configuration: {configuration_id}")
+    actions = ordinary_actions()
+    if configuration_id == "B1_BATCHED_COUPLED":
+        return tuple(action for action in actions if action != "replace_evidence_ledger")
+    return actions

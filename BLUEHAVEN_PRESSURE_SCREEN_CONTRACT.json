@@ -1,0 +1,30 @@
+{
+  "schema_version": "bluehaven-pressure-screen-contract-v0",
+  "status": "offline_gpu_withheld",
+  "run_id": "2026-08-25-bluehaven-pressure-screen-v0",
+  "scope": "bluehaven_pressure_screen_v0",
+  "seed": 910271,
+  "maximum_actor_calls": 22,
+  "maximum_provider_calls": 22,
+  "maximum_serialized_tokens": 700000,
+  "maximum_wall_seconds": 8000,
+  "context_tokens": 25088,
+  "ordinary_response_reserve": 4096,
+  "prompt_limit": 20992,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "policy": "ordinary exact chronology with no relief, maintenance, semantic transform, or reentry",
+  "activation_semantics": {
+    "unit": "union of exact source lines delivered across prior actor boundaries",
+    "minimum_lines_per_qualifying_source": 55,
+    "minimum_qualifying_sources": 4,
+    "minimum_distinct_evidence_domains": 3,
+    "pending_observation_requires_novel_lines": true,
+    "candidate_must_remain_initial": true,
+    "check_must_not_have_run": true,
+    "submission_must_not_have_occurred": true
+  },
+  "qualifying_endpoint": "a novel source observation makes the next ordinary prompt exceed 20992 tokens after the frozen line/domain gate, and one or more frozen positive first-fit substitutions restore feasibility while the pending observation remains protected",
+  "early_or_nonactivation_rule": "pressure before maturity or no authentic pressure within the frozen horizon closes this task selection without changing source sizes, action geometry, seed, or call ceiling",
+  "measured_continuation_authorized": false
+}

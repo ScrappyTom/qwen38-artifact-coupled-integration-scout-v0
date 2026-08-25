@@ -1,0 +1,31 @@
+{
+  "schema_version": "bluehaven-synthetic-world-v0",
+  "task_id": "bluehaven-water-restoration-package-v0",
+  "freshness": "No prior measured trajectory in this program used this task, candidate, or synthetic world.",
+  "authoritative_facts": {
+    "boil_order_authority": "public_health_officer",
+    "chlorine_residual_trigger_mg_L": 0.2,
+    "benzene_trigger_micrograms_L": 5,
+    "adverse_plume_reversal_probability_percent": 38,
+    "registry_coverage_percent": 94,
+    "shared_east_trunk_capacity_ML_day": 15,
+    "observed_integrated_output_ML_day": 13.4,
+    "hospital_pressure_floor_psi": 28,
+    "contract_fuel_target_hours": 8,
+    "observed_fuel_delay_hours": 17,
+    "common_revision": "WQ-R7",
+    "readiness_at_initial_state": "not_ready"
+  },
+  "forbidden_shortcuts": [
+    "contamination_trigger_unit_conversion",
+    "plume_probability_as_physical_threshold_or_demand",
+    "registry_coverage_as_readiness_or_demand_reduction",
+    "sum_treatment_plants_across_shared_trunk",
+    "treatment_output_as_delivered_capacity_without_hydraulics",
+    "nominal_tanker_volume_as_staffed_potable_delivery",
+    "eight_hour_contract_target_as_continuity_basis",
+    "arbitrary_revision_count_instead_of_common_WQ_R7_binding",
+    "owner_attestation_or_stale_check_as_readiness",
+    "submission_as_readiness_authority"
+  ]
+}

@@ -10,7 +10,6 @@ from pathlib import Path
 from typing import Any
 
 from reactive_runtime.actions import (
-    DECISION_HEADINGS,
     MAX_BATCH_RANGES,
     MAX_BATCH_SOURCE_BYTES,
     MAX_BATCH_TOTAL_LINES,
@@ -74,6 +73,10 @@ class ArchitectureWorld:
         self.candidate_root.mkdir(parents=True, exist_ok=True)
         for name in self.candidate_files:
             shutil.copyfile(self.task_root / "candidate" / name, self.candidate_root / name)
+        self.evaluator_config = json.loads(
+            (self.task_root / "EVALUATOR.json").read_text(encoding="utf-8")
+        )
+        self.decision_headings = tuple(self.evaluator_config["decision_headings"])
         self.sources = self._load_sources()
         self.version_index = 0
         self.submitted = False
@@ -126,9 +129,7 @@ class ArchitectureWorld:
         This grants post-construction decisions; it does not assert semantic
         quality, readiness, or closure.
         """
-        config = json.loads(
-            (self.task_root / "EVALUATOR.json").read_text(encoding="utf-8")
-        )
+        config = self.evaluator_config
         decision = (
             self.candidate_root / "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
         ).read_text(encoding="utf-8")
@@ -256,7 +257,7 @@ class ArchitectureWorld:
         return ExecutionResult("semantic_state_effect", "sidecar:integration-ledger", artifact.body_sha256, body, self.candidate_sha256, metadata={"artifact_coupled": False})
 
     def _upsert_section(self, heading: str, body: str) -> ExecutionResult:
-        if heading not in DECISION_HEADINGS:
+        if heading not in self.decision_headings:
             raise ActionRejected("unknown_heading", heading)
         path = self.candidate_root / "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
         text = path.read_text(encoding="utf-8")
@@ -268,16 +269,14 @@ class ArchitectureWorld:
             sections[match.group(1).strip()] = text[match.end() : end].strip()
         sections[heading] = body.strip()
         rendered = [preamble]
-        for declared in DECISION_HEADINGS:
+        for declared in self.decision_headings:
             if declared in sections:
                 rendered.append(f"## {declared}\n\n{sections[declared]}")
         return self._replace_file(path.name, "\n\n".join(rendered).rstrip() + "\n", "actor_upsert_decision_section")
 
     def _run_check(self, result_id: str) -> ExecutionResult:
         evaluated = self.candidate_sha256
-        evaluator_id = json.loads(
-            (self.task_root / "EVALUATOR.json").read_text(encoding="utf-8")
-        )["evaluator_id"]
+        evaluator_id = self.evaluator_config["evaluator_id"]
         raw_handle = f"raw-tool://{result_id}/evaluator"
         command = (sys.executable, str(self.task_root / "evaluator" / "evaluate.py"), str(self.candidate_root))
         process = subprocess.run(command, cwd=self.task_root, capture_output=True, check=False, timeout=180)
@@ -292,7 +291,7 @@ class ArchitectureWorld:
                 raise ValueError("evaluator candidate hash mismatch")
             projection = project_check(evaluation, evaluated_candidate_sha256=evaluated, raw_result_handle=raw_handle, returncode=process.returncode)
         except ValueError as exc:
-            projection = {"blocking_requirements": ["evaluator_protocol_error"], "closure_readiness": "not_ready", "criterion_results": [], "evaluated_candidate_sha256": evaluated, "evaluator_id": evaluator_id, "passed": False, "protocol_error_class": type(exc).__name__, "raw_result_handle": raw_handle, "raw_result_preserved_exactly": True, "returncode_class": "zero" if process.returncode == 0 else "nonzero", "schema": "cedar-stable-check-projection-v0", "volatile_fields_excluded": True}
+            projection = {"blocking_requirements": ["evaluator_protocol_error"], "closure_readiness": "not_ready", "criterion_results": [], "evaluated_candidate_sha256": evaluated, "evaluator_id": evaluator_id, "passed": False, "protocol_error_class": type(exc).__name__, "raw_result_handle": raw_handle, "raw_result_preserved_exactly": True, "returncode_class": "zero" if process.returncode == 0 else "nonzero", "schema": "stable-check-projection-v1", "volatile_fields_excluded": True}
         self.last_check_projection = projection
         return ExecutionResult("check_observation", f"evaluator:{evaluator_id}", evaluated, render_check_projection(projection), self.candidate_sha256, evaluated_candidate_sha256=evaluated, raw_tool_custody=raw, metadata={"check_projection": projection})
 
@@ -320,7 +319,8 @@ class ArchitectureWorld:
             shutil.copyfile(self.candidate_root / name, destination / name)
         write_json(destination / "SUBMISSION_MANIFEST.json", {"candidate_sha256": self.candidate_sha256, "candidate_version": self.candidate_version, "files": self.candidate_manifest, "readiness": "requires_external_adjudication"})
         self.submitted = True
-        return ExecutionResult("submission_effect", "submission:evacuation-package", self.candidate_version, canonical_json_text({"candidate_sha256": self.candidate_sha256, "effect": "submission_proposal_recorded", "readiness": "requires_external_candidate_bound_adjudication"}), self.candidate_sha256)
+        task_id = str(self.evaluator_config.get("task_id", "bounded-task"))
+        return ExecutionResult("submission_effect", f"submission:{task_id}", self.candidate_version, canonical_json_text({"candidate_sha256": self.candidate_sha256, "effect": "submission_proposal_recorded", "readiness": "requires_external_candidate_bound_adjudication", "task_id": task_id}), self.candidate_sha256)
 
     def execute(self, action: dict[str, Any], *, result_id: str, ledger: ResultLedger | None = None) -> ExecutionResult:
         name = action["action"]

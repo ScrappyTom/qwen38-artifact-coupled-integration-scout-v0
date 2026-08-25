@@ -87,7 +87,12 @@ def _validate_range(request: Any, *, label: str) -> dict[str, Any]:
     return request
 
 
-def parse_action(content: str, allowed: Iterable[str]) -> dict[str, Any]:
+def parse_action(
+    content: str,
+    allowed: Iterable[str],
+    *,
+    decision_headings: Iterable[str] = DECISION_HEADINGS,
+) -> dict[str, Any]:
     value = json.loads(content, parse_constant=_reject_constant, object_pairs_hook=_unique_object)
     if not isinstance(value, dict) or not isinstance(value.get("action"), str):
         raise ValueError("assistant content is not one action object")
@@ -123,7 +128,7 @@ def parse_action(content: str, allowed: Iterable[str]) -> dict[str, Any]:
             raise ValueError(f"{field} must be non-empty")
     if action == "read_source":
         _validate_range({key: value[key] for key in ("source_id", "start_line", "end_line")}, label=action)
-    if action == "upsert_decision_section" and value["heading"] not in DECISION_HEADINGS:
+    if action == "upsert_decision_section" and value["heading"] not in tuple(decision_headings):
         raise ValueError("heading is not a declared decision section")
     if action in {"replace_evidence_ledger", "replace_decision"}:
         size = len(value["content"].encode("utf-8"))
@@ -141,7 +146,12 @@ def _range_properties(sources: list[str]) -> dict[str, Any]:
 
 
 def action_json_schema(
-    allowed: Iterable[str], *, source_ids: Iterable[str], reopen_result_ids: Iterable[str]
+    allowed: Iterable[str],
+    *,
+    source_ids: Iterable[str],
+    reopen_result_ids: Iterable[str],
+    decision_headings: Iterable[str] = DECISION_HEADINGS,
+    schema_name: str = "cedar_actor_action_v0",
 ) -> dict[str, Any]:
     sources = sorted(set(source_ids))
     reopen = sorted(set(reopen_result_ids))
@@ -174,7 +184,7 @@ def action_json_schema(
                 if field == "result_id":
                     rule["enum"] = reopen
                 if field == "heading":
-                    rule["enum"] = list(DECISION_HEADINGS)
+                    rule["enum"] = list(decision_headings)
                 if field in {"start_line", "end_line"}:
                     rule["minimum"] = 1
                 properties[field] = rule
@@ -192,7 +202,7 @@ def action_json_schema(
     return {
         "type": "json_schema",
         "json_schema": {
-            "name": "cedar_actor_action_v0",
+            "name": schema_name,
             "strict": True,
             "schema": {"oneOf": alternatives},
         },
