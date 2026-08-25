@@ -1,0 +1,23 @@
+{
+  "schema": "cedar-pressure-screen-aborted-disposition-v0",
+  "run_id": "2026-08-25-cedar-ingress-aligned-pressure-screen-v0",
+  "authorized_freeze_commit": "a48d67a8cd888fd54b9c7a59a7e8f1dcd094241f",
+  "status": "sealed_aborted_before_provider_call",
+  "provider_calls": 0,
+  "actor_calls": 0,
+  "gpu_server_started_by_run": false,
+  "failure_class": "pre_existing_external_llama_server",
+  "observed_process_id": 17032,
+  "observed_process_executable": "C:/Users/Scrappy/Apps/llama.cpp/b10434-win-cuda-13.3-x64/llama-server.exe",
+  "observed_process_model": "C:/Users/Scrappy/AI_Models C Drive/unsloth__Qwen3.8-27B-GGUF__27af057ecb38/Qwen3.8-27B-UD-Q3_K_XL.gguf",
+  "observed_process_port": 18080,
+  "project_process_ownership": false,
+  "external_process_terminated": false,
+  "same_run_retry_allowed": false,
+  "v1_requires_clean_freeze_and_separate_authorization": true,
+  "authorization_receipt_sha256": "88f15100be04944738c0f3f91431ece537e8cafc3425eb91102bdc92e4b247a2",
+  "freeze_binding_sha256": "ccd1ecd0eec9f33a4cdeedee8f01cb4ab83b6a2165d997acad1646c04bfd2481",
+  "run_failure_sha256": "7ae97b4a3c9bad254aef859f52cf4947c02f185f07c1485616cad7784ab595df",
+  "run_seal_sha256": "46f64a91712df61f9fb71d9d1f38257315bd259e28b128785ef346af43cb2a7a",
+  "claim_limit": "This is an apparatus failure before inference. It supplies no model behavior, pressure, activation, or interaction evidence and does not consume any of the authorized provider-call budget."
+}

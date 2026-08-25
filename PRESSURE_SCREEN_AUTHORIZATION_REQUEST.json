@@ -1,11 +1,11 @@
 {
   "schema_version": "cedar-ingress-aligned-live-authorization-request-v0",
   "authorized": false,
-  "scope": "cedar_ingress_aligned_pressure_screen_v0",
-  "run_id": "2026-08-25-cedar-ingress-aligned-pressure-screen-v0",
+  "scope": "cedar_ingress_aligned_pressure_screen_v1",
+  "run_id": "2026-08-25-cedar-ingress-aligned-pressure-screen-v1",
   "maximum_model_calls": 20,
   "attempts_per_call": 1,
   "retries": 0,
   "prerequisite": "passing offline Stage 0, exact task lock, ingress-aligned packet geometry, provider-free activation tests, and a clean frozen commit",
-  "expected_user_quote_template": "I authorize the frozen 20-call Cedar ingress-aligned pressure screen at commit {commit}, run ID 2026-08-25-cedar-ingress-aligned-pressure-screen-v0: at most 20 actor calls, one attempt per call, zero retries."
+  "expected_user_quote_template": "I authorize the frozen 20-call Cedar ingress-aligned pressure screen at commit {commit}, run ID 2026-08-25-cedar-ingress-aligned-pressure-screen-v1: at most 20 actor calls, one attempt per call, zero retries."
 }

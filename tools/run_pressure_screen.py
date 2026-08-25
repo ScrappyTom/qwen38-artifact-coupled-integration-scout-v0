@@ -21,8 +21,8 @@ from tools.live_common import LiveTokenizer, complete_custodied, git_commit, pro
 from tools.verify_runtime_assets import verify as verify_runtime_assets
 
 
-RUN_ID = "2026-08-25-cedar-ingress-aligned-pressure-screen-v0"
-SCOPE = "cedar_ingress_aligned_pressure_screen_v0"
+RUN_ID = "2026-08-25-cedar-ingress-aligned-pressure-screen-v1"
+SCOPE = "cedar_ingress_aligned_pressure_screen_v1"
 SEED = 860_251
 MAX_CALLS = 20
 MAX_SERIALIZED = 600_000

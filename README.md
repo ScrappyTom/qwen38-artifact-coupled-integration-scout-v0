@@ -5,6 +5,14 @@ The selected next gate is an ordinary-chronology pressure screen; a measured
 `D0_DETACHED`/`A1_COUPLED` continuation remains locked until a separately
 audited, separately committed boundary exists.
 
+The first authorized screen identity (`...pressure-screen-v0`) is preserved as
+a sealed zero-call apparatus abort. Before this repository started its model
+server, the frozen exclusivity guard found an unrelated live `llama-server`
+process. It was not terminated. The same run ID is closed; the mechanically
+unchanged successor is `2026-08-25-cedar-ingress-aligned-pressure-screen-v1`
+and requires a clean frozen commit, release of the external process, and new
+explicit authorization. See `CEDAR_PRESSURE_SCREEN_V0_ABORTED_DISPOSITION.md`.
+
 ## Why this task exists
 
 The prior Northstar task reached real pressure after two actor-selected batch
