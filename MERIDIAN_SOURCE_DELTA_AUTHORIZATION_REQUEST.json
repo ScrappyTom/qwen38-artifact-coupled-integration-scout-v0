@@ -1,0 +1,11 @@
+{
+  "schema_version": "meridian-source-delta-authorization-request-v0",
+  "authorized": false,
+  "scope": "meridian_source_delta_expression_qualification_v0",
+  "run_id": "2026-08-25-meridian-source-delta-expression-qualification-v0",
+  "maximum_model_calls": 1,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "prerequisite": "passing exact Meridian pressure-screen audit and a clean frozen qualification commit",
+  "expected_user_quote_template": "I authorize the frozen one-call Meridian source-local delta expression qualification at commit {commit}, run ID 2026-08-25-meridian-source-delta-expression-qualification-v0: at most 1 model call, one attempt per call, zero retries."
+}

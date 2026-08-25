@@ -24,10 +24,12 @@ also pass provider-free evidence-to-work-to-check-to-repair-to-recheck-to-
 closure loops. Every source slot is input-result-bound and both paths enforce
 the same 650-token slot ceiling.
 
-This establishes live pressure, not semantic utility. The next operation is
-offline freezing of one boundary-native L1 expression case over exact
-`RESULT-001` (AXIOM+BRAMBLE), the result first-fit actually externalizes. No
-maintenance expression call or measured W0/L1 continuation is authorized.
+This establishes live pressure, not semantic utility. One boundary-native L1
+expression case is now frozen over exact `RESULT-001` (AXIOM+BRAMBLE), the
+result first-fit actually externalizes. It is a one-call transport and material-
+safety gate with one attempt and zero retries. No maintenance expression call
+or measured W0/L1 continuation is authorized until that new freeze is committed
+and separately approved.
 
 ## Prior completed line
 
@@ -184,7 +186,15 @@ architecture promotion.
 - `MERIDIAN_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
   future commit-bound 24-call screen
 - `MERIDIAN_PRESSURE_BOUNDARY_HANDOFF.json` — invalid placeholder unless the
-  common screen qualifies
+  common screen qualifies; now binds the passed exact fork
+- `MERIDIAN_SOURCE_DELTA_QUALIFICATION_PLAN.md` — one boundary-native live
+  expression case and strict claim limits
+- `MERIDIAN_SOURCE_DELTA_QUALIFICATION_CONTRACT.json` — mechanical admission
+  plus prospectively frozen material-safety criteria
+- `MERIDIAN_SOURCE_DELTA_QUALIFICATION_PREFLIGHT.json` — exact 4,234-token
+  prompt geometry and binding receipt
+- `MERIDIAN_SOURCE_DELTA_AUTHORIZATION_REQUEST.json` — inert request for one
+  future commit-bound model call
 - `task_meridian/` — fresh exact task, opaque source world, evaluator, candidate,
   catalogs, and custody lock
 - `STAGE0_PLAN.md` — prospective scientific and execution contract
