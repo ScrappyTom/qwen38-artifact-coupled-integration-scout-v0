@@ -1,0 +1,11 @@
+{
+  "schema_version": "bluehaven-batched-maintenance-authorization-request-v0",
+  "authorized": false,
+  "scope": "bluehaven_batched_maintenance_expression_qualification_v0",
+  "run_id": "2026-08-25-bluehaven-batched-maintenance-expression-qualification-v0",
+  "maximum_model_calls": 2,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "prerequisite": "passing exact Bluehaven pressure-screen audit and a clean frozen qualification commit",
+  "expected_user_quote_template": "I authorize the frozen two-call Bluehaven batched-maintenance expression qualification at commit {commit}, run ID 2026-08-25-bluehaven-batched-maintenance-expression-qualification-v0: at most 2 model calls, one attempt per call, zero retries."
+}

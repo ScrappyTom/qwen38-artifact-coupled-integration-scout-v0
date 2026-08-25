@@ -1,0 +1,30 @@
+{
+  "schema": "bluehaven-batched-maintenance-expression-preflight-v0",
+  "passed": true,
+  "gpu_authorized": false,
+  "measured_continuation_authorized": false,
+  "pressure_screen_result_commit": "e5f6dbcc328412702c0bca7202ae017a5332511a",
+  "pressure_handoff_status": "passed_authentic_pressure_boundary",
+  "pending_result_id": "RESULT-006",
+  "case_geometry": [
+    {
+      "case_id": "Q1_INITIAL_THREE_RESULT_BATCH",
+      "input_result_ids": ["RESULT-001", "RESULT-002", "RESULT-003"],
+      "allowed_source_ids": ["S01", "S02", "S03", "S04", "S05", "S06"],
+      "prompt_tokens": 11238,
+      "provider_max_completion_tokens": 2700,
+      "headroom_after_max_completion": 11150,
+      "fits": true
+    },
+    {
+      "case_id": "Q2_REPLACEMENT_THREE_RESULT_BATCH",
+      "input_result_ids": ["RESULT-004", "RESULT-005", "RESULT-006"],
+      "allowed_source_ids": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11", "S12"],
+      "prompt_tokens": 11436,
+      "provider_max_completion_tokens": 2700,
+      "headroom_after_max_completion": 10952,
+      "fits": true
+    }
+  ],
+  "claim_limit": "The cases use exact results from the sealed common pressure history to qualify the frozen B1 maintenance carrier. They do not assert that either three-result set has already become one measured maintenance queue, and they authorize no B1/W1 continuation."
+}

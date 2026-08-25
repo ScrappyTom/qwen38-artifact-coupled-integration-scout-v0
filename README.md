@@ -14,6 +14,12 @@ cumulative work (`W1_DIRECT_WORK`). The screen contains neither treatment.
 Its handoff explicitly authorizes no maintenance or measured continuation.
 See `BLUEHAVEN_PRESSURE_SCREEN_RESULT.md`.
 
+The next eligible operation is the separately authorized two-call Bluehaven
+batched-maintenance expression qualification. It uses two exact three-result
+cases from the sealed boundary solely to test B1's bounded replacement
+transport. The measured B1/W1 continuation remains unimplemented and
+unauthorized at this gate.
+
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
 server, the frozen exclusivity guard found an unrelated live `llama-server`
@@ -173,6 +179,14 @@ architecture promotion.
   activation, relief, and release audit
 - `BLUEHAVEN_PRESSURE_BOUNDARY_HANDOFF.json` — exact common pre-treatment fork;
   continuation remains unauthorized
+- `BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_PLAN.md` — two-case transport
+  gate and claim limits
+- `BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_CONTRACT.json` — exact cases,
+  budgets, and acceptance rules
+- `BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_PREFLIGHT.json` — exact prompt
+  geometry against the sealed boundary
+- `BLUEHAVEN_BATCHED_MAINTENANCE_AUTHORIZATION_REQUEST.json` — inert request
+  for a separate two-call authorization
 
 Northstar and earlier measured-result files remain append-only historical
 evidence. They are not part of the Cedar actor-visible source catalog.

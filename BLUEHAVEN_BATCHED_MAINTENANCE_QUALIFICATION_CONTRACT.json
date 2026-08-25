@@ -1,0 +1,24 @@
+{
+  "schema_version": "bluehaven-batched-maintenance-expression-qualification-v0",
+  "status": "frozen_pending_separate_authorization",
+  "run_id": "2026-08-25-bluehaven-batched-maintenance-expression-qualification-v0",
+  "scope": "bluehaven_batched_maintenance_expression_qualification_v0",
+  "task_id": "bluehaven-water-restoration-package-v0",
+  "exact_pressure_handoff": "BLUEHAVEN_PRESSURE_BOUNDARY_HANDOFF.json",
+  "case_order": [
+    "Q1_INITIAL_THREE_RESULT_BATCH",
+    "Q2_REPLACEMENT_THREE_RESULT_BATCH"
+  ],
+  "case_inputs": {
+    "Q1_INITIAL_THREE_RESULT_BATCH": ["RESULT-001", "RESULT-002", "RESULT-003"],
+    "Q2_REPLACEMENT_THREE_RESULT_BATCH": ["RESULT-004", "RESULT-005", "RESULT-006"]
+  },
+  "maximum_model_calls": 2,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "provider_max_completion_tokens": 2700,
+  "admission_body_tokens": 2400,
+  "success": "both complete replacement ledgers finish normally, begin with the exact required heading, remain within 2400 tokens, cite no unobserved source identity, and contain no closure authorization",
+  "scientific_role": "transport and bounded-expression qualification only; not a B1 utility test, not a semantic-fidelity adjudication, and not a measured continuation",
+  "measured_continuation_authorized": false
+}
