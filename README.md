@@ -1,24 +1,17 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the authorized Bluehaven ordinary screen is complete, sealed, and
-independently audited. Six valid two-source reads delivered S01–S10 and then
-acquired pending S11–S12. That exact pending result makes the next prompt
-23,820 tokens, 2,828 above the 20,992-token allowance. Replacing only
-`RESULT-001` with its exact reopenable receipt restores feasibility at 20,917
-tokens. The candidate remained initial; no check or submission occurred.
+Status: the authorized Bluehaven pressure screen and two-call B1 expression
+gate are complete, sealed, and audited. The screen qualified a common mature
+pressure fork. The expression gate did not qualify B1: its cold-start output
+cited and asserted content under six unseen sources, while the later
+replacement case with S01–S12 available passed. See
+`BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_RESULT.md`.
 
-Bluehaven therefore supplies the common authentic pressure fork needed to
-compare two complete bounded-work policies: mechanically batched
-artifact-coupled maintenance (`B1_BATCHED_COUPLED`) and direct actor-authored
-cumulative work (`W1_DIRECT_WORK`). The screen contains neither treatment.
-Its handoff explicitly authorizes no maintenance or measured continuation.
-See `BLUEHAVEN_PRESSURE_SCREEN_RESULT.md`.
-
-The next eligible operation is the separately authorized two-call Bluehaven
-batched-maintenance expression qualification. It uses two exact three-result
-cases from the sealed boundary solely to test B1's bounded replacement
-transport. The measured B1/W1 continuation remains unimplemented and
-unauthorized at this gate.
+This is a partial-evidence semantic-completion failure, not a size or runtime
+failure. The frozen B1/W1 measured comparison is therefore ineligible. No
+same-task prompt repair, allowlist relaxation, retry, or measured continuation
+is authorized. W1 remains unmeasured; selecting any new comparison requires
+program-level reconciliation and a prospectively fresh policy/task boundary.
 
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
@@ -187,6 +180,10 @@ architecture promotion.
   geometry against the sealed boundary
 - `BLUEHAVEN_BATCHED_MAINTENANCE_AUTHORIZATION_REQUEST.json` — inert request
   for a separate two-call authorization
+- `BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_RESULT.md` — mixed literal
+  result, partial-evidence failure analysis, and closure of B1
+- `BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_AUDIT.json` — exact run,
+  validation, usage, seal, and release audit
 
 Northstar and earlier measured-result files remain append-only historical
 evidence. They are not part of the Cedar actor-visible source catalog.

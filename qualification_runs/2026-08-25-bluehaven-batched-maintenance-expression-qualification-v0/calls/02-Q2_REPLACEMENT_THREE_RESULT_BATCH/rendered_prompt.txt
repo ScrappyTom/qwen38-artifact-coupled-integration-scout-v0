@@ -1,0 +1,569 @@
+<|im_start|>system
+# BATCHED_EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate the exact batch with the prior task work, preserving units,
+probabilities, revisions, qualifications, contradictions, cross-source
+relationships, R01-R12 bindings, and unresolved blockers.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 2400-token limit. The only source IDs you
+may cite are: S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Bluehaven drinking-water restoration package
+
+A river contamination event, power instability, and distribution constraints
+threaten Bluehaven's drinking-water system. Produce two exact deliverables:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The fixed second filename is imposed by the runtime; its content is an
+operational drinking-water restoration decision. Reconcile the complete system
+over seventy-two hours rather than summarizing sources independently.
+
+## Evidence-ledger contract
+
+Begin with `# Evidence Integration Ledger` and maintain entries `R01` through
+`R12`. Each entry must state a disposition, cite only exact observed sources as
+`[SNN]`, preserve units, probabilities, revisions, conflicts and
+qualifications, bind current or missing evidence, and name blockers. The ledger
+is model-authored, lossy task work and never readiness authority.
+
+## Decision-document contract
+
+Begin with `# Bluehaven Drinking-Water Restoration Decision` and use exactly
+these level-two headings in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Contamination triggers and service-zone sequencing`
+3. `## Demand, treatment, and distribution capacity`
+4. `## Critical customers and alternate-water continuity`
+5. `## Power, staffing, logistics, and mutual aid`
+6. `## Public warning, sampling, and accountability`
+7. `## Seventy-two-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+Write 1,400–2,000 words excluding exact citations. Cite at least twelve unique
+sources and include S01–S11 and S13–S16.
+
+Resolve these coupled requirements:
+
+- `R01`: recommendation, public-health order, operations, checking, handoff,
+  cost escalation, and closure authority;
+- `R02`: exact residual and benzene triggers, conservative plume branch,
+  hold/lift observations, expiry, and common forecast/sample/action binding;
+- `R03`: population and time-bound potable demand, overlapping vulnerability,
+  registry coverage, uncovered-population uncertainty, loss, and critical demand;
+- `R04`: shared East-trunk treatment limit, observed output, hydraulic delivery,
+  pressure, valve/pump effects, and current capacity proof;
+- `R05`: hospitals, dialysis, care facilities, accessible/private matching,
+  potable specifications, handoffs, and blocking thresholds;
+- `R06`: certified tanker and bottle capacity, staffed cycles, activation,
+  disinfection, shared loading assets, road/vendor constraints, and relief;
+- `R07`: generator endurance, observed fuel delay, local staging or alternate
+  supply, laboratory power, staffing qualifications, duty, and safety;
+- `R08`: multilingual redundant warning, outage-aware reach, door-knock time,
+  exact revision, receipt/understanding evidence, and correction;
+- `R09`: sample locations, custody, quality control, six/nine-hour assays, two
+  clean rounds, candidate currency, and release authority;
+- `R10`: private accountability, public aggregation, verified self-supply,
+  restricted clinical data, reconciliation, seven/thirty-day retention, and
+  deletion proof;
+- `R11`: executable seventy-two-hour sequence with owners, resources, effects,
+  current checks, repair, recheck, cost authority, and contingencies; and
+- `R12`: every exercise and independent-review blocker, source uncertainty,
+  candidate-bound readiness, explicit falsifiers, and correct closure.
+
+Preserve source distinctions exactly. In particular, do not convert a
+chemical threshold into a duration or flow, a forecast probability into a
+physical measurement or demand estimate, registry coverage into demand
+reduction, a shared bottleneck into summed capacity, a common revision binding
+into a count of permitted changes, or a contractual target into observed
+performance. Recover the exact values and qualifications from the source
+record rather than treating this task statement as evidence.
+
+Also preserve that:
+
+- owner attestation, component dashboards, stale checks, ledgers, and
+  submission are not readiness proof.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+R01: distinguish public-health order, operational restoration, checking, handoff, expenditure, and closure authority [S01].
+R02: preserve residual and benzene units, the conservative plume branch, and two-round release requirements [S02].
+R03: keep potable demand, overlapping vulnerability, registry coverage, loss, and critical demand distinct [S03].
+R04: retain the shared treatment constraint and bind it to hydraulic delivery rather than summing dependent capacities [S04][S05].
+R07: bind generator endurance and fuel resupply to treatment, laboratory, and staffing continuity [S06].
+R12: readiness remains unresolved; exact checking and independent candidate-bound adjudication are still required [S01][S02].
+
+
+# Mechanically batched exact externalized observations
+
+## Externalized exact result RESULT-004
+
+{"object_id":"batch:S07:1-70+S08:1-70","object_version":"0b3245056d9a5f2521712d3819c41685446244d8a4c592cb9d1c1fdaf352f790","result_id":"RESULT-004","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S07","start_line":1},{"end_line":70,"source_id":"S08","start_line":1}],"total_source_bytes":8415}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S07","source_path":"sources/S07_CRITICAL_CUSTOMERS.md","source_sha256":"fac720c08b109fa8d97fc5f442f68d314da3c8b2bcc5fbc2ee3c544328f0113e","source_size_bytes":3991,"start_line":1}
+--- exact source range ---
+# Hospitals, dialysis, care facilities, and accessibility
+
+## Frozen findings
+
+Bluehaven Hospital requires 0.9 megaliters per day and at least 28 psi; North Dialysis needs 0.18 and a verified low-conductivity supply. Three care facilities require 0.42 combined.
+There are 64 registered home dialysis or immune-compromised households, with eleven duplicate entries across programs. Assignments must be person-level and private.
+The hospital has six hours of potable storage. A generic tanker is not a clinical supply until hose, disinfection, testing, pressure, and custody pass.
+
+## Governing relationships
+
+S05 pressure, S08 tanker specification, S09 sample release, and S13 privacy jointly constrain critical-customer continuity.
+Public reporting may aggregate service status but may not reveal individual medical need or delivery address.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| CARE-000 | Bluehaven-Hospital | r2 | 2.8 | ML/day | hold |
+| CARE-001 | North-Dialysis | r2 | 3.5 | ML/day | current |
+| CARE-002 | Harbor-Care | r2 | 4.2 | ML/day | current |
+| CARE-003 | home-oxygen | r2 | 4.9 | ML/day | current |
+| CARE-004 | Bluehaven-Hospital | r2 | 5.6 | ML/day | current |
+| CARE-005 | North-Dialysis | r2 | 3.2 | ML/day | current |
+| CARE-006 | Harbor-Care | r2 | 3.9 | ML/day | current |
+| CARE-007 | home-oxygen | r2 | 4.6 | ML/day | current |
+| CARE-008 | Bluehaven-Hospital | r2 | 5.3 | ML/day | current |
+| CARE-009 | North-Dialysis | r2 | 2.9 | ML/day | current |
+| CARE-010 | Harbor-Care | r2 | 3.6 | ML/day | current |
+| CARE-011 | home-oxygen | r2 | 4.3 | ML/day | current |
+| CARE-012 | Bluehaven-Hospital | r2 | 5.0 | ML/day | current |
+| CARE-013 | North-Dialysis | r2 | 5.7 | ML/day | hold |
+| CARE-014 | Harbor-Care | r2 | 3.3 | ML/day | current |
+| CARE-015 | home-oxygen | r2 | 4.0 | ML/day | current |
+| CARE-016 | Bluehaven-Hospital | r3 | 4.7 | ML/day | current |
+| CARE-017 | North-Dialysis | r3 | 5.4 | ML/day | current |
+| CARE-018 | Harbor-Care | r3 | 3.0 | ML/day | current |
+| CARE-019 | home-oxygen | r3 | 3.7 | ML/day | current |
+| CARE-020 | Bluehaven-Hospital | r3 | 4.4 | ML/day | current |
+| CARE-021 | North-Dialysis | r3 | 5.1 | ML/day | current |
+| CARE-022 | Harbor-Care | r3 | 5.8 | ML/day | current |
+| CARE-023 | home-oxygen | r3 | 3.4 | ML/day | current |
+| CARE-024 | Bluehaven-Hospital | r3 | 4.1 | ML/day | current |
+| CARE-025 | North-Dialysis | r3 | 4.8 | ML/day | current |
+| CARE-026 | Harbor-Care | r3 | 5.5 | ML/day | hold |
+| CARE-027 | home-oxygen | r3 | 3.1 | ML/day | current |
+| CARE-028 | Bluehaven-Hospital | r3 | 3.8 | ML/day | current |
+| CARE-029 | North-Dialysis | r3 | 4.5 | ML/day | current |
+| CARE-030 | Harbor-Care | r3 | 5.2 | ML/day | current |
+| CARE-031 | home-oxygen | r3 | 2.8 | ML/day | current |
+| CARE-032 | Bluehaven-Hospital | r4 | 3.5 | ML/day | current |
+| CARE-033 | North-Dialysis | r4 | 4.2 | ML/day | current |
+| CARE-034 | Harbor-Care | r4 | 4.9 | ML/day | current |
+| CARE-035 | home-oxygen | r4 | 5.6 | ML/day | current |
+| CARE-036 | Bluehaven-Hospital | r4 | 3.2 | ML/day | current |
+| CARE-037 | North-Dialysis | r4 | 3.9 | ML/day | current |
+| CARE-038 | Harbor-Care | r4 | 4.6 | ML/day | current |
+| CARE-039 | home-oxygen | r4 | 5.3 | ML/day | hold |
+| CARE-040 | Bluehaven-Hospital | r4 | 2.9 | ML/day | current |
+| CARE-041 | North-Dialysis | r4 | 3.6 | ML/day | current |
+| CARE-042 | Harbor-Care | r4 | 4.3 | ML/day | current |
+| CARE-043 | home-oxygen | r4 | 5.0 | ML/day | current |
+| CARE-044 | Bluehaven-Hospital | r4 | 5.7 | ML/day | current |
+| CARE-045 | North-Dialysis | r4 | 3.3 | ML/day | current |
+| CARE-046 | Harbor-Care | r4 | 4.0 | ML/day | current |
+| CARE-047 | home-oxygen | r4 | 4.7 | ML/day | current |
+
+## Decision constraints
+
+Bind every critical cohort to source, transport, testing, delivery, storage, and handoff.
+Treat any unmatched clinical need or sub-28-psi hospital plan as blocking.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S08","source_path":"sources/S08_ALTERNATE_WATER.md","source_sha256":"a8442ee25dc6ba1639b7a1c7bd9e8be59978ca1d45e25b10f66aefbd6953c232","source_size_bytes":3961,"start_line":1}
+--- exact source range ---
+# Tanker, bottled-water, loading, and distribution capacity
+
+## Frozen findings
+
+The county has eight certified potable tankers totaling 192,000 liters per cycle; only five qualified drivers can report within two hours. A full clean-load-deliver-disinfect cycle averages 4.5 hours.
+The bottling contract supplies 110,000 liters per day after a ten-hour activation delay. Two listed tanker vendors carry nonpotable construction tanks and cannot serve drinking water.
+Loading Bay 2 shares power and pumps with Plant A. Counting plant output and tanker loading independently double-counts the same constrained asset.
+
+## Governing relationships
+
+Household demand in S03, clinical priority in S07, plant/power state in S04/S06, and road access in S12 determine usable alternate-water throughput.
+Driver duty and disinfection time require relief capacity; nominal tank volume is not sustained daily delivery.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| ALT-000 | tanker | r2 | 5.6 | ML/day | hold |
+| ALT-001 | bottle-line | r2 | 6.3 | ML/day | current |
+| ALT-002 | loading-bay | r2 | 7.0 | ML/day | current |
+| ALT-003 | distribution-point | r2 | 7.7 | ML/day | current |
+| ALT-004 | tanker | r2 | 8.4 | ML/day | current |
+| ALT-005 | bottle-line | r2 | 6.0 | ML/day | current |
+| ALT-006 | loading-bay | r2 | 6.7 | ML/day | current |
+| ALT-007 | distribution-point | r2 | 7.4 | ML/day | current |
+| ALT-008 | tanker | r2 | 8.1 | ML/day | current |
+| ALT-009 | bottle-line | r2 | 5.7 | ML/day | current |
+| ALT-010 | loading-bay | r2 | 6.4 | ML/day | current |
+| ALT-011 | distribution-point | r2 | 7.1 | ML/day | current |
+| ALT-012 | tanker | r2 | 7.8 | ML/day | current |
+| ALT-013 | bottle-line | r2 | 8.5 | ML/day | hold |
+| ALT-014 | loading-bay | r2 | 6.1 | ML/day | current |
+| ALT-015 | distribution-point | r2 | 6.8 | ML/day | current |
+| ALT-016 | tanker | r3 | 7.5 | ML/day | current |
+| ALT-017 | bottle-line | r3 | 8.2 | ML/day | current |
+| ALT-018 | loading-bay | r3 | 5.8 | ML/day | current |
+| ALT-019 | distribution-point | r3 | 6.5 | ML/day | current |
+| ALT-020 | tanker | r3 | 7.2 | ML/day | current |
+| ALT-021 | bottle-line | r3 | 7.9 | ML/day | current |
+| ALT-022 | loading-bay | r3 | 8.6 | ML/day | current |
+| ALT-023 | distribution-point | r3 | 6.2 | ML/day | current |
+| ALT-024 | tanker | r3 | 6.9 | ML/day | current |
+| ALT-025 | bottle-line | r3 | 7.6 | ML/day | current |
+| ALT-026 | loading-bay | r3 | 8.3 | ML/day | hold |
+| ALT-027 | distribution-point | r3 | 5.9 | ML/day | current |
+| ALT-028 | tanker | r3 | 6.6 | ML/day | current |
+| ALT-029 | bottle-line | r3 | 7.3 | ML/day | current |
+| ALT-030 | loading-bay | r3 | 8.0 | ML/day | current |
+| ALT-031 | distribution-point | r3 | 5.6 | ML/day | current |
+| ALT-032 | tanker | r4 | 6.3 | ML/day | current |
+| ALT-033 | bottle-line | r4 | 7.0 | ML/day | current |
+| ALT-034 | loading-bay | r4 | 7.7 | ML/day | current |
+| ALT-035 | distribution-point | r4 | 8.4 | ML/day | current |
+| ALT-036 | tanker | r4 | 6.0 | ML/day | current |
+| ALT-037 | bottle-line | r4 | 6.7 | ML/day | current |
+| ALT-038 | loading-bay | r4 | 7.4 | ML/day | current |
+| ALT-039 | distribution-point | r4 | 8.1 | ML/day | hold |
+| ALT-040 | tanker | r4 | 5.7 | ML/day | current |
+| ALT-041 | bottle-line | r4 | 6.4 | ML/day | current |
+| ALT-042 | loading-bay | r4 | 7.1 | ML/day | current |
+| ALT-043 | distribution-point | r4 | 7.8 | ML/day | current |
+| ALT-044 | tanker | r4 | 8.5 | ML/day | current |
+| ALT-045 | bottle-line | r4 | 6.1 | ML/day | current |
+| ALT-046 | loading-bay | r4 | 6.8 | ML/day | current |
+| ALT-047 | distribution-point | r4 | 7.5 | ML/day | current |
+
+## Decision constraints
+
+Show certified assets, staffed cycles, activation delay, shared loading capacity, priority allocation, and relief.
+Do not count nonpotable tanks, unavailable drivers, or gross tank volume as delivered potable supply.
+
+## Externalized exact result RESULT-005
+
+{"object_id":"batch:S09:1-70+S10:1-70","object_version":"f705073399637ef2cfd05383c57952f6c24db6ea812319eadcda8a556d6cd041","result_id":"RESULT-005","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S09","start_line":1},{"end_line":70,"source_id":"S10","start_line":1}],"total_source_bytes":8091}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S09","source_path":"sources/S09_LAB.md","source_sha256":"d21baf669c8b0494a9e0b649bd1c14f0c473c8079d895ad8c2fc330f0684b7ab","source_size_bytes":3561,"start_line":1}
+--- exact source range ---
+# Sampling plan, laboratory turnaround, and release authority
+
+## Frozen findings
+
+Routine microbiology turnaround is six hours after receipt; benzene confirmation is nine hours. Courier time is additional and currently averages seventy minutes.
+A release round requires field blank, duplicate, custody seal, instrument control, and exact sampling-plan revision WQ-R7. Failed quality control voids the round.
+Two compliant rounds are required to lift the order; samples collected before a valve, pump, carbon-unit, or source change do not verify the changed candidate.
+
+## Governing relationships
+
+The check must bind exact sample locations to the hydraulic state in S05 and current forecast/treatment revision in S02/S15.
+Laboratory power and staffing from S06/S11 determine whether nominal turnaround is achievable.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| LAB-000 | intake | r2 | 6.0 | hours | hold |
+| LAB-001 | clearwell | r2 | 6.7 | hours | current |
+| LAB-002 | Zone-A | r2 | 7.4 | hours | current |
+| LAB-003 | Zone-B | r2 | 8.1 | hours | current |
+| LAB-004 | hospital | r2 | 8.8 | hours | current |
+| LAB-005 | intake | r2 | 6.4 | hours | current |
+| LAB-006 | clearwell | r2 | 7.1 | hours | current |
+| LAB-007 | Zone-A | r2 | 7.8 | hours | current |
+| LAB-008 | Zone-B | r2 | 8.5 | hours | current |
+| LAB-009 | hospital | r2 | 6.1 | hours | current |
+| LAB-010 | intake | r2 | 6.8 | hours | current |
+| LAB-011 | clearwell | r2 | 7.5 | hours | current |
+| LAB-012 | Zone-A | r2 | 8.2 | hours | current |
+| LAB-013 | Zone-B | r2 | 8.9 | hours | hold |
+| LAB-014 | hospital | r2 | 6.5 | hours | current |
+| LAB-015 | intake | r2 | 7.2 | hours | current |
+| LAB-016 | clearwell | r3 | 7.9 | hours | current |
+| LAB-017 | Zone-A | r3 | 8.6 | hours | current |
+| LAB-018 | Zone-B | r3 | 6.2 | hours | current |
+| LAB-019 | hospital | r3 | 6.9 | hours | current |
+| LAB-020 | intake | r3 | 7.6 | hours | current |
+| LAB-021 | clearwell | r3 | 8.3 | hours | current |
+| LAB-022 | Zone-A | r3 | 9.0 | hours | current |
+| LAB-023 | Zone-B | r3 | 6.6 | hours | current |
+| LAB-024 | hospital | r3 | 7.3 | hours | current |
+| LAB-025 | intake | r3 | 8.0 | hours | current |
+| LAB-026 | clearwell | r3 | 8.7 | hours | hold |
+| LAB-027 | Zone-A | r3 | 6.3 | hours | current |
+| LAB-028 | Zone-B | r3 | 7.0 | hours | current |
+| LAB-029 | hospital | r3 | 7.7 | hours | current |
+| LAB-030 | intake | r3 | 8.4 | hours | current |
+| LAB-031 | clearwell | r3 | 6.0 | hours | current |
+| LAB-032 | Zone-A | r4 | 6.7 | hours | current |
+| LAB-033 | Zone-B | r4 | 7.4 | hours | current |
+| LAB-034 | hospital | r4 | 8.1 | hours | current |
+| LAB-035 | intake | r4 | 8.8 | hours | current |
+| LAB-036 | clearwell | r4 | 6.4 | hours | current |
+| LAB-037 | Zone-A | r4 | 7.1 | hours | current |
+| LAB-038 | Zone-B | r4 | 7.8 | hours | current |
+| LAB-039 | hospital | r4 | 8.5 | hours | hold |
+| LAB-040 | intake | r4 | 6.1 | hours | current |
+| LAB-041 | clearwell | r4 | 6.8 | hours | current |
+| LAB-042 | Zone-A | r4 | 7.5 | hours | current |
+| LAB-043 | Zone-B | r4 | 8.2 | hours | current |
+| LAB-044 | hospital | r4 | 8.9 | hours | current |
+| LAB-045 | intake | r4 | 6.5 | hours | current |
+| LAB-046 | clearwell | r4 | 7.2 | hours | current |
+| LAB-047 | Zone-A | r4 | 7.9 | hours | current |
+
+## Decision constraints
+
+Track collection, custody, receipt, assay, quality control, candidate version, and release decision.
+Do not reuse a clean result across a material candidate mutation.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S10","source_path":"sources/S10_COMMUNICATIONS.md","source_sha256":"d6e04df98801f989499f0b7fe809221bb5e5e665006a5bd0257ae623db76f8f1","source_size_bytes":4083,"start_line":1}
+--- exact source range ---
+# Public warning, language access, and receipt evidence
+
+## Frozen findings
+
+The last outage disabled 31 percent of cellular sites for seven hours. SMS reached 82 percent of enrolled numbers; a web posting alone reached fewer than half of affected households.
+Eight percent of households primarily use Vietnamese, five percent Spanish, and three percent require another language or ASL relay. Current templates omit Vietnamese and ASL.
+Door-knock teams need two hours for the river mobile-home areas. Message transmission is not proof of receipt or understanding.
+
+## Governing relationships
+
+The notice must use the same service-zone and WQ-R7 revision as field isolation and sampling. Contradictory revisions can cause unsafe consumption or unnecessary tanker demand.
+Registry gaps in S03 require redundant channels and measured receipt evidence rather than assumed enrollment.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| COMMS-000 | SMS | r2 | 82.0 | percent-reach | hold |
+| COMMS-001 | voice | r2 | 82.7 | percent-reach | current |
+| COMMS-002 | door-knock | r2 | 83.4 | percent-reach | current |
+| COMMS-003 | web | r2 | 84.1 | percent-reach | current |
+| COMMS-004 | radio | r2 | 84.8 | percent-reach | current |
+| COMMS-005 | SMS | r2 | 82.4 | percent-reach | current |
+| COMMS-006 | voice | r2 | 83.1 | percent-reach | current |
+| COMMS-007 | door-knock | r2 | 83.8 | percent-reach | current |
+| COMMS-008 | web | r2 | 84.5 | percent-reach | current |
+| COMMS-009 | radio | r2 | 82.1 | percent-reach | current |
+| COMMS-010 | SMS | r2 | 82.8 | percent-reach | current |
+| COMMS-011 | voice | r2 | 83.5 | percent-reach | current |
+| COMMS-012 | door-knock | r2 | 84.2 | percent-reach | current |
+| COMMS-013 | web | r2 | 84.9 | percent-reach | hold |
+| COMMS-014 | radio | r2 | 82.5 | percent-reach | current |
+| COMMS-015 | SMS | r2 | 83.2 | percent-reach | current |
+| COMMS-016 | voice | r3 | 83.9 | percent-reach | current |
+| COMMS-017 | door-knock | r3 | 84.6 | percent-reach | current |
+| COMMS-018 | web | r3 | 82.2 | percent-reach | current |
+| COMMS-019 | radio | r3 | 82.9 | percent-reach | current |
+| COMMS-020 | SMS | r3 | 83.6 | percent-reach | current |
+| COMMS-021 | voice | r3 | 84.3 | percent-reach | current |
+| COMMS-022 | door-knock | r3 | 85.0 | percent-reach | current |
+| COMMS-023 | web | r3 | 82.6 | percent-reach | current |
+| COMMS-024 | radio | r3 | 83.3 | percent-reach | current |
+| COMMS-025 | SMS | r3 | 84.0 | percent-reach | current |
+| COMMS-026 | voice | r3 | 84.7 | percent-reach | hold |
+| COMMS-027 | door-knock | r3 | 82.3 | percent-reach | current |
+| COMMS-028 | web | r3 | 83.0 | percent-reach | current |
+| COMMS-029 | radio | r3 | 83.7 | percent-reach | current |
+| COMMS-030 | SMS | r3 | 84.4 | percent-reach | current |
+| COMMS-031 | voice | r3 | 82.0 | percent-reach | current |
+| COMMS-032 | door-knock | r4 | 82.7 | percent-reach | current |
+| COMMS-033 | web | r4 | 83.4 | percent-reach | current |
+| COMMS-034 | radio | r4 | 84.1 | percent-reach | current |
+| COMMS-035 | SMS | r4 | 84.8 | percent-reach | current |
+| COMMS-036 | voice | r4 | 82.4 | percent-reach | current |
+| COMMS-037 | door-knock | r4 | 83.1 | percent-reach | current |
+| COMMS-038 | web | r4 | 83.8 | percent-reach | current |
+| COMMS-039 | radio | r4 | 84.5 | percent-reach | hold |
+| COMMS-040 | SMS | r4 | 82.1 | percent-reach | current |
+| COMMS-041 | voice | r4 | 82.8 | percent-reach | current |
+| COMMS-042 | door-knock | r4 | 83.5 | percent-reach | current |
+| COMMS-043 | web | r4 | 84.2 | percent-reach | current |
+| COMMS-044 | radio | r4 | 84.9 | percent-reach | current |
+| COMMS-045 | SMS | r4 | 82.5 | percent-reach | current |
+| COMMS-046 | voice | r4 | 83.2 | percent-reach | current |
+| COMMS-047 | door-knock | r4 | 83.9 | percent-reach | current |
+
+## Decision constraints
+
+Specify redundant channels, languages, timing, effective revision, and confirmation evidence.
+Do not treat sending, posting, or county-only radio success as population understanding.
+
+## Externalized exact result RESULT-006
+
+{"object_id":"batch:S11:1-70+S12:1-70","object_version":"cb3fbb4af2d24c884d6e1c5aeeb30c864ba051fc16d9f1b7588e03b5484ed3c5","result_id":"RESULT-006","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S11","start_line":1},{"end_line":70,"source_id":"S12","start_line":1}],"total_source_bytes":8975}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S11","source_path":"sources/S11_WORKFORCE.md","source_sha256":"f8ae257606ffdf37d6a4c433fd4ef1884d064d4f3e4b94f39e87a014ccefcf21","source_size_bytes":4280,"start_line":1}
+--- exact source range ---
+# Operator, laboratory, driver, and safety staffing
+
+## Frozen findings
+
+Eighteen utility operators are on roster, but eleven hold the treatment endorsement required for the affected plants. Four of seven laboratory staff can run the benzene method.
+Workers have a twelve-hour duty ceiling and need eight hours rest. Using all endorsed operators in the first shift leaves no legal relief for the second operational period.
+Confined-space valve entry needs a three-person team and air monitoring; emergency authority does not waive the safety rule.
+
+## Governing relationships
+
+S04 treatment modes, S08 tanker cycles, S09 laboratory release, and S12 mutual aid all depend on qualified people by shift rather than headcount.
+A schedule mutation changes which capacity claims remain valid and requires a current integrated check.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| STAFF-000 | operator | r2 | 11.0 | qualified-staff | hold |
+| STAFF-001 | lab-tech | r2 | 11.7 | qualified-staff | current |
+| STAFF-002 | driver | r2 | 12.4 | qualified-staff | current |
+| STAFF-003 | electrician | r2 | 13.1 | qualified-staff | current |
+| STAFF-004 | communicator | r2 | 13.8 | qualified-staff | current |
+| STAFF-005 | operator | r2 | 11.4 | qualified-staff | current |
+| STAFF-006 | lab-tech | r2 | 12.1 | qualified-staff | current |
+| STAFF-007 | driver | r2 | 12.8 | qualified-staff | current |
+| STAFF-008 | electrician | r2 | 13.5 | qualified-staff | current |
+| STAFF-009 | communicator | r2 | 11.1 | qualified-staff | current |
+| STAFF-010 | operator | r2 | 11.8 | qualified-staff | current |
+| STAFF-011 | lab-tech | r2 | 12.5 | qualified-staff | current |
+| STAFF-012 | driver | r2 | 13.2 | qualified-staff | current |
+| STAFF-013 | electrician | r2 | 13.9 | qualified-staff | hold |
+| STAFF-014 | communicator | r2 | 11.5 | qualified-staff | current |
+| STAFF-015 | operator | r2 | 12.2 | qualified-staff | current |
+| STAFF-016 | lab-tech | r3 | 12.9 | qualified-staff | current |
+| STAFF-017 | driver | r3 | 13.6 | qualified-staff | current |
+| STAFF-018 | electrician | r3 | 11.2 | qualified-staff | current |
+| STAFF-019 | communicator | r3 | 11.9 | qualified-staff | current |
+| STAFF-020 | operator | r3 | 12.6 | qualified-staff | current |
+| STAFF-021 | lab-tech | r3 | 13.3 | qualified-staff | current |
+| STAFF-022 | driver | r3 | 14.0 | qualified-staff | current |
+| STAFF-023 | electrician | r3 | 11.6 | qualified-staff | current |
+| STAFF-024 | communicator | r3 | 12.3 | qualified-staff | current |
+| STAFF-025 | operator | r3 | 13.0 | qualified-staff | current |
+| STAFF-026 | lab-tech | r3 | 13.7 | qualified-staff | hold |
+| STAFF-027 | driver | r3 | 11.3 | qualified-staff | current |
+| STAFF-028 | electrician | r3 | 12.0 | qualified-staff | current |
+| STAFF-029 | communicator | r3 | 12.7 | qualified-staff | current |
+| STAFF-030 | operator | r3 | 13.4 | qualified-staff | current |
+| STAFF-031 | lab-tech | r3 | 11.0 | qualified-staff | current |
+| STAFF-032 | driver | r4 | 11.7 | qualified-staff | current |
+| STAFF-033 | electrician | r4 | 12.4 | qualified-staff | current |
+| STAFF-034 | communicator | r4 | 13.1 | qualified-staff | current |
+| STAFF-035 | operator | r4 | 13.8 | qualified-staff | current |
+| STAFF-036 | lab-tech | r4 | 11.4 | qualified-staff | current |
+| STAFF-037 | driver | r4 | 12.1 | qualified-staff | current |
+| STAFF-038 | electrician | r4 | 12.8 | qualified-staff | current |
+| STAFF-039 | communicator | r4 | 13.5 | qualified-staff | hold |
+| STAFF-040 | operator | r4 | 11.1 | qualified-staff | current |
+| STAFF-041 | lab-tech | r4 | 11.8 | qualified-staff | current |
+| STAFF-042 | driver | r4 | 12.5 | qualified-staff | current |
+| STAFF-043 | electrician | r4 | 13.2 | qualified-staff | current |
+| STAFF-044 | communicator | r4 | 13.9 | qualified-staff | current |
+| STAFF-045 | operator | r4 | 11.5 | qualified-staff | current |
+| STAFF-046 | lab-tech | r4 | 12.2 | qualified-staff | current |
+| STAFF-047 | driver | r4 | 12.9 | qualified-staff | current |
+
+## Decision constraints
+
+State qualification, assignment, shift, duty, relief, mobilization, and safety constraints.
+Do not count an unendorsed or resting person as operational capacity.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S12","source_path":"sources/S12_MUTUAL_AID_COST.md","source_sha256":"807e8b18eb32b5ab2eb0e1ae9f4f575bc4636eef8e813b05e7fdfd7349a8bd6f","source_size_bytes":4241,"start_line":1}
+--- exact source range ---
+# Mutual aid, vendor capability, routes, and cost authority
+
+## Frozen findings
+
+The utility director may authorize up to $650,000 of emergency work. The current seventy-two-hour estimate is $572,000 before mobile carbon and alternate fuel.
+The low-cost carbon vendor arrives in fourteen hours via the flood-prone depot road. The alternate costs 22 percent more, arrives in eight hours by Ridge Route, and includes qualified operators.
+Two low-cost tanker vendors offer nonpotable equipment. Price may not remove drinking-water certification, accessibility, laboratory, power, or continuity controls.
+
+## Governing relationships
+
+Vendor selection changes treatment mode, workforce, route, activation time, fuel, and cost together; it must enter one candidate effect and check.
+Costs above delegated authority require escalation but do not justify declaring an unsafe plan ready.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| AID-000 | carbon-unit | r2 | 640.0 | thousand-dollars | hold |
+| AID-001 | tanker | r2 | 640.7 | thousand-dollars | current |
+| AID-002 | generator | r2 | 641.4 | thousand-dollars | current |
+| AID-003 | lab | r2 | 642.1 | thousand-dollars | current |
+| AID-004 | crew | r2 | 642.8 | thousand-dollars | current |
+| AID-005 | carbon-unit | r2 | 640.4 | thousand-dollars | current |
+| AID-006 | tanker | r2 | 641.1 | thousand-dollars | current |
+| AID-007 | generator | r2 | 641.8 | thousand-dollars | current |
+| AID-008 | lab | r2 | 642.5 | thousand-dollars | current |
+| AID-009 | crew | r2 | 640.1 | thousand-dollars | current |
+| AID-010 | carbon-unit | r2 | 640.8 | thousand-dollars | current |
+| AID-011 | tanker | r2 | 641.5 | thousand-dollars | current |
+| AID-012 | generator | r2 | 642.2 | thousand-dollars | current |
+| AID-013 | lab | r2 | 642.9 | thousand-dollars | hold |
+| AID-014 | crew | r2 | 640.5 | thousand-dollars | current |
+| AID-015 | carbon-unit | r2 | 641.2 | thousand-dollars | current |
+| AID-016 | tanker | r3 | 641.9 | thousand-dollars | current |
+| AID-017 | generator | r3 | 642.6 | thousand-dollars | current |
+| AID-018 | lab | r3 | 640.2 | thousand-dollars | current |
+| AID-019 | crew | r3 | 640.9 | thousand-dollars | current |
+| AID-020 | carbon-unit | r3 | 641.6 | thousand-dollars | current |
+| AID-021 | tanker | r3 | 642.3 | thousand-dollars | current |
+| AID-022 | generator | r3 | 643.0 | thousand-dollars | current |
+| AID-023 | lab | r3 | 640.6 | thousand-dollars | current |
+| AID-024 | crew | r3 | 641.3 | thousand-dollars | current |
+| AID-025 | carbon-unit | r3 | 642.0 | thousand-dollars | current |
+| AID-026 | tanker | r3 | 642.7 | thousand-dollars | hold |
+| AID-027 | generator | r3 | 640.3 | thousand-dollars | current |
+| AID-028 | lab | r3 | 641.0 | thousand-dollars | current |
+| AID-029 | crew | r3 | 641.7 | thousand-dollars | current |
+| AID-030 | carbon-unit | r3 | 642.4 | thousand-dollars | current |
+| AID-031 | tanker | r3 | 640.0 | thousand-dollars | current |
+| AID-032 | generator | r4 | 640.7 | thousand-dollars | current |
+| AID-033 | lab | r4 | 641.4 | thousand-dollars | current |
+| AID-034 | crew | r4 | 642.1 | thousand-dollars | current |
+| AID-035 | carbon-unit | r4 | 642.8 | thousand-dollars | current |
+| AID-036 | tanker | r4 | 640.4 | thousand-dollars | current |
+| AID-037 | generator | r4 | 641.1 | thousand-dollars | current |
+| AID-038 | lab | r4 | 641.8 | thousand-dollars | current |
+| AID-039 | crew | r4 | 642.5 | thousand-dollars | hold |
+| AID-040 | carbon-unit | r4 | 640.1 | thousand-dollars | current |
+| AID-041 | tanker | r4 | 640.8 | thousand-dollars | current |
+| AID-042 | generator | r4 | 641.5 | thousand-dollars | current |
+| AID-043 | lab | r4 | 642.2 | thousand-dollars | current |
+| AID-044 | crew | r4 | 642.9 | thousand-dollars | current |
+| AID-045 | carbon-unit | r4 | 640.5 | thousand-dollars | current |
+| AID-046 | tanker | r4 | 641.2 | thousand-dollars | current |
+| AID-047 | generator | r4 | 641.9 | thousand-dollars | current |
+
+## Decision constraints
+
+State capability, activation, route, staffing, price, authority, contingency, and retirement condition.
+Do not select price independently of technical and timing constraints.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

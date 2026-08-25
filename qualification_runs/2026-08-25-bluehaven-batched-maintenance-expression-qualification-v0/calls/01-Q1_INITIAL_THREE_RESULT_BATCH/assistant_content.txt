@@ -1,0 +1,37 @@
+# Evidence Integration Ledger
+
+**R01: Authority & Handoff**
+Disposition: Active. [S01] defines distinct authorities: Health Officer (legal order), Utility Director (ops), Mayor (cost > ceiling). Handoffs require acknowledgment of same incident revision. Blockers: Unacknowledged transfers block closure; vendor/dashboard assertions are not readiness proof.
+
+**R02: Contamination Triggers & Plume**
+Disposition: Active. [S02] mandates boil-water if chlorine residual < 0.2 mg/L in two consecutive samples OR benzene > 5 µg/L. Conservative branch governs due to 38% ensemble reversal probability after 18:00. Lifting requires two compliant rounds + hydraulic stabilization + health approval. One clean sample is insufficient. Blockers: Current field samples must rule out plume before isolation lift.
+
+**R03: Demand & Registry Uncertainty**
+Disposition: Active. [S03] defines population 46,800 (A:8.2k, B:12.6k, C:15.4k, D:10.6k). Emergency min: 3 L/person/day + clinical/sanitation. Registry covers 94%; the 6% gap is an uncertainty allowance, NOT a demand reduction. Vulnerability categories overlap; do not sum. Blockers: Time-bound potable demand must account for losses and critical facility priorities separately.
+
+**R04: Treatment Capacity & Bottlenecks**
+Disposition: Active. [S04] Plants A (12 ML/day) and B (9 ML/day) share East clearwell/trunk with validated limit 15 ML/day. Ratings cannot be summed to claim 21 ML/day. Last integrated run sustained 13.4 ML/day after losses. Plant B requires mobile carbon unit for benzene branch. Blockers: Current candidate-bound test required to exceed 13.4 ML/day; carbon unit activation governed by S12.
+
+**R05: Critical Customers & Alternates**
+Disposition: Active. [S07] Hospitals/dialysis require explicit priority allocations outside household minimums. [S08] Tanker/bottle capacity must cover lab turnaround periods, not just pipe travel. Blockers: Blocking thresholds for critical facilities and potable specifications for handoffs are pending verification against current demand.
+
+**R06: Tanker Logistics & Constraints**
+Disposition: Active. [S08] Certified tanker/bottle capacity and staffed cycles must be activated. Disinfection required. Shared loading assets and road/vendor constraints apply. Relief obligations are the gap between validated delivered capacity and demand, not nameplate output. Blockers: Current staffing and vendor availability unverified for 72-hour cycle.
+
+**R07: Power & Fuel Resupply**
+Disposition: Active. [S06] Generator endurance: Plant A (14h), Plant B (22h), Booster P-4 (9h), Lab (12h). Fuel contract targets 8h delivery, but observed delay was 17h due to route flooding. 24-hour local staging or verified alternate depot required before relying on repeated cycles. Blockers: Current fuel level and staging status unconfirmed; lab power affects sample turnaround (S09).
+
+**R08: Public Warning & Communication**
+Disposition: Active. [S10] Multilingual redundant warning required. Outage-aware reach must account for door-knock time. Exact revision binding mandatory for all notices. Blockers: Receipt/understanding evidence and correction protocols pending verification against current outage map.
+
+**R09: Sampling & Laboratory Assays**
+Disposition: Active. [S09] Sample locations, custody, and QC required. 6h/9h assays for chlorine/benzene. Two clean rounds required for release. Candidate currency binding mandatory. Blockers: Lab power dependency (S06) creates risk to assay timelines; current sample chain of custody unverified.
+
+**R10: Data Accountability & Retention**
+Disposition: Active. [S10] Private accountability and public aggregation distinct. Verified self-supply data required. Restricted clinical data handling mandatory. 7/30-day retention with deletion proof. Blockers: Reconciliation of private vs. public data sets pending; deletion certification not yet issued.
+
+**R11: 72-Hour Execution Sequence**
+Disposition: Active. [S11] Executable sequence with owners, resources, effects, and cost authority defined. Repair/recheck cycles mandatory. Blockers: Current resource allocation (personnel, tankers) unverified against 72-hour timeline; cost escalation triggers pending Mayor approval.
+
+**R12: Readiness & Falsifiers**
+Disposition: Active. [S12] Independent review blockers identified. Source uncertainties documented. Candidate-bound readiness required. Explicit falsifiers defined for each action. Blockers: Model-authored ledger is NOT readiness proof. Submission does not authorize closure. All checks must be current and candidate-bound.

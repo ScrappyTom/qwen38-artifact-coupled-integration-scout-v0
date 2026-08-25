@@ -1,0 +1,563 @@
+<|im_start|>system
+# BATCHED_EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate the exact batch with the prior task work, preserving units,
+probabilities, revisions, qualifications, contradictions, cross-source
+relationships, R01-R12 bindings, and unresolved blockers.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 2400-token limit. The only source IDs you
+may cite are: S01, S02, S03, S04, S05, S06.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Bluehaven drinking-water restoration package
+
+A river contamination event, power instability, and distribution constraints
+threaten Bluehaven's drinking-water system. Produce two exact deliverables:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The fixed second filename is imposed by the runtime; its content is an
+operational drinking-water restoration decision. Reconcile the complete system
+over seventy-two hours rather than summarizing sources independently.
+
+## Evidence-ledger contract
+
+Begin with `# Evidence Integration Ledger` and maintain entries `R01` through
+`R12`. Each entry must state a disposition, cite only exact observed sources as
+`[SNN]`, preserve units, probabilities, revisions, conflicts and
+qualifications, bind current or missing evidence, and name blockers. The ledger
+is model-authored, lossy task work and never readiness authority.
+
+## Decision-document contract
+
+Begin with `# Bluehaven Drinking-Water Restoration Decision` and use exactly
+these level-two headings in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Contamination triggers and service-zone sequencing`
+3. `## Demand, treatment, and distribution capacity`
+4. `## Critical customers and alternate-water continuity`
+5. `## Power, staffing, logistics, and mutual aid`
+6. `## Public warning, sampling, and accountability`
+7. `## Seventy-two-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+Write 1,400–2,000 words excluding exact citations. Cite at least twelve unique
+sources and include S01–S11 and S13–S16.
+
+Resolve these coupled requirements:
+
+- `R01`: recommendation, public-health order, operations, checking, handoff,
+  cost escalation, and closure authority;
+- `R02`: exact residual and benzene triggers, conservative plume branch,
+  hold/lift observations, expiry, and common forecast/sample/action binding;
+- `R03`: population and time-bound potable demand, overlapping vulnerability,
+  registry coverage, uncovered-population uncertainty, loss, and critical demand;
+- `R04`: shared East-trunk treatment limit, observed output, hydraulic delivery,
+  pressure, valve/pump effects, and current capacity proof;
+- `R05`: hospitals, dialysis, care facilities, accessible/private matching,
+  potable specifications, handoffs, and blocking thresholds;
+- `R06`: certified tanker and bottle capacity, staffed cycles, activation,
+  disinfection, shared loading assets, road/vendor constraints, and relief;
+- `R07`: generator endurance, observed fuel delay, local staging or alternate
+  supply, laboratory power, staffing qualifications, duty, and safety;
+- `R08`: multilingual redundant warning, outage-aware reach, door-knock time,
+  exact revision, receipt/understanding evidence, and correction;
+- `R09`: sample locations, custody, quality control, six/nine-hour assays, two
+  clean rounds, candidate currency, and release authority;
+- `R10`: private accountability, public aggregation, verified self-supply,
+  restricted clinical data, reconciliation, seven/thirty-day retention, and
+  deletion proof;
+- `R11`: executable seventy-two-hour sequence with owners, resources, effects,
+  current checks, repair, recheck, cost authority, and contingencies; and
+- `R12`: every exercise and independent-review blocker, source uncertainty,
+  candidate-bound readiness, explicit falsifiers, and correct closure.
+
+Preserve source distinctions exactly. In particular, do not convert a
+chemical threshold into a duration or flow, a forecast probability into a
+physical measurement or demand estimate, registry coverage into demand
+reduction, a shared bottleneck into summed capacity, a common revision binding
+into a count of permitted changes, or a contractual target into observed
+performance. Recover the exact values and qualifications from the source
+record rather than treating this task statement as evidence.
+
+Also preserve that:
+
+- owner attestation, component dashboards, stale checks, ledgers, and
+  submission are not readiness proof.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+No accepted evidence has been integrated yet.
+
+# Mechanically batched exact externalized observations
+
+## Externalized exact result RESULT-001
+
+{"object_id":"batch:S01:1-70+S02:1-70","object_version":"6ead1f44b5f6c472ff68cda7d53c92ed8aa4c5eca9ad213830ab81c5fc8cd6bb","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S01","start_line":1},{"end_line":70,"source_id":"S02","start_line":1}],"total_source_bytes":8341}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S01","source_path":"sources/S01_AUTHORITY.md","source_sha256":"c90f647766613d6e81f7cb2f7a2738bf3119e90ca8385ba3b2d7b9fadc4f7685","source_size_bytes":4182,"start_line":1}
+--- exact source range ---
+# Bluehaven emergency drinking-water authority
+
+## Frozen findings
+
+The public-health officer issues or lifts a boil-water order after the utility laboratory recommendation. The utility director owns operational restoration; neither a vendor nor a dashboard can declare public-health readiness.
+The operations chief may isolate mains and dispatch tankers, while the mayor controls emergency expenditure above the utility director's delegated ceiling. These roles are distinct.
+A shift handoff is valid only when the receiving officer acknowledges the same incident-plan and water-quality revision. An unacknowledged transfer blocks closure.
+
+## Governing relationships
+
+Trigger evidence from S02 and S15 informs the health officer but does not replace the legal order. Restoration effects require a current laboratory and hydraulic check.
+Every public notice, field action, and checker must bind the same incident revision and effective time.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUTH-000 | utility-director | r2 | 1.0 | approval | hold |
+| AUTH-001 | health-officer | r2 | 1.7 | approval | current |
+| AUTH-002 | operations-chief | r2 | 2.4 | approval | current |
+| AUTH-003 | mayor | r2 | 3.1 | approval | current |
+| AUTH-004 | utility-director | r2 | 3.8 | approval | current |
+| AUTH-005 | health-officer | r2 | 1.4 | approval | current |
+| AUTH-006 | operations-chief | r2 | 2.1 | approval | current |
+| AUTH-007 | mayor | r2 | 2.8 | approval | current |
+| AUTH-008 | utility-director | r2 | 3.5 | approval | current |
+| AUTH-009 | health-officer | r2 | 1.1 | approval | current |
+| AUTH-010 | operations-chief | r2 | 1.8 | approval | current |
+| AUTH-011 | mayor | r2 | 2.5 | approval | current |
+| AUTH-012 | utility-director | r2 | 3.2 | approval | current |
+| AUTH-013 | health-officer | r2 | 3.9 | approval | hold |
+| AUTH-014 | operations-chief | r2 | 1.5 | approval | current |
+| AUTH-015 | mayor | r2 | 2.2 | approval | current |
+| AUTH-016 | utility-director | r3 | 2.9 | approval | current |
+| AUTH-017 | health-officer | r3 | 3.6 | approval | current |
+| AUTH-018 | operations-chief | r3 | 1.2 | approval | current |
+| AUTH-019 | mayor | r3 | 1.9 | approval | current |
+| AUTH-020 | utility-director | r3 | 2.6 | approval | current |
+| AUTH-021 | health-officer | r3 | 3.3 | approval | current |
+| AUTH-022 | operations-chief | r3 | 4.0 | approval | current |
+| AUTH-023 | mayor | r3 | 1.6 | approval | current |
+| AUTH-024 | utility-director | r3 | 2.3 | approval | current |
+| AUTH-025 | health-officer | r3 | 3.0 | approval | current |
+| AUTH-026 | operations-chief | r3 | 3.7 | approval | hold |
+| AUTH-027 | mayor | r3 | 1.3 | approval | current |
+| AUTH-028 | utility-director | r3 | 2.0 | approval | current |
+| AUTH-029 | health-officer | r3 | 2.7 | approval | current |
+| AUTH-030 | operations-chief | r3 | 3.4 | approval | current |
+| AUTH-031 | mayor | r3 | 1.0 | approval | current |
+| AUTH-032 | utility-director | r4 | 1.7 | approval | current |
+| AUTH-033 | health-officer | r4 | 2.4 | approval | current |
+| AUTH-034 | operations-chief | r4 | 3.1 | approval | current |
+| AUTH-035 | mayor | r4 | 3.8 | approval | current |
+| AUTH-036 | utility-director | r4 | 1.4 | approval | current |
+| AUTH-037 | health-officer | r4 | 2.1 | approval | current |
+| AUTH-038 | operations-chief | r4 | 2.8 | approval | current |
+| AUTH-039 | mayor | r4 | 3.5 | approval | hold |
+| AUTH-040 | utility-director | r4 | 1.1 | approval | current |
+| AUTH-041 | health-officer | r4 | 1.8 | approval | current |
+| AUTH-042 | operations-chief | r4 | 2.5 | approval | current |
+| AUTH-043 | mayor | r4 | 3.2 | approval | current |
+| AUTH-044 | utility-director | r4 | 3.9 | approval | current |
+| AUTH-045 | health-officer | r4 | 1.5 | approval | current |
+| AUTH-046 | operations-chief | r4 | 2.2 | approval | current |
+| AUTH-047 | mayor | r4 | 2.9 | approval | current |
+
+## Decision constraints
+
+Distinguish recommendation, legal order, operational execution, verification, and closure authority.
+Do not treat a model-authored ledger, vendor assertion, or submission as readiness authority.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S02","source_path":"sources/S02_CONTAMINATION.md","source_sha256":"2271ec6007702903ad1c4dcecd819c4ec176e7345a0323c2bbe47e00954ade0c","source_size_bytes":3707,"start_line":1}
+--- exact source range ---
+# Contamination thresholds and conservative response triggers
+
+## Frozen findings
+
+A mandatory boil-water order begins when treated chlorine residual remains below 0.2 mg/L in two consecutive validated samples or when benzene exceeds 5 micrograms per liter in any confirmed distribution sample.
+The median plume forecast stays north of the intake, but 38 percent of current ensemble members reverse after 18:00. The conservative branch governs intake isolation until field samples rule it out.
+One clean sample cannot cancel an active order. Lifting requires two compliant rounds, hydraulic stabilization, and public-health approval.
+
+## Governing relationships
+
+Demand and alternate-water supply from S03 and S08 must cover the period implied by laboratory turnaround in S09, not only pipe travel time.
+River forecast revision in S15, treatment state in S04, and public notice in S10 must remain on one candidate-bound revision.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| WQ-000 | North-intake | r2 | 0.2 | mg/L | hold |
+| WQ-001 | East-clearwell | r2 | 0.9 | mg/L | current |
+| WQ-002 | Zone-A | r2 | 1.6 | mg/L | current |
+| WQ-003 | Zone-B | r2 | 2.3 | mg/L | current |
+| WQ-004 | North-intake | r2 | 3.0 | mg/L | current |
+| WQ-005 | East-clearwell | r2 | 0.6 | mg/L | current |
+| WQ-006 | Zone-A | r2 | 1.3 | mg/L | current |
+| WQ-007 | Zone-B | r2 | 2.0 | mg/L | current |
+| WQ-008 | North-intake | r2 | 2.7 | mg/L | current |
+| WQ-009 | East-clearwell | r2 | 0.3 | mg/L | current |
+| WQ-010 | Zone-A | r2 | 1.0 | mg/L | current |
+| WQ-011 | Zone-B | r2 | 1.7 | mg/L | current |
+| WQ-012 | North-intake | r2 | 2.4 | mg/L | current |
+| WQ-013 | East-clearwell | r2 | 3.1 | mg/L | hold |
+| WQ-014 | Zone-A | r2 | 0.7 | mg/L | current |
+| WQ-015 | Zone-B | r2 | 1.4 | mg/L | current |
+| WQ-016 | North-intake | r3 | 2.1 | mg/L | current |
+| WQ-017 | East-clearwell | r3 | 2.8 | mg/L | current |
+| WQ-018 | Zone-A | r3 | 0.4 | mg/L | current |
+| WQ-019 | Zone-B | r3 | 1.1 | mg/L | current |
+| WQ-020 | North-intake | r3 | 1.8 | mg/L | current |
+| WQ-021 | East-clearwell | r3 | 2.5 | mg/L | current |
+| WQ-022 | Zone-A | r3 | 3.2 | mg/L | current |
+| WQ-023 | Zone-B | r3 | 0.8 | mg/L | current |
+| WQ-024 | North-intake | r3 | 1.5 | mg/L | current |
+| WQ-025 | East-clearwell | r3 | 2.2 | mg/L | current |
+| WQ-026 | Zone-A | r3 | 2.9 | mg/L | hold |
+| WQ-027 | Zone-B | r3 | 0.5 | mg/L | current |
+| WQ-028 | North-intake | r3 | 1.2 | mg/L | current |
+| WQ-029 | East-clearwell | r3 | 1.9 | mg/L | current |
+| WQ-030 | Zone-A | r3 | 2.6 | mg/L | current |
+| WQ-031 | Zone-B | r3 | 0.2 | mg/L | current |
+| WQ-032 | North-intake | r4 | 0.9 | mg/L | current |
+| WQ-033 | East-clearwell | r4 | 1.6 | mg/L | current |
+| WQ-034 | Zone-A | r4 | 2.3 | mg/L | current |
+| WQ-035 | Zone-B | r4 | 3.0 | mg/L | current |
+| WQ-036 | North-intake | r4 | 0.6 | mg/L | current |
+| WQ-037 | East-clearwell | r4 | 1.3 | mg/L | current |
+| WQ-038 | Zone-A | r4 | 2.0 | mg/L | current |
+| WQ-039 | Zone-B | r4 | 2.7 | mg/L | hold |
+| WQ-040 | North-intake | r4 | 0.3 | mg/L | current |
+| WQ-041 | East-clearwell | r4 | 1.0 | mg/L | current |
+| WQ-042 | Zone-A | r4 | 1.7 | mg/L | current |
+| WQ-043 | Zone-B | r4 | 2.4 | mg/L | current |
+| WQ-044 | North-intake | r4 | 3.1 | mg/L | current |
+| WQ-045 | East-clearwell | r4 | 0.7 | mg/L | current |
+| WQ-046 | Zone-A | r4 | 1.4 | mg/L | current |
+| WQ-047 | Zone-B | r4 | 2.1 | mg/L | current |
+
+## Decision constraints
+
+Preserve 0.2 mg/L, 5 micrograms per liter, and 38 percent with their exact meanings and units.
+State the observations that start, hold, expand, and lift each protective action.
+
+## Externalized exact result RESULT-002
+
+{"object_id":"batch:S03:1-70+S04:1-70","object_version":"55d17ff7177afbe97753425481cc305623d764d31a0c72fecb1db120c87f8ce2","result_id":"RESULT-002","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S03","start_line":1},{"end_line":70,"source_id":"S04","start_line":1}],"total_source_bytes":8691}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S03","source_path":"sources/S03_DEMAND.md","source_sha256":"542346c71ea244ed887ad9fa9e4901722fdfc2f67cd629cec2503f4f964f30b5","source_size_bytes":4204,"start_line":1}
+--- exact source range ---
+# Service-zone demand, registry coverage, and vulnerable households
+
+## Frozen findings
+
+Bluehaven serves 46,800 residents: 8,200 in Zone A, 12,600 in B, 15,400 in C, and 10,600 in D. Daytime industrial demand adds 2.4 megaliters per day but is not drinking-water demand.
+The emergency minimum is three liters per person per day plus separately calculated clinical and sanitation demand. Vulnerability categories overlap and cannot be summed as independent people.
+The customer and meter registry covers 94 percent of occupied premises. The uncovered six percent requires an uncertainty allowance; it is not a six-percent reduction in demand.
+
+## Governing relationships
+
+Treatment and distribution capacity in S04-S05 must be compared with time-bound potable demand after losses, not with nominal plant nameplate totals.
+Critical facilities in S07 and tanker logistics in S08 need explicit priority allocations outside the household minimum.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| DEM-000 | Zone-A | r2 | 46.8 | thousand-people | hold |
+| DEM-001 | Zone-B | r2 | 47.5 | thousand-people | current |
+| DEM-002 | Zone-C | r2 | 48.2 | thousand-people | current |
+| DEM-003 | Zone-D | r2 | 48.9 | thousand-people | current |
+| DEM-004 | Zone-A | r2 | 49.6 | thousand-people | current |
+| DEM-005 | Zone-B | r2 | 47.2 | thousand-people | current |
+| DEM-006 | Zone-C | r2 | 47.9 | thousand-people | current |
+| DEM-007 | Zone-D | r2 | 48.6 | thousand-people | current |
+| DEM-008 | Zone-A | r2 | 49.3 | thousand-people | current |
+| DEM-009 | Zone-B | r2 | 46.9 | thousand-people | current |
+| DEM-010 | Zone-C | r2 | 47.6 | thousand-people | current |
+| DEM-011 | Zone-D | r2 | 48.3 | thousand-people | current |
+| DEM-012 | Zone-A | r2 | 49.0 | thousand-people | current |
+| DEM-013 | Zone-B | r2 | 49.7 | thousand-people | hold |
+| DEM-014 | Zone-C | r2 | 47.3 | thousand-people | current |
+| DEM-015 | Zone-D | r2 | 48.0 | thousand-people | current |
+| DEM-016 | Zone-A | r3 | 48.7 | thousand-people | current |
+| DEM-017 | Zone-B | r3 | 49.4 | thousand-people | current |
+| DEM-018 | Zone-C | r3 | 47.0 | thousand-people | current |
+| DEM-019 | Zone-D | r3 | 47.7 | thousand-people | current |
+| DEM-020 | Zone-A | r3 | 48.4 | thousand-people | current |
+| DEM-021 | Zone-B | r3 | 49.1 | thousand-people | current |
+| DEM-022 | Zone-C | r3 | 49.8 | thousand-people | current |
+| DEM-023 | Zone-D | r3 | 47.4 | thousand-people | current |
+| DEM-024 | Zone-A | r3 | 48.1 | thousand-people | current |
+| DEM-025 | Zone-B | r3 | 48.8 | thousand-people | current |
+| DEM-026 | Zone-C | r3 | 49.5 | thousand-people | hold |
+| DEM-027 | Zone-D | r3 | 47.1 | thousand-people | current |
+| DEM-028 | Zone-A | r3 | 47.8 | thousand-people | current |
+| DEM-029 | Zone-B | r3 | 48.5 | thousand-people | current |
+| DEM-030 | Zone-C | r3 | 49.2 | thousand-people | current |
+| DEM-031 | Zone-D | r3 | 46.8 | thousand-people | current |
+| DEM-032 | Zone-A | r4 | 47.5 | thousand-people | current |
+| DEM-033 | Zone-B | r4 | 48.2 | thousand-people | current |
+| DEM-034 | Zone-C | r4 | 48.9 | thousand-people | current |
+| DEM-035 | Zone-D | r4 | 49.6 | thousand-people | current |
+| DEM-036 | Zone-A | r4 | 47.2 | thousand-people | current |
+| DEM-037 | Zone-B | r4 | 47.9 | thousand-people | current |
+| DEM-038 | Zone-C | r4 | 48.6 | thousand-people | current |
+| DEM-039 | Zone-D | r4 | 49.3 | thousand-people | hold |
+| DEM-040 | Zone-A | r4 | 46.9 | thousand-people | current |
+| DEM-041 | Zone-B | r4 | 47.6 | thousand-people | current |
+| DEM-042 | Zone-C | r4 | 48.3 | thousand-people | current |
+| DEM-043 | Zone-D | r4 | 49.0 | thousand-people | current |
+| DEM-044 | Zone-A | r4 | 49.7 | thousand-people | current |
+| DEM-045 | Zone-B | r4 | 47.3 | thousand-people | current |
+| DEM-046 | Zone-C | r4 | 48.0 | thousand-people | current |
+| DEM-047 | Zone-D | r4 | 48.7 | thousand-people | current |
+
+## Decision constraints
+
+State population basis, overlap rule, registry uncertainty, loss allowance, and time-bound demand.
+Do not convert 94 percent coverage into a 94 percent readiness score or six percent into a demand target.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S04","source_path":"sources/S04_TREATMENT.md","source_sha256":"31775314f25121b2200159075bc3c4035b479973fad09eb9b60ac8d8ca604e41","source_size_bytes":4042,"start_line":1}
+--- exact source range ---
+# Treatment-plant capacity and shared clearwell limits
+
+## Frozen findings
+
+Plant A is rated at 12 megaliters per day and Plant B at 9, but both discharge through the East clearwell and trunk whose validated sustainable limit is 15 megaliters per day. The ratings cannot be added to claim 21.
+The last integrated run sustained 13.4 megaliters per day after filter backwash and distribution losses. A higher figure requires a current candidate-bound test.
+Plant B cannot treat the benzene branch without the mobile carbon unit, whose activation and staffing are governed by S12.
+
+## Governing relationships
+
+Hydraulic zone pressure in S05 can reduce deliverable potable capacity below treatment output. Generator state in S06 constrains both plants and the shared clearwell pumps.
+Alternate-water obligations in S08 are the gap between validated delivered capacity and demand, not the gap from nameplate output.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| PLANT-000 | Plant-A | r2 | 13.4 | ML/day | hold |
+| PLANT-001 | Plant-B | r2 | 14.1 | ML/day | current |
+| PLANT-002 | East-clearwell | r2 | 14.8 | ML/day | current |
+| PLANT-003 | West-clearwell | r2 | 15.5 | ML/day | current |
+| PLANT-004 | Plant-A | r2 | 16.2 | ML/day | current |
+| PLANT-005 | Plant-B | r2 | 13.8 | ML/day | current |
+| PLANT-006 | East-clearwell | r2 | 14.5 | ML/day | current |
+| PLANT-007 | West-clearwell | r2 | 15.2 | ML/day | current |
+| PLANT-008 | Plant-A | r2 | 15.9 | ML/day | current |
+| PLANT-009 | Plant-B | r2 | 13.5 | ML/day | current |
+| PLANT-010 | East-clearwell | r2 | 14.2 | ML/day | current |
+| PLANT-011 | West-clearwell | r2 | 14.9 | ML/day | current |
+| PLANT-012 | Plant-A | r2 | 15.6 | ML/day | current |
+| PLANT-013 | Plant-B | r2 | 16.3 | ML/day | hold |
+| PLANT-014 | East-clearwell | r2 | 13.9 | ML/day | current |
+| PLANT-015 | West-clearwell | r2 | 14.6 | ML/day | current |
+| PLANT-016 | Plant-A | r3 | 15.3 | ML/day | current |
+| PLANT-017 | Plant-B | r3 | 16.0 | ML/day | current |
+| PLANT-018 | East-clearwell | r3 | 13.6 | ML/day | current |
+| PLANT-019 | West-clearwell | r3 | 14.3 | ML/day | current |
+| PLANT-020 | Plant-A | r3 | 15.0 | ML/day | current |
+| PLANT-021 | Plant-B | r3 | 15.7 | ML/day | current |
+| PLANT-022 | East-clearwell | r3 | 16.4 | ML/day | current |
+| PLANT-023 | West-clearwell | r3 | 14.0 | ML/day | current |
+| PLANT-024 | Plant-A | r3 | 14.7 | ML/day | current |
+| PLANT-025 | Plant-B | r3 | 15.4 | ML/day | current |
+| PLANT-026 | East-clearwell | r3 | 16.1 | ML/day | hold |
+| PLANT-027 | West-clearwell | r3 | 13.7 | ML/day | current |
+| PLANT-028 | Plant-A | r3 | 14.4 | ML/day | current |
+| PLANT-029 | Plant-B | r3 | 15.1 | ML/day | current |
+| PLANT-030 | East-clearwell | r3 | 15.8 | ML/day | current |
+| PLANT-031 | West-clearwell | r3 | 13.4 | ML/day | current |
+| PLANT-032 | Plant-A | r4 | 14.1 | ML/day | current |
+| PLANT-033 | Plant-B | r4 | 14.8 | ML/day | current |
+| PLANT-034 | East-clearwell | r4 | 15.5 | ML/day | current |
+| PLANT-035 | West-clearwell | r4 | 16.2 | ML/day | current |
+| PLANT-036 | Plant-A | r4 | 13.8 | ML/day | current |
+| PLANT-037 | Plant-B | r4 | 14.5 | ML/day | current |
+| PLANT-038 | East-clearwell | r4 | 15.2 | ML/day | current |
+| PLANT-039 | West-clearwell | r4 | 15.9 | ML/day | hold |
+| PLANT-040 | Plant-A | r4 | 13.5 | ML/day | current |
+| PLANT-041 | Plant-B | r4 | 14.2 | ML/day | current |
+| PLANT-042 | East-clearwell | r4 | 14.9 | ML/day | current |
+| PLANT-043 | West-clearwell | r4 | 15.6 | ML/day | current |
+| PLANT-044 | Plant-A | r4 | 16.3 | ML/day | current |
+| PLANT-045 | Plant-B | r4 | 13.9 | ML/day | current |
+| PLANT-046 | East-clearwell | r4 | 14.6 | ML/day | current |
+| PLANT-047 | West-clearwell | r4 | 15.3 | ML/day | current |
+
+## Decision constraints
+
+Use the shared 15 ML/day bottleneck and observed 13.4 ML/day until a current integrated test proves more.
+Bind treatment mode, carbon unit, power, staffing, loss, and hydraulic effects together.
+
+## Externalized exact result RESULT-003
+
+{"object_id":"batch:S05:1-70+S06:1-70","object_version":"d8e1fc83e886682aa96fa1c228cec9ae3eb8b815a3f8fe2c1dd9f2bf1dda2411","result_id":"RESULT-003","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S05","start_line":1},{"end_line":70,"source_id":"S06","start_line":1}],"total_source_bytes":7506}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S05","source_path":"sources/S05_DISTRIBUTION.md","source_sha256":"e8a4909318ffa921eb6eecab365943dc47bb95f246683043be9a4897b047f411","source_size_bytes":3529,"start_line":1}
+--- exact source range ---
+# Distribution hydraulics, pressure zones, and isolation effects
+
+## Frozen findings
+
+Zones A and B share the East trunk. Closing valve V-17 isolates the suspected plume but lowers Zone B hospital pressure below the 28 psi operational floor unless booster P-4 is running.
+Zone C can backfeed B at 3.1 megaliters per day, but only after two cross-connection samples pass. Zone D cannot backfeed without reversing an unprotected industrial connection.
+Pressure below 20 psi creates an intrusion risk and independently sustains the boil-water order even if treatment samples are clean.
+
+## Governing relationships
+
+The contamination isolation in S02, plant output in S04, hospital demand in S07, and generator state in S06 form one hydraulic decision.
+A valve or pump mutation makes any prior pressure and sampling check stale for the new candidate.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| HYD-000 | Zone-A | r2 | 27.0 | psi | hold |
+| HYD-001 | Zone-B | r2 | 27.7 | psi | current |
+| HYD-002 | Zone-C | r2 | 28.4 | psi | current |
+| HYD-003 | Zone-D | r2 | 29.1 | psi | current |
+| HYD-004 | East-trunk | r2 | 29.8 | psi | current |
+| HYD-005 | Zone-A | r2 | 27.4 | psi | current |
+| HYD-006 | Zone-B | r2 | 28.1 | psi | current |
+| HYD-007 | Zone-C | r2 | 28.8 | psi | current |
+| HYD-008 | Zone-D | r2 | 29.5 | psi | current |
+| HYD-009 | East-trunk | r2 | 27.1 | psi | current |
+| HYD-010 | Zone-A | r2 | 27.8 | psi | current |
+| HYD-011 | Zone-B | r2 | 28.5 | psi | current |
+| HYD-012 | Zone-C | r2 | 29.2 | psi | current |
+| HYD-013 | Zone-D | r2 | 29.9 | psi | hold |
+| HYD-014 | East-trunk | r2 | 27.5 | psi | current |
+| HYD-015 | Zone-A | r2 | 28.2 | psi | current |
+| HYD-016 | Zone-B | r3 | 28.9 | psi | current |
+| HYD-017 | Zone-C | r3 | 29.6 | psi | current |
+| HYD-018 | Zone-D | r3 | 27.2 | psi | current |
+| HYD-019 | East-trunk | r3 | 27.9 | psi | current |
+| HYD-020 | Zone-A | r3 | 28.6 | psi | current |
+| HYD-021 | Zone-B | r3 | 29.3 | psi | current |
+| HYD-022 | Zone-C | r3 | 30.0 | psi | current |
+| HYD-023 | Zone-D | r3 | 27.6 | psi | current |
+| HYD-024 | East-trunk | r3 | 28.3 | psi | current |
+| HYD-025 | Zone-A | r3 | 29.0 | psi | current |
+| HYD-026 | Zone-B | r3 | 29.7 | psi | hold |
+| HYD-027 | Zone-C | r3 | 27.3 | psi | current |
+| HYD-028 | Zone-D | r3 | 28.0 | psi | current |
+| HYD-029 | East-trunk | r3 | 28.7 | psi | current |
+| HYD-030 | Zone-A | r3 | 29.4 | psi | current |
+| HYD-031 | Zone-B | r3 | 27.0 | psi | current |
+| HYD-032 | Zone-C | r4 | 27.7 | psi | current |
+| HYD-033 | Zone-D | r4 | 28.4 | psi | current |
+| HYD-034 | East-trunk | r4 | 29.1 | psi | current |
+| HYD-035 | Zone-A | r4 | 29.8 | psi | current |
+| HYD-036 | Zone-B | r4 | 27.4 | psi | current |
+| HYD-037 | Zone-C | r4 | 28.1 | psi | current |
+| HYD-038 | Zone-D | r4 | 28.8 | psi | current |
+| HYD-039 | East-trunk | r4 | 29.5 | psi | hold |
+| HYD-040 | Zone-A | r4 | 27.1 | psi | current |
+| HYD-041 | Zone-B | r4 | 27.8 | psi | current |
+| HYD-042 | Zone-C | r4 | 28.5 | psi | current |
+| HYD-043 | Zone-D | r4 | 29.2 | psi | current |
+| HYD-044 | East-trunk | r4 | 29.9 | psi | current |
+| HYD-045 | Zone-A | r4 | 27.5 | psi | current |
+| HYD-046 | Zone-B | r4 | 28.2 | psi | current |
+| HYD-047 | Zone-C | r4 | 28.9 | psi | current |
+
+## Decision constraints
+
+Name valve, pump, pressure, sampling, and backfeed observations for every switch.
+Do not assume treatment output reaches customers without a current hydraulic check.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S06","source_path":"sources/S06_POWER.md","source_sha256":"62e4ad8b2121c06b78267fc560bbd9e086707c0522e7713851707c9c91280586","source_size_bytes":3530,"start_line":1}
+--- exact source range ---
+# Power, generator endurance, and fuel resupply
+
+## Frozen findings
+
+Plant A has fourteen tested generator hours, Plant B twenty-two, booster P-4 nine, and the utility laboratory twelve at the current load.
+The fuel contract targets eight-hour delivery, but the last regional outage produced a seventeen-hour arrival because the primary depot route flooded.
+Twenty-four-hour local staging or a verified alternate depot and route is required before relying on repeated treatment and tanker-loading cycles.
+
+## Governing relationships
+
+Power loss at P-4 invalidates the Zone B hospital pressure plan in S05-S07. Lab power affects the sample turnaround assumed in S09.
+Fuel used by tanker loading and mobile carbon treatment must be included with generator demand rather than budgeted independently.
+
+## Operational evidence
+
+| record | asset/zone | revision | measure | unit | status |
+|---|---|---|---:|---|---|
+| PWR-000 | Plant-A | r2 | 14.0 | hours | hold |
+| PWR-001 | Plant-B | r2 | 14.7 | hours | current |
+| PWR-002 | P-4 | r2 | 15.4 | hours | current |
+| PWR-003 | lab | r2 | 16.1 | hours | current |
+| PWR-004 | radio | r2 | 16.8 | hours | current |
+| PWR-005 | Plant-A | r2 | 14.4 | hours | current |
+| PWR-006 | Plant-B | r2 | 15.1 | hours | current |
+| PWR-007 | P-4 | r2 | 15.8 | hours | current |
+| PWR-008 | lab | r2 | 16.5 | hours | current |
+| PWR-009 | radio | r2 | 14.1 | hours | current |
+| PWR-010 | Plant-A | r2 | 14.8 | hours | current |
+| PWR-011 | Plant-B | r2 | 15.5 | hours | current |
+| PWR-012 | P-4 | r2 | 16.2 | hours | current |
+| PWR-013 | lab | r2 | 16.9 | hours | hold |
+| PWR-014 | radio | r2 | 14.5 | hours | current |
+| PWR-015 | Plant-A | r2 | 15.2 | hours | current |
+| PWR-016 | Plant-B | r3 | 15.9 | hours | current |
+| PWR-017 | P-4 | r3 | 16.6 | hours | current |
+| PWR-018 | lab | r3 | 14.2 | hours | current |
+| PWR-019 | radio | r3 | 14.9 | hours | current |
+| PWR-020 | Plant-A | r3 | 15.6 | hours | current |
+| PWR-021 | Plant-B | r3 | 16.3 | hours | current |
+| PWR-022 | P-4 | r3 | 17.0 | hours | current |
+| PWR-023 | lab | r3 | 14.6 | hours | current |
+| PWR-024 | radio | r3 | 15.3 | hours | current |
+| PWR-025 | Plant-A | r3 | 16.0 | hours | current |
+| PWR-026 | Plant-B | r3 | 16.7 | hours | hold |
+| PWR-027 | P-4 | r3 | 14.3 | hours | current |
+| PWR-028 | lab | r3 | 15.0 | hours | current |
+| PWR-029 | radio | r3 | 15.7 | hours | current |
+| PWR-030 | Plant-A | r3 | 16.4 | hours | current |
+| PWR-031 | Plant-B | r3 | 14.0 | hours | current |
+| PWR-032 | P-4 | r4 | 14.7 | hours | current |
+| PWR-033 | lab | r4 | 15.4 | hours | current |
+| PWR-034 | radio | r4 | 16.1 | hours | current |
+| PWR-035 | Plant-A | r4 | 16.8 | hours | current |
+| PWR-036 | Plant-B | r4 | 14.4 | hours | current |
+| PWR-037 | P-4 | r4 | 15.1 | hours | current |
+| PWR-038 | lab | r4 | 15.8 | hours | current |
+| PWR-039 | radio | r4 | 16.5 | hours | hold |
+| PWR-040 | Plant-A | r4 | 14.1 | hours | current |
+| PWR-041 | Plant-B | r4 | 14.8 | hours | current |
+| PWR-042 | P-4 | r4 | 15.5 | hours | current |
+| PWR-043 | lab | r4 | 16.2 | hours | current |
+| PWR-044 | radio | r4 | 16.9 | hours | current |
+| PWR-045 | Plant-A | r4 | 14.5 | hours | current |
+| PWR-046 | Plant-B | r4 | 15.2 | hours | current |
+| PWR-047 | P-4 | r4 | 15.9 | hours | current |
+
+## Decision constraints
+
+Use the observed seventeen-hour delay, not the eight-hour contract target, unless a repair is currently verified.
+State consumption, staging, supplier, route, replenishment trigger, and coupled effects.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
