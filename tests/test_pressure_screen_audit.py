@@ -40,10 +40,14 @@ def add_read(
 
 
 class PressureScreenEligibilityTests(unittest.TestCase):
-    def test_auditor_refuses_absent_future_run(self) -> None:
+    def test_auditor_accepts_exact_live_boundary(self) -> None:
         result = audit(ROOT, write_outputs=False)
-        self.assertFalse(result["passed"])
-        self.assertTrue(any(item.startswith("missing:") for item in result["failures"]))
+        self.assertTrue(result["passed"], result["failures"])
+        self.assertEqual([], result["failures"])
+        self.assertEqual(5, result["actor_calls"])
+        self.assertEqual("RESULT-005", result["pending_result_id"])
+        self.assertEqual(2384, result["overflow_tokens"])
+        self.assertEqual(["RESULT-001"], result["positive_relief_result_ids"])
 
     def test_live_gate_uses_coverage_not_result_objects_or_world_size(self) -> None:
         source = inspect.getsource(boundary_eligibility_failures)

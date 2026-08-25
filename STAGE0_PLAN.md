@@ -131,3 +131,12 @@ not behavioral utility.
 8. Freeze candidate-hash-blinded semantic adjudication and readiness.
 
 No step authorizes the next. A non-diagnostic screen closes this task selection.
+
+## Live gate disposition
+
+Steps 1–5 are complete. V0 sealed a zero-call external-server apparatus abort;
+v1 then qualified after five valid actor calls. Eight delivered sources across
+six domains exceeded the coverage gate, pending S09–S10 added 140 novel lines,
+the next prompt overflowed by 2,384 tokens, and one positive substitution
+restored it to 19,881. The exact handoff and measured preflight pass. Step 6
+remains unfulfilled: no measured GPU continuation is authorized by the screen.

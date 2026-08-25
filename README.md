@@ -1,9 +1,8 @@
 # Qwen3.8 Cedar ingress-aligned interaction transfer
 
-Status: offline Stage 0 for a genuinely fresh task/world. GPU use is withheld.
-The selected next gate is an ordinary-chronology pressure screen; a measured
-`D0_DETACHED`/`A1_COUPLED` continuation remains locked until a separately
-audited, separately committed boundary exists.
+Status: the fresh Cedar task has an audited authentic pressure boundary. GPU
+use for the measured `D0_DETACHED`/`A1_COUPLED` continuation is withheld until
+the result and measured preflight are committed and separately authorized.
 
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
@@ -12,6 +11,13 @@ process. It was not terminated. The same run ID is closed; the mechanically
 unchanged successor is `2026-08-25-cedar-ingress-aligned-pressure-screen-v1`
 and requires a clean frozen commit, release of the external process, and new
 explicit authorization. See `CEDAR_PRESSURE_SCREEN_V0_ABORTED_DISPOSITION.md`.
+
+V1 subsequently passed after five valid batch-read calls. Eight full sources
+across six evidence domains had crossed model boundaries; pending S09–S10 added
+140 novel lines and made the exact prompt 2,384 tokens too large. Replacing
+only `RESULT-001` restores feasibility at 19,881 tokens. The exact run, audit,
+and handoff are preserved in `CEDAR_PRESSURE_SCREEN_V1_RESULT.md` and
+`CEDAR_PRESSURE_BOUNDARY_HANDOFF.json`.
 
 ## Why this task exists
 

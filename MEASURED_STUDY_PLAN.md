@@ -1,6 +1,6 @@
 # Cedar artifact-coupling measured study plan
 
-Status: locked pending an eligible, separately audited Cedar pressure boundary.
+Status: authentic Cedar pressure boundary qualified; measured GPU execution withheld pending exact result commit and separate authorization.
 
 ## System question
 
