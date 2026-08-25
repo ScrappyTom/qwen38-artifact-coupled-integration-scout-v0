@@ -1,0 +1,68 @@
+# Evidence Integration Ledger
+
+**R01: Legal Order, Recommendation, Execution, Check, and Closure Authority**
+[S01] designates the county incident commander as the sole legal authority for evacuation orders, requiring fire-behavior recommendation input before issuance [S01]. Supporting branches (sheriff, public health, shelter) execute specific functions but cannot independently declare readiness [S01]. Vendors and dashboards are advisory only [S01]. Handoffs require acknowledged incident-action-plan revisions; unacknowledged handoffs block new readiness declarations [S01]. [S16] confirms that submission or model-authored ledgers lack closure authority [S16].
+*   **Disposition:** Bound.
+*   **Qualifications:** Distinguish recommendation, legal order, execution, verification, and closure [S01][S16].
+*   **Blockers:** None.
+
+**R02: Hazard Triggers, Forecast Binding, Expiry, and Zone Sequencing**
+[S02] defines conservative triggers for mandatory evacuation (e.g., <6h for Zone A) distinct from voluntary warnings [S02]. [S15] provides wind-shift ensemble data and forecast update cadence to inform the commander, but does not replace legal authority [S01][S15]. Triggers are bound to specific zone revisions; expiry requires explicit cancellation by IC [S01].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble values, not median forecasts [S02][S15].
+*   **Blockers:** None.
+
+**R03: Population Basis, Tourists, Overlapping Assistance, Survey Uncertainty, and Clearance Demand**
+[S03] provides zone populations (A: 5,280; B: 8,940; C: 12,600) and tourist estimates [S03]. Medical assistance categories (mobility, oxygen, etc.) overlap and must not be summed as distinct individuals [S03]. Survey coverage is incomplete, requiring uncertainty allowances for clearance demand [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not double-count overlapping medical needs [S03]. Account for tourist variability [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks, Throughput, Contraflow, and Route-Loss Contingencies**
+[S04] identifies Mill Junction as a shared bottleneck; capacities of feeding roads (North Bridge, South Pass) cannot be summed [S04]. Observed exercise throughput is 1,180 veh/h [S04][S13]. Contraflow requires sheriff closure and setup time [S04]. Route-loss contingencies require alternative paths validated by current checks [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use observed exercise throughput, not nominal capacity [S04][S13].
+*   **Blockers:** North Bridge engineering inspection remains open [S16].
+
+**R05: Fleet Matching, Driver Duty, Cycle Time, Bridge Constraints, and Relief Capacity**
+[S03] requires fleet reservation by person/accommodation [S03]. [S16] identifies “complete driver roster” as a blocking blocker [S16]. No current evidence specifies driver duty cycles, cycle times, or relief capacity [S16]. Bridge constraints on vehicle weight/size are not detailed in available sources [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Complete driver roster missing [S16]. Driver duty and cycle time data absent [S16].
+
+**R06: Shelter Capacity, Accessible Placements, Medical Handoffs, Filtration, Power, and Relocation**
+[S06] defines smoke-safe shelter capacity requirements [S06]. [S16] lists “Ridge School filter repair” and “person-level oxygen matching” as blockers [S16]. Medical handoffs require public health ownership [S01][S16]. Accessible placements must match person/accommodation needs [S03][S06].
+*   **Disposition:** Missing.
+*   **Blockers:** Ridge School filter repair incomplete [S16]. Person-level oxygen matching unresolved [S16].
+
+**R07: Redundant Multilingual Warning, Door-Knock Timing, Radio Interoperability, and Receipt Evidence**
+[S08] mandates redundant multilingual warning channels [S08]. Door-knock timing must align with zone sequencing [S03][S08]. Radio interoperability is a blocking blocker per [S16]. Receipt/understanding evidence requires community support mechanisms [S08]. One zone revision is permitted under IC authority [S01].
+*   **Disposition:** Missing.
+*   **Blockers:** Volunteer-radio identifier test incomplete [S16]. Multilingual channel redundancy unverified [S08][S16].
+
+**R08: Fuel and Power Continuity, Observed Delay, Staging, Alternate Routes, and Coupled Asset Effects**
+[S09] addresses fuel and power continuity requirements [S09]. [S16] lists “alternate fuel confirmation” as a blocker [S16]. Observed delays in resupply must inform staging decisions [S09][S16]. Coupled asset effects (e.g., fuel shortages impacting medical generators) are not fully resolved [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Alternate fuel confirmation incomplete [S16]. Observed delay data integration pending [S09][S16].
+
+**R09: Animals and Service Animals Without Delaying Human Evacuation or Double-Counting**
+[S10] addresses household pets, livestock, and service animals [S10]. Service animals must be separated from general pet logistics to avoid delaying human evacuation [S10]. Route and shelter capacity must not be double-counted for animal vs. human needs [S10][S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Service animals handled with handlers; pets in separate logistics [S10].
+*   **Blockers:** None.
+
+**R10: Private Accountability, Public Aggregation, Self-Evacuation, Restricted Health Data, and Deletion Proof**
+[S12] mandates private accountability records with restricted medical data [S12]. Public aggregation must exclude sensitive health information [S12]. Self-evacuation verification is required without publishing destinations [S12]. Retention and deletion proofs are mandatory for operational rosters [S12].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not expose medical data publicly [S12]. Reconcile private records with public aggregation securely [S12].
+*   **Blockers:** Deletion proof mechanisms unverified [S12].
+
+**R11: Concrete 48-Hour Sequence, Owners, Effects, Checks, Repair, Recheck, and Contingencies**
+[S01] defines authority timelines for zone sequencing [S01]. [S16] classifies the package as not ready due to open blockers, preventing a concrete 48-hour sequence with verified checks [S16]. Owners (IC, sheriff, public health, shelter) are defined but effects and rechecks are pending resolution of blockers [S01][S16].
+*   **Disposition:** Missing.
+*   **Blockers:** All six hard blockers in [S16] remain open, preventing a validated 48-hour execution sequence.
+
+**R12: Verification, Readiness Blockers, Uncertainties, and Explicit Falsifiers**
+[S16] provides the independent readiness review, classifying the package as “not ready” [S16]. Open blockers include North Bridge inspection, driver roster, shelter filter, radio interoperability, fuel delivery, and oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires resolution of all hard blockers, effect incorporation, current recheck, and IC acceptance [S16].
+*   **Disposition:** Not Ready.
+*   **Qualifications:** Submission or model-authored ledger does not constitute readiness authority [S16].
+*   **Blockers:** All six hard blockers in [S16] remain open. No current integrated check exists [S16].

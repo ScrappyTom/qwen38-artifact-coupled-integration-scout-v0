@@ -1,0 +1,325 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the Cedar Valley evacuation decision.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S01, S02, S03, S04, S05, S12, S13, S14, S15, S16. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+[S01] designates Incident Command (IC) as sole authority for evacuation orders; [S02] confirms IC approval is required for cancellation, necessitating field confirmation. Vendors and dashboards are advisory only [S01].
+*   **Disposition:** Bound.
+*   **Blockers:** None.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S02] defines conservative triggers: Zone A mandatory <6h or spotting across Dry Creek; Zone B mandatory <5h, prepare >9h. The governing trigger is the conservative envelope (5.8h for Zone A), not the median (7.5h) [S02]. Forecast updates accelerate orders but cannot silently cancel them [S02].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble, not median [S02].
+*   **Blockers:** None.
+
+**R03: Population Basis & Assistance Demand**
+[S03] lists Zone A (5,280), B (8,940), C (12,600) residents plus up to 2,100 tourists [S03]. Medical categories (no vehicle, mobility, oxygen, dialysis) overlap and must not be summed as independent people [S03]. Survey coverage is 91%; an uncertainty allowance is required for unreported households [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum overlapping medical categories as separate individuals [S03]. Tourist demand is time-dependent [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] identifies Mill Junction as the bottleneck (1,500 veh/h). North Bridge (1,100 veh/h) and South Pass (850 veh/h) feed into it; capacities cannot be added [S04]. Exercise throughput was 1,180 veh/h [S04][S13]. Contraflow requires sheriff closure and 45 minutes setup [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use exercise throughput until field-tested otherwise [S04][S13].
+*   **Blockers:** None.
+
+**R05: Fleet Matching & Driver Duty**
+[S03] requires fleet reservation by person/accommodation, not household count [S03]. [S16] lists "complete driver roster" as a blocker but provides no operational data [S16]. No evidence for driver duty cycles or relief capacity exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** No fleet matching logic or driver duty data in [S03], [S04], [S16].
+
+**R06: Shelter Capacity & Medical Handoffs**
+[S02] notes air-quality shelter viability can remove destinations, altering road demand [S02]. [S16] lists "Ridge School filter repair" and "person-level oxygen matching" as blockers but provides no operational data [S16]. No evidence for smoke-safe capacity or medical handoffs exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity [S16].
+
+**R07: Warnings & Community Support**
+[S16] lists "volunteer-radio identifier test" as a blocker but provides no operational data [S16]. No evidence for multilingual warning, door-knock timing, or receipt/understanding evidence exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind communication strategy [S16].
+
+**R08: Fuel & Power Continuity**
+[S16] lists "alternate fuel confirmation" as a blocker but provides no operational data [S16]. No evidence for observed delays, local staging, or coupled asset effects exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind resource contracting [S16].
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+[S12] mandates private accountability records with restricted medical data, prohibiting public exposure of health status [S12]. Minimum retention is 7 days post-closure; operational rosters must be deleted within 30 days [S12]. Self-evacuation must be verified without publishing destinations [S12].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not expose medical data publicly [S12]. Reconcile private records with public aggregation [S12].
+*   **Blockers:** Deletion proof missing for specific data classes [S12].
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03], [S04], or [S16]. [S16] classifies the package as not ready due to open blockers [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline [S16].
+
+**R12: Verification & Readiness Blockers**
+[S16] classifies the package as not ready. Open blockers include North Bridge engineering inspection, complete driver roster, Ridge School filter repair, volunteer-radio identifier test, alternate fuel confirmation, and person-level oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires every hard blocker resolved, effects incorporated, a current integrated exercise or justified bounded check, and incident-command acceptance [S16]. Submission or a model-authored ledger cannot create that authority [S16].
+*   **Disposition:** Not Ready.
+*   **Blockers:** All six blockers in [S16] remain open.
+
+**Cross-Source Relationships & Contradictions**
+[S03] defines demand; [S04] defines supply constraints; [S01] defines authority; [S16] defines readiness status. No contradictions exist between these sources. However, all four lack evidence for fleet specifics (R05), shelter/medical (R06), communications (R07), resources (R08), animals (R09), data privacy (R10), execution sequence (R11). The integration is incomplete for a full evacuation decision.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent in [S03]/[S04].
+*   Fleet matching logic linking [S03] demand to vehicle capacity is absent.
+*   Shelter location and capacity data are entirely missing from provided sources.
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S14:1-70+S15:1-70","object_version":"e9d75f4a73b35f3a549e775401c205d8e7efd933d7c801fddfb31110b7b30a59","result_id":"RESULT-015","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S14","start_line":1},{"end_line":70,"source_id":"S15","start_line":1}],"total_source_bytes":9387}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S14","source_path":"cedar_sources/S14_COST_CONTRACTS.md","source_sha256":"b01cae551ccb98947a3db2365ff446f9595bf97fa50448db7d859c6ada50a3b2","source_size_bytes":4743,"start_line":1}
+--- exact source range ---
+# Emergency contracts, cost ceilings, and procurement authority
+
+## Frozen findings
+
+The incident commander may authorize up to $750,000 of life-safety expenditure without board approval. The current forty-eight-hour plan is estimated at $612,000 before animal overflow and alternate fuel supply.
+The lowest-cost bus vendor cannot provide lift-equipped vehicles. The alternate fuel supplier costs 18 percent more but uses County 12 instead of smoke-prone South Pass.
+Cost optimization may not remove a hard accessibility, medical, communications, or continuity control. Costs beyond authority require escalation but do not justify silently declaring an unsafe plan ready.
+
+## Governing relationships
+
+Contract choices alter fleet accessibility and fuel-route resilience. They must appear in the same candidate effects and checks as the operational plan.
+Migration-only or incident-only costs need a retirement condition so temporary capacity does not become ungoverned standing spend.
+
+## Operational evidence
+
+| record | category | units | cost | authority | contract |
+|---|---|---|---|---|---|
+| COST-000 | bus-callout | 4 | $1800 | incident-authority-required | contract-r4 |
+| COST-001 | accessible-cot | 5 | $1937 | preapproved | contract-r4 |
+| COST-002 | filter-bank | 6 | $2074 | preapproved | contract-r4 |
+| COST-003 | fuel-staging | 7 | $2211 | preapproved | contract-r4 |
+| COST-004 | animal-trailer | 8 | $2348 | preapproved | contract-r4 |
+| COST-005 | translation | 9 | $2485 | incident-authority-required | contract-r4 |
+| COST-006 | bus-callout | 10 | $2622 | preapproved | contract-r4 |
+| COST-007 | accessible-cot | 11 | $2759 | preapproved | contract-r4 |
+| COST-008 | filter-bank | 12 | $2896 | preapproved | contract-r4 |
+| COST-009 | fuel-staging | 13 | $3033 | preapproved | contract-r4 |
+| COST-010 | animal-trailer | 14 | $3170 | incident-authority-required | contract-r4 |
+| COST-011 | translation | 15 | $3307 | preapproved | contract-r4 |
+| COST-012 | bus-callout | 16 | $3444 | preapproved | contract-r4 |
+| COST-013 | accessible-cot | 4 | $3581 | preapproved | contract-r4 |
+| COST-014 | filter-bank | 5 | $3718 | preapproved | contract-r4 |
+| COST-015 | fuel-staging | 6 | $3855 | incident-authority-required | contract-r4 |
+| COST-016 | animal-trailer | 7 | $3992 | preapproved | contract-r4 |
+| COST-017 | translation | 8 | $4129 | preapproved | contract-r4 |
+| COST-018 | bus-callout | 9 | $4266 | preapproved | contract-r4 |
+| COST-019 | accessible-cot | 10 | $4403 | preapproved | contract-r4 |
+| COST-020 | filter-bank | 11 | $4540 | incident-authority-required | contract-r5 |
+| COST-021 | fuel-staging | 12 | $4677 | preapproved | contract-r5 |
+| COST-022 | animal-trailer | 13 | $4814 | preapproved | contract-r5 |
+| COST-023 | translation | 14 | $4951 | preapproved | contract-r5 |
+| COST-024 | bus-callout | 15 | $5088 | preapproved | contract-r5 |
+| COST-025 | accessible-cot | 16 | $5225 | incident-authority-required | contract-r5 |
+| COST-026 | filter-bank | 4 | $5362 | preapproved | contract-r5 |
+| COST-027 | fuel-staging | 5 | $5499 | preapproved | contract-r5 |
+| COST-028 | animal-trailer | 6 | $5636 | preapproved | contract-r5 |
+| COST-029 | translation | 7 | $5773 | preapproved | contract-r5 |
+| COST-030 | bus-callout | 8 | $5910 | incident-authority-required | contract-r5 |
+| COST-031 | accessible-cot | 9 | $6047 | preapproved | contract-r5 |
+| COST-032 | filter-bank | 10 | $6184 | preapproved | contract-r5 |
+| COST-033 | fuel-staging | 11 | $6321 | preapproved | contract-r5 |
+| COST-034 | animal-trailer | 12 | $6458 | preapproved | contract-r5 |
+| COST-035 | translation | 13 | $6595 | incident-authority-required | contract-r5 |
+| COST-036 | bus-callout | 14 | $6732 | preapproved | contract-r5 |
+| COST-037 | accessible-cot | 15 | $6869 | preapproved | contract-r5 |
+| COST-038 | filter-bank | 16 | $7006 | preapproved | contract-r5 |
+| COST-039 | fuel-staging | 4 | $7143 | preapproved | contract-r5 |
+| COST-040 | animal-trailer | 5 | $7280 | incident-authority-required | contract-r6 |
+| COST-041 | translation | 6 | $7417 | preapproved | contract-r6 |
+| COST-042 | bus-callout | 7 | $7554 | preapproved | contract-r6 |
+| COST-043 | accessible-cot | 8 | $7691 | preapproved | contract-r6 |
+| COST-044 | filter-bank | 9 | $7828 | preapproved | contract-r6 |
+| COST-045 | fuel-staging | 10 | $7965 | incident-authority-required | contract-r6 |
+| COST-046 | animal-trailer | 11 | $8102 | preapproved | contract-r6 |
+| COST-047 | translation | 12 | $8239 | preapproved | contract-r6 |
+
+## Decision constraints
+
+State the cost envelope, authority, contingency, and controls that cannot be traded away.
+Treat price, capability, route, and activation time as a joint selection.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S15","source_path":"cedar_sources/S15_WEATHER_ENSEMBLE.md","source_sha256":"c4a8a9397f8b73ee2575405d377081eadaa4a7340339eb8db1b59c330027cdc6","source_size_bytes":4172,"start_line":1}
+--- exact source range ---
+# Wind-shift ensemble and forecast update cadence
+
+## Frozen findings
+
+Forecasts update every ninety minutes. The base case keeps the fire north of Zone B, but 42 percent of current ensemble members shift winds after 16:00 and shorten Zone A arrival below six hours.
+A later update can improve the median while widening the worst-case range. The trigger uses the conservative operational envelope until field observations rule out the adverse branch.
+Aircraft infrared mapping can lag by two hours under smoke. Absence of a new perimeter is not proof that fire spread stopped.
+
+## Governing relationships
+
+Order timing in S01–S02, road viability in S04, and air quality in S11 all depend on the same forecast revision. Mixing revisions produces an incoherent plan.
+The verification packet must name the forecast cycle and expire it at the next update or material field observation.
+
+## Operational evidence
+
+| record | cycle | wind | shift probability | arrival | envelope |
+|---|---|---|---|---|---|
+| WX-000 | cycle-00 | 14mph | 18% | 4.5h | base-case |
+| WX-001 | cycle-01 | 19mph | 29% | 5.0h | base-case |
+| WX-002 | cycle-02 | 24mph | 40% | 5.4h | conservative-envelope |
+| WX-003 | cycle-03 | 29mph | 51% | 5.8h | conservative-envelope |
+| WX-004 | cycle-04 | 34mph | 62% | 6.3h | conservative-envelope |
+| WX-005 | cycle-05 | 39mph | 73% | 6.8h | conservative-envelope |
+| WX-006 | cycle-06 | 44mph | 21% | 7.2h | base-case |
+| WX-007 | cycle-07 | 18mph | 32% | 7.7h | base-case |
+| WX-008 | cycle-08 | 23mph | 43% | 8.1h | conservative-envelope |
+| WX-009 | cycle-09 | 28mph | 54% | 8.6h | conservative-envelope |
+| WX-010 | cycle-10 | 33mph | 65% | 9.0h | conservative-envelope |
+| WX-011 | cycle-11 | 38mph | 76% | 9.4h | conservative-envelope |
+| WX-012 | cycle-12 | 43mph | 24% | 4.5h | base-case |
+| WX-013 | cycle-13 | 17mph | 35% | 5.0h | base-case |
+| WX-014 | cycle-14 | 22mph | 46% | 5.4h | conservative-envelope |
+| WX-015 | cycle-15 | 27mph | 57% | 5.8h | conservative-envelope |
+| WX-016 | cycle-16 | 32mph | 68% | 6.3h | conservative-envelope |
+| WX-017 | cycle-17 | 37mph | 79% | 6.8h | conservative-envelope |
+| WX-018 | cycle-18 | 42mph | 27% | 7.2h | base-case |
+| WX-019 | cycle-19 | 16mph | 38% | 7.7h | base-case |
+| WX-020 | cycle-20 | 21mph | 49% | 8.1h | conservative-envelope |
+| WX-021 | cycle-21 | 26mph | 60% | 8.6h | conservative-envelope |
+| WX-022 | cycle-22 | 31mph | 71% | 9.0h | conservative-envelope |
+| WX-023 | cycle-23 | 36mph | 19% | 9.4h | base-case |
+| WX-024 | cycle-24 | 41mph | 30% | 4.5h | base-case |
+| WX-025 | cycle-25 | 15mph | 41% | 5.0h | conservative-envelope |
+| WX-026 | cycle-26 | 20mph | 52% | 5.4h | conservative-envelope |
+| WX-027 | cycle-27 | 25mph | 63% | 5.8h | conservative-envelope |
+| WX-028 | cycle-28 | 30mph | 74% | 6.3h | conservative-envelope |
+| WX-029 | cycle-29 | 35mph | 22% | 6.8h | base-case |
+| WX-030 | cycle-30 | 40mph | 33% | 7.2h | base-case |
+| WX-031 | cycle-31 | 14mph | 44% | 7.7h | conservative-envelope |
+| WX-032 | cycle-32 | 19mph | 55% | 8.1h | conservative-envelope |
+| WX-033 | cycle-33 | 24mph | 66% | 8.6h | conservative-envelope |
+| WX-034 | cycle-34 | 29mph | 77% | 9.0h | conservative-envelope |
+| WX-035 | cycle-35 | 34mph | 25% | 9.4h | base-case |
+| WX-036 | cycle-36 | 39mph | 36% | 4.5h | base-case |
+| WX-037 | cycle-37 | 44mph | 47% | 5.0h | conservative-envelope |
+| WX-038 | cycle-38 | 18mph | 58% | 5.4h | conservative-envelope |
+| WX-039 | cycle-39 | 23mph | 69% | 5.8h | conservative-envelope |
+| WX-040 | cycle-40 | 28mph | 80% | 6.3h | conservative-envelope |
+| WX-041 | cycle-41 | 33mph | 28% | 6.8h | base-case |
+| WX-042 | cycle-42 | 38mph | 39% | 7.2h | base-case |
+| WX-043 | cycle-43 | 43mph | 50% | 7.7h | conservative-envelope |
+| WX-044 | cycle-44 | 17mph | 61% | 8.1h | conservative-envelope |
+| WX-045 | cycle-45 | 22mph | 72% | 8.6h | conservative-envelope |
+| WX-046 | cycle-46 | 27mph | 20% | 9.0h | base-case |
+| WX-047 | cycle-47 | 32mph | 31% | 9.4h | base-case |
+
+## Decision constraints
+
+Bind decisions to one forecast cycle and state expiry and adverse-branch actions.
+Do not cancel protective actions from a better median alone.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

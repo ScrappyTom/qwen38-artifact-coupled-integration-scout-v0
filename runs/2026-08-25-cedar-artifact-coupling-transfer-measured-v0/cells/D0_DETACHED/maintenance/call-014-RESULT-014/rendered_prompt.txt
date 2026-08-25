@@ -1,0 +1,324 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the Cedar Valley evacuation decision.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S01, S02, S03, S04, S05, S12, S13, S16. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+[S01] designates the Incident Commander (IC) as the sole authority for evacuation orders. [S02] confirms IC approval is required for cancellation, which needs field confirmation. Vendors and dashboards are advisory only [S01].
+*   **Disposition:** Bound.
+*   **Blockers:** None.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S02] defines conservative triggers: Zone A mandatory <6h or spotting across Dry Creek; Zone B mandatory <5h, prepare >9h. The governing trigger is the conservative envelope (5.8h for Zone A), not the median (7.5h) [S02]. Forecast updates accelerate orders but cannot silently cancel them [S02].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble, not median [S02].
+*   **Blockers:** None.
+
+**R03: Population Basis & Assistance Demand**
+[S03] lists Zone A (5,280), B (8,940), C (12,600) residents plus up to 2,100 tourists [S03]. Medical categories (no vehicle, mobility, oxygen, dialysis) overlap and must not be summed as independent people [S03]. Survey coverage is 91%; an uncertainty allowance is required for unreported households [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum overlapping medical categories as separate individuals [S03]. Tourist demand is time-dependent [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] identifies Mill Junction as the bottleneck (1,500 veh/h). North Bridge (1,100 veh/h) and South Pass (850 veh/h) feed into it; capacities cannot be added [S04]. Exercise throughput was 1,180 veh/h [S04]. Contraflow requires sheriff closure and 45 minutes setup [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use exercise throughput until field-tested otherwise [S04].
+*   **Blockers:** None.
+
+**R05: Fleet Matching & Driver Duty**
+[S03] requires fleet reservation by person/accommodation, not household count [S03]. [S16] lists "complete driver roster" as a blocker but provides no operational data [S16]. No evidence for driver duty cycles or relief capacity exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** No fleet matching logic or driver duty data in [S03], [S04], [S16].
+
+**R06: Shelter Capacity & Medical Handoffs**
+[S02] notes air-quality shelter viability can remove destinations, altering road demand [S02]. [S16] lists "Ridge School filter repair" and "person-level oxygen matching" as blockers but provides no operational data [S16]. No evidence for smoke-safe capacity or medical handoffs exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity [S16].
+
+**R07: Warnings & Community Support**
+[S16] lists "volunteer-radio identifier test" as a blocker but provides no operational data [S16]. No evidence for multilingual warning, door-knock timing, or receipt/understanding evidence exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind communication strategy [S16].
+
+**R08: Fuel & Power Continuity**
+[S16] lists "alternate fuel confirmation" as a blocker but provides no operational data [S16]. No evidence for observed delays, local staging, or coupled asset effects exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind resource contracting [S16].
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+No evidence for private accountability, public aggregation, restricted health data handling, reconciliation, retention, or deletion proof is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind data management protocol.
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03], [S04], or [S16]. [S16] classifies the package as not ready due to open blockers [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline [S16].
+
+**R12: Verification & Readiness Blockers**
+[S16] classifies the package as not ready. Open blockers include North Bridge engineering inspection, complete driver roster, Ridge School filter repair, volunteer-radio identifier test, alternate fuel confirmation, and person-level oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires every hard blocker resolved, effects incorporated, a current integrated exercise or justified bounded check, and incident-command acceptance [S16]. Submission or a model-authored ledger cannot create that authority [S16].
+*   **Disposition:** Not Ready.
+*   **Blockers:** All six blockers in [S16] remain open.
+
+**Cross-Source Relationships & Contradictions**
+[S03] defines demand; [S04] defines supply constraints; [S01] defines authority; [S16] defines readiness status. No contradictions exist between these sources. However, all four lack evidence for fleet specifics (R05), shelter/medical (R06), communications (R07), resources (R08), animals (R09), data privacy (R10), execution sequence (R11). The integration is incomplete for a full evacuation decision.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent in [S03]/[S04].
+*   Fleet matching logic linking [S03] demand to vehicle capacity is absent.
+*   Shelter location and capacity data are entirely missing from provided sources.
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S12:1-70+S13:1-70","object_version":"c3a0df73bf1f43443f122a61b7da0aad6acc2d1695ac99d05dc4a2d2abcb3603","result_id":"RESULT-014","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S12","start_line":1},{"end_line":70,"source_id":"S13","start_line":1}],"total_source_bytes":10418}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S12","source_path":"cedar_sources/S12_DATA_REUNIFICATION.md","source_sha256":"cfaab1b39c0a343b59df16ac55b645b94a08b758252b50b972f25daabdb3d0a9","source_size_bytes":5433,"start_line":1}
+--- exact source range ---
+# Evacuee accountability, privacy, and reunification
+
+## Frozen findings
+
+The operation needs household status, transport assignment, shelter check-in, and reunification contact. Medical accommodations are restricted and may not appear in the public missing-person feed.
+The minimum retention period is seven days after incident closure; operational rosters must be deleted within thirty days unless a legal hold applies. The last exercise retained exported spreadsheets for ninety-two days.
+A person may be safe but not at a county shelter. Accountability must accept verified self-evacuation without publishing a destination or health status.
+
+## Governing relationships
+
+Transport and shelter effects should update one private accountability record, but public reporting must use aggregated status. S07 medical matching consumes restricted fields under public-health authority.
+A plan mutation to identifiers, export, or retention invalidates the prior privacy check.
+
+## Operational evidence
+
+| record | data class | collection | retention | access | status |
+|---|---|---|---|---|---|
+| DATA-000 | household-status | minimum-necessary | 7d | operational | deletion-proof-missing |
+| DATA-001 | medical-accommodation | minimum-necessary | 8d | restricted | complete |
+| DATA-002 | transport-assignment | minimum-necessary | 9d | operational | complete |
+| DATA-003 | shelter-checkin | minimum-necessary | 10d | operational | complete |
+| DATA-004 | reunification-contact | minimum-necessary | 11d | operational | complete |
+| DATA-005 | household-status | minimum-necessary | 12d | operational | complete |
+| DATA-006 | medical-accommodation | minimum-necessary | 13d | restricted | complete |
+| DATA-007 | transport-assignment | minimum-necessary | 14d | operational | complete |
+| DATA-008 | shelter-checkin | minimum-necessary | 15d | operational | complete |
+| DATA-009 | reunification-contact | minimum-necessary | 16d | operational | complete |
+| DATA-010 | household-status | minimum-necessary | 17d | operational | complete |
+| DATA-011 | medical-accommodation | minimum-necessary | 18d | restricted | complete |
+| DATA-012 | transport-assignment | minimum-necessary | 19d | operational | deletion-proof-missing |
+| DATA-013 | shelter-checkin | minimum-necessary | 20d | operational | complete |
+| DATA-014 | reunification-contact | minimum-necessary | 21d | operational | complete |
+| DATA-015 | household-status | minimum-necessary | 22d | operational | complete |
+| DATA-016 | medical-accommodation | minimum-necessary | 23d | restricted | complete |
+| DATA-017 | transport-assignment | minimum-necessary | 24d | operational | complete |
+| DATA-018 | shelter-checkin | minimum-necessary | 25d | operational | complete |
+| DATA-019 | reunification-contact | minimum-necessary | 26d | operational | complete |
+| DATA-020 | household-status | minimum-necessary | 27d | operational | complete |
+| DATA-021 | medical-accommodation | minimum-necessary | 28d | restricted | complete |
+| DATA-022 | transport-assignment | minimum-necessary | 29d | operational | complete |
+| DATA-023 | shelter-checkin | minimum-necessary | 30d | operational | complete |
+| DATA-024 | reunification-contact | minimum-necessary | 7d | operational | deletion-proof-missing |
+| DATA-025 | household-status | minimum-necessary | 8d | operational | complete |
+| DATA-026 | medical-accommodation | minimum-necessary | 9d | restricted | complete |
+| DATA-027 | transport-assignment | minimum-necessary | 10d | operational | complete |
+| DATA-028 | shelter-checkin | minimum-necessary | 11d | operational | complete |
+| DATA-029 | reunification-contact | minimum-necessary | 12d | operational | complete |
+| DATA-030 | household-status | minimum-necessary | 13d | operational | complete |
+| DATA-031 | medical-accommodation | minimum-necessary | 14d | restricted | complete |
+| DATA-032 | transport-assignment | minimum-necessary | 15d | operational | complete |
+| DATA-033 | shelter-checkin | minimum-necessary | 16d | operational | complete |
+| DATA-034 | reunification-contact | minimum-necessary | 17d | operational | complete |
+| DATA-035 | household-status | minimum-necessary | 18d | operational | complete |
+| DATA-036 | medical-accommodation | minimum-necessary | 19d | restricted | deletion-proof-missing |
+| DATA-037 | transport-assignment | minimum-necessary | 20d | operational | complete |
+| DATA-038 | shelter-checkin | minimum-necessary | 21d | operational | complete |
+| DATA-039 | reunification-contact | minimum-necessary | 22d | operational | complete |
+| DATA-040 | household-status | minimum-necessary | 23d | operational | complete |
+| DATA-041 | medical-accommodation | minimum-necessary | 24d | restricted | complete |
+| DATA-042 | transport-assignment | minimum-necessary | 25d | operational | complete |
+| DATA-043 | shelter-checkin | minimum-necessary | 26d | operational | complete |
+| DATA-044 | reunification-contact | minimum-necessary | 27d | operational | complete |
+| DATA-045 | household-status | minimum-necessary | 28d | operational | complete |
+| DATA-046 | medical-accommodation | minimum-necessary | 29d | restricted | complete |
+| DATA-047 | transport-assignment | minimum-necessary | 30d | operational | complete |
+
+## Decision constraints
+
+Specify minimum fields, access roles, reconciliation, deletion proof, and public/private separation.
+Do not equate shelter check-in with complete zone accountability.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S13","source_path":"cedar_sources/S13_EXERCISE_REVIEW.md","source_sha256":"56498133050c8c08dcf8661d0c4c83d972d56b3da4ab119802ed179bac2715a3","source_size_bytes":4510,"start_line":1}
+--- exact source range ---
+# Full-scale exercise defects and repair evidence
+
+## Frozen findings
+
+Exercise Cedar-6 achieved only 1,180 vehicles per hour at Mill Junction, delayed lift-bus dispatch by ninety-six minutes, and accounted for 91 percent of households by the six-hour mark.
+County radio voice worked, but volunteer unit identifiers did not cross the gateway. Civic Arena opened, while Ridge School's filter test failed and fuel arrived after seventeen hours.
+A corrective-action spreadsheet marks several items closed based on owner attestation. Readiness requires current execution evidence for the exact plan rather than a status label.
+
+## Governing relationships
+
+The observed exercise values override nominal road, fleet, communications, shelter, and fuel targets until a repair is rechecked. One exercise therefore links several evidence domains.
+Changing the zone order or fleet roster after a repair makes the old exercise only historical evidence.
+
+## Operational evidence
+
+| record | defect | zone | delay | status | exercise binding |
+|---|---|---|---|---|---|
+| EX-000 | merge-throughput | A-North | 38m | open | exercise-r3 |
+| EX-001 | lift-dispatch | A-River | 51m | repaired | exercise-r3 |
+| EX-002 | radio-handoff | B-East | 64m | repaired | exercise-r3 |
+| EX-003 | family-accountability | B-Center | 77m | repaired | exercise-r3 |
+| EX-004 | shelter-filter | C-South | 90m | open | exercise-r3 |
+| EX-005 | fuel-arrival | C-Ridge | 103m | open | exercise-r3 |
+| EX-006 | merge-throughput | A-North | 116m | open | exercise-r3 |
+| EX-007 | lift-dispatch | A-River | 129m | open | exercise-r3 |
+| EX-008 | radio-handoff | B-East | 142m | repaired | exercise-r3 |
+| EX-009 | family-accountability | B-Center | 155m | repaired | exercise-r3 |
+| EX-010 | shelter-filter | C-South | 49m | repaired | exercise-r3 |
+| EX-011 | fuel-arrival | C-Ridge | 62m | open | exercise-r3 |
+| EX-012 | merge-throughput | A-North | 75m | open | exercise-r3 |
+| EX-013 | lift-dispatch | A-River | 88m | open | exercise-r3 |
+| EX-014 | radio-handoff | B-East | 101m | open | exercise-r3 |
+| EX-015 | family-accountability | B-Center | 114m | repaired | exercise-r3 |
+| EX-016 | shelter-filter | C-South | 127m | repaired | exercise-r4 |
+| EX-017 | fuel-arrival | C-Ridge | 140m | repaired | exercise-r4 |
+| EX-018 | merge-throughput | A-North | 153m | open | exercise-r4 |
+| EX-019 | lift-dispatch | A-River | 47m | open | exercise-r4 |
+| EX-020 | radio-handoff | B-East | 60m | open | exercise-r4 |
+| EX-021 | family-accountability | B-Center | 73m | open | exercise-r4 |
+| EX-022 | shelter-filter | C-South | 86m | repaired | exercise-r4 |
+| EX-023 | fuel-arrival | C-Ridge | 99m | repaired | exercise-r4 |
+| EX-024 | merge-throughput | A-North | 112m | repaired | exercise-r4 |
+| EX-025 | lift-dispatch | A-River | 125m | open | exercise-r4 |
+| EX-026 | radio-handoff | B-East | 138m | open | exercise-r4 |
+| EX-027 | family-accountability | B-Center | 151m | open | exercise-r4 |
+| EX-028 | shelter-filter | C-South | 45m | open | exercise-r4 |
+| EX-029 | fuel-arrival | C-Ridge | 58m | repaired | exercise-r4 |
+| EX-030 | merge-throughput | A-North | 71m | repaired | exercise-r4 |
+| EX-031 | lift-dispatch | A-River | 84m | repaired | exercise-r4 |
+| EX-032 | radio-handoff | B-East | 97m | open | exercise-r5 |
+| EX-033 | family-accountability | B-Center | 110m | open | exercise-r5 |
+| EX-034 | shelter-filter | C-South | 123m | open | exercise-r5 |
+| EX-035 | fuel-arrival | C-Ridge | 136m | open | exercise-r5 |
+| EX-036 | merge-throughput | A-North | 149m | repaired | exercise-r5 |
+| EX-037 | lift-dispatch | A-River | 43m | repaired | exercise-r5 |
+| EX-038 | radio-handoff | B-East | 56m | repaired | exercise-r5 |
+| EX-039 | family-accountability | B-Center | 69m | open | exercise-r5 |
+| EX-040 | shelter-filter | C-South | 82m | open | exercise-r5 |
+| EX-041 | fuel-arrival | C-Ridge | 95m | open | exercise-r5 |
+| EX-042 | merge-throughput | A-North | 108m | open | exercise-r5 |
+| EX-043 | lift-dispatch | A-River | 121m | repaired | exercise-r5 |
+| EX-044 | radio-handoff | B-East | 134m | repaired | exercise-r5 |
+| EX-045 | family-accountability | B-Center | 147m | repaired | exercise-r5 |
+| EX-046 | shelter-filter | C-South | 41m | open | exercise-r5 |
+| EX-047 | fuel-arrival | C-Ridge | 54m | open | exercise-r5 |
+
+## Decision constraints
+
+Carry every material exercise defect into the plan with owner, repair, current recheck, and blocking status.
+Do not count owner attestation as operational proof.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

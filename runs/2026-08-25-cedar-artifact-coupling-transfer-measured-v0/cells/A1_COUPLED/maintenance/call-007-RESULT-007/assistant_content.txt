@@ -1,0 +1,70 @@
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+No evidence for legal order, recommendation, execution, check, or closure authority is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind legal authority; no source-grounded basis for order issuance.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S15] mandates binding decisions to a specific forecast cycle, with expiry at the next update or material field observation [S15]. The conservative operational envelope applies until field observations rule out adverse branches; a better median alone does not cancel protective actions [S15]. Aircraft infrared mapping can lag by two hours under smoke, so absence of a new perimeter is not proof fire spread stopped [S15]. [S04] notes South Pass closes under smoke visibility below 150 meters and North Bridge excludes full-size buses above 54°C [S04].
+*   **Disposition:** Partial. Trigger logic exists in [S15], but zone sequencing specific to fire behavior is absent.
+*   **Qualifications:** Forecast revisions must not be mixed; adverse-branch actions are required [S15]. Smoke and heat conditions invalidate routes post-plan [S04].
+*   **Blockers:** Missing explicit fire triggers independent of weather ensemble; no expiry logic defined for physical route constraints.
+
+**R03: Population Basis & Assistance Demand**
+[S03] specifies Zone A (5,280), B (8,940), C (12,600) residents plus up to 2,100 tourists [S03]. Survey coverage is 91% [S03]. Categories (no vehicle, mobility, oxygen, dialysis) overlap and must not be summed as independent people [S03].
+*   **Disposition:** Accepted with qualification.
+*   **Qualifications:** Must carry uncertainty allowance for unreported households; cannot treat unregistered as self-evacuating [S03]. Tourist demand is time-dependent [S03].
+*   **Blockers:** None identified in source, but overlap logic must be enforced to avoid double-counting.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] establishes Mill Junction as the system bottleneck with a measured sustainable throughput of 1,500 vehicles/hour [S04]. North Bridge (1,100 veh/h) and South Pass (850 veh/h) feed into Mill Junction; their capacities cannot be added [S04]. Last exercise achieved only 1,180 veh/h at Mill Junction due to unmanaged lane merging [S04], a defect confirmed open in multiple records within [S13] [S13].
+*   **Disposition:** Accepted.
+*   **Qualifications:** Do not sum independent road ratings across the shared downstream bottleneck [S04]. Clearance time must use shared junction and exercise throughput until a current field test proves otherwise [S04], [S13].
+*   **Blockers:** Contraflow requires sheriff closure, 45 minutes setup, and staffed crossover points [S04]. County 12 cannot be fully converted to outbound traffic [S04].
+
+**R05: Fleet Matching & Driver Duty**
+[S13] records lift-bus dispatch delays of up to 129 minutes in exercise records EX-007 and EX-019, with status open or repaired inconsistently across cycles [S13]. No evidence for person/accommodation-level fleet matching, driver duty cycles, bridge constraints specific to vehicle types (beyond S04 bus exclusion), or relief capacity is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind fleet requirements; no cycle time data available beyond defect logs.
+
+**R06: Shelter Capacity & Medical Handoffs**
+[S13] indicates Civic Arena opened, while Ridge School’s filter test failed in the exercise [S13]. Shelter-filter defects remain open in records EX-004, EX-028, EX-034, EX-040, and EX-046 [S13]. No evidence for smoke-safe shelter capacity, accessible placements, medical handoffs, filtration, power, or relocation is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity; filter failures unresolved.
+
+**R07: Warnings & Community Support**
+[S13] notes County radio voice worked, but volunteer unit identifiers did not cross the gateway in the exercise [S13]. Radio-handoff defects persist in open records EX-014, EX-020, EX-026, EX-032, and EX-044 [S13]. No evidence for redundant multilingual warning, door-knock timing, radio interoperability standards, receipt/understanding evidence, or zone revision is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind communication strategy; gateway interoperability failure unresolved.
+
+**R08: Fuel & Power Continuity**
+[S13] records fuel arrival after seventeen hours in the exercise, with open defects EX-005, EX-011, EX-035, EX-041, and EX-047 [S13]. No evidence for fuel/power continuity, observed delays beyond 17-hour benchmark, local staging, alternate routes/suppliers, or coupled asset effects is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind resource contracting; fuel delay exceeds operational targets.
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+[S13] records family-accountability defects, with open items EX-021, EX-027, EX-033, and EX-039 [S13]. No evidence for private accountability, public aggregation, self-evacuation tracking, restricted health data handling, reconciliation, retention, or deletion proof is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind data management protocol; accountability defects open.
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline.
+
+**R12: Verification & Readiness Blockers**
+[S13] states readiness requires current execution evidence for the exact plan rather than a status label, and owner attestation is not operational proof [S13]. Exercise values override nominal targets until repair is rechecked [S13]. No evidence for independent-review blockers, candidate-bound readiness, uncertainties, or explicit falsifiers is present in [S03], [S04], [S13], or [S15].
+*   **Disposition:** Partial. Verification logic exists in [S13], but specific blockers are undefined.
+*   **Blockers:** Cannot verify readiness status; open defects in [S13] block closure.
+
+**Cross-Source Relationships & Contradictions**
+[S03] defines demand (population, assistance categories) while [S04] defines supply constraints (road throughput, junction bottlenecks). [S15] provides temporal binding (forecast cycles) that dictates when [S04] route viability and [S03] population risk assessments are valid. [S13] provides the verification layer, overriding nominal capacities in [S04] with observed exercise defects. No contradictions exist between sources, but [S13] explicitly invalidates reliance on nominal targets from [S04] until rechecks pass.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent

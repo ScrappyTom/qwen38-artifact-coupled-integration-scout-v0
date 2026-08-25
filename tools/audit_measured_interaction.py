@@ -65,7 +65,10 @@ def audit(run_root: Path) -> dict[str, Any]:
         rows = []
     totals = Counter()
     cell_receipts: list[dict[str, Any]] = []
-    boundary_hash = "eb63671008e22987e37ff1ebc26a8ddb29f92ec55ee1d3d1ad0d7d1d64ae181e"
+    pressure_handoff = load(ROOT / "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json")
+    boundary_hash = pressure_handoff.get("candidate_sha256")
+    if not isinstance(boundary_hash, str) or not boundary_hash:
+        failures.append("pressure_handoff:candidate_sha256")
     for configuration_id in measured.CONFIGURATION_ORDER:
         cell_root = run_root / "cells" / configuration_id
         cell = next(
@@ -147,8 +150,18 @@ def audit(run_root: Path) -> dict[str, Any]:
                 if audit_row is None or int(audit_row.get("prospective_savings", 0)) <= 0:
                     failures.append(f"cell:{configuration_id}:nonpositive_relief:{result_id}")
         maintenance_inputs = [row.get("input_result_id") for row in maintenance]
-        if Counter(selected) != Counter(maintenance_inputs):
+        maintained_prefix = selected[: len(maintenance_inputs)]
+        unmaintained_externalizations = selected[len(maintenance_inputs) :]
+        if maintenance_inputs != maintained_prefix:
             failures.append(f"cell:{configuration_id}:maintenance_trigger_parity")
+        if unmaintained_externalizations and not (
+            cell.get("terminal_disposition") == "maintenance_call_budget_exhausted"
+            and maintenance_calls == measured.MAX_MAINTENANCE_CALLS_PER_CELL
+            and len(unmaintained_externalizations) == 1
+        ):
+            failures.append(
+                f"cell:{configuration_id}:unexplained_unmaintained_externalization"
+            )
         expected_effects = (
             {"semantic_state_effect"}
             if configuration_id == "D0_DETACHED"
@@ -181,6 +194,7 @@ def audit(run_root: Path) -> dict[str, Any]:
                 "provider_calls": provider_calls,
                 "serialized_tokens": serialized,
                 "positive_externalizations": len(selected),
+                "unmaintained_positive_externalizations": unmaintained_externalizations,
                 "candidate_changed": cell.get("candidate_changed"),
                 "candidate_submitted": cell.get("candidate_submitted"),
                 "terminal_disposition": cell.get("terminal_disposition"),

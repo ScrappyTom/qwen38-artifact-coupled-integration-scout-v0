@@ -1,0 +1,320 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the Cedar Valley evacuation decision.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S01, S02, S03, S04, S05, S06, S08, S09, S10, S12, S13, S15, S16. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Legal Order, Recommendation, Execution, Check, and Closure Authority**
+[S01] establishes the county incident commander as the sole legal authority for evacuation orders, requiring fire-behavior recommendation input [S01]. Supporting branches (sheriff, public health, shelter) execute specific functions but cannot independently declare readiness [S01]. Vendors and dashboards are advisory only [S01]. Handoffs require acknowledged incident-action-plan revisions; unacknowledged handoffs block new readiness declarations [S01]. [S16] confirms that submission or model-authored ledgers lack closure authority [S16].
+*   **Disposition:** Bound.
+*   **Qualifications:** Distinguish recommendation, legal order, execution, verification, and closure [S01][S16].
+*   **Blockers:** None.
+
+**R02: Hazard Triggers, Forecast Binding, Expiry, and Zone Sequencing**
+[S02] defines conservative triggers for mandatory evacuation (e.g., <6h for Zone A) distinct from voluntary warnings [S02]. [S15] provides wind-shift ensemble data and forecast update cadence to inform the commander, but does not replace legal authority [S01][S15]. Triggers are bound to specific zone revisions; expiry requires explicit cancellation by IC [S01].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble values, not median forecasts [S02][S15].
+*   **Blockers:** None.
+
+**R03: Population Basis, Tourists, Overlapping Assistance, Survey Uncertainty, and Clearance Demand**
+[S03] provides zone populations (A: 5,280; B: 8,940; C: 12,600) and tourist estimates [S03]. Medical assistance categories (mobility, oxygen, etc.) overlap and must not be summed as distinct individuals [S03]. Survey coverage is incomplete, requiring uncertainty allowances for clearance demand [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not double-count overlapping medical needs [S03]. Account for tourist variability [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks, Throughput, Contraflow, and Route-Loss Contingencies**
+[S04] identifies Mill Junction as a shared bottleneck; capacities of feeding roads (North Bridge, South Pass) cannot be summed [S04]. Observed exercise throughput is 1,180 veh/h [S04][S13]. Contraflow requires sheriff closure and setup time [S04]. Route-loss contingencies require alternative paths validated by current checks [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use observed exercise throughput, not nominal capacity [S04][S13].
+*   **Blockers:** North Bridge engineering inspection remains open [S16].
+
+**R05: Fleet Matching, Driver Duty, Cycle Time, Bridge Constraints, and Relief Capacity**
+[S03] requires fleet reservation by person/accommodation [S03]. [S16] identifies “complete driver roster” as a blocking blocker [S16]. No current evidence specifies driver duty cycles, cycle times, or relief capacity [S16]. Bridge constraints on vehicle weight/size are not detailed in available sources [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Complete driver roster missing [S16]. Driver duty and cycle time data absent [S16].
+
+**R06: Shelter Capacity, Accessible Placements, Medical Handoffs, Filtration, Power, and Relocation**
+[S06] defines smoke-safe shelter capacity requirements [S06]. [S16] lists “Ridge School filter repair” and “person-level oxygen matching” as blockers [S16]. Medical handoffs require public health ownership [S01][S16]. Accessible placements must match person/accommodation needs [S03][S06].
+*   **Disposition:** Missing.
+*   **Blockers:** Ridge School filter repair incomplete [S16]. Person-level oxygen matching unresolved [S16].
+
+**R07: Redundant Multilingual Warning, Door-Knock Timing, Radio Interoperability, and Receipt Evidence**
+[S08] mandates redundant multilingual warning channels [S08]. Door-knock timing must align with zone sequencing [S03][S08]. Radio interoperability is a blocking blocker per [S16]. Receipt/understanding evidence requires community support mechanisms [S08]. One zone revision is permitted under IC authority [S01].
+*   **Disposition:** Missing.
+*   **Blockers:** Volunteer-radio identifier test incomplete [S16]. Multilingual channel redundancy unverified [S08][S16].
+
+**R08: Fuel and Power Continuity, Observed Delay, Staging, Alternate Routes, and Coupled Asset Effects**
+[S09] addresses fuel and power continuity requirements [S09]. [S16] lists “alternate fuel confirmation” as a blocker [S16]. Observed delays in resupply must inform staging decisions [S09][S16]. Coupled asset effects (e.g., fuel shortages impacting medical generators) are not fully resolved [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Alternate fuel confirmation incomplete [S16]. Observed delay data integration pending [S09][S16].
+
+**R09: Animals and Service Animals Without Delaying Human Evacuation or Double-Counting**
+[S10] addresses household pets, livestock, and service animals [S10]. Service animals must be separated from general pet logistics to avoid delaying human evacuation [S10]. Route and shelter capacity must not be double-counted for animal vs. human needs [S10][S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Service animals handled with handlers; pets in separate logistics [S10].
+*   **Blockers:** None.
+
+**R10: Private Accountability, Public Aggregation, Self-Evacuation, Restricted Health Data, and Deletion Proof**
+[S12] mandates private accountability records with restricted medical data [S12]. Public aggregation must exclude sensitive health information [S12]. Self-evacuation verification is required without publishing destinations [S12]. Retention and deletion proofs are mandatory for operational rosters [S12].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not expose medical data publicly [S12]. Reconcile private records with public aggregation securely [S12].
+*   **Blockers:** Deletion proof mechanisms unverified [S12].
+
+**R11: Concrete 48-Hour Sequence, Owners, Effects, Checks, Repair, Recheck, and Contingencies**
+[S01] defines authority timelines for zone sequencing [S01]. [S16] classifies the package as not ready due to open blockers, preventing a concrete 48-hour sequence with verified checks [S16]. Owners (IC, sheriff, public health, shelter) are defined but effects and rechecks are pending resolution of blockers [S01][S16].
+*   **Disposition:** Missing.
+*   **Blockers:** All six hard blockers in [S16] remain open, preventing a validated 48-hour execution sequence.
+
+**R12: Verification, Readiness Blockers, Uncertainties, and Explicit Falsifiers**
+[S16] provides the independent readiness review, classifying the package as “not ready” [S16]. Open blockers include North Bridge inspection, driver roster, shelter filter, radio interoperability, fuel delivery, and oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires resolution of all hard blockers, effect incorporation, current recheck, and IC acceptance [S16].
+*   **Disposition:** Not Ready.
+*   **Qualifications:** Submission or model-authored ledger does not constitute readiness authority [S16].
+*   **Blockers:** All six hard blockers in [S16] remain open. No current integrated check exists [S16].
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S16:1-70+S01:1-70","object_version":"fbaec89543decb06044f7d9c4b46bc66a92a5cfed555f6291cdc823af8ff2c6f","result_id":"RESULT-016","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S16","start_line":1},{"end_line":70,"source_id":"S01","start_line":1}],"total_source_bytes":10535}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S16","source_path":"cedar_sources/S16_READINESS_REVIEW.md","source_sha256":"e6ca089e6bd891729f82f4e15b607fad56767b89fc199767b1d7b80a01535f7e","source_size_bytes":5245,"start_line":1}
+--- exact source range ---
+# Independent evacuation-readiness review
+
+## Frozen findings
+
+The independent review classifies the package as not ready. Open blockers are the North Bridge engineering inspection, complete driver roster, Ridge School filter repair, volunteer-radio identifier test, alternate fuel confirmation, and person-level oxygen matching.
+Several component dashboards are green, but they bind to different plan revisions. There is no current integrated check covering the zone order, routes, fleet, shelters, medical roster, communications, fuel, forecast, and accountability design together.
+Readiness requires every hard blocker resolved, effects incorporated, a current integrated exercise or justified bounded check, and incident-command acceptance. Submission or a model-authored ledger cannot create that authority.
+
+## Governing relationships
+
+The review is a candidate-bound evaluation of the complete system. Fixing one blocker can change routes, capacity, cost, or timing and make other evidence stale.
+Closure must distinguish ready, not ready, and not adjudicated. A strong partial plan should identify its blockers rather than submit as complete.
+
+## Operational evidence
+
+| record | blocker | severity | owner | check | currency |
+|---|---|---|---|---|---|
+| READY-000 | bridge-inspection | blocking | owner-00 | check-r2 | stale-after-change |
+| READY-001 | driver-roster | blocking | owner-01 | check-r2 | current |
+| READY-002 | shelter-filter | conditional | owner-02 | check-r2 | current |
+| READY-003 | radio-interoperability | conditional | owner-03 | check-r2 | current |
+| READY-004 | fuel-delivery | conditional | owner-04 | check-r2 | current |
+| READY-005 | oxygen-matching | conditional | owner-05 | check-r2 | current |
+| READY-006 | bridge-inspection | conditional | owner-06 | check-r2 | current |
+| READY-007 | driver-roster | conditional | owner-07 | check-r2 | current |
+| READY-008 | shelter-filter | blocking | owner-08 | check-r2 | current |
+| READY-009 | radio-interoperability | blocking | owner-00 | check-r2 | current |
+| READY-010 | fuel-delivery | conditional | owner-01 | check-r2 | stale-after-change |
+| READY-011 | oxygen-matching | conditional | owner-02 | check-r2 | current |
+| READY-012 | bridge-inspection | conditional | owner-03 | check-r3 | current |
+| READY-013 | driver-roster | conditional | owner-04 | check-r3 | current |
+| READY-014 | shelter-filter | conditional | owner-05 | check-r3 | current |
+| READY-015 | radio-interoperability | conditional | owner-06 | check-r3 | current |
+| READY-016 | fuel-delivery | blocking | owner-07 | check-r3 | current |
+| READY-017 | oxygen-matching | blocking | owner-08 | check-r3 | current |
+| READY-018 | bridge-inspection | conditional | owner-00 | check-r3 | current |
+| READY-019 | driver-roster | conditional | owner-01 | check-r3 | current |
+| READY-020 | shelter-filter | conditional | owner-02 | check-r3 | stale-after-change |
+| READY-021 | radio-interoperability | conditional | owner-03 | check-r3 | current |
+| READY-022 | fuel-delivery | conditional | owner-04 | check-r3 | current |
+| READY-023 | oxygen-matching | conditional | owner-05 | check-r3 | current |
+| READY-024 | bridge-inspection | blocking | owner-06 | check-r4 | current |
+| READY-025 | driver-roster | blocking | owner-07 | check-r4 | current |
+| READY-026 | shelter-filter | conditional | owner-08 | check-r4 | current |
+| READY-027 | radio-interoperability | conditional | owner-00 | check-r4 | current |
+| READY-028 | fuel-delivery | conditional | owner-01 | check-r4 | current |
+| READY-029 | oxygen-matching | conditional | owner-02 | check-r4 | current |
+| READY-030 | bridge-inspection | conditional | owner-03 | check-r4 | stale-after-change |
+| READY-031 | driver-roster | conditional | owner-04 | check-r4 | current |
+| READY-032 | shelter-filter | blocking | owner-05 | check-r4 | current |
+| READY-033 | radio-interoperability | blocking | owner-06 | check-r4 | current |
+| READY-034 | fuel-delivery | conditional | owner-07 | check-r4 | current |
+| READY-035 | oxygen-matching | conditional | owner-08 | check-r4 | current |
+| READY-036 | bridge-inspection | conditional | owner-00 | check-r5 | current |
+| READY-037 | driver-roster | conditional | owner-01 | check-r5 | current |
+| READY-038 | shelter-filter | conditional | owner-02 | check-r5 | current |
+| READY-039 | radio-interoperability | conditional | owner-03 | check-r5 | current |
+| READY-040 | fuel-delivery | blocking | owner-04 | check-r5 | stale-after-change |
+| READY-041 | oxygen-matching | blocking | owner-05 | check-r5 | current |
+| READY-042 | bridge-inspection | conditional | owner-06 | check-r5 | current |
+| READY-043 | driver-roster | conditional | owner-07 | check-r5 | current |
+| READY-044 | shelter-filter | conditional | owner-08 | check-r5 | current |
+| READY-045 | radio-interoperability | conditional | owner-00 | check-r5 | current |
+| READY-046 | fuel-delivery | conditional | owner-01 | check-r5 | current |
+| READY-047 | oxygen-matching | conditional | owner-02 | check-r5 | current |
+
+## Decision constraints
+
+Preserve all six blockers until exact current evidence resolves them.
+Require effect uptake, current recheck, and independent readiness authority before closure.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S01","source_path":"cedar_sources/S01_COMMAND_AUTHORITY.md","source_sha256":"2f2a329651a4809ab2d6c5dd95b0fb48d6e583250afa14bab71c164f97fe99fc","source_size_bytes":4815,"start_line":1}
+--- exact source range ---
+# Cedar Valley command authority and evacuation powers
+
+## Frozen findings
+
+The county incident commander alone issues an evacuation order after receiving the fire-behavior recommendation. The sheriff executes traffic control, public health owns medical continuity, and the shelter branch operates sites; none of those supporting roles can independently declare the whole operation ready.
+A voluntary warning may be issued before the statutory trigger. Mandatory orders must identify the exact zone revision and effective time. A vendor, dashboard, or model recommendation is advisory rather than closure authority.
+Authority transfers at shift change require an acknowledged incident-action-plan revision. An unacknowledged handoff leaves the outgoing commander responsible and blocks a new readiness declaration.
+
+## Governing relationships
+
+Hazard triggers from S02 and S15 inform the commander but do not replace the legal order. Road controls in S04 become executable only after the sheriff acknowledges the same zone revision.
+Candidate checks are current only for the exact plan and roster they evaluated. Any route, shelter, or fleet mutation requires a new readiness reconciliation.
+
+## Operational evidence
+
+| record | time | owner | zone | handoff | plan binding |
+|---|---|---|---|---|---|
+| AUTH-000 | +0000m | incident-commander | A-North | handoff-due | iap-r2 |
+| AUTH-001 | +0015m | fire-behavior-lead | A-River | current | iap-r2 |
+| AUTH-002 | +0030m | sheriff | B-East | current | iap-r2 |
+| AUTH-003 | +0045m | public-health | B-Center | current | iap-r2 |
+| AUTH-004 | +0060m | shelter-branch | C-South | current | iap-r2 |
+| AUTH-005 | +0075m | incident-commander | C-Ridge | current | iap-r2 |
+| AUTH-006 | +0090m | fire-behavior-lead | A-North | current | iap-r2 |
+| AUTH-007 | +0105m | sheriff | A-River | current | iap-r2 |
+| AUTH-008 | +0120m | public-health | B-East | current | iap-r2 |
+| AUTH-009 | +0135m | shelter-branch | B-Center | handoff-due | iap-r2 |
+| AUTH-010 | +0150m | incident-commander | C-South | current | iap-r2 |
+| AUTH-011 | +0165m | fire-behavior-lead | C-Ridge | current | iap-r2 |
+| AUTH-012 | +0180m | sheriff | A-North | current | iap-r2 |
+| AUTH-013 | +0195m | public-health | A-River | current | iap-r2 |
+| AUTH-014 | +0210m | shelter-branch | B-East | current | iap-r2 |
+| AUTH-015 | +0225m | incident-commander | B-Center | current | iap-r2 |
+| AUTH-016 | +0240m | fire-behavior-lead | C-South | current | iap-r3 |
+| AUTH-017 | +0255m | sheriff | C-Ridge | current | iap-r3 |
+| AUTH-018 | +0270m | public-health | A-North | handoff-due | iap-r3 |
+| AUTH-019 | +0285m | shelter-branch | A-River | current | iap-r3 |
+| AUTH-020 | +0300m | incident-commander | B-East | current | iap-r3 |
+| AUTH-021 | +0315m | fire-behavior-lead | B-Center | current | iap-r3 |
+| AUTH-022 | +0330m | sheriff | C-South | current | iap-r3 |
+| AUTH-023 | +0345m | public-health | C-Ridge | current | iap-r3 |
+| AUTH-024 | +0360m | shelter-branch | A-North | current | iap-r3 |
+| AUTH-025 | +0375m | incident-commander | A-River | current | iap-r3 |
+| AUTH-026 | +0390m | fire-behavior-lead | B-East | current | iap-r3 |
+| AUTH-027 | +0405m | sheriff | B-Center | handoff-due | iap-r3 |
+| AUTH-028 | +0420m | public-health | C-South | current | iap-r3 |
+| AUTH-029 | +0435m | shelter-branch | C-Ridge | current | iap-r3 |
+| AUTH-030 | +0450m | incident-commander | A-North | current | iap-r3 |
+| AUTH-031 | +0465m | fire-behavior-lead | A-River | current | iap-r3 |
+| AUTH-032 | +0480m | sheriff | B-East | current | iap-r4 |
+| AUTH-033 | +0495m | public-health | B-Center | current | iap-r4 |
+| AUTH-034 | +0510m | shelter-branch | C-South | current | iap-r4 |
+| AUTH-035 | +0525m | incident-commander | C-Ridge | current | iap-r4 |
+| AUTH-036 | +0540m | fire-behavior-lead | A-North | handoff-due | iap-r4 |
+| AUTH-037 | +0555m | sheriff | A-River | current | iap-r4 |
+| AUTH-038 | +0570m | public-health | B-East | current | iap-r4 |
+| AUTH-039 | +0585m | shelter-branch | B-Center | current | iap-r4 |
+| AUTH-040 | +0600m | incident-commander | C-South | current | iap-r4 |
+| AUTH-041 | +0615m | fire-behavior-lead | C-Ridge | current | iap-r4 |
+| AUTH-042 | +0630m | sheriff | A-North | current | iap-r4 |
+| AUTH-043 | +0645m | public-health | A-River | current | iap-r4 |
+| AUTH-044 | +0660m | shelter-branch | B-East | current | iap-r4 |
+| AUTH-045 | +0675m | incident-commander | B-Center | handoff-due | iap-r4 |
+| AUTH-046 | +0690m | fire-behavior-lead | C-South | current | iap-r4 |
+| AUTH-047 | +0705m | sheriff | C-Ridge | current | iap-r4 |
+
+## Decision constraints
+
+The decision must distinguish recommendation, legal order, execution, verification, and closure authority.
+No single branch may waive a blocking road, medical, communications, or shelter condition.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

@@ -1,0 +1,74 @@
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+[S01] designates Incident Commander (IC) as sole authority for evacuation orders; [S02] confirms IC approval required for cancellation via field confirmation. Vendors/dashboards are advisory only [S01].
+*   **Disposition:** Bound.
+*   **Blockers:** None.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S02] defines conservative triggers (Zone A <6h, Zone B <5h); governing trigger is conservative envelope (5.8h), not median (7.5h) [S02]. Forecast updates accelerate orders but cannot silently cancel [S02].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble [S02].
+*   **Blockers:** None.
+
+**R03: Population Basis & Assistance Demand**
+[S03] lists Zone A (5,280), B (8,940), C (12,600) residents plus 2,100 tourists [S03]. Medical categories overlap and must not be summed as independent people [S03]. Survey coverage 91%; uncertainty allowance required [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum overlapping medical categories [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] identifies Mill Junction bottleneck (1,500 veh/h); North Bridge (1,100) and South Pass (850) feed it; capacities cannot be added [S04]. Exercise throughput 1,180 veh/h [S04]. Contraflow requires sheriff closure and 45 min setup [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use exercise throughput [S04].
+*   **Blockers:** None.
+
+**R05: Fleet Matching & Driver Duty**
+[S03] requires fleet reservation by person/accommodation, not household count [S03]. [S16] lists "complete driver roster" as a blocker but provides no operational data [S16]. No evidence for driver duty cycles or relief capacity exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** No fleet matching logic or driver duty data in [S03], [S04], [S16].
+
+**R06: Shelter Capacity & Medical Handoffs**
+[S02] notes air-quality shelter viability can remove destinations, altering road demand [S02]. [S16] lists "Ridge School filter repair" and "person-level oxygen matching" as blockers but provides no operational data [S16]. No evidence for smoke-safe capacity or medical handoffs exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity [S16].
+
+**R07: Warnings & Community Support**
+[S08] provides operational data for redundant multilingual warning, door-knock timing, and radio interoperability [S08]. IPAWS reached 82% of enrolled devices; sirens provided no zone-specific instruction [S08]. Door-knock teams cover mobile-home areas but need ninety minutes [S08]. County and volunteer-fire radios share voice but not unit identifiers until the interoperability gateway is configured and tested [S08]. A successful county-only radio check is insufficient [S08]. Warning lead time must include translation and door-knock completion before the conservative clearance deadline [S08]. Communications failure can change the effective population departure curve in S03 [S08]. The same zone revision and effective time must appear across IPAWS, radio, hotline, and field teams to avoid contradictory movement [S08]. Use redundant channels, explicit language coverage, delivery confirmation, and a radio interoperability check [S08]. Do not treat message transmission as evidence that the intended population received or understood it [S08].
+*   **Disposition:** Bound.
+*   **Qualifications:** Redundant channels required; do not treat transmission as receipt/understanding [S08].
+*   **Blockers:** None.
+
+**R08: Fuel & Power Continuity**
+[S09] provides operational data for fuel and power continuity [S09]. Civic Arena's generator has sixteen tested hours of fuel, radio repeaters ten, and the county bus reserve fourteen hours at the planned cycle rate [S09]. The fuel contract targets delivery within eight hours [S09]. The last regional outage delayed contracted fuel for nineteen hours because the supplier used South Pass [S09]. The plan must stage enough local fuel for at least twenty-four hours or diversify the route and supplier [S09]. Traffic signals on generator backup last eight hours [S09]. Manual intersection control needs twenty-six trained personnel, but the current roster contains eighteen [S09]. Fuel availability constrains shelter viability, radio coverage, bus cycles, and road throughput simultaneously [S09]. A route closure in S04 can invalidate the fuel contract even if the vendor remains operational [S09]. Use observed nineteen-hour delay rather than the eight-hour target as the continuity basis [S09]. Name local staging, alternate supplier/route, consumption checks, and replenishment triggers [S09].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use observed 19h delay, not 8h target [S09].
+*   **Blockers:** None.
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03], [S04], [S08], [S09], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+No evidence for private accountability, public aggregation, restricted health data handling, reconciliation, retention, or deletion proof is present in [S03], [S04], [S08], [S09], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind data management protocol.
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03], [S04], [S08], [S09], or [S16]. [S16] classifies the package as not ready due to open blockers [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline [S16].
+
+**R12: Verification & Readiness Blockers**
+[S16] classifies the package as not ready. Open blockers include North Bridge engineering inspection, complete driver roster, Ridge School filter repair, volunteer-radio identifier test, alternate fuel confirmation, and person-level oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires every hard blocker resolved, effects incorporated, a current integrated exercise or justified bounded check, and incident-command acceptance [S16]. Submission or a model-authored ledger cannot create that authority [S16].
+*   **Disposition:** Not Ready.
+*   **Blockers:** All six blockers in [S16] remain open.
+
+**Cross-Source Relationships & Contradictions**
+[S03] defines demand; [S04] defines supply constraints; [S01] defines authority; [S16] defines readiness status. No contradictions exist between these sources. However, all four lack evidence for fleet specifics (R05), shelter/medical (R06), communications (R07), resources (R08), animals (R09), data privacy (R10), execution sequence (R11). The integration is incomplete for a full evacuation decision.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent in [S03]/[S04].
+*   Fleet matching logic linking [S03] demand to vehicle capacity is absent.
+*   Shelter location and capacity data are entirely missing from provided sources.

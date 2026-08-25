@@ -1,0 +1,255 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the Cedar Valley evacuation decision.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S01, S02. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+No accepted evidence has been integrated yet.
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S01:1-70+S02:1-70","object_version":"8dc34551761fe6d45b4082da8f8d9b2fc2fdad51640cbf9bcfc0cd967571e2d8","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S01","start_line":1},{"end_line":70,"source_id":"S02","start_line":1}],"total_source_bytes":9229}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S01","source_path":"cedar_sources/S01_COMMAND_AUTHORITY.md","source_sha256":"2f2a329651a4809ab2d6c5dd95b0fb48d6e583250afa14bab71c164f97fe99fc","source_size_bytes":4815,"start_line":1}
+--- exact source range ---
+# Cedar Valley command authority and evacuation powers
+
+## Frozen findings
+
+The county incident commander alone issues an evacuation order after receiving the fire-behavior recommendation. The sheriff executes traffic control, public health owns medical continuity, and the shelter branch operates sites; none of those supporting roles can independently declare the whole operation ready.
+A voluntary warning may be issued before the statutory trigger. Mandatory orders must identify the exact zone revision and effective time. A vendor, dashboard, or model recommendation is advisory rather than closure authority.
+Authority transfers at shift change require an acknowledged incident-action-plan revision. An unacknowledged handoff leaves the outgoing commander responsible and blocks a new readiness declaration.
+
+## Governing relationships
+
+Hazard triggers from S02 and S15 inform the commander but do not replace the legal order. Road controls in S04 become executable only after the sheriff acknowledges the same zone revision.
+Candidate checks are current only for the exact plan and roster they evaluated. Any route, shelter, or fleet mutation requires a new readiness reconciliation.
+
+## Operational evidence
+
+| record | time | owner | zone | handoff | plan binding |
+|---|---|---|---|---|---|
+| AUTH-000 | +0000m | incident-commander | A-North | handoff-due | iap-r2 |
+| AUTH-001 | +0015m | fire-behavior-lead | A-River | current | iap-r2 |
+| AUTH-002 | +0030m | sheriff | B-East | current | iap-r2 |
+| AUTH-003 | +0045m | public-health | B-Center | current | iap-r2 |
+| AUTH-004 | +0060m | shelter-branch | C-South | current | iap-r2 |
+| AUTH-005 | +0075m | incident-commander | C-Ridge | current | iap-r2 |
+| AUTH-006 | +0090m | fire-behavior-lead | A-North | current | iap-r2 |
+| AUTH-007 | +0105m | sheriff | A-River | current | iap-r2 |
+| AUTH-008 | +0120m | public-health | B-East | current | iap-r2 |
+| AUTH-009 | +0135m | shelter-branch | B-Center | handoff-due | iap-r2 |
+| AUTH-010 | +0150m | incident-commander | C-South | current | iap-r2 |
+| AUTH-011 | +0165m | fire-behavior-lead | C-Ridge | current | iap-r2 |
+| AUTH-012 | +0180m | sheriff | A-North | current | iap-r2 |
+| AUTH-013 | +0195m | public-health | A-River | current | iap-r2 |
+| AUTH-014 | +0210m | shelter-branch | B-East | current | iap-r2 |
+| AUTH-015 | +0225m | incident-commander | B-Center | current | iap-r2 |
+| AUTH-016 | +0240m | fire-behavior-lead | C-South | current | iap-r3 |
+| AUTH-017 | +0255m | sheriff | C-Ridge | current | iap-r3 |
+| AUTH-018 | +0270m | public-health | A-North | handoff-due | iap-r3 |
+| AUTH-019 | +0285m | shelter-branch | A-River | current | iap-r3 |
+| AUTH-020 | +0300m | incident-commander | B-East | current | iap-r3 |
+| AUTH-021 | +0315m | fire-behavior-lead | B-Center | current | iap-r3 |
+| AUTH-022 | +0330m | sheriff | C-South | current | iap-r3 |
+| AUTH-023 | +0345m | public-health | C-Ridge | current | iap-r3 |
+| AUTH-024 | +0360m | shelter-branch | A-North | current | iap-r3 |
+| AUTH-025 | +0375m | incident-commander | A-River | current | iap-r3 |
+| AUTH-026 | +0390m | fire-behavior-lead | B-East | current | iap-r3 |
+| AUTH-027 | +0405m | sheriff | B-Center | handoff-due | iap-r3 |
+| AUTH-028 | +0420m | public-health | C-South | current | iap-r3 |
+| AUTH-029 | +0435m | shelter-branch | C-Ridge | current | iap-r3 |
+| AUTH-030 | +0450m | incident-commander | A-North | current | iap-r3 |
+| AUTH-031 | +0465m | fire-behavior-lead | A-River | current | iap-r3 |
+| AUTH-032 | +0480m | sheriff | B-East | current | iap-r4 |
+| AUTH-033 | +0495m | public-health | B-Center | current | iap-r4 |
+| AUTH-034 | +0510m | shelter-branch | C-South | current | iap-r4 |
+| AUTH-035 | +0525m | incident-commander | C-Ridge | current | iap-r4 |
+| AUTH-036 | +0540m | fire-behavior-lead | A-North | handoff-due | iap-r4 |
+| AUTH-037 | +0555m | sheriff | A-River | current | iap-r4 |
+| AUTH-038 | +0570m | public-health | B-East | current | iap-r4 |
+| AUTH-039 | +0585m | shelter-branch | B-Center | current | iap-r4 |
+| AUTH-040 | +0600m | incident-commander | C-South | current | iap-r4 |
+| AUTH-041 | +0615m | fire-behavior-lead | C-Ridge | current | iap-r4 |
+| AUTH-042 | +0630m | sheriff | A-North | current | iap-r4 |
+| AUTH-043 | +0645m | public-health | A-River | current | iap-r4 |
+| AUTH-044 | +0660m | shelter-branch | B-East | current | iap-r4 |
+| AUTH-045 | +0675m | incident-commander | B-Center | handoff-due | iap-r4 |
+| AUTH-046 | +0690m | fire-behavior-lead | C-South | current | iap-r4 |
+| AUTH-047 | +0705m | sheriff | C-Ridge | current | iap-r4 |
+
+## Decision constraints
+
+The decision must distinguish recommendation, legal order, execution, verification, and closure authority.
+No single branch may waive a blocking road, medical, communications, or shelter condition.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S02","source_path":"cedar_sources/S02_FIRE_BEHAVIOR.md","source_sha256":"3554ad403cf74ba6e8f022832f5bd1665cef008ad1b9ed32affe2d96e3d4a736","source_size_bytes":3942,"start_line":1}
+--- exact source range ---
+# Fire behavior, trigger thresholds, and uncertainty
+
+## Frozen findings
+
+Zone A becomes mandatory when the conservative fire-arrival estimate falls below six hours or when spotting crosses Dry Creek. Zone B enters prepare status at nine hours and mandatory status at five hours. Zone C is not ordered from the base forecast alone.
+The current median model gives Zone A 7.5 hours, but the conservative ensemble gives 5.8 hours because a wind shift has a 42 percent probability. The governing trigger uses the conservative envelope, not the median.
+A forecast update can accelerate an order but cannot silently cancel one already issued. Cancellation requires field confirmation and incident-command approval.
+
+## Governing relationships
+
+Clearance time from S03–S05 must be compared with conservative arrival, including mobilization and accessible-transport delay rather than road travel alone.
+Air-quality shelter viability from S11 can remove a nominal destination and thereby alter road demand; hazard and shelter plans are coupled.
+
+## Operational evidence
+
+| forecast | zone | arrival | wind | confidence | disposition |
+|---|---|---|---|---|---|
+| FIRE-000 | A-North | 11.8h | 18mph | 58% | prepare |
+| FIRE-001 | A-River | 11.6h | 21mph | 65% | prepare |
+| FIRE-002 | B-East | 11.5h | 24mph | 72% | prepare |
+| FIRE-003 | B-Center | 11.3h | 27mph | 79% | prepare |
+| FIRE-004 | C-South | 11.1h | 30mph | 86% | prepare |
+| FIRE-005 | C-Ridge | 11.0h | 33mph | 93% | prepare |
+| FIRE-006 | A-North | 10.8h | 36mph | 62% | prepare |
+| FIRE-007 | A-River | 10.6h | 39mph | 69% | prepare |
+| FIRE-008 | B-East | 10.4h | 42mph | 76% | prepare |
+| FIRE-009 | B-Center | 10.3h | 18mph | 83% | prepare |
+| FIRE-010 | C-South | 10.1h | 21mph | 90% | prepare |
+| FIRE-011 | C-Ridge | 9.9h | 24mph | 59% | prepare |
+| FIRE-012 | A-North | 9.8h | 27mph | 66% | prepare |
+| FIRE-013 | A-River | 9.6h | 30mph | 73% | prepare |
+| FIRE-014 | B-East | 9.4h | 33mph | 80% | prepare |
+| FIRE-015 | B-Center | 9.2h | 36mph | 87% | prepare |
+| FIRE-016 | C-South | 9.1h | 39mph | 94% | prepare |
+| FIRE-017 | C-Ridge | 8.9h | 42mph | 63% | prepare |
+| FIRE-018 | A-North | 8.7h | 18mph | 70% | prepare |
+| FIRE-019 | A-River | 8.6h | 21mph | 77% | prepare |
+| FIRE-020 | B-East | 8.4h | 24mph | 84% | prepare |
+| FIRE-021 | B-Center | 8.2h | 27mph | 91% | prepare |
+| FIRE-022 | C-South | 8.1h | 30mph | 60% | prepare |
+| FIRE-023 | C-Ridge | 7.9h | 33mph | 67% | prepare |
+| FIRE-024 | A-North | 7.7h | 36mph | 74% | prepare |
+| FIRE-025 | A-River | 7.6h | 39mph | 81% | prepare |
+| FIRE-026 | B-East | 7.4h | 42mph | 88% | prepare |
+| FIRE-027 | B-Center | 7.2h | 18mph | 95% | prepare |
+| FIRE-028 | C-South | 7.0h | 21mph | 64% | prepare |
+| FIRE-029 | C-Ridge | 6.9h | 24mph | 71% | prepare |
+| FIRE-030 | A-North | 6.7h | 27mph | 78% | prepare |
+| FIRE-031 | A-River | 6.5h | 30mph | 85% | prepare |
+| FIRE-032 | B-East | 6.4h | 33mph | 92% | prepare |
+| FIRE-033 | B-Center | 6.2h | 36mph | 61% | prepare |
+| FIRE-034 | C-South | 6.0h | 39mph | 68% | prepare |
+| FIRE-035 | C-Ridge | 5.9h | 42mph | 75% | order |
+| FIRE-036 | A-North | 5.7h | 18mph | 82% | order |
+| FIRE-037 | A-River | 5.5h | 21mph | 89% | order |
+| FIRE-038 | B-East | 5.3h | 24mph | 58% | order |
+| FIRE-039 | B-Center | 5.2h | 27mph | 65% | order |
+| FIRE-040 | C-South | 5.0h | 30mph | 72% | order |
+| FIRE-041 | C-Ridge | 4.8h | 33mph | 79% | order |
+| FIRE-042 | A-North | 4.7h | 36mph | 86% | order |
+| FIRE-043 | A-River | 4.5h | 39mph | 93% | order |
+| FIRE-044 | B-East | 4.3h | 42mph | 62% | order |
+| FIRE-045 | B-Center | 4.2h | 18mph | 69% | order |
+| FIRE-046 | C-South | 4.0h | 21mph | 76% | order |
+| FIRE-047 | C-Ridge | 3.8h | 24mph | 83% | order |
+
+## Decision constraints
+
+Use explicit trigger thresholds and show which observation would advance, hold, or expand an order.
+Treat forecast uncertainty as a decision input, not a disclaimer that permits delay.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

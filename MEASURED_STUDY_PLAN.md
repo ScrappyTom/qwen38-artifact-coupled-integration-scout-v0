@@ -1,6 +1,10 @@
 # Cedar artifact-coupling measured study plan
 
-Status: authentic Cedar pressure boundary qualified; measured GPU execution withheld pending exact result commit and separate authorization.
+Status: completed. The authorized run is sealed and audited. A1 produced a
+`strong_partial` artifact versus D0's `weak_partial`, but both were `not_ready`
+and neither achieved useful completion. The shared synchronous-maintenance
+budget, not actor-call or context capacity, stopped both cells. See
+`CEDAR_ARTIFACT_COUPLING_TRANSFER_RESULT.md`.
 
 ## System question
 
@@ -67,3 +71,14 @@ and failure migration.
 
 A result supports one configuration-level interaction claim in one fresh world.
 It neither isolates a component nor promotes a general architecture.
+
+## Observed disposition
+
+Both arms received 19 actor calls and 18 maintenance calls and terminated on
+the maintenance-call ceiling after one final unmatched externalization. Each
+accepted five bounded integration updates; thirteen maintenance outputs per
+arm exceeded the frozen expression budget. A1 changed subsequent acquisition,
+candidate effects, repair, and final artifact breadth, but also contained
+material source contradictions and lacked a current recheck. The result
+therefore supports a local A1 quality advantage inside a maintenance-bottlenecked
+system, not useful completion or isolated causation.

@@ -1,0 +1,36 @@
+{
+  "derived_candidates": [
+    {
+      "candidate_label": "C-35D113E9",
+      "closure_readiness": "not_ready",
+      "configuration_id": "A1_COUPLED",
+      "quality_class": "strong_partial",
+      "score": {
+        "met": 1,
+        "not_met": 0,
+        "partial": 11,
+        "total": 12
+      },
+      "useful_completion": false
+    },
+    {
+      "candidate_label": "C-69AC7847",
+      "closure_readiness": "not_ready",
+      "configuration_id": "D0_DETACHED",
+      "quality_class": "weak_partial",
+      "score": {
+        "met": 0,
+        "not_met": 3,
+        "partial": 9,
+        "total": 12
+      },
+      "useful_completion": false
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "protocol_sha256": "62845ed3ba86db9b6a2aac5f3c8411002ab0a9371b69dce9559a6195915bfe72",
+  "record_sha256": "7cfa9c1c7cf85505894696fc122af4e59543b6be675fed850eef79c12a2a7b1b",
+  "run_id": "2026-08-25-cedar-artifact-coupling-transfer-measured-v0",
+  "schema_version": "cedar-artifact-coupling-semantic-adjudication-validation-v0"
+}

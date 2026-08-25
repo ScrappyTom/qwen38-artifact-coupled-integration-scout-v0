@@ -1,0 +1,85 @@
+# Evidence Integration Ledger
+
+**Status:** Maintenance Mode - Source-Grounded Integration (S01, S02 only).
+**Authority:** Model-authored, lossy integration. Not readiness authority.
+
+## Requirement Bindings and Dispositions
+
+### R01: Legal Order, Recommendation, Execution, Check, and Closure Authority
+*   **Disposition:** Bound to S01 command structure.
+*   **Evidence:** Incident Commander (IC) holds exclusive legal order authority; Sheriff executes traffic; Public Health owns medical continuity; Shelter Branch operates sites [S01]. No single branch waives blocking conditions [S01]. Vendor/model outputs are advisory, not closure authority [S01]. Authority transfer requires acknowledged IAP revision; unacknowledged handoff blocks new readiness declarations [S01].
+*   **Qualification:** Current plan bindings show transitions from `iap-r2` to `iap-r4` with specific handoff-due events (e.g., AUTH-000, AUTH-009) [S01].
+*   **Blockers:** Unacknowledged handoffs at shift changes leave outgoing IC responsible and block readiness [S01].
+
+### R02: Conservative Fire/Weather Triggers, Forecast Binding, Expiry, Zone Sequencing
+*   **Disposition:** Bound to S02 conservative envelope.
+*   **Evidence:** Zone A mandatory if conservative arrival < 6h or spotting crosses Dry Creek; Zone B prepare at 9h, mandatory at 5h [S02]. Governing trigger uses conservative ensemble (wind shift prob 42%), not median model [S02]. Forecast updates can accelerate orders but cannot silently cancel issued orders; cancellation requires field confirmation and IC approval [S02].
+*   **Conflict/Qualification:** Median model gives Zone A 7.5h, but conservative envelope is 5.8h [S02]. Decision constraints forbid delaying triggers because median forecast is better [S02].
+*   **Blockers:** None observed in S02; strict adherence to conservative thresholds required.
+
+### R03: Population Basis, Tourists, Overlapping Assistance, Survey Uncertainty, Clearance Demand
+*   **Disposition:** Unresolved / Missing Evidence.
+*   **Evidence:** S01 and S02 do not provide population baselines, tourist counts, overlapping assistance categories, or survey uncertainty data.
+*   **Qualification:** S02 notes clearance time must include mobilization and accessible-transport delay, implying population-specific transport needs, but no data is provided [S02].
+*   **Blockers:** Lack of source-grounded population metrics prevents binding R03.
+
+### R04: Shared Road Bottlenecks, Throughput, Contraflow, Inbound Capacity, Route-Loss
+*   **Disposition:** Unresolved / Missing Evidence.
+*   **Evidence:** S01 references road controls becoming executable after Sheriff acknowledges zone revisions [S01]. S02 notes hazard/shelter plans are coupled via air-quality shelter viability altering road demand [S02].
+*   **Qualification:** No specific road bottleneck data, throughput observations, contraflow protocols, or route-loss contingencies are present in S01/S02.
+*   **Blockers:** Missing operational road network data and capacity metrics.
+
+### R05: Person/Accommodation Fleet Matching, Driver Duty, Cycle Time, Bridge Constraints, Relief Capacity
+*   **Disposition:** Unresolved / Missing Evidence.
+*   **Evidence:** S02 references accessible-transport delay in clearance time calculations [S02]. No specific fleet matching, driver duty limits, cycle times, or bridge constraints are documented in S01/S02.
+*   **Blockers:** Lack of transport logistics data.
+
+### R06: Smoke-Safe Shelter Capacity, Accessible Placements, Medical Handoffs, Filtration, Power, Relocation
+*   **Disposition:** Partially Bound / Missing Specifics.
+*   **Evidence:** S02 states air-quality shelter viability can remove nominal destinations, altering road demand [S02]. S01 assigns Shelter Branch to operate sites [S01].
+*   **Qualification:** No specific capacity numbers, filtration specs, power continuity data, or relocation protocols are provided in S01/S02.
+*   **Blockers:** Missing shelter-specific operational parameters.
+
+### R07: Redundant Multilingual Warning, Door-Knock Timing, Radio Interop, Receipt Evidence, Zone Revision
+*   **Disposition:** Partially Bound / Missing Specifics.
+*   **Evidence:** S01 mandates mandatory orders identify exact zone revision and effective time [S01]. Voluntary warnings may precede statutory triggers [S01]. No specific multilingual protocols, door-knock timing, or radio interoperability details are present.
+*   **Blockers:** Missing communication logistics data.
+
+### R08: Fuel/Power Continuity, Observed Delay, Local Staging, Alternate Routes, Coupled Asset Effects
+*   **Disposition:** Unresolved / Missing Evidence.
+*   **Evidence:** No fuel/power continuity data in S01/S02.
+*   **Blockers:** Missing resource logistics data.
+
+### R09: Animals/Service Animals Without Delaying Human Evacuation or Double-Counting
+*   **Disposition:** Unresolved / Missing Evidence.
+*   **Evidence:** No animal transport protocols in S01/S02.
+*   **Blockers:** Missing animal logistics data.
+
+### R10: Private Accountability, Public Aggregation, Self-Evacuation, Restricted Health Data, Reconciliation, Retention, Deletion Proof
+*   **Disposition:** Unresolved / Missing Evidence.
+*   **Evidence:** No data management or accountability protocols in S01/S02.
+*   **Blockers:** Missing data governance protocols.
+
+### R11: Concrete 48-Hour Sequence with Owners, Effects, Checks, Repair, Recheck, Resource/Cost Authority, Contingencies
+*   **Disposition:** Partially Bound / Incomplete.
+*   **Evidence:** S01 provides a 705-minute (approx. 11.75-hour) operational timeline from +0000m to +0705m with owners and plan bindings [S01]. This does not cover the full 48-hour requirement.
+*   **Qualification:** Timeline shows cyclic handoffs between IC, Fire-Behavior Lead, Sheriff, Public Health, and Shelter Branch across zones A-North, A-River, B-East, B-Center, C-South, C-Ridge [S01].
+*   **Blockers:** Missing 48-hour sequence extension beyond +0705m.
+
+### R12: Exercise/Independent-Review Blockers, Candidate-Bound Readiness, Uncertainties, Falsifiers
+*   **Disposition:** Bound to S01/S02 Constraints.
+*   **Evidence:** S01 states candidate checks are current only for exact plan/roster evaluated; any mutation requires new readiness reconciliation [S01]. S02 treats forecast uncertainty as a decision input, not a disclaimer permitting delay [S02].
+*   **Qualification:** No specific exercise blockers or independent review findings are detailed beyond the structural constraints in S01.
+*   **Blockers:** Missing specific falsifier definitions and independent review results.
+
+## Cross-Source Relationships and Conflicts
+
+1.  **Command vs. Hazard Data:** S01 IC authority is contingent on S02 hazard triggers [S01][S02]. IC issues orders based on S02 conservative estimates, not median [S01][S02].
+2.  **Plan Binding Continuity:** S01 timeline shows plan bindings shifting from `iap-r2` to `iap-r4` [S01]. Any route/shelter/fleet mutation invalidates current checks [S01].
+3.  **Conservative Trigger Enforcement:** S02 explicitly forbids using median forecast (7.5h) in favor of conservative envelope (5.8h) for Zone A [S02]. This directly impacts R02 and R11 timing.
+
+## Unresolved Evidence and Blockers Summary
+
+*   **Missing Sources:** Population data (R03), Road network specifics (R04), Fleet details (R05), Shelter capacity metrics (R06), Communication protocols (R07), Fuel/Power logistics (R08), Animal protocols (R09), Data governance (R10).
+*   **Timeline Gap:** S01 timeline ends at +0705m; 48-hour sequence (R11) is incomplete.
+*   **Authority Constraints:** Readiness cannot be declared without acknowledged IAP revisions and current checks [S01].

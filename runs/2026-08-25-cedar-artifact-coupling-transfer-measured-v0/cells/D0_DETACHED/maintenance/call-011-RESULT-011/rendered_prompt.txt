@@ -1,0 +1,324 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the Cedar Valley evacuation decision.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S01, S02, S03, S04, S05, S06, S07, S16. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+[S01] designates the Incident Commander (IC) as the sole authority for evacuation orders. [S02] confirms IC approval is required for cancellation, which needs field confirmation. Vendors and dashboards are advisory only [S01].
+*   **Disposition:** Bound.
+*   **Blockers:** None.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S02] defines conservative triggers: Zone A mandatory <6h or spotting across Dry Creek; Zone B mandatory <5h, prepare >9h. The governing trigger is the conservative envelope (5.8h for Zone A), not the median (7.5h) [S02]. Forecast updates accelerate orders but cannot silently cancel them [S02].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble, not median [S02].
+*   **Blockers:** None.
+
+**R03: Population Basis & Assistance Demand**
+[S03] lists Zone A (5,280), B (8,940), C (12,600) residents plus up to 2,100 tourists [S03]. Medical categories (no vehicle, mobility, oxygen, dialysis) overlap and must not be summed as independent people [S03]. Survey coverage is 91%; an uncertainty allowance is required for unreported households [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum overlapping medical categories as separate individuals [S03]. Tourist demand is time-dependent [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] identifies Mill Junction as the bottleneck (1,500 veh/h). North Bridge (1,100 veh/h) and South Pass (850 veh/h) feed into it; capacities cannot be added [S04]. Exercise throughput was 1,180 veh/h [S04]. Contraflow requires sheriff closure and 45 minutes setup [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use exercise throughput until field-tested otherwise [S04].
+*   **Blockers:** None.
+
+**R05: Fleet Matching & Driver Duty**
+[S03] requires fleet reservation by person/accommodation, not household count [S03]. [S16] lists "complete driver roster" as a blocker but provides no operational data [S16]. No evidence for driver duty cycles or relief capacity exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** No fleet matching logic or driver duty data in [S03], [S04], [S16].
+
+**R06: Shelter Capacity & Medical Handoffs**
+[S02] notes air-quality shelter viability can remove destinations, altering road demand [S02]. [S16] lists "Ridge School filter repair" and "person-level oxygen matching" as blockers but provides no operational data [S16]. No evidence for smoke-safe capacity or medical handoffs exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity [S16].
+
+**R07: Warnings & Community Support**
+[S16] lists "volunteer-radio identifier test" as a blocker but provides no operational data [S16]. No evidence for multilingual warning, door-knock timing, or receipt/understanding evidence exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind communication strategy [S16].
+
+**R08: Fuel & Power Continuity**
+[S16] lists "alternate fuel confirmation" as a blocker but provides no operational data [S16]. No evidence for observed delays, local staging, or coupled asset effects exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind resource contracting [S16].
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+No evidence for private accountability, public aggregation, restricted health data handling, reconciliation, retention, or deletion proof is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind data management protocol.
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03], [S04], or [S16]. [S16] classifies the package as not ready due to open blockers [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline [S16].
+
+**R12: Verification & Readiness Blockers**
+[S16] classifies the package as not ready. Open blockers include North Bridge engineering inspection, complete driver roster, Ridge School filter repair, volunteer-radio identifier test, alternate fuel confirmation, and person-level oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires every hard blocker resolved, effects incorporated, a current integrated exercise or justified bounded check, and incident-command acceptance [S16]. Submission or a model-authored ledger cannot create that authority [S16].
+*   **Disposition:** Not Ready.
+*   **Blockers:** All six blockers in [S16] remain open.
+
+**Cross-Source Relationships & Contradictions**
+[S03] defines demand; [S04] defines supply constraints; [S01] defines authority; [S16] defines readiness status. No contradictions exist between these sources. However, all four lack evidence for fleet specifics (R05), shelter/medical (R06), communications (R07), resources (R08), animals (R09), data privacy (R10), execution sequence (R11). The integration is incomplete for a full evacuation decision.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent in [S03]/[S04].
+*   Fleet matching logic linking [S03] demand to vehicle capacity is absent.
+*   Shelter location and capacity data are entirely missing from provided sources.
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S06:1-70+S07:1-70","object_version":"06db11200c2356f64157c9ff611c2679bdc12aeff79d9c9d867c7076c994764f","result_id":"RESULT-011","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S06","start_line":1},{"end_line":70,"source_id":"S07","start_line":1}],"total_source_bytes":9957}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S06","source_path":"cedar_sources/S06_SHELTER_CAPACITY.md","source_sha256":"f82a8ad9d53d9bacf25c4dbcbc867304140e7bd40ae00dbae911347d6a140368","source_size_bytes":4280,"start_line":1}
+--- exact source range ---
+# Shelter capacity, smoke filtration, and accessibility
+
+## Frozen findings
+
+The four sites advertise 8,200 nominal spaces, but smoke-safe staffed capacity is 5,900. Civic Arena has 48 accessible cots, Expo Hall 64, Ridge School none, and West College 32.
+Expo Hall's primary route crosses the South Pass smoke corridor. Ridge School does not accept pets and lacks backup filtration. Civic Arena's generator has sixteen hours of tested fuel.
+A shelter is usable only when staffing, filtration, backup power, sanitation, and route access are current for the same operational period. Nominal floor area is not readiness.
+
+## Governing relationships
+
+Medical accommodation from S07 and animal handling from S10 change effective capacity. Air-quality thresholds in S11 may require relocation after initial opening.
+Shelter assignment must be coupled to route and transport plans; independently feasible totals can form an infeasible combined system.
+
+## Operational evidence
+
+| record | site | nominal | smoke-safe | accessible | power | status |
+|---|---|---|---|---|---|---|
+| SHEL-000 | Civic-Arena | 2200 | 1600 | 48 | 12h | filter-test-due |
+| SHEL-001 | Expo-Hall | 3000 | 2100 | 64 | 13h | verified |
+| SHEL-002 | Ridge-School | 1200 | 700 | 0 | 14h | verified |
+| SHEL-003 | West-College | 1800 | 1500 | 32 | 15h | verified |
+| SHEL-004 | Civic-Arena | 2200 | 1600 | 48 | 16h | verified |
+| SHEL-005 | Expo-Hall | 3000 | 2100 | 64 | 17h | verified |
+| SHEL-006 | Ridge-School | 1200 | 700 | 0 | 18h | verified |
+| SHEL-007 | West-College | 1800 | 1500 | 32 | 19h | verified |
+| SHEL-008 | Civic-Arena | 2200 | 1600 | 48 | 20h | verified |
+| SHEL-009 | Expo-Hall | 3000 | 2100 | 64 | 12h | verified |
+| SHEL-010 | Ridge-School | 1200 | 700 | 0 | 13h | filter-test-due |
+| SHEL-011 | West-College | 1800 | 1500 | 32 | 14h | verified |
+| SHEL-012 | Civic-Arena | 2200 | 1600 | 48 | 15h | verified |
+| SHEL-013 | Expo-Hall | 3000 | 2100 | 64 | 16h | verified |
+| SHEL-014 | Ridge-School | 1200 | 700 | 0 | 17h | verified |
+| SHEL-015 | West-College | 1800 | 1500 | 32 | 18h | verified |
+| SHEL-016 | Civic-Arena | 2200 | 1600 | 48 | 19h | verified |
+| SHEL-017 | Expo-Hall | 3000 | 2100 | 64 | 20h | verified |
+| SHEL-018 | Ridge-School | 1200 | 700 | 0 | 12h | verified |
+| SHEL-019 | West-College | 1800 | 1500 | 32 | 13h | verified |
+| SHEL-020 | Civic-Arena | 2200 | 1600 | 48 | 14h | filter-test-due |
+| SHEL-021 | Expo-Hall | 3000 | 2100 | 64 | 15h | verified |
+| SHEL-022 | Ridge-School | 1200 | 700 | 0 | 16h | verified |
+| SHEL-023 | West-College | 1800 | 1500 | 32 | 17h | verified |
+| SHEL-024 | Civic-Arena | 2200 | 1600 | 48 | 18h | verified |
+| SHEL-025 | Expo-Hall | 3000 | 2100 | 64 | 19h | verified |
+| SHEL-026 | Ridge-School | 1200 | 700 | 0 | 20h | verified |
+| SHEL-027 | West-College | 1800 | 1500 | 32 | 12h | verified |
+| SHEL-028 | Civic-Arena | 2200 | 1600 | 48 | 13h | verified |
+| SHEL-029 | Expo-Hall | 3000 | 2100 | 64 | 14h | verified |
+| SHEL-030 | Ridge-School | 1200 | 700 | 0 | 15h | filter-test-due |
+| SHEL-031 | West-College | 1800 | 1500 | 32 | 16h | verified |
+| SHEL-032 | Civic-Arena | 2200 | 1600 | 48 | 17h | verified |
+| SHEL-033 | Expo-Hall | 3000 | 2100 | 64 | 18h | verified |
+| SHEL-034 | Ridge-School | 1200 | 700 | 0 | 19h | verified |
+| SHEL-035 | West-College | 1800 | 1500 | 32 | 20h | verified |
+| SHEL-036 | Civic-Arena | 2200 | 1600 | 48 | 12h | verified |
+| SHEL-037 | Expo-Hall | 3000 | 2100 | 64 | 13h | verified |
+| SHEL-038 | Ridge-School | 1200 | 700 | 0 | 14h | verified |
+| SHEL-039 | West-College | 1800 | 1500 | 32 | 15h | verified |
+| SHEL-040 | Civic-Arena | 2200 | 1600 | 48 | 16h | filter-test-due |
+| SHEL-041 | Expo-Hall | 3000 | 2100 | 64 | 17h | verified |
+| SHEL-042 | Ridge-School | 1200 | 700 | 0 | 18h | verified |
+| SHEL-043 | West-College | 1800 | 1500 | 32 | 19h | verified |
+| SHEL-044 | Civic-Arena | 2200 | 1600 | 48 | 20h | verified |
+| SHEL-045 | Expo-Hall | 3000 | 2100 | 64 | 12h | verified |
+| SHEL-046 | Ridge-School | 1200 | 700 | 0 | 13h | verified |
+| SHEL-047 | West-College | 1800 | 1500 | 32 | 14h | verified |
+
+## Decision constraints
+
+Use smoke-safe and accessible capacity, not the 8,200-space headline.
+Identify relocation triggers and a destination for every vulnerable cohort.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S07","source_path":"cedar_sources/S07_MEDICAL_ACCESS.md","source_sha256":"beaa9d04f58a2c793b0f2f848540ba0622d24734e6db59ceb2e66dba53ed634b","source_size_bytes":5205,"start_line":1}
+--- exact source range ---
+# Medical continuity and accessibility matching
+
+## Frozen findings
+
+Seventy-three residents use continuous oxygen, twenty-eight have dialysis due within twenty-four hours, and fourteen medications require refrigeration. The lists overlap and contain seven duplicate household records.
+Cedar Hospital can accept twenty-two oxygen-dependent evacuees, North Clinic thirty-seven, and verified home oxygen kits cover twenty more. Those capacities total seventy-nine only if transport, power, and patient matching all pass.
+A generic shelter cot is not a medical placement. Public health must bind each high-acuity person to transport, destination, power, medication custody, and handoff confirmation.
+
+## Governing relationships
+
+S03 defines uncertain demand, S05 constrains accessible vehicles, S06 constrains destinations, and S09 constrains power/fuel. The medical plan is a joined assignment rather than four independent capacity claims.
+Public status messages may not expose health needs; the private roster rules in S12 govern matching and deletion.
+
+## Operational evidence
+
+| record | zone | need | people | pickup ETA | match | roster |
+|---|---|---|---|---|---|---|
+| CARE-000 | A-North | oxygen | 2 | 20m | transport-unassigned | health-roster-r5 |
+| CARE-001 | A-River | dialysis | 9 | 37m | matched | health-roster-r5 |
+| CARE-002 | B-East | refrigerated-medication | 16 | 54m | matched | health-roster-r5 |
+| CARE-003 | B-Center | wheelchair | 23 | 71m | matched | health-roster-r5 |
+| CARE-004 | C-South | behavioral-support | 6 | 88m | matched | health-roster-r5 |
+| CARE-005 | C-Ridge | oxygen | 13 | 30m | matched | health-roster-r5 |
+| CARE-006 | A-North | dialysis | 20 | 47m | matched | health-roster-r5 |
+| CARE-007 | A-River | refrigerated-medication | 3 | 64m | matched | health-roster-r5 |
+| CARE-008 | B-East | wheelchair | 10 | 81m | matched | health-roster-r5 |
+| CARE-009 | B-Center | behavioral-support | 17 | 23m | transport-unassigned | health-roster-r5 |
+| CARE-010 | C-South | oxygen | 24 | 40m | matched | health-roster-r5 |
+| CARE-011 | C-Ridge | dialysis | 7 | 57m | matched | health-roster-r5 |
+| CARE-012 | A-North | refrigerated-medication | 14 | 74m | matched | health-roster-r5 |
+| CARE-013 | A-River | wheelchair | 21 | 91m | matched | health-roster-r5 |
+| CARE-014 | B-East | behavioral-support | 4 | 33m | matched | health-roster-r5 |
+| CARE-015 | B-Center | oxygen | 11 | 50m | matched | health-roster-r5 |
+| CARE-016 | C-South | dialysis | 18 | 67m | matched | health-roster-r5 |
+| CARE-017 | C-Ridge | refrigerated-medication | 25 | 84m | matched | health-roster-r5 |
+| CARE-018 | A-North | wheelchair | 8 | 26m | transport-unassigned | health-roster-r5 |
+| CARE-019 | A-River | behavioral-support | 15 | 43m | matched | health-roster-r5 |
+| CARE-020 | B-East | oxygen | 22 | 60m | matched | health-roster-r5 |
+| CARE-021 | B-Center | dialysis | 5 | 77m | matched | health-roster-r5 |
+| CARE-022 | C-South | refrigerated-medication | 12 | 94m | matched | health-roster-r5 |
+| CARE-023 | C-Ridge | wheelchair | 19 | 36m | matched | health-roster-r5 |
+| CARE-024 | A-North | behavioral-support | 2 | 53m | matched | health-roster-r5 |
+| CARE-025 | A-River | oxygen | 9 | 70m | matched | health-roster-r5 |
+| CARE-026 | B-East | dialysis | 16 | 87m | matched | health-roster-r5 |
+| CARE-027 | B-Center | refrigerated-medication | 23 | 29m | transport-unassigned | health-roster-r5 |
+| CARE-028 | C-South | wheelchair | 6 | 46m | matched | health-roster-r5 |
+| CARE-029 | C-Ridge | behavioral-support | 13 | 63m | matched | health-roster-r5 |
+| CARE-030 | A-North | oxygen | 20 | 80m | matched | health-roster-r5 |
+| CARE-031 | A-River | dialysis | 3 | 22m | matched | health-roster-r5 |
+| CARE-032 | B-East | refrigerated-medication | 10 | 39m | matched | health-roster-r5 |
+| CARE-033 | B-Center | wheelchair | 17 | 56m | matched | health-roster-r5 |
+| CARE-034 | C-South | behavioral-support | 24 | 73m | matched | health-roster-r5 |
+| CARE-035 | C-Ridge | oxygen | 7 | 90m | matched | health-roster-r5 |
+| CARE-036 | A-North | dialysis | 14 | 32m | transport-unassigned | health-roster-r5 |
+| CARE-037 | A-River | refrigerated-medication | 21 | 49m | matched | health-roster-r5 |
+| CARE-038 | B-East | wheelchair | 4 | 66m | matched | health-roster-r5 |
+| CARE-039 | B-Center | behavioral-support | 11 | 83m | matched | health-roster-r5 |
+| CARE-040 | C-South | oxygen | 18 | 25m | matched | health-roster-r5 |
+| CARE-041 | C-Ridge | dialysis | 25 | 42m | matched | health-roster-r5 |
+| CARE-042 | A-North | refrigerated-medication | 8 | 59m | matched | health-roster-r5 |
+| CARE-043 | A-River | wheelchair | 15 | 76m | matched | health-roster-r5 |
+| CARE-044 | B-East | behavioral-support | 22 | 93m | matched | health-roster-r5 |
+| CARE-045 | B-Center | oxygen | 5 | 35m | transport-unassigned | health-roster-r5 |
+| CARE-046 | C-South | dialysis | 12 | 52m | matched | health-roster-r5 |
+| CARE-047 | C-Ridge | refrigerated-medication | 19 | 69m | matched | health-roster-r5 |
+
+## Decision constraints
+
+Require person-level private matching with aggregate public reporting.
+Treat any unmatched oxygen, dialysis, or refrigerated-medication case as a blocker.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

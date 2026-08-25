@@ -1,0 +1,307 @@
+{
+  "schema_version": "cedar-artifact-coupling-semantic-adjudication-v0",
+  "adjudication_id": "2026-08-25-cedar-artifact-coupling-transfer-measured-v0-semantic",
+  "run_id": "2026-08-25-cedar-artifact-coupling-transfer-measured-v0",
+  "freeze_commit": "f1610d1bf90b5847dbdbe0d981f4b1676abf4279",
+  "evaluator_id": "cedar-evacuation-semantic-adjudicator-v0",
+  "protocol": {
+    "path": "SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json",
+    "sha256": "62845ed3ba86db9b6a2aac5f3c8411002ab0a9371b69dce9559a6195915bfe72"
+  },
+  "bindings": {
+    "task": {
+      "path": "task/TASK.md",
+      "bytes": 3849,
+      "sha256": "03a411b5c1737311be107ebf4c3460afd7b750ccf69f489c8273f1709d93ab3b"
+    },
+    "mechanical_evaluator": {
+      "path": "task/EVALUATOR.json",
+      "bytes": 1654,
+      "sha256": "6b733989034a429ddf6984a772768ec0934c8602ad9b67de9c451428bc6b21b3"
+    },
+    "source_lock": {
+      "path": "task/TASK_SOURCE_LOCK.json",
+      "bytes": 10470,
+      "sha256": "b0f0b6f2bbb97b3f022d220e2853aeed895c25f60d79306c813267bc05bd766a"
+    },
+    "aggregate_result": {
+      "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/AGGREGATE_RESULT.json",
+      "bytes": 12540,
+      "sha256": "413d9b9c626c1dbde26637112b7e3035cf3885343177c93dfc4d0a0971510324"
+    },
+    "aggregate_seal": {
+      "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/RUN_SEAL.json",
+      "bytes": 111254,
+      "sha256": "efbc98d7c3c18792c4c912f97c021e395e559f6cc25074940e87a915d0a48144"
+    }
+  },
+  "method": {
+    "condition_masking": "Criterion records use neutral labels derived from the exact composite candidate hashes. Configuration names are applied only in the condition mapping and comparative disposition.",
+    "independence": "The review occurred after both sealed trajectories and was never actor-visible.",
+    "masking_limit": "The program investigator supervised execution and therefore this is condition-masked candidate review, not an independent third-party evaluator-blind replication.",
+    "evidence_rule": "Only the frozen task, Cedar sources, exact candidate bytes, candidate-bound mechanical evaluations, and sealed effect-delivery records were used. Plausible but unsupported emergency-management claims are defects.",
+    "quality_rule": "Mechanical term coverage, behavioral progress, lower cost, or broader citation alone cannot establish completeness or readiness."
+  },
+  "candidates": [
+    {
+      "candidate_label": "C-35D113E9",
+      "candidate_sha256": "35d113e9dfc29e515ffd7e8dad9c52444aef06f4f3a4b353e80adfefc70a2323",
+      "files": {
+        "evidence_ledger": {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/A1_COUPLED/trajectory/world/candidate/EVIDENCE_INTEGRATION_LEDGER.md",
+          "bytes": 7334,
+          "sha256": "cc611c7a9d03ae588bebee3a3010b8f097615978367484d7c2d3e0e161a8893a"
+        },
+        "decision": {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/A1_COUPLED/trajectory/world/candidate/BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
+          "bytes": 10426,
+          "sha256": "fbf4a0c46d3bf0080315619c5a84d502b85340ca65e0e87daff692ec51f70d56"
+        },
+        "mechanical_evaluation": {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/A1_COUPLED/evaluation/MECHANICAL_FINAL_EVALUATION.json",
+          "bytes": 4762,
+          "sha256": "08f690185d9b0b4a0c0eda14955ca30c3699f6083b8b8b346784a0fb3f0b156d"
+        }
+      },
+      "mechanical_disposition": {
+        "passed": false,
+        "closure_readiness": "not_ready",
+        "decision_word_count": 1290,
+        "blocking_requirements": [
+          "decision_word_range: word_count=1290; required=1500-2100"
+        ]
+      },
+      "criterion_dispositions": [
+        {
+          "criterion_id": "R01",
+          "disposition": "met",
+          "finding": "Distinguishes fire-behavior recommendation, incident-command legal order and closure, supporting-branch execution, candidate checking, acknowledged handoff, and advisory-only dashboards or model output."
+        },
+        {
+          "criterion_id": "R02",
+          "disposition": "partial",
+          "finding": "Uses the conservative envelope and sub-six-hour Zone A concept, but materially converts 5.8 hours and a 42 percent wind-shift probability into a 5.8 km/h wind threshold and 42 percent relative humidity; it also lacks a coherent single forecast-cycle binding and explicit hold/expand observations."
+        },
+        {
+          "criterion_id": "R03",
+          "disposition": "partial",
+          "finding": "Preserves population totals and overlap, but does not derive a time-bound clearance demand and incorrectly turns 91 percent survey coverage into a nineteen-percent uncertainty allowance associated with tourists or Zone C."
+        },
+        {
+          "criterion_id": "R04",
+          "disposition": "partial",
+          "finding": "Preserves Mill Junction, 1,180 veh/h, contraflow, inbound access, and route loss, but omits the forty-five-minute setup, North Bridge 54 C bus restriction, South Pass visibility trigger, County 12 protection, and observation-bound switch rules."
+        },
+        {
+          "criterion_id": "R05",
+          "disposition": "partial",
+          "finding": "Accurately adds buses, qualified drivers, lift capacity, school-bus timing, ambulance exclusion, duty ceiling, and person-level matching, but does not provide cycle-time arithmetic, bridge-feasible assignments, or a concrete relief-capacity plan."
+        },
+        {
+          "criterion_id": "R06",
+          "disposition": "partial",
+          "finding": "Adds medical counts, destination capacities, smoke thresholds, filter status, power coupling, and relocation concepts, but omits the 5,900 smoke-safe staffed total, accessible-cot inventory, exact shelter assignments, and complete handoff and relocation execution."
+        },
+        {
+          "criterion_id": "R07",
+          "disposition": "partial",
+          "finding": "Includes Hmong, door-knock sequencing, redundant warnings, receipt evidence, and radio interoperability, but omits the ninety-minute door-knock lead, measured channel reach and outage, ASL/other-language coverage, and a fully bound common revision/effective time."
+        },
+        {
+          "criterion_id": "R08",
+          "disposition": "partial",
+          "finding": "Uses the observed nineteen-hour resupply delay and recognizes staging and coupled generator/fleet effects, but never commits to twenty-four-hour local staging or an equivalent diversified supplier/County 12 route with consumption and replenishment triggers."
+        },
+        {
+          "criterion_id": "R09",
+          "disposition": "partial",
+          "finding": "The ledger distinguishes service animals from pets and livestock and avoids double-counting, but the package lacks animal demand, overflow capacity, trailer cycles, route conflicts, parallel timing, and a last-safe stop rule."
+        },
+        {
+          "criterion_id": "R10",
+          "disposition": "partial",
+          "finding": "Provides private/public separation, restricted medical data, verified self-evacuation, retention, and deletion concepts, but lacks minimum fields, role-level access, exact 7/30-day rules, reconciliation procedure, and deletion proof."
+        },
+        {
+          "criterion_id": "R11",
+          "disposition": "partial",
+          "finding": "Provides a 48-hour sequence, some owners, contingencies, and cost authority, but it is not an executable resource-bound plan, schedules unsupported Zone C movement, and lacks complete effect/check/repair/recheck and cost-envelope bindings."
+        },
+        {
+          "criterion_id": "R12",
+          "disposition": "partial",
+          "finding": "Preserves all six independent-review blockers and correctly refuses readiness, but does not carry every material exercise defect, mutated after its only actor-visible check, and ended with one final candidate effect not delivered to another actor call."
+        }
+      ],
+      "score": {
+        "met": 1,
+        "partial": 11,
+        "not_met": 0,
+        "total": 12
+      },
+      "unsupported_or_contradictory_claims": [
+        "5.8 hours of conservative fire-arrival time is restated as a 5.8 km/h sustained-wind threshold.",
+        "42 percent wind-shift probability is restated as 42 percent relative humidity.",
+        "Ninety-one percent survey coverage is restated as a nineteen-percent uncertainty allowance and attached to tourists or Zone C.",
+        "The decision treats a zone revision as a permitted count rather than binding all channels and actions to one exact revision."
+      ],
+      "blocking_requirements": [
+        "mechanical decision word minimum not met",
+        "material hazard-trigger source contradiction",
+        "material population-uncertainty source contradiction",
+        "no complete R02-R12 semantic resolution",
+        "no current actor-visible check after the final mutation",
+        "final candidate effect did not cross another actor boundary"
+      ],
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "final_effect_current_or_independently_reconciled": true,
+      "useful_completion": false
+    },
+    {
+      "candidate_label": "C-69AC7847",
+      "candidate_sha256": "69ac7847bd638abfb4c3ca3429c162abd4af0f684562942528e3059b6f50a28f",
+      "files": {
+        "evidence_ledger": {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/D0_DETACHED/trajectory/world/candidate/EVIDENCE_INTEGRATION_LEDGER.md",
+          "bytes": 7517,
+          "sha256": "5540808ba8952011fccbb270821f5c44a24bbab3922933036fa82654aada4f57"
+        },
+        "decision": {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/D0_DETACHED/trajectory/world/candidate/BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
+          "bytes": 7129,
+          "sha256": "903eb908f0b092ba9de28ee05e45c4c972c2f6472ca2c978953b8a020a4312bd"
+        },
+        "mechanical_evaluation": {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/D0_DETACHED/evaluation/MECHANICAL_FINAL_EVALUATION.json",
+          "bytes": 5142,
+          "sha256": "f3ea2d4208728de61664c72ef7fdf53b84ad0ba8e6bb99f5c0b29bc83c600b18"
+        }
+      },
+      "mechanical_disposition": {
+        "passed": false,
+        "closure_readiness": "not_ready",
+        "decision_word_count": 952,
+        "blocking_requirements": [
+          "continuity: missing terms: nineteen",
+          "decision_source_breadth: 9 distinct cited sources",
+          "decision_word_range: word_count=952; required=1500-2100",
+          "ledger_grounding: 7 distinct cited sources",
+          "required_sources: missing: S06, S07, S09, S11, S12"
+        ]
+      },
+      "criterion_dispositions": [
+        {
+          "criterion_id": "R01",
+          "disposition": "partial",
+          "finding": "Names incident-command order and closure authority but incorrectly collapses recommendation, execution, and checking into the incident commander rather than preserving the fire, sheriff, public-health, shelter, review, and closure distinctions."
+        },
+        {
+          "criterion_id": "R02",
+          "disposition": "partial",
+          "finding": "Accurately states the six/five/nine-hour triggers, 5.8-hour conservative arrival, 42 percent adverse branch, and update expiry, but does not coherently bind one current forecast revision or explicit advance/hold/expand observations."
+        },
+        {
+          "criterion_id": "R03",
+          "disposition": "partial",
+          "finding": "Preserves population, tourists, overlap, and 91 percent coverage, but supplies no numeric uncertainty allowance, time-of-day denominator, priority order, or clearance-demand derivation."
+        },
+        {
+          "criterion_id": "R04",
+          "disposition": "partial",
+          "finding": "Preserves the shared bottleneck, 1,180 veh/h, forty-five-minute contraflow setup, and inbound access, but omits bridge-temperature and smoke-visibility constraints and uses a simplistic North-Bridge-to-South-Pass contingency without current switch observations."
+        },
+        {
+          "criterion_id": "R05",
+          "disposition": "not_met",
+          "finding": "The ledger declares the domain missing and the decision provides no staffed fleet assignment, cycle-time arithmetic, bridge-feasible bus routing, or legal relief capacity."
+        },
+        {
+          "criterion_id": "R06",
+          "disposition": "partial",
+          "finding": "Recognizes filter, oxygen, air-quality, accessible-placement, and relocation concerns, but lacks smoke-safe staffed capacity, accessible cots, medical assignments and handoffs, power endurance, and observation-bound destinations."
+        },
+        {
+          "criterion_id": "R07",
+          "disposition": "partial",
+          "finding": "Adds Hmong/Spanish and radio interoperability, but omits measured channel reach and outage, ninety-minute door knocking, ASL/other languages, receipt/understanding proof, and one exact revision across channels."
+        },
+        {
+          "criterion_id": "R08",
+          "disposition": "not_met",
+          "finding": "Uses the seventeen-hour exercise arrival rather than the governing nineteen-hour outage delay and supplies no twenty-four-hour staging, alternate supplier/route, consumption checks, or replenishment trigger."
+        },
+        {
+          "criterion_id": "R09",
+          "disposition": "not_met",
+          "finding": "The ledger declares animal logistics missing and the decision contains no parallel pet/livestock/service-animal operation, capacity, cycles, route conflict, overflow, or stop rule."
+        },
+        {
+          "criterion_id": "R10",
+          "disposition": "partial",
+          "finding": "The decision mentions private/public separation, self-evacuation, restricted data, and correct retention windows, but the ledger calls the domain missing and the package lacks grounded minimum fields, roles, reconciliation, legal hold, and deletion proof."
+        },
+        {
+          "criterion_id": "R11",
+          "disposition": "partial",
+          "finding": "Contains a coarse 48-hour sequence and generic owners/check/repair language, but lacks exact resource and cost authority, joined assignments, effect-aware current verification, and operationally justified contingencies."
+        },
+        {
+          "criterion_id": "R12",
+          "disposition": "partial",
+          "finding": "Preserves the six independent-review blockers and refuses readiness, but omits several exercise defects and never produces a current final actor-visible check after its repair."
+        }
+      ],
+      "score": {
+        "met": 0,
+        "partial": 9,
+        "not_met": 3,
+        "total": 12
+      },
+      "unsupported_or_contradictory_claims": [
+        "Incident command is described as owning recommendation, execution, and checks rather than preserving the source-defined role split.",
+        "Contraflow is activated below 1,180 veh/h even though 1,180 is an observed exercise throughput, not a frozen activation threshold.",
+        "A North Bridge failure is routed to South Pass without binding the South Pass smoke-visibility condition or bus constraints.",
+        "Several correct privacy-retention claims are uncited and contradict the ledger's assertion that the evidence is absent."
+      ],
+      "blocking_requirements": [
+        "five mechanical requirement groups remain blocking",
+        "R05, R08, and R09 are not met",
+        "no complete R01-R12 semantic resolution",
+        "no current actor-visible check after the final mutation",
+        "candidate was not submitted"
+      ],
+      "quality_class": "weak_partial",
+      "closure_readiness": "not_ready",
+      "final_effect_current_or_independently_reconciled": true,
+      "useful_completion": false
+    }
+  ],
+  "condition_mapping": [
+    {
+      "candidate_label": "C-69AC7847",
+      "configuration_id": "D0_DETACHED"
+    },
+    {
+      "candidate_label": "C-35D113E9",
+      "configuration_id": "A1_COUPLED"
+    }
+  ],
+  "comparative_disposition": {
+    "D0_DETACHED": {
+      "candidate_label": "C-69AC7847",
+      "quality_class": "weak_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false
+    },
+    "A1_COUPLED": {
+      "candidate_label": "C-35D113E9",
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false
+    },
+    "configuration_level_interaction": "A1 produced materially broader and more operationally detailed exact work than D0 at nearly equal cost, but neither configuration achieved useful completion. A1's advantage is a local artifact-quality signal, not readiness or architecture promotion.",
+    "semantic_dominance": "A1_COUPLED_local_quality_advantage_without_useful_completion",
+    "claim_limit": "This is one fresh task, one seed, and a compound whole-system comparison. It does not isolate artifact coupling or prove transfer."
+  }
+}

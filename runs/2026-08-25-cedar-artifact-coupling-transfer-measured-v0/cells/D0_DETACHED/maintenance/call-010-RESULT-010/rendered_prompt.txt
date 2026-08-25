@@ -1,0 +1,324 @@
+<|im_start|>system
+# EVIDENCE_INTEGRATION maintenance mode
+
+Return only a complete replacement Markdown evidence-integration ledger whose
+first line is exactly `# Evidence Integration Ledger`. Do not take an ordinary task
+action. Integrate source-grounded findings, qualifications, cross-source
+relationships, requirement bindings R01-R12, contradictions, and unresolved
+evidence useful for the Cedar Valley evacuation decision.
+
+The output is model-authored and lossy. It cannot authorize readiness or
+submission. Replace prior material rather than appending indefinitely. Keep it
+under the hard 1600-token limit. The only evidence source
+IDs you may cite are: S01, S02, S03, S04, S05, S16. Source identities elsewhere in the task are
+not evidence unless they are in that allowlist.<|im_end|>
+<|im_start|>user
+# Authoritative task
+
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.
+
+
+# Prior accepted integration ledger
+
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+[S01] designates the Incident Commander (IC) as the sole authority for evacuation orders. [S02] confirms IC approval is required for cancellation, which needs field confirmation. Vendors and dashboards are advisory only [S01].
+*   **Disposition:** Bound.
+*   **Blockers:** None.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S02] defines conservative triggers: Zone A mandatory <6h or spotting across Dry Creek; Zone B mandatory <5h, prepare >9h. The governing trigger is the conservative envelope (5.8h for Zone A), not the median (7.5h) [S02]. Forecast updates accelerate orders but cannot silently cancel them [S02].
+*   **Disposition:** Bound.
+*   **Qualifications:** Use conservative ensemble, not median [S02].
+*   **Blockers:** None.
+
+**R03: Population Basis & Assistance Demand**
+[S03] lists Zone A (5,280), B (8,940), C (12,600) residents plus up to 2,100 tourists [S03]. Medical categories (no vehicle, mobility, oxygen, dialysis) overlap and must not be summed as independent people [S03]. Survey coverage is 91%; an uncertainty allowance is required for unreported households [S03].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum overlapping medical categories as separate individuals [S03]. Tourist demand is time-dependent [S03].
+*   **Blockers:** None.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] identifies Mill Junction as the bottleneck (1,500 veh/h). North Bridge (1,100 veh/h) and South Pass (850 veh/h) feed into it; capacities cannot be added [S04]. Exercise throughput was 1,180 veh/h [S04]. Contraflow requires sheriff closure and 45 minutes setup [S04].
+*   **Disposition:** Bound.
+*   **Qualifications:** Do not sum roads sharing Mill Junction [S04]. Use exercise throughput until field-tested otherwise [S04].
+*   **Blockers:** None.
+
+**R05: Fleet Matching & Driver Duty**
+[S03] requires fleet reservation by person/accommodation, not household count [S03]. [S16] lists "complete driver roster" as a blocker but provides no operational data [S16]. No evidence for driver duty cycles or relief capacity exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** No fleet matching logic or driver duty data in [S03], [S04], [S16].
+
+**R06: Shelter Capacity & Medical Handoffs**
+[S02] notes air-quality shelter viability can remove destinations, altering road demand [S02]. [S16] lists "Ridge School filter repair" and "person-level oxygen matching" as blockers but provides no operational data [S16]. No evidence for smoke-safe capacity or medical handoffs exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity [S16].
+
+**R07: Warnings & Community Support**
+[S16] lists "volunteer-radio identifier test" as a blocker but provides no operational data [S16]. No evidence for multilingual warning, door-knock timing, or receipt/understanding evidence exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind communication strategy [S16].
+
+**R08: Fuel & Power Continuity**
+[S16] lists "alternate fuel confirmation" as a blocker but provides no operational data [S16]. No evidence for observed delays, local staging, or coupled asset effects exists in allowed sources.
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind resource contracting [S16].
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+No evidence for private accountability, public aggregation, restricted health data handling, reconciliation, retention, or deletion proof is present in [S03], [S04], or [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind data management protocol.
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03], [S04], or [S16]. [S16] classifies the package as not ready due to open blockers [S16].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline [S16].
+
+**R12: Verification & Readiness Blockers**
+[S16] classifies the package as not ready. Open blockers include North Bridge engineering inspection, complete driver roster, Ridge School filter repair, volunteer-radio identifier test, alternate fuel confirmation, and person-level oxygen matching [S16]. Component dashboards are green but bind to different plan revisions; no current integrated check exists [S16]. Readiness requires every hard blocker resolved, effects incorporated, a current integrated exercise or justified bounded check, and incident-command acceptance [S16]. Submission or a model-authored ledger cannot create that authority [S16].
+*   **Disposition:** Not Ready.
+*   **Blockers:** All six blockers in [S16] remain open.
+
+**Cross-Source Relationships & Contradictions**
+[S03] defines demand; [S04] defines supply constraints; [S01] defines authority; [S16] defines readiness status. No contradictions exist between these sources. However, all four lack evidence for fleet specifics (R05), shelter/medical (R06), communications (R07), resources (R08), animals (R09), data privacy (R10), execution sequence (R11). The integration is incomplete for a full evacuation decision.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent in [S03]/[S04].
+*   Fleet matching logic linking [S03] demand to vehicle capacity is absent.
+*   Shelter location and capacity data are entirely missing from provided sources.
+
+# Exact newly externalized observation
+
+{"object_id":"batch:S04:1-70+S05:1-70","object_version":"eadb5485b21d46fde16b344032d79a1b14aae9837dc932b2c2876cbc81e5d8ab","result_id":"RESULT-010","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S04","start_line":1},{"end_line":70,"source_id":"S05","start_line":1}],"total_source_bytes":9568}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S04","source_path":"cedar_sources/S04_ROAD_NETWORK.md","source_sha256":"c3c673a02683a15b924b29c264ede1b74f1fa0c6fd47f8e7361cd3320f9a99b0","source_size_bytes":4623,"start_line":1}
+--- exact source range ---
+# Road network capacity, shared bottlenecks, and contraflow
+
+## Frozen findings
+
+North Bridge is rated at 1,100 passenger vehicles per hour and South Pass at 850, but both feed Mill Junction, whose measured sustainable throughput is 1,500 vehicles per hour. Their headline capacities therefore cannot be added.
+North Bridge excludes full-size buses after deck temperature reaches 54 C until an engineer clears it. South Pass can close under smoke visibility below 150 meters. County 12 is the freight and emergency-access route and cannot be fully converted to outbound traffic.
+Contraflow requires a sheriff closure order, forty-five minutes of setup, and staffed crossover points. The last exercise achieved only 1,180 vehicles per hour at Mill Junction because lane merging was unmanaged.
+
+## Governing relationships
+
+Zone sequencing must reserve emergency inbound capacity and align bus routes with bridge restrictions from S05. Forecast and air-quality conditions can invalidate a route after the plan is checked.
+Clearance time must use the shared junction and exercise throughput until a current field test proves a higher candidate-bound value.
+
+## Operational evidence
+
+| record | route | rated veh/h | observed veh/h | coupling | status |
+|---|---|---|---|---|---|
+| ROAD-000 | North-Bridge | 1100 | 748 | shared-junction | hold |
+| ROAD-001 | South-Pass | 850 | 607 | shared-junction | open |
+| ROAD-002 | County-12 | 620 | 465 | shared-junction | open |
+| ROAD-003 | Ridge-Connector | 480 | 376 | shared-junction | open |
+| ROAD-004 | Mill-Junction | 1500 | 1230 | system-bottleneck | open |
+| ROAD-005 | North-Bridge | 1100 | 940 | shared-junction | open |
+| ROAD-006 | South-Pass | 850 | 756 | shared-junction | open |
+| ROAD-007 | County-12 | 620 | 421 | shared-junction | open |
+| ROAD-008 | Ridge-Connector | 480 | 343 | shared-junction | open |
+| ROAD-009 | Mill-Junction | 1500 | 1125 | system-bottleneck | open |
+| ROAD-010 | North-Bridge | 1100 | 863 | shared-junction | open |
+| ROAD-011 | South-Pass | 850 | 697 | shared-junction | open |
+| ROAD-012 | County-12 | 620 | 530 | shared-junction | open |
+| ROAD-013 | Ridge-Connector | 480 | 427 | shared-junction | hold |
+| ROAD-014 | Mill-Junction | 1500 | 1020 | system-bottleneck | open |
+| ROAD-015 | North-Bridge | 1100 | 786 | shared-junction | open |
+| ROAD-016 | South-Pass | 850 | 637 | shared-junction | open |
+| ROAD-017 | County-12 | 620 | 486 | shared-junction | open |
+| ROAD-018 | Ridge-Connector | 480 | 393 | shared-junction | open |
+| ROAD-019 | Mill-Junction | 1500 | 1282 | system-bottleneck | open |
+| ROAD-020 | North-Bridge | 1100 | 979 | shared-junction | open |
+| ROAD-021 | South-Pass | 850 | 578 | shared-junction | open |
+| ROAD-022 | County-12 | 620 | 443 | shared-junction | open |
+| ROAD-023 | Ridge-Connector | 480 | 360 | shared-junction | open |
+| ROAD-024 | Mill-Junction | 1500 | 1177 | system-bottleneck | open |
+| ROAD-025 | North-Bridge | 1100 | 902 | shared-junction | open |
+| ROAD-026 | South-Pass | 850 | 726 | shared-junction | hold |
+| ROAD-027 | County-12 | 620 | 551 | shared-junction | open |
+| ROAD-028 | Ridge-Connector | 480 | 326 | shared-junction | open |
+| ROAD-029 | Mill-Junction | 1500 | 1072 | system-bottleneck | open |
+| ROAD-030 | North-Bridge | 1100 | 825 | shared-junction | open |
+| ROAD-031 | South-Pass | 850 | 667 | shared-junction | open |
+| ROAD-032 | County-12 | 620 | 508 | shared-junction | open |
+| ROAD-033 | Ridge-Connector | 480 | 410 | shared-junction | open |
+| ROAD-034 | Mill-Junction | 1500 | 1335 | system-bottleneck | open |
+| ROAD-035 | North-Bridge | 1100 | 748 | shared-junction | open |
+| ROAD-036 | South-Pass | 850 | 607 | shared-junction | open |
+| ROAD-037 | County-12 | 620 | 465 | shared-junction | open |
+| ROAD-038 | Ridge-Connector | 480 | 376 | shared-junction | open |
+| ROAD-039 | Mill-Junction | 1500 | 1230 | system-bottleneck | hold |
+| ROAD-040 | North-Bridge | 1100 | 940 | shared-junction | open |
+| ROAD-041 | South-Pass | 850 | 756 | shared-junction | open |
+| ROAD-042 | County-12 | 620 | 421 | shared-junction | open |
+| ROAD-043 | Ridge-Connector | 480 | 343 | shared-junction | open |
+| ROAD-044 | Mill-Junction | 1500 | 1125 | system-bottleneck | open |
+| ROAD-045 | North-Bridge | 1100 | 863 | shared-junction | open |
+| ROAD-046 | South-Pass | 850 | 697 | shared-junction | open |
+| ROAD-047 | County-12 | 620 | 530 | shared-junction | open |
+
+## Decision constraints
+
+Do not sum independent road ratings across a shared downstream bottleneck.
+Name setup effects, route-loss contingencies, and the observation that authorizes each switch.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S05","source_path":"cedar_sources/S05_TRANSPORT_FLEET.md","source_sha256":"f9de260d4aff0081cb42bae7f938fc4fa8b26a8c653c5cdb8b57c81527057396","source_size_bytes":4476,"start_line":1}
+--- exact source range ---
+# Evacuation fleet, accessible transport, and driver limits
+
+## Frozen findings
+
+Eighteen county buses exist, but only eleven qualified drivers can report within two hours. Four buses are lift-equipped; each carries two occupied wheelchairs and thirty-four seated riders in that configuration.
+Twelve school buses become available at 14:30, after student release. They cannot be assumed in an earlier Zone A clearance. Ambulances are reserved for clinical need and are not general mobility vehicles.
+Drivers have a twelve-hour duty ceiling. A route plan that uses every driver for outbound movement leaves no legal return, relief, or shelter-transfer capacity.
+
+## Governing relationships
+
+The no-vehicle and accessibility demand in S03 must be matched to actual vehicle/driver pairs. S04 bridge restrictions can remove standard buses from the fastest route.
+Fuel endurance and delayed resupply in S09 constrain repeated cycles; nominal seats are not the same as sustained evacuation throughput.
+
+## Operational evidence
+
+| record | vehicle | available | seats | drivers | cycle | status |
+|---|---|---|---|---|---|---|
+| FLEET-000 | standard-bus | 1 | 44 | 1 drivers | 35m | roster-gap |
+| FLEET-001 | lift-bus | 2 | 34 | 2 drivers | 48m | qualified |
+| FLEET-002 | ambulance | 3 | 2 | 3 drivers | 61m | qualified |
+| FLEET-003 | paratransit | 4 | 8 | 4 drivers | 74m | qualified |
+| FLEET-004 | school-bus | 1 | 48 | 5 drivers | 87m | qualified |
+| FLEET-005 | standard-bus | 2 | 44 | 1 drivers | 39m | qualified |
+| FLEET-006 | lift-bus | 3 | 34 | 2 drivers | 52m | qualified |
+| FLEET-007 | ambulance | 4 | 2 | 3 drivers | 65m | qualified |
+| FLEET-008 | paratransit | 1 | 8 | 4 drivers | 78m | roster-gap |
+| FLEET-009 | school-bus | 2 | 48 | 5 drivers | 91m | qualified |
+| FLEET-010 | standard-bus | 3 | 44 | 1 drivers | 43m | qualified |
+| FLEET-011 | lift-bus | 4 | 34 | 2 drivers | 56m | qualified |
+| FLEET-012 | ambulance | 1 | 2 | 3 drivers | 69m | qualified |
+| FLEET-013 | paratransit | 2 | 8 | 4 drivers | 82m | qualified |
+| FLEET-014 | school-bus | 3 | 48 | 5 drivers | 95m | qualified |
+| FLEET-015 | standard-bus | 4 | 44 | 1 drivers | 47m | qualified |
+| FLEET-016 | lift-bus | 1 | 34 | 2 drivers | 60m | roster-gap |
+| FLEET-017 | ambulance | 2 | 2 | 3 drivers | 73m | qualified |
+| FLEET-018 | paratransit | 3 | 8 | 4 drivers | 86m | qualified |
+| FLEET-019 | school-bus | 4 | 48 | 5 drivers | 38m | qualified |
+| FLEET-020 | standard-bus | 1 | 44 | 1 drivers | 51m | qualified |
+| FLEET-021 | lift-bus | 2 | 34 | 2 drivers | 64m | qualified |
+| FLEET-022 | ambulance | 3 | 2 | 3 drivers | 77m | qualified |
+| FLEET-023 | paratransit | 4 | 8 | 4 drivers | 90m | qualified |
+| FLEET-024 | school-bus | 1 | 48 | 5 drivers | 42m | roster-gap |
+| FLEET-025 | standard-bus | 2 | 44 | 1 drivers | 55m | qualified |
+| FLEET-026 | lift-bus | 3 | 34 | 2 drivers | 68m | qualified |
+| FLEET-027 | ambulance | 4 | 2 | 3 drivers | 81m | qualified |
+| FLEET-028 | paratransit | 1 | 8 | 4 drivers | 94m | qualified |
+| FLEET-029 | school-bus | 2 | 48 | 5 drivers | 46m | qualified |
+| FLEET-030 | standard-bus | 3 | 44 | 1 drivers | 59m | qualified |
+| FLEET-031 | lift-bus | 4 | 34 | 2 drivers | 72m | qualified |
+| FLEET-032 | ambulance | 1 | 2 | 3 drivers | 85m | roster-gap |
+| FLEET-033 | paratransit | 2 | 8 | 4 drivers | 37m | qualified |
+| FLEET-034 | school-bus | 3 | 48 | 5 drivers | 50m | qualified |
+| FLEET-035 | standard-bus | 4 | 44 | 1 drivers | 63m | qualified |
+| FLEET-036 | lift-bus | 1 | 34 | 2 drivers | 76m | qualified |
+| FLEET-037 | ambulance | 2 | 2 | 3 drivers | 89m | qualified |
+| FLEET-038 | paratransit | 3 | 8 | 4 drivers | 41m | qualified |
+| FLEET-039 | school-bus | 4 | 48 | 5 drivers | 54m | qualified |
+| FLEET-040 | standard-bus | 1 | 44 | 1 drivers | 67m | roster-gap |
+| FLEET-041 | lift-bus | 2 | 34 | 2 drivers | 80m | qualified |
+| FLEET-042 | ambulance | 3 | 2 | 3 drivers | 93m | qualified |
+| FLEET-043 | paratransit | 4 | 8 | 4 drivers | 45m | qualified |
+| FLEET-044 | school-bus | 1 | 48 | 5 drivers | 58m | qualified |
+| FLEET-045 | standard-bus | 2 | 44 | 1 drivers | 71m | qualified |
+| FLEET-046 | lift-bus | 3 | 34 | 2 drivers | 84m | qualified |
+| FLEET-047 | ambulance | 4 | 2 | 3 drivers | 36m | qualified |
+
+## Decision constraints
+
+Reserve accessible capacity first, state cycle times, and preserve relief-driver capacity.
+Do not count unavailable school buses or unstaffed vehicles as operational capacity.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

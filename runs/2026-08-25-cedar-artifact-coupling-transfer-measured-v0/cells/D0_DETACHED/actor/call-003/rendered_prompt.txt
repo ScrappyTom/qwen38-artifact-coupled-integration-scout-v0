@@ -1,0 +1,687 @@
+<|im_start|>system
+# System contract
+
+You are the task actor in a bounded exact-world experiment. Return exactly one
+declared JSON action and no prose. Exact sources, candidate files, actions,
+effects, checks, and history are externally custodied. Receipts identify exact
+recoverable results but do not contain their semantic substance.
+
+Use only evidence that has crossed your model boundary. A model-authored
+evidence-integration ledger is lossy and non-authoritative. A check is current
+only for the exact composite candidate hash it evaluated. Submission is a
+proposal for external candidate-bound adjudication, not proof that the Cedar
+Valley evacuation package is ready.<|im_end|>
+<|im_start|>user
+# Task: Cedar Valley evacuation operations package
+
+A fast-moving wildfire threatens Cedar Valley. Produce two exact deliverables
+from the source catalog:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`
+
+The second filename is fixed by the experimental runtime; its content is an
+evacuation operations decision, not a software architecture document. The
+package must decide a safe, source-grounded 48-hour route from warning through
+evacuation, sheltering, accountability, verification, and readiness. Reconcile
+the sources as a coupled operational system rather than summarizing them one by
+one.
+
+## Evidence-ledger contract
+
+The ledger must begin with `# Evidence Integration Ledger` and contain entries
+for `R01` through `R12`. Each entry must state a current disposition, cite exact
+observed sources as `[SNN]`, preserve conflicts and qualifications, bind the
+relevant requirement to current or missing evidence, and identify blockers.
+The ledger is model-authored, lossy, and never readiness authority.
+
+## Decision-document contract
+
+The decision must begin with `# Cedar Valley Evacuation Operations Decision`
+and use exactly these level-two headings, in this order:
+
+1. `## Decision, scope, and authority`
+2. `## Hazard triggers and zone sequencing`
+3. `## Population, transport, and route clearance`
+4. `## Shelter, medical, and accessibility continuity`
+5. `## Warnings, accountability, and community support`
+6. `## Power, fuel, and resource contracting`
+7. `## Forty-eight-hour execution and contingencies`
+8. `## Verification, readiness, blockers, and falsifiers`
+
+The decision must be 1,500–2,100 words excluding exact `[SNN]` citations, cite
+at least twelve distinct source IDs, and cite `S01`, `S02`, `S03`, `S04`,
+`S05`, `S06`, `S07`, `S08`, `S09`, `S11`, `S12`, `S13`, `S15`, and `S16`.
+
+The complete package must substantively resolve these requirements:
+
+- `R01`: legal order, recommendation, execution, check, and closure authority;
+- `R02`: conservative fire and weather triggers, forecast binding, expiry, and
+  zone sequencing;
+- `R03`: population basis, tourists, overlapping assistance categories, survey
+  uncertainty, and clearance demand;
+- `R04`: shared road bottlenecks, observed exercise throughput, contraflow,
+  emergency inbound capacity, and route-loss contingencies;
+- `R05`: person/accommodation-level fleet matching, driver duty, cycle time,
+  bridge constraints, and relief capacity;
+- `R06`: smoke-safe shelter capacity, accessible placements, medical handoffs,
+  filtration, power, and relocation;
+- `R07`: redundant multilingual warning, door-knock timing, radio
+  interoperability, receipt/understanding evidence, and one zone revision;
+- `R08`: fuel and power continuity using observed delay, local staging,
+  alternate routes/suppliers, and coupled asset effects;
+- `R09`: animals and service animals without delaying human evacuation or
+  double-counting routes and shelter capacity;
+- `R10`: private accountability, public aggregation, self-evacuation,
+  restricted health data, reconciliation, retention, and deletion proof;
+- `R11`: a concrete 48-hour sequence with owners, effects, current checks,
+  repair, recheck, resource/cost authority, and contingencies;
+- `R12`: all exercise and independent-review blockers, candidate-bound
+  readiness, uncertainties, and explicit falsifiers.
+
+Do not sum roads that share Mill Junction; use nominal shelter or vehicle
+capacity as operational capacity; delay a conservative trigger because the
+median forecast is better; count overlapping medical categories as separate
+people; expose medical data publicly; separate service animals from handlers;
+use the eight-hour fuel target instead of the observed delay; treat owner
+attestation, component dashboards, a stale check, this ledger, or submission as
+proof of readiness.<|im_end|>
+<|im_start|>user
+# Ordinary actor actions
+
+Return exactly one JSON object and no surrounding prose.
+
+- `{"action":"read_source","source_id":"S01","start_line":1,"end_line":70}`
+- `{"action":"read_batch","requests":[{"source_id":"S01","start_line":1,"end_line":70},{"source_id":"S02","start_line":1,"end_line":70}]}`
+- `{"action":"reopen_exact","result_id":"RESULT-001"}`
+- `{"action":"replace_evidence_ledger","content":"# Evidence Integration Ledger\n..."}`
+- `{"action":"upsert_decision_section","heading":"Decision, scope, and authority","body":"..."}`
+- `{"action":"replace_decision","content":"# Cedar Valley Evacuation Operations Decision\n..."}`
+- `{"action":"run_check"}`
+- `{"action":"submit"}`
+
+One source range is at most 120 lines. A batch contains at most two
+non-overlapping ranges, 160 total lines, 12,000 exact source bytes, and a 6,500
+token model-visible result. The same 6,500-token result cap applies to a single
+source read. A section upsert changes one declared level-two section while
+preserving the other exact sections. Checks bind to the current composite
+candidate hash.
+
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":70,"sha256":"2f2a329651a4809ab2d6c5dd95b0fb48d6e583250afa14bab71c164f97fe99fc","size_bytes":4815,"source_id":"S01","title":"Cedar Valley command authority and evacuation powers"},{"line_count":70,"sha256":"3554ad403cf74ba6e8f022832f5bd1665cef008ad1b9ed32affe2d96e3d4a736","size_bytes":3942,"source_id":"S02","title":"Fire behavior, trigger thresholds, and uncertainty"},{"line_count":70,"sha256":"9084f179840d15ab9844c52e9c94370981d4c27fd095589f947105932f684331","size_bytes":4234,"source_id":"S03","title":"Zone population, vehicle access, and assistance demand"},{"line_count":70,"sha256":"c3c673a02683a15b924b29c264ede1b74f1fa0c6fd47f8e7361cd3320f9a99b0","size_bytes":4623,"source_id":"S04","title":"Road network capacity, shared bottlenecks, and contraflow"},{"line_count":70,"sha256":"f9de260d4aff0081cb42bae7f938fc4fa8b26a8c653c5cdb8b57c81527057396","size_bytes":4476,"source_id":"S05","title":"Evacuation fleet, accessible transport, and driver limits"},{"line_count":70,"sha256":"f82a8ad9d53d9bacf25c4dbcbc867304140e7bd40ae00dbae911347d6a140368","size_bytes":4280,"source_id":"S06","title":"Shelter capacity, smoke filtration, and accessibility"},{"line_count":70,"sha256":"beaa9d04f58a2c793b0f2f848540ba0622d24734e6db59ceb2e66dba53ed634b","size_bytes":5205,"source_id":"S07","title":"Medical continuity and accessibility matching"},{"line_count":70,"sha256":"b683dae0374ea3587b8b0d8142f70c8ca1197f112c3728430d0a240d503aedf1","size_bytes":5153,"source_id":"S08","title":"Warning channels, language access, and radio interoperability"},{"line_count":70,"sha256":"592ff4e8e1a3d193c8c176aff028349c7f725d7cdcc99d5e6c7306040fd07f90","size_bytes":4229,"source_id":"S09","title":"Power, fuel, and resupply continuity"},{"line_count":70,"sha256":"b13ae4d10f3d2b8140d84fd4059c0fc36feec630a2a2865f0e9d3cd4f7769a73","size_bytes":4665,"source_id":"S10","title":"Household pets, livestock, and service animals"},{"line_count":70,"sha256":"db9cb01fd3621a74aa30e2efa454938e382534c9266285abbffde015654d776c","size_bytes":3825,"source_id":"S11","title":"Smoke exposure and clean-air shelter thresholds"},{"line_count":70,"sha256":"cfaab1b39c0a343b59df16ac55b645b94a08b758252b50b972f25daabdb3d0a9","size_bytes":5433,"source_id":"S12","title":"Evacuee accountability, privacy, and reunification"},{"line_count":70,"sha256":"56498133050c8c08dcf8661d0c4c83d972d56b3da4ab119802ed179bac2715a3","size_bytes":4510,"source_id":"S13","title":"Full-scale exercise defects and repair evidence"},{"line_count":70,"sha256":"b01cae551ccb98947a3db2365ff446f9595bf97fa50448db7d859c6ada50a3b2","size_bytes":4743,"source_id":"S14","title":"Emergency contracts, cost ceilings, and procurement authority"},{"line_count":70,"sha256":"c4a8a9397f8b73ee2575405d377081eadaa4a7340339eb8db1b59c330027cdc6","size_bytes":4172,"source_id":"S15","title":"Wind-shift ensemble and forecast update cadence"},{"line_count":70,"sha256":"e6ca089e6bd891729f82f4e15b607fad56767b89fc199767b1d7b80a01535f7e","size_bytes":5245,"source_id":"S16","title":"Independent evacuation-readiness review"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"91b13b7a7525af7c261da9bed5f58e464cdb8605dd054c55c03e958b6a531939","candidate_version":"candidate-v000:91b13b7a7525af7c261da9bed5f58e464cdb8605dd054c55c03e958b6a531939","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"0a56cad2a9f1ccb635a0279bcbc053d18bf0c0fef515b70919af44161fb1fbea","EVIDENCE_INTEGRATION_LEDGER.md":"9713a27ea89363fdf54e2ec97760cff94bc4614dcf24a07314aabb14923860a9"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Evidence Integration Ledger
+
+No evidence has been integrated.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Cedar Valley Evacuation Operations Decision
+
+No operational decision has been written.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S01","start_line":1},{"end_line":70,"source_id":"S02","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":2,"exact_result_sha256":"e59e01724f143d4936c800cc1acdad4f62a5c87f5e33a6fe963afd8f2caf1c86","exact_result_size_bytes":9718,"object_id":"batch:S01:1-70+S02:1-70","object_version":"8dc34551761fe6d45b4082da8f8d9b2fc2fdad51640cbf9bcfc0cd967571e2d8","observed_ranges":[{"end_line":70,"source_id":"S01","start_line":1},{"end_line":70,"source_id":"S02","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-001"},"reopen_handle":"result://sha256/e59e01724f143d4936c800cc1acdad4f62a5c87f5e33a6fe963afd8f2caf1c86","resident":false,"result_id":"RESULT-001","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S01","S02"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":9229}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S03","start_line":1},{"end_line":70,"source_id":"S04","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":3,"exact_result_sha256":"b1b83dc5d3c22bced11a15c997c5a087818c665ca930fd37c6bd009eb43fa92b","exact_result_size_bytes":9815,"object_id":"batch:S03:1-70+S04:1-70","object_version":"876ae50e4218646a3e94154275f55fa0b2992c5e2540b034bbf6a8090a597226","observed_ranges":[{"end_line":70,"source_id":"S03","start_line":1},{"end_line":70,"source_id":"S04","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-002"},"reopen_handle":"result://sha256/b1b83dc5d3c22bced11a15c997c5a087818c665ca930fd37c6bd009eb43fa92b","resident":false,"result_id":"RESULT-002","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S03","S04"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":9326}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S05","start_line":1},{"end_line":70,"source_id":"S06","start_line":1}] }<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":4,"exact_result_sha256":"abfb0f752a7c767c12f92986b04dad39981c3ade614ff6e2faa922bc8bf8aa50","exact_result_size_bytes":9718,"object_id":"batch:S05:1-70+S06:1-70","object_version":"8319ee86b2aa90ba4d4b0a6ad91ba1b775563c783f4cce34ba97f5ade9b22f95","observed_ranges":[{"end_line":70,"source_id":"S05","start_line":1},{"end_line":70,"source_id":"S06","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-003"},"reopen_handle":"result://sha256/abfb0f752a7c767c12f92986b04dad39981c3ade614ff6e2faa922bc8bf8aa50","resident":false,"result_id":"RESULT-003","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S05","S06"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":9229}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S07","start_line":1},{"end_line":70,"source_id":"S08","start_line":1}] }<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":5,"exact_result_sha256":"2078300cf5f7e20dec8c7d8319ef21cae2d76d403606179cf627a6b4c0f5fb11","exact_result_size_bytes":11318,"object_id":"batch:S07:1-70+S08:1-70","object_version":"38b0571fea25acaad0e4fc92e79e9ff4d861ced9f55a096aa4517a32d648eaa0","observed_ranges":[{"end_line":70,"source_id":"S07","start_line":1},{"end_line":70,"source_id":"S08","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-004"},"reopen_handle":"result://sha256/2078300cf5f7e20dec8c7d8319ef21cae2d76d403606179cf627a6b4c0f5fb11","resident":false,"result_id":"RESULT-004","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["S07","S08"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":10828}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S09","start_line":1},{"end_line":70,"source_id":"S10","start_line":1}] }<|im_end|>
+<|im_start|>user
+{"object_id":"batch:S09:1-70+S10:1-70","object_version":"7747f2b6a3d03910654c7776cc9f60c35695de1cba983b9fc2f08f1f26888cae","result_id":"RESULT-005","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S09","start_line":1},{"end_line":70,"source_id":"S10","start_line":1}],"total_source_bytes":9363}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S09","source_path":"cedar_sources/S09_POWER_FUEL.md","source_sha256":"592ff4e8e1a3d193c8c176aff028349c7f725d7cdcc99d5e6c7306040fd07f90","source_size_bytes":4229,"start_line":1}
+--- exact source range ---
+# Power, fuel, and resupply continuity
+
+## Frozen findings
+
+Civic Arena's generator has sixteen tested hours of fuel, radio repeaters ten, and the county bus reserve fourteen hours at the planned cycle rate. The fuel contract targets delivery within eight hours.
+The last regional outage delayed contracted fuel for nineteen hours because the supplier used South Pass. The plan must stage enough local fuel for at least twenty-four hours or diversify the route and supplier.
+Traffic signals on generator backup last eight hours. Manual intersection control needs twenty-six trained personnel, but the current roster contains eighteen.
+
+## Governing relationships
+
+Fuel availability constrains shelter viability, radio coverage, bus cycles, and road throughput simultaneously. It cannot be scored once as a generic resource line.
+A route closure in S04 can invalidate the fuel contract even if the vendor remains operational.
+
+## Operational evidence
+
+| record | asset | endurance | resupply | dependency | status |
+|---|---|---|---|---|---|
+| CONT-000 | shelter-generator | 16h | 6h | vendor-dependent | hold |
+| CONT-001 | radio-repeater | 10h | 13h | local | tracked |
+| CONT-002 | bus-fuel | 14h | 20h | local | tracked |
+| CONT-003 | oxygen-cache | 18h | 9h | vendor-dependent | tracked |
+| CONT-004 | traffic-signal | 8h | 16h | local | tracked |
+| CONT-005 | shelter-generator | 16h | 23h | local | tracked |
+| CONT-006 | radio-repeater | 10h | 12h | vendor-dependent | tracked |
+| CONT-007 | bus-fuel | 14h | 19h | local | tracked |
+| CONT-008 | oxygen-cache | 18h | 8h | local | tracked |
+| CONT-009 | traffic-signal | 8h | 15h | vendor-dependent | tracked |
+| CONT-010 | shelter-generator | 16h | 22h | local | tracked |
+| CONT-011 | radio-repeater | 10h | 11h | local | tracked |
+| CONT-012 | bus-fuel | 14h | 18h | vendor-dependent | tracked |
+| CONT-013 | oxygen-cache | 18h | 7h | local | tracked |
+| CONT-014 | traffic-signal | 8h | 14h | local | hold |
+| CONT-015 | shelter-generator | 16h | 21h | vendor-dependent | tracked |
+| CONT-016 | radio-repeater | 10h | 10h | local | tracked |
+| CONT-017 | bus-fuel | 14h | 17h | local | tracked |
+| CONT-018 | oxygen-cache | 18h | 6h | vendor-dependent | tracked |
+| CONT-019 | traffic-signal | 8h | 13h | local | tracked |
+| CONT-020 | shelter-generator | 16h | 20h | local | tracked |
+| CONT-021 | radio-repeater | 10h | 9h | vendor-dependent | tracked |
+| CONT-022 | bus-fuel | 14h | 16h | local | tracked |
+| CONT-023 | oxygen-cache | 18h | 23h | local | tracked |
+| CONT-024 | traffic-signal | 8h | 12h | vendor-dependent | tracked |
+| CONT-025 | shelter-generator | 16h | 19h | local | tracked |
+| CONT-026 | radio-repeater | 10h | 8h | local | tracked |
+| CONT-027 | bus-fuel | 14h | 15h | vendor-dependent | tracked |
+| CONT-028 | oxygen-cache | 18h | 22h | local | hold |
+| CONT-029 | traffic-signal | 8h | 11h | local | tracked |
+| CONT-030 | shelter-generator | 16h | 18h | vendor-dependent | tracked |
+| CONT-031 | radio-repeater | 10h | 7h | local | tracked |
+| CONT-032 | bus-fuel | 14h | 14h | local | tracked |
+| CONT-033 | oxygen-cache | 18h | 21h | vendor-dependent | tracked |
+| CONT-034 | traffic-signal | 8h | 10h | local | tracked |
+| CONT-035 | shelter-generator | 16h | 17h | local | tracked |
+| CONT-036 | radio-repeater | 10h | 6h | vendor-dependent | tracked |
+| CONT-037 | bus-fuel | 14h | 13h | local | tracked |
+| CONT-038 | oxygen-cache | 18h | 20h | local | tracked |
+| CONT-039 | traffic-signal | 8h | 9h | vendor-dependent | tracked |
+| CONT-040 | shelter-generator | 16h | 16h | local | tracked |
+| CONT-041 | radio-repeater | 10h | 23h | local | tracked |
+| CONT-042 | bus-fuel | 14h | 12h | vendor-dependent | hold |
+| CONT-043 | oxygen-cache | 18h | 19h | local | tracked |
+| CONT-044 | traffic-signal | 8h | 8h | local | tracked |
+| CONT-045 | shelter-generator | 16h | 15h | vendor-dependent | tracked |
+| CONT-046 | radio-repeater | 10h | 22h | local | tracked |
+| CONT-047 | bus-fuel | 14h | 11h | local | tracked |
+
+## Decision constraints
+
+Use observed nineteen-hour delay rather than the eight-hour target as the continuity basis.
+Name local staging, alternate supplier/route, consumption checks, and replenishment triggers.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S10","source_path":"cedar_sources/S10_ANIMAL_EVACUATION.md","source_sha256":"b13ae4d10f3d2b8140d84fd4059c0fc36feec630a2a2865f0e9d3cd4f7769a73","source_size_bytes":4665,"start_line":1}
+--- exact source range ---
+# Household pets, livestock, and service animals
+
+## Frozen findings
+
+Survey estimates 1,480 household pets in Zones A and B, while pet-capable shelter space is 600. Fourteen livestock trailers can move 112 large animals per cycle; the registry lists 320 in the threatened area.
+Service animals remain with handlers and count against neither pet shelter nor livestock capacity. Separating them is an accessibility failure.
+Human evacuation may not be held until every animal is moved. The animal branch needs parallel routes, overflow agreements, and a documented last-safe transport time.
+
+## Governing relationships
+
+Animal trailers compete with buses at Mill Junction and require different shelter destinations. Their schedule must preserve the human clearance assumptions from S03–S05.
+Public messaging must distinguish service animals, household pets, and livestock so capacity is not double-counted.
+
+## Operational evidence
+
+| record | zone | category | count | vehicles | cycle | rule |
+|---|---|---|---|---|---|---|
+| ANIMAL-000 | A-North | household-pets | 8 | 2 | 30m | separate-route |
+| ANIMAL-001 | A-River | horses | 27 | 3 | 39m | separate-route |
+| ANIMAL-002 | B-East | cattle | 46 | 4 | 48m | separate-route |
+| ANIMAL-003 | B-Center | service-animals | 65 | 5 | 57m | remain-with-handler |
+| ANIMAL-004 | C-South | household-pets | 84 | 6 | 66m | separate-route |
+| ANIMAL-005 | C-Ridge | horses | 17 | 7 | 75m | separate-route |
+| ANIMAL-006 | A-North | cattle | 36 | 8 | 84m | separate-route |
+| ANIMAL-007 | A-River | service-animals | 55 | 9 | 93m | remain-with-handler |
+| ANIMAL-008 | B-East | household-pets | 74 | 10 | 102m | separate-route |
+| ANIMAL-009 | B-Center | horses | 93 | 11 | 111m | separate-route |
+| ANIMAL-010 | C-South | cattle | 26 | 12 | 30m | separate-route |
+| ANIMAL-011 | C-Ridge | service-animals | 45 | 2 | 39m | remain-with-handler |
+| ANIMAL-012 | A-North | household-pets | 64 | 3 | 48m | separate-route |
+| ANIMAL-013 | A-River | horses | 83 | 4 | 57m | separate-route |
+| ANIMAL-014 | B-East | cattle | 16 | 5 | 66m | separate-route |
+| ANIMAL-015 | B-Center | service-animals | 35 | 6 | 75m | remain-with-handler |
+| ANIMAL-016 | C-South | household-pets | 54 | 7 | 84m | separate-route |
+| ANIMAL-017 | C-Ridge | horses | 73 | 8 | 93m | separate-route |
+| ANIMAL-018 | A-North | cattle | 92 | 9 | 102m | separate-route |
+| ANIMAL-019 | A-River | service-animals | 25 | 10 | 111m | remain-with-handler |
+| ANIMAL-020 | B-East | household-pets | 44 | 11 | 30m | separate-route |
+| ANIMAL-021 | B-Center | horses | 63 | 12 | 39m | separate-route |
+| ANIMAL-022 | C-South | cattle | 82 | 2 | 48m | separate-route |
+| ANIMAL-023 | C-Ridge | service-animals | 15 | 3 | 57m | remain-with-handler |
+| ANIMAL-024 | A-North | household-pets | 34 | 4 | 66m | separate-route |
+| ANIMAL-025 | A-River | horses | 53 | 5 | 75m | separate-route |
+| ANIMAL-026 | B-East | cattle | 72 | 6 | 84m | separate-route |
+| ANIMAL-027 | B-Center | service-animals | 91 | 7 | 93m | remain-with-handler |
+| ANIMAL-028 | C-South | household-pets | 24 | 8 | 102m | separate-route |
+| ANIMAL-029 | C-Ridge | horses | 43 | 9 | 111m | separate-route |
+| ANIMAL-030 | A-North | cattle | 62 | 10 | 30m | separate-route |
+| ANIMAL-031 | A-River | service-animals | 81 | 11 | 39m | remain-with-handler |
+| ANIMAL-032 | B-East | household-pets | 14 | 12 | 48m | separate-route |
+| ANIMAL-033 | B-Center | horses | 33 | 2 | 57m | separate-route |
+| ANIMAL-034 | C-South | cattle | 52 | 3 | 66m | separate-route |
+| ANIMAL-035 | C-Ridge | service-animals | 71 | 4 | 75m | remain-with-handler |
+| ANIMAL-036 | A-North | household-pets | 90 | 5 | 84m | separate-route |
+| ANIMAL-037 | A-River | horses | 23 | 6 | 93m | separate-route |
+| ANIMAL-038 | B-East | cattle | 42 | 7 | 102m | separate-route |
+| ANIMAL-039 | B-Center | service-animals | 61 | 8 | 111m | remain-with-handler |
+| ANIMAL-040 | C-South | household-pets | 80 | 9 | 30m | separate-route |
+| ANIMAL-041 | C-Ridge | horses | 13 | 10 | 39m | separate-route |
+| ANIMAL-042 | A-North | cattle | 32 | 11 | 48m | separate-route |
+| ANIMAL-043 | A-River | service-animals | 51 | 12 | 57m | remain-with-handler |
+| ANIMAL-044 | B-East | household-pets | 70 | 2 | 66m | separate-route |
+| ANIMAL-045 | B-Center | horses | 89 | 3 | 75m | separate-route |
+| ANIMAL-046 | C-South | cattle | 22 | 4 | 84m | separate-route |
+| ANIMAL-047 | C-Ridge | service-animals | 41 | 5 | 93m | remain-with-handler |
+
+## Decision constraints
+
+Provide a parallel animal plan without delaying human movement.
+State overflow capacity, cycles, route conflicts, and the falsifier that stops animal transport.<|im_end|>
+<|im_start|>user
+{"accepted":false,"configuration_id":"D0_DETACHED","finish_reason":"stop","input_result_id":"RESULT-001","output_sha256":"b248771bce2807ae058f29ae700ac3e90f858e8461d0caf0c7deb3af65aa5fa7","schema":"artifact-coupled-maintenance-rejection-v0","validation_code":"token_budget_exceeded"}<|im_end|>
+<|im_start|>user
+# Current exact interaction-state binding
+{"artifact_coupled":false,"candidate_sha256":"91b13b7a7525af7c261da9bed5f58e464cdb8605dd054c55c03e958b6a531939","candidate_version":"candidate-v000:91b13b7a7525af7c261da9bed5f58e464cdb8605dd054c55c03e958b6a531939","check_binding":null,"configuration_id":"D0_DETACHED","integration_body_embedded_below":true,"integration_body_sha256":"79c4eddd69fda98991e4261a03335efcb0e3a4c8c586efb5b5b4fc22e2a39407","integration_input_result_ids":["RESULT-002"],"integration_source_ids":["S03","S04"],"integration_version":1,"model_authored_lossy":true,"readiness_authority":false,"residency_role":"non_authoritative_model_facing_sidecar","resident_body_sha256":"79c4eddd69fda98991e4261a03335efcb0e3a4c8c586efb5b5b4fc22e2a39407","schema":"artifact-coupled-current-interaction-state-v0"}
+--- current bounded model-authored integration body ---
+# Evidence Integration Ledger
+
+**R01: Legal Order & Authority**
+No evidence for legal order, recommendation, execution, check, or closure authority is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind legal authority; no source-grounded basis for order issuance.
+
+**R02: Hazard Triggers & Zone Sequencing**
+[S04] notes South Pass closes under smoke visibility below 150 meters [S04]. North Bridge excludes full-size buses above 54°C [S04]. No explicit fire triggers or forecast binding found in [S03] or [S04].
+*   **Disposition:** Partial. Route constraints exist, but trigger logic is absent.
+*   **Qualifications:** Smoke and heat conditions invalidate routes post-plan.
+*   **Blockers:** Missing conservative fire/weather triggers; no expiry logic defined.
+
+**R03: Population Basis & Assistance Demand**
+[S03] specifies Zone A (5,280), B (8,940), C (12,600) residents plus up to 2,100 tourists [S03]. Survey coverage is 91% [S03]. Categories (no vehicle, mobility, oxygen, dialysis) overlap and must not be summed as independent people [S03].
+*   **Disposition:** Accepted with qualification.
+*   **Qualifications:** Must carry uncertainty allowance for unreported households; cannot treat unregistered as self-evacuating [S03]. Tourist demand is time-dependent [S03].
+*   **Blockers:** None identified in source, but overlap logic must be enforced to avoid double-counting.
+
+**R04: Road Bottlenecks & Route Clearance**
+[S04] establishes Mill Junction as the system bottleneck with a measured sustainable throughput of 1,500 vehicles/hour [S04]. North Bridge (1,100 veh/h) and South Pass (850 veh/h) feed into Mill Junction; their capacities cannot be added [S04]. Last exercise achieved only 1,180 veh/h at Mill Junction due to unmanaged lane merging [S04].
+*   **Disposition:** Accepted.
+*   **Qualifications:** Do not sum independent road ratings across the shared downstream bottleneck [S04]. Clearance time must use shared junction and exercise throughput until a current field test proves otherwise [S04].
+*   **Blockers:** Contraflow requires sheriff closure, 45 minutes setup, and staffed crossover points [S04]. County 12 cannot be fully converted to outbound traffic [S04].
+
+**R05: Fleet Matching & Driver Duty**
+No evidence for person/accommodation-level fleet matching, driver duty cycles, bridge constraints specific to vehicle types (beyond S04 bus exclusion), or relief capacity is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind fleet requirements; no cycle time data available.
+
+**R06: Shelter Capacity & Medical Handoffs**
+No evidence for smoke-safe shelter capacity, accessible placements, medical handoffs, filtration, power, or relocation is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify shelter suitability or medical continuity.
+
+**R07: Warnings & Community Support**
+No evidence for redundant multilingual warning, door-knock timing, radio interoperability, receipt/understanding evidence, or zone revision is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind communication strategy.
+
+**R08: Fuel & Power Continuity**
+No evidence for fuel/power continuity, observed delays, local staging, alternate routes/suppliers, or coupled asset effects is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind resource contracting.
+
+**R09: Animals & Service Animals**
+No evidence for animal handling or service animal separation without delaying human evacuation is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind animal logistics.
+
+**R10: Accountability & Data Privacy**
+No evidence for private accountability, public aggregation, self-evacuation tracking, restricted health data handling, reconciliation, retention, or deletion proof is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind data management protocol.
+
+**R11: 48-Hour Execution Sequence**
+No evidence for a concrete 48-hour sequence with owners, effects, current checks, repair, recheck, resource/cost authority, and contingencies is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot bind execution timeline.
+
+**R12: Verification & Readiness Blockers**
+No evidence for exercise blockers, independent-review blockers, candidate-bound readiness, uncertainties, or explicit falsifiers is present in [S03] or [S04].
+*   **Disposition:** Missing.
+*   **Blockers:** Cannot verify readiness status.
+
+**Cross-Source Relationships & Contradictions**
+[S03] and [S04] are complementary but disjoint: [S03] defines demand (population, assistance categories) while [S04] defines supply constraints (road throughput, junction bottlenecks). No contradictions exist between these two sources. However, both lack evidence for legal authority (R01), fleet specifics (R05), shelter/medical (R06), communications (R07), resources (R08), animals (R09), data privacy (R10), execution sequence (R11), and verification (R12). The integration is incomplete for a full evacuation decision.
+
+**Unresolved Evidence**
+*   Specific trigger values for fire/weather (R02) are absent in [S03]/[S04].
+*   Fleet matching logic linking [S03] demand to vehicle capacity is absent.
+*   Shelter location and capacity data are entirely missing from provided sources.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S11","start_line":1},{"end_line":70,"source_id":"S12","start_line":1}] }<|im_end|>
+<|im_start|>user
+{"object_id":"batch:S11:1-70+S12:1-70","object_version":"7c0006b82566eb692e56b78bacfc43cd346032905079d828311409121dc1888f","result_id":"RESULT-006","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S11","start_line":1},{"end_line":70,"source_id":"S12","start_line":1}],"total_source_bytes":9729}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S11","source_path":"cedar_sources/S11_AIR_QUALITY.md","source_sha256":"db9cb01fd3621a74aa30e2efa454938e382534c9266285abbffde015654d776c","source_size_bytes":3825,"start_line":1}
+--- exact source range ---
+# Smoke exposure and clean-air shelter thresholds
+
+## Frozen findings
+
+Outdoor PM2.5 above 150 micrograms per cubic meter triggers relocation of unfiltered shelters. Above 250, field loading requires respiratory protection and shorter staging intervals.
+Ridge School failed its last filter inspection. Civic Arena and West College passed with MERV-13 filters; Expo Hall has only eighty percent of required replacement filters on site.
+The smoke model can make an otherwise distant shelter unusable before fire arrival. Distance from flame is not a complete shelter-safety criterion.
+
+## Governing relationships
+
+Shelter capacity in S06 must be recalculated under the air-quality forecast, while routes in S04 must remain viable for relocation. Medical cohorts in S07 have lower exposure tolerance.
+A filter replacement changes the candidate resource state and requires a current inspection, not reuse of the prior readiness check.
+
+## Operational evidence
+
+| record | zone | PM2.5 | duration | filter | action |
+|---|---|---|---|---|---|
+| AIR-000 | A-North | 28 | 6h | filter-gap | monitor |
+| AIR-001 | A-River | 45 | 7h | MERV-13 | monitor |
+| AIR-002 | B-East | 62 | 8h | MERV-13 | monitor |
+| AIR-003 | B-Center | 79 | 9h | MERV-13 | monitor |
+| AIR-004 | C-South | 96 | 10h | filter-gap | monitor |
+| AIR-005 | C-Ridge | 113 | 11h | MERV-13 | monitor |
+| AIR-006 | A-North | 130 | 12h | MERV-13 | monitor |
+| AIR-007 | A-River | 147 | 13h | MERV-13 | monitor |
+| AIR-008 | B-East | 164 | 14h | filter-gap | relocate |
+| AIR-009 | B-Center | 181 | 15h | MERV-13 | relocate |
+| AIR-010 | C-South | 198 | 6h | MERV-13 | relocate |
+| AIR-011 | C-Ridge | 215 | 7h | MERV-13 | relocate |
+| AIR-012 | A-North | 232 | 8h | filter-gap | relocate |
+| AIR-013 | A-River | 249 | 9h | MERV-13 | relocate |
+| AIR-014 | B-East | 266 | 10h | MERV-13 | relocate |
+| AIR-015 | B-Center | 43 | 11h | MERV-13 | monitor |
+| AIR-016 | C-South | 60 | 12h | filter-gap | monitor |
+| AIR-017 | C-Ridge | 77 | 13h | MERV-13 | monitor |
+| AIR-018 | A-North | 94 | 14h | MERV-13 | monitor |
+| AIR-019 | A-River | 111 | 15h | MERV-13 | monitor |
+| AIR-020 | B-East | 128 | 6h | filter-gap | monitor |
+| AIR-021 | B-Center | 145 | 7h | MERV-13 | monitor |
+| AIR-022 | C-South | 162 | 8h | MERV-13 | relocate |
+| AIR-023 | C-Ridge | 179 | 9h | MERV-13 | relocate |
+| AIR-024 | A-North | 196 | 10h | filter-gap | relocate |
+| AIR-025 | A-River | 213 | 11h | MERV-13 | relocate |
+| AIR-026 | B-East | 230 | 12h | MERV-13 | relocate |
+| AIR-027 | B-Center | 247 | 13h | MERV-13 | relocate |
+| AIR-028 | C-South | 264 | 14h | filter-gap | relocate |
+| AIR-029 | C-Ridge | 41 | 15h | MERV-13 | monitor |
+| AIR-030 | A-North | 58 | 6h | MERV-13 | monitor |
+| AIR-031 | A-River | 75 | 7h | MERV-13 | monitor |
+| AIR-032 | B-East | 92 | 8h | filter-gap | monitor |
+| AIR-033 | B-Center | 109 | 9h | MERV-13 | monitor |
+| AIR-034 | C-South | 126 | 10h | MERV-13 | monitor |
+| AIR-035 | C-Ridge | 143 | 11h | MERV-13 | monitor |
+| AIR-036 | A-North | 160 | 12h | filter-gap | relocate |
+| AIR-037 | A-River | 177 | 13h | MERV-13 | relocate |
+| AIR-038 | B-East | 194 | 14h | MERV-13 | relocate |
+| AIR-039 | B-Center | 211 | 15h | MERV-13 | relocate |
+| AIR-040 | C-South | 228 | 6h | filter-gap | relocate |
+| AIR-041 | C-Ridge | 245 | 7h | MERV-13 | relocate |
+| AIR-042 | A-North | 262 | 8h | MERV-13 | relocate |
+| AIR-043 | A-River | 39 | 9h | MERV-13 | monitor |
+| AIR-044 | B-East | 56 | 10h | filter-gap | monitor |
+| AIR-045 | B-Center | 73 | 11h | MERV-13 | monitor |
+| AIR-046 | C-South | 90 | 12h | MERV-13 | monitor |
+| AIR-047 | C-Ridge | 107 | 13h | MERV-13 | monitor |
+
+## Decision constraints
+
+Bind shelter use and relocation to explicit PM2.5 and filter-status observations.
+Do not declare clean-air capacity from nominal building occupancy.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S12","source_path":"cedar_sources/S12_DATA_REUNIFICATION.md","source_sha256":"cfaab1b39c0a343b59df16ac55b645b94a08b758252b50b972f25daabdb3d0a9","source_size_bytes":5433,"start_line":1}
+--- exact source range ---
+# Evacuee accountability, privacy, and reunification
+
+## Frozen findings
+
+The operation needs household status, transport assignment, shelter check-in, and reunification contact. Medical accommodations are restricted and may not appear in the public missing-person feed.
+The minimum retention period is seven days after incident closure; operational rosters must be deleted within thirty days unless a legal hold applies. The last exercise retained exported spreadsheets for ninety-two days.
+A person may be safe but not at a county shelter. Accountability must accept verified self-evacuation without publishing a destination or health status.
+
+## Governing relationships
+
+Transport and shelter effects should update one private accountability record, but public reporting must use aggregated status. S07 medical matching consumes restricted fields under public-health authority.
+A plan mutation to identifiers, export, or retention invalidates the prior privacy check.
+
+## Operational evidence
+
+| record | data class | collection | retention | access | status |
+|---|---|---|---|---|---|
+| DATA-000 | household-status | minimum-necessary | 7d | operational | deletion-proof-missing |
+| DATA-001 | medical-accommodation | minimum-necessary | 8d | restricted | complete |
+| DATA-002 | transport-assignment | minimum-necessary | 9d | operational | complete |
+| DATA-003 | shelter-checkin | minimum-necessary | 10d | operational | complete |
+| DATA-004 | reunification-contact | minimum-necessary | 11d | operational | complete |
+| DATA-005 | household-status | minimum-necessary | 12d | operational | complete |
+| DATA-006 | medical-accommodation | minimum-necessary | 13d | restricted | complete |
+| DATA-007 | transport-assignment | minimum-necessary | 14d | operational | complete |
+| DATA-008 | shelter-checkin | minimum-necessary | 15d | operational | complete |
+| DATA-009 | reunification-contact | minimum-necessary | 16d | operational | complete |
+| DATA-010 | household-status | minimum-necessary | 17d | operational | complete |
+| DATA-011 | medical-accommodation | minimum-necessary | 18d | restricted | complete |
+| DATA-012 | transport-assignment | minimum-necessary | 19d | operational | deletion-proof-missing |
+| DATA-013 | shelter-checkin | minimum-necessary | 20d | operational | complete |
+| DATA-014 | reunification-contact | minimum-necessary | 21d | operational | complete |
+| DATA-015 | household-status | minimum-necessary | 22d | operational | complete |
+| DATA-016 | medical-accommodation | minimum-necessary | 23d | restricted | complete |
+| DATA-017 | transport-assignment | minimum-necessary | 24d | operational | complete |
+| DATA-018 | shelter-checkin | minimum-necessary | 25d | operational | complete |
+| DATA-019 | reunification-contact | minimum-necessary | 26d | operational | complete |
+| DATA-020 | household-status | minimum-necessary | 27d | operational | complete |
+| DATA-021 | medical-accommodation | minimum-necessary | 28d | restricted | complete |
+| DATA-022 | transport-assignment | minimum-necessary | 29d | operational | complete |
+| DATA-023 | shelter-checkin | minimum-necessary | 30d | operational | complete |
+| DATA-024 | reunification-contact | minimum-necessary | 7d | operational | deletion-proof-missing |
+| DATA-025 | household-status | minimum-necessary | 8d | operational | complete |
+| DATA-026 | medical-accommodation | minimum-necessary | 9d | restricted | complete |
+| DATA-027 | transport-assignment | minimum-necessary | 10d | operational | complete |
+| DATA-028 | shelter-checkin | minimum-necessary | 11d | operational | complete |
+| DATA-029 | reunification-contact | minimum-necessary | 12d | operational | complete |
+| DATA-030 | household-status | minimum-necessary | 13d | operational | complete |
+| DATA-031 | medical-accommodation | minimum-necessary | 14d | restricted | complete |
+| DATA-032 | transport-assignment | minimum-necessary | 15d | operational | complete |
+| DATA-033 | shelter-checkin | minimum-necessary | 16d | operational | complete |
+| DATA-034 | reunification-contact | minimum-necessary | 17d | operational | complete |
+| DATA-035 | household-status | minimum-necessary | 18d | operational | complete |
+| DATA-036 | medical-accommodation | minimum-necessary | 19d | restricted | deletion-proof-missing |
+| DATA-037 | transport-assignment | minimum-necessary | 20d | operational | complete |
+| DATA-038 | shelter-checkin | minimum-necessary | 21d | operational | complete |
+| DATA-039 | reunification-contact | minimum-necessary | 22d | operational | complete |
+| DATA-040 | household-status | minimum-necessary | 23d | operational | complete |
+| DATA-041 | medical-accommodation | minimum-necessary | 24d | restricted | complete |
+| DATA-042 | transport-assignment | minimum-necessary | 25d | operational | complete |
+| DATA-043 | shelter-checkin | minimum-necessary | 26d | operational | complete |
+| DATA-044 | reunification-contact | minimum-necessary | 27d | operational | complete |
+| DATA-045 | household-status | minimum-necessary | 28d | operational | complete |
+| DATA-046 | medical-accommodation | minimum-necessary | 29d | restricted | complete |
+| DATA-047 | transport-assignment | minimum-necessary | 30d | operational | complete |
+
+## Decision constraints
+
+Specify minimum fields, access roles, reconciliation, deletion proof, and public/private separation.
+Do not equate shelter check-in with complete zone accountability.<|im_end|>
+<|im_start|>user
+{"object_id":"sidecar:integration-ledger","object_version":"79c4eddd69fda98991e4261a03335efcb0e3a4c8c586efb5b5b4fc22e2a39407","result_id":"MAINT-EFFECT-001","result_kind":"semantic_state_effect","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"artifact_coupled":false,"body_sha256":"79c4eddd69fda98991e4261a03335efcb0e3a4c8c586efb5b5b4fc22e2a39407","body_tokens":1369,"candidate_sha256_unchanged":"91b13b7a7525af7c261da9bed5f58e464cdb8605dd054c55c03e958b6a531939","integration_version":1,"schema":"architecture-detached-integration-effect-v0"}<|im_end|>
+<|im_start|>user
+{"accepted":false,"configuration_id":"D0_DETACHED","finish_reason":"stop","input_result_id":"RESULT-003","output_sha256":"9a7bdcfe5539d3e4f7cb933f3d4b5b223b06713776b3fafd0c41a49a85eaf5f5","schema":"artifact-coupled-maintenance-rejection-v0","validation_code":"token_budget_exceeded"}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":70,"source_id":"S13","start_line":1},{"end_line":70,"source_id":"S15","start_line":1}] }<|im_end|>
+<|im_start|>user
+{"object_id":"batch:S13:1-70+S15:1-70","object_version":"994a5d6ee4f1b9554f21517c6d59af4a47bedea4ca34cb641189d1b191a8bae3","result_id":"RESULT-007","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":70,"source_id":"S13","start_line":1},{"end_line":70,"source_id":"S15","start_line":1}],"total_source_bytes":9155}
+--- exact batch segment 1 ---
+{"end_line":70,"source_id":"S13","source_path":"cedar_sources/S13_EXERCISE_REVIEW.md","source_sha256":"56498133050c8c08dcf8661d0c4c83d972d56b3da4ab119802ed179bac2715a3","source_size_bytes":4510,"start_line":1}
+--- exact source range ---
+# Full-scale exercise defects and repair evidence
+
+## Frozen findings
+
+Exercise Cedar-6 achieved only 1,180 vehicles per hour at Mill Junction, delayed lift-bus dispatch by ninety-six minutes, and accounted for 91 percent of households by the six-hour mark.
+County radio voice worked, but volunteer unit identifiers did not cross the gateway. Civic Arena opened, while Ridge School's filter test failed and fuel arrived after seventeen hours.
+A corrective-action spreadsheet marks several items closed based on owner attestation. Readiness requires current execution evidence for the exact plan rather than a status label.
+
+## Governing relationships
+
+The observed exercise values override nominal road, fleet, communications, shelter, and fuel targets until a repair is rechecked. One exercise therefore links several evidence domains.
+Changing the zone order or fleet roster after a repair makes the old exercise only historical evidence.
+
+## Operational evidence
+
+| record | defect | zone | delay | status | exercise binding |
+|---|---|---|---|---|---|
+| EX-000 | merge-throughput | A-North | 38m | open | exercise-r3 |
+| EX-001 | lift-dispatch | A-River | 51m | repaired | exercise-r3 |
+| EX-002 | radio-handoff | B-East | 64m | repaired | exercise-r3 |
+| EX-003 | family-accountability | B-Center | 77m | repaired | exercise-r3 |
+| EX-004 | shelter-filter | C-South | 90m | open | exercise-r3 |
+| EX-005 | fuel-arrival | C-Ridge | 103m | open | exercise-r3 |
+| EX-006 | merge-throughput | A-North | 116m | open | exercise-r3 |
+| EX-007 | lift-dispatch | A-River | 129m | open | exercise-r3 |
+| EX-008 | radio-handoff | B-East | 142m | repaired | exercise-r3 |
+| EX-009 | family-accountability | B-Center | 155m | repaired | exercise-r3 |
+| EX-010 | shelter-filter | C-South | 49m | repaired | exercise-r3 |
+| EX-011 | fuel-arrival | C-Ridge | 62m | open | exercise-r3 |
+| EX-012 | merge-throughput | A-North | 75m | open | exercise-r3 |
+| EX-013 | lift-dispatch | A-River | 88m | open | exercise-r3 |
+| EX-014 | radio-handoff | B-East | 101m | open | exercise-r3 |
+| EX-015 | family-accountability | B-Center | 114m | repaired | exercise-r3 |
+| EX-016 | shelter-filter | C-South | 127m | repaired | exercise-r4 |
+| EX-017 | fuel-arrival | C-Ridge | 140m | repaired | exercise-r4 |
+| EX-018 | merge-throughput | A-North | 153m | open | exercise-r4 |
+| EX-019 | lift-dispatch | A-River | 47m | open | exercise-r4 |
+| EX-020 | radio-handoff | B-East | 60m | open | exercise-r4 |
+| EX-021 | family-accountability | B-Center | 73m | open | exercise-r4 |
+| EX-022 | shelter-filter | C-South | 86m | repaired | exercise-r4 |
+| EX-023 | fuel-arrival | C-Ridge | 99m | repaired | exercise-r4 |
+| EX-024 | merge-throughput | A-North | 112m | repaired | exercise-r4 |
+| EX-025 | lift-dispatch | A-River | 125m | open | exercise-r4 |
+| EX-026 | radio-handoff | B-East | 138m | open | exercise-r4 |
+| EX-027 | family-accountability | B-Center | 151m | open | exercise-r4 |
+| EX-028 | shelter-filter | C-South | 45m | open | exercise-r4 |
+| EX-029 | fuel-arrival | C-Ridge | 58m | repaired | exercise-r4 |
+| EX-030 | merge-throughput | A-North | 71m | repaired | exercise-r4 |
+| EX-031 | lift-dispatch | A-River | 84m | repaired | exercise-r4 |
+| EX-032 | radio-handoff | B-East | 97m | open | exercise-r5 |
+| EX-033 | family-accountability | B-Center | 110m | open | exercise-r5 |
+| EX-034 | shelter-filter | C-South | 123m | open | exercise-r5 |
+| EX-035 | fuel-arrival | C-Ridge | 136m | open | exercise-r5 |
+| EX-036 | merge-throughput | A-North | 149m | repaired | exercise-r5 |
+| EX-037 | lift-dispatch | A-River | 43m | repaired | exercise-r5 |
+| EX-038 | radio-handoff | B-East | 56m | repaired | exercise-r5 |
+| EX-039 | family-accountability | B-Center | 69m | open | exercise-r5 |
+| EX-040 | shelter-filter | C-South | 82m | open | exercise-r5 |
+| EX-041 | fuel-arrival | C-Ridge | 95m | open | exercise-r5 |
+| EX-042 | merge-throughput | A-North | 108m | open | exercise-r5 |
+| EX-043 | lift-dispatch | A-River | 121m | repaired | exercise-r5 |
+| EX-044 | radio-handoff | B-East | 134m | repaired | exercise-r5 |
+| EX-045 | family-accountability | B-Center | 147m | repaired | exercise-r5 |
+| EX-046 | shelter-filter | C-South | 41m | open | exercise-r5 |
+| EX-047 | fuel-arrival | C-Ridge | 54m | open | exercise-r5 |
+
+## Decision constraints
+
+Carry every material exercise defect into the plan with owner, repair, current recheck, and blocking status.
+Do not count owner attestation as operational proof.
+--- exact batch segment 2 ---
+{"end_line":70,"source_id":"S15","source_path":"cedar_sources/S15_WEATHER_ENSEMBLE.md","source_sha256":"c4a8a9397f8b73ee2575405d377081eadaa4a7340339eb8db1b59c330027cdc6","source_size_bytes":4172,"start_line":1}
+--- exact source range ---
+# Wind-shift ensemble and forecast update cadence
+
+## Frozen findings
+
+Forecasts update every ninety minutes. The base case keeps the fire north of Zone B, but 42 percent of current ensemble members shift winds after 16:00 and shorten Zone A arrival below six hours.
+A later update can improve the median while widening the worst-case range. The trigger uses the conservative operational envelope until field observations rule out the adverse branch.
+Aircraft infrared mapping can lag by two hours under smoke. Absence of a new perimeter is not proof that fire spread stopped.
+
+## Governing relationships
+
+Order timing in S01–S02, road viability in S04, and air quality in S11 all depend on the same forecast revision. Mixing revisions produces an incoherent plan.
+The verification packet must name the forecast cycle and expire it at the next update or material field observation.
+
+## Operational evidence
+
+| record | cycle | wind | shift probability | arrival | envelope |
+|---|---|---|---|---|---|
+| WX-000 | cycle-00 | 14mph | 18% | 4.5h | base-case |
+| WX-001 | cycle-01 | 19mph | 29% | 5.0h | base-case |
+| WX-002 | cycle-02 | 24mph | 40% | 5.4h | conservative-envelope |
+| WX-003 | cycle-03 | 29mph | 51% | 5.8h | conservative-envelope |
+| WX-004 | cycle-04 | 34mph | 62% | 6.3h | conservative-envelope |
+| WX-005 | cycle-05 | 39mph | 73% | 6.8h | conservative-envelope |
+| WX-006 | cycle-06 | 44mph | 21% | 7.2h | base-case |
+| WX-007 | cycle-07 | 18mph | 32% | 7.7h | base-case |
+| WX-008 | cycle-08 | 23mph | 43% | 8.1h | conservative-envelope |
+| WX-009 | cycle-09 | 28mph | 54% | 8.6h | conservative-envelope |
+| WX-010 | cycle-10 | 33mph | 65% | 9.0h | conservative-envelope |
+| WX-011 | cycle-11 | 38mph | 76% | 9.4h | conservative-envelope |
+| WX-012 | cycle-12 | 43mph | 24% | 4.5h | base-case |
+| WX-013 | cycle-13 | 17mph | 35% | 5.0h | base-case |
+| WX-014 | cycle-14 | 22mph | 46% | 5.4h | conservative-envelope |
+| WX-015 | cycle-15 | 27mph | 57% | 5.8h | conservative-envelope |
+| WX-016 | cycle-16 | 32mph | 68% | 6.3h | conservative-envelope |
+| WX-017 | cycle-17 | 37mph | 79% | 6.8h | conservative-envelope |
+| WX-018 | cycle-18 | 42mph | 27% | 7.2h | base-case |
+| WX-019 | cycle-19 | 16mph | 38% | 7.7h | base-case |
+| WX-020 | cycle-20 | 21mph | 49% | 8.1h | conservative-envelope |
+| WX-021 | cycle-21 | 26mph | 60% | 8.6h | conservative-envelope |
+| WX-022 | cycle-22 | 31mph | 71% | 9.0h | conservative-envelope |
+| WX-023 | cycle-23 | 36mph | 19% | 9.4h | base-case |
+| WX-024 | cycle-24 | 41mph | 30% | 4.5h | base-case |
+| WX-025 | cycle-25 | 15mph | 41% | 5.0h | conservative-envelope |
+| WX-026 | cycle-26 | 20mph | 52% | 5.4h | conservative-envelope |
+| WX-027 | cycle-27 | 25mph | 63% | 5.8h | conservative-envelope |
+| WX-028 | cycle-28 | 30mph | 74% | 6.3h | conservative-envelope |
+| WX-029 | cycle-29 | 35mph | 22% | 6.8h | base-case |
+| WX-030 | cycle-30 | 40mph | 33% | 7.2h | base-case |
+| WX-031 | cycle-31 | 14mph | 44% | 7.7h | conservative-envelope |
+| WX-032 | cycle-32 | 19mph | 55% | 8.1h | conservative-envelope |
+| WX-033 | cycle-33 | 24mph | 66% | 8.6h | conservative-envelope |
+| WX-034 | cycle-34 | 29mph | 77% | 9.0h | conservative-envelope |
+| WX-035 | cycle-35 | 34mph | 25% | 9.4h | base-case |
+| WX-036 | cycle-36 | 39mph | 36% | 4.5h | base-case |
+| WX-037 | cycle-37 | 44mph | 47% | 5.0h | conservative-envelope |
+| WX-038 | cycle-38 | 18mph | 58% | 5.4h | conservative-envelope |
+| WX-039 | cycle-39 | 23mph | 69% | 5.8h | conservative-envelope |
+| WX-040 | cycle-40 | 28mph | 80% | 6.3h | conservative-envelope |
+| WX-041 | cycle-41 | 33mph | 28% | 6.8h | base-case |
+| WX-042 | cycle-42 | 38mph | 39% | 7.2h | base-case |
+| WX-043 | cycle-43 | 43mph | 50% | 7.7h | conservative-envelope |
+| WX-044 | cycle-44 | 17mph | 61% | 8.1h | conservative-envelope |
+| WX-045 | cycle-45 | 22mph | 72% | 8.6h | conservative-envelope |
+| WX-046 | cycle-46 | 27mph | 20% | 9.0h | base-case |
+| WX-047 | cycle-47 | 32mph | 31% | 9.4h | base-case |
+
+## Decision constraints
+
+Bind decisions to one forecast cycle and state expiry and adverse-branch actions.
+Do not cancel protective actions from a better median alone.<|im_end|>
+<|im_start|>user
+{"accepted":false,"configuration_id":"D0_DETACHED","finish_reason":"stop","input_result_id":"RESULT-004","output_sha256":"e2ae5498bda2c5f4d1e6614120811c74e9919d56deab808085315b01234f38f1","schema":"artifact-coupled-maintenance-rejection-v0","validation_code":"token_budget_exceeded"}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

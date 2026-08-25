@@ -1,8 +1,11 @@
 # Qwen3.8 Cedar ingress-aligned interaction transfer
 
-Status: the fresh Cedar task has an audited authentic pressure boundary. GPU
-use for the measured `D0_DETACHED`/`A1_COUPLED` continuation is withheld until
-the result and measured preflight are committed and separately authorized.
+Status: the authorized Cedar `D0_DETACHED`/`A1_COUPLED` continuation is
+complete, sealed, audited, and independently adjudicated. A1 produced a
+materially stronger partial artifact than D0 at nearly equal serialized-token
+cost, but neither arm was ready or usefully complete. Both stopped when the
+shared synchronous-maintenance budget was exhausted. See
+`CEDAR_ARTIFACT_COUPLING_TRANSFER_RESULT.md`.
 
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
@@ -113,6 +116,22 @@ Mechanical checks bind to the exact composite candidate and can only return
 adjudication controls quality and readiness. Submission, speed, lower cost, or
 a model-authored ledger cannot establish readiness.
 
+## Measured disposition
+
+The measured run used 38 actor calls and 36 maintenance calls: 74 provider
+calls and 1,026,000 serialized tokens, with one attempt per call and zero
+retries. Both arms constructed, checked, and repaired. D0 ended as
+`weak_partial` (0 met, 9 partial, 3 not met); A1 ended as `strong_partial` (1
+met, 11 partial). Both were independently `not_ready`, neither submitted, and
+neither achieved useful completion.
+
+A1's exact coupled work covered more sources and requirements, but it also
+contained material source contradictions. The shared maintenance channel
+accepted only 5 of 18 calls per arm and became the terminal resource. The
+result is evidence for a configuration-level interaction and for exact work as
+a possible persistence channel, not an isolated artifact-coupling effect or an
+architecture promotion.
+
 ## Active files
 
 - `STAGE0_PLAN.md` — prospective scientific and execution contract
@@ -124,6 +143,10 @@ a model-authored ledger cannot establish readiness.
 - `STAGE0_INTERACTION_FIXTURE.json` — small provider-free lifecycle exercise
 - `STAGE0_MEASURED_FIXTURE.json` — full two-arm provider-free run
 - `SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json` — candidate quality/readiness governance
+- `CEDAR_ARTIFACT_COUPLING_TRANSFER_RESULT.md` — measured interaction result and routing
+- `CEDAR_MEASURED_INTERACTION_AUDIT.json` — sealed-run, budget, and lifecycle audit
+- `CEDAR_SEMANTIC_ADJUDICATION.json` — candidate-bound R01–R12 quality/readiness record
+- `CEDAR_SEMANTIC_ADJUDICATION_VALIDATION.json` — deterministic adjudication receipt
 
 Northstar and earlier measured-result files remain append-only historical
 evidence. They are not part of the Cedar actor-visible source catalog.
