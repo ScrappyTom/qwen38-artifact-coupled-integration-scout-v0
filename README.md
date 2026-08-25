@@ -1,19 +1,18 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the authorized Cedar `D0_DETACHED`/`A1_COUPLED` continuation is
-complete, sealed, audited, and independently adjudicated. A1 produced a
-materially stronger partial artifact than D0 at nearly equal serialized-token
-cost, but neither arm was ready or usefully complete. Both stopped when the
-shared synchronous-maintenance budget was exhausted. See
-`CEDAR_ARTIFACT_COUPLING_TRANSFER_RESULT.md`.
+Status: the authorized Bluehaven ordinary screen is complete, sealed, and
+independently audited. Six valid two-source reads delivered S01–S10 and then
+acquired pending S11–S12. That exact pending result makes the next prompt
+23,820 tokens, 2,828 above the 20,992-token allowance. Replacing only
+`RESULT-001` with its exact reopenable receipt restores feasibility at 20,917
+tokens. The candidate remained initial; no check or submission occurred.
 
-The current successor is Bluehaven offline Stage 0. It uses a fresh exact
-drinking-water world to compare two complete bounded-work policies after a
-common authentic pressure history: mechanically batched artifact-coupled
-maintenance (`B1_BATCHED_COUPLED`) and direct actor-authored cumulative work
-(`W1_DIRECT_WORK`). Stage 0 and provider-free feedback loops pass. The next
-eligible operation is only the separately authorized ordinary Bluehaven
-pressure screen; no Bluehaven inference is authorized by repository files.
+Bluehaven therefore supplies the common authentic pressure fork needed to
+compare two complete bounded-work policies: mechanically batched
+artifact-coupled maintenance (`B1_BATCHED_COUPLED`) and direct actor-authored
+cumulative work (`W1_DIRECT_WORK`). The screen contains neither treatment.
+Its handoff explicitly authorizes no maintenance or measured continuation.
+See `BLUEHAVEN_PRESSURE_SCREEN_RESULT.md`.
 
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
@@ -168,6 +167,12 @@ architecture promotion.
   stop rules
 - `BLUEHAVEN_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
   future commit-bound authorization
+- `BLUEHAVEN_PRESSURE_SCREEN_RESULT.md` — exact six-call live result, claim
+  limits, and configuration-level successor
+- `BLUEHAVEN_PRESSURE_SCREEN_AUDIT.json` — independent token, replay, custody,
+  activation, relief, and release audit
+- `BLUEHAVEN_PRESSURE_BOUNDARY_HANDOFF.json` — exact common pre-treatment fork;
+  continuation remains unauthorized
 
 Northstar and earlier measured-result files remain append-only historical
 evidence. They are not part of the Cedar actor-visible source catalog.
