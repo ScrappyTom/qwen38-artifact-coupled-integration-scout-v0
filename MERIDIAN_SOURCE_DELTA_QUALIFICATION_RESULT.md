@@ -76,6 +76,12 @@ relationships while also forbidding the names of every relationship object.
 The validator successfully prevents unsupported source-slot creation, but its
 lexical rule also rejects grounded relational content.
 
+The post-run exact topology audit shows this is structural across Meridian:
+all 16 source files contain at least one other source identity, with 66 directed
+cross-source reference edges. BRAMBLE's four exact relationship objects match
+the four rejected identities exactly. The audit adds no model behavior and
+does not change the frozen disposition.
+
 ## Disposition
 
 The frozen gate required both mechanical transport and material safety.

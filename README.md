@@ -201,6 +201,8 @@ architecture promotion.
   prompt, output, validation, usage, adjudication, and release audit
 - `MERIDIAN_SOURCE_DELTA_MATERIAL_SAFETY_ADJUDICATION.json` — exact output/source
   comparison under the prospectively frozen safety criteria
+- `MERIDIAN_SOURCE_RELATION_TOPOLOGY_AUDIT.json` — post-run exact graph showing
+  that all 16 sources contain cross-source identities across 66 directed edges
 - `task_meridian/` — fresh exact task, opaque source world, evaluator, candidate,
   catalogs, and custody lock
 - `STAGE0_PLAN.md` — prospective scientific and execution contract
