@@ -1,3 +1,3 @@
-# Northstar Migration Architecture Decision
+# Cedar Valley Evacuation Operations Decision
 
-No decision has been drafted yet.
+No operational decision has been written.

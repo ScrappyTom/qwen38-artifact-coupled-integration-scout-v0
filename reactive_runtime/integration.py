@@ -11,7 +11,7 @@ from reactive_runtime.records import ResultRecord
 INTEGRATION_PREFIX = "# Evidence Integration Ledger"
 INTEGRATION_TOKEN_BUDGET = 1600
 INTEGRATION_PROVIDER_MAX_TOKENS = 1900
-SOURCE_PATTERN = re.compile(r"(?<![A-Za-z0-9])S(?:0[1-9]|1[0-4])(?![A-Za-z0-9])")
+SOURCE_PATTERN = re.compile(r"(?<![A-Za-z0-9])S(?:0[1-9]|1[0-6])(?![A-Za-z0-9])")
 REQUIREMENT_PATTERN = re.compile(r"(?<![A-Za-z0-9])R(?:0[1-9]|1[0-2])(?![A-Za-z0-9])")
 
 
@@ -98,7 +98,7 @@ Return only a complete replacement Markdown evidence-integration ledger whose
 first line is exactly `{INTEGRATION_PREFIX}`. Do not take an ordinary task
 action. Integrate source-grounded findings, qualifications, cross-source
 relationships, requirement bindings R01-R12, contradictions, and unresolved
-evidence useful for the Northstar migration decision.
+evidence useful for the Cedar Valley evacuation decision.
 
 The output is model-authored and lossy. It cannot authorize readiness or
 submission. Replace prior material rather than appending indefinitely. Keep it

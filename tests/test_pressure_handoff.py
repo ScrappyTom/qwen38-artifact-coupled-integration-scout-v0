@@ -17,7 +17,14 @@ class PressureHandoffTests(unittest.TestCase):
         )
         self.assertEqual("frozen_offline_gpu_withheld", contract["status"])
         self.assertEqual(runner.RUN_ID, contract["run_id"])
-        self.assertIn("four source observations", contract["qualifying_endpoint"])
+        self.assertIn("four qualifying source IDs", contract["qualifying_endpoint"])
+        self.assertEqual(
+            "union of exact source lines delivered across prior actor decision boundaries",
+            contract["activation_semantics"]["unit"],
+        )
+        self.assertIn(
+            "result object count", contract["activation_semantics"]["explicit_non_units"]
+        )
 
     def test_authorization_placeholder_does_not_authorize(self) -> None:
         request = json.loads(

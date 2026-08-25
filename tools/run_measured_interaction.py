@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from reactive_runtime.actions import (  # noqa: E402
-    MAX_BATCH_RESULT_TOKENS,
+    MAX_SOURCE_RESULT_TOKENS,
     action_json_schema,
     parse_action,
     render_action_rejection,
@@ -59,25 +59,25 @@ from tools.live_common import (  # noqa: E402
 from tools.verify_runtime_assets import verify as verify_runtime_assets  # noqa: E402
 
 
-RUN_ID = "2026-08-24-northstar-artifact-coupling-transfer-measured-v0"
-SCOPE = "northstar_artifact_coupling_transfer_measured_v0"
+RUN_ID = "2026-08-25-cedar-artifact-coupling-transfer-measured-v0"
+SCOPE = "cedar_artifact_coupling_transfer_measured_v0"
 CONFIGURATION_ORDER = ("D0_DETACHED", "A1_COUPLED")
-ACTOR_SEED = 860_242
-MAINTENANCE_SEED = 860_243
+ACTOR_SEED = 860_252
+MAINTENANCE_SEED = 860_253
 PROMPT_LIMIT = 20_992
 CONTEXT_TOKENS = 25_088
 ACTOR_MAX_TOKENS = 4_096
-MAX_PRECONSTRUCTION_CALLS_PER_CELL = 22
+MAX_PRECONSTRUCTION_CALLS_PER_CELL = 26
 POSTCONSTRUCTION_CALLS_PER_CELL = 8
 MAX_ACTOR_CALLS_PER_CELL = (
     MAX_PRECONSTRUCTION_CALLS_PER_CELL + POSTCONSTRUCTION_CALLS_PER_CELL
 )
-MAX_MAINTENANCE_CALLS_PER_CELL = 16
+MAX_MAINTENANCE_CALLS_PER_CELL = 18
 MAX_REENTRIES_PER_CELL = 2
 MAX_PROVIDER_CALLS = len(CONFIGURATION_ORDER) * (
     MAX_ACTOR_CALLS_PER_CELL + MAX_MAINTENANCE_CALLS_PER_CELL
 )
-MAX_SERIALIZED_TOKENS_PER_CELL = 1_400_000
+MAX_SERIALIZED_TOKENS_PER_CELL = 1_600_000
 MAX_WALL_SECONDS_PER_CELL = 10_800
 
 
@@ -96,7 +96,7 @@ def load(path: Path) -> dict[str, Any]:
 
 def verify_task_lock() -> None:
     lock = load(ROOT / "task" / "TASK_SOURCE_LOCK.json")
-    if lock.get("task_id") != "northstar-migration-architecture-package-v0":
+    if lock.get("task_id") != "cedar-valley-evacuation-decision-package-v0":
         raise RuntimeError("task lock identity mismatch")
     for row in lock.get("files", []):
         path = ROOT / "task" / str(row["path"])
@@ -190,7 +190,7 @@ def current_maintenance_prior(
     )
     delivered = set(delivered_source_ids(ledger))
     actor_bound_sources = set(
-        re.findall(r"(?<![A-Za-z0-9])S(?:0[1-9]|1[0-4])(?![A-Za-z0-9])", body)
+        re.findall(r"(?<![A-Za-z0-9])S(?:0[1-9]|1[0-6])(?![A-Za-z0-9])", body)
     ) & delivered
     return IntegrationArtifact(
         version=integration.version,
@@ -666,23 +666,23 @@ def run_cell(configuration_id: str, root: Path) -> dict[str, Any]:
                     )
                     raise RuntimeError("actor-visible evaluator protocol failure")
                 result_tokens = len(tokenizer.tokenize(result_record.exact_content))
-                if parsed["action"] == "read_batch" and result_tokens > MAX_BATCH_RESULT_TOKENS:
+                if result_record.result_kind == "source_observation" and result_tokens > MAX_SOURCE_RESULT_TOKENS:
                     write_json(
-                        cell_root / "oversized_batch_results" / f"{result_id}.json",
+                        cell_root / "oversized_source_results" / f"{result_id}.json",
                         {
                             "result": result_record.as_dict(include_exact_content=True),
                             "wrapped_result_tokens": result_tokens,
-                            "limit": MAX_BATCH_RESULT_TOKENS,
+                            "limit": MAX_SOURCE_RESULT_TOKENS,
                             "model_visible": False,
                         },
                     )
-                    rejection = "batch_result_too_large"
+                    rejection = "source_result_too_large"
                     pending_text = render_action_rejection(
                         call_index=logical_call,
                         code=rejection,
                         message=(
-                            f"exact batch wrapper contains {result_tokens} tokens; maximum is "
-                            f"{MAX_BATCH_RESULT_TOKENS}; result remains audit-only"
+                            f"exact source wrapper contains {result_tokens} tokens; maximum is "
+                            f"{MAX_SOURCE_RESULT_TOKENS}; result remains audit-only"
                         ),
                         candidate_sha256=world.candidate_sha256,
                     )
@@ -861,7 +861,7 @@ def main() -> int:
                 ROOT / "SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json"
             ),
             "pressure_handoff_sha256": sha256_file(
-                ROOT / "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
+                ROOT / "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json"
             ),
         },
     )

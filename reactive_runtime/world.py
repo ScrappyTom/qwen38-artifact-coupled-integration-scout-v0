@@ -40,6 +40,8 @@ class ActionRejected(ValueError):
 class SourceObject:
     source_id: str
     title: str
+    evidence_domain: str
+    activation_min_lines: int
     path: Path
     sha256: str
     size_bytes: int
@@ -89,7 +91,14 @@ class ArchitectureWorld:
                 raise ValueError(f"source hash mismatch: {row['source_id']}")
             text = raw.decode("utf-8")
             result[row["source_id"]] = SourceObject(
-                row["source_id"], row["title"], path, row["sha256"], len(raw), tuple(text.splitlines())
+                row["source_id"],
+                row["title"],
+                row["evidence_domain"],
+                int(row["activation_min_lines"]),
+                path,
+                row["sha256"],
+                len(raw),
+                tuple(text.splitlines()),
             )
         return result
 
@@ -126,7 +135,7 @@ class ArchitectureWorld:
         headings = re.findall(r"(?m)^## ([^\r\n]+)\s*$", decision)
         without_citations = re.sub(r"\[S\d{2}\]", "", decision)
         words = len(re.findall(r"\b[\w’'-]+\b", without_citations))
-        sources = sorted(set(re.findall(r"\[(S(?:0[1-9]|1[0-4]))\]", decision)))
+        sources = sorted(set(re.findall(r"\[(S(?:0[1-9]|1[0-6]))\]", decision)))
         passed = (
             decision.startswith(config["decision_title"])
             and headings == config["decision_headings"]
@@ -152,7 +161,13 @@ class ArchitectureWorld:
 
     def source_catalog_for_actor(self) -> str:
         rows = [
-            {"source_id": source.source_id, "title": source.title, "line_count": len(source.lines), "size_bytes": source.size_bytes, "sha256": source.sha256}
+            {
+                "source_id": source.source_id,
+                "title": source.title,
+                "line_count": len(source.lines),
+                "size_bytes": source.size_bytes,
+                "sha256": source.sha256,
+            }
             for source in self.sources.values()
         ]
         return canonical_json_text({"schema": "architecture-source-catalog-v0", "sources": rows})
@@ -277,7 +292,7 @@ class ArchitectureWorld:
                 raise ValueError("evaluator candidate hash mismatch")
             projection = project_check(evaluation, evaluated_candidate_sha256=evaluated, raw_result_handle=raw_handle, returncode=process.returncode)
         except ValueError as exc:
-            projection = {"blocking_requirements": ["evaluator_protocol_error"], "closure_readiness": "not_ready", "criterion_results": [], "evaluated_candidate_sha256": evaluated, "evaluator_id": evaluator_id, "passed": False, "protocol_error_class": type(exc).__name__, "raw_result_handle": raw_handle, "raw_result_preserved_exactly": True, "returncode_class": "zero" if process.returncode == 0 else "nonzero", "schema": "northstar-stable-check-projection-v0", "volatile_fields_excluded": True}
+            projection = {"blocking_requirements": ["evaluator_protocol_error"], "closure_readiness": "not_ready", "criterion_results": [], "evaluated_candidate_sha256": evaluated, "evaluator_id": evaluator_id, "passed": False, "protocol_error_class": type(exc).__name__, "raw_result_handle": raw_handle, "raw_result_preserved_exactly": True, "returncode_class": "zero" if process.returncode == 0 else "nonzero", "schema": "cedar-stable-check-projection-v0", "volatile_fields_excluded": True}
         self.last_check_projection = projection
         return ExecutionResult("check_observation", f"evaluator:{evaluator_id}", evaluated, render_check_projection(projection), self.candidate_sha256, evaluated_candidate_sha256=evaluated, raw_tool_custody=raw, metadata={"check_projection": projection})
 
@@ -305,7 +320,7 @@ class ArchitectureWorld:
             shutil.copyfile(self.candidate_root / name, destination / name)
         write_json(destination / "SUBMISSION_MANIFEST.json", {"candidate_sha256": self.candidate_sha256, "candidate_version": self.candidate_version, "files": self.candidate_manifest, "readiness": "requires_external_adjudication"})
         self.submitted = True
-        return ExecutionResult("submission_effect", "submission:architecture-package", self.candidate_version, canonical_json_text({"candidate_sha256": self.candidate_sha256, "effect": "submission_proposal_recorded", "readiness": "requires_external_candidate_bound_adjudication"}), self.candidate_sha256)
+        return ExecutionResult("submission_effect", "submission:evacuation-package", self.candidate_version, canonical_json_text({"candidate_sha256": self.candidate_sha256, "effect": "submission_proposal_recorded", "readiness": "requires_external_candidate_bound_adjudication"}), self.candidate_sha256)
 
     def execute(self, action: dict[str, Any], *, result_id: str, ledger: ResultLedger | None = None) -> ExecutionResult:
         name = action["action"]

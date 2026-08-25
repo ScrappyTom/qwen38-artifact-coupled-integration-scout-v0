@@ -112,13 +112,13 @@ def main() -> int:
     if run_root.exists():
         failures.append("measured_run_root_already_exists")
     result = {
-        "schema": "northstar-artifact-coupling-measured-preflight-v0",
+        "schema": "cedar-artifact-coupling-measured-preflight-v0",
         "passed": not failures,
         "failures": failures,
         "apparatus_commit": measured.git_commit(),
         "pressure_boundary": pressure,
         "pressure_boundary_handoff_sha256": sha256_file(
-            ROOT / "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
+            ROOT / "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json"
         ),
         "provider_free_fixture_sha256": sha256_file(ROOT / "STAGE0_MEASURED_FIXTURE.json"),
         "contract_sha256": sha256_file(ROOT / "MEASURED_INTERACTION_CONTRACT.json"),

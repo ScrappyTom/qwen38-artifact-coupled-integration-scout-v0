@@ -1,14 +1,14 @@
 {
-  "schema_version": "northstar-transfer-expression-qualification-v0",
+  "schema_version": "cedar-transfer-expression-qualification-v0",
   "status": "available_but_not_selected_as_next_gate",
-  "run_id": "2026-08-24-northstar-transfer-expression-qualification-v0",
-  "scope": "northstar_transfer_expression_qualification_v0",
+  "run_id": "2026-08-25-cedar-transfer-expression-qualification-v0",
+  "scope": "cedar_transfer_expression_qualification_v0",
   "case_order": ["Q1_INITIALIZE", "Q2_REPLACE", "Q3_INCREMENTAL_SECTION_ACTION", "Q4_TASK_LEDGER_ACTION"],
   "maximum_model_calls": 4,
   "attempts_per_call": 1,
   "retries": 0,
   "provider_max_completion_tokens": 1900,
   "admission_body_tokens": 1600,
-  "success": "both maintenance cases and both new task-artifact action cases finish normally and pass their frozen admission rules",
+  "success": "both maintenance cases and both task-artifact action cases finish normally and pass their frozen admission rules",
   "stopping": "this optional transport probe is not required by offline Stage 0 and is not the selected next run; no pressure screen or measured interaction is authorized by it"
 }

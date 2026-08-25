@@ -6,6 +6,8 @@ from pathlib import Path
 
 from reactive_runtime.canonical import sha256_file
 from reactive_runtime.qualification import build_action_cases, build_cases
+from reactive_runtime.world import ArchitectureWorld
+import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class Stage0ContractTests(unittest.TestCase):
     def test_task_lock_and_source_custody(self) -> None:
         lock = json.loads((ROOT / "task" / "TASK_SOURCE_LOCK.json").read_text(encoding="utf-8"))
-        self.assertEqual(14, len(lock["source_custody"]))
+        self.assertEqual(16, len(lock["source_custody"]))
         for row in lock["files"]:
             self.assertEqual(row["sha256"], sha256_file(ROOT / "task" / row["path"]))
 
@@ -26,16 +28,28 @@ class Stage0ContractTests(unittest.TestCase):
             row["source_id"]: (ROOT / "task" / row["path"]).read_text(encoding="utf-8")
             for row in catalog["sources"]
         }
-        self.assertIn("producer_id:event_id", sources["S03"])
-        self.assertIn("31 hours", sources["S06"])
-        self.assertIn("48-hour", sources["S06"])
-        self.assertIn("forward-fix", sources["S04"])
-        self.assertIn("fail-closed", sources["S07"])
-        self.assertIn("11 hours and 8 minutes", sources["S08"])
-        self.assertIn("twelve hours", sources["S08"])
-        self.assertIn("every tenant-hour", sources["S10"])
-        self.assertIn("above 60%", sources["S12"])
-        self.assertIn("not ready", sources["S14"])
+        self.assertIn("incident commander alone", sources["S01"])
+        self.assertIn("conservative ensemble gives 5.8 hours", sources["S02"])
+        self.assertIn("categories overlap", sources["S03"])
+        self.assertIn("Mill Junction", sources["S04"])
+        self.assertIn("eleven qualified drivers", sources["S05"])
+        self.assertIn("smoke-safe staffed capacity is 5,900", sources["S06"])
+        self.assertIn("person-level private matching", sources["S07"])
+        self.assertIn("Hmong", sources["S08"])
+        self.assertIn("delayed contracted fuel for nineteen hours", sources["S09"])
+        self.assertIn("Service animals remain with handlers", sources["S10"])
+        self.assertIn("seven days", sources["S12"])
+        self.assertIn("1,180 vehicles per hour", sources["S13"])
+        self.assertIn("42 percent", sources["S15"])
+        self.assertIn("not ready", sources["S16"])
+
+    def test_activation_metadata_is_host_side_not_an_actor_cue(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            world = ArchitectureWorld(ROOT / "task", Path(temporary))
+            actor_catalog = json.loads(world.source_catalog_for_actor())
+        for row in actor_catalog["sources"]:
+            self.assertNotIn("activation_min_lines", row)
+            self.assertNotIn("evidence_domain", row)
 
     def test_qualification_contract_matches_independent_cases(self) -> None:
         contract = json.loads((ROOT / "MAINTENANCE_QUALIFICATION_CONTRACT.json").read_text(encoding="utf-8"))
@@ -51,6 +65,12 @@ class Stage0ContractTests(unittest.TestCase):
         self.assertGreater(geometry["source_corpus_tokens"], 25088)
         self.assertFalse(geometry["activation_qualified"])
         self.assertIn("screening trajectory", geometry["activation_blocker"])
+        self.assertTrue(geometry["permitted_ingress_geometry"]["every_full_single_is_admissible"])
+        self.assertTrue(geometry["permitted_ingress_geometry"]["every_full_pair_is_admissible"])
+        self.assertTrue(geometry["maturity_reachability"]["fits_at_maturity"])
+        self.assertEqual(4, len(geometry["maturity_reachability"]["qualifying_source_ids"]))
+        self.assertGreater(geometry["prospective_pressure_opportunity"]["overflow_tokens"], 0)
+        self.assertTrue(geometry["prospective_pressure_opportunity"]["positive_relief_result_ids"])
         self.assertEqual(8, geometry["trajectory_budget"]["postconstruction_calls"])
         self.assertEqual(4, geometry["trajectory_budget"]["clean_postconstruction_path_calls"])
 
@@ -73,6 +93,8 @@ class Stage0ContractTests(unittest.TestCase):
         self.assertEqual(runner.MAX_SERIALIZED, contract["maximum_serialized_tokens"])
         self.assertEqual(runner.PROMPT_LIMIT, contract["prompt_limit"])
         self.assertIn("strictly positive first-fit relief", contract["qualifying_endpoint"])
+        self.assertEqual(2, contract["permitted_ingress_geometry"]["batch_maximum_ranges"])
+        self.assertEqual(6500, contract["permitted_ingress_geometry"]["all_source_observation_maximum_result_tokens"])
         self.assertNotIn("verify_qualification_handoff", Path(runner.__file__).read_text(encoding="utf-8"))
 
     def test_model_seed_lock_matches_screen_and_measured_runners(self) -> None:

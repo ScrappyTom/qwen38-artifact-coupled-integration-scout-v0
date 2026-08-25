@@ -20,22 +20,22 @@ def exercise(configuration_id: str) -> dict[str, object]:
     with tempfile.TemporaryDirectory() as temporary:
         world = ArchitectureWorld(ROOT / "task", Path(temporary))
         ledger = ResultLedger()
-        execution = world.execute({"action": "read_source", "source_id": "S02", "start_line": 1, "end_line": 80}, result_id="RESULT-001")
+        execution = world.execute({"action": "read_source", "source_id": "S02", "start_line": 1, "end_line": 70}, result_id="RESULT-001")
         record = world.make_result_record(execution, result_id="RESULT-001", acquired_call=1)
         ledger.add(record)
         messages = [{"role": "system", "content": "fixture"}, {"role": "user", "content": record.exact_content}]
         ledger.mark_model_visible(record.result_id, call_index=2, message_index=1)
         count = lambda rows: sum(len(row["content"]) for row in rows)
         relief = positive_savings_first_fit_step(messages=messages, ledger=ledger, prompt_limit=count(messages) - 1, count_messages=count)
-        integration_body = "# Evidence Integration Ledger\n\nR02: tenant-local latency gates remain binding [S02].\n"
+        integration_body = "# Evidence Integration Ledger\n\nR02: the conservative fire-arrival envelope remains binding [S02].\n"
         validation = validate_integration(integration_body, count_text=lambda value: len(value.split()), allowed_source_ids=("S02",))
         artifact = next_artifact(prior=None, body=integration_body, body_tokens=validation.output_tokens, result=record)
         before_maintenance = world.candidate_sha256
         maintenance = world.apply_integration(configuration_id, artifact)
         after_maintenance = world.candidate_sha256
-        section_effect = world.execute({"action": "upsert_decision_section", "heading": "Decision and scope", "body": "Adopt a gated cohort migration subject to tenant-local objectives [S02]."}, result_id="RESULT-003")
+        section_effect = world.execute({"action": "upsert_decision_section", "heading": "Decision, scope, and authority", "body": "Use a conservative zone evacuation under incident-command authority [S02]."}, result_id="RESULT-003")
         first_check = world.execute({"action": "run_check"}, result_id="RESULT-004")
-        repair = world.execute({"action": "upsert_decision_section", "heading": "Risks, uncertainties, and falsifiers", "body": "The Northstar migration remains falsifiable [S02]."}, result_id="RESULT-005")
+        repair = world.execute({"action": "upsert_decision_section", "heading": "Verification, readiness, blockers, and falsifiers", "body": "The evacuation candidate remains blocked and falsifiable [S02]."}, result_id="RESULT-005")
         stale = world.current_check_binding()
         second_check = world.execute({"action": "run_check"}, result_id="RESULT-006")
         current = world.current_check_binding()
@@ -69,7 +69,7 @@ def main() -> int:
             failures.append(f"maintenance_semantics:{row['configuration_id']}")
         if row["post_repair_prior_check_currency"] != "stale" or row["recheck_currency"] != "current":
             failures.append(f"check_currency:{row['configuration_id']}")
-    result = {"schema": "northstar-artifact-coupling-provider-free-fixture-v0", "passed": not failures, "failures": failures, "configurations": rows, "provider_calls": 0, "gpu_authorized": False}
+    result = {"schema": "cedar-artifact-coupling-provider-free-fixture-v0", "passed": not failures, "failures": failures, "configurations": rows, "provider_calls": 0, "gpu_authorized": False}
     write_json(ROOT / "STAGE0_INTERACTION_FIXTURE.json", result)
     print(json.dumps(result, indent=2))
     return 0 if result["passed"] else 1

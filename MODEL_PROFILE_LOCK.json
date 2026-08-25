@@ -1,6 +1,6 @@
 {
-  "schema_version": "qwen38-northstar-transfer-model-profile-lock-v0",
-  "task_id": "northstar-migration-architecture-package-v0",
+  "schema_version": "qwen38-cedar-transfer-model-profile-lock-v0",
+  "task_id": "cedar-valley-evacuation-decision-package-v0",
   "model_repository": "AtomicChat/Qwen3.8-27B-GGUF",
   "model_revision": "ca10ebceb1887be9d33b838770a36b39d75a8a4c",
   "model_path": "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.gguf",
@@ -34,10 +34,10 @@
     "jinja": true,
     "multimodal_projector": false
   },
-  "screen_seed": 860241,
+  "screen_seed": 860251,
   "optional_qualification_seeds": [93001, 93002, 93003, 93004],
-  "measured_actor_seed": 860242,
-  "measured_maintenance_seed": 860243,
+  "measured_actor_seed": 860252,
+  "measured_maintenance_seed": 860253,
   "token_count_for_live_gate": "server /apply-template then /tokenize",
   "tokenizer_projection_for_live_inference": false,
   "inherited_from": {

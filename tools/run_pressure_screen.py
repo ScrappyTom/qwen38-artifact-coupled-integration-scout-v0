@@ -10,7 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from reactive_runtime.actions import MAX_BATCH_RESULT_TOKENS, action_json_schema, parse_action, render_action_rejection
+from reactive_runtime.actions import MAX_SOURCE_RESULT_TOKENS, action_json_schema, parse_action, render_action_rejection
+from reactive_runtime.activation import boundary_eligibility_failures
 from reactive_runtime.canonical import sha256_bytes, sha256_file, write_json
 from reactive_runtime.configuration import ordinary_actions
 from reactive_runtime.records import ResultLedger
@@ -20,11 +21,11 @@ from tools.live_common import LiveTokenizer, complete_custodied, git_commit, pro
 from tools.verify_runtime_assets import verify as verify_runtime_assets
 
 
-RUN_ID = "2026-08-24-northstar-transfer-pressure-screen-v0"
-SCOPE = "northstar_transfer_pressure_screen_v0"
-SEED = 860_241
-MAX_CALLS = 18
-MAX_SERIALIZED = 500_000
+RUN_ID = "2026-08-25-cedar-ingress-aligned-pressure-screen-v0"
+SCOPE = "cedar_ingress_aligned_pressure_screen_v0"
+SEED = 860_251
+MAX_CALLS = 20
+MAX_SERIALIZED = 600_000
 MAX_WALL = 7200
 PROMPT_LIMIT = 20_992
 ACTOR_MAX_TOKENS = 4096
@@ -34,36 +35,17 @@ class BudgetStop(RuntimeError):
     pass
 
 
+TASK_ID = "cedar-valley-evacuation-decision-package-v0"
+
+
 def verify_task_lock() -> None:
     lock = json.loads((ROOT / "task" / "TASK_SOURCE_LOCK.json").read_text(encoding="utf-8"))
-    if lock.get("task_id") != "northstar-migration-architecture-package-v0":
+    if lock.get("task_id") != TASK_ID:
         raise RuntimeError("task lock identity mismatch")
     for row in lock.get("files", []):
         path = ROOT / "task" / str(row.get("path"))
         if not path.is_file() or sha256_file(path) != row.get("sha256"):
             raise RuntimeError(f"task lock mismatch: {row.get('path')}")
-
-
-def boundary_eligibility_failures(
-    *, pending: object, ledger: ResultLedger, world: ArchitectureWorld, initial_candidate_sha256: str
-) -> list[str]:
-    """Classify a realized overflow without inferring semantic task readiness."""
-    failures: list[str] = []
-    if getattr(pending, "result_kind", None) != "source_observation":
-        failures.append("pending_result_is_not_source_observation")
-    delivered_sources = sum(
-        record.result_kind == "source_observation" and record.previously_visible
-        for record in ledger.records()
-    )
-    if delivered_sources < 4:
-        failures.append("fewer_than_four_source_observations_delivered")
-    if world.candidate_sha256 != initial_candidate_sha256:
-        failures.append("candidate_changed_before_pressure")
-    if world.submitted:
-        failures.append("candidate_submitted_before_pressure")
-    if any(record.result_kind == "check_observation" for record in ledger.records()):
-        failures.append("check_ran_before_pressure")
-    return failures
 
 
 def authorize(path: Path) -> dict[str, object]:
@@ -103,7 +85,7 @@ def main() -> int:
     write_json(
         run_root / "FREEZE_BINDING.json",
         {
-            "schema": "northstar-pressure-screen-freeze-binding-v0",
+            "schema": "cedar-pressure-screen-freeze-binding-v0",
             "commit": git_commit(),
             "run_id": RUN_ID,
             "task_source_lock_sha256": sha256_file(
@@ -145,19 +127,26 @@ def main() -> int:
                 if pending_result_id is None:
                     raise RuntimeError("prompt overflow lacks a newly pending exact result")
                 pending = ledger.get(pending_result_id)
-                delivered_sources = sum(
-                    record.result_kind == "source_observation" and record.previously_visible
-                    for record in ledger.records()
-                )
-                ineligible = boundary_eligibility_failures(
+                ineligible, activation = boundary_eligibility_failures(
                     pending=pending,
                     ledger=ledger,
                     world=world,
                     initial_candidate_sha256=initial_candidate_sha256,
                 )
-                boundary = {"schema": "northstar-authentic-pressure-boundary-v0", "task_id": "northstar-migration-architecture-package-v0", "actor_calls_completed": actor_call - 1, "pending_result_id": pending_result_id, "ordinary_prospective_prompt_tokens": prompt_tokens, "prompt_limit": PROMPT_LIMIT, "overflow_tokens": prompt_tokens - PROMPT_LIMIT, "messages": messages, "result_ledger": ledger.as_dict(include_exact_content=True), "candidate_sha256": world.candidate_sha256, "candidate_packet": world.candidate_packet(), "delivered_source_observations": delivered_sources, "eligibility_failures": ineligible}
+                boundary = {"schema": "cedar-authentic-pressure-boundary-v0", "task_id": TASK_ID, "actor_calls_completed": actor_call - 1, "pending_result_id": pending_result_id, "ordinary_prospective_prompt_tokens": prompt_tokens, "prompt_limit": PROMPT_LIMIT, "overflow_tokens": prompt_tokens - PROMPT_LIMIT, "messages": messages, "result_ledger": ledger.as_dict(include_exact_content=True), "candidate_sha256": world.candidate_sha256, "candidate_packet": world.candidate_packet(), "activation_snapshot": activation.as_dict(), "eligibility_failures": ineligible}
                 write_json(run_root / "PRESSURE_BOUNDARY.json", boundary)
-                terminal = "authentic_result_delivery_pressure" if not ineligible else "pressure_boundary_ineligible"
+                if not ineligible:
+                    terminal = "authentic_result_delivery_pressure"
+                elif any(
+                    item in {
+                        "insufficient_delivered_source_coverage",
+                        "insufficient_delivered_evidence_domains",
+                    }
+                    for item in ineligible
+                ):
+                    terminal = "pressure_before_ingress_aligned_activation"
+                else:
+                    terminal = "pressure_boundary_ineligible"
                 break
             if time.monotonic() - started >= MAX_WALL:
                 raise BudgetStop("wall_clock_budget_exhausted")
@@ -190,9 +179,9 @@ def main() -> int:
                 next_result += 1
                 execution = world.execute(parsed, result_id=result_id, ledger=ledger)
                 result_record = world.make_result_record(execution, result_id=result_id, acquired_call=actor_call)
-                if parsed["action"] == "read_batch" and len(tokenizer.tokenize(result_record.exact_content)) > MAX_BATCH_RESULT_TOKENS:
-                    rejection = "batch_result_too_large"
-                    pending_text = render_action_rejection(call_index=actor_call, code=rejection, message="exact batch result exceeded the frozen model-visible token cap and remains audit-only", candidate_sha256=world.candidate_sha256)
+                if result_record.result_kind == "source_observation" and len(tokenizer.tokenize(result_record.exact_content)) > MAX_SOURCE_RESULT_TOKENS:
+                    rejection = "source_result_too_large"
+                    pending_text = render_action_rejection(call_index=actor_call, code=rejection, message="exact source result exceeded the frozen model-visible token cap and remains audit-only", candidate_sha256=world.candidate_sha256)
                     result_record = None
                 else:
                     ledger.add(result_record)
@@ -217,14 +206,14 @@ def main() -> int:
             messages.append({"role": "user", "content": pending_text})
             if result_record is not None:
                 pending_result_id = result_record.result_id
-        result = {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"), "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": terminal, "pressure_qualified": terminal == "authentic_result_delivery_pressure", "boundary": None if boundary is None else {key: value for key, value in boundary.items() if key not in {"messages", "result_ledger", "candidate_packet"}}, "candidate_sha256": world.candidate_sha256, "candidate_submitted": world.submitted}
+        result = {"schema": "cedar-ingress-aligned-pressure-screen-result-v0", "task_id": TASK_ID, "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"), "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": terminal, "pressure_qualified": terminal == "authentic_result_delivery_pressure", "boundary": None if boundary is None else {key: value for key, value in boundary.items() if key not in {"messages", "result_ledger", "candidate_packet"}}, "candidate_sha256": world.candidate_sha256, "candidate_submitted": world.submitted}
         write_json(run_root / "CALL_TRACE.json", trace)
         write_json(run_root / "FINAL_MESSAGES.json", messages)
         write_json(run_root / "RESULT_LEDGER.json", ledger.as_dict(include_exact_content=True))
         write_json(run_root / "SCREEN_RESULT.json", result)
     except BudgetStop as exc:
         write_json(run_root / "BUDGET_STOP.json", {"terminal_disposition": str(exc)})
-        write_json(run_root / "SCREEN_RESULT.json", {"schema": "northstar-transfer-pressure-screen-result-v0", "task_id": "northstar-migration-architecture-package-v0", "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"), "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": str(exc), "pressure_qualified": False, "candidate_sha256": None if world is None else world.candidate_sha256, "candidate_submitted": False if world is None else world.submitted})
+        write_json(run_root / "SCREEN_RESULT.json", {"schema": "cedar-ingress-aligned-pressure-screen-result-v0", "task_id": TASK_ID, "task_source_lock_sha256": sha256_file(ROOT / "task" / "TASK_SOURCE_LOCK.json"), "freeze_commit": git_commit(), "run_id": RUN_ID, "seed": SEED, "actor_calls": len(trace), "serialized_tokens": serialized, "terminal_disposition": str(exc), "pressure_qualified": False, "candidate_sha256": None if world is None else world.candidate_sha256, "candidate_submitted": False if world is None else world.submitted})
     except BaseException as exc:
         failure = {"type": type(exc).__name__, "message": str(exc), "traceback": traceback.format_exc(), "no_retry": True}
         write_json(run_root / "RUN_FAILURE.json", failure)

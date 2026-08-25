@@ -5,70 +5,117 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from reactive_runtime.activation import boundary_eligibility_failures
 from reactive_runtime.records import ResultLedger
 from reactive_runtime.world import ArchitectureWorld
 from tools.audit_pressure_screen import audit
-from tools.audit_ineligible_pressure_screen import audit as audit_ineligible
 from tools import run_pressure_screen as runner
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def add_read(
+    world: ArchitectureWorld,
+    ledger: ResultLedger,
+    result_id: str,
+    source_id: str,
+    start: int,
+    end: int,
+    *,
+    visible: bool,
+) -> object:
+    execution = world.execute(
+        {"action": "read_source", "source_id": source_id, "start_line": start, "end_line": end},
+        result_id=result_id,
+        ledger=ledger,
+    )
+    record = world.make_result_record(execution, result_id=result_id, acquired_call=len(ledger.records()) + 1)
+    ledger.add(record)
+    if visible:
+        ledger.mark_model_visible(
+            result_id, call_index=len(ledger.records()) + 1, message_index=len(ledger.records())
+        )
+    return record
+
+
 class PressureScreenEligibilityTests(unittest.TestCase):
-    def test_qualification_auditor_refuses_the_observed_early_boundary(self) -> None:
+    def test_auditor_refuses_absent_future_run(self) -> None:
         result = audit(ROOT, write_outputs=False)
         self.assertFalse(result["passed"])
-        self.assertIn("boundary:delivered_sources", result["failures"])
-        self.assertIn("result:terminal_disposition", result["failures"])
+        self.assertTrue(any(item.startswith("missing:") for item in result["failures"]))
 
-    def test_ineligible_run_remains_mechanically_auditable(self) -> None:
-        result = audit_ineligible(write_output=False)
-        self.assertTrue(result["mechanical_integrity_passed"], result["failures"])
-        self.assertTrue(result["pressure_observed"])
-        self.assertTrue(result["positive_relief_feasible"])
-        self.assertFalse(result["scientific_boundary_qualified"])
-        self.assertFalse(result["measured_fork_eligible"])
-        self.assertEqual(["S01", "S02", "S03"], result["delivered_source_ids"])
-        self.assertEqual(["S04", "S05", "S06"], result["pending_source_ids"])
+    def test_live_gate_uses_coverage_not_result_objects_or_world_size(self) -> None:
+        source = inspect.getsource(boundary_eligibility_failures)
+        self.assertIn("insufficient_delivered_source_coverage", source)
+        self.assertIn("insufficient_delivered_evidence_domains", source)
+        self.assertIn("pending_observation_has_no_novel_source_lines", source)
+        self.assertNotIn("source_corpus_tokens", source)
+        self.assertNotIn("result object", source.casefold())
+        runner_source = inspect.getsource(runner)
+        self.assertIn("activation.as_dict()", runner_source)
 
-    def test_live_screen_requires_realized_demand_and_clean_pretreatment_state(self) -> None:
-        source = inspect.getsource(runner)
-        self.assertIn("delivered_sources < 4", source)
-        self.assertIn("candidate_changed_before_pressure", source)
-        self.assertIn("check_ran_before_pressure", source)
-        self.assertIn("pending_result_is_not_source_observation", source)
-        self.assertNotIn("source_corpus_tokens >", source)
-
-    def test_pure_eligibility_gate_accepts_only_a_clean_acquisition_boundary(self) -> None:
+    def test_four_covered_sources_across_domains_qualify(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             world = ArchitectureWorld(ROOT / "task", Path(temporary))
             initial = world.candidate_sha256
             ledger = ResultLedger()
-            for ordinal, source_id in enumerate(("S01", "S03", "S06", "S07", "S08"), 1):
-                execution = world.execute(
-                    {"action": "read_source", "source_id": source_id, "start_line": 1, "end_line": 10},
-                    result_id=f"RESULT-{ordinal:03d}",
-                    ledger=ledger,
-                )
-                record = world.make_result_record(
-                    execution, result_id=f"RESULT-{ordinal:03d}", acquired_call=ordinal
-                )
-                ledger.add(record)
-                if ordinal < 5:
-                    ledger.mark_model_visible(
-                        record.result_id, call_index=ordinal + 1, message_index=ordinal
-                    )
-            pending = ledger.get("RESULT-005")
-            self.assertEqual(
-                [],
-                runner.boundary_eligibility_failures(
-                    pending=pending,
-                    ledger=ledger,
-                    world=world,
-                    initial_candidate_sha256=initial,
-                ),
+            for ordinal, source_id in enumerate(("S01", "S02", "S03", "S06"), 1):
+                add_read(world, ledger, f"RESULT-{ordinal:03d}", source_id, 1, 55, visible=True)
+            pending = add_read(world, ledger, "RESULT-005", "S04", 1, 70, visible=False)
+            failures, snapshot = boundary_eligibility_failures(
+                pending=pending,
+                ledger=ledger,
+                world=world,
+                initial_candidate_sha256=initial,
             )
+            self.assertEqual([], failures)
+            self.assertEqual(("S01", "S02", "S03", "S06"), snapshot.qualifying_sources)
+            self.assertEqual(("authority", "demand", "hazard", "shelter_care"), snapshot.qualifying_domains)
+            self.assertEqual(70, snapshot.pending_novel_lines)
+
+    def test_four_probe_results_do_not_qualify(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            world = ArchitectureWorld(ROOT / "task", Path(temporary))
+            ledger = ResultLedger()
+            for ordinal, source_id in enumerate(("S01", "S02", "S03", "S06"), 1):
+                add_read(world, ledger, f"RESULT-{ordinal:03d}", source_id, 1, 10, visible=True)
+            pending = add_read(world, ledger, "RESULT-005", "S04", 1, 70, visible=False)
+            failures, _ = boundary_eligibility_failures(
+                pending=pending,
+                ledger=ledger,
+                world=world,
+                initial_candidate_sha256=world.candidate_sha256,
+            )
+            self.assertIn("insufficient_delivered_source_coverage", failures)
+
+    def test_two_batch_objects_can_carry_four_qualifying_sources(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            world = ArchitectureWorld(ROOT / "task", Path(temporary))
+            ledger = ResultLedger()
+            for ordinal, pair in enumerate((("S01", "S02"), ("S03", "S06")), 1):
+                action = {
+                    "action": "read_batch",
+                    "requests": [
+                        {"source_id": source_id, "start_line": 1, "end_line": 70}
+                        for source_id in pair
+                    ],
+                }
+                result_id = f"RESULT-{ordinal:03d}"
+                execution = world.execute(action, result_id=result_id, ledger=ledger)
+                record = world.make_result_record(execution, result_id=result_id, acquired_call=ordinal)
+                ledger.add(record)
+                ledger.mark_model_visible(result_id, call_index=ordinal + 1, message_index=ordinal)
+            pending = add_read(world, ledger, "RESULT-003", "S04", 1, 70, visible=False)
+            failures, snapshot = boundary_eligibility_failures(
+                pending=pending,
+                ledger=ledger,
+                world=world,
+                initial_candidate_sha256=world.candidate_sha256,
+            )
+            self.assertEqual([], failures)
+            self.assertEqual(4, len(snapshot.qualifying_sources))
+            self.assertEqual(2, sum(row.result_kind == "source_observation" for row in ledger.records()[:-1]))
 
 
 if __name__ == "__main__":

@@ -17,11 +17,11 @@ def sha256(value: bytes) -> str:
 
 
 def citations(text: str) -> set[str]:
-    return set(re.findall(r"\[(S(?:0[1-9]|1[0-4]))\]", text))
+    return set(re.findall(r"\[(S(?:0[1-9]|1[0-6]))\]", text))
 
 
 def word_count(text: str) -> int:
-    return len(re.findall(r"\b[\w’'-]+\b", re.sub(r"\[S\d{2}\]", "", text)))
+    return len(re.findall(r"\b[\w’-]+\b", re.sub(r"\[S\d{2}\]", "", text)))
 
 
 def composite_hash(ledger: bytes, decision: bytes) -> str:
@@ -55,7 +55,7 @@ def evaluate(candidate_root: Path) -> dict[str, Any]:
     missing_requirements = sorted(set(CONFIG["required_ledger_requirements"]) - ledger_requirements)
     rows.append(criterion("ledger_requirement_coverage", not missing_requirements, "missing: " + ", ".join(missing_requirements) if missing_requirements else "R01-R12 present"))
     ledger_sources = citations(ledger)
-    rows.append(criterion("ledger_grounding", len(ledger_sources) >= 8, f"{len(ledger_sources)} distinct cited sources"))
+    rows.append(criterion("ledger_grounding", len(ledger_sources) >= 9, f"{len(ledger_sources)} distinct cited sources"))
 
     rows.append(criterion("decision_title", decision.startswith(CONFIG["decision_title"]), "exact decision title"))
     observed_headings = re.findall(r"(?m)^## ([^\r\n]+)\s*$", decision)
@@ -78,7 +78,7 @@ def evaluate(candidate_root: Path) -> dict[str, Any]:
     if mechanical_passed:
         blocking.append("independent condition-blinded semantic adjudication required")
     return {
-        "schema_version": "northstar-migration-evaluation-result-v0",
+        "schema_version": "cedar-evacuation-evaluation-result-v0",
         "evaluator_id": CONFIG["evaluator_id"],
         "task_id": CONFIG["task_id"],
         "candidate_sha256": composite_hash(ledger_bytes, decision_bytes),

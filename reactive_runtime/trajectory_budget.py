@@ -12,7 +12,7 @@ class ConstructionBudget:
     and exactly the same post-milestone decision allowance.
     """
 
-    maximum_preconstruction_calls: int = 22
+    maximum_preconstruction_calls: int = 26
     postconstruction_calls: int = 8
     actor_calls: int = 0
     milestone_call: int | None = None

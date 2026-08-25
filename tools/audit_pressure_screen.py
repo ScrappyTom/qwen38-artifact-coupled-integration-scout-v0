@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from reactive_runtime.canonical import sha256_file, write_json  # noqa: E402
+from reactive_runtime.activation import boundary_eligibility_failures  # noqa: E402
 from reactive_runtime.policy import positive_savings_first_fit_step  # noqa: E402
 from reactive_runtime.records import ResultLedger  # noqa: E402
 from reactive_runtime.seal import verify_tree_seal  # noqa: E402
@@ -21,9 +22,9 @@ from tools.offline_tokenizer import OfflineTokenizer  # noqa: E402
 from tools import run_pressure_screen as runner  # noqa: E402
 
 
-AUDIT_NAME = "NORTHSTAR_PRESSURE_SCREEN_AUDIT.json"
-HANDOFF_NAME = "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
-TASK_ID = "northstar-migration-architecture-package-v0"
+AUDIT_NAME = "CEDAR_PRESSURE_SCREEN_AUDIT.json"
+HANDOFF_NAME = "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json"
+TASK_ID = "cedar-valley-evacuation-decision-package-v0"
 
 
 def load(path: Path) -> Any:
@@ -53,7 +54,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
             failures.append(f"missing:{relative}")
     if failures:
         return {
-            "schema": "northstar-pressure-screen-audit-v0",
+            "schema": "cedar-pressure-screen-audit-v0",
             "run_id": runner.RUN_ID,
             "passed": False,
             "failures": failures,
@@ -80,7 +81,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
     if not isinstance(freeze_commit, str) or re.fullmatch(r"[0-9a-f]{40}", freeze_commit) is None:
         failures.append("result:freeze_commit")
     expected_result = {
-        "schema": "northstar-transfer-pressure-screen-result-v0",
+        "schema": "cedar-ingress-aligned-pressure-screen-result-v0",
         "task_id": TASK_ID,
         "task_source_lock_sha256": sha256_file(root / "task" / "TASK_SOURCE_LOCK.json"),
         "run_id": runner.RUN_ID,
@@ -109,7 +110,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
         if authorization.get(key) != expected:
             failures.append(f"authorization:{key}")
     expected_freeze_binding = {
-        "schema": "northstar-pressure-screen-freeze-binding-v0",
+        "schema": "cedar-pressure-screen-freeze-binding-v0",
         "commit": freeze_commit,
         "run_id": runner.RUN_ID,
         "task_source_lock_sha256": sha256_file(root / "task" / "TASK_SOURCE_LOCK.json"),
@@ -181,7 +182,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
         if receipt.get("attempted") is not True or receipt.get("outcome") != "valid_completion_response":
             failures.append(f"provider_outcome:{attempt_root.name}")
 
-    if boundary.get("schema") != "northstar-authentic-pressure-boundary-v0":
+    if boundary.get("schema") != "cedar-authentic-pressure-boundary-v0":
         failures.append("boundary:schema")
     if boundary.get("task_id") != TASK_ID:
         failures.append("boundary:task_id")
@@ -212,7 +213,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
 
     relief_selected: list[str] = []
     relief_after_tokens: int | None = None
-    delivered_sources = 0
+    activation_value: dict[str, Any] = {}
     pending_id = boundary.get("pending_result_id")
     try:
         ledger = ResultLedger.from_dict(ledger_value)
@@ -221,12 +222,19 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
             failures.append("boundary:pending_kind")
         if pending.previously_visible:
             failures.append("boundary:pending_delivered")
-        delivered_sources = sum(
-            row.result_kind == "source_observation" and row.previously_visible
-            for row in ledger.records()
-        )
-        if delivered_sources < 4 or boundary.get("delivered_source_observations") != delivered_sources:
-            failures.append("boundary:delivered_sources")
+        with tempfile.TemporaryDirectory() as activation_temporary:
+            activation_world = ArchitectureWorld(root / "task", Path(activation_temporary))
+            activation_failures, activation = boundary_eligibility_failures(
+                pending=pending,
+                ledger=ledger,
+                world=activation_world,
+                initial_candidate_sha256=activation_world.candidate_sha256,
+            )
+        activation_value = activation.as_dict()
+        if activation_failures:
+            failures.extend(f"boundary:activation:{item}" for item in activation_failures)
+        if boundary.get("activation_snapshot") != activation_value:
+            failures.append("boundary:activation_snapshot")
         relief = positive_savings_first_fit_step(
             messages=deepcopy(final_messages),
             ledger=ResultLedger.from_dict(ledger_value),
@@ -252,7 +260,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
             failures.append("result:candidate_hash")
 
     audit_value = {
-        "schema": "northstar-pressure-screen-audit-v0",
+        "schema": "cedar-pressure-screen-audit-v0",
         "run_id": runner.RUN_ID,
         "freeze_commit": freeze_commit,
         "task_id": TASK_ID,
@@ -264,7 +272,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
         "overflow_tokens": prospective - runner.PROMPT_LIMIT,
         "pending_result_id": pending_id,
         "pending_result_delivered": False,
-        "delivered_source_observations": delivered_sources,
+        "activation_snapshot": activation_value,
         "positive_relief_result_ids": relief_selected,
         "positive_relief_after_tokens": relief_after_tokens,
         "interaction_trigger_qualified": bool(relief_selected),
@@ -277,7 +285,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
         write_json(root / AUDIT_NAME, audit_value)
         if audit_value["passed"]:
             handoff = {
-                "schema_version": "northstar-pressure-boundary-handoff-v0",
+                "schema_version": "cedar-pressure-boundary-handoff-v0",
                 "status": "passed_authentic_pressure_boundary",
                 "run_id": runner.RUN_ID,
                 "run_root": str(run_root.relative_to(root)).replace("\\", "/"),
@@ -297,7 +305,7 @@ def audit(repository_root: Path = ROOT, *, write_outputs: bool = True) -> dict[s
                 "overflow_tokens": prospective - runner.PROMPT_LIMIT,
                 "pending_result_id": pending_id,
                 "pending_result_delivered": False,
-                "delivered_source_observations": delivered_sources,
+                "activation_snapshot": activation_value,
                 "candidate_sha256": boundary.get("candidate_sha256"),
                 "candidate_changed": False,
                 "candidate_submitted": False,

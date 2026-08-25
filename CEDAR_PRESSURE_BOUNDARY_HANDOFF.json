@@ -1,0 +1,10 @@
+{
+  "schema_version": "cedar-pressure-boundary-handoff-v0",
+  "status": "pending_live_screen",
+  "run_id": "2026-08-25-cedar-ingress-aligned-pressure-screen-v0",
+  "task_id": "cedar-valley-evacuation-decision-package-v0",
+  "pressure_qualified": false,
+  "interaction_trigger_qualified": false,
+  "measured_fork_authorized": false,
+  "claim_limit": "This placeholder is not evidence and cannot be hydrated. A future authorized live screen must satisfy the frozen ingress-aligned activation gate and be audited at a separate result commit."
+}

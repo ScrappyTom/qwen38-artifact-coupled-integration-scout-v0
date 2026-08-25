@@ -12,8 +12,9 @@ from reactive_runtime.seal import verify_tree_seal
 from reactive_runtime.world import ArchitectureWorld
 
 
-SCREEN_RUN_ID = "2026-08-24-northstar-transfer-pressure-screen-v0"
-HANDOFF_NAME = "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json"
+SCREEN_RUN_ID = "2026-08-25-cedar-ingress-aligned-pressure-screen-v0"
+HANDOFF_NAME = "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json"
+TASK_ID = "cedar-valley-evacuation-decision-package-v0"
 
 
 @dataclass(frozen=True)
@@ -47,7 +48,7 @@ def verify_pressure_handoff(repository_root: Path) -> dict[str, Any]:
     expected = {
         "status": "passed_authentic_pressure_boundary",
         "run_id": SCREEN_RUN_ID,
-        "task_id": "northstar-migration-architecture-package-v0",
+        "task_id": TASK_ID,
         "pressure_qualified": True,
         "interaction_trigger_qualified": True,
         "attempts_per_call": 1,
@@ -69,7 +70,7 @@ def verify_pressure_handoff(repository_root: Path) -> dict[str, Any]:
     if not isinstance(freeze_commit, str) or len(freeze_commit) != 40:
         failures.append("freeze_commit")
     actor_calls = handoff.get("actor_calls")
-    if type(actor_calls) is not int or not 1 <= actor_calls <= 18:
+    if type(actor_calls) is not int or not 1 <= actor_calls <= 20:
         failures.append("actor_calls")
     if handoff.get("provider_attempts") != actor_calls:
         failures.append("provider_attempts")
@@ -82,9 +83,16 @@ def verify_pressure_handoff(repository_root: Path) -> dict[str, Any]:
         failures.append("ordinary_prospective_prompt_tokens")
     elif overflow != prospective - 20_992:
         failures.append("overflow_tokens")
-    delivered_sources = handoff.get("delivered_source_observations")
-    if type(delivered_sources) is not int or delivered_sources < 4:
-        failures.append("delivered_source_observations")
+    activation = handoff.get("activation_snapshot")
+    if not isinstance(activation, dict):
+        failures.append("activation_snapshot")
+    else:
+        if len(activation.get("qualifying_sources", [])) < 4:
+            failures.append("activation_qualifying_sources")
+        if len(activation.get("qualifying_domains", [])) < 3:
+            failures.append("activation_qualifying_domains")
+        if not isinstance(activation.get("pending_novel_lines"), int) or activation["pending_novel_lines"] < 1:
+            failures.append("activation_pending_novel_lines")
     relief_ids = handoff.get("positive_relief_result_ids")
     if not isinstance(relief_ids, list) or not relief_ids or not all(
         isinstance(value, str) and value.startswith("RESULT-") for value in relief_ids
@@ -103,12 +111,12 @@ def verify_pressure_handoff(repository_root: Path) -> dict[str, Any]:
         "final_messages_sha256": run_root / "FINAL_MESSAGES.json",
         "result_ledger_sha256": run_root / "RESULT_LEDGER.json",
         "run_seal_sha256": run_root / "RUN_SEAL.json",
-        "screen_audit_sha256": root / "NORTHSTAR_PRESSURE_SCREEN_AUDIT.json",
+        "screen_audit_sha256": root / "CEDAR_PRESSURE_SCREEN_AUDIT.json",
     }
     for key, path in file_bindings.items():
         if not path.is_file() or handoff.get(key) != sha256_file(path):
             failures.append(key)
-    audit_path = root / "NORTHSTAR_PRESSURE_SCREEN_AUDIT.json"
+    audit_path = root / "CEDAR_PRESSURE_SCREEN_AUDIT.json"
     if audit_path.is_file():
         audit = _load(audit_path)
         if audit.get("passed") is not True:
@@ -148,7 +156,7 @@ def hydrate_pressure_boundary(
         raise ValueError("pressure boundary messages are invalid")
     if not isinstance(ledger_value, dict):
         raise ValueError("pressure boundary ledger is invalid")
-    if raw.get("task_id") != "northstar-migration-architecture-package-v0":
+    if raw.get("task_id") != TASK_ID:
         raise ValueError("pressure boundary task mismatch")
     if raw.get("eligibility_failures") != []:
         raise ValueError("pressure boundary was not eligible")

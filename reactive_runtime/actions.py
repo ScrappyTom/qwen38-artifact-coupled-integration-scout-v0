@@ -6,22 +6,27 @@ from typing import Any, Iterable
 from reactive_runtime.canonical import canonical_json_text
 
 
-MAX_READ_LINES = 240
-MAX_BATCH_RANGES = 3
-MAX_BATCH_TOTAL_LINES = 480
-MAX_BATCH_SOURCE_BYTES = 40_000
-MAX_BATCH_RESULT_TOKENS = 12_000
+MAX_READ_LINES = 120
+MAX_BATCH_RANGES = 2
+MAX_BATCH_TOTAL_LINES = 160
+MAX_BATCH_SOURCE_BYTES = 12_000
+# Applies to every newly acquired source observation, whether it was requested
+# through read_source or read_batch.  A result-object count is deliberately not
+# part of pressure eligibility because one object may contain one or two ranges.
+MAX_SOURCE_RESULT_TOKENS = 6_500
+# Historical import name retained for the measured runner and old receipts.
+MAX_BATCH_RESULT_TOKENS = MAX_SOURCE_RESULT_TOKENS
 MAX_ARTIFACT_BYTES = 250_000
 
 DECISION_HEADINGS = (
-    "Decision and scope",
-    "Protocol, topology, and authority",
-    "Delivery, identity, and schema safety",
-    "Residency, continuity, and failure response",
-    "Capacity, observability, and reconciliation",
-    "Ninety-day rollout and rollback plan",
-    "Verification, readiness, and governance",
-    "Risks, uncertainties, and falsifiers",
+    "Decision, scope, and authority",
+    "Hazard triggers and zone sequencing",
+    "Population, transport, and route clearance",
+    "Shelter, medical, and accessibility continuity",
+    "Warnings, accountability, and community support",
+    "Power, fuel, and resource contracting",
+    "Forty-eight-hour execution and contingencies",
+    "Verification, readiness, blockers, and falsifiers",
 )
 
 ACTION_FIELDS: dict[str, dict[str, type]] = {
@@ -187,7 +192,7 @@ def action_json_schema(
     return {
         "type": "json_schema",
         "json_schema": {
-            "name": "northstar_actor_action_v0",
+            "name": "cedar_actor_action_v0",
             "strict": True,
             "schema": {"oneOf": alternatives},
         },

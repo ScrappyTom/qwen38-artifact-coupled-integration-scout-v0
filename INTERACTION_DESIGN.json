@@ -1,7 +1,7 @@
 {
-  "schema_version": "northstar-artifact-coupling-transfer-design-v0",
+  "schema_version": "cedar-artifact-coupling-transfer-design-v0",
   "status": "offline_stage0_qualified_live_activation_pending",
-  "task_id": "northstar-migration-architecture-package-v0",
+  "task_id": "cedar-valley-evacuation-decision-package-v0",
   "unit_of_analysis": "whole_configuration_trajectory",
   "research_question": "At authentic result-delivery pressure in a fresh large evidence world, does coupling bounded integration to exact revisable task work improve evidence conversion, effect uptake, verification, repair, readiness, and useful completion relative to an equally costly detached sidecar?",
   "configurations": [
@@ -19,7 +19,7 @@
     }
   ],
   "common_interacting_functions": [
-    "actor_selected_single_or_batch_evidence_ingress",
+    "actor_selected_single_or_two_range_evidence_ingress",
     "exact_external_custody_and_reopen",
     "strictly_positive_deterministic_first_fit_relief",
     "bounded_source_integration_on_externalization",
@@ -33,12 +33,17 @@
   "authentic_activation": {
     "status": "pending_live_screen",
     "screen_contract": "PRESSURE_SCREEN_CONTRACT.json",
-    "handoff": "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json",
+    "handoff": "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json",
+    "coverage_unit": "unique delivered source lines",
+    "minimum_qualifying_sources": 4,
+    "minimum_evidence_domains": 3,
+    "requires_novel_pending_source_lines": true,
     "requires_positive_relief_trigger": true,
+    "result_object_count_is_not_activation": true,
     "accessible_world_size_is_not_activation": true
   },
   "trajectory_budget": {
-    "maximum_preconstruction_actor_calls_per_configuration": 22,
+    "maximum_preconstruction_actor_calls_per_configuration": 26,
     "construction_milestone_is_semantically_non_authoritative": true,
     "postconstruction_actor_calls_per_configuration": 8,
     "minimum_clean_check_repair_recheck_closure_path": 4,

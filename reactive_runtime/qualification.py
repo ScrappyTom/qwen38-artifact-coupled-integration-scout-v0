@@ -30,12 +30,12 @@ def build_cases(repository_root: Path) -> tuple[QualificationCase, ...]:
     with tempfile.TemporaryDirectory() as temporary:
         world = ArchitectureWorld(task, Path(temporary))
         first_execution = world.execute(
-            {"action": "read_source", "source_id": "S02", "start_line": 1, "end_line": 80},
+            {"action": "read_source", "source_id": "S02", "start_line": 1, "end_line": 70},
             result_id="QUAL-RESULT-001",
         )
         first = world.make_result_record(first_execution, result_id="QUAL-RESULT-001", acquired_call=1)
         second_execution = world.execute(
-            {"action": "read_source", "source_id": "S03", "start_line": 1, "end_line": 180},
+            {"action": "read_source", "source_id": "S03", "start_line": 1, "end_line": 70},
             result_id="QUAL-RESULT-002",
         )
         second = world.make_result_record(second_execution, result_id="QUAL-RESULT-002", acquired_call=2)
@@ -43,7 +43,7 @@ def build_cases(repository_root: Path) -> tuple[QualificationCase, ...]:
         version=1,
         body=(
             "# Evidence Integration Ledger\n\n"
-            "R02: release gates must preserve tenant-local tail objectives rather than only fleet averages [S02].\n\n"
+            "R02: Zone A uses the conservative fire-arrival envelope rather than the median forecast [S02].\n\n"
             "R12: candidate-bound readiness remains unresolved until exact checks and external adjudication [S02].\n"
         ),
         body_tokens=36,
@@ -86,7 +86,7 @@ def build_action_cases(repository_root: Path) -> tuple[ActionQualificationCase, 
             93003,
             [
                 {"role": "system", "content": common},
-                {"role": "user", "content": task_text + "\n\nReturn one upsert_decision_section action for heading `Decision and scope`. Its body must be one concise paragraph framing a cautious Northstar cohort migration, citing [S02]."},
+                {"role": "user", "content": task_text + "\n\nReturn one upsert_decision_section action for heading `Decision, scope, and authority`. Its body must be one concise paragraph framing a cautious Cedar Valley evacuation decision, citing [S02]."},
             ],
             "upsert_decision_section",
         ),

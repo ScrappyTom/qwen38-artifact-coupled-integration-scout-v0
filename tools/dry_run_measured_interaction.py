@@ -44,13 +44,13 @@ class ScriptedProvider:
         self.actor_index = 0
 
     def _maintenance(self, messages: list[dict[str, str]]) -> str:
-        allowed = sorted(set(re.findall(r"S(?:0[1-9]|1[0-4])", messages[0]["content"])))
+        allowed = sorted(set(re.findall(r"S(?:0[1-9]|1[0-6])", messages[0]["content"])))
         cited = allowed or ["S02"]
         rows = ["# Evidence Integration Ledger", ""]
         for ordinal in range(1, 13):
             source = cited[(ordinal - 1) % len(cited)]
             rows.append(
-                f"R{ordinal:02d}: Northstar migration evidence remains provisional and source-bound [{source}]."
+                f"R{ordinal:02d}: Cedar Valley evacuation evidence remains provisional and source-bound [{source}]."
             )
         rows.extend(
             [
@@ -61,27 +61,27 @@ class ScriptedProvider:
         return "\n".join(rows)
 
     def _actor_actions(self) -> list[dict[str, object]]:
-        grounding = " ".join(f"[S{i:02d}]" for i in range(1, 15))
+        grounding = " ".join(f"[S{i:02d}]" for i in range(1, 17))
         ledger = "# Evidence Integration Ledger\n\n" + "\n".join(
-            f"R{i:02d}: provider-free Northstar disposition {grounding}."
+            f"R{i:02d}: provider-free Cedar Valley disposition {grounding}."
             for i in range(1, 13)
         )
         headings = (
-            "Decision and scope",
-            "Protocol, topology, and authority",
-            "Delivery, identity, and schema safety",
-            "Residency, continuity, and failure response",
-            "Capacity, observability, and reconciliation",
-            "Ninety-day rollout and rollback plan",
-            "Verification, readiness, and governance",
-            "Risks, uncertainties, and falsifiers",
+            "Decision, scope, and authority",
+            "Hazard triggers and zone sequencing",
+            "Population, transport, and route clearance",
+            "Shelter, medical, and accessibility continuity",
+            "Warnings, accountability, and community support",
+            "Power, fuel, and resource contracting",
+            "Forty-eight-hour execution and contingencies",
+            "Verification, readiness, blockers, and falsifiers",
         )
         actions: list[dict[str, object]] = [
             {
                 "action": "read_batch",
                 "requests": [
-                    {"source_id": "S12", "start_line": 1, "end_line": 70},
-                    {"source_id": "S14", "start_line": 1, "end_line": 120},
+                    {"source_id": "S14", "start_line": 1, "end_line": 70},
+                    {"source_id": "S16", "start_line": 1, "end_line": 70},
                 ],
             }
         ]
@@ -94,14 +94,15 @@ class ScriptedProvider:
                     "heading": heading,
                     "body": " ".join(
                         [
-                            "Northstar uses a gated cohort migration with producer_id:event_id identity, a 48 hour deduplication horizon covering the 31 hour replay, at-least-once effects, and exact authority transitions.",
-                            "Schema v3 creates a rollback boundary: before v3 the plan may restore LegacyQueue after reconciliation, while afterward it must hold and forward-fix rather than lose tenant policy or residency data.",
-                            "EU payloads use an approved EU target or fail closed; a twelve hour encrypted spool and tested replay cover vendor outages instead of assuming the four hour target.",
-                            "Per-tenant p99 and fleet statistics, full tenant-hour reconciliation, candidate-bound checks, us-west shard expansion before 60%, named owners, and readiness evidence govern advancement.",
+                            "The incident commander holds legal order and closure authority, while the sheriff executes route control; the conservative 5.8-hour envelope and 42 percent wind branch govern Zone A rather than the better median.",
+                            "Population and person-level transport assignments preserve survey overlap, tourists, lift capacity, driver duty, accessible medical placement, smoke-safe shelter space, oxygen handoff, and relocation triggers.",
+                            "Mill Junction is the shared bottleneck at the observed 1,180 vehicles per hour; emergency inbound access, contraflow setup, door-knock timing, Hmong warnings, and radio interoperability remain explicit effects.",
+                            "Twenty-four-hour local fuel or a verified alternate covers the observed nineteen-hour delay; private self-evacuation accountability, deletion proof, animal parallelism, cost authority, and candidate-bound checks govern the forty-eight-hour sequence.",
+                            "Every blocker has an owner, repair, current recheck, and falsifier; a stale component result, model-authored ledger, or submission cannot establish readiness for this candidate.",
                         ]
                         * 2
                     )
-                    + " [S01] [S02] [S03] [S04] [S05] [S06] [S07] [S08] [S09] [S10] [S11] [S12] [S13] [S14]",
+                    + " [S01] [S02] [S03] [S04] [S05] [S06] [S07] [S08] [S09] [S10] [S11] [S12] [S13] [S14] [S15] [S16]",
                 }
             )
         actions.extend(
@@ -109,8 +110,8 @@ class ScriptedProvider:
                 {"action": "run_check"},
                 {
                     "action": "upsert_decision_section",
-                    "heading": "Risks, uncertainties, and falsifiers",
-                    "body": "The candidate remains unready if the 48 hour identity control, EU fail-closed route, twelve hour spool, per-tenant p99 gate, tenant-hour reconciliation, or us-west shard expansion fails current candidate-bound verification [S03] [S06] [S07] [S08] [S09] [S10] [S12] [S14].",
+                    "heading": "Verification, readiness, blockers, and falsifiers",
+                    "body": "This candidate remains not ready while any bridge, driver, filter, radio interoperability, alternate fuel, or oxygen-matching blocker lacks a current repair and recheck. The incident commander retains closure authority; any stale result or failed falsifier blocks closure [S01] [S04] [S05] [S06] [S07] [S08] [S09] [S13] [S16].",
                 },
             ]
         )
@@ -185,12 +186,7 @@ def run_fixture() -> dict[str, object]:
                 {"role": "user", "content": (ROOT / "task" / "ACTIONS.md").read_text(encoding="utf-8") + "\n\n# Exact source catalog\n" + world.source_catalog_for_actor()},
                 {"role": "user", "content": "# Exact current candidate\n" + world.candidate_packet()},
             ]
-            requests = (
-                ("S03", 1, 200),
-                ("S06", 1, 220),
-                ("S07", 1, 220),
-                ("S08", 1, 220),
-            )
+            requests = tuple((source_id, 1, 70) for source_id in ("S01", "S02", "S03", "S06", "S04", "S08", "S09", "S12", "S13", "S15"))
             for ordinal, (source_id, start, end) in enumerate(requests, 1):
                 action = {"action": "read_source", "source_id": source_id, "start_line": start, "end_line": end}
                 messages.append({"role": "assistant", "content": json.dumps(action, separators=(",", ":"))})
@@ -202,14 +198,14 @@ def run_fixture() -> dict[str, object]:
                 record.message_index = len(messages) - 1
                 if ordinal < len(requests):
                     ledger.mark_model_visible(result_id, call_index=ordinal + 1, message_index=record.message_index)
-            pending = ledger.get("RESULT-004")
+            pending = ledger.get("RESULT-010")
             return PressureBoundary(
                 messages=deepcopy(messages),
                 ledger=ledger,
                 pending_result_id=pending.result_id,
                 pending_message_index=int(pending.message_index),
-                actor_calls_completed=4,
-                next_result_ordinal=5,
+                actor_calls_completed=10,
+                next_result_ordinal=11,
                 candidate_sha256=world.candidate_sha256,
                 prospective_prompt_tokens=25_000,
                 prompt_limit=measured.PROMPT_LIMIT,
@@ -261,7 +257,7 @@ def run_fixture() -> dict[str, object]:
     if initial["A1_COUPLED"]["candidate_sha256"] == expected_initial_hash:
         failures.append("coupled_maintenance_did_not_mutate_candidate")
     return {
-        "schema": "northstar-artifact-coupling-measured-provider-free-fixture-v0",
+        "schema": "cedar-artifact-coupling-measured-provider-free-fixture-v0",
         "passed": not failures,
         "failures": failures,
         "offline_provider_only": True,

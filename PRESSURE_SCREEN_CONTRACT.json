@@ -1,22 +1,46 @@
 {
-  "schema_version": "northstar-transfer-pressure-screen-v0",
+  "schema_version": "cedar-ingress-aligned-pressure-screen-v0",
   "status": "frozen_offline_gpu_withheld",
-  "run_id": "2026-08-24-northstar-transfer-pressure-screen-v0",
-  "scope": "northstar_transfer_pressure_screen_v0",
-  "seed": 860241,
-  "maximum_actor_calls": 18,
-  "maximum_provider_calls": 18,
-  "maximum_serialized_tokens": 500000,
+  "run_id": "2026-08-25-cedar-ingress-aligned-pressure-screen-v0",
+  "scope": "cedar_ingress_aligned_pressure_screen_v0",
+  "seed": 860251,
+  "maximum_actor_calls": 20,
+  "maximum_provider_calls": 20,
+  "maximum_serialized_tokens": 600000,
   "maximum_wall_seconds": 7200,
   "context_tokens": 25088,
   "ordinary_response_reserve": 4096,
   "prompt_limit": 20992,
   "attempts_per_call": 1,
   "retries": 0,
+  "permitted_ingress_geometry": {
+    "single_source_maximum_lines": 120,
+    "batch_maximum_ranges": 2,
+    "batch_maximum_lines": 160,
+    "batch_maximum_source_bytes": 12000,
+    "all_source_observation_maximum_result_tokens": 6500
+  },
   "policy": "ordinary exact chronology with no relief, maintenance, semantic sidecar, or reentry",
-  "qualifying_endpoint": "a newly acquired source observation makes the next ordinary prompt exceed 20992 tokens after at least four source observations crossed prior actor boundaries, while the candidate remains initial, no check ran, and no submission occurred; the post-run audit must also prove at least one strictly positive first-fit relief substitution is available while the pending result remains protected",
-  "non_diagnostic_endpoints": ["submitted_before_pressure", "actor_call_budget_exhausted", "serialized_token_budget_exhausted", "wall_clock_budget_exhausted", "pressure_without_positive_relief_interaction_trigger"],
+  "activation_semantics": {
+    "unit": "union of exact source lines delivered across prior actor decision boundaries",
+    "source_qualification": "coverage for that source is at least its frozen activation_min_lines value",
+    "minimum_qualifying_sources": 4,
+    "minimum_distinct_evidence_domains": 3,
+    "pending_observation": "source observation containing at least one source line not previously delivered",
+    "explicit_non_units": ["result object count", "action count", "total accessible world size", "host semantic readiness"]
+  },
+  "qualifying_endpoint": "a newly acquired novel source observation makes the next ordinary prompt exceed 20992 tokens after at least four qualifying source IDs across at least three frozen evidence domains have crossed prior actor boundaries, while the candidate remains initial, no check ran, and no submission occurred; the post-run audit must also prove at least one strictly positive first-fit relief substitution is available while the pending result remains protected",
+  "early_pressure_rule": "pressure before the frozen evidence-coverage maturity gate is non-diagnostic and closes the task; batching, splitting, or a retry may not be changed after observing it",
+  "non_diagnostic_endpoints": [
+    "submitted_before_pressure",
+    "actor_call_budget_exhausted",
+    "serialized_token_budget_exhausted",
+    "wall_clock_budget_exhausted",
+    "pressure_before_ingress_aligned_activation",
+    "pressure_boundary_ineligible",
+    "pressure_without_positive_relief_interaction_trigger"
+  ],
   "pressure_boundary_handoff": "generated only after a qualifying live screen and a separate result commit",
   "measured_fork_authorized": false,
-  "claim_limit": "offline corpus size and provider-free fixtures do not establish authentic pressure; only the frozen ordinary actor screen can select a common pre-treatment boundary, and it cannot authorize measured continuation"
+  "claim_limit": "offline packet geometry establishes prospective reachability, not authentic activation; only the frozen ordinary actor trajectory can select a common pretreatment pressure boundary, and it cannot authorize measured continuation"
 }

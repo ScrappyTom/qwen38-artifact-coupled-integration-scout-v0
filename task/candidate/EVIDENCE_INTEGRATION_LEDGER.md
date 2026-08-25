@@ -1,3 +1,3 @@
 # Evidence Integration Ledger
 
-No evidence has been integrated yet.
+No evidence has been integrated.

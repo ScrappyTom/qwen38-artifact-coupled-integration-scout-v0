@@ -18,10 +18,10 @@ from reactive_runtime.trajectory_budget import ConstructionBudget  # noqa: E402
 from reactive_runtime.world import ArchitectureWorld  # noqa: E402
 from tools import run_measured_interaction as measured  # noqa: E402
 from tools import run_pressure_screen as screen  # noqa: E402
-from tools.materialize_transfer_world import SOURCES  # noqa: E402
+from tools.materialize_cedar_world import SPECS, document  # noqa: E402
 
 
-TASK_ID = "northstar-migration-architecture-package-v0"
+TASK_ID = "cedar-valley-evacuation-decision-package-v0"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -46,20 +46,19 @@ def main() -> int:
     measured_request = load(ROOT / "MEASURED_AUTHORIZATION_REQUEST.json")
     profile = load(ROOT / "MODEL_PROFILE_LOCK.json")
 
-    if lock.get("task_id") != TASK_ID or lock.get("world_origin") != "deterministic_synthetic_northstar_world_v0":
+    if lock.get("task_id") != TASK_ID or lock.get("world_origin") != "deterministic_synthetic_cedar_valley_world_v0":
         failures.append("fresh_task_lock_identity")
     for row in lock.get("files", []):
         path = ROOT / "task" / str(row.get("path"))
         if not path.is_file() or sha256_file(path) != row.get("sha256"):
             failures.append(f"task_lock:{row.get('path')}")
     custody = lock.get("source_custody")
-    if not isinstance(custody, list) or len(custody) != 14:
+    if not isinstance(custody, list) or len(custody) != 16:
         failures.append("source_custody_count")
         custody = []
-    generated_names = list(SOURCES)
-    for ordinal, name in enumerate(generated_names, 1):
-        path = ROOT / "task" / "transfer_sources" / name
-        if not path.is_file() or path.read_text(encoding="utf-8") != SOURCES[name]():
+    for ordinal, spec in enumerate(SPECS, 1):
+        path = ROOT / "task" / "cedar_sources" / spec.filename
+        if not path.is_file() or path.read_text(encoding="utf-8") != document(spec):
             failures.append(f"source_generator:S{ordinal:02d}")
     if any("task/sources/" in str(row.get("path", "")) for row in custody):
         failures.append("historical_source_catalog_leak")
@@ -132,9 +131,9 @@ def main() -> int:
 
     budget = ConstructionBudget()
     if (
-        budget.maximum_preconstruction_calls != 22
+        budget.maximum_preconstruction_calls != 26
         or budget.postconstruction_calls != 8
-        or budget.maximum_total_calls != 30
+        or budget.maximum_total_calls != 34
     ):
         failures.append("trajectory_budget")
     # The clean tail needs four actor decisions: receive construction effect +
@@ -188,6 +187,31 @@ def main() -> int:
         failures.append("offline_activation_overclaim")
     if int(geometry.get("source_corpus_tokens", 0)) <= 25_088:
         failures.append("task_world_not_large")
+    ingress = geometry.get("permitted_ingress_geometry", {})
+    if ingress.get("every_full_single_is_admissible") is not True:
+        failures.append("ingress_geometry:single")
+    if ingress.get("every_full_pair_is_admissible") is not True:
+        failures.append("ingress_geometry:pair")
+    maturity = geometry.get("maturity_reachability", {})
+    if (
+        maturity.get("fits_at_maturity") is not True
+        or len(maturity.get("qualifying_source_ids", [])) < 4
+        or len(maturity.get("qualifying_domains", [])) < 3
+    ):
+        failures.append("ingress_geometry:maturity")
+    opportunity = geometry.get("prospective_pressure_opportunity")
+    if (
+        not isinstance(opportunity, dict)
+        or int(opportunity.get("overflow_tokens", 0)) <= 0
+        or not opportunity.get("positive_relief_result_ids")
+        or int(opportunity.get("positive_relief_after_tokens", 10**9)) > screen.PROMPT_LIMIT
+    ):
+        failures.append("ingress_geometry:pressure_opportunity")
+    activation_contract = screen_contract.get("activation_semantics", {})
+    if activation_contract.get("unit") != "union of exact source lines delivered across prior actor decision boundaries":
+        failures.append("screen_contract:activation_unit")
+    if "result object count" not in activation_contract.get("explicit_non_units", []):
+        failures.append("screen_contract:result_count_not_excluded")
     try:
         verify_pressure_handoff(ROOT)
     except RuntimeError:
@@ -201,13 +225,19 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory() as temporary:
         world = ArchitectureWorld(ROOT / "task", Path(temporary))
-        if len(world.sources) != 14:
+        if len(world.sources) != 16:
             failures.append("world_source_count")
+        actor_catalog = json.loads(world.source_catalog_for_actor())
+        if any(
+            "activation_min_lines" in row or "evidence_domain" in row
+            for row in actor_catalog.get("sources", [])
+        ):
+            failures.append("activation_metadata_leaked_to_actor")
         if tuple(DECISION_HEADINGS) != tuple(evaluator.get("decision_headings", [])):
             failures.append("decision_heading_binding")
 
     result = {
-        "schema": "northstar-transfer-stage0-preflight-v0",
+        "schema": "cedar-ingress-aligned-stage0-preflight-v0",
         "passed": not failures,
         "failures": sorted(set(failures)),
         "task_id": TASK_ID,
@@ -224,18 +254,18 @@ def main() -> int:
         "candidate_bound_evaluator_frozen": evaluator.get("task_id") == TASK_ID
         and protocol.get("task_id") == TASK_ID,
         "closure_readiness_requires_independent_adjudication": True,
-        "maximum_preconstruction_actor_calls_per_configuration": 22,
+        "maximum_preconstruction_actor_calls_per_configuration": 26,
         "postconstruction_actor_calls_per_configuration": 8,
         "minimum_clean_postconstruction_path_calls": minimum_clean_tail,
         "additional_postconstruction_allowance_calls": 4,
-        "maximum_actor_calls_per_configuration": 30,
+        "maximum_actor_calls_per_configuration": 34,
         "gpu_authorized": False,
         "offline_apparatus_qualified": not failures,
         "authentic_interaction_activation_qualified": False,
         "activation_status": "requires_frozen_live_ordinary_pressure_screen",
         "measured_interaction_eligible": False,
         "next_live_gate": screen.RUN_ID,
-        "claim_limit": "Offline Stage 0 qualifies the fresh world, two viable interacting configurations, evaluator, budgets, runners, and fixtures. It does not establish authentic model-driven pressure or authorize any provider call.",
+        "claim_limit": "Offline Stage 0 qualifies the fresh world, ingress-aligned activation semantics, two viable interacting configurations, evaluator, budgets, runners, and fixtures. Exact packet rendering proves prospective reachability but does not establish authentic model-driven pressure or authorize any provider call.",
     }
     write_json(ROOT / "STAGE0_PREFLIGHT.json", result)
     print(json.dumps(result, indent=2, sort_keys=True))

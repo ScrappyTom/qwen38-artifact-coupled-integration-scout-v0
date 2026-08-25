@@ -6,9 +6,9 @@ from reactive_runtime.trajectory_budget import ConstructionBudget
 class ConstructionBudgetTests(unittest.TestCase):
     def test_frozen_default_doubles_the_clean_completion_tail(self) -> None:
         budget = ConstructionBudget()
-        self.assertEqual(22, budget.maximum_preconstruction_calls)
+        self.assertEqual(26, budget.maximum_preconstruction_calls)
         self.assertEqual(8, budget.postconstruction_calls)
-        self.assertEqual(30, budget.maximum_total_calls)
+        self.assertEqual(34, budget.maximum_total_calls)
         self.assertGreaterEqual(budget.postconstruction_calls, 2 * 4)
 
     def test_no_construction_stops_at_preconstruction_ceiling(self) -> None:

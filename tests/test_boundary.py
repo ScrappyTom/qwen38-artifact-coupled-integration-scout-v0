@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class BoundaryTests(unittest.TestCase):
     def test_placeholder_cannot_be_hydrated_as_authentic_evidence(self) -> None:
         handoff = json.loads(
-            (ROOT / "NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json").read_text(
+            (ROOT / "CEDAR_PRESSURE_BOUNDARY_HANDOFF.json").read_text(
                 encoding="utf-8"
             )
         )

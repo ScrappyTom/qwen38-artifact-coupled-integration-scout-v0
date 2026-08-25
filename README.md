@@ -1,117 +1,115 @@
-# Qwen3.8 Northstar artifact-coupling transfer scout
+# Qwen3.8 Cedar ingress-aligned interaction transfer
 
-Status: the authorized ordinary pressure screen is complete and sealed. It
-found authentic pressure after two batch reads but failed the frozen
-meaningful-acquisition gate, so this task selection is closed and no measured
-D0/A1 fork exists. See `NORTHSTAR_PRESSURE_SCREEN_RESULT.md`.
+Status: offline Stage 0 for a genuinely fresh task/world. GPU use is withheld.
+The selected next gate is an ordinary-chronology pressure screen; a measured
+`D0_DETACHED`/`A1_COUPLED` continuation remains locked until a separately
+audited, separately committed boundary exists.
 
-This branch transfers the artifact-coupling interaction to a fresh synthetic
-task/world. It does not isolate a note, digest, eviction rule, or edit action.
-It compares two complete evidence-to-work systems after the same authentic
-pre-treatment pressure boundary:
+## Why this task exists
+
+The prior Northstar task reached real pressure after two actor-selected batch
+reads, but its frozen eligibility rule counted delivered result objects. One
+batch object carried three source documents, so the scientific gate called a
+meaningful six-source acquisition state “only one observation.” The run was
+correctly closed, but its activation unit did not match its own ingress unit.
+
+Cedar fixes that prospectively. Eligibility is now based on cumulative exact
+source-line coverage across frozen evidence domains:
+
+- a source qualifies only after at least 55 of its 70 lines crossed a later
+  actor decision boundary;
+- at least four source IDs across at least three evidence domains must qualify;
+- the newly pending observation must contain at least one novel source line;
+- result-object count, action count, accessible-world size, and host judgments
+  of semantic readiness are explicitly not activation units.
+
+Thus one full-source result earns one covered source, while one two-source
+batch can earn two. A one-line probe earns neither.
+
+The domain and threshold metadata is host-side and is omitted from the
+actor-facing catalog; it is an audit rule, not a task-solving hint.
+
+## Fresh task and exact world
+
+The actor must produce a Cedar Valley wildfire-evacuation evidence ledger and
+a 1,500–2,100-word operations decision. Sixteen deterministic sources span 11
+domains: authority, hazard, demand, transport, shelter/care, communications,
+continuity, community, data, verification, economics, and governance (hazard
+and two other domains have multiple sources). Cross-source constraints cover
+legal authority, conservative fire triggers, a shared road bottleneck,
+vehicle/driver/accessibility matching, smoke-safe shelter capacity, medical
+handoffs, multilingual warning, fuel delay, animals, private accountability,
+exercise defects, cost authority, forecast currency, and readiness blockers.
+
+The corpus is 73,550 bytes and 27,272 tokenizer tokens. That establishes a
+large accessible world, not activation. `tools/materialize_cedar_world.py` is
+the deterministic source of truth and `task/TASK_SOURCE_LOCK.json` binds the
+active task, candidate, evaluator, catalog, and all source bytes.
+
+## Permitted ingress geometry
+
+The actor may request one range or a batch of at most two ranges. Each source
+has 70 lines; the action surface allows 120 lines per range, 160 total batch
+lines, 12,000 exact source bytes, and a 6,500-token model-visible result cap for
+both single and batch observations.
+
+Offline enumeration covers all 16 full single-source results and all 120 full
+two-source pairs:
+
+- largest full single result: 2,293 tokens;
+- largest full pair result: 4,477 tokens;
+- every full single and pair is admissible;
+- an exact two-batch path reaches four sources/four domains at 11,712 prompt
+  tokens, leaving 9,280 tokens under the 20,992 prompt ceiling;
+- continuing the same admissible path produces a prospective fifth-result
+  overflow of 1,827 tokens; one protected-pending first-fit substitution
+  restores the exact packet to 19,324 tokens.
+
+These numbers prove prospective reachability, not authentic model-driven
+pressure. A live screen that pressures before the coverage/domain gate is
+non-diagnostic and closes this task without retry or post-hoc geometry changes.
+
+## Whole-system comparator
+
+If the screen qualifies, both viable arms start from the same exact pressure
+fork and share evidence ingress, custody, reopen, first-fit relief, bounded
+integration maintenance, ordinary artifact actions, candidate-bound effects,
+checks, repair, recheck, closure, and external evaluation.
 
 | Configuration | Bounded integration | Exact task-world effect |
 |---|---|---|
-| `D0_DETACHED` | Complete replacement evidence ledger | Model-facing, non-authoritative sidecar; maintenance does not mutate the candidate |
-| `A1_COUPLED` | The same operation, input rule, and budget | Replaces the exact versioned `EVIDENCE_INTEGRATION_LEDGER.md` candidate file and emits a candidate effect |
+| `D0_DETACHED` | Complete replacement evidence ledger | Non-authoritative model-facing sidecar; maintenance does not mutate the candidate |
+| `A1_COUPLED` | Same operation, inputs, and budget | Exact versioned `EVIDENCE_INTEGRATION_LEDGER.md` candidate file plus candidate effect |
 
-Both configurations retain actor-selected single and batch ingress, exact
-custody and reopen, strictly positive deterministic first-fit relief,
-maintenance, incremental task-artifact edits, effect uptake, candidate-bound
-checks, repair, recheck, and closure proposal. The unit of analysis is the
-whole trajectory.
+This is an interaction comparison, not a note-quality or edit-action test. The
+question is whether routing the same lossy integration through exact revisable
+work changes the trajectory across acquisition, pressure, work, effect uptake,
+verification, repair, readiness, and closure.
 
-## Fresh task and world
+## Budget and evaluation
 
-The actor must produce a Northstar event-ingestion migration architecture
-package from fourteen independently authored synthetic source documents. The
-world contains 146,617 bytes and 61,500 offline-tokenizer tokens. It includes
-cross-source constraints and conflicts around delivery identity, a 31-hour
-retry versus a 48-hour deduplication requirement, the schema-v3 rollback
-boundary, EU data residency, an 11.1-hour vendor outage, twelve-hour local
-spooling, per-tenant tail latency, full tenant-hour reconciliation, capacity,
-security, and readiness.
+Each future measured arm receives up to 26 post-boundary actor calls to cross a
+mechanical construction milestone, then exactly eight more decisions. The
+protected clean tail is check, repair, recheck, and closure, with four further
+decisions for targeted repair or action loss. Each arm permits at most 18
+maintenance calls and two reactive reentries.
 
-The generator in `tools/materialize_transfer_world.py` is the source of truth.
-`task/TASK_SOURCE_LOCK.json` binds every task, evaluator, candidate, world, and
-source byte. The active catalog references only `task/transfer_sources/`; the
-prior program-document task remains historical repository evidence and is not
-actor-accessible in this transfer.
-
-## Offline Stage 0 disposition
-
-Offline Stage 0 establishes:
-
-- a fresh task/world and deterministic source custody;
-- viable detached and coupled comparators through a full provider-free loop;
-- exact result delivery, positive relief, maintenance, candidate effects,
-  stale-check detection, repair, current recheck, and submission plumbing;
-- a mechanical candidate-bound evaluator plus a separately frozen
-  condition-blinded R01–R12 adjudication and readiness rule;
-- an event-contingent trajectory budget: up to 22 actor calls to cross a
-  mechanical construction milestone, then exactly eight more actor decisions;
-- enough protected tail for the clean four-decision sequence of check, repair,
-  recheck, and closure, plus four additional decisions for targeted repair or
-  action loss;
-- frozen screen and measured runners, authorization scopes, tests, audit, and
-  handoff verification; and
-- explicit rejection of the placeholder boundary, measured authorization, and
-  any claim that accessible-world size proves realized pressure.
-
-The construction milestone grants decisions only. It requires the exact title,
-all eight headings in order, at least 1,100 decision words, and at least eight
-source citations. It sets semantic readiness to `not_adjudicated`; it is not a
-quality or closure judgment.
-
-## Authentic activation gate
-
-Offline work cannot establish authentic model-driven pressure. The next live
-screen therefore runs ordinary chronology only—no relief, maintenance,
-sidecar, coupling, or reentry—and stops at a qualifying undeliverable source
-observation. A boundary qualifies only if:
-
-- at least four prior source observations crossed model boundaries;
-- the pending result is a source observation;
-- the candidate is still exact-initial;
-- no check or submission occurred;
-- the next ordinary prompt exceeds 20,992 tokens; and
-- the post-run audit proves a strictly positive first-fit relief substitution
-  exists while the pending result remains protected.
-
-That last condition ensures the selected fork can activate the D0/A1
-interaction. Total corpus size is not activation evidence.
-
-The screen permits at most 18 actor calls, 500,000 serialized tokens, one
-attempt per call, and zero retries. A valid screen would have been committed
-and audited before the measured continuation could be preflighted or
-authorized. The observed screen was mechanically valid but scientifically
-ineligible: only one prior batch-result object had crossed a model boundary
-when the second batch overflowed. The measured continuation remains locked.
-
-## Evaluation and readiness
-
-The mechanical evaluator is bound to the exact composite candidate and exposes
-stable, version-bound diagnostics. Mechanical success still yields
-`not_adjudicated`: it cannot authorize closure. The frozen semantic protocol
-requires every R01–R12 criterion to be met, no unsupported or forbidden claim,
-no unresolved blocker, and a current candidate-bound final check. Submission
-behavior never changes readiness.
-
-Useful completion jointly requires complete artifact quality, correct
-readiness/closure, and final-effect uptake or independent reconciliation.
-Fewer reads, lower cost, or submission alone are not wins.
+Mechanical checks bind to the exact composite candidate and can only return
+`not_ready` or `not_adjudicated`. Independent condition-blinded R01–R12
+adjudication controls quality and readiness. Submission, speed, lower cost, or
+a model-authored ledger cannot establish readiness.
 
 ## Active files
 
-- `STAGE0_PLAN.md` — offline and live qualification ladder
-- `STAGE0_PREFLIGHT.json` — offline disposition
-- `STAGE0_GEOMETRY.json` — task and decision-budget geometry
-- `STAGE0_INTERACTION_FIXTURE.json` — small provider-free lifecycle fixture
-- `STAGE0_MEASURED_FIXTURE.json` — full two-configuration dry run
-- `PRESSURE_SCREEN_CONTRACT.json` — authentic activation gate
-- `NORTHSTAR_PRESSURE_BOUNDARY_HANDOFF.json` — intentionally invalid placeholder
-- `MEASURED_INTERACTION_CONTRACT.json` — future matched continuation
+- `STAGE0_PLAN.md` — prospective scientific and execution contract
+- `STAGE0_GEOMETRY.json` — exhaustive ingress and exact packet receipt
+- `STAGE0_PREFLIGHT.json` — offline qualification disposition
+- `PRESSURE_SCREEN_CONTRACT.json` — live activation and stop rules
+- `CEDAR_PRESSURE_BOUNDARY_HANDOFF.json` — invalid placeholder until a screen qualifies
+- `MEASURED_INTERACTION_CONTRACT.json` — locked future whole-system fork
+- `STAGE0_INTERACTION_FIXTURE.json` — small provider-free lifecycle exercise
+- `STAGE0_MEASURED_FIXTURE.json` — full two-arm provider-free run
 - `SEMANTIC_ADJUDICATION_PROTOCOL_TRANSFER.json` — candidate quality/readiness governance
 
-Files describing the completed prior artifact-coupling study are retained as
-append-only historical evidence. They are not active Northstar qualifications.
+Northstar and earlier measured-result files remain append-only historical
+evidence. They are not part of the Cedar actor-visible source catalog.
