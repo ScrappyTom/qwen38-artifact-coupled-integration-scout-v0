@@ -1,0 +1,16 @@
+{
+  "schema_version": "meridian-semantic-adjudication-protocol-v0",
+  "task_id": "meridian-sterile-infusion-recovery-v0",
+  "status": "frozen_before_live_behavior",
+  "candidate_identity": ["task_source_lock_sha256", "candidate_sha256", "candidate_file_manifest"],
+  "evaluation_basis": ["EVALUATOR.json", "exact_source_manifest", "criterion_level_findings", "blocking_requirements"],
+  "criterion_ids": ["Q01", "Q02", "Q03", "Q04", "Q05", "Q06", "Q07", "Q08", "Q09", "Q10", "Q11", "Q12", "file_scope"],
+  "criterion_dispositions": ["met", "partial", "not_met"],
+  "quality_classes": ["complete", "strong_partial", "weak_partial", "invalid"],
+  "closure_readiness": ["ready", "not_ready", "not_adjudicated"],
+  "ready_rule": "all Q01-Q12 and file_scope are met, no blocking requirement remains, and current candidate-bound verification evidence is available",
+  "not_ready_rule": "one or more material requirements are partial or not_met, a blocker remains, or current verification is absent",
+  "condition_blinding": "adjudicator receives exact candidate and source/task basis without configuration label where feasible",
+  "self_authorizing_inputs_forbidden": ["model-authored source slots", "maintenance acceptance", "mechanical precheck", "submission proposal", "lower cost", "fewer calls"],
+  "supersession": "append-only candidate/task/rubric/evidence-bound reconciliation required for any conflicting judgment"
+}

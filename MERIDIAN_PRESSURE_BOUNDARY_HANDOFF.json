@@ -1,0 +1,10 @@
+{
+  "schema_version": "meridian-pressure-boundary-handoff-v0",
+  "status": "invalid_until_authorized_screen_qualifies",
+  "run_id": "2026-08-25-meridian-source-local-delta-pressure-screen-v0",
+  "task_id": "meridian-sterile-infusion-recovery-v0",
+  "pressure_qualified": false,
+  "interaction_trigger_qualified": false,
+  "measured_fork_authorized": false,
+  "gpu_authorized": false
+}

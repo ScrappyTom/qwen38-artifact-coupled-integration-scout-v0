@@ -1,17 +1,36 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the authorized Bluehaven pressure screen and two-call B1 expression
-gate are complete, sealed, and audited. The screen qualified a common mature
-pressure fork. The expression gate did not qualify B1: its cold-start output
-cited and asserted content under six unseen sources, while the later
-replacement case with S01–S12 available passed. See
-`BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_RESULT.md`.
+Status: the fresh Meridian offline Stage 0 is implemented, red-teamed, and
+provider-free qualified. It is a whole-system comparison between direct
+actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
+source-local semantic transformation mechanically merged into the same exact
+source/version register (`L1_LOCAL_DELTA`). Both arms share exact ingress,
+custody, positive-savings relief, reopen, incremental artifact actions,
+candidate-bound effects and checks, repair/recheck, closure surface, actor
+budget, and independent evaluation.
 
-This is a partial-evidence semantic-completion failure, not a size or runtime
-failure. The frozen B1/W1 measured comparison is therefore ineligible. No
-same-task prompt repair, allowlist relaxation, retry, or measured continuation
-is authorized. W1 remains unmeasured; selecting any new comparison requires
-program-level reconciliation and a prospectively fresh policy/task boundary.
+The fresh 16-source world is 23,730 tokenizer tokens. All permitted full
+single and two-source reads fit. A prospective ordinary path reaches authentic
+result-delivery overflow at its sixth two-source result; one deterministic
+positive-savings substitution restores feasibility. Both complete systems
+also pass provider-free evidence-to-work-to-check-to-repair-to-recheck-to-
+closure loops. Every source slot is input-result-bound and both paths enforce
+the same 650-token slot ceiling.
+
+This does not establish live pressure or semantic utility. The next operation
+is only a common, treatment-free, 24-call pressure screen. It requires a clean
+frozen commit and separate explicit GPU authorization. No maintenance
+expression call or measured W0/L1 continuation is yet frozen or authorized.
+
+## Prior completed line
+
+The authorized Bluehaven pressure screen and two-call B1 expression gate are
+complete, sealed, and audited. The screen qualified a common mature pressure
+fork. The expression gate did not qualify B1: its cold-start output cited and
+asserted content under six unseen sources, while the later replacement case
+with S01–S12 available passed. See
+`BLUEHAVEN_BATCHED_MAINTENANCE_QUALIFICATION_RESULT.md`. No same-task repair or
+measured B1/W1 continuation is authorized.
 
 The first authorized screen identity (`...pressure-screen-v0`) is preserved as
 a sealed zero-call apparatus abort. Before this repository started its model
@@ -140,6 +159,23 @@ architecture promotion.
 
 ## Active files
 
+- `MERIDIAN_STAGE0_PLAN.md` — fresh whole-system question, parity, budgets,
+  activation, and claim limits
+- `MERIDIAN_STAGE0_PREFLIGHT.json` — exhaustive tokenizer geometry and complete
+  provider-free W0/L1 lifecycle receipt
+- `MERIDIAN_STAGE0_RED_TEAM.md` — oracle, provenance, resource, semantic-risk,
+  and readiness audit
+- `MERIDIAN_INTERACTION_DESIGN.json` — complete W0/L1 policy comparison
+- `MERIDIAN_SEMANTIC_ADJUDICATION_PROTOCOL.json` — external candidate-bound
+  quality/readiness contract
+- `MERIDIAN_PRESSURE_SCREEN_CONTRACT.json` — treatment-free authentic-pressure
+  activation and stop rules
+- `MERIDIAN_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
+  future commit-bound 24-call screen
+- `MERIDIAN_PRESSURE_BOUNDARY_HANDOFF.json` — invalid placeholder unless the
+  common screen qualifies
+- `task_meridian/` — fresh exact task, opaque source world, evaluator, candidate,
+  catalogs, and custody lock
 - `STAGE0_PLAN.md` — prospective scientific and execution contract
 - `STAGE0_GEOMETRY.json` — exhaustive ingress and exact packet receipt
 - `STAGE0_PREFLIGHT.json` — offline qualification disposition

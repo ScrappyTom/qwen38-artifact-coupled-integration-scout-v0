@@ -1,0 +1,31 @@
+{
+  "schema_version": "meridian-pressure-screen-contract-v0",
+  "run_id": "2026-08-25-meridian-source-local-delta-pressure-screen-v0",
+  "scope": "meridian_source_local_delta_pressure_screen_v0",
+  "task_id": "meridian-sterile-infusion-recovery-v0",
+  "seed": 427031,
+  "maximum_actor_calls": 24,
+  "maximum_serialized_tokens": 800000,
+  "maximum_wall_seconds": 8000,
+  "context_tokens": 25088,
+  "ordinary_response_reserve_tokens": 4096,
+  "prompt_limit": 20992,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "ordinary_common_actions": ["read_source", "read_batch", "reopen_exact", "upsert_decision_section", "replace_decision", "run_check", "submit"],
+  "eligible_boundary": {
+    "pending_result_kind": "source_observation",
+    "minimum_fully_covered_sources": 4,
+    "minimum_evidence_domains": 3,
+    "minimum_pending_novel_source_lines": 1,
+    "candidate_changed": false,
+    "check_ran": false,
+    "candidate_submitted": false,
+    "positive_savings_first_fit_relief_feasible": true
+  },
+  "terminal_conditions": ["authentic_result_delivery_pressure", "candidate_changed_before_pressure", "check_ran_before_pressure", "submitted_before_pressure", "pressure_before_ingress_aligned_activation", "pressure_boundary_ineligible", "actor_call_budget_exhausted", "serialized_token_budget_exhausted", "wall_clock_budget_exhausted", "apparatus_failure"],
+  "treatment_present": false,
+  "semantic_maintenance_present": false,
+  "measured_fork_authorized": false,
+  "gpu_authorized": false
+}

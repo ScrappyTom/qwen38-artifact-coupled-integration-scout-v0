@@ -1,0 +1,56 @@
+{
+  "schema_version": "meridian-infusion-evaluator-v0",
+  "evaluator_id": "meridian-infusion-evaluator-v0",
+  "task_id": "meridian-sterile-infusion-recovery-v0",
+  "decision_title": "# Meridian Sterile-Infusion Recovery Decision",
+  "decision_word_range": [1400, 2000],
+  "construction_milestone_minimum_words": 950,
+  "construction_milestone_minimum_sources": 9,
+  "minimum_unique_sources": 12,
+  "minimum_source_slots": 10,
+  "required_ledger_requirements": ["Q01", "Q02", "Q03", "Q04", "Q05", "Q06", "Q07", "Q08", "Q09", "Q10", "Q11", "Q12"],
+  "source_ids": ["AXIOM", "BRAMBLE", "CIPHER", "DRIFT", "EMBER", "FJORD", "GLINT", "HEATH", "IRIS", "JASPER", "KNOLL", "LOOM", "MARCH", "NORTH", "ONYX", "PIVOT"],
+  "decision_headings": [
+    "Decision, scope, and authority",
+    "Quality hazards, holds, and release logic",
+    "Demand, allocation, and clinical continuity",
+    "Manufacturing, components, and usable capacity",
+    "Distribution, communications, and traceability",
+    "Workforce, utilities, suppliers, and cost",
+    "Seventy-two-hour execution and contingencies",
+    "Verification, blockers, falsifiers, and closure"
+  ],
+  "semantic_term_gates": {
+    "authority": ["quality unit", "recall", "procurement", "closure authority"],
+    "hazard": ["0.25 EU/mL", "0.50 EU/mL", "41 percent", "MR-4"],
+    "demand": ["38,400", "93 percent", "uncertainty", "overlap"],
+    "capacity": ["18,000", "16,200", "shared", "inspection"],
+    "distribution": ["2 and 8 degrees", "custody", "acknowledgment", "excursion"],
+    "continuity": ["sixteen-hour", "twelve-hour", "relief", "alternate"],
+    "traceability": ["lot", "pallet", "privacy", "deletion"],
+    "verification": ["candidate", "recheck", "blocker", "falsifier"]
+  },
+  "forbidden_relation_patterns": {
+    "threshold_unit_conversion": ["0.25 hours", "0.25 percent", "0.50 degrees"],
+    "probability_conversion": ["41 percent humidity", "41 percent defects", "41 percent readiness"],
+    "coverage_conversion": ["seven percent demand reduction", "7 percent demand reduction", "93 percent readiness"],
+    "shared_capacity_sum": ["25,000 bags available", "25,000 bags per day available", "25,000 validated"],
+    "target_observation_swap": ["observed eight-hour delivery", "observed 8-hour delivery", "seven-hour observed fuel"],
+    "temperature_range_collapse": ["2.8 degrees Celsius", "2.8°C"],
+    "self_authorized_readiness": ["source register proves readiness", "mechanical check proves readiness", "candidate mutation proves readiness"]
+  },
+  "gold_requirement_sources": {
+    "Q01": ["AXIOM", "BRAMBLE", "HEATH", "PIVOT"],
+    "Q02": ["BRAMBLE", "HEATH", "NORTH"],
+    "Q03": ["CIPHER", "GLINT", "ONYX"],
+    "Q04": ["DRIFT", "IRIS", "JASPER", "KNOLL"],
+    "Q05": ["EMBER", "DRIFT", "HEATH", "KNOLL"],
+    "Q06": ["FJORD", "IRIS", "LOOM", "MARCH"],
+    "Q07": ["GLINT", "CIPHER", "FJORD", "MARCH"],
+    "Q08": ["IRIS", "JASPER", "DRIFT", "HEATH"],
+    "Q09": ["LOOM", "FJORD", "GLINT", "MARCH"],
+    "Q10": ["NORTH", "ONYX", "KNOLL", "AXIOM"],
+    "Q11": ["HEATH", "DRIFT", "EMBER", "LOOM", "NORTH"],
+    "Q12": ["PIVOT", "AXIOM", "HEATH", "NORTH", "MARCH"]
+  }
+}

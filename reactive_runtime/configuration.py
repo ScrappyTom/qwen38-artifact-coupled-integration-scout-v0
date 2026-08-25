@@ -5,6 +5,7 @@ from dataclasses import dataclass
 
 CONFIGURATIONS = ("D0_DETACHED", "A1_COUPLED")
 BLUEHAVEN_CONFIGURATIONS = ("B1_BATCHED_COUPLED", "W1_DIRECT_WORK")
+DELTA_CONFIGURATIONS = ("W0_DIRECT_WORK", "L1_LOCAL_DELTA")
 
 
 @dataclass(frozen=True)
@@ -48,4 +49,25 @@ def bluehaven_actor_actions(configuration_id: str) -> tuple[str, ...]:
     actions = ordinary_actions()
     if configuration_id == "B1_BATCHED_COUPLED":
         return tuple(action for action in actions if action != "replace_evidence_ledger")
+    return actions
+
+
+def delta_common_actions() -> tuple[str, ...]:
+    return (
+        "read_source",
+        "read_batch",
+        "reopen_exact",
+        "upsert_decision_section",
+        "replace_decision",
+        "run_check",
+        "submit",
+    )
+
+
+def delta_actor_actions(configuration_id: str) -> tuple[str, ...]:
+    if configuration_id not in DELTA_CONFIGURATIONS:
+        raise ValueError(f"unknown source-delta configuration: {configuration_id}")
+    actions = delta_common_actions()
+    if configuration_id == "W0_DIRECT_WORK":
+        return (*actions[:3], "upsert_evidence_slot", *actions[3:])
     return actions

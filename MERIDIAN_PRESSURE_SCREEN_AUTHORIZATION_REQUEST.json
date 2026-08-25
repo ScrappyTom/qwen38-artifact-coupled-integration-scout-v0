@@ -1,0 +1,12 @@
+{
+  "schema_version": "meridian-pressure-screen-authorization-request-v0",
+  "authorized": false,
+  "requested_scope": "meridian_source_local_delta_pressure_screen_v0",
+  "requested_run_id": "2026-08-25-meridian-source-local-delta-pressure-screen-v0",
+  "requested_maximum_model_calls": 24,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "freeze_commit": null,
+  "required_user_authorization": "I authorize the frozen 24-call Meridian source-local-delta pressure screen at commit <FULL_COMMIT>, run ID 2026-08-25-meridian-source-local-delta-pressure-screen-v0: at most 24 actor calls, one attempt per call, zero retries.",
+  "measured_continuation_included": false
+}

@@ -34,6 +34,7 @@ ACTION_FIELDS: dict[str, dict[str, type]] = {
     "read_batch": {"requests": list},
     "reopen_exact": {"result_id": str},
     "replace_evidence_ledger": {"content": str},
+    "upsert_evidence_slot": {"source_id": str, "source_version": str, "content": str},
     "upsert_decision_section": {"heading": str, "body": str},
     "replace_decision": {"content": str},
     "run_check": {},
@@ -130,7 +131,7 @@ def parse_action(
         _validate_range({key: value[key] for key in ("source_id", "start_line", "end_line")}, label=action)
     if action == "upsert_decision_section" and value["heading"] not in tuple(decision_headings):
         raise ValueError("heading is not a declared decision section")
-    if action in {"replace_evidence_ledger", "replace_decision"}:
+    if action in {"replace_evidence_ledger", "replace_decision", "upsert_evidence_slot"}:
         size = len(value["content"].encode("utf-8"))
         if not 1 <= size <= MAX_ARTIFACT_BYTES:
             raise ValueError(f"artifact content must contain 1..{MAX_ARTIFACT_BYTES} bytes")

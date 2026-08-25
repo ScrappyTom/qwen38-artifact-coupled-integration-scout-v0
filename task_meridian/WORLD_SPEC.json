@@ -1,0 +1,12 @@
+{
+  "schema_version": "meridian-world-spec-v0",
+  "task_id": "meridian-sterile-infusion-recovery-v0",
+  "world_origin": "deterministic_synthetic_meridian_infusion_world_v0",
+  "source_count": 16,
+  "source_ids_are_opaque_and_non_isomorphic_to_requirements": true,
+  "source_versions": "sha256 of exact source bytes",
+  "requirement_count": 12,
+  "relationship_geometry": "many-to-many",
+  "candidate_files": ["EVIDENCE_INTEGRATION_LEDGER.md", "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"],
+  "readiness_authority": "independent candidate-bound adjudication only"
+}

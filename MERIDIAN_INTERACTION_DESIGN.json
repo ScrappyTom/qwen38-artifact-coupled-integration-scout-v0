@@ -1,0 +1,77 @@
+{
+  "schema_version": "meridian-source-local-delta-interaction-design-v0",
+  "status": "offline_stage0_complete_authentic_pressure_pending",
+  "task_id": "meridian-sterile-infusion-recovery-v0",
+  "question": "Under authentic pressure, does source-local semantic transformation mechanically coupled into exact task work improve source-correct cumulative work, current verification, and closure relative to direct actor-authored exact work?",
+  "unit_of_analysis": "complete_pressure_to_work_to_effect_to_check_to_repair_to_recheck_to_closure_trajectory",
+  "configurations": [
+    {
+      "configuration_id": "W0_DIRECT_WORK",
+      "semantic_provider": false,
+      "exact_evidence_work": "ordinary_actor_upsert_source_slot"
+    },
+    {
+      "configuration_id": "L1_LOCAL_DELTA",
+      "semantic_provider": true,
+      "exact_evidence_work": "source_local_delta_mechanically_merged_by_source_and_version"
+    }
+  ],
+  "common_functions": [
+    "actor_selected_exact_ingress",
+    "exact_external_custody",
+    "positive_savings_first_fit_relief",
+    "exact_reopen",
+    "exact_source_version_register",
+    "incremental_decision_artifact",
+    "candidate_bound_effects",
+    "candidate_bound_current_checks",
+    "repair_and_recheck",
+    "closure_proposal",
+    "independent_quality_and_readiness"
+  ],
+  "treatment_authority": {
+    "input": "only newly externalized exact source observations plus prior slots for those same sources",
+    "output": "one bounded Markdown block per current source",
+    "merge": "replace only the exact source slot; preserve all unrelated slots",
+    "global_state_replacement": false,
+    "readiness_or_submission_authority": false
+  },
+  "source_slot_parity": {
+    "tokenizer": "frozen_model_tokenizer",
+    "maximum_tokens_per_source_slot": 650,
+    "exact_input_result_provenance_required": true,
+    "unobserved_source_work_rejected": true,
+    "unrelated_slot_preservation": "mechanical_and_byte_exact"
+  },
+  "offline_geometry": {
+    "base_prompt_tokens": 3049,
+    "source_corpus_tokens": 23730,
+    "source_corpus_bytes": 66457,
+    "largest_full_pair_result_tokens": 3634,
+    "all_full_pairs_admissible": true,
+    "prospective_pressure_step": 6,
+    "prospective_overflow_tokens": 2636,
+    "prospective_relief_result_ids": ["RESULT-001"],
+    "prospective_relief_prompt_tokens": 20774
+  },
+  "actor_budget": {
+    "preconstruction_calls": 32,
+    "postconstruction_calls": 10,
+    "same_for_both_configurations": true
+  },
+  "maintenance_budget": {
+    "L1_maximum_calls": 12,
+    "W0_calls": 0,
+    "additional_system_cost": true
+  },
+  "primary_outcomes": [
+    "source_relationship_fidelity",
+    "candidate_bound_artifact_quality",
+    "current_effect_and_check_uptake",
+    "appropriate_repair_and_closure",
+    "independently_adjudicated_useful_completion"
+  ],
+  "next_live_gate": "common_ordinary_pressure_screen",
+  "measured_continuation_authorized": false,
+  "gpu_authorized": false
+}
