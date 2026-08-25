@@ -56,7 +56,7 @@ class MeridianSourceDeltaQualificationTests(unittest.TestCase):
         self.assertFalse(contract["measured_continuation_authorized"])
         self.assertFalse(contract["gpu_authorized"])
 
-    def test_runner_and_authorization_request_are_frozen_and_inert(self) -> None:
+    def test_runner_and_authorization_request_match_completed_single_run(self) -> None:
         request = json.loads(
             (ROOT / "MERIDIAN_SOURCE_DELTA_AUTHORIZATION_REQUEST.json").read_text(
                 encoding="utf-8"
@@ -66,9 +66,9 @@ class MeridianSourceDeltaQualificationTests(unittest.TestCase):
         self.assertEqual(runner.SCOPE, request["scope"])
         self.assertEqual(runner.MAX_CALLS, request["maximum_model_calls"])
         self.assertFalse(request["authorized"])
-        self.assertFalse(
-            (ROOT / "qualification_runs" / runner.RUN_ID).exists()
-        )
+        run_root = ROOT / "qualification_runs" / runner.RUN_ID
+        self.assertTrue(run_root.exists())
+        self.assertEqual(1, len(list(run_root.glob("calls/*/provider_attempt"))))
         source = Path(runner.__file__).read_text(encoding="utf-8")
         self.assertIn("validate_source_delta", source)
         self.assertIn('"pending_offline"', source)

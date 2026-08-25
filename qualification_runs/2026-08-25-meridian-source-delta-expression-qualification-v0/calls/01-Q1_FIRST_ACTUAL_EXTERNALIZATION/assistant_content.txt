@@ -1,0 +1,31 @@
+# Source-local evidence delta
+
+## SOURCE AXIOM
+VERSION 968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775
+
+### REQUIREMENTS
+Q01: Establishes distinct authority boundaries for quality hold/release, recall initiation, regulatory notice, and procurement execution. Q10: Defines handoff validity requirements for recovery candidates, affected lots, and assay plans. Q12: Mandates separation of detection, recommendation, authorization, execution, verification, and closure functions.
+
+### FINDINGS
+Quality unit holds/releases lots; incident commander coordinates recovery; regulator receives mandatory notice; procurement executes approved supplier choices [AXIOM]. Field recall requires quality-unit recommendation plus accountable-executive authorization. Emergency purchasing does not waive validated process, sterility, labeling, or traceability controls [AXIOM]. Shift handoffs are valid only when receiving owners acknowledge identical recovery-candidate, affected-lot, and assay-plan versions; unacknowledged handoffs block closure [AXIOM]. Operational evidence (AUTH-000 to AUTH-047) shows approval status across quality-unit, incident-commander, regulator, and procurement roles with revisions r2-r4. Records AUTH-000, AUTH-013, AUTH-026, AUTH-039 show hold status; others current [AXIOM].
+
+### QUALIFICATIONS AND CONFLICTS
+Hazard evidence from BRAMBLE informs hold/release but does not create legal authority [AXIOM]. Supplier or model-authored evidence slots are advisory only, never recall or release authority [AXIOM]. Emergency purchasing authority explicitly excludes waiving validated controls [AXIOM]. No conflicts observed within AXIOM bytes; role separations remain consistent across all 48 records.
+
+### UNKNOWNS AND REOPEN CONDITIONS
+Unspecified: exact criteria triggering "hold" vs "current" status transitions for AUTH records; specific evidence required to retire each hold state per decision constraints [AXIOM]. Reopen if: any handoff lacks version acknowledgment of recovery-candidate, affected-lot, or assay-plan; if quality-unit release decision is substituted by other roles; if emergency purchasing waives validated controls.
+
+## SOURCE BRAMBLE
+VERSION b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4
+
+### REQUIREMENTS
+Q02: Defines hazard thresholds, lot/line holds, investigation triggers, and release rules. Q11: Specifies sampling context for M41 samples and assay-drift probability interpretation. Q12: Requires preservation of exact units and meanings for thresholds, observed values, and probabilities.
+
+### FINDINGS
+Alert threshold: 0.25 EU/mL; rejection limit: 0.50 EU/mL [BRAMBLE]. Two validated M41 samples measured 0.31 and 0.34 EU/mL; lot remains held during open water-loop investigation despite values below rejection limit [BRAMBLE]. Stability modeling assigns 41 percent probability of assay drift after eighteen hours; this is not humidity, defect prevalence, or readiness score [BRAMBLE]. Operational evidence (QUAL-000 to QUAL-047) spans lot-M41, line-A, line-B, water-loop across revisions r2-r4. Hold status appears in QUAL-000 (lot-M41, 0.2 EU/mL), QUAL-013 (line-A, 3.1 EU/mL), QUAL-026 (line-B, 3.0 EU/mL), QUAL-039 (water-loop, 2.8 EU/mL) [BRAMBLE].
+
+### QUALIFICATIONS AND CONFLICTS
+Values and units must not be converted into hours, percent, or temperature [BRAMBLE]. HEATH defines valid confirmation/release rounds; DRIFT and EMBER changes invalidate prior line samples for changed candidates [BRAMBLE]. NORTH identified prior mismatched lot revisions in particulate/endotoxin reporting [BRAMBLE]. No internal conflicts; thresholds remain distinct from observed values.
+
+### UNKNOWNS AND REOPEN CONDITIONS
+Unspecified: exact mechanism linking 41% drift probability to hold duration; specific conditions starting, holding, expanding, or retiring lot/line controls per decision constraints [BRAMBLE]. Reopen if: any water-loop investigation finding changes; if DRIFT or EMBER candidate versions change; if M41 sample values approach rejection limit (0.50 EU/mL); if HEATH confirmation rounds are invalidated.

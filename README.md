@@ -1,12 +1,12 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the authorized treatment-free Meridian pressure screen qualified an
-authentic common fork after six valid batch reads. Ten complete sources crossed
-actor boundaries; pending KNOLL+LOOM raised the ordinary prompt to 23,628
-tokens, 2,636 above the allowance. Replacing only `RESULT-001` restores
-feasibility at 20,774. Exact replay, token, activation, seal, authorization,
-and runtime-release audit passed. No treatment, candidate change, check,
-submission, retry, or run failure occurred.
+Status: the one authorized Meridian source-local expression call is complete,
+sealed, and audited. It finished normally and produced exactly the intended
+AXIOM and BRAMBLE blocks within all token limits. Material-safety review passed,
+but the frozen transport validator rejected mentions of DRIFT, EMBER, HEATH,
+and NORTH. Those four identities occur literally inside exact BRAMBLE as
+objects of BRAMBLE-owned relationships. The qualification therefore failed,
+and no W0/L1 continuation is authorized.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -24,12 +24,12 @@ also pass provider-free evidence-to-work-to-check-to-repair-to-recheck-to-
 closure loops. Every source slot is input-result-bound and both paths enforce
 the same 650-token slot ceiling.
 
-This establishes live pressure, not semantic utility. One boundary-native L1
-expression case is now frozen over exact `RESULT-001` (AXIOM+BRAMBLE), the
-result first-fit actually externalizes. It is a one-call transport and material-
-safety gate with one attempt and zero retries. No maintenance expression call
-or measured W0/L1 continuation is authorized until that new freeze is committed
-and separately approved.
+The common live pressure remains valid. The expression result adds a distinct
+interaction finding: source-local claim ownership is not lexical isolation
+from every related source identity. A many-to-many source can faithfully state
+relationships to other sources while remaining provenance-bound to its own
+exact bytes. The frozen validator could not represent that distinction. The
+output is not retried, repaired, or regraded; this exact L1 route is closed.
 
 ## Prior completed line
 
@@ -194,7 +194,13 @@ architecture promotion.
 - `MERIDIAN_SOURCE_DELTA_QUALIFICATION_PREFLIGHT.json` — exact 4,234-token
   prompt geometry and binding receipt
 - `MERIDIAN_SOURCE_DELTA_AUTHORIZATION_REQUEST.json` — inert request for one
-  future commit-bound model call
+  commit-bound model call; that call is now complete
+- `MERIDIAN_SOURCE_DELTA_QUALIFICATION_RESULT.md` — literal transport failure,
+  passed material-safety review, systems interpretation, and stop disposition
+- `MERIDIAN_SOURCE_DELTA_QUALIFICATION_AUDIT.json` — independent seal, binding,
+  prompt, output, validation, usage, adjudication, and release audit
+- `MERIDIAN_SOURCE_DELTA_MATERIAL_SAFETY_ADJUDICATION.json` — exact output/source
+  comparison under the prospectively frozen safety criteria
 - `task_meridian/` — fresh exact task, opaque source world, evaluator, candidate,
   catalogs, and custody lock
 - `STAGE0_PLAN.md` — prospective scientific and execution contract
