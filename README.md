@@ -32,7 +32,7 @@ actor-facing catalog; it is an audit rule, not a task-solving hint.
 ## Fresh task and exact world
 
 The actor must produce a Cedar Valley wildfire-evacuation evidence ledger and
-a 1,500–2,100-word operations decision. Sixteen deterministic sources span 11
+a 1,500–2,100-word operations decision. Sixteen deterministic sources span 12
 domains: authority, hazard, demand, transport, shelter/care, communications,
 continuity, community, data, verification, economics, and governance (hazard
 and two other domains have multiple sources). Cross-source constraints cover
