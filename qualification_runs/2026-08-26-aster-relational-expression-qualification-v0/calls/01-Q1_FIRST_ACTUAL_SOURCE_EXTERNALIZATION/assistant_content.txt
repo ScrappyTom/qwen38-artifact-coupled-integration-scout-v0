@@ -1,0 +1,44 @@
+# Provenance-local relational delta
+## CLAIM ANCHOR-001
+SLOT_SOURCE: ANCHOR
+SOURCE_VERSION: af665fec52c48ca6a526467d4b189a617b121f8fa56d4e64c50305493a242a07
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_QUOTE: The incident commander may isolate traffic and approve a recovery sequence.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: ANCHOR states that the incident commander may isolate traffic and approve a recovery sequence.
+
+## CLAIM ANCHOR-002
+SLOT_SOURCE: ANCHOR
+SOURCE_VERSION: af665fec52c48ca6a526467d4b189a617b121f8fa56d4e64c50305493a242a07
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_QUOTE: Only the payment risk owner may authorize customer-traffic restoration, and only after a current independent verification result; an engineering mutation or green format check is not authorization.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: ANCHOR states that only the payment risk owner may authorize customer-traffic restoration, and only after a current independent verification result; an engineering mutation or green format check is not authorization.
+
+## CLAIM BRIDGE-001
+SLOT_SOURCE: BRIDGE
+SOURCE_VERSION: bab58815205c2583aeb82136eb64ec56536503e70a941895d7b8f0c974bc0b3a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_QUOTE: Current cross-region ledger replication lag is 1,800 milliseconds at p95.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: BRIDGE states that current cross-region ledger replication lag is 1,800 milliseconds at p95.
+
+## CLAIM BRIDGE-002
+SLOT_SOURCE: BRIDGE
+SOURCE_VERSION: bab58815205c2583aeb82136eb64ec56536503e70a941895d7b8f0c974bc0b3a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_QUOTE: The recovery point objective is fifteen seconds and the recovery time objective is forty-five minutes.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: BRIDGE states that the recovery point objective is fifteen seconds and the recovery time objective is forty-five minutes.

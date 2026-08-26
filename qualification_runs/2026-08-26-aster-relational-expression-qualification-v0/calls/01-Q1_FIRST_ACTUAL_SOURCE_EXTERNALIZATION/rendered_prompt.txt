@@ -1,0 +1,229 @@
+<|im_start|>system
+Return only the bounded provenance-local relational delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in a bounded semantic-maintenance mode. Produce only a replacement provenance-local delta for the newly externalized exact sources. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Provenance-local relational delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_QUOTE: <one exact complete single line copied from that source inside the result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs literally present in the evidence span and statement
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+Emit 1..4 claims per newly externalized source and at most 8 total. Total output must be <= 1500 tokenizer tokens and each source's claim blocks <= 650. Copy EVIDENCE_QUOTE exactly; the host uniquely resolves it inside the delivered range and derives line numbers and SHA-256. Do not emit derived line or hash fields. A source-reported fact cannot name another source. A source-reported relationship may name other source objects when the exact owner-source line names them, but it does not assert their authoritative current state or mutate their slots. Do not emit a cross-source derived claim; the ordinary actor must place synthesis in exact task work with all supporting citations.
+
+NEW SOURCE VERSIONS
+ANCHOR: af665fec52c48ca6a526467d4b189a617b121f8fa56d4e64c50305493a242a07
+BRIDGE: bab58815205c2583aeb82136eb64ec56536503e70a941895d7b8f0c974bc0b3a
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Provenance-local relational delta
+
+EMPTY
+
+
+AUTHORITATIVE TASK (for relevance only; never use it as evidence)
+# Authoritative task — Aster multi-region payment recovery decision
+
+Aster Payments must recover a multi-region transaction platform after ledger,
+queue, access, and external-rail disturbances. Build and maintain the exact
+candidate files, then propose submission only when the package is genuinely
+ready for independent review.
+
+The world contains sixteen exact, versioned source objects with opaque IDs.
+Catalog titles help navigation but do not supply findings. Read the bytes needed
+for the work and cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a compact task-native evidence and
+decision matrix. Preserve established source-bound facts, explicit
+cross-source dependencies, conflicts, unknowns, candidate currency, and the
+exact source citations needed to review them. This work is non-authoritative.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,500–2,100-word Aster
+Payment Recovery Decision with exactly the declared section headings. Use at
+least twelve distinct source IDs and integrate—not merely list—the governing
+relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — authority for isolation, repair, verification, traffic restoration, and closure;
+- Q02 — ledger replication, consistency, RPO/RTO, schema, writer, and settlement bindings;
+- Q03 — idempotency scopes, retry windows, duplicate controls, and queue identity;
+- Q04 — queue drain, event ordering, traffic interaction, pause/resume, and retirement;
+- Q05 — shared capacity, staged traffic ramp, dependency headroom, and current load evidence;
+- Q06 — settlement cutoff, prefunding, rail fallback, finality, and same-day contingencies;
+- Q07 — fraud thresholds, manual review, customer state, communications, and privacy;
+- Q08 — key/token status, break-glass access, audit integrity, and retention;
+- Q09 — regulatory determination, reporting clock, aggregate loss, and evidence custody;
+- Q10 — telemetry coverage, alerts versus holds, sampling, reconciliation, and uncertainty;
+- Q11 — candidate lineage, rollback compatibility, effect uptake, current check, repair, and recheck;
+- Q12 — blockers, falsifiers, independent readiness, accepted residual risk, and closure evidence.
+
+## Relationship rules
+
+Preserve milliseconds versus seconds, transactions per second versus per
+minute, percentages versus probabilities, availability versus payment success,
+targets versus observations, component ratings versus shared usable capacity,
+sample coverage versus loss rate, and mechanical checks versus independent
+readiness. A candidate, schema, writer route, queue policy, service limit, key
+set, role, rail route, settlement cutoff, or sample-plan effect can make earlier
+evidence stale.
+
+The decision must state owners, inputs, resources, timing, dependencies,
+effects, observations, contingencies, rollback and retirement conditions, and
+evidence that would falsify important claims. Do not infer that a green format
+check, provenance record, mutation, or submission establishes readiness.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-001 ---
+{"object_id":"batch:ANCHOR:1-64+BRIDGE:1-64","object_version":"fd6c162ab871be76ed50c742f8c2fae1dcdb48e7eef975914577fdeed16a94c0","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"ANCHOR","start_line":1},{"end_line":64,"source_id":"BRIDGE","start_line":1}],"total_source_bytes":8791}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"ANCHOR","source_path":"sources/ANCHOR_AUTHORITY.md","source_sha256":"af665fec52c48ca6a526467d4b189a617b121f8fa56d4e64c50305493a242a07","source_size_bytes":4011,"start_line":1}
+--- exact source range ---
+# Incident authority, release control, and accountable closure
+
+## Frozen findings
+
+The incident commander may isolate traffic and approve a recovery sequence. Only the payment risk owner may authorize customer-traffic restoration, and only after a current independent verification result; an engineering mutation or green format check is not authorization.
+Emergency vendor purchasing does not waive access review, ledger consistency, idempotency, settlement, or regulatory controls. Closure requires accountable-executive acceptance of every declared blocker and residual risk.
+A handoff is valid only when the receiving owner acknowledges the same recovery-candidate, ledger-schema, queue-policy, and key-set versions. An unacknowledged version mismatch blocks closure.
+
+## Governing relationships
+
+BRIDGE and CIRRUS supply ledger and retry evidence but cannot authorize restoration. PRISM supplies independent readiness findings but does not execute the release.
+NOVA owns rollback mechanics; ANCHOR retains authority separation among detection, recommendation, authorization, execution, verification, and closure.
+
+## Operational evidence
+
+| record | object/region | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUTH-000 | incident-command | v3 | 1.0 | approval | superseded |
+| AUTH-001 | risk-owner | v3 | 2.1 | approval | current |
+| AUTH-002 | settlement-owner | v3 | 3.2 | approval | current |
+| AUTH-003 | regulator | v3 | 1.4 | approval | current |
+| AUTH-004 | incident-command | v3 | 2.5 | approval | current |
+| AUTH-005 | risk-owner | v3 | 3.6 | approval | current |
+| AUTH-006 | settlement-owner | v3 | 1.8 | approval | current |
+| AUTH-007 | regulator | v3 | 2.9 | approval | current |
+| AUTH-008 | incident-command | v3 | 1.1 | approval | current |
+| AUTH-009 | risk-owner | v3 | 2.2 | approval | current |
+| AUTH-010 | settlement-owner | v3 | 3.3 | approval | current |
+| AUTH-011 | regulator | v3 | 1.5 | approval | current |
+| AUTH-012 | incident-command | v3 | 2.6 | approval | current |
+| AUTH-013 | risk-owner | v3 | 3.7 | approval | current |
+| AUTH-014 | settlement-owner | v4 | 1.9 | approval | current |
+| AUTH-015 | regulator | v4 | 3.0 | approval | current |
+| AUTH-016 | incident-command | v4 | 1.2 | approval | current |
+| AUTH-017 | risk-owner | v4 | 2.3 | approval | superseded |
+| AUTH-018 | settlement-owner | v4 | 3.4 | approval | current |
+| AUTH-019 | regulator | v4 | 1.6 | approval | current |
+| AUTH-020 | incident-command | v4 | 2.7 | approval | current |
+| AUTH-021 | risk-owner | v4 | 3.8 | approval | current |
+| AUTH-022 | settlement-owner | v4 | 2.0 | approval | current |
+| AUTH-023 | regulator | v4 | 3.1 | approval | current |
+| AUTH-024 | incident-command | v4 | 1.3 | approval | current |
+| AUTH-025 | risk-owner | v4 | 2.4 | approval | current |
+| AUTH-026 | settlement-owner | v4 | 3.5 | approval | current |
+| AUTH-027 | regulator | v4 | 1.7 | approval | current |
+| AUTH-028 | incident-command | v5 | 2.8 | approval | current |
+| AUTH-029 | risk-owner | v5 | 1.0 | approval | current |
+| AUTH-030 | settlement-owner | v5 | 2.1 | approval | current |
+| AUTH-031 | regulator | v5 | 3.2 | approval | current |
+| AUTH-032 | incident-command | v5 | 1.4 | approval | current |
+| AUTH-033 | risk-owner | v5 | 2.5 | approval | current |
+| AUTH-034 | settlement-owner | v5 | 3.6 | approval | superseded |
+| AUTH-035 | regulator | v5 | 1.8 | approval | current |
+| AUTH-036 | incident-command | v5 | 2.9 | approval | current |
+| AUTH-037 | risk-owner | v5 | 1.1 | approval | current |
+| AUTH-038 | settlement-owner | v5 | 2.2 | approval | current |
+| AUTH-039 | regulator | v5 | 3.3 | approval | current |
+| AUTH-040 | incident-command | v5 | 1.5 | approval | current |
+| AUTH-041 | risk-owner | v5 | 2.6 | approval | current |
+
+## Decision constraints
+
+Name who may isolate, repair, verify, restore, and close, with the exact evidence each decision consumes.
+Treat semantic records and candidate mutations as non-authoritative work products.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"BRIDGE","source_path":"sources/BRIDGE_LEDGER.md","source_sha256":"bab58815205c2583aeb82136eb64ec56536503e70a941895d7b8f0c974bc0b3a","source_size_bytes":4323,"start_line":1}
+--- exact source range ---
+# Ledger replication, consistency, and recovery-point evidence
+
+## Frozen findings
+
+Current cross-region ledger replication lag is 1,800 milliseconds at p95. The traffic-restoration block is 2.5 seconds sustained for three five-minute windows; 1,800 ms must not be converted to 1,800 seconds or treated as zero lag.
+The recovery point objective is fifteen seconds and the recovery time objective is forty-five minutes. Those are different controls and neither is the observed replication lag.
+A schema or writer-route change makes prior consistency and replay checks stale for the changed candidate. Current verification must bind the candidate, schema, writer, and settlement-log versions.
+
+## Governing relationships
+
+CIRRUS retry safety depends on BRIDGE ledger uniqueness and DUSK queue position. FORGE settlement release consumes a BRIDGE-consistent cutoff.
+NOVA rollback is permitted only while the old schema remains readable and a current BRIDGE consistency check passes for the rollback candidate.
+
+## Operational evidence
+
+| record | object/region | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| LEDG-000 | east-writer | v3 | 1800.0 | milliseconds-p95 | superseded |
+| LEDG-001 | west-replica | v3 | 1801.1 | milliseconds-p95 | current |
+| LEDG-002 | settlement-log | v3 | 1802.2 | milliseconds-p95 | current |
+| LEDG-003 | balance-view | v3 | 1800.4 | milliseconds-p95 | current |
+| LEDG-004 | east-writer | v3 | 1801.5 | milliseconds-p95 | current |
+| LEDG-005 | west-replica | v3 | 1802.6 | milliseconds-p95 | current |
+| LEDG-006 | settlement-log | v3 | 1800.8 | milliseconds-p95 | current |
+| LEDG-007 | balance-view | v3 | 1801.9 | milliseconds-p95 | current |
+| LEDG-008 | east-writer | v3 | 1800.1 | milliseconds-p95 | current |
+| LEDG-009 | west-replica | v3 | 1801.2 | milliseconds-p95 | current |
+| LEDG-010 | settlement-log | v3 | 1802.3 | milliseconds-p95 | current |
+| LEDG-011 | balance-view | v3 | 1800.5 | milliseconds-p95 | current |
+| LEDG-012 | east-writer | v3 | 1801.6 | milliseconds-p95 | current |
+| LEDG-013 | west-replica | v3 | 1802.7 | milliseconds-p95 | current |
+| LEDG-014 | settlement-log | v4 | 1800.9 | milliseconds-p95 | current |
+| LEDG-015 | balance-view | v4 | 1802.0 | milliseconds-p95 | current |
+| LEDG-016 | east-writer | v4 | 1800.2 | milliseconds-p95 | current |
+| LEDG-017 | west-replica | v4 | 1801.3 | milliseconds-p95 | superseded |
+| LEDG-018 | settlement-log | v4 | 1802.4 | milliseconds-p95 | current |
+| LEDG-019 | balance-view | v4 | 1800.6 | milliseconds-p95 | current |
+| LEDG-020 | east-writer | v4 | 1801.7 | milliseconds-p95 | current |
+| LEDG-021 | west-replica | v4 | 1802.8 | milliseconds-p95 | current |
+| LEDG-022 | settlement-log | v4 | 1801.0 | milliseconds-p95 | current |
+| LEDG-023 | balance-view | v4 | 1802.1 | milliseconds-p95 | current |
+| LEDG-024 | east-writer | v4 | 1800.3 | milliseconds-p95 | current |
+| LEDG-025 | west-replica | v4 | 1801.4 | milliseconds-p95 | current |
+| LEDG-026 | settlement-log | v4 | 1802.5 | milliseconds-p95 | current |
+| LEDG-027 | balance-view | v4 | 1800.7 | milliseconds-p95 | current |
+| LEDG-028 | east-writer | v5 | 1801.8 | milliseconds-p95 | current |
+| LEDG-029 | west-replica | v5 | 1800.0 | milliseconds-p95 | current |
+| LEDG-030 | settlement-log | v5 | 1801.1 | milliseconds-p95 | current |
+| LEDG-031 | balance-view | v5 | 1802.2 | milliseconds-p95 | current |
+| LEDG-032 | east-writer | v5 | 1800.4 | milliseconds-p95 | current |
+| LEDG-033 | west-replica | v5 | 1801.5 | milliseconds-p95 | current |
+| LEDG-034 | settlement-log | v5 | 1802.6 | milliseconds-p95 | superseded |
+| LEDG-035 | balance-view | v5 | 1800.8 | milliseconds-p95 | current |
+| LEDG-036 | east-writer | v5 | 1801.9 | milliseconds-p95 | current |
+| LEDG-037 | west-replica | v5 | 1800.1 | milliseconds-p95 | current |
+| LEDG-038 | settlement-log | v5 | 1801.2 | milliseconds-p95 | current |
+| LEDG-039 | balance-view | v5 | 1802.3 | milliseconds-p95 | current |
+| LEDG-040 | east-writer | v5 | 1800.5 | milliseconds-p95 | current |
+| LEDG-041 | west-replica | v5 | 1801.6 | milliseconds-p95 | current |
+
+## Decision constraints
+
+Preserve milliseconds, seconds, the three-window rule, RPO, RTO, and candidate currency.
+Distinguish replicated bytes, consistent balances, and authority to restore traffic.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

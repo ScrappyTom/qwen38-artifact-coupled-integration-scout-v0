@@ -2,8 +2,8 @@
 
 Date: 2026-08-26
 
-Status: frozen offline after authentic pressure; one live expression call
-requires separate exact commit-bound authorization; W0/L1 continuation remains
+Status: completed after one separately authorized call; raw semantic material
+was locally safe, exact-line transport failed, and W0/L1 continuation remains
 unauthorized
 
 ## Why this exact case
@@ -45,8 +45,10 @@ authentic source-externalization boundary. It does not establish persistence,
 actor uptake, substitution for exact recovery, artifact benefit, readiness, or
 positive economics.
 
-Failing closes this exact Aster carrier route at this boundary. There is no
-same-boundary prompt, schema, budget, allowlist, or retry ladder.
+The observed call failed and therefore closes this exact Aster carrier route at
+this boundary. There is no same-boundary prompt, schema, budget, allowlist, or
+retry ladder. See `ASTER_RELATIONAL_EXPRESSION_QUALIFICATION_RESULT.md`.
 
-The complete W0/L1 continuation remains a separately frozen and authorized
-whole-system experiment even if this one call passes.
+The complete W0/L1 continuation would have required a separate freeze and
+authorization even if this call had passed. Because the gate failed, that
+continuation remains closed.

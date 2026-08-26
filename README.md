@@ -3,11 +3,13 @@
 Status: the exact Meridian route remains closed. The E63 no-GPU audit qualifies
 a minimal apparatus distinction among source-slot ownership, exact evidence,
 relationship referents, task-native derived work, and version currentness. The
-fresh Aster payment-recovery pressure screen has now reached an authentic,
-actor-selected interaction boundary after six valid two-source reads. Exact
-first-fit relief externalizes `RESULT-001` (ANCHOR + BRIDGE) and makes the
-pending KELP + LATTICE observation deliverable. Live relational expression,
-persistence, and W0/L1 utility remain unmeasured and unauthorized.
+fresh Aster payment-recovery screen reached an authentic actor-selected
+pressure boundary after six valid two-source reads. The separately authorized
+one-call E66 expression gate is now complete: Qwen emitted four bounded,
+source/version-bound and semantically safe raw facts, but all four copied
+sentence substrings rather than the frozen complete source lines. Transport
+therefore admitted 0/4 claims and the overall qualification failed. No retry,
+repair, persistence, actor-utility call, or W0/L1 continuation occurred.
 
 Aster deliberately does not repair Meridian. Both future arms share the same
 ordinary actor-owned evidence matrix, incremental decision sections, exact
@@ -21,10 +23,11 @@ The fresh sixteen-source Aster world is 20,993 tokenizer tokens and 60,140
 bytes. Every permitted full single and pair fits. The live actor reached 21,787
 prospective prompt tokens at its sixth pair, 795 over the 20,992-token prompt
 allowance. Externalizing only `RESULT-001` restores 18,951 tokens and 2,041
-tokens of headroom. The six calls consumed 66,362 serialized tokens; every
-action parsed and no treatment occurred. The next eligible live operation is
-only a separately authorized one-call expression qualification over the exact
-observed ANCHOR/BRIDGE externalization. No measured continuation is included.
+tokens of headroom. The six-call screen consumed 66,362 serialized tokens; the
+expression gate then consumed one further call and 5,136 serialized tokens.
+The gate's frozen stop rule closes this exact Aster carrier at this boundary.
+No measured continuation is authorized and no automatic live successor is
+selected.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -224,7 +227,13 @@ architecture promotion.
 - `ASTER_RELATIONAL_EXPRESSION_PREFLIGHT.json` — exact 4,428-token prompt and
   18,860-token completion-headroom receipt; zero model calls
 - `ASTER_RELATIONAL_EXPRESSION_AUTHORIZATION_REQUEST.json` — inert request for
-  one future commit-bound model call; measured continuation excluded
+  the now-completed one-call authorization; measured continuation excluded
+- `ASTER_RELATIONAL_EXPRESSION_QUALIFICATION_RESULT.md` — exact four-claim raw
+  output, 0/4 admission, semantic-safety review, and route stop
+- `ASTER_RELATIONAL_EXPRESSION_QUALIFICATION_AUDIT.json` — independent seal,
+  prompt, output, transport, usage, authorization, and release audit
+- `ASTER_RELATIONAL_EXPRESSION_MATERIAL_SAFETY_ADJUDICATION.json` — frozen-source
+  comparison separating safe raw meaning from failed claim admission
 - `task_aster/` — fresh exact payment-recovery task, opaque relation-rich
   source world, evaluator, candidate, catalogs, and custody lock
 

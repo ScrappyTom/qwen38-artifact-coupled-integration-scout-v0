@@ -64,7 +64,7 @@ class AsterRelationalExpressionFreezeTests(unittest.TestCase):
         self.assertFalse(preflight["gpu_authorized"])
         self.assertFalse(preflight["measured_continuation_authorized"])
 
-    def test_contract_request_and_runner_freeze_one_call_only(self) -> None:
+    def test_contract_request_and_completed_runner_are_one_call_only(self) -> None:
         contract = json.loads(
             (
                 ROOT / "ASTER_RELATIONAL_EXPRESSION_QUALIFICATION_CONTRACT.json"
@@ -86,7 +86,13 @@ class AsterRelationalExpressionFreezeTests(unittest.TestCase):
         self.assertFalse(contract["measured_continuation_authorized"])
         self.assertFalse(request["authorized"])
         self.assertFalse(request["measured_continuation_included"])
-        self.assertFalse((ROOT / "qualification_runs" / runner.RUN_ID).exists())
+        run_root = ROOT / "qualification_runs" / runner.RUN_ID
+        self.assertTrue(run_root.is_dir())
+        result = json.loads(
+            (run_root / "QUALIFICATION_RESULT.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(1, result["model_calls"])
+        self.assertFalse(result["measured_continuation_authorized"])
 
     def test_safety_contract_is_source_bound_and_non_authorizing(self) -> None:
         safety = json.loads(
