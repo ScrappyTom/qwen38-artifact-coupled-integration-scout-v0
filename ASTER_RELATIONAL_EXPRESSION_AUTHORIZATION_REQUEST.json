@@ -1,0 +1,12 @@
+{
+  "schema_version": "aster-relational-expression-authorization-request-v0",
+  "authorized": false,
+  "requested_scope": "aster_relational_expression_qualification_v0",
+  "requested_run_id": "2026-08-26-aster-relational-expression-qualification-v0",
+  "requested_maximum_model_calls": 1,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "freeze_commit": null,
+  "expected_user_quote_template": "I authorize the frozen one-call Aster provenance-relational expression qualification at commit {commit}, run ID 2026-08-26-aster-relational-expression-qualification-v0: at most 1 model call, one attempt per call, zero retries.",
+  "measured_continuation_included": false
+}

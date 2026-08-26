@@ -1,0 +1,399 @@
+<|im_start|>system
+# Aster bounded payment-recovery actor
+
+You are the ordinary task actor for a frozen multi-region payment recovery
+world. Use exact source observations, exact task-native work, candidate effects,
+and current checks to produce the requested decision package. Preserve units,
+probabilities, versions, qualifications, authority, and cross-object
+relationships.
+
+Return exactly one declared JSON action object per response. Do not add prose,
+Markdown fences, a second object, or hidden reasoning. Any model-authored
+semantic register is lossy and non-authoritative. Submission is only a
+proposal; independent candidate-bound adjudication controls readiness.<|im_end|>
+<|im_start|>user
+# Authoritative task — Aster multi-region payment recovery decision
+
+Aster Payments must recover a multi-region transaction platform after ledger,
+queue, access, and external-rail disturbances. Build and maintain the exact
+candidate files, then propose submission only when the package is genuinely
+ready for independent review.
+
+The world contains sixteen exact, versioned source objects with opaque IDs.
+Catalog titles help navigation but do not supply findings. Read the bytes needed
+for the work and cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a compact task-native evidence and
+decision matrix. Preserve established source-bound facts, explicit
+cross-source dependencies, conflicts, unknowns, candidate currency, and the
+exact source citations needed to review them. This work is non-authoritative.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,500–2,100-word Aster
+Payment Recovery Decision with exactly the declared section headings. Use at
+least twelve distinct source IDs and integrate—not merely list—the governing
+relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — authority for isolation, repair, verification, traffic restoration, and closure;
+- Q02 — ledger replication, consistency, RPO/RTO, schema, writer, and settlement bindings;
+- Q03 — idempotency scopes, retry windows, duplicate controls, and queue identity;
+- Q04 — queue drain, event ordering, traffic interaction, pause/resume, and retirement;
+- Q05 — shared capacity, staged traffic ramp, dependency headroom, and current load evidence;
+- Q06 — settlement cutoff, prefunding, rail fallback, finality, and same-day contingencies;
+- Q07 — fraud thresholds, manual review, customer state, communications, and privacy;
+- Q08 — key/token status, break-glass access, audit integrity, and retention;
+- Q09 — regulatory determination, reporting clock, aggregate loss, and evidence custody;
+- Q10 — telemetry coverage, alerts versus holds, sampling, reconciliation, and uncertainty;
+- Q11 — candidate lineage, rollback compatibility, effect uptake, current check, repair, and recheck;
+- Q12 — blockers, falsifiers, independent readiness, accepted residual risk, and closure evidence.
+
+## Relationship rules
+
+Preserve milliseconds versus seconds, transactions per second versus per
+minute, percentages versus probabilities, availability versus payment success,
+targets versus observations, component ratings versus shared usable capacity,
+sample coverage versus loss rate, and mechanical checks versus independent
+readiness. A candidate, schema, writer route, queue policy, service limit, key
+set, role, rail route, settlement cutoff, or sample-plan effect can make earlier
+evidence stale.
+
+The decision must state owners, inputs, resources, timing, dependencies,
+effects, observations, contingencies, rollback and retirement conditions, and
+evidence that would falsify important claims. Do not infer that a green format
+check, provenance record, mutation, or submission establishes readiness.<|im_end|>
+<|im_start|>user
+# Action contract
+
+Return exactly one JSON object using one currently allowed action.
+
+```text
+{"action":"read_source","source_id":"ANCHOR","start_line":1,"end_line":64}
+{"action":"read_batch","requests":[{"source_id":"ANCHOR","start_line":1,"end_line":64},{"source_id":"BRIDGE","start_line":1,"end_line":64}]}
+{"action":"reopen_exact","result_id":"RESULT-001"}
+{"action":"replace_evidence_ledger","content":"complete compact task-native matrix"}
+{"action":"upsert_decision_section","heading":"Authority, scope, and recovery decision","body":"exact section body"}
+{"action":"replace_decision","content":"complete exact decision"}
+{"action":"run_check"}
+{"action":"submit"}
+```
+
+One read may contain at most 120 lines. One batch may contain one or two ranges,
+at most 160 total lines, 12,000 source bytes, and 6,500 model-visible result
+tokens. Same-source ranges may not overlap. Use exact catalog IDs and in-range
+line bounds.
+
+Both configurations have the same ordinary action surface. The treatment may
+receive separately charged provenance-local source reports after exact source
+bodies are externalized, but those reports are not source truth, task work,
+verification, or readiness authority. Cross-source synthesis belongs in the
+exact candidate and must cite all supporting sources.
+
+Checks bind to the exact candidate version. Any later candidate effect makes
+the prior check stale. Submission never self-authorizes readiness.
+
+
+# Common pre-fork action notice
+No semantic-maintenance output is present during pressure screening. Both future configurations share this ordinary action surface and exact task work.
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":64,"sha256":"af665fec52c48ca6a526467d4b189a617b121f8fa56d4e64c50305493a242a07","size_bytes":4011,"source_id":"ANCHOR","title":"Incident authority, release control, and accountable closure"},{"line_count":64,"sha256":"bab58815205c2583aeb82136eb64ec56536503e70a941895d7b8f0c974bc0b3a","size_bytes":4323,"source_id":"BRIDGE","title":"Ledger replication, consistency, and recovery-point evidence"},{"line_count":64,"sha256":"81dadb46183523e77f835d095ffa22b3e629934fd1829b3e24f686326899c1f9","size_bytes":3632,"source_id":"CIRRUS","title":"Idempotency keys, retry windows, and duplicate-payment controls"},{"line_count":64,"sha256":"cc233015a6920ee975edcd2623c2b2681c76bf31c08014de75831cd0f3d9bf8f","size_bytes":4064,"source_id":"DUSK","title":"Queue backlog, replay order, and drain constraints"},{"line_count":64,"sha256":"3991d4dc25ef2d327d356fd7f9960ee3d96c3423a25db6fdc5068a9b4b64c71e","size_bytes":3529,"source_id":"EMBER","title":"Service capacity, dependency headroom, and traffic ramps"},{"line_count":64,"sha256":"83800848a2b3281e05b3e7b550b9df0872e698db65b0ab5ad5380934b132e402","size_bytes":3472,"source_id":"FORGE","title":"Settlement cutoffs, funding, and ledger finality"},{"line_count":64,"sha256":"ec5a80fea342404bbfe9a0e61c819143ed45d65aa55be54a204e1467c3f1ec20","size_bytes":3782,"source_id":"GROVE","title":"Fraud controls, hold thresholds, and manual review capacity"},{"line_count":64,"sha256":"41b36ac861ee435e24cf545016108755ae489ba89c13e78cf6df2100e6c7092f","size_bytes":3953,"source_id":"HARBOR","title":"Customer state, merchant notices, and support continuity"},{"line_count":64,"sha256":"c19fb86c56c229813e6ba8d83674778d4b343da694ccc5c2337ccfb6e89f3b90","size_bytes":3453,"source_id":"IRIS","title":"Key rotation, privileged access, and audit evidence"},{"line_count":64,"sha256":"bd159f05ee1264dd05c9bc50250e535ab2d40cc45f4cd81c1104b37a51d24463","size_bytes":4138,"source_id":"JUNIPER","title":"External payment rails, observed availability, and fallback"},{"line_count":64,"sha256":"fe799fe8ceb9304fab2bae38bf6c23972139284aeaed1fc97f5a6cc2b544ace8","size_bytes":3323,"source_id":"KELP","title":"Incident reporting, materiality, and evidence retention"},{"line_count":64,"sha256":"c5ed9608f698b2f343b6cec37a5772d0620efa2773096ad68dfb66c77255909b","size_bytes":3853,"source_id":"LATTICE","title":"Telemetry coverage, alert thresholds, and observation quality"},{"line_count":64,"sha256":"3fab3fe1bd41b29a8c3d0140033c977dce04f5763227c79a769c4fb3e91a5682","size_bytes":3773,"source_id":"MICA","title":"Reconciliation samples, exception rates, and loss estimates"},{"line_count":64,"sha256":"f394c464a575586748f863090367143a9e47a4446ca947c100501b665a957104","size_bytes":3688,"source_id":"NOVA","title":"Rollback compatibility, candidate lineage, and recovery gates"},{"line_count":64,"sha256":"caf7205ad06691b0b92d5f4200835f59808387941cbb3a3963eff79379e89cc3","size_bytes":3490,"source_id":"ORBIT","title":"Prior recovery exercise, observed defects, and transfer limits"},{"line_count":64,"sha256":"db7744a6688df1f63dfdd804c168c7f059905becccec5c352c5d9c9442be73df","size_bytes":3656,"source_id":"PRISM","title":"Independent readiness review, blockers, and falsifiers"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"e5af16cba812e1b73e8153b3ff67ee40f61a82b97f9062a9e8ef5b64f5051836","candidate_version":"candidate-v000:e5af16cba812e1b73e8153b3ff67ee40f61a82b97f9062a9e8ef5b64f5051836","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"d752da6ccc70b1e0c1e40adbe2f541928553b5b3148ff389477521f9d0e9773d","EVIDENCE_INTEGRATION_LEDGER.md":"5bb4fa9aa65786a866c15ffc2f2ead1efdbc3df0507f7b7594e02613af037316"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Aster Evidence and Decision Matrix
+
+No evidence has been integrated yet.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Aster Payment Recovery Decision
+
+No recovery decision has been constructed yet.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"ANCHOR","start_line":1},{"end_line":64,"source_id":"BRIDGE","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:ANCHOR:1-64+BRIDGE:1-64","object_version":"fd6c162ab871be76ed50c742f8c2fae1dcdb48e7eef975914577fdeed16a94c0","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"ANCHOR","start_line":1},{"end_line":64,"source_id":"BRIDGE","start_line":1}],"total_source_bytes":8791}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"ANCHOR","source_path":"sources/ANCHOR_AUTHORITY.md","source_sha256":"af665fec52c48ca6a526467d4b189a617b121f8fa56d4e64c50305493a242a07","source_size_bytes":4011,"start_line":1}
+--- exact source range ---
+# Incident authority, release control, and accountable closure
+
+## Frozen findings
+
+The incident commander may isolate traffic and approve a recovery sequence. Only the payment risk owner may authorize customer-traffic restoration, and only after a current independent verification result; an engineering mutation or green format check is not authorization.
+Emergency vendor purchasing does not waive access review, ledger consistency, idempotency, settlement, or regulatory controls. Closure requires accountable-executive acceptance of every declared blocker and residual risk.
+A handoff is valid only when the receiving owner acknowledges the same recovery-candidate, ledger-schema, queue-policy, and key-set versions. An unacknowledged version mismatch blocks closure.
+
+## Governing relationships
+
+BRIDGE and CIRRUS supply ledger and retry evidence but cannot authorize restoration. PRISM supplies independent readiness findings but does not execute the release.
+NOVA owns rollback mechanics; ANCHOR retains authority separation among detection, recommendation, authorization, execution, verification, and closure.
+
+## Operational evidence
+
+| record | object/region | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUTH-000 | incident-command | v3 | 1.0 | approval | superseded |
+| AUTH-001 | risk-owner | v3 | 2.1 | approval | current |
+| AUTH-002 | settlement-owner | v3 | 3.2 | approval | current |
+| AUTH-003 | regulator | v3 | 1.4 | approval | current |
+| AUTH-004 | incident-command | v3 | 2.5 | approval | current |
+| AUTH-005 | risk-owner | v3 | 3.6 | approval | current |
+| AUTH-006 | settlement-owner | v3 | 1.8 | approval | current |
+| AUTH-007 | regulator | v3 | 2.9 | approval | current |
+| AUTH-008 | incident-command | v3 | 1.1 | approval | current |
+| AUTH-009 | risk-owner | v3 | 2.2 | approval | current |
+| AUTH-010 | settlement-owner | v3 | 3.3 | approval | current |
+| AUTH-011 | regulator | v3 | 1.5 | approval | current |
+| AUTH-012 | incident-command | v3 | 2.6 | approval | current |
+| AUTH-013 | risk-owner | v3 | 3.7 | approval | current |
+| AUTH-014 | settlement-owner | v4 | 1.9 | approval | current |
+| AUTH-015 | regulator | v4 | 3.0 | approval | current |
+| AUTH-016 | incident-command | v4 | 1.2 | approval | current |
+| AUTH-017 | risk-owner | v4 | 2.3 | approval | superseded |
+| AUTH-018 | settlement-owner | v4 | 3.4 | approval | current |
+| AUTH-019 | regulator | v4 | 1.6 | approval | current |
+| AUTH-020 | incident-command | v4 | 2.7 | approval | current |
+| AUTH-021 | risk-owner | v4 | 3.8 | approval | current |
+| AUTH-022 | settlement-owner | v4 | 2.0 | approval | current |
+| AUTH-023 | regulator | v4 | 3.1 | approval | current |
+| AUTH-024 | incident-command | v4 | 1.3 | approval | current |
+| AUTH-025 | risk-owner | v4 | 2.4 | approval | current |
+| AUTH-026 | settlement-owner | v4 | 3.5 | approval | current |
+| AUTH-027 | regulator | v4 | 1.7 | approval | current |
+| AUTH-028 | incident-command | v5 | 2.8 | approval | current |
+| AUTH-029 | risk-owner | v5 | 1.0 | approval | current |
+| AUTH-030 | settlement-owner | v5 | 2.1 | approval | current |
+| AUTH-031 | regulator | v5 | 3.2 | approval | current |
+| AUTH-032 | incident-command | v5 | 1.4 | approval | current |
+| AUTH-033 | risk-owner | v5 | 2.5 | approval | current |
+| AUTH-034 | settlement-owner | v5 | 3.6 | approval | superseded |
+| AUTH-035 | regulator | v5 | 1.8 | approval | current |
+| AUTH-036 | incident-command | v5 | 2.9 | approval | current |
+| AUTH-037 | risk-owner | v5 | 1.1 | approval | current |
+| AUTH-038 | settlement-owner | v5 | 2.2 | approval | current |
+| AUTH-039 | regulator | v5 | 3.3 | approval | current |
+| AUTH-040 | incident-command | v5 | 1.5 | approval | current |
+| AUTH-041 | risk-owner | v5 | 2.6 | approval | current |
+
+## Decision constraints
+
+Name who may isolate, repair, verify, restore, and close, with the exact evidence each decision consumes.
+Treat semantic records and candidate mutations as non-authoritative work products.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"BRIDGE","source_path":"sources/BRIDGE_LEDGER.md","source_sha256":"bab58815205c2583aeb82136eb64ec56536503e70a941895d7b8f0c974bc0b3a","source_size_bytes":4323,"start_line":1}
+--- exact source range ---
+# Ledger replication, consistency, and recovery-point evidence
+
+## Frozen findings
+
+Current cross-region ledger replication lag is 1,800 milliseconds at p95. The traffic-restoration block is 2.5 seconds sustained for three five-minute windows; 1,800 ms must not be converted to 1,800 seconds or treated as zero lag.
+The recovery point objective is fifteen seconds and the recovery time objective is forty-five minutes. Those are different controls and neither is the observed replication lag.
+A schema or writer-route change makes prior consistency and replay checks stale for the changed candidate. Current verification must bind the candidate, schema, writer, and settlement-log versions.
+
+## Governing relationships
+
+CIRRUS retry safety depends on BRIDGE ledger uniqueness and DUSK queue position. FORGE settlement release consumes a BRIDGE-consistent cutoff.
+NOVA rollback is permitted only while the old schema remains readable and a current BRIDGE consistency check passes for the rollback candidate.
+
+## Operational evidence
+
+| record | object/region | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| LEDG-000 | east-writer | v3 | 1800.0 | milliseconds-p95 | superseded |
+| LEDG-001 | west-replica | v3 | 1801.1 | milliseconds-p95 | current |
+| LEDG-002 | settlement-log | v3 | 1802.2 | milliseconds-p95 | current |
+| LEDG-003 | balance-view | v3 | 1800.4 | milliseconds-p95 | current |
+| LEDG-004 | east-writer | v3 | 1801.5 | milliseconds-p95 | current |
+| LEDG-005 | west-replica | v3 | 1802.6 | milliseconds-p95 | current |
+| LEDG-006 | settlement-log | v3 | 1800.8 | milliseconds-p95 | current |
+| LEDG-007 | balance-view | v3 | 1801.9 | milliseconds-p95 | current |
+| LEDG-008 | east-writer | v3 | 1800.1 | milliseconds-p95 | current |
+| LEDG-009 | west-replica | v3 | 1801.2 | milliseconds-p95 | current |
+| LEDG-010 | settlement-log | v3 | 1802.3 | milliseconds-p95 | current |
+| LEDG-011 | balance-view | v3 | 1800.5 | milliseconds-p95 | current |
+| LEDG-012 | east-writer | v3 | 1801.6 | milliseconds-p95 | current |
+| LEDG-013 | west-replica | v3 | 1802.7 | milliseconds-p95 | current |
+| LEDG-014 | settlement-log | v4 | 1800.9 | milliseconds-p95 | current |
+| LEDG-015 | balance-view | v4 | 1802.0 | milliseconds-p95 | current |
+| LEDG-016 | east-writer | v4 | 1800.2 | milliseconds-p95 | current |
+| LEDG-017 | west-replica | v4 | 1801.3 | milliseconds-p95 | superseded |
+| LEDG-018 | settlement-log | v4 | 1802.4 | milliseconds-p95 | current |
+| LEDG-019 | balance-view | v4 | 1800.6 | milliseconds-p95 | current |
+| LEDG-020 | east-writer | v4 | 1801.7 | milliseconds-p95 | current |
+| LEDG-021 | west-replica | v4 | 1802.8 | milliseconds-p95 | current |
+| LEDG-022 | settlement-log | v4 | 1801.0 | milliseconds-p95 | current |
+| LEDG-023 | balance-view | v4 | 1802.1 | milliseconds-p95 | current |
+| LEDG-024 | east-writer | v4 | 1800.3 | milliseconds-p95 | current |
+| LEDG-025 | west-replica | v4 | 1801.4 | milliseconds-p95 | current |
+| LEDG-026 | settlement-log | v4 | 1802.5 | milliseconds-p95 | current |
+| LEDG-027 | balance-view | v4 | 1800.7 | milliseconds-p95 | current |
+| LEDG-028 | east-writer | v5 | 1801.8 | milliseconds-p95 | current |
+| LEDG-029 | west-replica | v5 | 1800.0 | milliseconds-p95 | current |
+| LEDG-030 | settlement-log | v5 | 1801.1 | milliseconds-p95 | current |
+| LEDG-031 | balance-view | v5 | 1802.2 | milliseconds-p95 | current |
+| LEDG-032 | east-writer | v5 | 1800.4 | milliseconds-p95 | current |
+| LEDG-033 | west-replica | v5 | 1801.5 | milliseconds-p95 | current |
+| LEDG-034 | settlement-log | v5 | 1802.6 | milliseconds-p95 | superseded |
+| LEDG-035 | balance-view | v5 | 1800.8 | milliseconds-p95 | current |
+| LEDG-036 | east-writer | v5 | 1801.9 | milliseconds-p95 | current |
+| LEDG-037 | west-replica | v5 | 1800.1 | milliseconds-p95 | current |
+| LEDG-038 | settlement-log | v5 | 1801.2 | milliseconds-p95 | current |
+| LEDG-039 | balance-view | v5 | 1802.3 | milliseconds-p95 | current |
+| LEDG-040 | east-writer | v5 | 1800.5 | milliseconds-p95 | current |
+| LEDG-041 | west-replica | v5 | 1801.6 | milliseconds-p95 | current |
+
+## Decision constraints
+
+Preserve milliseconds, seconds, the three-window rule, RPO, RTO, and candidate currency.
+Distinguish replicated bytes, consistent balances, and authority to restore traffic.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"CIRRUS","start_line":1},{"end_line":64,"source_id":"DUSK","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:CIRRUS:1-64+DUSK:1-64","object_version":"cb6e99b10c523cf33fce9febfea3220364ddf83c7eb90188b82397df83db0bf0","result_id":"RESULT-002","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"CIRRUS","start_line":1},{"end_line":64,"source_id":"DUSK","start_line":1}],"total_source_bytes":8150}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"CIRRUS","source_path":"sources/CIRRUS_IDEMPOTENCY.md","source_sha256":"81dadb46183523e77f835d095ffa22b3e629934fd1829b3e24f686326899c1f9","source_size_bytes":3632,"start_line":1}
+--- exact source range ---
+# Idempotency keys, retry windows, and duplicate-payment controls
+
+## Frozen findings
+
+The idempotency retention window is forty-five minutes for API retries and two hours for delayed merchant acknowledgments. Neither window is a transaction timeout.
+Keys are unique only within merchant and operation scope. Reusing one key across capture and refund is unsafe even when the amount matches.
+The current duplicate-payment observation is 0.08 percent of attempted retries, not 0.08 probability and not an eight-percent customer rate.
+
+## Governing relationships
+
+CIRRUS retry release requires a BRIDGE-consistent ledger position and a DUSK queue policy that preserves the same idempotency key. GROVE fraud holds remain separate from duplicate suppression.
+NOVA rollback must retain the dedupe log for the full CIRRUS window or explicitly suspend retries.
+
+## Operational evidence
+
+| record | object/region | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| IDEM-000 | api-key | v3 | 45.0 | minutes | superseded |
+| IDEM-001 | merchant-key | v3 | 46.1 | minutes | current |
+| IDEM-002 | retry-cache | v3 | 47.2 | minutes | current |
+| IDEM-003 | dedupe-log | v3 | 45.4 | minutes | current |
+| IDEM-004 | api-key | v3 | 46.5 | minutes | current |
+| IDEM-005 | merchant-key | v3 | 47.6 | minutes | current |
+| IDEM-006 | retry-cache | v3 | 45.8 | minutes | current |
+| IDEM-007 | dedupe-log | v3 | 46.9 | minutes | current |
+| IDEM-008 | api-key | v3 | 45.1 | minutes | current |
+| IDEM-009 | merchant-key | v3 | 46.2 | minutes | current |
+| IDEM-010 | retry-cache | v3 | 47.3 | minutes | current |
+| IDEM-011 | dedupe-log | v3 | 45.5 | minutes | current |
+| IDEM-012 | api-key | v3 | 46.6 | minutes | current |
+| IDEM-013 | merchant-key | v3 | 47.7 | minutes | current |
+| IDEM-014 | retry-cache | v4 | 45.9 | minutes | current |
+| IDEM-015 | dedupe-log | v4 | 47.0 | minutes | current |
+| IDEM-016 | api-key | v4 | 45.2 | minutes | current |
+| IDEM-017 | merchant-key | v4 | 46.3 | minutes | superseded |
+| IDEM-018 | retry-cache | v4 | 47.4 | minutes | current |
+| IDEM-019 | dedupe-log | v4 | 45.6 | minutes | current |
+| IDEM-020 | api-key | v4 | 46.7 | minutes | current |
+| IDEM-021 | merchant-key | v4 | 47.8 | minutes | current |
+| IDEM-022 | retry-cache | v4 | 46.0 | minutes | current |
+| IDEM-023 | dedupe-log | v4 | 47.1 | minutes | current |
+| IDEM-024 | api-key | v4 | 45.3 | minutes | current |
+| IDEM-025 | merchant-key | v4 | 46.4 | minutes | current |
+| IDEM-026 | retry-cache | v4 | 47.5 | minutes | current |
+| IDEM-027 | dedupe-log | v4 | 45.7 | minutes | current |
+| IDEM-028 | api-key | v5 | 46.8 | minutes | current |
+| IDEM-029 | merchant-key | v5 | 45.0 | minutes | current |
+| IDEM-030 | retry-cache | v5 | 46.1 | minutes | current |
+| IDEM-031 | dedupe-log | v5 | 47.2 | minutes | current |
+| IDEM-032 | api-key | v5 | 45.4 | minutes | current |
+| IDEM-033 | merchant-key | v5 | 46.5 | minutes | current |
+| IDEM-034 | retry-cache | v5 | 47.6 | minutes | superseded |
+| IDEM-035 | dedupe-log | v5 | 45.8 | minutes | current |
+| IDEM-036 | api-key | v5 | 46.9 | minutes | current |
+| IDEM-037 | merchant-key | v5 | 45.1 | minutes | current |
+| IDEM-038 | retry-cache | v5 | 46.2 | minutes | current |
+| IDEM-039 | dedupe-log | v5 | 47.3 | minutes | current |
+| IDEM-040 | api-key | v5 | 45.5 | minutes | current |
+| IDEM-041 | merchant-key | v5 | 46.6 | minutes | current |
+
+## Decision constraints
+
+State the key scope, both retention windows, duplicate observation, and retry retirement evidence.
+Do not infer ledger consistency, fraud clearance, or restoration authority from key presence.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"DUSK","source_path":"sources/DUSK_QUEUE.md","source_sha256":"cc233015a6920ee975edcd2623c2b2681c76bf31c08014de75831cd0f3d9bf8f","source_size_bytes":4064,"start_line":1}
+--- exact source range ---
+# Queue backlog, replay order, and drain constraints
+
+## Frozen findings
+
+The durable queue contains 3.6 million pending messages. The observed safe drain rate is 1,200 messages per second while live ingress is capped at 400 per second; the rate is not messages per minute.
+Refund and reversal events must preserve account order. Webhooks may be delayed, but capture acknowledgments cannot pass an unresolved ledger write.
+The restore gate is backlog below 200,000 plus a current fifteen-minute zero-ordering-error observation. Backlog alone is not sufficient.
+
+## Governing relationships
+
+CIRRUS supplies retry identity; BRIDGE supplies ledger position; EMBER supplies capacity headroom. All three constrain DUSK replay sequencing.
+LATTICE alerts on rate and ordering, while ORBIT documents an earlier exercise that used an obsolete queue-policy version.
+
+## Operational evidence
+
+| record | object/region | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| QUE-000 | capture | v3 | 1200.0 | messages-per-second | superseded |
+| QUE-001 | refund | v3 | 1201.1 | messages-per-second | current |
+| QUE-002 | webhook | v3 | 1202.2 | messages-per-second | current |
+| QUE-003 | settlement | v3 | 1200.4 | messages-per-second | current |
+| QUE-004 | capture | v3 | 1201.5 | messages-per-second | current |
+| QUE-005 | refund | v3 | 1202.6 | messages-per-second | current |
+| QUE-006 | webhook | v3 | 1200.8 | messages-per-second | current |
+| QUE-007 | settlement | v3 | 1201.9 | messages-per-second | current |
+| QUE-008 | capture | v3 | 1200.1 | messages-per-second | current |
+| QUE-009 | refund | v3 | 1201.2 | messages-per-second | current |
+| QUE-010 | webhook | v3 | 1202.3 | messages-per-second | current |
+| QUE-011 | settlement | v3 | 1200.5 | messages-per-second | current |
+| QUE-012 | capture | v3 | 1201.6 | messages-per-second | current |
+| QUE-013 | refund | v3 | 1202.7 | messages-per-second | current |
+| QUE-014 | webhook | v4 | 1200.9 | messages-per-second | current |
+| QUE-015 | settlement | v4 | 1202.0 | messages-per-second | current |
+| QUE-016 | capture | v4 | 1200.2 | messages-per-second | current |
+| QUE-017 | refund | v4 | 1201.3 | messages-per-second | superseded |
+| QUE-018 | webhook | v4 | 1202.4 | messages-per-second | current |
+| QUE-019 | settlement | v4 | 1200.6 | messages-per-second | current |
+| QUE-020 | capture | v4 | 1201.7 | messages-per-second | current |
+| QUE-021 | refund | v4 | 1202.8 | messages-per-second | current |
+| QUE-022 | webhook | v4 | 1201.0 | messages-per-second | current |
+| QUE-023 | settlement | v4 | 1202.1 | messages-per-second | current |
+| QUE-024 | capture | v4 | 1200.3 | messages-per-second | current |
+| QUE-025 | refund | v4 | 1201.4 | messages-per-second | current |
+| QUE-026 | webhook | v4 | 1202.5 | messages-per-second | current |
+| QUE-027 | settlement | v4 | 1200.7 | messages-per-second | current |
+| QUE-028 | capture | v5 | 1201.8 | messages-per-second | current |
+| QUE-029 | refund | v5 | 1200.0 | messages-per-second | current |
+| QUE-030 | webhook | v5 | 1201.1 | messages-per-second | current |
+| QUE-031 | settlement | v5 | 1202.2 | messages-per-second | current |
+| QUE-032 | capture | v5 | 1200.4 | messages-per-second | current |
+| QUE-033 | refund | v5 | 1201.5 | messages-per-second | current |
+| QUE-034 | webhook | v5 | 1202.6 | messages-per-second | superseded |
+| QUE-035 | settlement | v5 | 1200.8 | messages-per-second | current |
+| QUE-036 | capture | v5 | 1201.9 | messages-per-second | current |
+| QUE-037 | refund | v5 | 1200.1 | messages-per-second | current |
+| QUE-038 | webhook | v5 | 1201.2 | messages-per-second | current |
+| QUE-039 | settlement | v5 | 1202.3 | messages-per-second | current |
+| QUE-040 | capture | v5 | 1200.5 | messages-per-second | current |
+| QUE-041 | refund | v5 | 1201.6 | messages-per-second | current |
+
+## Decision constraints
+
+Calculate drain opportunity using both drain and live-ingress rates and preserve event ordering.
+Name the current evidence that starts, pauses, resumes, and retires replay controls.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

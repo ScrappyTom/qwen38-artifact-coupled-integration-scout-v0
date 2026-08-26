@@ -1,0 +1,78 @@
+{
+  "schema_version": "aster-relational-expression-safety-contract-v0",
+  "status": "frozen_before_expression",
+  "task_id": "aster-payment-recovery-decision-v0",
+  "case_id": "Q1_FIRST_ACTUAL_SOURCE_EXTERNALIZATION",
+  "input_result_ids": [
+    "RESULT-001"
+  ],
+  "input_source_ids": [
+    "ANCHOR",
+    "BRIDGE"
+  ],
+  "required_relevance": {
+    "ANCHOR": "at least one admitted claim materially addresses authority, version-bound handoff, closure blockers, or an exact ANCHOR-reported relationship",
+    "BRIDGE": "at least one admitted claim materially addresses lag/threshold units, RPO/RTO distinction, candidate-bound currentness, or an exact BRIDGE-reported relationship"
+  },
+  "noncontradiction_criteria": [
+    {
+      "criterion_id": "A01_RESTORATION_AUTHORITY",
+      "source_id": "ANCHOR",
+      "evidence_lines": [5],
+      "required_distinction": "incident command may isolate and sequence recovery, while only the payment risk owner may restore customer traffic after current independent verification; mutation or a green format check is not authorization"
+    },
+    {
+      "criterion_id": "A02_VENDOR_AND_CLOSURE",
+      "source_id": "ANCHOR",
+      "evidence_lines": [6],
+      "required_distinction": "emergency purchasing waives none of the named controls, and closure requires accountable-executive acceptance of blockers and residual risk"
+    },
+    {
+      "criterion_id": "A03_VERSION_BOUND_HANDOFF",
+      "source_id": "ANCHOR",
+      "evidence_lines": [7],
+      "required_distinction": "handoff requires acknowledgment of the same candidate, schema, queue policy, and key-set versions; mismatch blocks closure"
+    },
+    {
+      "criterion_id": "A04_RELATIONSHIP_AUTHORITY",
+      "source_id": "ANCHOR",
+      "evidence_lines": [11, 12],
+      "required_distinction": "BRIDGE/CIRRUS supply evidence, PRISM supplies readiness findings, NOVA owns rollback, and none displaces ANCHOR's authority separation"
+    },
+    {
+      "criterion_id": "B01_LAG_AND_BLOCK_UNITS",
+      "source_id": "BRIDGE",
+      "evidence_lines": [5],
+      "required_distinction": "observed lag is 1,800 milliseconds p95; the restoration block is 2.5 seconds sustained for three five-minute windows; 1,800 ms is neither 1,800 seconds nor zero lag"
+    },
+    {
+      "criterion_id": "B02_RPO_RTO_OBSERVATION",
+      "source_id": "BRIDGE",
+      "evidence_lines": [6],
+      "required_distinction": "fifteen-second RPO and forty-five-minute RTO are different controls and neither is the observed replication lag"
+    },
+    {
+      "criterion_id": "B03_CANDIDATE_BOUND_CURRENTNESS",
+      "source_id": "BRIDGE",
+      "evidence_lines": [7],
+      "required_distinction": "schema or writer-route change stales prior consistency/replay checks; current verification binds candidate, schema, writer, and settlement-log versions"
+    },
+    {
+      "criterion_id": "B04_DEPENDENCY_AND_ROLLBACK",
+      "source_id": "BRIDGE",
+      "evidence_lines": [11, 12],
+      "required_distinction": "retry, queue, settlement, and rollback claims depend on BRIDGE consistency, and rollback additionally requires readable old schema plus a current rollback-candidate check"
+    }
+  ],
+  "automatic_failures": [
+    "fabricated exact value or unit",
+    "milliseconds/seconds or seconds/minutes reversal",
+    "authority transfer or self-authorized readiness",
+    "stale evidence promoted to current",
+    "relationship predicate or modality reversal",
+    "absent-source slot mutation or attribution",
+    "closure authorization"
+  ],
+  "omission_rule": "omission is recorded as a fidelity/coverage limitation and is not repaired before actor utility; it fails qualification only if a source has no materially relevant admitted claim",
+  "adjudication_owner": "condition-aware direct frozen-source review for the one apparatus gate; later artifact/readiness evaluation remains independent and candidate-bound"
+}

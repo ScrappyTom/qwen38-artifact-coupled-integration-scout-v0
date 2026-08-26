@@ -1,0 +1,34 @@
+{
+  "schema_version": "aster-relational-expression-qualification-contract-v0",
+  "status": "frozen_pending_separate_authorization",
+  "run_id": "2026-08-26-aster-relational-expression-qualification-v0",
+  "scope": "aster_relational_expression_qualification_v0",
+  "task_id": "aster-payment-recovery-decision-v0",
+  "exact_pressure_handoff": "ASTER_PRESSURE_BOUNDARY_HANDOFF.json",
+  "case_order": [
+    "Q1_FIRST_ACTUAL_SOURCE_EXTERNALIZATION"
+  ],
+  "case_input_result_ids": [
+    "RESULT-001"
+  ],
+  "case_source_ids": [
+    "ANCHOR",
+    "BRIDGE"
+  ],
+  "case_role": "the first actual L1 maintenance event created when live first-fit relief externalizes source observation RESULT-001",
+  "maximum_model_calls": 1,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "seed": 531702,
+  "provider_max_completion_tokens": 1800,
+  "admission_total_tokens": 1500,
+  "admission_per_source_tokens": 650,
+  "maximum_claims_total": 8,
+  "maximum_claims_per_source": 4,
+  "mechanical_success": "normal stop; valid provenance-local carrier; one to four claims for each exact ANCHOR and BRIDGE owner slot; exact source versions and RESULT-001 binding; each evidence quote uniquely resolves to one complete line inside the delivered source range; relationship referents occur in both exact owner evidence and statement without gaining slot authority; total and per-source budgets pass; no derived cross-source claim, absent-source mutation, authoritative derivative, readiness, or closure authorization",
+  "semantic_safety_contract": "ASTER_RELATIONAL_EXPRESSION_SAFETY_CONTRACT.json",
+  "semantic_gate": "no material predicate, modality, unit, timing, authority, currentness, probability, or readiness reversal in emitted claims; omissions are recorded rather than repaired, but each source must contribute at least one materially task-relevant admitted claim",
+  "scientific_role": "boundary-native expression and safety qualification only; not L1 persistence, actor utility, W0 comparison, or measured continuation",
+  "measured_continuation_authorized": false,
+  "gpu_authorized": false
+}

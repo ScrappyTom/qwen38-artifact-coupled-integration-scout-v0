@@ -2,10 +2,12 @@
 
 Status: the exact Meridian route remains closed. The E63 no-GPU audit qualifies
 a minimal apparatus distinction among source-slot ownership, exact evidence,
-relationship referents, task-native derived work, and version currentness. A
-fresh Aster payment-recovery Stage 0 now instantiates that distinction as a
-complete W0/L1 system design. Authentic pressure, live expression, persistence,
-and utility remain unmeasured; no provider call is authorized.
+relationship referents, task-native derived work, and version currentness. The
+fresh Aster payment-recovery pressure screen has now reached an authentic,
+actor-selected interaction boundary after six valid two-source reads. Exact
+first-fit relief externalizes `RESULT-001` (ANCHOR + BRIDGE) and makes the
+pending KELP + LATTICE observation deliverable. Live relational expression,
+persistence, and W0/L1 utility remain unmeasured and unauthorized.
 
 Aster deliberately does not repair Meridian. Both future arms share the same
 ordinary actor-owned evidence matrix, incremental decision sections, exact
@@ -16,12 +18,13 @@ objects present in exact owner evidence without mutating their slots; genuine
 multi-source synthesis remains exact candidate work with complete citations.
 
 The fresh sixteen-source Aster world is 20,993 tokenizer tokens and 60,140
-bytes. Every permitted full single and pair fits. A prospectively fixed legal
-path reaches 21,873 prompt tokens at its sixth pair; externalizing only
-`RESULT-001` restores 19,037 tokens. The first 553-token semantic register then
-fits the relieved actor packet. This is provider-free opportunity geometry,
-not authentic activation. The next eligible operation is only a separately
-authorized, treatment-free 28-call pressure screen.
+bytes. Every permitted full single and pair fits. The live actor reached 21,787
+prospective prompt tokens at its sixth pair, 795 over the 20,992-token prompt
+allowance. Externalizing only `RESULT-001` restores 18,951 tokens and 2,041
+tokens of headroom. The six calls consumed 66,362 serialized tokens; every
+action parsed and no treatment occurred. The next eligible live operation is
+only a separately authorized one-call expression qualification over the exact
+observed ANCHOR/BRIDGE externalization. No measured continuation is included.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -205,7 +208,23 @@ architecture promotion.
 - `ASTER_PRESSURE_SCREEN_CONTRACT.json` — treatment-free interaction-aligned
   pressure gate that permits prior task work and checks
 - `ASTER_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
-  future commit-bound 28-call screen
+  completed commit-bound 28-call ceiling; preserved as historical scope
+- `ASTER_PRESSURE_SCREEN_RESULT.md` — literal six-call behavior, authentic
+  overflow, exact first-fit relief, and claim limits
+- `ASTER_PRESSURE_SCREEN_AUDIT.json` — independent replay, tokenizer,
+  custody, relief, seal, and runtime-release audit
+- `ASTER_PRESSURE_BOUNDARY_HANDOFF.json` — exact common W0/L1 fork and explicit
+  denial of expression or continuation authority
+- `ASTER_RELATIONAL_EXPRESSION_QUALIFICATION_PLAN.md` — the sole boundary-native
+  one-call carrier gate selected by actual first-fit lifecycle behavior
+- `ASTER_RELATIONAL_EXPRESSION_QUALIFICATION_CONTRACT.json` — exact carrier,
+  budgets, success rule, and scientific limits
+- `ASTER_RELATIONAL_EXPRESSION_SAFETY_CONTRACT.json` — prospectively frozen
+  ANCHOR/BRIDGE authority, unit, timing, relationship, and currentness review
+- `ASTER_RELATIONAL_EXPRESSION_PREFLIGHT.json` — exact 4,428-token prompt and
+  18,860-token completion-headroom receipt; zero model calls
+- `ASTER_RELATIONAL_EXPRESSION_AUTHORIZATION_REQUEST.json` — inert request for
+  one future commit-bound model call; measured continuation excluded
 - `task_aster/` — fresh exact payment-recovery task, opaque relation-rich
   source world, evaluator, candidate, catalogs, and custody lock
 

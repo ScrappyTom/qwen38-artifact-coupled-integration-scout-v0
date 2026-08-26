@@ -122,11 +122,12 @@ most twelve additional maintenance calls. A register permits at most 650 tokens
 per source and 8,000 total; the one-claim-per-source maximum fixture is 4,377
 tokens before actor-message framing.
 
-The immediate live operation is only the treatment-free 28-call ordinary
-pressure screen. One attempt is allowed per call and retries are zero. If it
-qualifies, exactly one expression call may be frozen at its first source-
-externalization boundary. The measured continuation remains separately frozen
-and authorized.
+The treatment-free pressure screen is complete. It reached authentic overflow
+after six valid actor-selected two-source reads and first-fit relief selected
+only `RESULT-001` (ANCHOR + BRIDGE). That exact handoff now freezes one
+boundary-native expression case. The one-call expression qualification still
+requires separate commit-bound authorization; the measured continuation
+remains separately frozen and unauthorized.
 
 ## Claim limits
 
