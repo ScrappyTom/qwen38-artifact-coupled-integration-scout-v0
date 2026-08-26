@@ -6,6 +6,10 @@ from dataclasses import dataclass
 CONFIGURATIONS = ("D0_DETACHED", "A1_COUPLED")
 BLUEHAVEN_CONFIGURATIONS = ("B1_BATCHED_COUPLED", "W1_DIRECT_WORK")
 DELTA_CONFIGURATIONS = ("W0_DIRECT_WORK", "L1_LOCAL_DELTA")
+RELATIONAL_CONFIGURATIONS = (
+    "W0_DIRECT_EXACT_WORK",
+    "L1_PROVENANCE_LOCAL_RELATIONAL",
+)
 
 
 @dataclass(frozen=True)
@@ -71,3 +75,9 @@ def delta_actor_actions(configuration_id: str) -> tuple[str, ...]:
     if configuration_id == "W0_DIRECT_WORK":
         return (*actions[:3], "upsert_evidence_slot", *actions[3:])
     return actions
+
+
+def relational_actor_actions(configuration_id: str) -> tuple[str, ...]:
+    if configuration_id not in RELATIONAL_CONFIGURATIONS:
+        raise ValueError(f"unknown provenance-relational configuration: {configuration_id}")
+    return ordinary_actions()

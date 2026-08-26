@@ -1,0 +1,13 @@
+{
+  "schema_version": "aster-payment-recovery-world-v0",
+  "task_id": "aster-payment-recovery-decision-v0",
+  "world_origin": "deterministic_synthetic_aster_payment_world_v0",
+  "source_count": 16,
+  "source_identity_semantics": "opaque_alphabetic_ids_with_non_isomorphic_requirement_graph",
+  "candidate_files": [
+    "EVIDENCE_INTEGRATION_LEDGER.md",
+    "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
+  ],
+  "readiness_authority": "external_candidate_bound_adjudication",
+  "semantic_derivatives_authoritative": false
+}

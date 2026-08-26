@@ -1,12 +1,27 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the one authorized Meridian source-local expression call is complete,
-sealed, and audited. Its exact route remains closed. A subsequent no-GPU
-historical-fixture audit now qualifies a minimal *apparatus distinction* among
-source-slot ownership, exact evidence basis, relationship referents,
-multi-source derived work, and version currentness. It does not qualify a live
-carrier, semantic persistence, or W0/L1 utility, and no provider continuation
-is authorized.
+Status: the exact Meridian route remains closed. The E63 no-GPU audit qualifies
+a minimal apparatus distinction among source-slot ownership, exact evidence,
+relationship referents, task-native derived work, and version currentness. A
+fresh Aster payment-recovery Stage 0 now instantiates that distinction as a
+complete W0/L1 system design. Authentic pressure, live expression, persistence,
+and utility remain unmeasured; no provider call is authorized.
+
+Aster deliberately does not repair Meridian. Both future arms share the same
+ordinary actor-owned evidence matrix, incremental decision sections, exact
+effects, current checks, repair/recheck, closure surface, and external
+readiness. L1 alone pays for one bounded provenance-local source register whose
+model-facing message is replaced rather than appended. Relationships may name
+objects present in exact owner evidence without mutating their slots; genuine
+multi-source synthesis remains exact candidate work with complete citations.
+
+The fresh sixteen-source Aster world is 20,993 tokenizer tokens and 60,140
+bytes. Every permitted full single and pair fits. A prospectively fixed legal
+path reaches 21,873 prompt tokens at its sixth pair; externalizing only
+`RESULT-001` restores 19,037 tokens. The first 553-token semantic register then
+fits the relieved actor packet. This is provider-free opportunity geometry,
+not authentic activation. The next eligible operation is only a separately
+authorized, treatment-free 28-call pressure screen.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -177,6 +192,22 @@ a possible persistence channel, not an isolated artifact-coupling effect or an
 architecture promotion.
 
 ## Active files
+
+- `ASTER_STAGE0_PLAN.md` — fresh whole-system question, parity, activation,
+  provenance, lifecycle, budgets, and claim limits
+- `ASTER_STAGE0_PREFLIGHT.json` — exact tokenizer geometry and provider-free
+  W0/L1 effect/check/repair/recheck/closure receipt
+- `ASTER_STAGE0_RED_TEAM.md` — oracle, authority, semantic-risk, resource, and
+  readiness audit
+- `ASTER_INTERACTION_DESIGN.json` — complete W0/L1 configuration contract
+- `ASTER_SEMANTIC_ADJUDICATION_PROTOCOL.json` — external candidate-bound
+  criterion and readiness rules
+- `ASTER_PRESSURE_SCREEN_CONTRACT.json` — treatment-free interaction-aligned
+  pressure gate that permits prior task work and checks
+- `ASTER_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request for a
+  future commit-bound 28-call screen
+- `task_aster/` — fresh exact payment-recovery task, opaque relation-rich
+  source world, evaluator, candidate, catalogs, and custody lock
 
 - `MERIDIAN_STAGE0_PLAN.md` — fresh whole-system question, parity, budgets,
   activation, and claim limits

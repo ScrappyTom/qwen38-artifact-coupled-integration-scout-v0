@@ -1,0 +1,26 @@
+{
+  "schema_version": "aster-semantic-adjudication-protocol-v0",
+  "task_id": "aster-payment-recovery-decision-v0",
+  "candidate_binding": "exact_composite_hash_of_two_candidate_files",
+  "condition_blinded_where_feasible": true,
+  "actor_visible": false,
+  "semantic_register_is_readiness_evidence": false,
+  "criteria": [
+    {"criterion_id": "Q01", "sources": ["ANCHOR", "IRIS", "NOVA", "PRISM"], "blocking": true, "question": "Are isolation, repair, verification, restoration, and closure authorities separated and current?"},
+    {"criterion_id": "Q02", "sources": ["BRIDGE", "FORGE", "NOVA", "MICA"], "blocking": true, "question": "Are ledger lag, consistency, RPO/RTO, schema, writer, settlement, and candidate bindings exact?"},
+    {"criterion_id": "Q03", "sources": ["CIRRUS", "DUSK", "BRIDGE", "NOVA"], "blocking": true, "question": "Are key scope, retry windows, duplicate observations, queue identity, and rollback retention correct?"},
+    {"criterion_id": "Q04", "sources": ["DUSK", "CIRRUS", "BRIDGE", "EMBER", "LATTICE"], "blocking": true, "question": "Does replay integrate drain and ingress rates, ordering, ledger position, capacity, pause/resume, and retirement?"},
+    {"criterion_id": "Q05", "sources": ["EMBER", "DUSK", "JUNIPER", "LATTICE"], "blocking": true, "question": "Are shared capacity, observed throughput, staged ramps, windows, and dependency headroom preserved?"},
+    {"criterion_id": "Q06", "sources": ["FORGE", "JUNIPER", "BRIDGE", "MICA", "KELP"], "blocking": true, "question": "Are cutoff, prefunding, rail fallback, latency/fee, ledger cutoff, reconciliation, and delay contingencies integrated?"},
+    {"criterion_id": "Q07", "sources": ["GROVE", "HARBOR", "CIRRUS", "LATTICE"], "blocking": true, "question": "Are fraud thresholds, review capacity, customer states, communication uncertainty, and privacy correct?"},
+    {"criterion_id": "Q08", "sources": ["IRIS", "ANCHOR", "NOVA", "LATTICE"], "blocking": true, "question": "Are token/key states, break-glass duration, approvals, audit integrity, retention, and currentness exact?"},
+    {"criterion_id": "Q09", "sources": ["KELP", "MICA", "FORGE", "HARBOR", "ANCHOR"], "blocking": true, "question": "Are determination authority, reporting clock, aggregate loss, notices, and evidence retention preserved?"},
+    {"criterion_id": "Q10", "sources": ["LATTICE", "MICA", "DUSK", "GROVE"], "blocking": true, "question": "Are coverage, alert/hold thresholds, sample/exception rates, uncertainty, and observation horizons distinct?"},
+    {"criterion_id": "Q11", "sources": ["NOVA", "BRIDGE", "IRIS", "ORBIT", "PRISM"], "blocking": true, "question": "Are candidate lineage, compatibility, stale effects/checks, repair, recheck, and historical exercise limits correct?"},
+    {"criterion_id": "Q12", "sources": ["PRISM", "ANCHOR", "ORBIT", "KELP", "MICA"], "blocking": true, "question": "Are blockers, falsifiers, residual risks, exact current evidence, readiness, and closure authority explicit?"}
+  ],
+  "artifact_dispositions": ["complete", "strong_partial", "weak_partial", "failed"],
+  "closure_readiness": ["ready", "not_ready", "not_adjudicated"],
+  "ready_rule": "all_twelve_blocking_criteria_met_and_latest_check_current_and_no_unresolved_blocker_and_submission_appropriate",
+  "supersession": "append_only_candidate_task_rubric_evidence_bound_reconciliation"
+}

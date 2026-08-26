@@ -1,0 +1,81 @@
+{
+  "schema_version": "aster-provenance-local-relational-interaction-design-v0",
+  "status": "offline_stage0_complete_authentic_pressure_pending",
+  "task_id": "aster-payment-recovery-decision-v0",
+  "question": "Under authentic pressure, can bounded provenance-local source reports improve source-correct cumulative exact work, current verification, repair, and closure over direct actor-authored exact work?",
+  "unit_of_analysis": "complete_pressure_to_source_externalization_to_semantic_persistence_to_exact_work_to_effect_to_check_to_repair_to_recheck_to_closure_trajectory",
+  "configurations": [
+    {
+      "configuration_id": "W0_DIRECT_EXACT_WORK",
+      "semantic_provider": false,
+      "task_work": "ordinary_actor_owned_incremental_exact_candidate"
+    },
+    {
+      "configuration_id": "L1_PROVENANCE_LOCAL_RELATIONAL",
+      "semantic_provider": true,
+      "semantic_persistence": "bounded_current_source_version_register_replaced_in_one_actor_visible_slot",
+      "task_work": "same_ordinary_actor_owned_incremental_exact_candidate"
+    }
+  ],
+  "common_functions": [
+    "actor_selected_exact_ingress",
+    "exact_external_custody",
+    "positive_savings_first_fit_relief",
+    "exact_reopen",
+    "incremental_task_native_evidence_matrix",
+    "incremental_decision_sections",
+    "candidate_bound_effects",
+    "candidate_bound_current_checks",
+    "repair_and_recheck",
+    "closure_proposal",
+    "independent_quality_and_readiness"
+  ],
+  "treatment_authority": {
+    "trigger": "common_pressure_relief_externalizes_at_least_one_previously_visible_source_observation",
+    "input": "only exact source observations externalized by that arm plus current records for those same source versions",
+    "output": "bounded source-reported fact_or_relationship records",
+    "source_slot_mutation_scope": "owner_source_and_exact_version_only",
+    "relationship_referents": "permitted_only_when_named_in_exact_owner_evidence_span",
+    "evidence_binding": "model_copies_one_exact_unique_delivered_line_and_host_derives_line_number_and_span_hash",
+    "cross_source_synthesis": "ordinary_actor_exact_candidate_work_with_complete_citations",
+    "global_state_replacement": false,
+    "readiness_or_submission_authority": false
+  },
+  "model_facing_register_lifecycle": {
+    "resident_messages": 1,
+    "update_law": "replace_existing_register_message_not_append",
+    "full_exact_delta_history": "external_custody_only",
+    "register_token_budget": 8000,
+    "source_slot_token_budget": 650
+  },
+  "pressure_boundary": {
+    "prior_candidate_effects_allowed": true,
+    "prior_checks_allowed": true,
+    "submission_allowed": false,
+    "minimum_fully_covered_sources": 4,
+    "minimum_evidence_domains": 3,
+    "positive_savings_relief_required": true,
+    "externalized_source_result_required": true
+  },
+  "actor_budget": {
+    "preconstruction_calls_after_fork": 36,
+    "postconstruction_calls": 12,
+    "same_for_both_configurations": true
+  },
+  "maintenance_budget": {
+    "L1_maximum_calls": 12,
+    "W0_calls": 0,
+    "additional_system_cost": true
+  },
+  "primary_outcomes": [
+    "cross_source_relationship_fidelity",
+    "candidate_bound_artifact_quality",
+    "current_effect_and_check_uptake",
+    "appropriate_repair_and_closure",
+    "independently_adjudicated_useful_completion"
+  ],
+  "expression_gate_maximum_calls": 1,
+  "next_live_gate": "common_ordinary_pressure_screen",
+  "measured_continuation_authorized": false,
+  "gpu_authorized": false
+}
