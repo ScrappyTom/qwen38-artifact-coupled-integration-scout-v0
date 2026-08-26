@@ -1,0 +1,8 @@
+{
+  "schema": "solace-water-world-spec-v0",
+  "origin": "deterministic_synthetic_solace_water_world_v0",
+  "domains": ["authority", "hydraulics", "laboratory", "pumping", "power", "treatment", "source_water", "security", "observability", "environment", "logistics", "communications", "change_control", "readiness"],
+  "source_count": 14,
+  "relationship_topology": "many_to_many",
+  "actor_source_ids": "opaque_alphabetic"
+}

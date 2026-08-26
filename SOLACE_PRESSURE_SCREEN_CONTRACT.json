@@ -1,0 +1,31 @@
+{
+  "schema_version": "solace-pressure-screen-contract-v0",
+  "run_id": "2026-08-26-solace-anchored-provenance-pressure-screen-v0",
+  "scope": "solace_anchored_provenance_pressure_screen_v0",
+  "task_id": "solace-water-recovery-decision-v0",
+  "seed": 531701,
+  "maximum_actor_calls": 28,
+  "maximum_serialized_tokens": 800000,
+  "maximum_wall_seconds": 8000,
+  "context_tokens": 25088,
+  "ordinary_response_reserve_tokens": 4096,
+  "prompt_limit": 20992,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "ordinary_common_actions": ["read_source", "read_batch", "reopen_exact", "replace_evidence_ledger", "upsert_decision_section", "replace_decision", "run_check", "submit"],
+  "eligible_boundary": {
+    "minimum_fully_covered_sources": 4,
+    "minimum_evidence_domains": 3,
+    "candidate_effects_before_pressure_allowed": true,
+    "checks_before_pressure_allowed": true,
+    "candidate_submitted": false,
+    "positive_savings_first_fit_relief_feasible": true,
+    "relief_externalizes_at_least_one_source_observation": true
+  },
+  "terminal_conditions": ["authentic_interaction_pressure", "submitted_before_pressure", "pressure_before_ingress_aligned_activation", "pressure_boundary_ineligible", "actor_call_budget_exhausted", "serialized_token_budget_exhausted", "wall_clock_budget_exhausted", "apparatus_failure"],
+  "treatment_present": false,
+  "semantic_maintenance_present": false,
+  "standalone_expression_gate_planned": false,
+  "measured_fork_authorized": false,
+  "gpu_authorized": false
+}

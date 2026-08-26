@@ -1,0 +1,31 @@
+{
+  "schema_version": "solace-fault-tolerant-anchored-provenance-interaction-v0",
+  "status": "offline_stage0_complete_authentic_pressure_pending",
+  "task_id": "solace-water-recovery-decision-v0",
+  "question": "Under authentic pressure, does fallible anchored provenance residue improve cumulative exact work and useful completion over direct exact work alone?",
+  "unit_of_analysis": "complete_pressure_to_externalization_to_fallible_maintenance_to_exact_work_to_effect_to_check_to_repair_to_recheck_to_closure_trajectory",
+  "configurations": [
+    {"configuration_id": "W0_DIRECT_EXACT_WORK_FRESH", "semantic_provider": false, "task_work": "ordinary_actor_owned_incremental_exact_candidate"},
+    {"configuration_id": "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE", "semantic_provider": true, "semantic_persistence": "partially_admitted_provenance_local_register", "task_work": "same_ordinary_actor_owned_incremental_exact_candidate"}
+  ],
+  "model_host_allocation": {
+    "model": ["slot_and_version", "assertion_mode", "referents", "statement", "exact_anchor_substring"],
+    "host": ["exact_anchor_bytes", "byte_offsets", "containing_line_context", "hashes", "result_and_version_binding", "currentness", "reopen_custody"],
+    "semantic_host_repair": false
+  },
+  "admission": {
+    "global_envelope_failure": "reject_all_and_continue",
+    "claim_validation": "independent",
+    "duplicate_and_source_budget": "atomic_rejection",
+    "valid_subset": "merge",
+    "zero_valid": "prior_register_unchanged_actor_continues",
+    "retry": false,
+    "repair": false,
+    "coverage_inference_from_omission": false
+  },
+  "common_functions": ["actor_selected_exact_ingress", "exact_external_custody", "deterministic_first_fit_relief", "exact_reopen", "incremental_task_native_evidence_matrix", "incremental_decision_sections", "candidate_bound_effects", "current_checks", "repair_and_recheck", "closure_proposal", "independent_quality_and_readiness"],
+  "standalone_expression_gate": false,
+  "next_live_gate": "common_ordinary_pressure_screen",
+  "measured_continuation_authorized": false,
+  "gpu_authorized": false
+}

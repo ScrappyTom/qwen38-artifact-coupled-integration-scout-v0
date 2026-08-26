@@ -10,6 +10,10 @@ RELATIONAL_CONFIGURATIONS = (
     "W0_DIRECT_EXACT_WORK",
     "L1_PROVENANCE_LOCAL_RELATIONAL",
 )
+ANCHORED_RELATIONAL_CONFIGURATIONS = (
+    "W0_DIRECT_EXACT_WORK_FRESH",
+    "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE",
+)
 
 
 @dataclass(frozen=True)
@@ -80,4 +84,10 @@ def delta_actor_actions(configuration_id: str) -> tuple[str, ...]:
 def relational_actor_actions(configuration_id: str) -> tuple[str, ...]:
     if configuration_id not in RELATIONAL_CONFIGURATIONS:
         raise ValueError(f"unknown provenance-relational configuration: {configuration_id}")
+    return ordinary_actions()
+
+
+def anchored_relational_actor_actions(configuration_id: str) -> tuple[str, ...]:
+    if configuration_id not in ANCHORED_RELATIONAL_CONFIGURATIONS:
+        raise ValueError(f"unknown anchored-provenance configuration: {configuration_id}")
     return ordinary_actions()

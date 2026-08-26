@@ -1,6 +1,14 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the exact Meridian route remains closed. The E63 no-GPU audit qualifies
+Status: E66 is preserved as a local negative for model-copied complete-line
+transport, not for grounded semantic expression. The next fresh system route
+is Solace: host-materialized exact anchor/context provenance, per-claim partial
+admission, and unchanged-state fallback are now provider-free qualified. There
+is deliberately no standalone expression gate. A treatment-free Solace
+pressure screen is frozen but requires commit-bound GPU authorization; semantic
+maintenance and measured continuation remain unauthorized.
+
+The exact Meridian route remains closed. The E63 no-GPU audit qualifies
 a minimal apparatus distinction among source-slot ownership, exact evidence,
 relationship referents, task-native derived work, and version currentness. The
 fresh Aster payment-recovery screen reached an authentic actor-selected
@@ -26,8 +34,32 @@ allowance. Externalizing only `RESULT-001` restores 18,951 tokens and 2,041
 tokens of headroom. The six-call screen consumed 66,362 serialized tokens; the
 expression gate then consumed one further call and 5,136 serialized tokens.
 The gate's frozen stop rule closes this exact Aster carrier at this boundary.
-No measured continuation is authorized and no automatic live successor is
-selected.
+No measured continuation is authorized. Solace is a new route, not a repair or
+regrading of this frozen Aster result.
+
+## Current fresh system route
+
+Solace compares `W0_DIRECT_EXACT_WORK_FRESH` with
+`L1_FAULT_TOLERANT_ANCHORED_PROVENANCE` on a new fourteen-source regional-water
+recovery task. Both arms share exact ingress, custody, first-fit relief, reopen,
+incremental exact work, candidate effects, current checks, repair/recheck,
+closure, and external evaluation. L1 alone pays for a bounded source register.
+
+The model selects semantic statements, modes, referents, and exact unique
+anchor substrings. The host materializes containing-line context, offsets,
+hashes, result/version bindings, currentness, and reopen custody. Valid records
+merge independently; invalid records are discarded without repair; a zero-
+valid update leaves prior state unchanged and ordinary work continues. This
+makes expression reliability and carrier yield part of system economics instead
+of a gate that prevents downstream interaction from being observed.
+
+Offline Stage 0 reports a 2,782-token base actor prompt and an 18,282-token,
+51,549-byte exact source corpus. A permitted fixed path crosses the 20,992-token
+prompt allowance at its sixth pair; externalizing only `RESULT-001` restores
+18,559 tokens. Provider-free fixtures prove both arms can reach construction,
+defect-bearing check, repair, stale-check recognition, current recheck, and
+closure with identical candidates. See `SOLACE_STAGE0_PLAN.md` and
+`SOLACE_STAGE0_PREFLIGHT.json`.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -198,6 +230,19 @@ a possible persistence channel, not an isolated artifact-coupling effect or an
 architecture promotion.
 
 ## Active files
+
+- `SOLACE_STAGE0_PLAN.md` — fresh whole-system question, responsibility split,
+  partial-admission lifecycle, interaction sequence, outcomes, and limits
+- `SOLACE_STAGE0_PREFLIGHT.json` — exact geometry plus provider-free partial,
+  zero-valid, work/effect/check/repair/recheck/closure receipts
+- `SOLACE_INTERACTION_DESIGN.json` — complete W0/L1 system contract
+- `SOLACE_PRESSURE_SCREEN_CONTRACT.json` — treatment-free authentic-pressure gate
+- `SOLACE_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request; no GPU or
+  semantic continuation authority
+- `reactive_runtime/anchored_provenance.py` — host-materialized anchor/context
+  custody and fault-tolerant register admission
+- `task_solace/` — fresh exact task, relational source world, evaluator,
+  candidate, catalog, and custody lock
 
 - `ASTER_STAGE0_PLAN.md` — fresh whole-system question, parity, activation,
   provenance, lifecycle, budgets, and claim limits

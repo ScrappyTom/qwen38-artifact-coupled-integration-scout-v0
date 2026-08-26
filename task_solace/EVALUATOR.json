@@ -1,0 +1,61 @@
+{
+  "schema_version": "solace-water-evaluator-v0",
+  "evaluator_id": "solace-water-evaluator-v0",
+  "task_id": "solace-water-recovery-decision-v0",
+  "ledger_title": "# Solace Evidence and Decision Matrix",
+  "decision_title": "# Solace Water Recovery Decision",
+  "decision_word_range": [1500, 2100],
+  "construction_milestone_minimum_words": 1000,
+  "construction_milestone_minimum_sources": 8,
+  "minimum_unique_sources": 11,
+  "minimum_ledger_sources": 8,
+  "source_ids": ["AURORA", "BASTION", "CIPHER", "DELTA", "ECHO", "FALCON", "GARNET", "HELIX", "INDIGO", "JASPER", "KESTREL", "LUMEN", "MOSAIC", "NEXUS"],
+  "decision_headings": [
+    "Authority, scope, and restoration decision",
+    "Hydraulics, storage, and zone sequencing",
+    "Sampling, source water, and treatment barriers",
+    "Power, pumping, logistics, and demand stages",
+    "Security, telemetry, and evidence custody",
+    "Public health, environmental, and communication continuity",
+    "Execution, rollback, and contingencies",
+    "Verification, blockers, falsifiers, and closure"
+  ],
+  "semantic_term_gates": {
+    "Q01_authority": ["health officer", "independent", "closure"],
+    "Q02_hydraulics": ["42 psi", "35 psi", "5.8 million gallons", "3.2 million gallons"],
+    "Q03_sampling": ["forty-eight samples", "sixteen hours", "0.5 micrograms", "5.0 micrograms"],
+    "Q04_pumping": ["14.5 MGD", "12.8 MGD", "10, 30, 60, and 100 percent", "two thirty-minute"],
+    "Q05_resources": ["6.5 MW", "4.1 MW", "thirty-six hours", "4.5 days", "3.2 days"],
+    "Q06_treatment": ["0.18 NTU", "0.30 NTU", "0.8", "2.0", "0.2 mg/L"],
+    "Q07_source": ["34 percent", "3.1 micrograms", "investigation hold"],
+    "Q08_security": ["14:10 UTC", "W4", "two hours", "dual approval", "seven years"],
+    "Q09_observation": ["96 percent", "38 psi", "30 psi", "700 milliseconds", "1,200 milliseconds"],
+    "Q10_environment": ["seventy-two hours", "E-17", "0.019 milligrams", "seven years"],
+    "Q11_public": ["91 percent", "do-not-drink", "3,200", "4,100"],
+    "Q12_currentness": ["W7", "H12", "P9", "T6", "stale", "recheck", "blocker", "residual risk"]
+  },
+  "forbidden_relation_patterns": {
+    "pressure_unit_reversal": ["42 kPa", "35 kPa"],
+    "threshold_reversal": ["0.5 micrograms per liter action threshold", "5.0 micrograms per liter reporting limit"],
+    "probability_measure_reversal": ["34 percent measured contamination", "3.1 percent contamination"],
+    "power_duration_reversal": ["thirty-six days", "36 days"],
+    "capacity_sum_reversal": ["32.5 MGD", "18 plus 14.5 MGD"],
+    "coverage_health_reversal": ["96 percent healthy", "four percent contamination"],
+    "clock_reversal": ["seventy-two minutes", "72 minutes"],
+    "self_authorized_readiness": ["semantic register proves readiness", "mechanical check proves readiness", "candidate mutation proves readiness", "submission proves readiness"]
+  },
+  "gold_requirement_sources": {
+    "Q01": ["AURORA", "HELIX", "MOSAIC", "NEXUS"],
+    "Q02": ["BASTION", "DELTA", "CIPHER", "MOSAIC"],
+    "Q03": ["CIPHER", "BASTION", "GARNET", "HELIX"],
+    "Q04": ["DELTA", "BASTION", "ECHO", "FALCON", "INDIGO"],
+    "Q05": ["ECHO", "DELTA", "FALCON", "KESTREL", "INDIGO"],
+    "Q06": ["FALCON", "GARNET", "BASTION", "CIPHER", "DELTA"],
+    "Q07": ["GARNET", "FALCON", "CIPHER", "JASPER"],
+    "Q08": ["HELIX", "AURORA", "MOSAIC", "INDIGO"],
+    "Q09": ["INDIGO", "BASTION", "ECHO", "FALCON", "LUMEN"],
+    "Q10": ["JASPER", "GARNET", "FALCON", "LUMEN", "AURORA"],
+    "Q11": ["LUMEN", "AURORA", "CIPHER", "INDIGO", "KESTREL"],
+    "Q12": ["MOSAIC", "NEXUS", "AURORA", "HELIX", "CIPHER"]
+  }
+}
