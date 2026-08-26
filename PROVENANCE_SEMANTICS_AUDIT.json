@@ -1,0 +1,338 @@
+{
+  "case_count": 10,
+  "case_rows": [
+    {
+      "active": true,
+      "assertion_mode": "source_reported_fact",
+      "case_id": "P01_MERIDIAN_OWNER_LOCAL_FACT",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "AXIOM"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "pass",
+      "historical_bindings": [],
+      "mechanical_code": "accepted",
+      "mechanical_issues": [],
+      "mechanical_valid": true,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [],
+      "required_issues": [],
+      "semantic_review_required": true,
+      "slot_source_id": "AXIOM",
+      "world": "meridian"
+    },
+    {
+      "active": true,
+      "assertion_mode": "source_reported_relationship",
+      "case_id": "P02_E61_BRAMBLE_RELATIONSHIP_OBJECTS",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "BRAMBLE"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "pass",
+      "historical_bindings": [
+        {
+          "actual_sha256": "52caa88ae2d459f8671f57f6e8bc813dba8e8a3fc7ce651932a00d6d4e7d203f",
+          "expected_sha256": "52caa88ae2d459f8671f57f6e8bc813dba8e8a3fc7ce651932a00d6d4e7d203f",
+          "missing_substrings": [],
+          "passed": true,
+          "path": "qualification_runs/2026-08-25-meridian-source-delta-expression-qualification-v0/calls/01-Q1_FIRST_ACTUAL_EXTERNALIZATION/assistant_content.txt",
+          "required_substrings": [
+            "HEATH defines valid confirmation",
+            "DRIFT and EMBER changes",
+            "NORTH identified prior mismatched lot revisions"
+          ]
+        }
+      ],
+      "mechanical_code": "accepted",
+      "mechanical_issues": [],
+      "mechanical_valid": true,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [
+        "DRIFT",
+        "EMBER",
+        "HEATH",
+        "NORTH"
+      ],
+      "required_issues": [],
+      "semantic_review_required": true,
+      "slot_source_id": "BRAMBLE",
+      "world": "meridian"
+    },
+    {
+      "active": false,
+      "assertion_mode": "source_reported_relationship",
+      "case_id": "P03_MERIDIAN_ABSENT_SOURCE_SLOT_MUTATION",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "BRAMBLE"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "forbidden_absent_slot_mutation",
+      "historical_bindings": [],
+      "mechanical_code": "slot_source_not_admitted",
+      "mechanical_issues": [
+        "slot_source_not_admitted",
+        "undeclared_source_reference",
+        "source_report_evidence_basis_mismatch"
+      ],
+      "mechanical_valid": false,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [
+        "EMBER"
+      ],
+      "required_issues": [
+        "slot_source_not_admitted",
+        "source_report_evidence_basis_mismatch"
+      ],
+      "semantic_review_required": true,
+      "slot_source_id": "DRIFT",
+      "world": "meridian"
+    },
+    {
+      "active": false,
+      "assertion_mode": "source_authoritative_state",
+      "case_id": "P04_MERIDIAN_DECLARED_ABSENT_SOURCE_AUTHORITY",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "BRAMBLE"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "fail_unsupported_authority",
+      "historical_bindings": [],
+      "mechanical_code": "assertion_mode_invalid",
+      "mechanical_issues": [
+        "assertion_mode_invalid"
+      ],
+      "mechanical_valid": false,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [
+        "DRIFT"
+      ],
+      "required_issues": [
+        "assertion_mode_invalid"
+      ],
+      "semantic_review_required": true,
+      "slot_source_id": "BRAMBLE",
+      "world": "meridian"
+    },
+    {
+      "active": true,
+      "assertion_mode": "source_reported_relationship",
+      "case_id": "P05_MERIDIAN_RELATION_PREDICATE_REVERSAL",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "BRAMBLE"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "fail_predicate_reversal",
+      "historical_bindings": [],
+      "mechanical_code": "accepted",
+      "mechanical_issues": [],
+      "mechanical_valid": true,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [
+        "DRIFT",
+        "EMBER"
+      ],
+      "required_issues": [],
+      "semantic_review_required": true,
+      "slot_source_id": "BRAMBLE",
+      "world": "meridian"
+    },
+    {
+      "active": true,
+      "assertion_mode": "derived_cross_source",
+      "case_id": "P06_MERIDIAN_DERIVED_MULTI_SOURCE_WORK",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "BRAMBLE",
+        "DRIFT"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "pass",
+      "historical_bindings": [],
+      "mechanical_code": "accepted",
+      "mechanical_issues": [],
+      "mechanical_valid": true,
+      "missing_required_issues": [],
+      "record_kind": "derived_work",
+      "referent_source_ids": [
+        "DRIFT",
+        "EMBER"
+      ],
+      "required_issues": [],
+      "semantic_review_required": true,
+      "slot_source_id": null,
+      "world": "meridian"
+    },
+    {
+      "active": false,
+      "assertion_mode": "derived_cross_source",
+      "case_id": "P07_MERIDIAN_DERIVED_CLAIM_IN_SOURCE_SLOT",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "BRAMBLE",
+        "DRIFT"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "forbidden_wrong_record_kind",
+      "historical_bindings": [],
+      "mechanical_code": "derived_claim_requires_derived_work_slot",
+      "mechanical_issues": [
+        "derived_claim_requires_derived_work_slot"
+      ],
+      "mechanical_valid": false,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [
+        "DRIFT",
+        "EMBER"
+      ],
+      "required_issues": [
+        "derived_claim_requires_derived_work_slot"
+      ],
+      "semantic_review_required": true,
+      "slot_source_id": "BRAMBLE",
+      "world": "meridian"
+    },
+    {
+      "active": false,
+      "assertion_mode": "source_reported_fact",
+      "case_id": "P08_MERIDIAN_PRIOR_VERSION_RETAINED_STALE",
+      "currentness": "stale",
+      "evidence_source_ids": [
+        "AXIOM"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "historically_valid_but_not_current",
+      "historical_bindings": [],
+      "mechanical_code": "accepted",
+      "mechanical_issues": [],
+      "mechanical_valid": true,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [],
+      "required_issues": [],
+      "semantic_review_required": true,
+      "slot_source_id": "AXIOM",
+      "world": "meridian"
+    },
+    {
+      "active": false,
+      "assertion_mode": "source_reported_fact",
+      "case_id": "P09_BLUEHAVEN_UNSEEN_S07_SLOT",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "S01"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "forbidden_unsupported_completion",
+      "historical_bindings": [
+        {
+          "actual_sha256": "d229fff79fcd41ab0237bd896bebc9ee10b40a458220c412246a82290864a92f",
+          "expected_sha256": "d229fff79fcd41ab0237bd896bebc9ee10b40a458220c412246a82290864a92f",
+          "missing_substrings": [],
+          "passed": true,
+          "path": "qualification_runs/2026-08-25-bluehaven-batched-maintenance-expression-qualification-v0/calls/01-Q1_INITIAL_THREE_RESULT_BATCH/assistant_content.txt",
+          "required_substrings": [
+            "[S07] Hospitals/dialysis require explicit priority allocations",
+            "[S11] Executable sequence",
+            "[S12] Independent review blockers"
+          ]
+        }
+      ],
+      "mechanical_code": "slot_source_not_admitted",
+      "mechanical_issues": [
+        "slot_source_not_admitted",
+        "source_report_evidence_basis_mismatch"
+      ],
+      "mechanical_valid": false,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [],
+      "required_issues": [
+        "slot_source_not_admitted",
+        "source_report_evidence_basis_mismatch"
+      ],
+      "semantic_review_required": true,
+      "slot_source_id": "S07",
+      "world": "bluehaven"
+    },
+    {
+      "active": true,
+      "assertion_mode": "source_reported_fact",
+      "case_id": "P10_CEDAR_PROVENANCE_VALID_SEMANTIC_REVERSAL",
+      "currentness": "current",
+      "evidence_source_ids": [
+        "S02"
+      ],
+      "expectation_passed": true,
+      "frozen_semantic_disposition": "fail_unit_and_probability_reversal",
+      "historical_bindings": [
+        {
+          "actual_sha256": "fbf4a0c46d3bf0080315619c5a84d502b85340ca65e0e87daff692ec51f70d56",
+          "expected_sha256": "fbf4a0c46d3bf0080315619c5a84d502b85340ca65e0e87daff692ec51f70d56",
+          "missing_substrings": [],
+          "passed": true,
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/A1_COUPLED/trajectory/world/candidate/BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
+          "required_substrings": [
+            "5.8 km/h sustained wind threshold",
+            "42 percent relative humidity"
+          ]
+        },
+        {
+          "actual_sha256": "7cfa9c1c7cf85505894696fc122af4e59543b6be675fed850eef79c12a2a7b1b",
+          "expected_sha256": "7cfa9c1c7cf85505894696fc122af4e59543b6be675fed850eef79c12a2a7b1b",
+          "missing_substrings": [],
+          "passed": true,
+          "path": "CEDAR_SEMANTIC_ADJUDICATION.json",
+          "required_substrings": [
+            "5.8 hours of conservative fire-arrival time is restated as a 5.8 km/h sustained-wind threshold",
+            "42 percent wind-shift probability is restated as 42 percent relative humidity"
+          ]
+        }
+      ],
+      "mechanical_code": "accepted",
+      "mechanical_issues": [],
+      "mechanical_valid": true,
+      "missing_required_issues": [],
+      "record_kind": "source_slot",
+      "referent_source_ids": [],
+      "required_issues": [],
+      "semantic_review_required": true,
+      "slot_source_id": "S02",
+      "world": "cedar"
+    }
+  ],
+  "cases_sha256": "eecad2273fffc5e000e010c55825ca4e01e0cb18b08590a9a1a4e96928a96475",
+  "claim_limit": "historical-fixture apparatus design audit only; it does not regrade E61, qualify model expression, prove semantic correctness, or establish whole-system utility",
+  "date": "2026-08-25",
+  "design_findings": {
+    "absent_source_slot_mutation_blocked": true,
+    "bluehaven_unseen_slot_completion_blocked": true,
+    "derived_multi_source_claim_requires_separate_work_record": true,
+    "e61_relationship_objects_admitted_without_absent_slot_mutation": true,
+    "mechanical_provenance_does_not_establish_semantic_truth": true,
+    "owner_local_fact_admitted": true,
+    "source_version_change_makes_prior_claim_inactive_not_deleted": true
+  },
+  "failures": [],
+  "mechanical_pass_semantic_fail_cases": [
+    "P05_MERIDIAN_RELATION_PREDICATE_REVERSAL",
+    "P10_CEDAR_PROVENANCE_VALID_SEMANTIC_REVERSAL"
+  ],
+  "model_calls": 0,
+  "next_live_operation_authorized": false,
+  "passed": true,
+  "schema": "provenance-semantics-audit-v0",
+  "serialized_tokens": 0
+}
+

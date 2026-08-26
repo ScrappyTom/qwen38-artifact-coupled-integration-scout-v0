@@ -1,12 +1,12 @@
 # Qwen3.8 bounded-work system interaction scouts
 
 Status: the one authorized Meridian source-local expression call is complete,
-sealed, and audited. It finished normally and produced exactly the intended
-AXIOM and BRAMBLE blocks within all token limits. Material-safety review passed,
-but the frozen transport validator rejected mentions of DRIFT, EMBER, HEATH,
-and NORTH. Those four identities occur literally inside exact BRAMBLE as
-objects of BRAMBLE-owned relationships. The qualification therefore failed,
-and no W0/L1 continuation is authorized.
+sealed, and audited. Its exact route remains closed. A subsequent no-GPU
+historical-fixture audit now qualifies a minimal *apparatus distinction* among
+source-slot ownership, exact evidence basis, relationship referents,
+multi-source derived work, and version currentness. It does not qualify a live
+carrier, semantic persistence, or W0/L1 utility, and no provider continuation
+is authorized.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -30,6 +30,16 @@ from every related source identity. A many-to-many source can faithfully state
 relationships to other sources while remaining provenance-bound to its own
 exact bytes. The frozen validator could not represent that distinction. The
 output is not retried, repaired, or regraded; this exact L1 route is closed.
+
+The provenance audit uses ten frozen cases from Meridian, Bluehaven, Cedar,
+and E61. It admits the BRAMBLE-owned relationship while still blocking absent
+slot mutation and Bluehaven's unseen S07 completion. It requires genuine
+multi-source synthesis to live in separate task-native derived work and marks
+prior-version claims stale without deleting lineage. Two deliberately reversed
+claims pass the provenance checks and fail semantic review, preserving the
+boundary between custody and truth. See
+`PROVENANCE_LOCAL_RELATIONAL_CONTRACT.md` and
+`PROVENANCE_SEMANTICS_AUDIT.json`.
 
 ## Prior completed line
 
@@ -203,6 +213,15 @@ architecture promotion.
   comparison under the prospectively frozen safety criteria
 - `MERIDIAN_SOURCE_RELATION_TOPOLOGY_AUDIT.json` — post-run exact graph showing
   that all 16 sources contain cross-source identities across 66 directed edges
+- `PROVENANCE_LOCAL_RELATIONAL_CONTRACT.md` — minimal post-E61 distinction
+  among mutation scope, evidence basis, referents, assertion mode, support set,
+  and version currentness; no live format is selected
+- `PROVENANCE_SEMANTICS_CASES.json` — ten exact historical fixtures spanning
+  Meridian, E61, Bluehaven, and Cedar
+- `PROVENANCE_SEMANTICS_AUDIT.json` — deterministic zero-call result separating
+  mechanical provenance from semantic correctness
+- `PROVENANCE_SEMANTICS_AUDIT_RESULT.md` — literal offline disposition and
+  route limit
 - `task_meridian/` — fresh exact task, opaque source world, evaluator, candidate,
   catalogs, and custody lock
 - `STAGE0_PLAN.md` — prospective scientific and execution contract

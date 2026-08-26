@@ -1,0 +1,397 @@
+{
+  "schema": "provenance-semantics-cases-v0",
+  "date": "2026-08-25",
+  "scientific_role": "post-E61 offline apparatus design audit over frozen historical material; not a regrade, expression result, or utility result",
+  "worlds": {
+    "meridian": {
+      "source_root": "task_meridian",
+      "source_lock": "task_meridian/TASK_SOURCE_LOCK.json"
+    },
+    "bluehaven": {
+      "source_root": "task_bluehaven",
+      "source_lock": "task_bluehaven/TASK_SOURCE_LOCK.json"
+    },
+    "cedar": {
+      "source_root": "task",
+      "source_lock": "task/TASK_SOURCE_LOCK.json"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "P01_MERIDIAN_OWNER_LOCAL_FACT",
+      "world": "meridian",
+      "admitted_source_ids": ["AXIOM"],
+      "claim": {
+        "claim_id": "CLAIM_P01",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "AXIOM",
+          "source_version": "968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775"
+        },
+        "assertion_mode": "source_reported_fact",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "AXIOM",
+            "source_version": "968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775",
+            "start_line": 5,
+            "end_line": 7,
+            "span_sha256": "d24bc6777d5b3d8da29f8a4b0f66f53d3c48d57615543b9cc7a87c1ef8766bdf"
+          }
+        ],
+        "referents": [],
+        "statement": "The independent quality unit places or releases a lot hold; incident coordination, regulator notice, and procurement do not substitute for that release decision.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": true,
+        "currentness": "current",
+        "active": true,
+        "semantic_disposition": "pass"
+      }
+    },
+    {
+      "case_id": "P02_E61_BRAMBLE_RELATIONSHIP_OBJECTS",
+      "world": "meridian",
+      "admitted_source_ids": ["BRAMBLE"],
+      "claim": {
+        "claim_id": "CLAIM_P02",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "BRAMBLE",
+          "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4"
+        },
+        "assertion_mode": "source_reported_relationship",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "BRAMBLE",
+            "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4",
+            "start_line": 11,
+            "end_line": 12,
+            "span_sha256": "616450f6f71a2a538cc8ea3374e360775d8e2c4c50ca1eb4b11af99a128067ff"
+          }
+        ],
+        "referents": ["DRIFT", "EMBER", "HEATH", "NORTH"],
+        "statement": "HEATH defines valid confirmation and release rounds; DRIFT and EMBER changes make prior line samples stale, and NORTH reports prior lot-revision mismatches.",
+        "authority": "non_authoritative_derivative"
+      },
+      "historical_bindings": [
+        {
+          "path": "qualification_runs/2026-08-25-meridian-source-delta-expression-qualification-v0/calls/01-Q1_FIRST_ACTUAL_EXTERNALIZATION/assistant_content.txt",
+          "sha256": "52caa88ae2d459f8671f57f6e8bc813dba8e8a3fc7ce651932a00d6d4e7d203f",
+          "required_substrings": ["HEATH defines valid confirmation", "DRIFT and EMBER changes", "NORTH identified prior mismatched lot revisions"]
+        }
+      ],
+      "expected": {
+        "mechanical_valid": true,
+        "currentness": "current",
+        "active": true,
+        "semantic_disposition": "pass"
+      }
+    },
+    {
+      "case_id": "P03_MERIDIAN_ABSENT_SOURCE_SLOT_MUTATION",
+      "world": "meridian",
+      "admitted_source_ids": ["BRAMBLE"],
+      "claim": {
+        "claim_id": "CLAIM_P03",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "DRIFT",
+          "source_version": "f1b10a1300f8f42742f6b3e17b8c3eb28020ce93b5ef8e382d1dc015858cfc6b"
+        },
+        "assertion_mode": "source_reported_relationship",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "BRAMBLE",
+            "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4",
+            "start_line": 11,
+            "end_line": 11,
+            "span_sha256": "4e288cdbb2244379739697cba2a2e464e279b3a41f92ba14269d1417046118b7"
+          }
+        ],
+        "referents": ["EMBER"],
+        "statement": "DRIFT and EMBER changes make prior line samples stale.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": false,
+        "required_issues": ["slot_source_not_admitted", "source_report_evidence_basis_mismatch"],
+        "currentness": "current",
+        "active": false,
+        "semantic_disposition": "forbidden_absent_slot_mutation"
+      }
+    },
+    {
+      "case_id": "P04_MERIDIAN_DECLARED_ABSENT_SOURCE_AUTHORITY",
+      "world": "meridian",
+      "admitted_source_ids": ["BRAMBLE"],
+      "claim": {
+        "claim_id": "CLAIM_P04",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "BRAMBLE",
+          "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4"
+        },
+        "assertion_mode": "source_authoritative_state",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "BRAMBLE",
+            "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4",
+            "start_line": 11,
+            "end_line": 11,
+            "span_sha256": "4e288cdbb2244379739697cba2a2e464e279b3a41f92ba14269d1417046118b7"
+          }
+        ],
+        "referents": ["DRIFT"],
+        "statement": "DRIFT's current authoritative state is released.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": false,
+        "required_issues": ["assertion_mode_invalid"],
+        "currentness": "current",
+        "active": false,
+        "semantic_disposition": "fail_unsupported_authority"
+      }
+    },
+    {
+      "case_id": "P05_MERIDIAN_RELATION_PREDICATE_REVERSAL",
+      "world": "meridian",
+      "admitted_source_ids": ["BRAMBLE"],
+      "claim": {
+        "claim_id": "CLAIM_P05",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "BRAMBLE",
+          "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4"
+        },
+        "assertion_mode": "source_reported_relationship",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "BRAMBLE",
+            "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4",
+            "start_line": 11,
+            "end_line": 11,
+            "span_sha256": "4e288cdbb2244379739697cba2a2e464e279b3a41f92ba14269d1417046118b7"
+          }
+        ],
+        "referents": ["DRIFT", "EMBER"],
+        "statement": "DRIFT and EMBER changes keep prior line samples current.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": true,
+        "currentness": "current",
+        "active": true,
+        "semantic_disposition": "fail_predicate_reversal"
+      }
+    },
+    {
+      "case_id": "P06_MERIDIAN_DERIVED_MULTI_SOURCE_WORK",
+      "world": "meridian",
+      "admitted_source_ids": ["BRAMBLE", "DRIFT"],
+      "claim": {
+        "claim_id": "CLAIM_P06",
+        "record_kind": "derived_work",
+        "slot": {
+          "work_id": "MERIDIAN_DERIVED_001"
+        },
+        "assertion_mode": "derived_cross_source",
+        "attribution": "model_derived_from_support_set",
+        "evidence": [
+          {
+            "source_id": "BRAMBLE",
+            "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4",
+            "start_line": 11,
+            "end_line": 11,
+            "span_sha256": "4e288cdbb2244379739697cba2a2e464e279b3a41f92ba14269d1417046118b7"
+          },
+          {
+            "source_id": "DRIFT",
+            "source_version": "f1b10a1300f8f42742f6b3e17b8c3eb28020ce93b5ef8e382d1dc015858cfc6b",
+            "start_line": 7,
+            "end_line": 7,
+            "span_sha256": "39c4381111a193a0dc4167672eb67f745a57dab9386f976031073e34aea6b93b"
+          }
+        ],
+        "referents": ["DRIFT", "EMBER"],
+        "statement": "BRAMBLE reports that DRIFT or EMBER candidate changes stale prior samples, while DRIFT reports that alternate caps require EMBER qualification and a new sample plan.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": true,
+        "currentness": "current",
+        "active": true,
+        "semantic_disposition": "pass"
+      }
+    },
+    {
+      "case_id": "P07_MERIDIAN_DERIVED_CLAIM_IN_SOURCE_SLOT",
+      "world": "meridian",
+      "admitted_source_ids": ["BRAMBLE", "DRIFT"],
+      "claim": {
+        "claim_id": "CLAIM_P07",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "BRAMBLE",
+          "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4"
+        },
+        "assertion_mode": "derived_cross_source",
+        "attribution": "model_derived_from_support_set",
+        "evidence": [
+          {
+            "source_id": "BRAMBLE",
+            "source_version": "b5887292924f964689a1d92f2f9d7592183070bd5501148d5be30f58aa1619d4",
+            "start_line": 11,
+            "end_line": 11,
+            "span_sha256": "4e288cdbb2244379739697cba2a2e464e279b3a41f92ba14269d1417046118b7"
+          },
+          {
+            "source_id": "DRIFT",
+            "source_version": "f1b10a1300f8f42742f6b3e17b8c3eb28020ce93b5ef8e382d1dc015858cfc6b",
+            "start_line": 7,
+            "end_line": 7,
+            "span_sha256": "39c4381111a193a0dc4167672eb67f745a57dab9386f976031073e34aea6b93b"
+          }
+        ],
+        "referents": ["DRIFT", "EMBER"],
+        "statement": "BRAMBLE and DRIFT jointly imply that changed-cap candidates require renewed sample evidence and EMBER qualification.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": false,
+        "required_issues": ["derived_claim_requires_derived_work_slot"],
+        "currentness": "current",
+        "active": false,
+        "semantic_disposition": "forbidden_wrong_record_kind"
+      }
+    },
+    {
+      "case_id": "P08_MERIDIAN_PRIOR_VERSION_RETAINED_STALE",
+      "world": "meridian",
+      "admitted_source_ids": ["AXIOM"],
+      "current_version_overrides": {
+        "AXIOM": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "claim": {
+        "claim_id": "CLAIM_P08",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "AXIOM",
+          "source_version": "968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775"
+        },
+        "assertion_mode": "source_reported_fact",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "AXIOM",
+            "source_version": "968512cff889b2c6ebfd5c0e9a732ea29a12a9659fffbaa4ea010aba7cb4b775",
+            "start_line": 5,
+            "end_line": 7,
+            "span_sha256": "d24bc6777d5b3d8da29f8a4b0f66f53d3c48d57615543b9cc7a87c1ef8766bdf"
+          }
+        ],
+        "referents": [],
+        "statement": "The independent quality unit owns lot hold and release decisions.",
+        "authority": "non_authoritative_derivative"
+      },
+      "expected": {
+        "mechanical_valid": true,
+        "currentness": "stale",
+        "active": false,
+        "semantic_disposition": "historically_valid_but_not_current"
+      }
+    },
+    {
+      "case_id": "P09_BLUEHAVEN_UNSEEN_S07_SLOT",
+      "world": "bluehaven",
+      "admitted_source_ids": ["S01", "S02", "S03", "S04", "S05", "S06"],
+      "claim": {
+        "claim_id": "CLAIM_P09",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "S07",
+          "source_version": "fac720c08b109fa8d97fc5f442f68d314da3c8b2bcc5fbc2ee3c544328f0113e"
+        },
+        "assertion_mode": "source_reported_fact",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "S01",
+            "source_version": "c90f647766613d6e81f7cb2f7a2738bf3119e90ca8385ba3b2d7b9fadc4f7685",
+            "start_line": 11,
+            "end_line": 11,
+            "span_sha256": "de9a70f5a3d8f5e8135960ca94a3e5f11671b869a52152cf4b25d2a4bce0ddce"
+          }
+        ],
+        "referents": [],
+        "statement": "Bluehaven Hospital and North Dialysis require explicit priority allocations outside household minimums.",
+        "authority": "non_authoritative_derivative"
+      },
+      "historical_bindings": [
+        {
+          "path": "qualification_runs/2026-08-25-bluehaven-batched-maintenance-expression-qualification-v0/calls/01-Q1_INITIAL_THREE_RESULT_BATCH/assistant_content.txt",
+          "sha256": "d229fff79fcd41ab0237bd896bebc9ee10b40a458220c412246a82290864a92f",
+          "required_substrings": ["[S07] Hospitals/dialysis require explicit priority allocations", "[S11] Executable sequence", "[S12] Independent review blockers"]
+        }
+      ],
+      "expected": {
+        "mechanical_valid": false,
+        "required_issues": ["slot_source_not_admitted", "source_report_evidence_basis_mismatch"],
+        "currentness": "current",
+        "active": false,
+        "semantic_disposition": "forbidden_unsupported_completion"
+      }
+    },
+    {
+      "case_id": "P10_CEDAR_PROVENANCE_VALID_SEMANTIC_REVERSAL",
+      "world": "cedar",
+      "admitted_source_ids": ["S02"],
+      "claim": {
+        "claim_id": "CLAIM_P10",
+        "record_kind": "source_slot",
+        "slot": {
+          "source_id": "S02",
+          "source_version": "3554ad403cf74ba6e8f022832f5bd1665cef008ad1b9ed32affe2d96e3d4a736"
+        },
+        "assertion_mode": "source_reported_fact",
+        "attribution": "owner_source_reported",
+        "evidence": [
+          {
+            "source_id": "S02",
+            "source_version": "3554ad403cf74ba6e8f022832f5bd1665cef008ad1b9ed32affe2d96e3d4a736",
+            "start_line": 6,
+            "end_line": 6,
+            "span_sha256": "6afb479fd84a87798dea2e6135d56a7a1eae46e935820566a0034d06f3af6e81"
+          }
+        ],
+        "referents": [],
+        "statement": "The conservative trigger is a 5.8 km/h wind threshold combined with 42 percent relative humidity.",
+        "authority": "non_authoritative_derivative"
+      },
+      "historical_bindings": [
+        {
+          "path": "runs/2026-08-25-cedar-artifact-coupling-transfer-measured-v0/cells/A1_COUPLED/trajectory/world/candidate/BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
+          "sha256": "fbf4a0c46d3bf0080315619c5a84d502b85340ca65e0e87daff692ec51f70d56",
+          "required_substrings": ["5.8 km/h sustained wind threshold", "42 percent relative humidity"]
+        },
+        {
+          "path": "CEDAR_SEMANTIC_ADJUDICATION.json",
+          "sha256": "7cfa9c1c7cf85505894696fc122af4e59543b6be675fed850eef79c12a2a7b1b",
+          "required_substrings": ["5.8 hours of conservative fire-arrival time is restated as a 5.8 km/h sustained-wind threshold", "42 percent wind-shift probability is restated as 42 percent relative humidity"]
+        }
+      ],
+      "expected": {
+        "mechanical_valid": true,
+        "currentness": "current",
+        "active": true,
+        "semantic_disposition": "fail_unit_and_probability_reversal"
+      }
+    }
+  ]
+}
