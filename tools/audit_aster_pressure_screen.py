@@ -27,6 +27,11 @@ TASK = ROOT / "task_aster"
 AUDIT_NAME = "ASTER_PRESSURE_SCREEN_AUDIT.json"
 HANDOFF_NAME = "ASTER_PRESSURE_BOUNDARY_HANDOFF.json"
 FREEZE_COMMIT = "f91fdaff28b2c7ad760afa90877b284e26529814"
+WORLD_CLASS = AsterWorld
+SCHEMA_PREFIX = "aster"
+HANDOFF_SCHEMA_VERSION = "aster-pressure-boundary-handoff-v0"
+MODEL_LOCK_NAME = "ASTER_MODEL_PROFILE_LOCK.json"
+CONTRACT_NAME = "ASTER_PRESSURE_SCREEN_CONTRACT.json"
 
 
 def load(path: Path) -> Any:
@@ -84,7 +89,7 @@ def audit(
             failures.append(f"missing:{relative}")
     if failures:
         return {
-            "schema": "aster-pressure-screen-audit-v0",
+            "schema": f"{SCHEMA_PREFIX}-pressure-screen-audit-v0",
             "run_id": runner.RUN_ID,
             "passed": False,
             "failures": failures,
@@ -115,11 +120,11 @@ def audit(
     ):
         failures.append("result:freeze_commit")
     expected_result = {
-        "schema": "aster-pressure-screen-result-v0",
+        "schema": f"{SCHEMA_PREFIX}-pressure-screen-result-v0",
         "task_id": runner.TASK_ID,
         "task_source_lock_sha256": sha256_file(TASK / "TASK_SOURCE_LOCK.json"),
         "model_profile_lock_sha256": sha256_file(
-            root / "ASTER_MODEL_PROFILE_LOCK.json"
+            root / MODEL_LOCK_NAME
         ),
         "freeze_commit": FREEZE_COMMIT,
         "run_id": runner.RUN_ID,
@@ -149,15 +154,15 @@ def audit(
         if authorization.get(key) != expected:
             failures.append(f"authorization:{key}")
     expected_freeze = {
-        "schema": "aster-pressure-screen-freeze-binding-v0",
+        "schema": f"{SCHEMA_PREFIX}-pressure-screen-freeze-binding-v0",
         "commit": FREEZE_COMMIT,
         "run_id": runner.RUN_ID,
         "task_source_lock_sha256": sha256_file(TASK / "TASK_SOURCE_LOCK.json"),
         "model_profile_lock_sha256": sha256_file(
-            root / "ASTER_MODEL_PROFILE_LOCK.json"
+            root / MODEL_LOCK_NAME
         ),
         "screen_contract_sha256": sha256_file(
-            root / "ASTER_PRESSURE_SCREEN_CONTRACT.json"
+            root / CONTRACT_NAME
         ),
     }
     for key, expected in expected_freeze.items():
@@ -182,11 +187,11 @@ def audit(
         trace = []
     serialized = 0
     tokenizer = OfflineTokenizer()
-    replay_world: AsterWorld | None = None
+    replay_world: Any | None = None
     replay_construction_milestone: dict[str, Any] | None = None
     replay_check_binding: dict[str, Any] | None = None
     with tempfile.TemporaryDirectory() as replay_temporary:
-        replay_world = AsterWorld(TASK, Path(replay_temporary))
+        replay_world = WORLD_CLASS(TASK, Path(replay_temporary))
         replay_ledger = ResultLedger()
         prior_result_id: str | None = None
         for ordinal, row in enumerate(trace, 1):
@@ -269,7 +274,7 @@ def audit(
     if serialized != result.get("serialized_tokens"):
         failures.append("trace:serialized_total")
 
-    if boundary.get("schema") != "aster-authentic-interaction-pressure-boundary-v0":
+    if boundary.get("schema") != f"{SCHEMA_PREFIX}-authentic-interaction-pressure-boundary-v0":
         failures.append("boundary:schema")
     if boundary.get("task_id") != runner.TASK_ID:
         failures.append("boundary:task_id")
@@ -354,7 +359,7 @@ def audit(
         failures.append(f"boundary:ledger_or_relief:{type(exc).__name__}")
 
     audit_value = {
-        "schema": "aster-pressure-screen-audit-v0",
+        "schema": f"{SCHEMA_PREFIX}-pressure-screen-audit-v0",
         "run_id": runner.RUN_ID,
         "freeze_commit": freeze_commit,
         "task_id": runner.TASK_ID,
@@ -387,7 +392,7 @@ def audit(
         write_json(root / AUDIT_NAME, audit_value)
         if audit_value["passed"]:
             handoff = {
-                "schema_version": "aster-pressure-boundary-handoff-v0",
+                "schema_version": HANDOFF_SCHEMA_VERSION,
                 "status": "passed_authentic_interaction_pressure_boundary",
                 "run_id": runner.RUN_ID,
                 "run_root": str(run_root.relative_to(root)).replace("\\", "/"),

@@ -1,12 +1,13 @@
 # Qwen3.8 bounded-work system interaction scouts
 
 Status: E66 is preserved as a local negative for model-copied complete-line
-transport, not for grounded semantic expression. The next fresh system route
-is Solace: host-materialized exact anchor/context provenance, per-claim partial
-admission, and unchanged-state fallback are now provider-free qualified. There
-is deliberately no standalone expression gate. A treatment-free Solace
-pressure screen is frozen but requires commit-bound GPU authorization; semantic
-maintenance and measured continuation remain unauthorized.
+transport, not for grounded semantic expression. The fresh Solace route now has
+an audited authentic pressure fork: host-materialized exact anchor/context
+provenance, per-claim partial admission, and unchanged-state fallback are
+provider-free qualified, and six live actor-selected batches reached delivery
+pressure. There is deliberately no standalone expression gate. The complete
+W0/L1 interaction runner is frozen offline but requires new commit-bound GPU
+authorization.
 
 The exact Meridian route remains closed. The E63 no-GPU audit qualifies
 a minimal apparatus distinction among source-slot ownership, exact evidence,
@@ -60,6 +61,23 @@ prompt allowance at its sixth pair; externalizing only `RESULT-001` restores
 defect-bearing check, repair, stale-check recognition, current recheck, and
 closure with identical candidates. See `SOLACE_STAGE0_PLAN.md` and
 `SOLACE_STAGE0_PREFLIGHT.json`.
+
+The live Solace pressure screen then selected AURORA/BASTION, CIPHER/DELTA,
+ECHO/FALCON, GARNET/HELIX, INDIGO/JASPER, and KESTREL/LUMEN in six valid batch
+calls. Ten sources crossed actor boundaries; the sixth result remained pending.
+Ordinary delivery required 21,211 prompt tokens, 219 above allowance. The
+frozen first-fit transition externalizes only `RESULT-001`, yields 18,595
+tokens, and leaves 2,397 tokens of headroom. Exact replay, prompt recount,
+relief, custody, seal, and runtime release passed independent audit.
+
+The next live comparison starts from that exact common fork. W0 receives the
+first-fit transition and continues ordinary exact work. L1 receives the same
+transition plus charged fallible anchored maintenance. Per-claim rejection and
+zero-valid output are trajectory events, not gates: prior state remains and the
+actor continues. The runner follows both arms through induced acquisition,
+artifact work, effects, checks, repair/recheck opportunity, closure, external
+readiness, and cost. See `SOLACE_PRESSURE_SCREEN_RESULT.md` and
+`SOLACE_ANCHORED_INTERACTION_PLAN.md`.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -239,6 +257,19 @@ architecture promotion.
 - `SOLACE_PRESSURE_SCREEN_CONTRACT.json` — treatment-free authentic-pressure gate
 - `SOLACE_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request; no GPU or
   semantic continuation authority
+- `SOLACE_PRESSURE_SCREEN_RESULT.md` — six-call actor behavior, exact pressure,
+  first-fit feasibility, and scientific limits
+- `SOLACE_PRESSURE_SCREEN_AUDIT.json` — independent exact replay, token, custody,
+  relief, seal, and release audit
+- `SOLACE_PRESSURE_BOUNDARY_HANDOFF.json` — exact common W0/L1 fork and explicit
+  denial of further authority
+- `SOLACE_ANCHORED_INTERACTION_PLAN.md` — complete interaction question,
+  lifecycle, budgets, outcomes, and claim limits
+- `SOLACE_ANCHORED_INTERACTION_CONTRACT.json` — frozen W0/L1 execution contract
+- `SOLACE_ANCHORED_INTERACTION_PREFLIGHT.json` — provider-free fork, admission,
+  zero-valid fallback, action, evaluator, and budget qualification
+- `SOLACE_ANCHORED_INTERACTION_AUTHORIZATION_REQUEST.json` — inert request for
+  the next complete-system run
 - `reactive_runtime/anchored_provenance.py` — host-materialized anchor/context
   custody and fault-tolerant register admission
 - `task_solace/` — fresh exact task, relational source world, evaluator,

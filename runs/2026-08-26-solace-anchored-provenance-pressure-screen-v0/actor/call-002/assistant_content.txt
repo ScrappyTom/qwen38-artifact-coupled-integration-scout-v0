@@ -1,0 +1,1 @@
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"CIPHER","start_line":1},{"end_line":64,"source_id":"DELTA","start_line":1}]}

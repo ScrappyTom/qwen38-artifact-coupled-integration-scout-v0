@@ -1,0 +1,12 @@
+{
+  "schema_version": "solace-anchored-interaction-authorization-request-v0",
+  "run_id": "2026-08-26-solace-anchored-provenance-interaction-measured-v0",
+  "scope": "solace_anchored_provenance_interaction_measured_v0",
+  "configuration_order": ["W0_DIRECT_EXACT_WORK_FRESH", "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE"],
+  "maximum_actor_calls": 68,
+  "maximum_maintenance_calls": 18,
+  "maximum_provider_calls": 86,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "expected_user_quote_template": "I authorize the frozen Solace anchored-provenance interaction run at commit {commit}, run ID 2026-08-26-solace-anchored-provenance-interaction-measured-v0: configurations W0_DIRECT_EXACT_WORK_FRESH then L1_FAULT_TOLERANT_ANCHORED_PROVENANCE; at most 68 actor calls and 18 maintenance calls, at most 86 provider calls total, one attempt per call, zero retries."
+}
