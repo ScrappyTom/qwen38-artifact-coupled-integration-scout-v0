@@ -1,14 +1,19 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: offline Stage 0 is complete for the selected Solace
-construction-to-verification lifecycle ablation. It starts from the exact L1
-terminal candidate and compares a fresh exact artifact frame without versus
-with the frozen 20-claim register. Evaluator v1 exposes the reconciled four
-substantive defects and heading failure, bounded exact patches avoid complete
-document retransmission, and provider-free fixtures reach check, repair,
-current recheck, and submission in both configurations. GPU execution remains
-separately unauthorized. See `SOLACE_VERIFICATION_LIFECYCLE_PLAN.md` and
-`SOLACE_VERIFICATION_LIFECYCLE_PREFLIGHT.json`.
+Status: the Solace construction-to-verification lifecycle ablation is complete,
+sealed, and independently audited. Both arms repaired the four frozen
+substantive concept groups but stopped under unrelievable verification-history
+pressure before a current final recheck. A0, without the construction register,
+reached ten calls, four checks, and four repair patches. A1, with the frozen
+register, made one broad four-domain patch but stopped after four calls because
+its pending effect could not fit even after both source results were
+externalized. Direct source review finds both final artifacts strong partial:
+A0 retains an ill-typed pump-flow/power relation; A1 invents forty-eight samples
+per round and weakens the all-node hydraulic restoration gate. Neither arm was
+ready or submitted. The result supports phase-conditional semantic scaffolding
+and exposes append-only verification state as the next lifecycle burden. See
+`SOLACE_VERIFICATION_LIFECYCLE_RESULT.md` and
+`SOLACE_VERIFICATION_LIFECYCLE_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
 
 The frozen Solace W0/L1 whole-system comparison is complete, sealed,
 and independently audited. W0 wrote a fourteen-source evidence ledger, spent
@@ -100,13 +105,18 @@ task-native evidence ledger continued to carry all fourteen sources after the
 register stopped growing.
 
 The strong behavioral and partial-artifact benefit did not extend through the
-complete lifecycle. Both arms ended under pressure with no eligible result body
-left to demote. L1's final effect was not delivered into another actor decision,
-and verification/repair/closure were never reached. The next eligible work is
-offline design of a pressure-triggered construction-to-verification lifecycle
-ablation; no successor GPU run is authorized. See
-`SOLACE_PRESSURE_SCREEN_RESULT.md`, `SOLACE_ANCHORED_INTERACTION_PLAN.md`, and
-`SOLACE_ANCHORED_INTERACTION_RESULT.md`.
+complete lifecycle. Both original arms ended under pressure with no eligible
+result body left to demote. The follow-on verification ablation then showed
+that retaining the full frozen register enabled broader one-shot repair but
+consumed the capacity needed for effect uptake and recheck. Removing it allowed
+a longer exact check/patch loop, but append-only verification chronology still
+became unrelievable. The next program question is fresh-world transfer of a
+phase-conditional system: temporary acquisition/construction scaffold, exact
+incremental artifact, scaffold demotion at verification, and bounded mechanical
+replacement of stale check/effect history. No successor GPU run is authorized.
+See `SOLACE_PRESSURE_SCREEN_RESULT.md`,
+`SOLACE_ANCHORED_INTERACTION_RESULT.md`, and
+`SOLACE_VERIFICATION_LIFECYCLE_RESULT.md`.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -314,10 +324,26 @@ architecture promotion.
   direct review and mechanical-evaluator reconciliation
 - `SOLACE_ANCHORED_INTERACTION_ECONOMICS_AUDIT.json` — actor/maintenance cost,
   action, register-yield, effect-uptake, and artifact comparison
+- `SOLACE_VERIFICATION_LIFECYCLE_PLAN.md` — frozen construction-to-verification
+  interaction question, donor, comparator, patch/check surface, and limits
+- `SOLACE_VERIFICATION_LIFECYCLE_PREFLIGHT.json` — provider-free exact donor,
+  evaluator-v1, patch, currentness, recheck, and closure reachability
+- `SOLACE_VERIFICATION_LIFECYCLE_RESULT.md` — measured A0/A1 trajectory,
+  semantic reconciliation, economics, lifecycle failure, and next systems
+  question
+- `SOLACE_VERIFICATION_LIFECYCLE_QUALITATIVE_TRANSCRIPT_APPENDIX.md` — all 14
+  actor turns with visible information, artifact uptake, demand shifts, and
+  phase interpretation
+- `SOLACE_VERIFICATION_LIFECYCLE_AUDIT.json` — seal, authorization, provider,
+  token, action, relief, runtime-release, and offline candidate-evaluation audit
+- `SOLACE_VERIFICATION_LIFECYCLE_SEMANTIC_ADJUDICATION.json` — exact
+  candidate-bound source review and concept-checker relationship reconciliation
 - `tools/audit_solace_anchored_interaction.py` — reusable exact measured-run
   checker
 - `tools/audit_solace_interaction_economics.py` — deterministic systems and
   marginal-cost aggregate
+- `tools/audit_solace_verification_lifecycle.py` — deterministic measured-run
+  and sealed-final-candidate audit
 - `reactive_runtime/anchored_provenance.py` — host-materialized anchor/context
   custody and fault-tolerant register admission
 - `task_solace/` — fresh exact task, relational source world, evaluator,

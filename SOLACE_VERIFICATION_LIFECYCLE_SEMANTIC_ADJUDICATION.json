@@ -1,0 +1,128 @@
+{
+  "schema": "solace-verification-lifecycle-semantic-adjudication-v0",
+  "run_id": "2026-08-27-solace-verification-lifecycle-measured-v0",
+  "freeze_commit": "a2c9270c676e2d0d8427b119f81ec39b3f21b2d1",
+  "task": {
+    "task_id": "solace-water-recovery-decision-v0",
+    "task_sha256": "bf6c990b631ed03655edd80f4bb474f28e0785c7b3cb6c13ef0a884d1d5d0f96",
+    "source_lock": "task_solace/TASK_SOURCE_LOCK.json"
+  },
+  "mechanical_evaluator": {
+    "evaluator_id": "solace-water-evaluator-v1",
+    "config_sha256": "c299897cb85a12d2b188746d1ee977e8c39b60a655741ef13b20c394269d729d",
+    "implementation_sha256": "da61dbf9cc8f9d5068d33470eccaab9dd0f5ec5274782ccb3d11806705a9dcda",
+    "status": "active_as_mechanical_concept_precheck_with_relationship_level_reconciliation"
+  },
+  "review": {
+    "reviewer_id": "codex-direct-source-bound-review-v1",
+    "condition_blinded": false,
+    "evidence": [
+      "exact task contract",
+      "exact frozen source corpus",
+      "exact donor and final candidate bytes",
+      "all actor actions and candidate effects",
+      "all candidate-bound check projections",
+      "offline evaluator-v1 projections"
+    ],
+    "claim_limit": "This is a condition-aware direct adjudication, not an independent replication or an exhaustive validation of every sentence in either artifact. It reconciles material relationship errors that the frozen concept-presence evaluator cannot detect."
+  },
+  "records": [
+    {
+      "configuration_id": "A0_EXACT_ARTIFACT_ONLY",
+      "candidate_sha256": "1ace388ed8143b2c983a7edeee2f3d5ca7aad74c7228115440b9a1f6da62c0d1",
+      "decision_file_sha256": "5bfa54ee1aae1c9edc12346eb68964c452682e761d290c969bf917fe580d9224",
+      "ledger_file_sha256": "bcc9d7f537633744508752c123cb95d4f0c460bfb954a6771a4fa1ad6ec15bea",
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false,
+      "artifact_progress": "substantive_repair_without_current_recheck_or_closure",
+      "requirement_summary": {
+        "met": 11,
+        "partial": 1,
+        "not_met": 0
+      },
+      "criterion_dispositions": [
+        {"criterion_id": "Q01", "status": "met"},
+        {"criterion_id": "Q02", "status": "met", "reason": "The final decision preserves 35 psi at every critical node, three consecutive 30-minute windows, current 42 psi, and the separation from water-quality clearance."},
+        {"criterion_id": "Q03", "status": "met", "reason": "The final decision correctly keeps the current forty-eight-sample confirmatory set distinct from the separate two-round and sixteen-hour clearance rules."},
+        {"criterion_id": "Q04", "status": "partial", "reason": "The final decision adds 14.5 MGD, 12.8 MGD, staged 10/30/60/100-percent demand, and the two-window gate, but retains the donor sentence saying pump capacity must not exceed a 6.5 MW power value plus generator margin. That is a dimensionally incoherent capacity relationship not licensed by DELTA or ECHO."},
+        {"criterion_id": "Q05", "status": "met"},
+        {"criterion_id": "Q06", "status": "met"},
+        {"criterion_id": "Q07", "status": "met"},
+        {"criterion_id": "Q08", "status": "met"},
+        {"criterion_id": "Q09", "status": "met", "reason": "The final decision preserves 700 ms p95 and 1,200 ms p99 as observations rather than deadlines."},
+        {"criterion_id": "Q10", "status": "met"},
+        {"criterion_id": "Q11", "status": "met"},
+        {"criterion_id": "Q12", "status": "met"},
+        {"criterion_id": "decision_heading_order", "status": "fail", "reason": "The actor changed capitalization across the existing eleven headings rather than converting the document to the frozen exact eight-heading sequence."}
+      ],
+      "blocking_requirements": [
+        "Remove or repair the dimensionally incoherent DELTA/ECHO pump-capacity-to-MW sentence.",
+        "Conform the decision to the exact frozen eight-heading sequence.",
+        "Deliver the final candidate effect into a later actor decision, run a current candidate-bound check, and obtain independent readiness adjudication before closure."
+      ],
+      "notes": "Four repair patches and four checks converted all frozen concept gates to pass, but the last heading patch was not model-visible afterward and the final exact candidate was never rechecked in the measured trajectory."
+    },
+    {
+      "configuration_id": "A1_EXACT_ARTIFACT_PLUS_FROZEN_REGISTER",
+      "candidate_sha256": "ee2a3d8204a32b6dbf262d36a46c5e80621e1b6ea64bb93609ea5b186397fac8",
+      "decision_file_sha256": "6258548ca94817b0caf6451cc942d48fc7196fda21c023d4b07083225a505459",
+      "ledger_file_sha256": "bcc9d7f537633744508752c123cb95d4f0c460bfb954a6771a4fa1ad6ec15bea",
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false,
+      "artifact_progress": "one_shot_substantive_repair_without_effect_uptake_or_recheck",
+      "requirement_summary": {
+        "met": 10,
+        "partial": 2,
+        "not_met": 0
+      },
+      "criterion_dispositions": [
+        {"criterion_id": "Q01", "status": "met"},
+        {"criterion_id": "Q02", "status": "partial", "reason": "The patch describes three windows below 35 psi as a low-pressure condition but does not preserve the positive restoration gate of at least 35 psi at every critical node for three consecutive windows."},
+        {"criterion_id": "Q03", "status": "partial", "reason": "The patch says the two required rounds comprise forty-eight samples per round. CIPHER says only that the current confirmatory set has forty-eight samples, while separately requiring two complete rounds at least sixteen hours apart. The per-round relationship is unsupported."},
+        {"criterion_id": "Q04", "status": "met", "reason": "The patch correctly replaces the donor's dimensionally incoherent capacity sentence with the 14.5 MGD cap, 12.8 MGD inspected flow, staged percentages, and two-window gate."},
+        {"criterion_id": "Q05", "status": "met"},
+        {"criterion_id": "Q06", "status": "met"},
+        {"criterion_id": "Q07", "status": "met"},
+        {"criterion_id": "Q08", "status": "met"},
+        {"criterion_id": "Q09", "status": "met", "reason": "The patch preserves both latency percentiles as observations rather than deadlines."},
+        {"criterion_id": "Q10", "status": "met"},
+        {"criterion_id": "Q11", "status": "met"},
+        {"criterion_id": "Q12", "status": "met"},
+        {"criterion_id": "decision_heading_order", "status": "fail", "reason": "The existing eleven non-contractual headings were unchanged."}
+      ],
+      "blocking_requirements": [
+        "Restore the exact BASTION all-critical-node positive restoration gate.",
+        "Separate the current forty-eight-sample set from the two-round clearance requirement instead of asserting forty-eight samples per round.",
+        "Conform the decision to the exact frozen eight-heading sequence.",
+        "Deliver the final candidate effect into a later actor decision, run a current candidate-bound check, and obtain independent readiness adjudication before closure."
+      ],
+      "notes": "The frozen register plus exact DELTA/INDIGO bodies and externalized BASTION/CIPHER receipts supported one broad four-section patch. Its pending effect could not fit into another actor decision even after every eligible source body was externalized."
+    }
+  ],
+  "mechanical_evaluator_reconciliation": [
+    {
+      "configuration_id": "A0_EXACT_ARTIFACT_ONLY",
+      "criterion_id": "Q04_pumping",
+      "mechanical_status": "pass",
+      "active_semantic_status": "partial",
+      "reason": "Concept presence does not detect the retained dimensional mismatch between pump flow capacity and MW power."
+    },
+    {
+      "configuration_id": "A1_EXACT_ARTIFACT_PLUS_FROZEN_REGISTER",
+      "criterion_id": "Q02_hydraulics",
+      "mechanical_status": "pass",
+      "active_semantic_status": "partial",
+      "reason": "The required strings appear, but the positive all-node restoration gate became a negative low-pressure condition."
+    },
+    {
+      "configuration_id": "A1_EXACT_ARTIFACT_PLUS_FROZEN_REGISTER",
+      "criterion_id": "Q03_sampling",
+      "mechanical_status": "pass",
+      "active_semantic_status": "partial",
+      "reason": "The required strings appear, but the artifact invents a per-round relation not stated by CIPHER."
+    }
+  ],
+  "program_implication": "The register retained marginal repair salience, but it did not earn verification-phase residency. It consumed 6,646 additional initial prompt tokens, shortened the measured repair lifecycle from ten calls to four, prevented its only candidate effect from entering another actor decision, and coincided with two relationship errors that a concept-only checker missed. Exact artifact plus candidate-bound feedback produced a slower but semantically closer final candidate, while still exhausting chronology before current verification and closure."
+}
