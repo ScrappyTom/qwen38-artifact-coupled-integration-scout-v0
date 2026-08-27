@@ -1,0 +1,75 @@
+{
+  "schema": "orchard-phase-lifecycle-measured-contract-v0",
+  "run_id": "2026-08-27-orchard-phase-lifecycle-measured-v0",
+  "scope": "orchard_phase_lifecycle_measured_v0",
+  "task_id": "orchard-biologics-restart-decision-v0",
+  "pressure_handoff": "ORCHARD_PRESSURE_BOUNDARY_HANDOFF.json",
+  "configuration_order": [
+    "F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION",
+    "P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION"
+  ],
+  "common_before_transition": [
+    "same_exact_pressure_fork",
+    "same_deterministic_first_fit_relief",
+    "same_fallible_anchored_maintenance_on_source_externalization",
+    "same_per_claim_admission_and_unchanged_state_fallback",
+    "same_exact_incremental_evidence_matrix_and_decision",
+    "same_actor_and_maintenance_seeds",
+    "same_mechanical_construction_milestone"
+  ],
+  "transition": {
+    "action": "begin_verification",
+    "actor_selected": true,
+    "mechanical_preconditions": [
+      "frozen_title_and_heading_order",
+      "at_least_900_words",
+      "at_least_7_distinct_exact_source_citations"
+    ],
+    "semantic_readiness_asserted": false
+  },
+  "F0_after_transition": [
+    "retain_frozen_semantic_scaffold",
+    "retain_exact_current_artifact",
+    "append_verification_actions_results_effects_and_checks",
+    "allow_deterministic_first_fit_relief_if_needed"
+  ],
+  "P1_after_transition": [
+    "externalize_semantic_scaffold_with_exact_handle",
+    "retain_exact_current_artifact",
+    "replace_model_facing_verification_projection_after_every_action",
+    "bind_current_candidate_latest_effect_and_check_currency",
+    "retain_full_exact_history_externally"
+  ],
+  "budgets": {
+    "maximum_construction_actor_calls_per_cell": 24,
+    "maximum_verification_actor_calls_per_cell": 12,
+    "maximum_actor_calls_per_cell": 36,
+    "maximum_maintenance_calls_per_cell": 12,
+    "maximum_actor_calls_total": 72,
+    "maximum_maintenance_calls_total": 24,
+    "maximum_provider_calls_total": 96,
+    "maximum_serialized_tokens_per_cell": 1800000,
+    "maximum_wall_seconds_per_cell": 12000,
+    "attempts_per_call": 1,
+    "retries": 0
+  },
+  "stop_rules": [
+    "submission_proposed",
+    "construction_call_budget_exhausted_before_phase_transition",
+    "verification_call_budget_exhausted",
+    "actor_call_budget_exhausted",
+    "maintenance_call_budget_exhausted",
+    "serialized_token_budget_exhausted",
+    "wall_clock_budget_exhausted",
+    "context_pressure_without_feasible_relief",
+    "apparatus_failure"
+  ],
+  "evaluation": {
+    "candidate_bound_check_actor_visible_only_when_requested": true,
+    "external_final_evaluation_both_arms": true,
+    "readiness_actor_visible": false,
+    "submission_self_authorizes": false
+  },
+  "causal_claim": "compound phase-lifecycle configuration comparison; it cannot isolate scaffold demotion from verification-state replacement",
+  "gpu_authorized": false
+}

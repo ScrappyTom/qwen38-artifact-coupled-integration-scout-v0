@@ -1,7 +1,7 @@
 # Orchard phase-conditional lifecycle Stage 0 plan
 
-Status: offline Stage 0 qualified; zero provider calls; only the separately
-authorized pressure screen may run next
+Status: offline Stage 0 and the live pressure screen passed; the measured F0/P1
+runner is now being frozen from the exact audited handoff
 
 Date: 2026-08-27
 
@@ -89,8 +89,9 @@ does not semantically summarize or repair it.
 7. check, bounded repair, effect uptake, current recheck, external readiness,
    and correct closure or an exact terminal failure.
 
-The measured runner will be frozen only after the authentic pressure handoff is
-available. The pressure screen cannot provide treatment utility evidence.
+The authentic pressure handoff is now available. The measured runner binds it
+exactly and preserves the prospective compound contrast. The pressure screen
+itself provides no treatment utility evidence.
 
 ## Resource contract
 

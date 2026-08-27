@@ -31,5 +31,5 @@
   "automatic_phase_discovery": false,
   "readiness_actor_visible": false,
   "gpu_authorized": false,
-  "current_next_operation": "treatment_free_pressure_screen"
+  "current_next_operation": "separately_authorized_frozen_F0_P1_measured_interaction"
 }

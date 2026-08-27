@@ -52,7 +52,12 @@ def verify() -> dict:
         failures.append("screen_budget_mismatch")
     if contract.get("gpu_authorized") is not False or request.get("authorized") is not False:
         failures.append("authorization_not_inert")
-    if design.get("component_isolation_claim") is not False or design.get("current_next_operation") != "treatment_free_pressure_screen":
+    if design.get("component_isolation_claim") is not False or design.get(
+        "current_next_operation"
+    ) not in {
+        "treatment_free_pressure_screen",
+        "separately_authorized_frozen_F0_P1_measured_interaction",
+    }:
         failures.append("design_scope")
     runner = (ROOT / "tools" / "run_orchard_pressure_screen.py").read_text(encoding="utf-8")
     for literal in (
@@ -75,7 +80,7 @@ def verify() -> dict:
         "prospective_relieved_tokens": pressure.get("relieved_prompt_tokens"),
         "provider_free_cells": len(fixtures),
         "relationship_red_team_cases": len(preflight.get("relationship_red_team", [])),
-        "next_operation": "separately_authorized_treatment_free_pressure_screen",
+        "next_operation": design.get("current_next_operation"),
     }
 
 

@@ -1,0 +1,16 @@
+{
+  "schema": "orchard-phase-lifecycle-authorization-request-v0",
+  "authorized": false,
+  "scope": "orchard_phase_lifecycle_measured_v0",
+  "run_id": "2026-08-27-orchard-phase-lifecycle-measured-v0",
+  "configuration_order": [
+    "F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION",
+    "P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION"
+  ],
+  "maximum_actor_calls": 72,
+  "maximum_maintenance_calls": 24,
+  "maximum_provider_calls": 96,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "expected_user_quote_template": "I authorize the frozen Orchard phase-lifecycle interaction run at commit {commit}, run ID 2026-08-27-orchard-phase-lifecycle-measured-v0: configurations F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION then P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION; at most 72 actor calls and 24 maintenance calls, at most 96 provider calls total, one attempt per call, zero retries."
+}

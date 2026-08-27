@@ -110,8 +110,6 @@ def phase_lifecycle_actor_actions(configuration_id: str, *, phase: str) -> tuple
             "patch_decision",
             "replace_decision",
             "begin_verification",
-            "run_check",
-            "submit",
         )
     if phase == "verification":
         return (
