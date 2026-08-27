@@ -1,0 +1,38 @@
+{
+  "schema": "keystone-bounded-causal-verification-interaction-design-v0",
+  "task_id": "keystone-rail-restoration-decision-v0",
+  "status": "offline_stage0_qualified_pressure_screen_frozen",
+  "fresh_world": true,
+  "configuration_order": [
+    "V0_CURRENT_ONLY",
+    "V1_BOUNDED_CAUSAL_CONTINUITY"
+  ],
+  "common_system": [
+    "exact_external_custody",
+    "positive_savings_first_fit_relief",
+    "exact_reopen",
+    "temporary_anchored_semantic_scaffold",
+    "exact_incremental_task_artifact",
+    "actor_selected_verification_transition",
+    "current_candidate_bound_check",
+    "unique_candidate_artifact_section_bound_repair",
+    "effect_uptake",
+    "current_recheck",
+    "independent_candidate_bound_readiness",
+    "closure"
+  ],
+  "difference": {
+    "V0_CURRENT_ONLY": "new verification observations replace prior rejected-action and recurrence state",
+    "V1_BOUNDED_CAUSAL_CONTINUITY": "unresolved rejected mutation and exact recurrence persist until candidate change"
+  },
+  "host_forbidden": [
+    "select_repair",
+    "infer_actor_intent",
+    "force_repair",
+    "force_submission",
+    "assert_readiness_to_actor"
+  ],
+  "measured_runner_frozen": false,
+  "pressure_screen_frozen": true,
+  "gpu_authorized": false
+}

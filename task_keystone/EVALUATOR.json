@@ -1,0 +1,85 @@
+{
+  "schema_version": "keystone-rail-evaluator-v0",
+  "evaluator_id": "keystone-rail-evaluator-v0",
+  "task_id": "keystone-rail-restoration-decision-v0",
+  "ledger_title": "# Keystone Evidence and Decision Matrix",
+  "decision_title": "# Keystone Regional Rail Restoration Decision",
+  "decision_word_range": [1400, 1900],
+  "construction_milestone_minimum_words": 900,
+  "construction_milestone_minimum_sources": 7,
+  "minimum_unique_sources": 10,
+  "minimum_ledger_sources": 8,
+  "source_ids": ["MANDATE", "TRACK", "SIGNAL", "POWER", "ROLLING", "CREW", "WEATHER", "FUEL", "CYBER", "TELEMETRY", "LOADS", "PASSENGER", "LINEAGE", "REVIEW"],
+  "decision_headings": [
+    "Authority, scope, and operating states",
+    "Track, route, and environmental restrictions",
+    "Signals, cyber controls, and telemetry",
+    "Traction power, fuel, and staged load",
+    "Rolling stock, crews, and movement readiness",
+    "Freight, passengers, accessibility, and communication",
+    "Execution, rollback, and contingencies",
+    "Verification, blockers, falsifiers, and closure"
+  ],
+  "relation_requirements": {
+    "K01_authority": {
+      "expected": "Network control authorizes engineering movement; rail-safety director authorizes passenger service after current evidence; a check is not authority.",
+      "patterns": ["network control.{0,100}(engineering )?movement", "rail-safety director.{0,100}passenger service", "(automated|mechanical) check.{0,80}(not|neither).{0,80}(authority|authorize)"]
+    },
+    "K02_track": {
+      "expected": "3.2 mm is one run; gate is <=4.0 mm in two consecutive runs; bridge limit is 25 mph.",
+      "patterns": ["3\\.2 millimeters.{0,100}(observ|run)", "4\\.0 millimeters.{0,100}two consecutive", "25 miles per hour"]
+    },
+    "K03_signal": {
+      "expected": "99.2 percent is observed test coverage; gate is 100 percent critical vectors and two route-proving trains; crossing warning is 27 versus 25 seconds minimum.",
+      "patterns": ["99\\.2 percent.{0,100}(test|observ)", "100 percent.{0,100}two consecutive.{0,60}route-proving", "27 seconds.{0,100}25 seconds"]
+    },
+    "K04_power": {
+      "expected": "34.0 MW installed versus 26.5 usable; 24.7 kV within 24.0-25.2 at every node for three windows; backup 11.8 MW for 18 hours.",
+      "patterns": ["34\\.0 megawatts.{0,100}26\\.5 megawatts", "24\\.7 kilovolts.{0,100}24\\.0.{0,40}25\\.2.{0,100}every.{0,30}node", "three consecutive.{0,40}(fifteen|15)-minute", "11\\.8 megawatts.{0,80}(eighteen|18) hours"]
+    },
+    "K05_rolling": {
+      "expected": "14 of 16 units plus one verified rescue locomotive; brake pressure 72 psi within 68-76.",
+      "patterns": ["fourteen.{0,40}sixteen.{0,180}rescue locomotive", "72 psi.{0,100}68.{0,20}76 psi"]
+    },
+    "K06_crew": {
+      "expected": "Simultaneous role counts; maximum 12 hours on and minimum 10 off; four mutual-aid engineers at 06:15 +/-50 minutes.",
+      "patterns": ["ten engineers.{0,80}ten conductors.{0,80}two signal.{0,80}two traction-power", "twelve hours.{0,80}ten consecutive hours", "four engineers.{0,80}06:15.{0,80}(fifty|50) minutes"]
+    },
+    "K07_weather": {
+      "expected": "14 mm/h observed, watch above 16 and stop above 24; crosswind 42 mph p95 with 50 passenger and 58 empty-stock gates.",
+      "patterns": ["14 millimeters per hour.{0,100}16.{0,80}24", "42 miles per hour.{0,50}p95.{0,100}50.{0,80}58"]
+    },
+    "K08_logistics": {
+      "expected": "Fuel 18 emergency versus 11 peak hours; switch machines 3.5 route-days versus sand 2.4 operating days; six buses 07:10 +/-40 minutes.",
+      "patterns": ["(eighteen|18) hours.{0,100}(eleven|11) hours", "3\\.5 route-days.{0,100}2\\.4 operating days", "six accessible buses.{0,80}07:10.{0,80}(forty|40) minutes"]
+    },
+    "K09_cyber": {
+      "expected": "Account disabled 11:25 UTC, K12 key unexposed, break-glass two hours with dual approval, retention 210 days versus six years.",
+      "patterns": ["11:25 utc", "(k12.{0,80}(not exposed|remains current)|(not exposed|remains current).{0,80}k12)", "two hours.{0,100}dual approval", "210 days.{0,100}six years"]
+    },
+    "K10_telemetry": {
+      "expected": "93 percent coverage leaves seven unobserved; latency 720 ms p95 and 1,180 ms p99; warning 24.2 kV versus stop 23.8.",
+      "patterns": ["93 percent.{0,80}seven percent.{0,80}unobserv", "720.{0,30}(milliseconds|ms).{0,30}p95.{0,80}1,?180.{0,30}(milliseconds|ms).{0,30}p99", "warning.{0,80}24\\.2 kilovolts.{0,100}stop.{0,80}23\\.8"]
+    },
+    "K11_freight_passenger": {
+      "expected": "Bridge load 20.5 tonnes supersedes 23.0; H71 separation 600 m; 86 percent acknowledgement leaves 14 uncertainty; call center 1,600/hour for 3 hours versus 2,100 forecast.",
+      "patterns": ["20\\.5 tonnes.{0,100}23\\.0", "h71.{0,100}600-meter", "86 percent.{0,100}(fourteen|14) percent.{0,80}(uncertainty|unacknowledged)", "1,?600.{0,80}(three|3) hours.{0,100}2,?100"]
+    },
+    "K12_currentness": {
+      "expected": "K12 binds T8/I17/P6/C14/key K12; K11 is historical unless transferred and rechecked; closure requires independent authorized acceptance.",
+      "patterns": ["k12.{0,50}t8.{0,50}i17.{0,50}p6.{0,50}c14.{0,50}key set k12", "k11.{0,100}historical.{0,100}(recheck|rechecked)", "independent.{0,100}(accept|acceptance).{0,100}(authorized|owner)"]
+    }
+  },
+  "forbidden_relation_patterns": {
+    "track_gate_reversal": ["one 3.2-millimeter run is sufficient", "3.2 millimeters is the service gate"],
+    "signal_gate_reversal": ["99.2 percent proves safety", "one route-proving train is sufficient"],
+    "power_sum_reversal": ["60.5 megawatts available", "34.0 plus 26.5 megawatts"],
+    "rolling_readiness_reversal": ["fourteen units alone are sufficient", "72 psi readiness percentage"],
+    "coverage_health_reversal": ["93 percent healthy", "seven percent failed"],
+    "self_authorized_readiness": ["semantic register proves readiness", "mechanical check proves readiness", "submission proves readiness"]
+  },
+  "negation_aware_forbidden_patterns": {
+    "backup_duration_reversal": ["eighteen days", "18 days"],
+    "crew_rule_reversal": ["ten hours on duty and twelve hours off"]
+  }
+}

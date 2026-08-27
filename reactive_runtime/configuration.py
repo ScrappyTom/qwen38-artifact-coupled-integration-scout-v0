@@ -18,6 +18,10 @@ PHASE_LIFECYCLE_CONFIGURATIONS = (
     "F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION",
     "P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION",
 )
+CAUSAL_VERIFICATION_CONFIGURATIONS = (
+    "V0_CURRENT_ONLY",
+    "V1_BOUNDED_CAUSAL_CONTINUITY",
+)
 
 
 @dataclass(frozen=True)
@@ -114,6 +118,34 @@ def phase_lifecycle_actor_actions(configuration_id: str, *, phase: str) -> tuple
     if phase == "verification":
         return (
             "patch_decision",
+            "run_check",
+            "read_source",
+            "read_batch",
+            "reopen_exact",
+            "submit",
+        )
+    raise ValueError(f"unknown phase: {phase}")
+
+
+def causal_verification_actor_actions(
+    configuration_id: str, *, phase: str
+) -> tuple[str, ...]:
+    if configuration_id not in CAUSAL_VERIFICATION_CONFIGURATIONS:
+        raise ValueError(f"unknown causal-verification configuration: {configuration_id}")
+    if phase == "construction":
+        return (
+            "read_source",
+            "read_batch",
+            "reopen_exact",
+            "replace_evidence_ledger",
+            "upsert_decision_section",
+            "patch_decision",
+            "replace_decision",
+            "begin_verification",
+        )
+    if phase == "verification":
+        return (
+            "replace_artifact_section",
             "run_check",
             "read_source",
             "read_batch",

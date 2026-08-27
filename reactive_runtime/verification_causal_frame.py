@@ -145,16 +145,29 @@ def build_verification_causal_frame(
     signatures = [action_signature(row.get("parsed_action")) for row in epoch]
     signature_counts = Counter(value for value in signatures if value)
     latest_signature = signatures[-1] if signatures else None
+    active_rejection_signature = (
+        action_signature(latest_rejection.get("parsed_action"))
+        if latest_rejection
+        else None
+    )
+    recurrence_signature = (
+        active_rejection_signature
+        if active_rejection_signature
+        and signature_counts[active_rejection_signature] > 1
+        else latest_signature
+        if latest_signature and signature_counts[latest_signature] > 1
+        else None
+    )
     recurrence = None
-    if latest_signature and signature_counts[latest_signature] > 1:
+    if recurrence_signature:
         matching = [
             _event(row, index + 1)
             for index, row in enumerate(trace)
-            if action_signature(row.get("parsed_action")) == latest_signature
+            if action_signature(row.get("parsed_action")) == recurrence_signature
             and index > last_change_index
         ]
         recurrence = {
-            "action_signature": latest_signature,
+            "action_signature": recurrence_signature,
             "action": matching[-1]["action"],
             "target": matching[-1]["target"],
             "count_in_current_candidate_epoch": len(matching),

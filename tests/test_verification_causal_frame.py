@@ -79,6 +79,31 @@ def test_candidate_effect_clears_prior_rejection_epoch() -> None:
     assert frame["latest_candidate_effect"]["result_id"] == "RESULT-2"
 
 
+def test_repeated_rejection_recurrence_survives_newer_observation() -> None:
+    rejected = {"action": "replace_artifact_section", "section_heading": "Power"}
+    trace = [
+        row(1, rejected, rejection="section_version_mismatch"),
+        row(
+            2,
+            {"action": "read_source", "source_id": "POWER", "start_line": 1, "end_line": 20},
+            result_id="RESULT-2",
+            result_kind="source_observation",
+        ),
+        row(3, rejected, rejection="section_version_mismatch"),
+        row(
+            4,
+            {"action": "read_source", "source_id": "POWER", "start_line": 21, "end_line": 40},
+            result_id="RESULT-4",
+            result_kind="source_observation",
+        ),
+    ]
+    frame = build_verification_causal_frame(trace, history_handle="history://fixture")
+    assert frame["latest_attempt"]["action"] == "read_source"
+    assert frame["active_rejected_action"]["actor_call"] == 3
+    assert frame["recurrence"]["action"] == "replace_artifact_section"
+    assert frame["recurrence"]["count_in_current_candidate_epoch"] == 2
+
+
 def test_section_bound_repair_is_unique_versioned_and_exact() -> None:
     document = "# Decision\n\n## Alpha\nOld alpha.\n\n## Beta\nOld beta.\n"
     sections = {row["heading"]: row for row in section_spans(document)}

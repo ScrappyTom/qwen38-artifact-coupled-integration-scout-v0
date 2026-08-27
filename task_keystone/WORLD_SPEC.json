@@ -1,0 +1,13 @@
+{
+  "schema_version": "keystone-rail-world-v0",
+  "task_id": "keystone-rail-restoration-decision-v0",
+  "world_kind": "deterministic_synthetic_regional_rail_restoration",
+  "source_count": 14,
+  "candidate_files": [
+    "EVIDENCE_INTEGRATION_LEDGER.md",
+    "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
+  ],
+  "authoritative_external_custody": true,
+  "semantic_derivatives_authoritative": false,
+  "readiness_requires_external_adjudication": true
+}

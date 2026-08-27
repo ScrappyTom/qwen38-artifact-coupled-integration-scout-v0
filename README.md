@@ -1,6 +1,17 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the Orchard F0/P1 phase-lifecycle interaction is complete, sealed, and
+Status: the fresh Keystone bounded-causal verification Stage 0 is complete
+offline with zero provider calls. The fourteen-source regional-rail world,
+candidate-bound evaluator, common bound-repair surface, V0/V1 replacement
+laws, provider-free repair/recheck/closure path, treatment-free pressure-screen
+runner, and exact custody lock pass. The permitted deterministic ingress path
+reaches authentic pressure after ten source deliveries; first-fit relief makes
+the packet feasible. The next eligible operation is the separately authorized
+Keystone pressure screen. No GPU run or measured V0/V1 runner is authorized.
+See `KEYSTONE_STAGE0_PLAN.md`, `KEYSTONE_STAGE0_RESULT.md`, and
+`KEYSTONE_STAGE0_PREFLIGHT.json`.
+
+The Orchard F0/P1 phase-lifecycle interaction is complete, sealed, and
 independently audited. Both configurations followed the same pressured
 scaffold-plus-incremental-artifact construction trajectory through eight
 maintenance calls, nine exact candidate mutations, and an actor-selected
@@ -14,7 +25,7 @@ call budget. P1 is a stronger artifact (`strong_partial`) but remains
 `ORCHARD_PHASE_LIFECYCLE_RESULT.md` and
 `ORCHARD_PHASE_LIFECYCLE_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
 
-The next route has now passed an offline cross-run gate. A deterministic audit
+The cross-run gate preceding Keystone covers a deterministic audit that
 covers 157 sealed actor calls in ten cells across four independent worlds.
 Action-transport failure and functional recurrence occur in Architecture,
 Solace, and Orchard; rejected mutation recurrence occurs in Architecture and
@@ -26,8 +37,7 @@ frame is 1,297 tokenizer tokens; the exact Orchard fixture completes a
 provider-free repair effect and current recheck without semantic host judgment.
 This is apparatus reachability only—actor utility is untested. See
 `CROSS_RUN_CAUSAL_CONTINUITY_AUDIT.md` and
-`NEXT_SYSTEM_INTERACTION_BOUNDED_CAUSAL_VERIFICATION_TRANSFER.md`. No GPU run is
-authorized.
+`NEXT_SYSTEM_INTERACTION_BOUNDED_CAUSAL_VERIFICATION_TRANSFER.md`.
 
 The Solace construction-to-verification lifecycle ablation is complete,
 sealed, and independently audited. Both arms repaired the four frozen
@@ -88,7 +98,7 @@ The gate's frozen stop rule closes this exact Aster carrier at this boundary.
 No measured continuation is authorized. Solace is a new route, not a repair or
 regrading of this frozen Aster result.
 
-## Current fresh system route
+## Prior completed interaction route
 
 Orchard is the latest completed fresh-world route. It compares the same anchored
 semantic-scaffold plus exact-incremental-artifact construction system in both
@@ -114,9 +124,24 @@ evidence recovery, admitted repair, effect uptake, and a current recheck, while
 F0 stopped before repair. It also reveals the opposite risk: once a rejected
 patch was displaced by the latest observation, P1's bounded frame carried no
 explicit recurrence fact and the actor repeated one exact source read four
-times. The next live route is unselected. Any successor must test a complete
-fresh-world lifecycle with bounded mechanical causal continuity and uniquely
-bindable repair, not tune this Orchard donor.
+times. Keystone is the fresh Stage 0 successor: it tests a complete lifecycle
+with bounded mechanical causal continuity and uniquely bindable repair rather
+than tuning this Orchard donor.
+
+## Keystone offline artifacts
+
+- `KEYSTONE_STAGE0_PLAN.md` — fresh whole-system question, parity, activation,
+  lifecycle, resource, and claim limits
+- `KEYSTONE_STAGE0_PREFLIGHT.json` — authentic prospective pressure and two
+  complete provider-free V0/V1 lifecycle receipts
+- `KEYSTONE_STAGE0_READINESS_ADJUDICATION.json` — exact fixture-candidate
+  readiness binding; explicitly inapplicable to future measured candidates
+- `KEYSTONE_INTERACTION_DESIGN.json` — common system and sole V0/V1 difference
+- `KEYSTONE_PRESSURE_SCREEN_CONTRACT.json` — treatment-free activation gate
+- `KEYSTONE_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request;
+  authorization must bind the eventual clean commit externally
+- `task_keystone/` — exact rail-restoration world, evaluator, candidates,
+  catalog, and custody lock
 
 ## Completed Solace route
 
