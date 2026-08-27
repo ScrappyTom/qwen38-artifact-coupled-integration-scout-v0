@@ -47,6 +47,8 @@ SEED = 531_701
 MAX_CALLS = 28
 MAX_SERIALIZED = 800_000
 MAX_WALL = 8_000
+MIN_QUALIFYING_SOURCES = 4
+MIN_QUALIFYING_DOMAINS = 3
 PROMPT_LIMIT = 20_992
 ACTOR_MAX_TOKENS = 4_096
 TASK = ROOT / "task_solace"
@@ -194,9 +196,9 @@ def main() -> int:
                     pending=pending, ledger=ledger, world=world
                 )
                 ineligible: list[str] = []
-                if len(activation.qualifying_sources) < 4:
+                if len(activation.qualifying_sources) < MIN_QUALIFYING_SOURCES:
                     ineligible.append("insufficient_delivered_source_coverage")
-                if len(activation.qualifying_domains) < 3:
+                if len(activation.qualifying_domains) < MIN_QUALIFYING_DOMAINS:
                     ineligible.append("insufficient_delivered_evidence_domains")
                 if world.submitted:
                     ineligible.append("candidate_submitted_before_pressure")
@@ -226,6 +228,7 @@ def main() -> int:
                     "messages": messages,
                     "result_ledger": ledger.as_dict(include_exact_content=True),
                     "candidate_sha256": world.candidate_sha256,
+                    "candidate_version": world.candidate_version,
                     "candidate_packet": world.candidate_packet(),
                     "candidate_construction_milestone": world.construction_milestone(),
                     "current_check_binding": world.current_check_binding(),

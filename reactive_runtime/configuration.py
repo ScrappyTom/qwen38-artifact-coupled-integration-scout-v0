@@ -14,6 +14,10 @@ ANCHORED_RELATIONAL_CONFIGURATIONS = (
     "W0_DIRECT_EXACT_WORK_FRESH",
     "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE",
 )
+PHASE_LIFECYCLE_CONFIGURATIONS = (
+    "F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION",
+    "P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION",
+)
 
 
 @dataclass(frozen=True)
@@ -91,3 +95,31 @@ def anchored_relational_actor_actions(configuration_id: str) -> tuple[str, ...]:
     if configuration_id not in ANCHORED_RELATIONAL_CONFIGURATIONS:
         raise ValueError(f"unknown anchored-provenance configuration: {configuration_id}")
     return ordinary_actions()
+
+
+def phase_lifecycle_actor_actions(configuration_id: str, *, phase: str) -> tuple[str, ...]:
+    if configuration_id not in PHASE_LIFECYCLE_CONFIGURATIONS:
+        raise ValueError(f"unknown phase-lifecycle configuration: {configuration_id}")
+    if phase == "construction":
+        return (
+            "read_source",
+            "read_batch",
+            "reopen_exact",
+            "replace_evidence_ledger",
+            "upsert_decision_section",
+            "patch_decision",
+            "replace_decision",
+            "begin_verification",
+            "run_check",
+            "submit",
+        )
+    if phase == "verification":
+        return (
+            "patch_decision",
+            "run_check",
+            "read_source",
+            "read_batch",
+            "reopen_exact",
+            "submit",
+        )
+    raise ValueError(f"unknown phase: {phase}")

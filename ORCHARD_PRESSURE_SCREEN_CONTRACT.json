@@ -1,0 +1,26 @@
+{
+  "schema": "orchard-phase-lifecycle-pressure-screen-contract-v0",
+  "run_id": "2026-08-27-orchard-phase-lifecycle-pressure-screen-v0",
+  "scope": "orchard_phase_lifecycle_pressure_screen_v0",
+  "task_id": "orchard-biologics-restart-decision-v0",
+  "seed": 642901,
+  "maximum_actor_calls": 30,
+  "maximum_model_calls": 30,
+  "maximum_serialized_tokens": 900000,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "semantic_maintenance_present": false,
+  "treatment_present": false,
+  "minimum_qualifying_sources": 10,
+  "minimum_qualifying_domains": 10,
+  "pressure_definition": "the next exact actor-selected result makes the ordinary packet exceed 20992 prompt tokens",
+  "eligibility": [
+    "at_least_10_qualifying_sources_delivered",
+    "at_least_10_evidence_domains_delivered",
+    "candidate_not_submitted",
+    "positive_first_fit_relief_exists",
+    "relief_externalizes_at_least_one_source_observation"
+  ],
+  "claim_limit": "This screen can establish an authentic fresh Orchard pressure fork and treatment-free activation geometry. It provides no F0/P1 utility evidence.",
+  "gpu_authorized": false
+}

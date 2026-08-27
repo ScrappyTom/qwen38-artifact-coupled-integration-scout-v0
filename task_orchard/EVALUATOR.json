@@ -1,0 +1,86 @@
+{
+  "schema_version": "orchard-biologics-evaluator-v0",
+  "evaluator_id": "orchard-biologics-evaluator-v0",
+  "task_id": "orchard-biologics-restart-decision-v0",
+  "ledger_title": "# Orchard Evidence and Decision Matrix",
+  "decision_title": "# Orchard Biologics Restart Decision",
+  "decision_word_range": [1400, 1900],
+  "construction_milestone_minimum_words": 900,
+  "construction_milestone_minimum_sources": 7,
+  "minimum_unique_sources": 10,
+  "minimum_ledger_sources": 8,
+  "source_ids": ["CHARTER", "CULTURE", "STERILE", "CHILL", "CURRENT", "ASSAY", "GUARD", "SUPPLY", "SAFETY", "SIGNAL", "COMMUNE", "CHANGE", "REVIEW"],
+  "decision_headings": [
+    "Authority, scope, and restart states",
+    "Process, genealogy, and hold-time controls",
+    "Aseptic, analytical, and cold-chain release gates",
+    "Utilities, materials, staffing, and staged restart",
+    "Cybersecurity, telemetry, and evidence custody",
+    "Safety, environmental, and communication continuity",
+    "Execution, rollback, and contingencies",
+    "Verification, blockers, falsifiers, and closure"
+  ],
+  "relation_requirements": {
+    "R01_authority": {
+      "expected": "Only the independent quality unit releases a lot; only the site head authorizes commercial restart after current evidence.",
+      "patterns": ["quality unit.{0,100}(release|releases).{0,50}lot", "site head.{0,100}(commercial )?restart", "mechanical check.{0,60}(not|does not).{0,60}(release|restart)"]
+    },
+    "R02_process": {
+      "expected": "72 percent is one observed batch; the gate is at least 68 percent in two consecutive engineering batches; harvest hold is six hours at 2-8 C.",
+      "patterns": ["72 percent.{0,100}(observ|engineering batch)", "68 percent.{0,100}two consecutive", "six hours.{0,80}(2 to 8|2-8).{0,30}(degrees|celsius)"]
+    },
+    "R03_aseptic": {
+      "expected": "Zero contaminated units among 9,600 is one media fill; three consecutive fills are required; Grade A action and Grade B alert limits retain locations and units.",
+      "patterns": ["zero.{0,60}9,?600", "three consecutive.{0,40}media fill", "1 cfu.{0,80}grade a", "3 cfu.{0,80}grade b"]
+    },
+    "R04_cold_chain": {
+      "expected": "-70 C set point with -80 to -60 C allowed range; lane-4 reached -54 C for 22 minutes and requires stability review.",
+      "patterns": ["(minus 70|-70).{0,100}(minus 80|-80).{0,30}(minus 60|-60)", "lane-4.{0,100}(minus 54|-54).{0,50}(twenty-two|22) minutes", "stability review"]
+    },
+    "R05_utilities": {
+      "expected": "WFI is 82 C; every return must remain at least 80 C for three 30-minute windows; usable power is 5.4 MW versus 7.1 MW installed; generator is 3.2 MW for 28 hours.",
+      "patterns": ["82 degrees.{0,100}80 degrees.{0,100}every return", "three consecutive.{0,40}(thirty|30)-minute", "5\\.4 mw.{0,100}7\\.1 mw", "3\\.2 mw.{0,80}(twenty-eight|28) hours"]
+    },
+    "R06_quality": {
+      "expected": "91 percent potency is an observation within 85-115 percent; endotoxin 0.18 EU/mL is below 0.25 EU/mL; legacy 0.50 is superseded.",
+      "patterns": ["91 percent.{0,100}(85.{0,20}115|85 to 115)", "0\\.18 eu.{0,100}0\\.25 eu", "0\\.50 eu.{0,80}supersed"]
+    },
+    "R07_cyber": {
+      "expected": "Service account disabled at 09:40 UTC; K7 signing key not exposed; break-glass expires after two hours with dual approval.",
+      "patterns": ["09:40 utc", "(k7.{0,80}(not exposed|remains current)|not exposed.{0,80}k7)", "two hours.{0,100}dual approval"]
+    },
+    "R08_supply": {
+      "expected": "Diesel covers 28 hours at emergency load and 17 at full production; stoppers cover 4.2 days, resin 2.6 batches; five operators start 05:30 +/-75 minutes.",
+      "patterns": ["(twenty-eight|28) hours.{0,100}(seventeen|17) hours", "4\\.2.{0,50}days.{0,100}2\\.6.{0,50}batches", "five.{0,40}operators.{0,80}05:30.{0,80}(seventy-five|75) minutes"]
+    },
+    "R09_environment": {
+      "expected": "Notice is within 24 hours of determination; N-12 allows temporary neutralization; above 0.021 mg/L requires stop.",
+      "patterns": ["(twenty-four|24) hours.{0,80}determination", "n-12", "0\\.021.{0,40}(milligrams per liter|mg/l).{0,80}(stop|halt)"]
+    },
+    "R10_observation": {
+      "expected": "94 percent coverage leaves six percent unobserved; 81 C is warning and 79 C stop; latency is 640 ms p95 and 1,050 ms p99.",
+      "patterns": ["94 percent.{0,80}six percent.{0,80}unobserv", "warning.{0,80}81 degrees.{0,100}(stop|halt).{0,80}79 degrees", "640.{0,30}(milliseconds|ms).{0,30}p95.{0,80}1,?050.{0,30}(milliseconds|ms).{0,30}p99"]
+    },
+    "R11_communications": {
+      "expected": "89 percent acknowledged leaves 11 percent communication uncertainty; hotline 1,800/hour for four hours versus forecast 2,400/hour.",
+      "patterns": ["89 percent.{0,100}(eleven|11) percent.{0,80}(uncertainty|unacknowledged)", "1,?800.{0,80}(four|4) hours.{0,100}2,?400"]
+    },
+    "R12_currentness": {
+      "expected": "Current candidate R9 binds B14/F8/U11/K7; older R8 evidence is historical unless transferred and rechecked; closure needs independent review and authorized acceptance.",
+      "patterns": ["r9.{0,50}b14.{0,50}f8.{0,50}u11.{0,50}k7", "r8.{0,100}historical.{0,100}(recheck|rechecked)", "independent.{0,100}(accept|acceptance).{0,100}(authorized|owner)"]
+    }
+  },
+  "forbidden_relation_patterns": {
+    "yield_gate_reversal": ["72 percent restart gate", "one 72 percent batch is sufficient"],
+    "aseptic_limit_reversal": ["3 cfu grade a action", "1 cfu grade b alert"],
+    "cold_chain_sign_reversal": ["minus 20 degrees acceptable", "-20 degrees acceptable"],
+    "power_sum_reversal": ["12.5 mw available", "7.1 plus 5.4 mw"],
+    "quality_limit_reversal": ["0.50 eu/ml current limit", "0.25 eu/ml legacy"],
+    "coverage_health_reversal": ["94 percent healthy", "six percent contaminated"],
+    "self_authorized_readiness": ["semantic register proves readiness", "mechanical check proves readiness", "submission proves readiness"]
+  },
+  "negation_aware_forbidden_patterns": {
+    "generator_duration_reversal": ["twenty-eight days", "28 days"],
+    "clock_reversal": ["twenty-four minutes", "24 minutes"]
+  }
+}

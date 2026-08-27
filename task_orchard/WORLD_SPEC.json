@@ -1,0 +1,13 @@
+{
+  "schema_version": "orchard-biologics-world-v0",
+  "task_id": "orchard-biologics-restart-decision-v0",
+  "world_kind": "deterministic_synthetic_biomanufacturing_restart",
+  "source_count": 13,
+  "candidate_files": [
+    "EVIDENCE_INTEGRATION_LEDGER.md",
+    "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
+  ],
+  "authoritative_external_custody": true,
+  "semantic_derivatives_authoritative": false,
+  "readiness_requires_external_adjudication": true
+}

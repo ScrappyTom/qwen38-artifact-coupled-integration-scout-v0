@@ -1,0 +1,35 @@
+{
+  "schema": "orchard-phase-conditional-lifecycle-interaction-design-v0",
+  "task_id": "orchard-biologics-restart-decision-v0",
+  "unit_of_analysis": "complete_pressure_to_scaffold_to_incremental_artifact_to_phase_transition_to_verification_repair_recheck_readiness_and_closure_trajectory",
+  "configuration_order": [
+    "F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION",
+    "P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION"
+  ],
+  "common_before_transition": [
+    "exact_external_custody",
+    "ordinary_actor_selected_ingress",
+    "deterministic_first_fit_relief",
+    "fallible_anchored_provenance_maintenance",
+    "partial_claim_admission",
+    "exact_incremental_evidence_matrix_and_decision",
+    "same_model_seed_tools_and_budgets",
+    "mechanical_construction_milestone"
+  ],
+  "F0_after_transition": [
+    "retain_semantic_scaffold",
+    "retain_exact_incremental_artifact",
+    "append_verification_actions_checks_and_effects"
+  ],
+  "P1_after_transition": [
+    "externalize_semantic_scaffold_with_exact_handle",
+    "retain_exact_incremental_artifact",
+    "replace_model_facing_verification_projection_after_each_action",
+    "retain_full_exact_history_externally"
+  ],
+  "component_isolation_claim": false,
+  "automatic_phase_discovery": false,
+  "readiness_actor_visible": false,
+  "gpu_authorized": false,
+  "current_next_operation": "treatment_free_pressure_screen"
+}

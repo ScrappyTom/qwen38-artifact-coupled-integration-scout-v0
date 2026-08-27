@@ -1,6 +1,10 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the Solace construction-to-verification lifecycle ablation is complete,
+Status: Orchard offline Stage 0 now qualifies a fresh phase-conditional
+whole-lifecycle transfer with zero provider calls. The next eligible operation
+is a separately authorized, treatment-free 30-call pressure screen; no GPU call
+is authorized by the repository. The Solace construction-to-verification
+lifecycle ablation is complete,
 sealed, and independently audited. Both arms repaired the four frozen
 substantive concept groups but stopped under unrelievable verification-history
 pressure before a current final recheck. A0, without the construction register,
@@ -60,6 +64,33 @@ No measured continuation is authorized. Solace is a new route, not a repair or
 regrading of this frozen Aster result.
 
 ## Current fresh system route
+
+Orchard is now the active fresh-world route. It compares the same anchored
+semantic-scaffold plus exact-incremental-artifact construction system in both
+arms, then changes the complete verification lifecycle at a prospectively
+mechanical construction milestone. F0 retains the scaffold and append-only
+verification history. P1 externalizes the scaffold and replaces model-facing
+candidate/effect/check state after every verification action while preserving
+the full exact ledger externally. This is deliberately a joint lifecycle
+interaction, not component isolation.
+
+The thirteen-source biologics world contains 48,759 bytes and 17,189 tokenizer
+tokens. Prospective actor-permitted ingress crosses the prompt allowance at
+21,116 tokens before REVIEW is read; first-fit externalization of only
+`RESULT-001` restores 18,473. Provider-free fixtures reach construction,
+mechanical phase transition, relation-sensitive check, bounded repair, stale-
+check recognition, current recheck, and submission in both configurations.
+Four deliberate relation reversals are caught. P1's verification projection
+shrinks from 8,014 tokens after repair to 7,086 after recheck instead of
+appending history. These are apparatus facts, not utility evidence. See
+`ORCHARD_STAGE0_PLAN.md`, `ORCHARD_STAGE0_RESULT.md`, and
+`ORCHARD_PHASE_LIFECYCLE_STAGE0_PREFLIGHT.json`.
+
+The next eligible operation is only the treatment-free Orchard pressure screen.
+The measured F0/P1 runner will be frozen after an exact live fork exists. No GPU
+run is authorized.
+
+## Completed Solace route
 
 Solace compares `W0_DIRECT_EXACT_WORK_FRESH` with
 `L1_FAULT_TOLERANT_ANCHORED_PROVENANCE` on a new fourteen-source regional-water

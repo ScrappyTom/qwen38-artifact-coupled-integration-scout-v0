@@ -41,6 +41,7 @@ ACTION_FIELDS: dict[str, dict[str, type]] = {
     "upsert_decision_section": {"heading": str, "body": str},
     "patch_decision": {"edits": list},
     "replace_decision": {"content": str},
+    "begin_verification": {},
     "run_check": {},
     "submit": {},
 }

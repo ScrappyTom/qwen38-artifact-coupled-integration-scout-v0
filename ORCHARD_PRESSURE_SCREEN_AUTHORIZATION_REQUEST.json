@@ -1,0 +1,11 @@
+{
+  "schema": "orchard-phase-lifecycle-pressure-screen-authorization-request-v0",
+  "authorized": false,
+  "authorized_freeze_commit": null,
+  "authorized_scopes": ["orchard_phase_lifecycle_pressure_screen_v0"],
+  "authorized_run_id": "2026-08-27-orchard-phase-lifecycle-pressure-screen-v0",
+  "maximum_model_calls": 30,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "authorization_must_remain_outside_repository": true
+}
