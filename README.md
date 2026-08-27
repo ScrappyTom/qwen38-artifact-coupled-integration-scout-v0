@@ -1,9 +1,13 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: Orchard offline Stage 0 now qualifies a fresh phase-conditional
-whole-lifecycle transfer with zero provider calls. The next eligible operation
-is a separately authorized, treatment-free 30-call pressure screen; no GPU call
-is authorized by the repository. The Solace construction-to-verification
+Status: the Orchard treatment-free pressure screen is complete, sealed, and
+independently audited. Six valid actor-selected two-source batches delivered ten
+sources and left COMMUNE/CHANGE pending. Ordinary delivery requires 21,152
+prompt tokens, 160 above allowance; externalizing only the exact-backed
+CHARTER/CULTURE result restores 18,509 tokens and 2,483 tokens of headroom. The
+candidate remains untouched and no treatment occurred. The next work is offline
+freezing of the measured F0/P1 lifecycle runner; no measured GPU continuation is
+authorized. The Solace construction-to-verification
 lifecycle ablation is complete,
 sealed, and independently audited. Both arms repaired the four frozen
 substantive concept groups but stopped under unrelievable verification-history
@@ -86,9 +90,10 @@ appending history. These are apparatus facts, not utility evidence. See
 `ORCHARD_STAGE0_PLAN.md`, `ORCHARD_STAGE0_RESULT.md`, and
 `ORCHARD_PHASE_LIFECYCLE_STAGE0_PREFLIGHT.json`.
 
-The next eligible operation is only the treatment-free Orchard pressure screen.
-The measured F0/P1 runner will be frozen after an exact live fork exists. No GPU
-run is authorized.
+The authentic actor-selected pressure fork now exists and passes exact replay,
+prompt recount, first-fit relief, seal, and runtime-release audit. See
+`ORCHARD_PRESSURE_SCREEN_RESULT.md`. The measured F0/P1 runner will be frozen
+offline from that exact handoff. No measured GPU run is authorized.
 
 ## Completed Solace route
 

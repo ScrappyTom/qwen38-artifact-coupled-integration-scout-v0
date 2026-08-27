@@ -32,6 +32,7 @@ SCHEMA_PREFIX = "aster"
 HANDOFF_SCHEMA_VERSION = "aster-pressure-boundary-handoff-v0"
 MODEL_LOCK_NAME = "ASTER_MODEL_PROFILE_LOCK.json"
 CONTRACT_NAME = "ASTER_PRESSURE_SCREEN_CONTRACT.json"
+HANDOFF_CLAIM_LIMIT = "This handoff qualifies one exact common pre-treatment pressure fork. It establishes neither live relational expression nor W0/L1 utility and authorizes no continuation."
 
 
 def load(path: Path) -> Any:
@@ -431,7 +432,7 @@ def audit(
                 "result_ledger_sha256": sha256_file(run_root / "RESULT_LEDGER.json"),
                 "run_seal_sha256": sha256_file(run_root / "RUN_SEAL.json"),
                 "screen_audit_sha256": sha256_file(root / AUDIT_NAME),
-                "claim_limit": "This handoff qualifies one exact common pre-treatment pressure fork. It establishes neither live relational expression nor W0/L1 utility and authorizes no continuation.",
+                "claim_limit": HANDOFF_CLAIM_LIMIT,
             }
             write_json(root / HANDOFF_NAME, handoff)
     return audit_value
