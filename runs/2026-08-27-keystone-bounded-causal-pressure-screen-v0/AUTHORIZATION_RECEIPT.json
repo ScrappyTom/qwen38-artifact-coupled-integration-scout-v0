@@ -1,0 +1,1 @@
+{"attempts_per_call":1,"authorized":true,"authorized_freeze_commit":"d13582a9371512ee6d279ade461a88f05096f9f9","authorized_run_id":"2026-08-27-keystone-bounded-causal-pressure-screen-v0","authorized_scopes":["keystone_bounded_causal_pressure_screen_v0"],"maximum_model_calls":30,"retries":0}

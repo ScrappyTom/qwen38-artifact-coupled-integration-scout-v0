@@ -2,8 +2,32 @@
 
 Date: 2026-08-27
 
-Status: selected for fresh-world offline Stage 0; cross-run audit and mechanical
-contract preflight pass; no fresh task, frozen runner, or GPU authority yet
+Status: fresh Keystone Stage 0 and the treatment-free pressure screen are
+complete. The screen reached authentic pressure after nine calls but before
+the frozen ten-source/ten-domain interaction gate, so no measured V0/V1 fork
+qualified. Offline activation-geometry reconciliation is the only eligible
+successor; no further GPU call is authorized.
+
+## Pressure-screen disposition
+
+The actor delivered eight complete, novel source observations and acquired a
+ninth pending CYBER result. Ordinary delivery required 22,267 prompt tokens
+against the 20,992-token allowance. First-fit replacement of `RESULT-001`
+alone would reduce the packet to 20,648 tokens.
+
+This is a mechanical pressure success but an interaction-activation negative.
+The prospective comparison required ten delivered sources and ten delivered
+evidence domains. Because pending host acquisition is not model delivery, the
+fork had only eight of each. The exact measured continuation is therefore
+ineligible and remains unauthorized.
+
+The result exposes an interaction in the apparatus design: a no-relief common
+prefix cannot reach Keystone's intended evidence breadth before its first
+pressure event. A future design may use deterministic relief as common
+pre-treatment infrastructure and fork only at a later, prospectively frozen
+boundary. It must retain actor-selected ingress, cannot inject useful evidence,
+and must still qualify construction/verification interaction rather than merely
+another capacity event. See `KEYSTONE_PRESSURE_SCREEN_RESULT.md`.
 
 ## Research question
 

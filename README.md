@@ -1,15 +1,16 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the fresh Keystone bounded-causal verification Stage 0 is complete
-offline with zero provider calls. The fourteen-source regional-rail world,
-candidate-bound evaluator, common bound-repair surface, V0/V1 replacement
-laws, provider-free repair/recheck/closure path, treatment-free pressure-screen
-runner, and exact custody lock pass. The permitted deterministic ingress path
-reaches authentic pressure after ten source deliveries; first-fit relief makes
-the packet feasible. The next eligible operation is the separately authorized
-Keystone pressure screen. No GPU run or measured V0/V1 runner is authorized.
-See `KEYSTONE_STAGE0_PLAN.md`, `KEYSTONE_STAGE0_RESULT.md`, and
-`KEYSTONE_STAGE0_PREFLIGHT.json`.
+Status: the fresh Keystone bounded-causal verification pressure screen is
+complete, sealed, and independently audited. The actor made nine clean novel
+source reads and reached authentic pending-result pressure at 22,267 tokens,
+1,275 over the 20,992-token allowance. Deterministic first-fit relief of only
+`RESULT-001` would restore feasibility at 20,648 tokens. The fork is nonetheless
+non-qualifying: only eight sources and eight evidence domains had crossed a
+later actor boundary, below the frozen ten/ten interaction gate. No treatment,
+maintenance, construction, or measured V0/V1 continuation ran. The next
+eligible work is offline activation-geometry reconciliation; no further GPU
+run is authorized. See `KEYSTONE_PRESSURE_SCREEN_RESULT.md` and
+`KEYSTONE_PRESSURE_SCREEN_AUDIT.json`.
 
 The Orchard F0/P1 phase-lifecycle interaction is complete, sealed, and
 independently audited. Both configurations followed the same pressured
@@ -140,6 +141,10 @@ than tuning this Orchard donor.
 - `KEYSTONE_PRESSURE_SCREEN_CONTRACT.json` — treatment-free activation gate
 - `KEYSTONE_PRESSURE_SCREEN_AUTHORIZATION_REQUEST.json` — inert request;
   authorization must bind the eventual clean commit externally
+- `KEYSTONE_PRESSURE_SCREEN_RESULT.md` — sealed nine-call screen result,
+  qualitative trajectory, claim limit, and non-qualifying disposition
+- `KEYSTONE_PRESSURE_SCREEN_AUDIT.json` — independent replay, custody,
+  pressure, relief, frozen-threshold, and release audit
 - `task_keystone/` — exact rail-restoration world, evaluator, candidates,
   catalog, and custody lock
 

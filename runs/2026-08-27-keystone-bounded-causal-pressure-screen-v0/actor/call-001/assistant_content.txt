@@ -1,0 +1,6 @@
+{
+  "action": "read_source",
+  "end_line": 86,
+  "source_id": "MANDATE",
+  "start_line": 1
+}
