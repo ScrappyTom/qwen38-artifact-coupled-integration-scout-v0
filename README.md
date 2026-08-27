@@ -14,6 +14,21 @@ call budget. P1 is a stronger artifact (`strong_partial`) but remains
 `ORCHARD_PHASE_LIFECYCLE_RESULT.md` and
 `ORCHARD_PHASE_LIFECYCLE_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
 
+The next route has now passed an offline cross-run gate. A deterministic audit
+covers 157 sealed actor calls in ten cells across four independent worlds.
+Action-transport failure and functional recurrence occur in Architecture,
+Solace, and Orchard; rejected mutation recurrence occurs in Architecture and
+Orchard, while Cedar and admitted Solace patch/check loops remain controls.
+
+A bounded host-derived causal frame and candidate-/artifact-/section-bound
+repair primitive now pass provider-free qualification. The largest audited
+frame is 1,297 tokenizer tokens; the exact Orchard fixture completes a
+provider-free repair effect and current recheck without semantic host judgment.
+This is apparatus reachability only—actor utility is untested. See
+`CROSS_RUN_CAUSAL_CONTINUITY_AUDIT.md` and
+`NEXT_SYSTEM_INTERACTION_BOUNDED_CAUSAL_VERIFICATION_TRANSFER.md`. No GPU run is
+authorized.
+
 The Solace construction-to-verification lifecycle ablation is complete,
 sealed, and independently audited. Both arms repaired the four frozen
 substantive concept groups but stopped under unrelievable verification-history
