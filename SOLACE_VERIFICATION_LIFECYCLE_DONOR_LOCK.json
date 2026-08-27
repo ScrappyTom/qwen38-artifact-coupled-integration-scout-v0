@@ -1,0 +1,17 @@
+{
+  "schema": "solace-verification-lifecycle-donor-lock-v0",
+  "donor_run_id": "2026-08-26-solace-anchored-provenance-interaction-measured-v0",
+  "donor_configuration": "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE",
+  "candidate_sha256": "82d14bff607d8e323899d09b72739ee4bf14bc067013c6675365b580093ecf5a",
+  "candidate_version": "candidate-v008:82d14bff607d8e323899d09b72739ee4bf14bc067013c6675365b580093ecf5a",
+  "register_sha256": "1bf9a0b37c531d07ca797dc4a18b9d6b51440252e8acff2b950086854bddb3e4",
+  "register_claims": 20,
+  "latest_effect_result_id": "RESULT-015",
+  "latest_effect_first_model_visible_call": null,
+  "files": {
+    "runs/2026-08-26-solace-anchored-provenance-interaction-measured-v0/cells/L1_FAULT_TOLERANT_ANCHORED_PROVENANCE/trajectory/candidate_versions/version-008/CANDIDATE_MANIFEST.json": "17aab852b2c85f0d5d58067b9ca756d623703f290c1d254aabf24482612f1e3d",
+    "runs/2026-08-26-solace-anchored-provenance-interaction-measured-v0/cells/L1_FAULT_TOLERANT_ANCHORED_PROVENANCE/CURRENT_REGISTER.json": "8ec40cb9b9e280531dae2ac2221416c874b43460933bfc4a98c3ae8cf976297d",
+    "runs/2026-08-26-solace-anchored-provenance-interaction-measured-v0/cells/L1_FAULT_TOLERANT_ANCHORED_PROVENANCE/actor/call-009/RESULT_RECORD.json": "8e7c48cdc397a64495e7660cb8f041c8764ed08653a5b8292ba60f97bc91c686",
+    "runs/2026-08-26-solace-anchored-provenance-interaction-measured-v0/cells/L1_FAULT_TOLERANT_ANCHORED_PROVENANCE/INITIAL_STATE.json": "66e49685086d74e4b6f875ba9ae7f39db8b59fbf3317fe32715a7bbfd049bb88"
+  }
+}

@@ -17,6 +17,9 @@ MAX_SOURCE_RESULT_TOKENS = 6_500
 # Historical import name retained for the measured runner and old receipts.
 MAX_BATCH_RESULT_TOKENS = MAX_SOURCE_RESULT_TOKENS
 MAX_ARTIFACT_BYTES = 250_000
+MAX_PATCH_EDITS = 24
+MAX_PATCH_OLD_BYTES = 2_000
+MAX_PATCH_NEW_BYTES = 12_000
 
 DECISION_HEADINGS = (
     "Decision, scope, and authority",
@@ -36,6 +39,7 @@ ACTION_FIELDS: dict[str, dict[str, type]] = {
     "replace_evidence_ledger": {"content": str},
     "upsert_evidence_slot": {"source_id": str, "source_version": str, "content": str},
     "upsert_decision_section": {"heading": str, "body": str},
+    "patch_decision": {"edits": list},
     "replace_decision": {"content": str},
     "run_check": {},
     "submit": {},
@@ -119,6 +123,25 @@ def parse_action(
                 ):
                     raise ValueError("same-source batch ranges may not overlap")
         return value
+    if action == "patch_decision":
+        edits = value["edits"]
+        if not isinstance(edits, list) or not 1 <= len(edits) <= MAX_PATCH_EDITS:
+            raise ValueError(f"patch_decision must contain 1..{MAX_PATCH_EDITS} edits")
+        total_new = 0
+        for index, edit in enumerate(edits):
+            if not isinstance(edit, dict) or set(edit) != {"old", "new"}:
+                raise ValueError(f"edits[{index}] fields must be exactly ['new', 'old']")
+            old, new = edit["old"], edit["new"]
+            if not isinstance(old, str) or not old:
+                raise ValueError(f"edits[{index}].old must be a non-empty string")
+            if not isinstance(new, str):
+                raise ValueError(f"edits[{index}].new must be a string")
+            if len(old.encode("utf-8")) > MAX_PATCH_OLD_BYTES:
+                raise ValueError(f"edits[{index}].old exceeds {MAX_PATCH_OLD_BYTES} bytes")
+            total_new += len(new.encode("utf-8"))
+        if total_new > MAX_PATCH_NEW_BYTES:
+            raise ValueError(f"patch_decision new text exceeds {MAX_PATCH_NEW_BYTES} bytes")
+        return value
     for field, expected_type in fields.items():
         observed = value[field]
         if expected_type is int and isinstance(observed, bool):
@@ -175,6 +198,22 @@ def action_json_schema(
                 },
             }
             required.append("requests")
+        elif action == "patch_decision":
+            properties["edits"] = {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": MAX_PATCH_EDITS,
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "old": {"type": "string", "minLength": 1},
+                        "new": {"type": "string"},
+                    },
+                    "required": ["old", "new"],
+                },
+            }
+            required.append("edits")
         else:
             for field, kind in ACTION_FIELDS[action].items():
                 rule: dict[str, Any] = {"type": "integer" if kind is int else "string"}

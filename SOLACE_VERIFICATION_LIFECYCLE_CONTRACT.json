@@ -1,0 +1,29 @@
+{
+  "schema": "solace-verification-lifecycle-contract-v0",
+  "run_id": "2026-08-27-solace-verification-lifecycle-measured-v0",
+  "scope": "solace_verification_lifecycle_measured_v0",
+  "status": "offline_stage0_complete_gpu_not_authorized",
+  "configuration_order": [
+    "A0_EXACT_ARTIFACT_ONLY",
+    "A1_EXACT_ARTIFACT_PLUS_FROZEN_REGISTER"
+  ],
+  "common_donor_candidate_sha256": "82d14bff607d8e323899d09b72739ee4bf14bc067013c6675365b580093ecf5a",
+  "a1_register_sha256": "1bf9a0b37c531d07ca797dc4a18b9d6b51440252e8acff2b950086854bddb3e4",
+  "a1_register_claims": 20,
+  "a0_register_present": false,
+  "semantic_maintenance_calls": 0,
+  "maximum_actor_calls_per_configuration": 12,
+  "maximum_actor_calls": 24,
+  "maximum_provider_calls": 24,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "context_tokens": 25088,
+  "ordinary_response_reserve": 4096,
+  "prompt_limit": 20992,
+  "actor_seed": 531703,
+  "candidate_bound_evaluator": "solace-water-evaluator-v1",
+  "donor_lock": "SOLACE_VERIFICATION_LIFECYCLE_DONOR_LOCK.json",
+  "external_readiness_common_to_both": true,
+  "gpu_authorized": false,
+  "claim_limit": "Compound post-construction lifecycle comparison of a fresh exact artifact frame with versus without a fixed frozen semantic scaffold. It does not isolate the earlier construction effect."
+}

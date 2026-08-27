@@ -1,0 +1,15 @@
+{
+  "schema": "solace-verification-lifecycle-authorization-request-v0",
+  "run_id": "2026-08-27-solace-verification-lifecycle-measured-v0",
+  "scope": "solace_verification_lifecycle_measured_v0",
+  "configuration_order": [
+    "A0_EXACT_ARTIFACT_ONLY",
+    "A1_EXACT_ARTIFACT_PLUS_FROZEN_REGISTER"
+  ],
+  "maximum_actor_calls": 24,
+  "maximum_provider_calls": 24,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "gpu_authorized": false,
+  "expected_user_quote_template": "I authorize the frozen Solace verification-lifecycle run at commit {commit}, run ID 2026-08-27-solace-verification-lifecycle-measured-v0: configurations A0_EXACT_ARTIFACT_ONLY then A1_EXACT_ARTIFACT_PLUS_FROZEN_REGISTER; at most 24 actor/provider calls total, one attempt per call, zero retries."
+}

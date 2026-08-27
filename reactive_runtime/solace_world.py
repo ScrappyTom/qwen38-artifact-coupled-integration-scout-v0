@@ -16,8 +16,19 @@ class SolaceWorld(ArchitectureWorld):
         cell_root: Path,
         *,
         count_text: Callable[[str], int] | None = None,
+        candidate_seed_root: Path | None = None,
+        candidate_seed_version_index: int = 0,
+        evaluator_config_path: Path | None = None,
+        evaluator_script_path: Path | None = None,
     ) -> None:
-        super().__init__(task_root, cell_root)
+        super().__init__(
+            task_root,
+            cell_root,
+            candidate_seed_root=candidate_seed_root,
+            candidate_seed_version_index=candidate_seed_version_index,
+            evaluator_config_path=evaluator_config_path,
+            evaluator_script_path=evaluator_script_path,
+        )
         self._count_text = count_text
 
     def _read_batch(self, requests: list[dict[str, object]]) -> ExecutionResult:

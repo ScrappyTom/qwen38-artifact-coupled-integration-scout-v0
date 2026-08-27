@@ -1,6 +1,16 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the frozen Solace W0/L1 whole-system comparison is complete, sealed,
+Status: offline Stage 0 is complete for the selected Solace
+construction-to-verification lifecycle ablation. It starts from the exact L1
+terminal candidate and compares a fresh exact artifact frame without versus
+with the frozen 20-claim register. Evaluator v1 exposes the reconciled four
+substantive defects and heading failure, bounded exact patches avoid complete
+document retransmission, and provider-free fixtures reach check, repair,
+current recheck, and submission in both configurations. GPU execution remains
+separately unauthorized. See `SOLACE_VERIFICATION_LIFECYCLE_PLAN.md` and
+`SOLACE_VERIFICATION_LIFECYCLE_PREFLIGHT.json`.
+
+The frozen Solace W0/L1 whole-system comparison is complete, sealed,
 and independently audited. W0 wrote a fourteen-source evidence ledger, spent
 fourteen actor calls reopening seven exact results twice, and then attempted two
 substantial global decisions. Both drafts exhausted the 4,096-token completion

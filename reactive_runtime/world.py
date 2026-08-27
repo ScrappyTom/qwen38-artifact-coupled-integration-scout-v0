@@ -65,20 +65,38 @@ class ArchitectureWorld:
         "BOUNDED_AGENT_ARCHITECTURE_DECISION.md",
     )
 
-    def __init__(self, task_root: Path, cell_root: Path) -> None:
+    def __init__(
+        self,
+        task_root: Path,
+        cell_root: Path,
+        *,
+        candidate_seed_root: Path | None = None,
+        candidate_seed_version_index: int = 0,
+        evaluator_config_path: Path | None = None,
+        evaluator_script_path: Path | None = None,
+    ) -> None:
         self.task_root = task_root.resolve()
         self.cell_root = cell_root.resolve()
         self.world_root = self.cell_root / "world"
         self.candidate_root = self.world_root / "candidate"
         self.candidate_root.mkdir(parents=True, exist_ok=True)
+        seed_root = (candidate_seed_root or (self.task_root / "candidate")).resolve()
         for name in self.candidate_files:
-            shutil.copyfile(self.task_root / "candidate" / name, self.candidate_root / name)
+            shutil.copyfile(seed_root / name, self.candidate_root / name)
+        self.evaluator_config_path = (
+            evaluator_config_path or (self.task_root / "EVALUATOR.json")
+        ).resolve()
+        self.evaluator_script_path = (
+            evaluator_script_path or (self.task_root / "evaluator" / "evaluate.py")
+        ).resolve()
         self.evaluator_config = json.loads(
-            (self.task_root / "EVALUATOR.json").read_text(encoding="utf-8")
+            self.evaluator_config_path.read_text(encoding="utf-8")
         )
         self.decision_headings = tuple(self.evaluator_config["decision_headings"])
         self.sources = self._load_sources()
-        self.version_index = 0
+        if candidate_seed_version_index < 0:
+            raise ValueError("candidate_seed_version_index must be nonnegative")
+        self.version_index = candidate_seed_version_index
         self.submitted = False
         self.last_check_projection: dict[str, Any] | None = None
         self.detached_integration: IntegrationArtifact | None = None
@@ -274,11 +292,25 @@ class ArchitectureWorld:
                 rendered.append(f"## {declared}\n\n{sections[declared]}")
         return self._replace_file(path.name, "\n\n".join(rendered).rstrip() + "\n", "actor_upsert_decision_section")
 
+    def _patch_decision(self, edits: list[dict[str, str]]) -> ExecutionResult:
+        path = self.candidate_root / "BOUNDED_AGENT_ARCHITECTURE_DECISION.md"
+        text = path.read_text(encoding="utf-8")
+        for index, edit in enumerate(edits):
+            old, new = edit["old"], edit["new"]
+            occurrences = text.count(old)
+            if occurrences != 1:
+                raise ActionRejected(
+                    "patch_anchor_not_unique",
+                    f"edits[{index}].old occurs {occurrences} times; exactly one required",
+                )
+            text = text.replace(old, new, 1)
+        return self._replace_file(path.name, text, "actor_patch_decision")
+
     def _run_check(self, result_id: str) -> ExecutionResult:
         evaluated = self.candidate_sha256
         evaluator_id = self.evaluator_config["evaluator_id"]
         raw_handle = f"raw-tool://{result_id}/evaluator"
-        command = (sys.executable, str(self.task_root / "evaluator" / "evaluate.py"), str(self.candidate_root))
+        command = (sys.executable, str(self.evaluator_script_path), str(self.candidate_root))
         process = subprocess.run(command, cwd=self.task_root, capture_output=True, check=False, timeout=180)
         raw = RawToolCustody(command, process.returncode, "completed", process.stdout, process.stderr, evaluated, raw_handle)
         raw_root = self.cell_root / "raw_tool_results" / result_id
@@ -336,6 +368,8 @@ class ArchitectureWorld:
             return self._replace_file("BOUNDED_AGENT_ARCHITECTURE_DECISION.md", action["content"], "actor_replace_decision")
         if name == "upsert_decision_section":
             return self._upsert_section(action["heading"], action["body"])
+        if name == "patch_decision":
+            return self._patch_decision(action["edits"])
         if name == "run_check":
             return self._run_check(result_id)
         if name == "submit":
