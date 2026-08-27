@@ -1,0 +1,66 @@
+# Anchored provenance-local delta
+## CLAIM AURORA-001
+SLOT_SOURCE: AURORA
+SOURCE_VERSION: debbe3de17dc0511fe3b9f5be920a83367c84efaedb34ef4095a9add315a0761
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Only the county health officer may lift a do-not-drink order, and only after current laboratory and distribution-system verification; a utility repair or green mechanical check is not public-health authorization.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Only the county health officer may lift a do-not-drink order, and only after current laboratory and distribution-system verification; a utility repair or green mechanical check is not public-health authorization.
+
+## CLAIM AURORA-002
+SLOT_SOURCE: AURORA
+SOURCE_VERSION: debbe3de17dc0511fe3b9f5be920a83367c84efaedb34ef4095a9add315a0761
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Final closure requires the utility director to accept every declared blocker and residual risk.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Final closure requires the utility director to accept every declared blocker and residual risk.
+
+## CLAIM AURORA-003
+SLOT_SOURCE: AURORA
+SOURCE_VERSION: debbe3de17dc0511fe3b9f5be920a83367c84efaedb34ef4095a9add315a0761
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: BASTION and CIPHER supply hydraulic and laboratory evidence but cannot lift health restrictions.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: BASTION, CIPHER
+AUTHORITY: non_authoritative_derivative
+STATEMENT: BASTION and CIPHER supply hydraulic and laboratory evidence but cannot lift health restrictions.
+
+## CLAIM BASTION-001
+SLOT_SOURCE: BASTION
+SOURCE_VERSION: f0a85d8273e5058984554a6383d51616f2e103f141b7e268f67215b90fc7ed60
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Current minimum distribution pressure is 42 psi in the north zone.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Current minimum distribution pressure is 42 psi in the north zone.
+
+## CLAIM BASTION-002
+SLOT_SOURCE: BASTION
+SOURCE_VERSION: f0a85d8273e5058984554a6383d51616f2e103f141b7e268f67215b90fc7ed60
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Ridge storage contains 5.8 million gallons, while the twelve-hour emergency reserve is 3.2 million gallons.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Ridge storage contains 5.8 million gallons, while the twelve-hour emergency reserve is 3.2 million gallons.
+
+## CLAIM BASTION-003
+SLOT_SOURCE: BASTION
+SOURCE_VERSION: f0a85d8273e5058984554a6383d51616f2e103f141b7e268f67215b90fc7ed60
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: DELTA pump sequencing depends on BASTION pressure and ECHO power.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: DELTA, BASTION, ECHO
+AUTHORITY: non_authoritative_derivative
+STATEMENT: DELTA pump sequencing depends on BASTION pressure and ECHO power.

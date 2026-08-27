@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM ECHO-GRID-RATED-VERSUS-USABLE
+SLOT_SOURCE: ECHO
+SOURCE_VERSION: a3826feabfb2389ef861bba819d3ae178c9e9086a8f309722ba1413591ff8395
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: The grid feed is rated at 8.2 MW, but the damaged switchgear limits current delivery to 6.5 MW.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: ECHO reports that the grid feed is rated at 8.2 MW, but the damaged switchgear limits current delivery to 6.5 MW.
+
+## CLAIM FALCON-TURBIDITY-CURRENT-VERSUS-GATE
+SLOT_SOURCE: FALCON
+SOURCE_VERSION: 62997706c361243e5d2720ccc088b53d3bcc2c64e64e6ee054d588aeac8fd8b8
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Current combined-filter turbidity is 0.18 NTU. The release gate is at or below 0.30 NTU for four hours; 0.18 NTU is not a chlorine residual.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: FALCON reports that current combined-filter turbidity is 0.18 NTU, with a release gate at or below 0.30 NTU for four hours, and clarifies that 0.18 NTU is not a chlorine residual.
+
+## CLAIM ECHO-GENERATOR-FUEL-DURATION
+SLOT_SOURCE: ECHO
+SOURCE_VERSION: a3826feabfb2389ef861bba819d3ae178c9e9086a8f309722ba1413591ff8395
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Emergency generation can carry 4.1 MW for thirty-six hours at the current fuel stock. The duration is not thirty-six days and excludes mobile-pump load.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: ECHO reports that emergency generation can carry 4.1 MW for thirty-six hours at the current fuel stock, excluding mobile-pump load.
+
+## CLAIM FALCON-CHLORINE-ENTRY-DISTRIBUTION
+SLOT_SOURCE: FALCON
+SOURCE_VERSION: 62997706c361243e5d2720ccc088b53d3bcc2c64e64e6ee054d588aeac8fd8b8
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Free chlorine must remain between 0.8 and 2.0 milligrams per liter at entry points and at least 0.2 mg/L in distribution. Entry and distribution thresholds are different controls.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: FALCON reports that free chlorine must remain between 0.8 and 2.0 milligrams per liter at entry points and at least 0.2 mg/L in distribution, noting these are different controls.

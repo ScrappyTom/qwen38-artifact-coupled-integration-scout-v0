@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM KESTREL-FUEL-LOAD-DISTINCT
+SLOT_SOURCE: KESTREL
+SOURCE_VERSION: 2536c9c9d966266ccfecd69690d7575dcb4025b53ab52812cece766b0077c600
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Current diesel stock covers thirty-six hours at emergency load and twenty-two hours at full pump load. The two consumption regimes must remain distinct.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: KESTREL reports that current diesel stock covers thirty-six hours at emergency load and twenty-two hours at full pump load, requiring the two consumption regimes to remain distinct.
+
+## CLAIM KESTREL-CHEM-STOCK-DAYS
+SLOT_SOURCE: KESTREL
+SOURCE_VERSION: 2536c9c9d966266ccfecd69690d7575dcb4025b53ab52812cece766b0077c600
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Coagulant stock covers 4.5 days at the current source blend, while chlorine covers 3.2 days. Inventory duration is not delivery lead time.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: KESTREL reports that coagulant stock covers 4.5 days at the current source blend and chlorine covers 3.2 days, noting that inventory duration is not delivery lead time.
+
+## CLAIM LUMEN-DO-NOT-DRINK-COVERAGE
+SLOT_SOURCE: LUMEN
+SOURCE_VERSION: 1a50bae39974b3c33c2a0a6b6b94859b75f41e3c4d4a01f17cf519db7b98253c
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Do-not-drink notices reached 91 percent of registered endpoints; the missing nine percent is communication uncertainty, not a nine-percent reduction in affected population.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: LUMEN reports that do-not-drink notices reached 91 percent of registered endpoints, characterizing the missing nine percent as communication uncertainty rather than a reduction in affected population.
+
+## CLAIM LUMEN-CALL-CENTER-CAPACITY
+SLOT_SOURCE: LUMEN
+SOURCE_VERSION: 1a50bae39974b3c33c2a0a6b6b94859b75f41e3c4d4a01f17cf519db7b98253c
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: The call center can sustain 3,200 contacts per hour for six hours. Forecast demand is 4,100 per hour unless alternate-language outreach reduces repeat calls.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: LUMEN reports that the call center can sustain 3,200 contacts per hour for six hours, with forecast demand at 4,100 per hour unless alternate-language outreach reduces repeat calls.

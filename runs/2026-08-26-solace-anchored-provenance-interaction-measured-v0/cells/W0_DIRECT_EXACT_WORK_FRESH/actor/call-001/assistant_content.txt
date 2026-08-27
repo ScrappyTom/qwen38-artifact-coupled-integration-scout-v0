@@ -1,0 +1,2 @@
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"MOSAIC","start_line":1},{"end_line":64,"source_id":"NEXUS","start_line":1}]
+}

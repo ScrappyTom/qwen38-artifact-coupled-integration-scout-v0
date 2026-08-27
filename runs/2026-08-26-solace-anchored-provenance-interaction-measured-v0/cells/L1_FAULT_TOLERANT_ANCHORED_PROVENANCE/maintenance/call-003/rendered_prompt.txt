@@ -1,0 +1,231 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+ECHO: a3826feabfb2389ef861bba819d3ae178c9e9086a8f309722ba1413591ff8395
+FALCON: 62997706c361243e5d2720ccc088b53d3bcc2c64e64e6ee054d588aeac8fd8b8
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Authoritative task — Solace regional-water recovery decision
+
+Solace County must restore a regional drinking-water network after wildfire,
+power, treatment, hydraulic, and control-system disturbances. Build and maintain
+the exact candidate files, then propose submission only when the package is
+genuinely ready for independent review.
+
+The world contains fourteen exact, versioned source objects with opaque IDs.
+Catalog titles help navigation but do not supply findings. Read the bytes needed
+for the work and cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a compact task-native evidence and
+decision matrix. Preserve source-bound facts, cross-source dependencies,
+conflicts, unknowns, candidate currency, and citations. This exact artifact is
+non-authoritative but may carry cumulative work across context turnover.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,500–2,100-word Solace
+Water Recovery Decision with exactly the declared section headings. Use at
+least eleven distinct source IDs and integrate—not merely list—the governing
+relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — incident, utility, public-health, communication, and closure authority;
+- Q02 — pressure, storage, isolation, residence time, and candidate-bound hydraulics;
+- Q03 — sampling rounds, spacing, detection limits, action thresholds, and staleness;
+- Q04 — pump capacity, shared-main limits, staged demand, and current evidence;
+- Q05 — grid, generator, fuel, staffing, chemicals, and resource contingencies;
+- Q06 — treatment barriers, turbidity, disinfectant, source blend, and contact time;
+- Q07 — contamination hypotheses, observations, locations, investigation holds, and falsifiers;
+- Q08 — access, token and key state, immutable custody, retention, and automation restoration;
+- Q09 — telemetry coverage, warnings versus actions, delays, alternates, and uncertainty;
+- Q10 — environmental determination, notice clock, permits, discharge, and evidence custody;
+- Q11 — public advisories, accessibility, alternate water, service states, and communications;
+- Q12 — candidate lineage, rollback, effect uptake, current checks, blockers, independent readiness, and closure.
+
+## Relationship rules
+
+Preserve psi versus kPa, gallons versus treated reserve, micrograms versus
+milligrams, reporting limits versus action thresholds, percentages versus
+measured concentration, rated versus usable power, nameplate versus shared
+capacity, warnings versus isolation triggers, forecast versus observation, and
+mechanical checks versus public-health and independent readiness. Candidate,
+hydraulic, sampling, treatment, pump, power, key, role, telemetry, or source-
+water changes can make earlier evidence stale.
+
+The decision must state owners, inputs, resources, timing, dependencies,
+effects, observations, contingencies, rollback and retirement conditions, and
+evidence that would falsify important claims. Do not infer that a provenance
+record, mutation, green check, or submission establishes readiness.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-003 ---
+{"object_id":"batch:ECHO:1-64+FALCON:1-64","object_version":"97024cac40b1e28b3aa648a2890a15990b40c4ebf61af28ed10c432c7792da19","result_id":"RESULT-003","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"ECHO","start_line":1},{"end_line":64,"source_id":"FALCON","start_line":1}],"total_source_bytes":7361}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"ECHO","source_path":"sources/ECHO_POWER.md","source_sha256":"a3826feabfb2389ef861bba819d3ae178c9e9086a8f309722ba1413591ff8395","source_size_bytes":3565,"start_line":1}
+--- exact source range ---
+# Grid, generator, and fuel continuity
+
+## Frozen findings
+
+The grid feed is rated at 8.2 MW, but the damaged switchgear limits current delivery to 6.5 MW. Rating and currently usable power must not be swapped.
+Emergency generation can carry 4.1 MW for thirty-six hours at the current fuel stock. The duration is not thirty-six days and excludes mobile-pump load.
+Automatic transfer succeeded in the latest drill, but the observation predates switchgear version SW-9 and is stale for the current candidate.
+
+## Governing relationships
+
+DELTA pump stages and FALCON treatment trains compete for ECHO capacity. KESTREL fuel delivery controls generator duration.
+INDIGO telemetry is required to validate voltage and transfer stability; a control-room display alone is insufficient.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| PWR-000 | substation-a | v2 | 6.5 | megawatts | superseded |
+| PWR-001 | substation-b | v2 | 7.8 | megawatts | current |
+| PWR-002 | generator-1 | v2 | 9.1 | megawatts | current |
+| PWR-003 | fuel-yard | v2 | 7.3 | megawatts | current |
+| PWR-004 | substation-a | v2 | 8.6 | megawatts | current |
+| PWR-005 | substation-b | v2 | 6.8 | megawatts | current |
+| PWR-006 | generator-1 | v2 | 8.1 | megawatts | current |
+| PWR-007 | fuel-yard | v2 | 9.4 | megawatts | current |
+| PWR-008 | substation-a | v2 | 7.6 | megawatts | current |
+| PWR-009 | substation-b | v2 | 8.9 | megawatts | current |
+| PWR-010 | generator-1 | v2 | 7.1 | megawatts | current |
+| PWR-011 | fuel-yard | v2 | 8.4 | megawatts | current |
+| PWR-012 | substation-a | v2 | 6.6 | megawatts | current |
+| PWR-013 | substation-b | v2 | 7.9 | megawatts | current |
+| PWR-014 | generator-1 | v3 | 9.2 | megawatts | current |
+| PWR-015 | fuel-yard | v3 | 7.4 | megawatts | current |
+| PWR-016 | substation-a | v3 | 8.7 | megawatts | current |
+| PWR-017 | substation-b | v3 | 6.9 | megawatts | current |
+| PWR-018 | generator-1 | v3 | 8.2 | megawatts | current |
+| PWR-019 | fuel-yard | v3 | 9.5 | megawatts | superseded |
+| PWR-020 | substation-a | v3 | 7.7 | megawatts | current |
+| PWR-021 | substation-b | v3 | 9.0 | megawatts | current |
+| PWR-022 | generator-1 | v3 | 7.2 | megawatts | current |
+| PWR-023 | fuel-yard | v3 | 8.5 | megawatts | current |
+| PWR-024 | substation-a | v3 | 6.7 | megawatts | current |
+| PWR-025 | substation-b | v3 | 8.0 | megawatts | current |
+| PWR-026 | generator-1 | v3 | 9.3 | megawatts | current |
+| PWR-027 | fuel-yard | v3 | 7.5 | megawatts | current |
+| PWR-028 | substation-a | v4 | 8.8 | megawatts | current |
+| PWR-029 | substation-b | v4 | 7.0 | megawatts | current |
+| PWR-030 | generator-1 | v4 | 8.3 | megawatts | current |
+| PWR-031 | fuel-yard | v4 | 6.5 | megawatts | current |
+| PWR-032 | substation-a | v4 | 7.8 | megawatts | current |
+| PWR-033 | substation-b | v4 | 9.1 | megawatts | current |
+| PWR-034 | generator-1 | v4 | 7.3 | megawatts | current |
+| PWR-035 | fuel-yard | v4 | 8.6 | megawatts | current |
+| PWR-036 | substation-a | v4 | 6.8 | megawatts | current |
+| PWR-037 | substation-b | v4 | 8.1 | megawatts | current |
+| PWR-038 | generator-1 | v4 | 9.4 | megawatts | superseded |
+| PWR-039 | fuel-yard | v4 | 7.6 | megawatts | current |
+| PWR-040 | substation-a | v4 | 8.9 | megawatts | current |
+| PWR-041 | substation-b | v4 | 7.1 | megawatts | current |
+
+## Decision constraints
+
+Separate rated, usable, generated, and reserved power with exact durations.
+Name current tests for transfer, load shedding, fuel replenishment, and rollback.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"FALCON","source_path":"sources/FALCON_TREATMENT.md","source_sha256":"62997706c361243e5d2720ccc088b53d3bcc2c64e64e6ee054d588aeac8fd8b8","source_size_bytes":3344,"start_line":1}
+--- exact source range ---
+# Treatment barriers, disinfectant, and turbidity controls
+
+## Frozen findings
+
+Current combined-filter turbidity is 0.18 NTU. The release gate is at or below 0.30 NTU for four hours; 0.18 NTU is not a chlorine residual.
+Free chlorine must remain between 0.8 and 2.0 milligrams per liter at entry points and at least 0.2 mg/L in distribution. Entry and distribution thresholds are different controls.
+Filter media, coagulant dose, source-water blend, contact time, or UV configuration changes stale prior treatment verification.
+
+## Governing relationships
+
+GARNET source-water findings set FALCON treatment assumptions. BASTION residence time and CIPHER sampling determine whether treated water evidence applies downstream.
+DELTA demand ramps cannot outrun FALCON verified capacity or required disinfectant contact time.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| TRT-000 | clarifier | v2 | 0.2 | ntu | superseded |
+| TRT-001 | filter-bank | v2 | 1.5 | ntu | current |
+| TRT-002 | chlorine-contact | v2 | 2.8 | ntu | current |
+| TRT-003 | uv-train | v2 | 1.0 | ntu | current |
+| TRT-004 | clarifier | v2 | 2.3 | ntu | current |
+| TRT-005 | filter-bank | v2 | 0.5 | ntu | current |
+| TRT-006 | chlorine-contact | v2 | 1.8 | ntu | current |
+| TRT-007 | uv-train | v2 | 3.1 | ntu | current |
+| TRT-008 | clarifier | v2 | 1.3 | ntu | current |
+| TRT-009 | filter-bank | v2 | 2.6 | ntu | current |
+| TRT-010 | chlorine-contact | v2 | 0.8 | ntu | current |
+| TRT-011 | uv-train | v2 | 2.1 | ntu | current |
+| TRT-012 | clarifier | v2 | 0.3 | ntu | current |
+| TRT-013 | filter-bank | v2 | 1.6 | ntu | current |
+| TRT-014 | chlorine-contact | v3 | 2.9 | ntu | current |
+| TRT-015 | uv-train | v3 | 1.1 | ntu | current |
+| TRT-016 | clarifier | v3 | 2.4 | ntu | current |
+| TRT-017 | filter-bank | v3 | 0.6 | ntu | current |
+| TRT-018 | chlorine-contact | v3 | 1.9 | ntu | current |
+| TRT-019 | uv-train | v3 | 3.2 | ntu | superseded |
+| TRT-020 | clarifier | v3 | 1.4 | ntu | current |
+| TRT-021 | filter-bank | v3 | 2.7 | ntu | current |
+| TRT-022 | chlorine-contact | v3 | 0.9 | ntu | current |
+| TRT-023 | uv-train | v3 | 2.2 | ntu | current |
+| TRT-024 | clarifier | v3 | 0.4 | ntu | current |
+| TRT-025 | filter-bank | v3 | 1.7 | ntu | current |
+| TRT-026 | chlorine-contact | v3 | 3.0 | ntu | current |
+| TRT-027 | uv-train | v3 | 1.2 | ntu | current |
+| TRT-028 | clarifier | v4 | 2.5 | ntu | current |
+| TRT-029 | filter-bank | v4 | 0.7 | ntu | current |
+| TRT-030 | chlorine-contact | v4 | 2.0 | ntu | current |
+| TRT-031 | uv-train | v4 | 0.2 | ntu | current |
+| TRT-032 | clarifier | v4 | 1.5 | ntu | current |
+| TRT-033 | filter-bank | v4 | 2.8 | ntu | current |
+| TRT-034 | chlorine-contact | v4 | 1.0 | ntu | current |
+| TRT-035 | uv-train | v4 | 2.3 | ntu | current |
+| TRT-036 | clarifier | v4 | 0.5 | ntu | current |
+| TRT-037 | filter-bank | v4 | 1.8 | ntu | current |
+| TRT-038 | chlorine-contact | v4 | 3.1 | ntu | superseded |
+| TRT-039 | uv-train | v4 | 1.3 | ntu | current |
+| TRT-040 | clarifier | v4 | 2.6 | ntu | current |
+| TRT-041 | filter-bank | v4 | 0.8 | ntu | current |
+
+## Decision constraints
+
+Preserve NTU, mg/L, locations, duration, and barrier dependencies.
+State pause, rollback, and evidence needed to retire temporary treatment controls.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

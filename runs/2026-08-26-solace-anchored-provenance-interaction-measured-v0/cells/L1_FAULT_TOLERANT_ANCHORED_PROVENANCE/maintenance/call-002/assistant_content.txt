@@ -1,0 +1,77 @@
+# Anchored provenance-local delta
+## CLAIM CIPHER-01
+SLOT_SOURCE: CIPHER
+SOURCE_VERSION: 6db7f6a91d666ab9e013e147aa946885080f48117bd461c8a542171378aba4cb
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: Clearance requires two complete rounds at least sixteen hours apart; one clean round is insufficient.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CIPHER clearance requires two complete sampling rounds spaced at least sixteen hours apart, as a single clean round is insufficient for clearance.
+
+## CLAIM CIPHER-02
+SLOT_SOURCE: CIPHER
+SOURCE_VERSION: 6db7f6a91d666ab9e013e147aa946885080f48117bd461c8a542171378aba4cb
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: The benzene reporting limit is 0.5 micrograms per liter and the action threshold is 5.0 micrograms per liter.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CIPHER establishes a benzene reporting limit of 0.5 micrograms per liter and an action threshold of 5.0 micrograms per liter.
+
+## CLAIM CIPHER-03
+SLOT_SOURCE: CIPHER
+SOURCE_VERSION: 6db7f6a91d666ab9e013e147aa946885080f48117bd461c8a542171378aba4cb
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: CIPHER sample placement consumes BASTION flow paths and GARNET contamination hypotheses.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: BASTION, GARNET
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CIPHER sample placement operationally consumes BASTION flow paths and GARNET contamination hypotheses.
+
+## CLAIM DELTA-01
+SLOT_SOURCE: DELTA
+SOURCE_VERSION: 4c3707d0d2ae07ceb2bda6d83cf6585510f5398db7c66568ba38aa3fd3f01169
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: The treatment works can supply 18 million gallons per day, but the shared transmission main is capped at 14.5 MGD.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: DELTA reports that treatment works capacity is 18 million gallons per day, while the shared transmission main is capped at 14.5 MGD.
+
+## CLAIM DELTA-02
+SLOT_SOURCE: DELTA
+SOURCE_VERSION: 4c3707d0d2ae07ceb2bda6d83cf6585510f5398db7c66568ba38aa3fd3f01169
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: The latest inspected configuration sustained 12.8 MGD after fire-flow and hospital reserve.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: DELTA reports that the latest inspected pump configuration sustained 12.8 MGD following fire-flow and hospital reserve demands.
+
+## CLAIM DELTA-03
+SLOT_SOURCE: DELTA
+SOURCE_VERSION: 4c3707d0d2ae07ceb2bda6d83cf6585510f5398db7c66568ba38aa3fd3f01169
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: BASTION supplies pressure limits, ECHO supplies feeder headroom, and FALCON supplies treatment output.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: BASTION, ECHO, FALCON
+AUTHORITY: non_authoritative_derivative
+STATEMENT: DELTA sequencing is constrained by BASTION pressure limits, ECHO feeder headroom, and FALCON treatment output.
+
+## CLAIM DELTA-04
+SLOT_SOURCE: DELTA
+SOURCE_VERSION: 4c3707d0d2ae07ceb2bda6d83cf6585510f5398db7c66568ba38aa3fd3f01169
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: Restoration may advance through 10, 30, 60, and 100 percent demand stages only after two thirty-minute windows meet pressure, turbidity, power, and storage gates.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: DELTA permits restoration advancement through 10, 30, 60, and 100 percent demand stages only after two thirty-minute windows satisfy pressure, turbidity, power, and storage gates.

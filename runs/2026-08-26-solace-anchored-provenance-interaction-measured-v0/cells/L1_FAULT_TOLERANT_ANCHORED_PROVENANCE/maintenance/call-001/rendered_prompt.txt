@@ -1,0 +1,231 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+AURORA: debbe3de17dc0511fe3b9f5be920a83367c84efaedb34ef4095a9add315a0761
+BASTION: f0a85d8273e5058984554a6383d51616f2e103f141b7e268f67215b90fc7ed60
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Authoritative task — Solace regional-water recovery decision
+
+Solace County must restore a regional drinking-water network after wildfire,
+power, treatment, hydraulic, and control-system disturbances. Build and maintain
+the exact candidate files, then propose submission only when the package is
+genuinely ready for independent review.
+
+The world contains fourteen exact, versioned source objects with opaque IDs.
+Catalog titles help navigation but do not supply findings. Read the bytes needed
+for the work and cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a compact task-native evidence and
+decision matrix. Preserve source-bound facts, cross-source dependencies,
+conflicts, unknowns, candidate currency, and citations. This exact artifact is
+non-authoritative but may carry cumulative work across context turnover.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,500–2,100-word Solace
+Water Recovery Decision with exactly the declared section headings. Use at
+least eleven distinct source IDs and integrate—not merely list—the governing
+relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — incident, utility, public-health, communication, and closure authority;
+- Q02 — pressure, storage, isolation, residence time, and candidate-bound hydraulics;
+- Q03 — sampling rounds, spacing, detection limits, action thresholds, and staleness;
+- Q04 — pump capacity, shared-main limits, staged demand, and current evidence;
+- Q05 — grid, generator, fuel, staffing, chemicals, and resource contingencies;
+- Q06 — treatment barriers, turbidity, disinfectant, source blend, and contact time;
+- Q07 — contamination hypotheses, observations, locations, investigation holds, and falsifiers;
+- Q08 — access, token and key state, immutable custody, retention, and automation restoration;
+- Q09 — telemetry coverage, warnings versus actions, delays, alternates, and uncertainty;
+- Q10 — environmental determination, notice clock, permits, discharge, and evidence custody;
+- Q11 — public advisories, accessibility, alternate water, service states, and communications;
+- Q12 — candidate lineage, rollback, effect uptake, current checks, blockers, independent readiness, and closure.
+
+## Relationship rules
+
+Preserve psi versus kPa, gallons versus treated reserve, micrograms versus
+milligrams, reporting limits versus action thresholds, percentages versus
+measured concentration, rated versus usable power, nameplate versus shared
+capacity, warnings versus isolation triggers, forecast versus observation, and
+mechanical checks versus public-health and independent readiness. Candidate,
+hydraulic, sampling, treatment, pump, power, key, role, telemetry, or source-
+water changes can make earlier evidence stale.
+
+The decision must state owners, inputs, resources, timing, dependencies,
+effects, observations, contingencies, rollback and retirement conditions, and
+evidence that would falsify important claims. Do not infer that a provenance
+record, mutation, green check, or submission establishes readiness.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-001 ---
+{"object_id":"batch:AURORA:1-64+BASTION:1-64","object_version":"d40538a3737a4f373b7eabc2e3a41e0637476655cf7441bd9c309545cffc2f71","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"AURORA","start_line":1},{"end_line":64,"source_id":"BASTION","start_line":1}],"total_source_bytes":8057}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"AURORA","source_path":"sources/AURORA_AUTHORITY.md","source_sha256":"debbe3de17dc0511fe3b9f5be920a83367c84efaedb34ef4095a9add315a0761","source_size_bytes":4111,"start_line":1}
+--- exact source range ---
+# Emergency authority and restoration accountability
+
+## Frozen findings
+
+The incident commander may isolate zones and order emergency work. Only the county health officer may lift a do-not-drink order, and only after current laboratory and distribution-system verification; a utility repair or green mechanical check is not public-health authorization.
+Emergency procurement does not waive operator certification, chain of custody, environmental permits, access control, or fiscal review. Final closure requires the utility director to accept every declared blocker and residual risk.
+A handoff is valid only when the receiving lead acknowledges the same hydraulic model, treatment train, sampling plan, pump configuration, and communication version. A version mismatch blocks closure.
+
+## Governing relationships
+
+BASTION and CIPHER supply hydraulic and laboratory evidence but cannot lift health restrictions. NEXUS supplies independent readiness findings but does not execute restoration.
+MOSAIC owns rollback mechanics; AURORA preserves separation among detection, recommendation, authorization, execution, verification, communication, and closure.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUT-000 | incident-command | v2 | 1.0 | approval | superseded |
+| AUT-001 | health-officer | v2 | 2.3 | approval | current |
+| AUT-002 | utility-director | v2 | 3.6 | approval | current |
+| AUT-003 | public-information | v2 | 1.8 | approval | current |
+| AUT-004 | incident-command | v2 | 3.1 | approval | current |
+| AUT-005 | health-officer | v2 | 1.3 | approval | current |
+| AUT-006 | utility-director | v2 | 2.6 | approval | current |
+| AUT-007 | public-information | v2 | 3.9 | approval | current |
+| AUT-008 | incident-command | v2 | 2.1 | approval | current |
+| AUT-009 | health-officer | v2 | 3.4 | approval | current |
+| AUT-010 | utility-director | v2 | 1.6 | approval | current |
+| AUT-011 | public-information | v2 | 2.9 | approval | current |
+| AUT-012 | incident-command | v2 | 1.1 | approval | current |
+| AUT-013 | health-officer | v2 | 2.4 | approval | current |
+| AUT-014 | utility-director | v3 | 3.7 | approval | current |
+| AUT-015 | public-information | v3 | 1.9 | approval | current |
+| AUT-016 | incident-command | v3 | 3.2 | approval | current |
+| AUT-017 | health-officer | v3 | 1.4 | approval | current |
+| AUT-018 | utility-director | v3 | 2.7 | approval | current |
+| AUT-019 | public-information | v3 | 4.0 | approval | superseded |
+| AUT-020 | incident-command | v3 | 2.2 | approval | current |
+| AUT-021 | health-officer | v3 | 3.5 | approval | current |
+| AUT-022 | utility-director | v3 | 1.7 | approval | current |
+| AUT-023 | public-information | v3 | 3.0 | approval | current |
+| AUT-024 | incident-command | v3 | 1.2 | approval | current |
+| AUT-025 | health-officer | v3 | 2.5 | approval | current |
+| AUT-026 | utility-director | v3 | 3.8 | approval | current |
+| AUT-027 | public-information | v3 | 2.0 | approval | current |
+| AUT-028 | incident-command | v4 | 3.3 | approval | current |
+| AUT-029 | health-officer | v4 | 1.5 | approval | current |
+| AUT-030 | utility-director | v4 | 2.8 | approval | current |
+| AUT-031 | public-information | v4 | 1.0 | approval | current |
+| AUT-032 | incident-command | v4 | 2.3 | approval | current |
+| AUT-033 | health-officer | v4 | 3.6 | approval | current |
+| AUT-034 | utility-director | v4 | 1.8 | approval | current |
+| AUT-035 | public-information | v4 | 3.1 | approval | current |
+| AUT-036 | incident-command | v4 | 1.3 | approval | current |
+| AUT-037 | health-officer | v4 | 2.6 | approval | current |
+| AUT-038 | utility-director | v4 | 3.9 | approval | superseded |
+| AUT-039 | public-information | v4 | 2.1 | approval | current |
+| AUT-040 | incident-command | v4 | 3.4 | approval | current |
+| AUT-041 | health-officer | v4 | 1.6 | approval | current |
+
+## Decision constraints
+
+Name who may isolate, repair, verify, reopen service, lift advisories, and close.
+Treat semantic records and candidate mutations as non-authoritative work products.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"BASTION","source_path":"sources/BASTION_HYDRAULICS.md","source_sha256":"f0a85d8273e5058984554a6383d51616f2e103f141b7e268f67215b90fc7ed60","source_size_bytes":3483,"start_line":1}
+--- exact source range ---
+# Hydraulic pressure, storage, and zone isolation evidence
+
+## Frozen findings
+
+Current minimum distribution pressure is 42 psi in the north zone. The restoration gate is at least 35 psi at every critical node for three consecutive thirty-minute windows; 42 psi must not be converted to 42 kPa or treated as proof of water quality.
+Ridge storage contains 5.8 million gallons, while the twelve-hour emergency reserve is 3.2 million gallons. Stored volume and usable treated reserve are different controls.
+A valve map, pump curve, demand allocation, or zone-boundary change makes earlier pressure and residence-time checks stale for the changed candidate.
+
+## Governing relationships
+
+DELTA pump sequencing depends on BASTION pressure and ECHO power. CIPHER sampling locations must follow the current BASTION flow paths.
+MOSAIC rollback is allowed only while the prior valve map remains valid and a current BASTION pressure check passes for the rollback candidate.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| HYD-000 | north-zone | v2 | 42.0 | psi | superseded |
+| HYD-001 | south-zone | v2 | 43.3 | psi | current |
+| HYD-002 | ridge-tank | v2 | 44.6 | psi | current |
+| HYD-003 | valve-grid | v2 | 42.8 | psi | current |
+| HYD-004 | north-zone | v2 | 44.1 | psi | current |
+| HYD-005 | south-zone | v2 | 42.3 | psi | current |
+| HYD-006 | ridge-tank | v2 | 43.6 | psi | current |
+| HYD-007 | valve-grid | v2 | 44.9 | psi | current |
+| HYD-008 | north-zone | v2 | 43.1 | psi | current |
+| HYD-009 | south-zone | v2 | 44.4 | psi | current |
+| HYD-010 | ridge-tank | v2 | 42.6 | psi | current |
+| HYD-011 | valve-grid | v2 | 43.9 | psi | current |
+| HYD-012 | north-zone | v2 | 42.1 | psi | current |
+| HYD-013 | south-zone | v2 | 43.4 | psi | current |
+| HYD-014 | ridge-tank | v3 | 44.7 | psi | current |
+| HYD-015 | valve-grid | v3 | 42.9 | psi | current |
+| HYD-016 | north-zone | v3 | 44.2 | psi | current |
+| HYD-017 | south-zone | v3 | 42.4 | psi | current |
+| HYD-018 | ridge-tank | v3 | 43.7 | psi | current |
+| HYD-019 | valve-grid | v3 | 45.0 | psi | superseded |
+| HYD-020 | north-zone | v3 | 43.2 | psi | current |
+| HYD-021 | south-zone | v3 | 44.5 | psi | current |
+| HYD-022 | ridge-tank | v3 | 42.7 | psi | current |
+| HYD-023 | valve-grid | v3 | 44.0 | psi | current |
+| HYD-024 | north-zone | v3 | 42.2 | psi | current |
+| HYD-025 | south-zone | v3 | 43.5 | psi | current |
+| HYD-026 | ridge-tank | v3 | 44.8 | psi | current |
+| HYD-027 | valve-grid | v3 | 43.0 | psi | current |
+| HYD-028 | north-zone | v4 | 44.3 | psi | current |
+| HYD-029 | south-zone | v4 | 42.5 | psi | current |
+| HYD-030 | ridge-tank | v4 | 43.8 | psi | current |
+| HYD-031 | valve-grid | v4 | 42.0 | psi | current |
+| HYD-032 | north-zone | v4 | 43.3 | psi | current |
+| HYD-033 | south-zone | v4 | 44.6 | psi | current |
+| HYD-034 | ridge-tank | v4 | 42.8 | psi | current |
+| HYD-035 | valve-grid | v4 | 44.1 | psi | current |
+| HYD-036 | north-zone | v4 | 42.3 | psi | current |
+| HYD-037 | south-zone | v4 | 43.6 | psi | current |
+| HYD-038 | ridge-tank | v4 | 44.9 | psi | superseded |
+| HYD-039 | valve-grid | v4 | 43.1 | psi | current |
+| HYD-040 | north-zone | v4 | 44.4 | psi | current |
+| HYD-041 | south-zone | v4 | 42.6 | psi | current |
+
+## Decision constraints
+
+Preserve psi, gallons, the three-window rule, and candidate currency.
+Distinguish hydraulic service from microbiological and chemical clearance.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

@@ -1,0 +1,231 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+GARNET: b9451cc48b50a436eefd497a4dbf5ac4974431ad0f07f9bb79796709584ab0fb
+HELIX: dcb5a4ce70bf47372c5a52a096e89f890c74f7be1363fd78dfaf9c6cd10536e5
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Authoritative task — Solace regional-water recovery decision
+
+Solace County must restore a regional drinking-water network after wildfire,
+power, treatment, hydraulic, and control-system disturbances. Build and maintain
+the exact candidate files, then propose submission only when the package is
+genuinely ready for independent review.
+
+The world contains fourteen exact, versioned source objects with opaque IDs.
+Catalog titles help navigation but do not supply findings. Read the bytes needed
+for the work and cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a compact task-native evidence and
+decision matrix. Preserve source-bound facts, cross-source dependencies,
+conflicts, unknowns, candidate currency, and citations. This exact artifact is
+non-authoritative but may carry cumulative work across context turnover.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,500–2,100-word Solace
+Water Recovery Decision with exactly the declared section headings. Use at
+least eleven distinct source IDs and integrate—not merely list—the governing
+relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — incident, utility, public-health, communication, and closure authority;
+- Q02 — pressure, storage, isolation, residence time, and candidate-bound hydraulics;
+- Q03 — sampling rounds, spacing, detection limits, action thresholds, and staleness;
+- Q04 — pump capacity, shared-main limits, staged demand, and current evidence;
+- Q05 — grid, generator, fuel, staffing, chemicals, and resource contingencies;
+- Q06 — treatment barriers, turbidity, disinfectant, source blend, and contact time;
+- Q07 — contamination hypotheses, observations, locations, investigation holds, and falsifiers;
+- Q08 — access, token and key state, immutable custody, retention, and automation restoration;
+- Q09 — telemetry coverage, warnings versus actions, delays, alternates, and uncertainty;
+- Q10 — environmental determination, notice clock, permits, discharge, and evidence custody;
+- Q11 — public advisories, accessibility, alternate water, service states, and communications;
+- Q12 — candidate lineage, rollback, effect uptake, current checks, blockers, independent readiness, and closure.
+
+## Relationship rules
+
+Preserve psi versus kPa, gallons versus treated reserve, micrograms versus
+milligrams, reporting limits versus action thresholds, percentages versus
+measured concentration, rated versus usable power, nameplate versus shared
+capacity, warnings versus isolation triggers, forecast versus observation, and
+mechanical checks versus public-health and independent readiness. Candidate,
+hydraulic, sampling, treatment, pump, power, key, role, telemetry, or source-
+water changes can make earlier evidence stale.
+
+The decision must state owners, inputs, resources, timing, dependencies,
+effects, observations, contingencies, rollback and retirement conditions, and
+evidence that would falsify important claims. Do not infer that a provenance
+record, mutation, green check, or submission establishes readiness.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-004 ---
+{"object_id":"batch:GARNET:1-64+HELIX:1-64","object_version":"031d750e445931a9a1ff5df2226522f79babe80df9a5261f0a43ab6f7e8f4fc8","result_id":"RESULT-004","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"GARNET","start_line":1},{"end_line":64,"source_id":"HELIX","start_line":1}],"total_source_bytes":7462}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"GARNET","source_path":"sources/GARNET_SOURCE.md","source_sha256":"b9451cc48b50a436eefd497a4dbf5ac4974431ad0f07f9bb79796709584ab0fb","source_size_bytes":3622,"start_line":1}
+--- exact source range ---
+# Source-water contamination hypotheses and watershed controls
+
+## Frozen findings
+
+The ash-plume model assigns a 34 percent chance of intake impact during the next rain event. That is a forecast probability, not 34 percent measured contamination.
+Observed volatile-organic screening is non-detect at the reservoir and 3.1 micrograms per liter at the river intake. The two locations must not be merged.
+The investigation hold remains active for the chemical yard because the containment trench has not been inspected below grade.
+
+## Governing relationships
+
+FALCON treatment selection depends on GARNET source hypotheses; CIPHER must sample each materially different source path.
+JASPER governs environmental notifications, while AURORA retains restoration and public-health authority separation.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| SRC-000 | river-intake | v2 | 3.4 | risk-index | superseded |
+| SRC-001 | reservoir | v2 | 4.7 | risk-index | current |
+| SRC-002 | ash-plume | v2 | 6.0 | risk-index | current |
+| SRC-003 | chemical-yard | v2 | 4.2 | risk-index | current |
+| SRC-004 | river-intake | v2 | 5.5 | risk-index | current |
+| SRC-005 | reservoir | v2 | 3.7 | risk-index | current |
+| SRC-006 | ash-plume | v2 | 5.0 | risk-index | current |
+| SRC-007 | chemical-yard | v2 | 6.3 | risk-index | current |
+| SRC-008 | river-intake | v2 | 4.5 | risk-index | current |
+| SRC-009 | reservoir | v2 | 5.8 | risk-index | current |
+| SRC-010 | ash-plume | v2 | 4.0 | risk-index | current |
+| SRC-011 | chemical-yard | v2 | 5.3 | risk-index | current |
+| SRC-012 | river-intake | v2 | 3.5 | risk-index | current |
+| SRC-013 | reservoir | v2 | 4.8 | risk-index | current |
+| SRC-014 | ash-plume | v3 | 6.1 | risk-index | current |
+| SRC-015 | chemical-yard | v3 | 4.3 | risk-index | current |
+| SRC-016 | river-intake | v3 | 5.6 | risk-index | current |
+| SRC-017 | reservoir | v3 | 3.8 | risk-index | current |
+| SRC-018 | ash-plume | v3 | 5.1 | risk-index | current |
+| SRC-019 | chemical-yard | v3 | 6.4 | risk-index | superseded |
+| SRC-020 | river-intake | v3 | 4.6 | risk-index | current |
+| SRC-021 | reservoir | v3 | 5.9 | risk-index | current |
+| SRC-022 | ash-plume | v3 | 4.1 | risk-index | current |
+| SRC-023 | chemical-yard | v3 | 5.4 | risk-index | current |
+| SRC-024 | river-intake | v3 | 3.6 | risk-index | current |
+| SRC-025 | reservoir | v3 | 4.9 | risk-index | current |
+| SRC-026 | ash-plume | v3 | 6.2 | risk-index | current |
+| SRC-027 | chemical-yard | v3 | 4.4 | risk-index | current |
+| SRC-028 | river-intake | v4 | 5.7 | risk-index | current |
+| SRC-029 | reservoir | v4 | 3.9 | risk-index | current |
+| SRC-030 | ash-plume | v4 | 5.2 | risk-index | current |
+| SRC-031 | chemical-yard | v4 | 3.4 | risk-index | current |
+| SRC-032 | river-intake | v4 | 4.7 | risk-index | current |
+| SRC-033 | reservoir | v4 | 6.0 | risk-index | current |
+| SRC-034 | ash-plume | v4 | 4.2 | risk-index | current |
+| SRC-035 | chemical-yard | v4 | 5.5 | risk-index | current |
+| SRC-036 | river-intake | v4 | 3.7 | risk-index | current |
+| SRC-037 | reservoir | v4 | 5.0 | risk-index | current |
+| SRC-038 | ash-plume | v4 | 6.3 | risk-index | superseded |
+| SRC-039 | chemical-yard | v4 | 4.5 | risk-index | current |
+| SRC-040 | river-intake | v4 | 5.8 | risk-index | current |
+| SRC-041 | reservoir | v4 | 4.0 | risk-index | current |
+
+## Decision constraints
+
+Preserve forecast versus observation, percent versus concentration, and location.
+Keep the investigation hold until named inspection and sampling evidence retires it.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"HELIX","source_path":"sources/HELIX_SECURITY.md","source_sha256":"dcb5a4ce70bf47372c5a52a096e89f890c74f7be1363fd78dfaf9c6cd10536e5","source_size_bytes":3386,"start_line":1}
+--- exact source range ---
+# Access, control-system integrity, and evidence custody
+
+## Frozen findings
+
+The exposed SCADA service token was revoked at 14:10 UTC. The controller signing key was not exposed and remains current under key-set version W4.
+Break-glass access expires after two hours and requires dual approval plus immutable session logging. Emergency access is not continuing authorization.
+Online control logs are retained for ninety days and archived incident evidence for seven years; the periods serve different obligations.
+
+## Governing relationships
+
+AURORA governs emergency authority and MOSAIC binds rollback to the current key set. INDIGO consumes HELIX audit events but does not authorize access.
+Any key-set, role-policy, controller, or logging mutation makes prior security verification stale.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| SEC-000 | scada-token | v2 | 2.0 | hours | superseded |
+| SEC-001 | operator-role | v2 | 3.3 | hours | current |
+| SEC-002 | lab-chain | v2 | 4.6 | hours | current |
+| SEC-003 | audit-log | v2 | 2.8 | hours | current |
+| SEC-004 | scada-token | v2 | 4.1 | hours | current |
+| SEC-005 | operator-role | v2 | 2.3 | hours | current |
+| SEC-006 | lab-chain | v2 | 3.6 | hours | current |
+| SEC-007 | audit-log | v2 | 4.9 | hours | current |
+| SEC-008 | scada-token | v2 | 3.1 | hours | current |
+| SEC-009 | operator-role | v2 | 4.4 | hours | current |
+| SEC-010 | lab-chain | v2 | 2.6 | hours | current |
+| SEC-011 | audit-log | v2 | 3.9 | hours | current |
+| SEC-012 | scada-token | v2 | 2.1 | hours | current |
+| SEC-013 | operator-role | v2 | 3.4 | hours | current |
+| SEC-014 | lab-chain | v3 | 4.7 | hours | current |
+| SEC-015 | audit-log | v3 | 2.9 | hours | current |
+| SEC-016 | scada-token | v3 | 4.2 | hours | current |
+| SEC-017 | operator-role | v3 | 2.4 | hours | current |
+| SEC-018 | lab-chain | v3 | 3.7 | hours | current |
+| SEC-019 | audit-log | v3 | 5.0 | hours | superseded |
+| SEC-020 | scada-token | v3 | 3.2 | hours | current |
+| SEC-021 | operator-role | v3 | 4.5 | hours | current |
+| SEC-022 | lab-chain | v3 | 2.7 | hours | current |
+| SEC-023 | audit-log | v3 | 4.0 | hours | current |
+| SEC-024 | scada-token | v3 | 2.2 | hours | current |
+| SEC-025 | operator-role | v3 | 3.5 | hours | current |
+| SEC-026 | lab-chain | v3 | 4.8 | hours | current |
+| SEC-027 | audit-log | v3 | 3.0 | hours | current |
+| SEC-028 | scada-token | v4 | 4.3 | hours | current |
+| SEC-029 | operator-role | v4 | 2.5 | hours | current |
+| SEC-030 | lab-chain | v4 | 3.8 | hours | current |
+| SEC-031 | audit-log | v4 | 2.0 | hours | current |
+| SEC-032 | scada-token | v4 | 3.3 | hours | current |
+| SEC-033 | operator-role | v4 | 4.6 | hours | current |
+| SEC-034 | lab-chain | v4 | 2.8 | hours | current |
+| SEC-035 | audit-log | v4 | 4.1 | hours | current |
+| SEC-036 | scada-token | v4 | 2.3 | hours | current |
+| SEC-037 | operator-role | v4 | 3.6 | hours | current |
+| SEC-038 | lab-chain | v4 | 4.9 | hours | superseded |
+| SEC-039 | audit-log | v4 | 3.1 | hours | current |
+| SEC-040 | scada-token | v4 | 4.4 | hours | current |
+| SEC-041 | operator-role | v4 | 2.6 | hours | current |
+
+## Decision constraints
+
+Distinguish token revocation, key status, access duration, approvals, and retention.
+Name current evidence required before restoring remote automation.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

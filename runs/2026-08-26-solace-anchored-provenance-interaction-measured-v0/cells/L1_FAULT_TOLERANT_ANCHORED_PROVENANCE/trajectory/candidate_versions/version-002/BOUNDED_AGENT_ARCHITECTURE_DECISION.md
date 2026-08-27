@@ -1,0 +1,7 @@
+# Solace Water Recovery Decision
+
+No restoration decision has been constructed yet.
+
+## Authority, scope, and restoration decision
+
+The Solace County Water Recovery Decision is governed by the authority that only the county health officer may lift a do-not-drink order, and only after current laboratory and distribution-system verification; a utility repair or green mechanical check is not public-health authorization [AURORA]. Final closure requires the utility director to accept every declared blocker and residual risk [AURORA]. BASTION and CIPHER supply hydraulic and laboratory evidence but cannot lift health restrictions [AURORA]. The current recovery candidate is W7 with hydraulic model H12, pump plan P9, treatment plan T6, and key set W4; evidence for W6 is historical unless explicitly transferred and rechecked [MOSAIC]. Rollback to W6 is mechanically possible only while valve map V8 and controller firmware C11 remain compatible, but mechanical possibility is not authorization [MOSAIC]. Every mutation must record before and after candidate hashes, changed files, affected evidence, check currency, owner, and rollback effect [MOSAIC].

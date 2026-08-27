@@ -1,0 +1,106 @@
+{
+  "schema": "solace-anchored-interaction-semantic-adjudication-v0",
+  "run_id": "2026-08-26-solace-anchored-provenance-interaction-measured-v0",
+  "freeze_commit": "6059797681e2591737476417148952c844043b7f",
+  "task": {
+    "task_id": "solace-water-recovery-decision-v0",
+    "task_sha256": "bf6c990b631ed03655edd80f4bb474f28e0785c7b3cb6c13ef0a884d1d5d0f96",
+    "source_lock": "task_solace/TASK_SOURCE_LOCK.json"
+  },
+  "mechanical_evaluator": {
+    "evaluator_id": "solace-water-evaluator-v0",
+    "config_sha256": "599866f6ed8e4752361357ea84911211fab10913d90d14e3e8415ae0cdc61a70",
+    "implementation_sha256": "f32104a327f6716fc5a90e07af4f0d1820c1a91c1c7e6004f97523864dd1a666",
+    "status": "active_as_mechanical_precheck_with_criterion_level_reconciliation"
+  },
+  "review": {
+    "reviewer_id": "codex-direct-source-bound-review-v0",
+    "condition_blinded": false,
+    "evidence": [
+      "exact task contract",
+      "exact frozen source corpus",
+      "exact final candidate bytes",
+      "mechanical evaluator projection"
+    ],
+    "claim_limit": "This is a condition-aware direct adjudication, not an independent replication or a claim that every prose relation was exhaustively validated."
+  },
+  "records": [
+    {
+      "configuration_id": "W0_DIRECT_EXACT_WORK_FRESH",
+      "candidate_sha256": "232e4f81cdac6c04341630d4c5b02c31e578201e6441822eda1f2b802d10f148",
+      "decision_file_sha256": "5c9b6a8c7b839314e0eced5f3089939ef71f008f8485f2a728a04576846335b0",
+      "ledger_file_sha256": "ac4a67b23aee0fda31159f717b38325fe0c009ed2386cdd9c1f7ab95a0f7d99b",
+      "quality_class": "incomplete",
+      "closure_readiness": "not_ready",
+      "useful_completion": false,
+      "artifact_progress": "ledger_only",
+      "requirement_summary": {
+        "met": 0,
+        "partial": 0,
+        "not_met": 12
+      },
+      "blocking_requirements": [
+        "The required 1,500-2,100-word decision remains the eleven-word initial placeholder.",
+        "The exact ordered section-heading contract is not satisfied.",
+        "No requirement group is carried into the required decision artifact."
+      ],
+      "notes": "The evidence ledger is a substantial fourteen-source exact work product, but the authoritative task requires both files and does not allow the ledger to substitute for the decision."
+    },
+    {
+      "configuration_id": "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE",
+      "candidate_sha256": "82d14bff607d8e323899d09b72739ee4bf14bc067013c6675365b580093ecf5a",
+      "decision_file_sha256": "0fd482aff52c6919049709d28c74f07bc9be915b2c77595f68dc0637db6cb1a6",
+      "ledger_file_sha256": "bcc9d7f537633744508752c123cb95d4f0c460bfb954a6771a4fa1ad6ec15bea",
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false,
+      "artifact_progress": "substantive_but_incomplete_two_file_package",
+      "requirement_summary": {
+        "met": 8,
+        "partial": 4,
+        "not_met": 0
+      },
+      "criterion_dispositions": [
+        {"criterion_id": "Q01", "status": "met"},
+        {"criterion_id": "Q02", "status": "partial", "reason": "The decision omits the 35 psi all-critical-node restoration gate and its three consecutive thirty-minute windows."},
+        {"criterion_id": "Q03", "status": "partial", "reason": "The two-round and sixteen-hour rules are preserved, but the forty-eight-sample requirement is omitted."},
+        {"criterion_id": "Q04", "status": "partial", "reason": "The decision preserves dependencies and a generic shared-main constraint but omits 14.5 MGD, 12.8 MGD, the 10/30/60/100-percent stages, and their two-window gate."},
+        {"criterion_id": "Q05", "status": "met"},
+        {"criterion_id": "Q06", "status": "met"},
+        {"criterion_id": "Q07", "status": "met"},
+        {"criterion_id": "Q08", "status": "met"},
+        {"criterion_id": "Q09", "status": "partial", "reason": "Coverage and pressure actions are preserved, but the 700-millisecond p95 and 1,200-millisecond p99 delays are omitted from the decision."},
+        {"criterion_id": "Q10", "status": "met", "reason": "The decision preserves 72 hours from determination, E-17, 0.019 mg/L, and seven-year custody; the mechanical miss is surface-form sensitivity."},
+        {"criterion_id": "Q11", "status": "met"},
+        {"criterion_id": "Q12", "status": "met"},
+        {"criterion_id": "decision_heading_order", "status": "fail", "reason": "The decision has eleven useful but non-contractual headings instead of the frozen exact eight-heading sequence."},
+        {"criterion_id": "power_duration_reversal", "status": "pass_after_reconciliation", "reason": "The candidate says thirty-six hours and explicitly says the duration is not thirty-six days. The substring-based mechanical failure is a negation false positive."}
+      ],
+      "blocking_requirements": [
+        "Complete Q02 hydraulic restoration-gate detail.",
+        "Complete Q03 sample-count detail.",
+        "Complete Q04 pump-capacity and staged-demand detail.",
+        "Complete Q09 telemetry-delay detail.",
+        "Conform the decision to the exact frozen heading sequence.",
+        "Run a candidate-bound check, repair, recheck, and obtain appropriate readiness disposition before closure."
+      ],
+      "notes": "The 1,934-word decision cites twelve sources and the ledger cites all fourteen. The package is a material improvement over W0 but is not ready and was never checked or submitted."
+    }
+  ],
+  "mechanical_evaluator_reconciliation": [
+    {
+      "configuration_id": "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE",
+      "criterion_id": "Q10_environment",
+      "mechanical_status": "fail",
+      "active_semantic_status": "met",
+      "reason": "Equivalent numeric/unit surface forms were present: 72 hours, E-17, 0.019 mg/L, and seven years."
+    },
+    {
+      "configuration_id": "L1_FAULT_TOLERANT_ANCHORED_PROVENANCE",
+      "criterion_id": "power_duration_reversal",
+      "mechanical_status": "fail",
+      "active_semantic_status": "pass",
+      "reason": "The forbidden phrase occurs only inside an explicit negation preserving the correct thirty-six-hour duration."
+    }
+  ]
+}

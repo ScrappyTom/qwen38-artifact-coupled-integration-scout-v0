@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM CL-01
+SLOT_SOURCE: MOSAIC
+SOURCE_VERSION: a3836321537dc4f3ee3cacc094761d5176c0a7f08ae891f4fc4e1ee5b3f84b4d
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: The current recovery candidate is W7 with hydraulic model H12, pump plan P9, treatment plan T6, and key set W4.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The current recovery candidate is W7 with hydraulic model H12, pump plan P9, treatment plan T6, and key set W4.
+
+## CLAIM CL-02
+SLOT_SOURCE: MOSAIC
+SOURCE_VERSION: a3836321537dc4f3ee3cacc094761d5176c0a7f08ae891f4fc4e1ee5b3f84b4d
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: BASTION, CIPHER, DELTA, ECHO, FALCON, and HELIX observations can become stale after MOSAIC candidate changes.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: BASTION,CIPHER,DELTA,ECHO,FALCON,HELIX
+AUTHORITY: non_authoritative_derivative
+STATEMENT: BASTION, CIPHER, DELTA, ECHO, FALCON, and HELIX observations can become stale after MOSAIC candidate changes.
+
+## CLAIM CL-03
+SLOT_SOURCE: NEXUS
+SOURCE_VERSION: 85aabce45a9704e4f55ee1418528eb083a7c46326dbb366b0cb4a3ddcd9df0d6
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: The latest independent review found sixteen open findings: five hydraulic, four treatment, three sampling, two power, and two communication.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The latest independent review found sixteen open findings: five hydraulic, four treatment, three sampling, two power, and two communication.
+
+## CLAIM CL-04
+SLOT_SOURCE: NEXUS
+SOURCE_VERSION: 85aabce45a9704e4f55ee1418528eb083a7c46326dbb366b0cb4a3ddcd9df0d6
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: NEXUS consumes evidence from AURORA, BASTION, CIPHER, ECHO, FALCON, HELIX, INDIGO, LUMEN, and MOSAIC but does not mutate their states.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: AURORA,BASTION,CIPHER,ECHO,FALCON,HELIX,INDIGO,LUMEN,MOSAIC
+AUTHORITY: non_authoritative_derivative
+STATEMENT: NEXUS consumes evidence from AURORA, BASTION, CIPHER, ECHO, FALCON, HELIX, INDIGO, LUMEN, and MOSAIC but does not mutate their states.

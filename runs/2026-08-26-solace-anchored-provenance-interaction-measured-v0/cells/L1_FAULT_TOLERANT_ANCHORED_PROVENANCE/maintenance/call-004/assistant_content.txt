@@ -1,0 +1,77 @@
+# Anchored provenance-local delta
+## CLAIM GARNET-001
+SLOT_SOURCE: GARNET
+SOURCE_VERSION: b9451cc48b50a436eefd497a4dbf5ac4974431ad0f07f9bb79796709584ab0fb
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: ash-plume model assigns a 34 percent chance of intake impact during the next rain event
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The ash-plume model assigns a 34 percent chance of intake impact during the next rain event, which is a forecast probability, not measured contamination.
+
+## CLAIM GARNET-002
+SLOT_SOURCE: GARNET
+SOURCE_VERSION: b9451cc48b50a436eefd497a4dbf5ac4974431ad0f07f9bb79796709584ab0fb
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: volatile-organic screening is non-detect at the reservoir and 3.1 micrograms per liter at the river intake
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Observed volatile-organic screening is non-detect at the reservoir and 3.1 micrograms per liter at the river intake, locations that must not be merged.
+
+## CLAIM GARNET-003
+SLOT_SOURCE: GARNET
+SOURCE_VERSION: b9451cc48b50a436eefd497a4dbf5ac4974431ad0f07f9bb79796709584ab0fb
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: investigation hold remains active for the chemical yard because the containment trench has not been inspected below grade
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The investigation hold remains active for the chemical yard because the containment trench has not been inspected below grade.
+
+## CLAIM HELIX-001
+SLOT_SOURCE: HELIX
+SOURCE_VERSION: dcb5a4ce70bf47372c5a52a096e89f890c74f7be1363fd78dfaf9c6cd10536e5
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: exposed SCADA service token was revoked at 14:10 UTC
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The exposed SCADA service token was revoked at 14:10 UTC.
+
+## CLAIM HELIX-002
+SLOT_SOURCE: HELIX
+SOURCE_VERSION: dcb5a4ce70bf47372c5a52a096e89f890c74f7be1363fd78dfaf9c6cd10536e5
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: controller signing key was not exposed and remains current under key-set version W4
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The controller signing key was not exposed and remains current under key-set version W4.
+
+## CLAIM HELIX-003
+SLOT_SOURCE: HELIX
+SOURCE_VERSION: dcb5a4ce70bf47372c5a52a096e89f890c74f7be1363fd78dfaf9c6cd10536e5
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Break-glass access expires after two hours and requires dual approval plus immutable session logging
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Break-glass access expires after two hours and requires dual approval plus immutable session logging, meaning emergency access is not continuing authorization.
+
+## CLAIM HELIX-004
+SLOT_SOURCE: HELIX
+SOURCE_VERSION: dcb5a4ce70bf47372c5a52a096e89f890c74f7be1363fd78dfaf9c6cd10536e5
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Online control logs are retained for ninety days and archived incident evidence for seven years
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Online control logs are retained for ninety days and archived incident evidence for seven years, periods that serve different obligations.

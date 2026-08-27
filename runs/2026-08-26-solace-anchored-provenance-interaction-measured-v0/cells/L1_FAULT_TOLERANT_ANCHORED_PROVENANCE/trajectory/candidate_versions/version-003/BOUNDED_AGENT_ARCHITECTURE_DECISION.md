@@ -1,0 +1,11 @@
+# Solace Water Recovery Decision
+
+No restoration decision has been constructed yet.
+
+## Authority, scope, and restoration decision
+
+The Solace County Water Recovery Decision is governed by the authority that only the county health officer may lift a do-not-drink order, and only after current laboratory and distribution-system verification; a utility repair or green mechanical check is not public-health authorization [AURORA]. Final closure requires the utility director to accept every declared blocker and residual risk [AURORA]. BASTION and CIPHER supply hydraulic and laboratory evidence but cannot lift health restrictions [AURORA]. The current recovery candidate is W7 with hydraulic model H12, pump plan P9, treatment plan T6, and key set W4; evidence for W6 is historical unless explicitly transferred and rechecked [MOSAIC]. Rollback to W6 is mechanically possible only while valve map V8 and controller firmware C11 remain compatible, but mechanical possibility is not authorization [MOSAIC]. Every mutation must record before and after candidate hashes, changed files, affected evidence, check currency, owner, and rollback effect [MOSAIC].
+
+## Hydraulics, storage, and zone sequencing
+
+The north-zone distribution system currently holds a minimum pressure of 42 psi [BASTION]. Ridge storage contains 5.8 million gallons, while the twelve-hour emergency reserve is 3.2 million gallons; these are distinct measures and must not be conflated as treated reserve [BASTION]. DELTA pump sequencing depends on BASTION pressure and ECHO power; cavitation constraints limit shared-main capacity under staged demand conditions [DELTA, BASTION, ECHO]. Pressure warnings at 38 psi and isolation triggers at 30 psi are distinct control states: a warning does not initiate isolation, and an isolation trigger does not merely warn [INDIGO, BASTION]. Residence time in the distribution loop must be verified against candidate-bound hydraulic model H12; any change to valve map V8 or controller firmware C11 invalidates prior residence-time evidence [MOSAIC]. The current minimum pressure of 42 psi exceeds the 30 psi isolation trigger but remains within the operational band defined by H12; no isolation action is currently indicated [BASTION, INDIGO].

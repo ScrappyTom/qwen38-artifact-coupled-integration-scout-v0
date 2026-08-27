@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM INDIGO-TELEMETRY-COVERAGE-001
+SLOT_SOURCE: INDIGO
+SOURCE_VERSION: 64836aa42ff09665cee35507acf1ca8f242ddb78ed4457b0e81e31a93c9c8977
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: Current critical-signal coverage is 96 percent; four percent remains unobserved.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: INDIGO reports current critical-signal telemetry coverage at 96 percent with four percent remaining unobserved, noting that coverage does not prove healthy uninstrumented zones.
+
+## CLAIM INDIGO-THRESHOLD-DISTINCTION-002
+SLOT_SOURCE: INDIGO
+SOURCE_VERSION: 64836aa42ff09665cee35507acf1ca8f242ddb78ed4457b0e81e31a93c9c8977
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: The warning threshold for pressure is 38 psi and the isolation trigger is 30 psi.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: INDIGO defines the pressure warning threshold at 38 psi and the isolation trigger at 30 psi, requiring that warning and action thresholds remain distinct.
+
+## CLAIM JASPER-NOTICE-CLOCK-003
+SLOT_SOURCE: JASPER
+SOURCE_VERSION: feaaeb0601ea46b069dff02673e85774d86ff857def778cc48ecc0f6df706e00
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: A material unauthorized discharge requires initial notice within seventy-two hours of determination, not seventy-two minutes after detection.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: JASPER specifies that a material unauthorized discharge requires initial notice within seventy-two hours of determination, explicitly distinguishing this from seventy-two minutes after detection.
+
+## CLAIM JASPER-DECHLORINATION-LIMIT-004
+SLOT_SOURCE: JASPER
+SOURCE_VERSION: feaaeb0601ea46b069dff02673e85774d86ff857def778cc48ecc0f6df706e00
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: Emergency dechlorination may proceed under permit condition E-17, but residual above 0.019 milligrams per liter at the outfall requires an immediate stop.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: JASPER states that emergency dechlorination may proceed under permit condition E-17, but residual chlorine above 0.019 milligrams per liter at the outfall requires an immediate stop.

@@ -1,13 +1,14 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: E66 is preserved as a local negative for model-copied complete-line
-transport, not for grounded semantic expression. The fresh Solace route now has
-an audited authentic pressure fork: host-materialized exact anchor/context
-provenance, per-claim partial admission, and unchanged-state fallback are
-provider-free qualified, and six live actor-selected batches reached delivery
-pressure. There is deliberately no standalone expression gate. The complete
-W0/L1 interaction runner is frozen offline but requires new commit-bound GPU
-authorization.
+Status: the frozen Solace W0/L1 whole-system comparison is complete, sealed,
+and independently audited. W0 wrote a fourteen-source evidence ledger, then
+spent fourteen actor calls reopening seven exact results twice and never
+constructed the decision. L1 paid for seven fallible anchored-maintenance calls,
+made eight consecutive exact candidate mutations with no reopens, and produced
+a 1,934-word strong-partial decision plus a fourteen-source ledger. L1 used
+220,232 serialized tokens versus W0's 358,025, but neither arm checked,
+repaired, rechecked, submitted, or achieved useful completion. See
+`SOLACE_ANCHORED_INTERACTION_RESULT.md`.
 
 The exact Meridian route remains closed. The E63 no-GPU audit qualifies
 a minimal apparatus distinction among source-slot ownership, exact evidence,
@@ -70,14 +71,27 @@ frozen first-fit transition externalizes only `RESULT-001`, yields 18,595
 tokens, and leaves 2,397 tokens of headroom. Exact replay, prompt recount,
 relief, custody, seal, and runtime release passed independent audit.
 
-The next live comparison starts from that exact common fork. W0 receives the
-first-fit transition and continues ordinary exact work. L1 receives the same
+The live comparison started from that exact common fork. W0 received the
+first-fit transition and continued ordinary exact work. L1 received the same
 transition plus charged fallible anchored maintenance. Per-claim rejection and
-zero-valid output are trajectory events, not gates: prior state remains and the
-actor continues. The runner follows both arms through induced acquisition,
-artifact work, effects, checks, repair/recheck opportunity, closure, external
-readiness, and cost. See `SOLACE_PRESSURE_SCREEN_RESULT.md` and
-`SOLACE_ANCHORED_INTERACTION_PLAN.md`.
+zero-change output remained trajectory events rather than gates.
+
+The treatment produced 32 materially faithful claim-level admissions from 36
+records. Twenty entered the register; four grounded DELTA claims exceeded their
+source-slot budget; and twelve later grounded claims were transactionally
+rejected after the global register filled. The unchanged-state fallback worked,
+but those final three no-change maintenance calls cost 15,114 tokens. The exact
+task-native evidence ledger continued to carry all fourteen sources after the
+register stopped growing.
+
+The strong behavioral and partial-artifact benefit did not extend through the
+complete lifecycle. Both arms ended under pressure with no eligible result body
+left to demote. L1's final effect was not delivered into another actor decision,
+and verification/repair/closure were never reached. The next eligible work is
+offline design of a pressure-triggered construction-to-verification lifecycle
+ablation; no successor GPU run is authorized. See
+`SOLACE_PRESSURE_SCREEN_RESULT.md`, `SOLACE_ANCHORED_INTERACTION_PLAN.md`, and
+`SOLACE_ANCHORED_INTERACTION_RESULT.md`.
 
 The fresh Meridian Stage 0 remains a whole-system comparison between direct
 actor-authored exact evidence work (`W0_DIRECT_WORK`) and separately costed,
@@ -268,8 +282,20 @@ architecture promotion.
 - `SOLACE_ANCHORED_INTERACTION_CONTRACT.json` — frozen W0/L1 execution contract
 - `SOLACE_ANCHORED_INTERACTION_PREFLIGHT.json` — provider-free fork, admission,
   zero-valid fallback, action, evaluator, and budget qualification
-- `SOLACE_ANCHORED_INTERACTION_AUTHORIZATION_REQUEST.json` — inert request for
-  the next complete-system run
+- `SOLACE_ANCHORED_INTERACTION_AUTHORIZATION_REQUEST.json` — frozen request
+  satisfied by the completed measured run
+- `SOLACE_ANCHORED_INTERACTION_RESULT.md` — literal trajectory, semantic
+  maintenance, artifact, economic, and failure-migration synthesis
+- `SOLACE_ANCHORED_INTERACTION_AUDIT.json` — independent authorization, seal,
+  provider, relief, transition, anchor, evaluator-binding, and release audit
+- `SOLACE_ANCHORED_INTERACTION_SEMANTIC_ADJUDICATION.json` — candidate-bound
+  direct review and mechanical-evaluator reconciliation
+- `SOLACE_ANCHORED_INTERACTION_ECONOMICS_AUDIT.json` — actor/maintenance cost,
+  action, register-yield, effect-uptake, and artifact comparison
+- `tools/audit_solace_anchored_interaction.py` — reusable exact measured-run
+  checker
+- `tools/audit_solace_interaction_economics.py` — deterministic systems and
+  marginal-cost aggregate
 - `reactive_runtime/anchored_provenance.py` — host-materialized anchor/context
   custody and fault-tolerant register admission
 - `task_solace/` — fresh exact task, relational source world, evaluator,

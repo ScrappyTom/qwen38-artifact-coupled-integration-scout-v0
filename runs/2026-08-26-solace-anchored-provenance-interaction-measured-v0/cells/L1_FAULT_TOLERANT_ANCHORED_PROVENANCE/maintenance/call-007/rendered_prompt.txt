@@ -1,0 +1,231 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+MOSAIC: a3836321537dc4f3ee3cacc094761d5176c0a7f08ae891f4fc4e1ee5b3f84b4d
+NEXUS: 85aabce45a9704e4f55ee1418528eb083a7c46326dbb366b0cb4a3ddcd9df0d6
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Authoritative task — Solace regional-water recovery decision
+
+Solace County must restore a regional drinking-water network after wildfire,
+power, treatment, hydraulic, and control-system disturbances. Build and maintain
+the exact candidate files, then propose submission only when the package is
+genuinely ready for independent review.
+
+The world contains fourteen exact, versioned source objects with opaque IDs.
+Catalog titles help navigation but do not supply findings. Read the bytes needed
+for the work and cite sources as `[SOURCE_ID]`.
+
+## Required exact work
+
+Maintain `EVIDENCE_INTEGRATION_LEDGER.md` as a compact task-native evidence and
+decision matrix. Preserve source-bound facts, cross-source dependencies,
+conflicts, unknowns, candidate currency, and citations. This exact artifact is
+non-authoritative but may carry cumulative work across context turnover.
+
+Construct `BOUNDED_AGENT_ARCHITECTURE_DECISION.md` as a 1,500–2,100-word Solace
+Water Recovery Decision with exactly the declared section headings. Use at
+least eleven distinct source IDs and integrate—not merely list—the governing
+relationships.
+
+Address all twelve requirement groups:
+
+- Q01 — incident, utility, public-health, communication, and closure authority;
+- Q02 — pressure, storage, isolation, residence time, and candidate-bound hydraulics;
+- Q03 — sampling rounds, spacing, detection limits, action thresholds, and staleness;
+- Q04 — pump capacity, shared-main limits, staged demand, and current evidence;
+- Q05 — grid, generator, fuel, staffing, chemicals, and resource contingencies;
+- Q06 — treatment barriers, turbidity, disinfectant, source blend, and contact time;
+- Q07 — contamination hypotheses, observations, locations, investigation holds, and falsifiers;
+- Q08 — access, token and key state, immutable custody, retention, and automation restoration;
+- Q09 — telemetry coverage, warnings versus actions, delays, alternates, and uncertainty;
+- Q10 — environmental determination, notice clock, permits, discharge, and evidence custody;
+- Q11 — public advisories, accessibility, alternate water, service states, and communications;
+- Q12 — candidate lineage, rollback, effect uptake, current checks, blockers, independent readiness, and closure.
+
+## Relationship rules
+
+Preserve psi versus kPa, gallons versus treated reserve, micrograms versus
+milligrams, reporting limits versus action thresholds, percentages versus
+measured concentration, rated versus usable power, nameplate versus shared
+capacity, warnings versus isolation triggers, forecast versus observation, and
+mechanical checks versus public-health and independent readiness. Candidate,
+hydraulic, sampling, treatment, pump, power, key, role, telemetry, or source-
+water changes can make earlier evidence stale.
+
+The decision must state owners, inputs, resources, timing, dependencies,
+effects, observations, contingencies, rollback and retirement conditions, and
+evidence that would falsify important claims. Do not infer that a provenance
+record, mutation, green check, or submission establishes readiness.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-007 ---
+{"object_id":"batch:MOSAIC:1-64+NEXUS:1-64","object_version":"ce0798821f875aeea4f1794555e0c92c53cc571a95cfecafa85dbd7dfc319fc1","result_id":"RESULT-007","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"MOSAIC","start_line":1},{"end_line":64,"source_id":"NEXUS","start_line":1}],"total_source_bytes":8078}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"MOSAIC","source_path":"sources/MOSAIC_CHANGE.md","source_sha256":"a3836321537dc4f3ee3cacc094761d5176c0a7f08ae891f4fc4e1ee5b3f84b4d","source_size_bytes":3861,"start_line":1}
+--- exact source range ---
+# Candidate lineage, rollback, and configuration control
+
+## Frozen findings
+
+The current recovery candidate is W7 with hydraulic model H12, pump plan P9, treatment plan T6, and key set W4. Evidence for W6 is historical unless explicitly transferred and rechecked.
+Rollback to W6 is mechanically possible only while valve map V8 and controller firmware C11 remain compatible. Mechanical possibility is not authorization.
+Every mutation must record before and after candidate hashes, changed files, affected evidence, check currency, owner, and rollback effect.
+
+## Governing relationships
+
+BASTION, CIPHER, DELTA, ECHO, FALCON, and HELIX observations can become stale after MOSAIC candidate changes.
+NEXUS reviews current-candidate evidence independently; AURORA authorizes execution and closure separately.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CHG-000 | hydraulic-model | v2 | 7.0 | candidate-index | superseded |
+| CHG-001 | pump-plan | v2 | 8.3 | candidate-index | current |
+| CHG-002 | treatment-plan | v2 | 9.6 | candidate-index | current |
+| CHG-003 | key-set | v2 | 7.8 | candidate-index | current |
+| CHG-004 | hydraulic-model | v2 | 9.1 | candidate-index | current |
+| CHG-005 | pump-plan | v2 | 7.3 | candidate-index | current |
+| CHG-006 | treatment-plan | v2 | 8.6 | candidate-index | current |
+| CHG-007 | key-set | v2 | 9.9 | candidate-index | current |
+| CHG-008 | hydraulic-model | v2 | 8.1 | candidate-index | current |
+| CHG-009 | pump-plan | v2 | 9.4 | candidate-index | current |
+| CHG-010 | treatment-plan | v2 | 7.6 | candidate-index | current |
+| CHG-011 | key-set | v2 | 8.9 | candidate-index | current |
+| CHG-012 | hydraulic-model | v2 | 7.1 | candidate-index | current |
+| CHG-013 | pump-plan | v2 | 8.4 | candidate-index | current |
+| CHG-014 | treatment-plan | v3 | 9.7 | candidate-index | current |
+| CHG-015 | key-set | v3 | 7.9 | candidate-index | current |
+| CHG-016 | hydraulic-model | v3 | 9.2 | candidate-index | current |
+| CHG-017 | pump-plan | v3 | 7.4 | candidate-index | current |
+| CHG-018 | treatment-plan | v3 | 8.7 | candidate-index | current |
+| CHG-019 | key-set | v3 | 10.0 | candidate-index | superseded |
+| CHG-020 | hydraulic-model | v3 | 8.2 | candidate-index | current |
+| CHG-021 | pump-plan | v3 | 9.5 | candidate-index | current |
+| CHG-022 | treatment-plan | v3 | 7.7 | candidate-index | current |
+| CHG-023 | key-set | v3 | 9.0 | candidate-index | current |
+| CHG-024 | hydraulic-model | v3 | 7.2 | candidate-index | current |
+| CHG-025 | pump-plan | v3 | 8.5 | candidate-index | current |
+| CHG-026 | treatment-plan | v3 | 9.8 | candidate-index | current |
+| CHG-027 | key-set | v3 | 8.0 | candidate-index | current |
+| CHG-028 | hydraulic-model | v4 | 9.3 | candidate-index | current |
+| CHG-029 | pump-plan | v4 | 7.5 | candidate-index | current |
+| CHG-030 | treatment-plan | v4 | 8.8 | candidate-index | current |
+| CHG-031 | key-set | v4 | 7.0 | candidate-index | current |
+| CHG-032 | hydraulic-model | v4 | 8.3 | candidate-index | current |
+| CHG-033 | pump-plan | v4 | 9.6 | candidate-index | current |
+| CHG-034 | treatment-plan | v4 | 7.8 | candidate-index | current |
+| CHG-035 | key-set | v4 | 9.1 | candidate-index | current |
+| CHG-036 | hydraulic-model | v4 | 7.3 | candidate-index | current |
+| CHG-037 | pump-plan | v4 | 8.6 | candidate-index | current |
+| CHG-038 | treatment-plan | v4 | 9.9 | candidate-index | superseded |
+| CHG-039 | key-set | v4 | 8.1 | candidate-index | current |
+| CHG-040 | hydraulic-model | v4 | 9.4 | candidate-index | current |
+| CHG-041 | pump-plan | v4 | 7.6 | candidate-index | current |
+
+## Decision constraints
+
+Keep candidate, model, pump, treatment, key, valve, and firmware versions explicit.
+Require effect uptake, current check, repair, recheck, and rollback evidence.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"NEXUS","source_path":"sources/NEXUS_READINESS.md","source_sha256":"85aabce45a9704e4f55ee1418528eb083a7c46326dbb366b0cb4a3ddcd9df0d6","source_size_bytes":3762,"start_line":1}
+--- exact source range ---
+# Independent readiness review, blockers, and falsifiers
+
+## Frozen findings
+
+The latest independent review found sixteen open findings: five hydraulic, four treatment, three sampling, two power, and two communication. A finding count is not a readiness percentage.
+Blocking findings include incomplete second-round samples, stale generator transfer evidence, and missing acknowledgment from the public-health duty officer.
+Readiness requires current candidate-bound evidence for every blocking control, independent review of residual risk, and explicit acceptance by the authorized owner.
+
+## Governing relationships
+
+NEXUS consumes evidence from AURORA, BASTION, CIPHER, ECHO, FALCON, HELIX, INDIGO, LUMEN, and MOSAIC but does not mutate their states.
+An artifact, semantic register, mechanical check, or submission proposal cannot self-authorize readiness.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| RDY-000 | hydraulic | v2 | 16.0 | open-findings | superseded |
+| RDY-001 | quality | v2 | 17.3 | open-findings | current |
+| RDY-002 | power | v2 | 18.6 | open-findings | current |
+| RDY-003 | public-health | v2 | 16.8 | open-findings | current |
+| RDY-004 | hydraulic | v2 | 18.1 | open-findings | current |
+| RDY-005 | quality | v2 | 16.3 | open-findings | current |
+| RDY-006 | power | v2 | 17.6 | open-findings | current |
+| RDY-007 | public-health | v2 | 18.9 | open-findings | current |
+| RDY-008 | hydraulic | v2 | 17.1 | open-findings | current |
+| RDY-009 | quality | v2 | 18.4 | open-findings | current |
+| RDY-010 | power | v2 | 16.6 | open-findings | current |
+| RDY-011 | public-health | v2 | 17.9 | open-findings | current |
+| RDY-012 | hydraulic | v2 | 16.1 | open-findings | current |
+| RDY-013 | quality | v2 | 17.4 | open-findings | current |
+| RDY-014 | power | v3 | 18.7 | open-findings | current |
+| RDY-015 | public-health | v3 | 16.9 | open-findings | current |
+| RDY-016 | hydraulic | v3 | 18.2 | open-findings | current |
+| RDY-017 | quality | v3 | 16.4 | open-findings | current |
+| RDY-018 | power | v3 | 17.7 | open-findings | current |
+| RDY-019 | public-health | v3 | 19.0 | open-findings | superseded |
+| RDY-020 | hydraulic | v3 | 17.2 | open-findings | current |
+| RDY-021 | quality | v3 | 18.5 | open-findings | current |
+| RDY-022 | power | v3 | 16.7 | open-findings | current |
+| RDY-023 | public-health | v3 | 18.0 | open-findings | current |
+| RDY-024 | hydraulic | v3 | 16.2 | open-findings | current |
+| RDY-025 | quality | v3 | 17.5 | open-findings | current |
+| RDY-026 | power | v3 | 18.8 | open-findings | current |
+| RDY-027 | public-health | v3 | 17.0 | open-findings | current |
+| RDY-028 | hydraulic | v4 | 18.3 | open-findings | current |
+| RDY-029 | quality | v4 | 16.5 | open-findings | current |
+| RDY-030 | power | v4 | 17.8 | open-findings | current |
+| RDY-031 | public-health | v4 | 16.0 | open-findings | current |
+| RDY-032 | hydraulic | v4 | 17.3 | open-findings | current |
+| RDY-033 | quality | v4 | 18.6 | open-findings | current |
+| RDY-034 | power | v4 | 16.8 | open-findings | current |
+| RDY-035 | public-health | v4 | 18.1 | open-findings | current |
+| RDY-036 | hydraulic | v4 | 16.3 | open-findings | current |
+| RDY-037 | quality | v4 | 17.6 | open-findings | current |
+| RDY-038 | power | v4 | 18.9 | open-findings | superseded |
+| RDY-039 | public-health | v4 | 17.1 | open-findings | current |
+| RDY-040 | hydraulic | v4 | 18.4 | open-findings | current |
+| RDY-041 | quality | v4 | 16.6 | open-findings | current |
+
+## Decision constraints
+
+List blockers, falsifiers, residual risks, owners, current evidence, and acceptance.
+Keep independent review separate from execution, communication, and closure authority.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
