@@ -1,14 +1,20 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the Orchard treatment-free pressure screen is complete, sealed, and
-independently audited. Six valid actor-selected two-source batches delivered ten
-sources and left COMMUNE/CHANGE pending. Ordinary delivery requires 21,152
-prompt tokens, 160 above allowance; externalizing only the exact-backed
-CHARTER/CULTURE result restores 18,509 tokens and 2,483 tokens of headroom. The
-candidate remains untouched and no treatment occurred. The measured F0/P1
-lifecycle runner is now frozen and offline-qualified from that exact handoff;
-no measured GPU continuation is authorized. The Solace construction-to-verification
-lifecycle ablation is complete,
+Status: the Orchard F0/P1 phase-lifecycle interaction is complete, sealed, and
+independently audited. Both configurations followed the same pressured
+scaffold-plus-incremental-artifact construction trajectory through eight
+maintenance calls, nine exact candidate mutations, and an actor-selected
+verification transition. F0 retained the twenty-claim scaffold and append-only
+history, ran one check and one read, then stopped at unrelievable context
+pressure. P1 demoted the scaffold and replaced verification state, enabling a
+repair effect, current recheck, and reduction from nine blockers to three. It
+then repeated the same CURRENT read four times and exhausted its verification
+call budget. P1 is a stronger artifact (`strong_partial`) but remains
+`not_ready`; neither arm submitted or achieved useful completion. See
+`ORCHARD_PHASE_LIFECYCLE_RESULT.md` and
+`ORCHARD_PHASE_LIFECYCLE_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
+
+The Solace construction-to-verification lifecycle ablation is complete,
 sealed, and independently audited. Both arms repaired the four frozen
 substantive concept groups but stopped under unrelievable verification-history
 pressure before a current final recheck. A0, without the construction register,
@@ -69,13 +75,10 @@ regrading of this frozen Aster result.
 
 ## Current fresh system route
 
-Orchard is now the active fresh-world route. It compares the same anchored
+Orchard is the latest completed fresh-world route. It compares the same anchored
 semantic-scaffold plus exact-incremental-artifact construction system in both
 arms, then changes the complete verification lifecycle at a prospectively
-mechanical construction milestone. F0 retains the scaffold and append-only
-verification history. P1 externalizes the scaffold and replaces model-facing
-candidate/effect/check state after every verification action while preserving
-the full exact ledger externally. This is deliberately a joint lifecycle
+mechanical construction milestone. This is deliberately a joint lifecycle
 interaction, not component isolation.
 
 The thirteen-source biologics world contains 48,759 bytes and 17,189 tokenizer
@@ -90,14 +93,15 @@ appending history. These are apparatus facts, not utility evidence. See
 `ORCHARD_STAGE0_PLAN.md`, `ORCHARD_STAGE0_RESULT.md`, and
 `ORCHARD_PHASE_LIFECYCLE_STAGE0_PREFLIGHT.json`.
 
-The authentic actor-selected pressure fork now exists and passes exact replay,
-prompt recount, first-fit relief, seal, and runtime-release audit. The measured
-runner binds that fork and keeps anchored maintenance, exact incremental work,
-seeds, and action geometry common until an actor-selected mechanical
-`begin_verification` event. Only then does F0 retain append-only scaffold/history
-while P1 demotes the scaffold and replaces current verification state. See
-`ORCHARD_PRESSURE_SCREEN_RESULT.md` and
-`ORCHARD_PHASE_LIFECYCLE_FREEZE_RESULT.md`. No measured GPU run is authorized.
+The measured run confirms that the phase-conditional system transfers the
+construction state into a much deeper verification loop: P1 reached targeted
+evidence recovery, admitted repair, effect uptake, and a current recheck, while
+F0 stopped before repair. It also reveals the opposite risk: once a rejected
+patch was displaced by the latest observation, P1's bounded frame carried no
+explicit recurrence fact and the actor repeated one exact source read four
+times. The next live route is unselected. Any successor must test a complete
+fresh-world lifecycle with bounded mechanical causal continuity and uniquely
+bindable repair, not tune this Orchard donor.
 
 ## Completed Solace route
 
@@ -328,6 +332,24 @@ architecture promotion.
 
 ## Active files
 
+- `ORCHARD_STAGE0_PLAN.md` — fresh biologics-world task, lifecycle interaction,
+  evaluator, phase, resource, and claim contract
+- `ORCHARD_PRESSURE_SCREEN_RESULT.md` — authentic actor-selected pressure fork
+  and deterministic first-fit disposition
+- `ORCHARD_PHASE_LIFECYCLE_FREEZE_RESULT.md` — exact F0/P1 compound-system
+  freeze, parity, phase transition, and offline qualification
+- `ORCHARD_PHASE_LIFECYCLE_RESULT.md` — measured common construction,
+  post-transition verification, artifact-quality, economics, and systems result
+- `ORCHARD_PHASE_LIFECYCLE_QUALITATIVE_TRANSCRIPT_APPENDIX.md` — all common and
+  divergent actor/maintenance turns with visible state, semantic/artifact
+  uptake, demand shifts, and phase interpretation
+- `ORCHARD_PHASE_LIFECYCLE_AUDIT.json` — authorization, seal, provider, token,
+  action, relief, candidate, evaluator, and runtime-release audit
+- `ORCHARD_PHASE_LIFECYCLE_SEMANTIC_ADJUDICATION.json` — exact candidate-bound
+  direct review and reconciliation of the remaining R05 surface false negative
+- `tools/audit_orchard_phase_lifecycle.py` — deterministic measured-run checker
+- `task_orchard/` — exact task, thirteen-source world, evaluator, candidate,
+  catalog, and custody lock
 - `SOLACE_STAGE0_PLAN.md` — fresh whole-system question, responsibility split,
   partial-admission lifecycle, interaction sequence, outcomes, and limits
 - `SOLACE_STAGE0_PREFLIGHT.json` — exact geometry plus provider-free partial,

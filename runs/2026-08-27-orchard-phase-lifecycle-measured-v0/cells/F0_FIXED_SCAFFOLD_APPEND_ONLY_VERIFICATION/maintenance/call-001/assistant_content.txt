@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM 001
+SLOT_SOURCE: CHARTER
+SOURCE_VERSION: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Only the independent quality unit may release a manufactured lot, and only the site head may authorize commercial restart after current quality, aseptic, utility, and cyber evidence is reconciled.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The CHARTER source states that only the independent quality unit may release a manufactured lot and only the site head may authorize commercial restart after current quality, aseptic, utility, and cyber evidence is reconciled.
+
+## CLAIM 002
+SLOT_SOURCE: CHARTER
+SOURCE_VERSION: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: A handoff is valid only when the receiving lead acknowledges the same batch genealogy, fill-line configuration, cold-chain map, utility state, and control-system version.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The CHARTER source states that a handoff is valid only when the receiving lead acknowledges the same batch genealogy, fill-line configuration, cold-chain map, utility state, and control-system version.
+
+## CLAIM 003
+SLOT_SOURCE: CULTURE
+SOURCE_VERSION: 4afe715ed5a632f384658d45a19fda0c6f1bc5476bc24ab525c75687df9c5d46
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: The restart gate is at least 68 percent yield in two consecutive engineering batches; one 72 percent batch is insufficient.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The CULTURE source states that the restart gate is at least 68 percent yield in two consecutive engineering batches and that one 72 percent batch is insufficient.
+
+## CLAIM 004
+SLOT_SOURCE: CULTURE
+SOURCE_VERSION: 4afe715ed5a632f384658d45a19fda0c6f1bc5476bc24ab525c75687df9c5d46
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Harvest hold time is limited to six hours at 2 to 8 degrees Celsius. Six hours is not the downstream twelve-hour formulated-bulk limit.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The CULTURE source states that harvest hold time is limited to six hours at 2 to 8 degrees Celsius and that this six-hour limit is not the downstream twelve-hour formulated-bulk limit.

@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM CYB-001-KEY-CURRENT
+SLOT_SOURCE: GUARD
+SOURCE_VERSION: 7dfea87e46a18ed29a974a3175fa0aaf0f31b817a9f7017471ed667e396786e5
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: The recipe-signing key was not exposed and remains current under key-set K7.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The GUARD source reports that the recipe-signing key was not exposed and remains current under key-set K7.
+
+## CLAIM CYB-002-BREAKGLASS-EXPIRY
+SLOT_SOURCE: GUARD
+SOURCE_VERSION: 7dfea87e46a18ed29a974a3175fa0aaf0f31b817a9f7017471ed667e396786e5
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Break-glass access expires after two hours and requires dual approval plus immutable session logging.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The GUARD source reports that break-glass access expires after two hours and requires dual approval plus immutable session logging.
+
+## CLAIM SUP-001-DIESEL-COVERAGE
+SLOT_SOURCE: SUPPLY
+SOURCE_VERSION: 5a97d24e023016fa9921576e3584309b03359570afe41d30ad2e8f7084b5fc50
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Current diesel stock covers twenty-eight hours at emergency load and seventeen hours at full production load.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The SUPPLY source reports that current diesel stock covers twenty-eight hours at emergency load and seventeen hours at full production load.
+
+## CLAIM SUP-002-STAFFING-AVAILABILITY
+SLOT_SOURCE: SUPPLY
+SOURCE_VERSION: 5a97d24e023016fa9921576e3584309b03359570afe41d30ad2e8f7084b5fc50
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Mutual aid provides five qualified operators beginning at 05:30 UTC with travel uncertainty of plus or minus seventy-five minutes.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The SUPPLY source reports that mutual aid provides five qualified operators beginning at 05:30 UTC with travel uncertainty of plus or minus seventy-five minutes.

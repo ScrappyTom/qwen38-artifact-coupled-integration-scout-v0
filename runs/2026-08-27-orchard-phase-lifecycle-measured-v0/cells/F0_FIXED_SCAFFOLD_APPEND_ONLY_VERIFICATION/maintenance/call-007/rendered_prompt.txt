@@ -1,0 +1,216 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+CHARTER: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+REVIEW: 661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Orchard Biologics Restart Decision Task
+
+Produce two exact, source-grounded work products for the synthetic Orchard
+biologics facility:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning with exactly
+   `# Orchard Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning with exactly
+   `# Orchard Biologics Restart Decision` and containing exactly these ordered
+   level-two headings:
+
+   1. `Authority, scope, and restart states`
+   2. `Process, genealogy, and hold-time controls`
+   3. `Aseptic, analytical, and cold-chain release gates`
+   4. `Utilities, materials, staffing, and staged restart`
+   5. `Cybersecurity, telemetry, and evidence custody`
+   6. `Safety, environmental, and communication continuity`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. It must reconcile
+authority, process performance, aseptic controls, cold-chain excursion,
+utilities, analytical disposition, cybersecurity, materials/staffing,
+environmental duties, monitoring, communications, candidate lineage, and
+independent readiness.
+
+Do not merely list facts. Bind every action and gate to owners, prerequisites,
+observations, current candidate/version, falsifiers, rollback, and evidence that
+retires temporary controls. Preserve exact distinctions including observations
+versus gates, alert versus action limits, installed versus usable capacity,
+percent versus probability, hours versus days, source-local authority, and
+current versus stale evidence.
+
+The task-native artifacts are exact cumulative work. Checks are candidate-bound
+mechanical feedback and do not independently authorize lot release, commercial
+restart, or closure.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-007 ---
+{"object_id":"batch:CHARTER:1-64+REVIEW:1-64","object_version":"24c227b89842c953dd8a5569798ecb8ef95e6c5963cc7184fbcbc43133787808","result_id":"RESULT-007","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"CHARTER","start_line":1},{"end_line":64,"source_id":"REVIEW","start_line":1}],"total_source_bytes":8142}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"CHARTER","source_path":"sources/CHARTER_AUTHORITY.md","source_sha256":"6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174","source_size_bytes":3964,"start_line":1}
+--- exact source range ---
+# Restart authority and accountable disposition
+
+## Frozen findings
+
+The incident lead may isolate equipment and order emergency stabilization. Only the independent quality unit may release a manufactured lot, and only the site head may authorize commercial restart after current quality, aseptic, utility, and cyber evidence is reconciled.
+Emergency procurement does not waive validated methods, operator qualification, chain of custody, environmental permits, data-integrity controls, or deviation review. A successful mechanical check is not lot release or commercial restart authority.
+A handoff is valid only when the receiving lead acknowledges the same batch genealogy, fill-line configuration, cold-chain map, utility state, and control-system version. A version mismatch blocks closure.
+
+## Governing relationships
+
+ASSAY and STERILE provide release evidence but cannot authorize release; REVIEW provides independent readiness findings but cannot execute restart.
+CHANGE binds candidate lineage while CHARTER preserves separation among stabilization, execution, verification, release, restart authorization, and closure.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUT-000 | incident-lead | v3 | 1.0 | approval | superseded |
+| AUT-001 | quality-unit | v3 | 2.7 | approval | current |
+| AUT-002 | site-head | v3 | 1.5 | approval | current |
+| AUT-003 | regulatory-liaison | v3 | 3.2 | approval | current |
+| AUT-004 | incident-lead | v3 | 2.0 | approval | current |
+| AUT-005 | quality-unit | v3 | 3.7 | approval | current |
+| AUT-006 | site-head | v3 | 2.5 | approval | current |
+| AUT-007 | regulatory-liaison | v3 | 1.3 | approval | current |
+| AUT-008 | incident-lead | v3 | 3.0 | approval | current |
+| AUT-009 | quality-unit | v3 | 1.8 | approval | current |
+| AUT-010 | site-head | v3 | 3.5 | approval | current |
+| AUT-011 | regulatory-liaison | v3 | 2.3 | approval | current |
+| AUT-012 | incident-lead | v4 | 1.1 | approval | current |
+| AUT-013 | quality-unit | v4 | 2.8 | approval | current |
+| AUT-014 | site-head | v4 | 1.6 | approval | current |
+| AUT-015 | regulatory-liaison | v4 | 3.3 | approval | current |
+| AUT-016 | incident-lead | v4 | 2.1 | approval | current |
+| AUT-017 | quality-unit | v4 | 3.8 | approval | superseded |
+| AUT-018 | site-head | v4 | 2.6 | approval | current |
+| AUT-019 | regulatory-liaison | v4 | 1.4 | approval | current |
+| AUT-020 | incident-lead | v4 | 3.1 | approval | current |
+| AUT-021 | quality-unit | v4 | 1.9 | approval | current |
+| AUT-022 | site-head | v4 | 3.6 | approval | current |
+| AUT-023 | regulatory-liaison | v4 | 2.4 | approval | current |
+| AUT-024 | incident-lead | v5 | 1.2 | approval | current |
+| AUT-025 | quality-unit | v5 | 2.9 | approval | current |
+| AUT-026 | site-head | v5 | 1.7 | approval | current |
+| AUT-027 | regulatory-liaison | v5 | 3.4 | approval | current |
+| AUT-028 | incident-lead | v5 | 2.2 | approval | current |
+| AUT-029 | quality-unit | v5 | 1.0 | approval | current |
+| AUT-030 | site-head | v5 | 2.7 | approval | current |
+| AUT-031 | regulatory-liaison | v5 | 1.5 | approval | current |
+| AUT-032 | incident-lead | v5 | 3.2 | approval | current |
+| AUT-033 | quality-unit | v5 | 2.0 | approval | current |
+| AUT-034 | site-head | v5 | 3.7 | approval | superseded |
+| AUT-035 | regulatory-liaison | v5 | 2.5 | approval | current |
+| AUT-036 | incident-lead | v6 | 1.3 | approval | current |
+| AUT-037 | quality-unit | v6 | 3.0 | approval | current |
+| AUT-038 | site-head | v6 | 1.8 | approval | current |
+| AUT-039 | regulatory-liaison | v6 | 3.5 | approval | current |
+| AUT-040 | incident-lead | v6 | 2.3 | approval | current |
+| AUT-041 | quality-unit | v6 | 1.1 | approval | current |
+
+## Decision constraints
+
+Name who may isolate, repair, verify, release a lot, restart operations, and close.
+Treat semantic records and candidate mutations as non-authoritative work products.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"REVIEW","source_path":"sources/REVIEW_READINESS.md","source_sha256":"661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9","source_size_bytes":3716,"start_line":1}
+--- exact source range ---
+# Independent readiness review, blockers, and falsifiers
+
+## Frozen findings
+
+The latest independent review found thirteen open findings: four aseptic, three utility, three quality, two cyber, and one communication. A finding count is not a readiness percentage.
+Blocking findings include two missing media fills, stale generator-transfer evidence, unresolved lane-4 stability disposition, and missing quality-unit acknowledgment.
+Readiness requires current candidate-bound evidence for every blocking control, independent residual-risk review, and explicit acceptance by each authorized owner.
+
+## Governing relationships
+
+REVIEW consumes evidence from CHARTER, CULTURE, STERILE, CHILL, CURRENT, ASSAY, GUARD, SIGNAL, COMMUNE, and CHANGE but does not mutate their states.
+An artifact, semantic register, mechanical check, or submission proposal cannot self-authorize release, restart, or closure.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| RDY-000 | process | v3 | 13.0 | open-findings | superseded |
+| RDY-001 | aseptic | v3 | 14.7 | open-findings | current |
+| RDY-002 | quality | v3 | 13.5 | open-findings | current |
+| RDY-003 | cyber | v3 | 15.2 | open-findings | current |
+| RDY-004 | process | v3 | 14.0 | open-findings | current |
+| RDY-005 | aseptic | v3 | 15.7 | open-findings | current |
+| RDY-006 | quality | v3 | 14.5 | open-findings | current |
+| RDY-007 | cyber | v3 | 13.3 | open-findings | current |
+| RDY-008 | process | v3 | 15.0 | open-findings | current |
+| RDY-009 | aseptic | v3 | 13.8 | open-findings | current |
+| RDY-010 | quality | v3 | 15.5 | open-findings | current |
+| RDY-011 | cyber | v3 | 14.3 | open-findings | current |
+| RDY-012 | process | v4 | 13.1 | open-findings | current |
+| RDY-013 | aseptic | v4 | 14.8 | open-findings | current |
+| RDY-014 | quality | v4 | 13.6 | open-findings | current |
+| RDY-015 | cyber | v4 | 15.3 | open-findings | current |
+| RDY-016 | process | v4 | 14.1 | open-findings | current |
+| RDY-017 | aseptic | v4 | 15.8 | open-findings | superseded |
+| RDY-018 | quality | v4 | 14.6 | open-findings | current |
+| RDY-019 | cyber | v4 | 13.4 | open-findings | current |
+| RDY-020 | process | v4 | 15.1 | open-findings | current |
+| RDY-021 | aseptic | v4 | 13.9 | open-findings | current |
+| RDY-022 | quality | v4 | 15.6 | open-findings | current |
+| RDY-023 | cyber | v4 | 14.4 | open-findings | current |
+| RDY-024 | process | v5 | 13.2 | open-findings | current |
+| RDY-025 | aseptic | v5 | 14.9 | open-findings | current |
+| RDY-026 | quality | v5 | 13.7 | open-findings | current |
+| RDY-027 | cyber | v5 | 15.4 | open-findings | current |
+| RDY-028 | process | v5 | 14.2 | open-findings | current |
+| RDY-029 | aseptic | v5 | 13.0 | open-findings | current |
+| RDY-030 | quality | v5 | 14.7 | open-findings | current |
+| RDY-031 | cyber | v5 | 13.5 | open-findings | current |
+| RDY-032 | process | v5 | 15.2 | open-findings | current |
+| RDY-033 | aseptic | v5 | 14.0 | open-findings | current |
+| RDY-034 | quality | v5 | 15.7 | open-findings | superseded |
+| RDY-035 | cyber | v5 | 14.5 | open-findings | current |
+| RDY-036 | process | v6 | 13.3 | open-findings | current |
+| RDY-037 | aseptic | v6 | 15.0 | open-findings | current |
+| RDY-038 | quality | v6 | 13.8 | open-findings | current |
+| RDY-039 | cyber | v6 | 15.5 | open-findings | current |
+| RDY-040 | process | v6 | 14.3 | open-findings | current |
+| RDY-041 | aseptic | v6 | 13.1 | open-findings | current |
+
+## Decision constraints
+
+List blockers, falsifiers, residual risks, owners, current evidence, and acceptance.
+Keep review separate from execution, release, communications, and closure authority.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

@@ -1,0 +1,216 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+CURRENT: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+ASSAY: 06b691266e9619612bfca550779938fc481d39a96385115299e737f310b306d5
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Orchard Biologics Restart Decision Task
+
+Produce two exact, source-grounded work products for the synthetic Orchard
+biologics facility:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning with exactly
+   `# Orchard Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning with exactly
+   `# Orchard Biologics Restart Decision` and containing exactly these ordered
+   level-two headings:
+
+   1. `Authority, scope, and restart states`
+   2. `Process, genealogy, and hold-time controls`
+   3. `Aseptic, analytical, and cold-chain release gates`
+   4. `Utilities, materials, staffing, and staged restart`
+   5. `Cybersecurity, telemetry, and evidence custody`
+   6. `Safety, environmental, and communication continuity`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. It must reconcile
+authority, process performance, aseptic controls, cold-chain excursion,
+utilities, analytical disposition, cybersecurity, materials/staffing,
+environmental duties, monitoring, communications, candidate lineage, and
+independent readiness.
+
+Do not merely list facts. Bind every action and gate to owners, prerequisites,
+observations, current candidate/version, falsifiers, rollback, and evidence that
+retires temporary controls. Preserve exact distinctions including observations
+versus gates, alert versus action limits, installed versus usable capacity,
+percent versus probability, hours versus days, source-local authority, and
+current versus stale evidence.
+
+The task-native artifacts are exact cumulative work. Checks are candidate-bound
+mechanical feedback and do not independently authorize lot release, commercial
+restart, or closure.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-003 ---
+{"object_id":"batch:CURRENT:1-64+ASSAY:1-64","object_version":"2414038db9136a20fb5a2edc9c0fc29c776ee78ef11e55b7907c944423f908fa","result_id":"RESULT-003","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"CURRENT","start_line":1},{"end_line":64,"source_id":"ASSAY","start_line":1}],"total_source_bytes":8084}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"CURRENT","source_path":"sources/CURRENT_UTILITIES.md","source_sha256":"12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55","source_size_bytes":3820,"start_line":1}
+--- exact source range ---
+# Clean utilities, power, and capacity
+
+## Frozen findings
+
+The water-for-injection loop is at 82 degrees Celsius and requires at least 80 degrees at every return point for three consecutive thirty-minute windows. Average temperature cannot substitute for every-point compliance.
+Usable electrical service is 5.4 MW after switchgear derating, while the installed rating is 7.1 MW. Rated and currently usable capacity must not be swapped or added together.
+Emergency generation carries 3.2 MW for twenty-eight hours at current fuel stock. The duration is not twenty-eight days and excludes the lyophilizer start transient.
+
+## Governing relationships
+
+CULTURE and STERILE depend on CURRENT clean utilities; SUPPLY fuel controls generator duration and SIGNAL validates return temperatures and transfer stability.
+A loop balance, sensor, switchgear, generator, or production-load change makes prior utility evidence stale.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| UTL-000 | wfi-loop | v3 | 84.0 | percent-load | superseded |
+| UTL-001 | clean-steam | v3 | 85.7 | percent-load | current |
+| UTL-002 | substation | v3 | 84.5 | percent-load | current |
+| UTL-003 | generator | v3 | 86.2 | percent-load | current |
+| UTL-004 | wfi-loop | v3 | 85.0 | percent-load | current |
+| UTL-005 | clean-steam | v3 | 86.7 | percent-load | current |
+| UTL-006 | substation | v3 | 85.5 | percent-load | current |
+| UTL-007 | generator | v3 | 84.3 | percent-load | current |
+| UTL-008 | wfi-loop | v3 | 86.0 | percent-load | current |
+| UTL-009 | clean-steam | v3 | 84.8 | percent-load | current |
+| UTL-010 | substation | v3 | 86.5 | percent-load | current |
+| UTL-011 | generator | v3 | 85.3 | percent-load | current |
+| UTL-012 | wfi-loop | v4 | 84.1 | percent-load | current |
+| UTL-013 | clean-steam | v4 | 85.8 | percent-load | current |
+| UTL-014 | substation | v4 | 84.6 | percent-load | current |
+| UTL-015 | generator | v4 | 86.3 | percent-load | current |
+| UTL-016 | wfi-loop | v4 | 85.1 | percent-load | current |
+| UTL-017 | clean-steam | v4 | 86.8 | percent-load | superseded |
+| UTL-018 | substation | v4 | 85.6 | percent-load | current |
+| UTL-019 | generator | v4 | 84.4 | percent-load | current |
+| UTL-020 | wfi-loop | v4 | 86.1 | percent-load | current |
+| UTL-021 | clean-steam | v4 | 84.9 | percent-load | current |
+| UTL-022 | substation | v4 | 86.6 | percent-load | current |
+| UTL-023 | generator | v4 | 85.4 | percent-load | current |
+| UTL-024 | wfi-loop | v5 | 84.2 | percent-load | current |
+| UTL-025 | clean-steam | v5 | 85.9 | percent-load | current |
+| UTL-026 | substation | v5 | 84.7 | percent-load | current |
+| UTL-027 | generator | v5 | 86.4 | percent-load | current |
+| UTL-028 | wfi-loop | v5 | 85.2 | percent-load | current |
+| UTL-029 | clean-steam | v5 | 84.0 | percent-load | current |
+| UTL-030 | substation | v5 | 85.7 | percent-load | current |
+| UTL-031 | generator | v5 | 84.5 | percent-load | current |
+| UTL-032 | wfi-loop | v5 | 86.2 | percent-load | current |
+| UTL-033 | clean-steam | v5 | 85.0 | percent-load | current |
+| UTL-034 | substation | v5 | 86.7 | percent-load | superseded |
+| UTL-035 | generator | v5 | 85.5 | percent-load | current |
+| UTL-036 | wfi-loop | v6 | 84.3 | percent-load | current |
+| UTL-037 | clean-steam | v6 | 86.0 | percent-load | current |
+| UTL-038 | substation | v6 | 84.8 | percent-load | current |
+| UTL-039 | generator | v6 | 86.5 | percent-load | current |
+| UTL-040 | wfi-loop | v6 | 85.3 | percent-load | current |
+| UTL-041 | clean-steam | v6 | 84.1 | percent-load | current |
+
+## Decision constraints
+
+Preserve every-point versus average gates, MW meanings, duration, exclusions, and staleness.
+Define load stages, rollback, fuel replenishment, and current verification.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"ASSAY","source_path":"sources/ASSAY_QUALITY.md","source_sha256":"06b691266e9619612bfca550779938fc481d39a96385115299e737f310b306d5","source_size_bytes":3806,"start_line":1}
+--- exact source range ---
+# Analytical results, specification, and lot disposition
+
+## Frozen findings
+
+Current potency is 91 percent of reference with an approved specification of 85 to 115 percent. Ninety-one percent is an observation, not a probability of passing.
+Endotoxin is 0.18 EU per milliliter against a limit of not more than 0.25 EU/mL. A legacy 0.50 EU/mL method is superseded and cannot govern current release.
+Method, reference standard, sample plan, batch genealogy, cold-chain disposition, or candidate change makes prior analytical disposition stale.
+
+## Governing relationships
+
+CULTURE and STERILE supply genealogy and contamination controls; CHILL supplies excursion evidence. CHARTER assigns independent release authority.
+REVIEW may identify blockers but neither REVIEW nor a passing automated check releases a lot.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| QLT-000 | potency | v3 | 91.0 | percent-potency | superseded |
+| QLT-001 | sterility | v3 | 92.7 | percent-potency | current |
+| QLT-002 | endotoxin | v3 | 91.5 | percent-potency | current |
+| QLT-003 | identity | v3 | 93.2 | percent-potency | current |
+| QLT-004 | potency | v3 | 92.0 | percent-potency | current |
+| QLT-005 | sterility | v3 | 93.7 | percent-potency | current |
+| QLT-006 | endotoxin | v3 | 92.5 | percent-potency | current |
+| QLT-007 | identity | v3 | 91.3 | percent-potency | current |
+| QLT-008 | potency | v3 | 93.0 | percent-potency | current |
+| QLT-009 | sterility | v3 | 91.8 | percent-potency | current |
+| QLT-010 | endotoxin | v3 | 93.5 | percent-potency | current |
+| QLT-011 | identity | v3 | 92.3 | percent-potency | current |
+| QLT-012 | potency | v4 | 91.1 | percent-potency | current |
+| QLT-013 | sterility | v4 | 92.8 | percent-potency | current |
+| QLT-014 | endotoxin | v4 | 91.6 | percent-potency | current |
+| QLT-015 | identity | v4 | 93.3 | percent-potency | current |
+| QLT-016 | potency | v4 | 92.1 | percent-potency | current |
+| QLT-017 | sterility | v4 | 93.8 | percent-potency | superseded |
+| QLT-018 | endotoxin | v4 | 92.6 | percent-potency | current |
+| QLT-019 | identity | v4 | 91.4 | percent-potency | current |
+| QLT-020 | potency | v4 | 93.1 | percent-potency | current |
+| QLT-021 | sterility | v4 | 91.9 | percent-potency | current |
+| QLT-022 | endotoxin | v4 | 93.6 | percent-potency | current |
+| QLT-023 | identity | v4 | 92.4 | percent-potency | current |
+| QLT-024 | potency | v5 | 91.2 | percent-potency | current |
+| QLT-025 | sterility | v5 | 92.9 | percent-potency | current |
+| QLT-026 | endotoxin | v5 | 91.7 | percent-potency | current |
+| QLT-027 | identity | v5 | 93.4 | percent-potency | current |
+| QLT-028 | potency | v5 | 92.2 | percent-potency | current |
+| QLT-029 | sterility | v5 | 91.0 | percent-potency | current |
+| QLT-030 | endotoxin | v5 | 92.7 | percent-potency | current |
+| QLT-031 | identity | v5 | 91.5 | percent-potency | current |
+| QLT-032 | potency | v5 | 93.2 | percent-potency | current |
+| QLT-033 | sterility | v5 | 92.0 | percent-potency | current |
+| QLT-034 | endotoxin | v5 | 93.7 | percent-potency | superseded |
+| QLT-035 | identity | v5 | 92.5 | percent-potency | current |
+| QLT-036 | potency | v6 | 91.3 | percent-potency | current |
+| QLT-037 | sterility | v6 | 93.0 | percent-potency | current |
+| QLT-038 | endotoxin | v6 | 91.8 | percent-potency | current |
+| QLT-039 | identity | v6 | 93.5 | percent-potency | current |
+| QLT-040 | potency | v6 | 92.3 | percent-potency | current |
+| QLT-041 | sterility | v6 | 91.1 | percent-potency | current |
+
+## Decision constraints
+
+Preserve observation versus probability, specification range, EU/mL limits, and supersession.
+Bind every release recommendation to exact methods, samples, genealogy, and current candidate.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

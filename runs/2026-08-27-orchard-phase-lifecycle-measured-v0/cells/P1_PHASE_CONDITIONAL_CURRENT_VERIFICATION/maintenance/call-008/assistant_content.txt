@@ -1,0 +1,66 @@
+# Anchored provenance-local delta
+## CLAIM CULTURE-001
+SLOT_SOURCE: CULTURE
+SOURCE_VERSION: 4afe715ed5a632f384658d45a19fda0c6f1bc5476bc24ab525c75687df9c5d46
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: at least 68 percent yield in two consecutive engineering batches
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The restart gate requires at least 68 percent yield in two consecutive engineering batches.
+
+## CLAIM CULTURE-002
+SLOT_SOURCE: CULTURE
+SOURCE_VERSION: 4afe715ed5a632f384658d45a19fda0c6f1bc5476bc24ab525c75687df9c5d46
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: Harvest hold time is limited to six hours at 2 to 8 degrees Celsius
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Harvest hold time is limited to six hours at 2 to 8 degrees Celsius.
+
+## CLAIM CULTURE-003
+SLOT_SOURCE: CULTURE
+SOURCE_VERSION: 4afe715ed5a632f384658d45a19fda0c6f1bc5476bc24ab525c75687df9c5d46
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: ASSAY disposition consumes CULTURE genealogy and results
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: ASSAY, CULTURE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: ASSAY disposition consumes CULTURE genealogy and results.
+
+## CLAIM STERILE-001
+SLOT_SOURCE: STERILE
+SOURCE_VERSION: 19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: Clearance requires three consecutive successful media fills
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Clearance requires three consecutive successful media fills.
+
+## CLAIM STERILE-002
+SLOT_SOURCE: STERILE
+SOURCE_VERSION: 19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: the alert limit is 3 CFU per plate in the adjacent Grade B settle test
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The alert limit is 3 CFU per plate in the adjacent Grade B settle test.
+
+## CLAIM STERILE-003
+SLOT_SOURCE: STERILE
+SOURCE_VERSION: 19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: STERILE findings alone cannot authorize lot release or restart
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: STERILE findings alone cannot authorize lot release or restart.

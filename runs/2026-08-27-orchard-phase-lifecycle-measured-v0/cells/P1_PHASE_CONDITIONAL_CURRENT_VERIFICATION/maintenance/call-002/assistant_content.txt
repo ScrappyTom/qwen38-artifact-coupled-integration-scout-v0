@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM ASP-001
+SLOT_SOURCE: STERILE
+SOURCE_VERSION: 19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: 0.0
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The latest media fill found zero contaminated units across 9,600 filled units.
+
+## CLAIM ASP-002
+SLOT_SOURCE: STERILE
+SOURCE_VERSION: 19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: 1 CFU per cubic meter in Grade A active air
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The action limit is 1 CFU per cubic meter in Grade A active air.
+
+## CLAIM ASP-003
+SLOT_SOURCE: CHILL
+SOURCE_VERSION: 19adb344c96282fbb4bac930bd01230e5d1d1d4ac513e17a22e176671be5af62
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: minus 70 degrees Celsius with an allowed range of minus 80 to minus 60 degrees Celsius
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Frozen drug substance is stored at minus 70 degrees Celsius with an allowed range of minus 80 to minus 60 degrees Celsius.
+
+## CLAIM ASP-004
+SLOT_SOURCE: CHILL
+SOURCE_VERSION: 19adb344c96282fbb4bac930bd01230e5d1d1d4ac513e17a22e176671be5af62
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: minus 54 degrees Celsius for twenty-two minutes
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The observed lane-4 excursion was minus 54 degrees Celsius for twenty-two minutes.

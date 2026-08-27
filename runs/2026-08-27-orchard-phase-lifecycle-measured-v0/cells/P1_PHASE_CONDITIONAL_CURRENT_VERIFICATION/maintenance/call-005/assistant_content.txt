@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM DELTA-001
+SLOT_SOURCE: SAFETY
+SOURCE_VERSION: 163e6d198789dc487419a4149aea6b41ec06976a16b57924f51e7cae80ae3d6e
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: initial notice within twenty-four hours of determination, not twenty-four minutes after detection.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: SAFETY specifies that a material unauthorized solvent release requires initial notice within twenty-four hours of determination, not twenty-four minutes after detection.
+
+## CLAIM DELTA-002
+SLOT_SOURCE: SAFETY
+SOURCE_VERSION: 163e6d198789dc487419a4149aea6b41ec06976a16b57924f51e7cae80ae3d6e
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: discharge above 0.021 milligrams per liter at the outfall requires an immediate stop.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: SAFETY states that under permit condition N-12, discharge above 0.021 milligrams per liter at the outfall requires an immediate stop.
+
+## CLAIM DELTA-003
+SLOT_SOURCE: SIGNAL
+SOURCE_VERSION: f0c38d24fd53e1ff8350bbfd06951cf70c9ddc21ed2110829fd8e48e000d85b8
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: clean-utility warning threshold is 81 degrees Celsius and the production stop is 79 degrees.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: SIGNAL defines the clean-utility warning threshold as 81 degrees Celsius and the production stop threshold as 79 degrees.
+
+## CLAIM DELTA-004
+SLOT_SOURCE: SIGNAL
+SOURCE_VERSION: f0c38d24fd53e1ff8350bbfd06951cf70c9ddc21ed2110829fd8e48e000d85b8
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: Alarm delivery is 640 milliseconds at p95 and 1,050 milliseconds at p99.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: SIGNAL reports alarm delivery latency as 640 milliseconds at p95 and 1,050 milliseconds at p99.

@@ -1,0 +1,88 @@
+# Anchored provenance-local delta
+## CLAIM WFI-TEMP-REQ
+SLOT_SOURCE: CURRENT
+SOURCE_VERSION: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: at least 80 degrees at every return point for three consecutive thirty-minute windows
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The water-for-injection loop requires at least 80 degrees at every return point for three consecutive thirty-minute windows.
+
+## CLAIM WFI-TEMP-CURRENT
+SLOT_SOURCE: CURRENT
+SOURCE_VERSION: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: 82 degrees Celsius
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The water-for-injection loop is at 82 degrees Celsius.
+
+## CLAIM ELEC-CAPACITY-USEABLE
+SLOT_SOURCE: CURRENT
+SOURCE_VERSION: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Usable electrical service is 5.4 MW after switchgear derating
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Usable electrical service is 5.4 MW after switchgear derating.
+
+## CLAIM ELEC-CAPACITY-INSTALLED
+SLOT_SOURCE: CURRENT
+SOURCE_VERSION: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: installed rating is 7.1 MW
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The installed electrical rating is 7.1 MW.
+
+## CLAIM PWR-GEN-CAPACITY
+SLOT_SOURCE: CURRENT
+SOURCE_VERSION: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Emergency generation carries 3.2 MW for twenty-eight hours at current fuel stock
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Emergency generation carries 3.2 MW for twenty-eight hours at current fuel stock.
+
+## CLAIM PWR-GEN-EXCLUSION
+SLOT_SOURCE: CURRENT
+SOURCE_VERSION: 12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: excludes the lyophilizer start transient
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The emergency generation duration excludes the lyophilizer start transient.
+
+## CLAIM POTENCY-OBSERVATION
+SLOT_SOURCE: ASSAY
+SOURCE_VERSION: 06b691266e9619612bfca550779938fc481d39a96385115299e737f310b306d5
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Current potency is 91 percent of reference
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Current potency is 91 percent of reference.
+
+## CLAIM POTENCY-SPECIFICATION
+SLOT_SOURCE: ASSAY
+SOURCE_VERSION: 06b691266e9619612bfca550779938fc481d39a96385115299e737f310b306d5
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: approved specification of 85 to 115 percent
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The approved potency specification is 85 to 115 percent.

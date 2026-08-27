@@ -1,0 +1,2 @@
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"CURRENT","start_line":1},{"end_line":64,"source_id":"ASSAY","start_line":1}]
+}

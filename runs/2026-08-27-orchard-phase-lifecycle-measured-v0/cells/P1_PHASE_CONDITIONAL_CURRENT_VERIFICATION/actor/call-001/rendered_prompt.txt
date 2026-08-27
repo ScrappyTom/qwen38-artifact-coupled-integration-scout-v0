@@ -1,0 +1,813 @@
+<|im_start|>system
+You are the ordinary actor in a bounded biologics-restart decision system.
+
+Use exact task actions to inspect evidence, build the exact task artifacts,
+check the current candidate, repair real blockers, and propose submission only
+when the current candidate has a current passing check. Exact sources, effects,
+checks, and history remain externally custodied and reopenable.
+
+Any semantic scaffold is lossy, incomplete, non-authoritative, and source-bound.
+Use it as provisional construction support, never as release, restart, or
+closure authority. Preserve exact values, units, signs, locations, modalities,
+versions, qualifications, and authority boundaries. A candidate mutation makes
+prior checks stale until the changed candidate is checked.
+
+Return exactly one declared JSON action and no prose.<|im_end|>
+<|im_start|>user
+# Orchard Biologics Restart Decision Task
+
+Produce two exact, source-grounded work products for the synthetic Orchard
+biologics facility:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning with exactly
+   `# Orchard Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning with exactly
+   `# Orchard Biologics Restart Decision` and containing exactly these ordered
+   level-two headings:
+
+   1. `Authority, scope, and restart states`
+   2. `Process, genealogy, and hold-time controls`
+   3. `Aseptic, analytical, and cold-chain release gates`
+   4. `Utilities, materials, staffing, and staged restart`
+   5. `Cybersecurity, telemetry, and evidence custody`
+   6. `Safety, environmental, and communication continuity`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. It must reconcile
+authority, process performance, aseptic controls, cold-chain excursion,
+utilities, analytical disposition, cybersecurity, materials/staffing,
+environmental duties, monitoring, communications, candidate lineage, and
+independent readiness.
+
+Do not merely list facts. Bind every action and gate to owners, prerequisites,
+observations, current candidate/version, falsifiers, rollback, and evidence that
+retires temporary controls. Preserve exact distinctions including observations
+versus gates, alert versus action limits, installed versus usable capacity,
+percent versus probability, hours versus days, source-local authority, and
+current versus stale evidence.
+
+The task-native artifacts are exact cumulative work. Checks are candidate-bound
+mechanical feedback and do not independently authorize lot release, commercial
+restart, or closure.<|im_end|>
+<|im_start|>user
+# Orchard action contract
+
+Return exactly one JSON object using one currently allowed action.
+
+```text
+{"action":"read_source","source_id":"CHARTER","start_line":1,"end_line":60}
+{"action":"read_batch","requests":[{"source_id":"CHARTER","start_line":1,"end_line":60},{"source_id":"CULTURE","start_line":1,"end_line":60}]}
+{"action":"reopen_exact","result_id":"RESULT-001"}
+{"action":"replace_evidence_ledger","content":"complete compact task-native matrix"}
+{"action":"upsert_decision_section","heading":"Authority, scope, and restart states","body":"exact section body"}
+{"action":"patch_decision","edits":[{"old":"exact unique text","new":"replacement text"}]}
+{"action":"replace_decision","content":"complete exact decision"}
+{"action":"begin_verification"}
+{"action":"run_check"}
+{"action":"submit"}
+```
+
+One read may contain at most 120 lines. One batch may contain one or two ranges,
+at most 160 total lines and 12,000 source bytes. Same-source ranges may not
+overlap. Use exact catalog IDs and in-range bounds.
+
+`begin_verification` is valid only after the frozen mechanical construction
+milestone passes. It changes phase, not candidate bytes, and does not assert
+readiness. A successful patch makes every earlier check stale. Submission does
+not self-authorize readiness.
+
+
+# Common pre-fork action notice
+No semantic-maintenance output is present during pressure screening. Both future configurations share this ordinary action surface and exact task work.
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":64,"sha256":"6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174","size_bytes":3964,"source_id":"CHARTER","title":"Restart authority and accountable disposition"},{"line_count":64,"sha256":"4afe715ed5a632f384658d45a19fda0c6f1bc5476bc24ab525c75687df9c5d46","size_bytes":3843,"source_id":"CULTURE","title":"Bioreactor state, yield, and hold-time evidence"},{"line_count":64,"sha256":"19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188","size_bytes":3468,"source_id":"STERILE","title":"Aseptic processing and contamination-control evidence"},{"line_count":64,"sha256":"19adb344c96282fbb4bac930bd01230e5d1d1d4ac513e17a22e176671be5af62","size_bytes":3994,"source_id":"CHILL","title":"Cold-chain mapping, excursion, and disposition"},{"line_count":64,"sha256":"12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55","size_bytes":3820,"source_id":"CURRENT","title":"Clean utilities, power, and capacity"},{"line_count":64,"sha256":"06b691266e9619612bfca550779938fc481d39a96385115299e737f310b306d5","size_bytes":3806,"source_id":"ASSAY","title":"Analytical results, specification, and lot disposition"},{"line_count":64,"sha256":"7dfea87e46a18ed29a974a3175fa0aaf0f31b817a9f7017471ed667e396786e5","size_bytes":3437,"source_id":"GUARD","title":"Control-system access, integrity, and evidence custody"},{"line_count":64,"sha256":"5a97d24e023016fa9921576e3584309b03359570afe41d30ad2e8f7084b5fc50","size_bytes":3505,"source_id":"SUPPLY","title":"Materials, fuel, staffing, and supplier continuity"},{"line_count":64,"sha256":"163e6d198789dc487419a4149aea6b41ec06976a16b57924f51e7cae80ae3d6e","size_bytes":3423,"source_id":"SAFETY","title":"Worker safety, emissions, waste, and notification"},{"line_count":64,"sha256":"f0c38d24fd53e1ff8350bbfd06951cf70c9ddc21ed2110829fd8e48e000d85b8","size_bytes":3755,"source_id":"SIGNAL","title":"Monitoring coverage, alerts, and latency"},{"line_count":64,"sha256":"32bfd24b2b40e1096b1d87dfc1ffce5867a0a07da290766d4766ccc552614860","size_bytes":4124,"source_id":"COMMUNE","title":"Workforce, regulator, and customer communications"},{"line_count":64,"sha256":"a89a287a5ee18083a0cf9765bd56b485a80cbe56d7ed3303ac294bcd21c25328","size_bytes":3904,"source_id":"CHANGE","title":"Candidate lineage, rollback, and configuration control"},{"line_count":64,"sha256":"661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9","size_bytes":3716,"source_id":"REVIEW","title":"Independent readiness review, blockers, and falsifiers"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"f5b104f2e797adbf6990298f48baa2cd375970a3a80a17fcead667fd9f659225","candidate_version":"candidate-v000:f5b104f2e797adbf6990298f48baa2cd375970a3a80a17fcead667fd9f659225","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"a514f8b27ca1e20649d065784ef2fcd6199e50d5afdf6312b1d3a91523b785c0","EVIDENCE_INTEGRATION_LEDGER.md":"b6e5a5b3d13dd153ed3a435b514bd4eee1e8cca68f027a5f18e76b123e17774f"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Orchard Evidence and Decision Matrix
+
+No evidence has yet been integrated into exact task work.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Orchard Biologics Restart Decision
+
+No restart decision has yet been constructed.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"CHARTER","start_line":1},{"end_line":64,"source_id":"CULTURE","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":2,"exact_result_sha256":"378a9139890444e0d2ea60b9e49a25afaddd2cbe9236ad0de79bad815b49321d","exact_result_size_bytes":8774,"object_id":"batch:CHARTER:1-64+CULTURE:1-64","object_version":"972dca61657b5271277e7a63647e4420761591b9d38425ccc3dba3a0dee430e9","observed_ranges":[{"end_line":64,"source_id":"CHARTER","start_line":1},{"end_line":64,"source_id":"CULTURE","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-001"},"reopen_handle":"result://sha256/378a9139890444e0d2ea60b9e49a25afaddd2cbe9236ad0de79bad815b49321d","resident":false,"result_id":"RESULT-001","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":null,"source_ids":["CHARTER","CULTURE"],"source_path":null,"source_sha256":null,"source_size_bytes":null,"total_source_bytes":8269}<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"STERILE","start_line":1},{"end_line":64,"source_id":"CHILL","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:STERILE:1-64+CHILL:1-64","object_version":"fa24360cb7042daa541a52323934190fec14b1555b2c1cc25a58892636882830","result_id":"RESULT-002","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"STERILE","start_line":1},{"end_line":64,"source_id":"CHILL","start_line":1}],"total_source_bytes":7921}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"STERILE","source_path":"sources/STERILE_ASEPTIC.md","source_sha256":"19a5fe9d20e744fef04763096ac79029de041a7a5b0004926e87761852415188","source_size_bytes":3468,"start_line":1}
+--- exact source range ---
+# Aseptic processing and contamination-control evidence
+
+## Frozen findings
+
+The latest media fill found zero contaminated units across 9,600 filled units. Clearance requires three consecutive successful media fills; one clean run is insufficient.
+The action limit is 1 CFU per cubic meter in Grade A active air, while the alert limit is 3 CFU per plate in the adjacent Grade B settle test. The locations, units, and limit types must not be interchanged.
+A glove, transfer port, sterilization cycle, filling path, viable-air method, or environmental-monitoring plan change makes earlier aseptic evidence stale.
+
+## Governing relationships
+
+CULTURE provides batch genealogy, ASSAY consumes sterility evidence, and GUARD constrains validated access to the filling controller.
+CHARTER assigns release authority; STERILE findings alone cannot authorize lot release or restart.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| ASP-000 | filling-line | v3 | 0.0 | cfu | superseded |
+| ASP-001 | isolator | v3 | 1.7 | cfu | current |
+| ASP-002 | transfer-port | v3 | 0.5 | cfu | current |
+| ASP-003 | environmental-zone | v3 | 2.2 | cfu | current |
+| ASP-004 | filling-line | v3 | 1.0 | cfu | current |
+| ASP-005 | isolator | v3 | 2.7 | cfu | current |
+| ASP-006 | transfer-port | v3 | 1.5 | cfu | current |
+| ASP-007 | environmental-zone | v3 | 0.3 | cfu | current |
+| ASP-008 | filling-line | v3 | 2.0 | cfu | current |
+| ASP-009 | isolator | v3 | 0.8 | cfu | current |
+| ASP-010 | transfer-port | v3 | 2.5 | cfu | current |
+| ASP-011 | environmental-zone | v3 | 1.3 | cfu | current |
+| ASP-012 | filling-line | v4 | 0.1 | cfu | current |
+| ASP-013 | isolator | v4 | 1.8 | cfu | current |
+| ASP-014 | transfer-port | v4 | 0.6 | cfu | current |
+| ASP-015 | environmental-zone | v4 | 2.3 | cfu | current |
+| ASP-016 | filling-line | v4 | 1.1 | cfu | current |
+| ASP-017 | isolator | v4 | 2.8 | cfu | superseded |
+| ASP-018 | transfer-port | v4 | 1.6 | cfu | current |
+| ASP-019 | environmental-zone | v4 | 0.4 | cfu | current |
+| ASP-020 | filling-line | v4 | 2.1 | cfu | current |
+| ASP-021 | isolator | v4 | 0.9 | cfu | current |
+| ASP-022 | transfer-port | v4 | 2.6 | cfu | current |
+| ASP-023 | environmental-zone | v4 | 1.4 | cfu | current |
+| ASP-024 | filling-line | v5 | 0.2 | cfu | current |
+| ASP-025 | isolator | v5 | 1.9 | cfu | current |
+| ASP-026 | transfer-port | v5 | 0.7 | cfu | current |
+| ASP-027 | environmental-zone | v5 | 2.4 | cfu | current |
+| ASP-028 | filling-line | v5 | 1.2 | cfu | current |
+| ASP-029 | isolator | v5 | 0.0 | cfu | current |
+| ASP-030 | transfer-port | v5 | 1.7 | cfu | current |
+| ASP-031 | environmental-zone | v5 | 0.5 | cfu | current |
+| ASP-032 | filling-line | v5 | 2.2 | cfu | current |
+| ASP-033 | isolator | v5 | 1.0 | cfu | current |
+| ASP-034 | transfer-port | v5 | 2.7 | cfu | superseded |
+| ASP-035 | environmental-zone | v5 | 1.5 | cfu | current |
+| ASP-036 | filling-line | v6 | 0.3 | cfu | current |
+| ASP-037 | isolator | v6 | 2.0 | cfu | current |
+| ASP-038 | transfer-port | v6 | 0.8 | cfu | current |
+| ASP-039 | environmental-zone | v6 | 2.5 | cfu | current |
+| ASP-040 | filling-line | v6 | 1.3 | cfu | current |
+| ASP-041 | isolator | v6 | 0.1 | cfu | current |
+
+## Decision constraints
+
+Preserve units, locations, alert/action meaning, fill count, run count, and staleness.
+State the falsifier that stops filling and reopens investigation.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"CHILL","source_path":"sources/CHILL_COLD_CHAIN.md","source_sha256":"19adb344c96282fbb4bac930bd01230e5d1d1d4ac513e17a22e176671be5af62","source_size_bytes":3994,"start_line":1}
+--- exact source range ---
+# Cold-chain mapping, excursion, and disposition
+
+## Frozen findings
+
+Frozen drug substance is stored at minus 70 degrees Celsius with an allowed range of minus 80 to minus 60 degrees Celsius. Minus 20 degrees is not an acceptable frozen-drug-substance set point.
+The observed lane-4 excursion was minus 54 degrees Celsius for twenty-two minutes. Disposition requires product-specific stability review; duration alone neither releases nor rejects the material.
+A probe, logger, pallet map, shipping lane, freezer controller, or packaging configuration change makes prior mapping evidence stale.
+
+## Governing relationships
+
+ASSAY owns product disposition evidence, SUPPLY owns lane and packaging availability, and SIGNAL owns current alarm delivery evidence.
+CHANGE binds the evaluated packaging and controller versions; CHARTER retains release authority separation.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CLD-000 | freezer-1 | v3 | -70.0 | degrees-celsius | superseded |
+| CLD-001 | freezer-2 | v3 | -68.3 | degrees-celsius | current |
+| CLD-002 | shipping-lane | v3 | -69.5 | degrees-celsius | current |
+| CLD-003 | staging-room | v3 | -67.8 | degrees-celsius | current |
+| CLD-004 | freezer-1 | v3 | -69.0 | degrees-celsius | current |
+| CLD-005 | freezer-2 | v3 | -67.3 | degrees-celsius | current |
+| CLD-006 | shipping-lane | v3 | -68.5 | degrees-celsius | current |
+| CLD-007 | staging-room | v3 | -69.7 | degrees-celsius | current |
+| CLD-008 | freezer-1 | v3 | -68.0 | degrees-celsius | current |
+| CLD-009 | freezer-2 | v3 | -69.2 | degrees-celsius | current |
+| CLD-010 | shipping-lane | v3 | -67.5 | degrees-celsius | current |
+| CLD-011 | staging-room | v3 | -68.7 | degrees-celsius | current |
+| CLD-012 | freezer-1 | v4 | -69.9 | degrees-celsius | current |
+| CLD-013 | freezer-2 | v4 | -68.2 | degrees-celsius | current |
+| CLD-014 | shipping-lane | v4 | -69.4 | degrees-celsius | current |
+| CLD-015 | staging-room | v4 | -67.7 | degrees-celsius | current |
+| CLD-016 | freezer-1 | v4 | -68.9 | degrees-celsius | current |
+| CLD-017 | freezer-2 | v4 | -67.2 | degrees-celsius | superseded |
+| CLD-018 | shipping-lane | v4 | -68.4 | degrees-celsius | current |
+| CLD-019 | staging-room | v4 | -69.6 | degrees-celsius | current |
+| CLD-020 | freezer-1 | v4 | -67.9 | degrees-celsius | current |
+| CLD-021 | freezer-2 | v4 | -69.1 | degrees-celsius | current |
+| CLD-022 | shipping-lane | v4 | -67.4 | degrees-celsius | current |
+| CLD-023 | staging-room | v4 | -68.6 | degrees-celsius | current |
+| CLD-024 | freezer-1 | v5 | -69.8 | degrees-celsius | current |
+| CLD-025 | freezer-2 | v5 | -68.1 | degrees-celsius | current |
+| CLD-026 | shipping-lane | v5 | -69.3 | degrees-celsius | current |
+| CLD-027 | staging-room | v5 | -67.6 | degrees-celsius | current |
+| CLD-028 | freezer-1 | v5 | -68.8 | degrees-celsius | current |
+| CLD-029 | freezer-2 | v5 | -70.0 | degrees-celsius | current |
+| CLD-030 | shipping-lane | v5 | -68.3 | degrees-celsius | current |
+| CLD-031 | staging-room | v5 | -69.5 | degrees-celsius | current |
+| CLD-032 | freezer-1 | v5 | -67.8 | degrees-celsius | current |
+| CLD-033 | freezer-2 | v5 | -69.0 | degrees-celsius | current |
+| CLD-034 | shipping-lane | v5 | -67.3 | degrees-celsius | superseded |
+| CLD-035 | staging-room | v5 | -68.5 | degrees-celsius | current |
+| CLD-036 | freezer-1 | v6 | -69.7 | degrees-celsius | current |
+| CLD-037 | freezer-2 | v6 | -68.0 | degrees-celsius | current |
+| CLD-038 | shipping-lane | v6 | -69.2 | degrees-celsius | current |
+| CLD-039 | staging-room | v6 | -67.5 | degrees-celsius | current |
+| CLD-040 | freezer-1 | v6 | -68.7 | degrees-celsius | current |
+| CLD-041 | freezer-2 | v6 | -69.9 | degrees-celsius | current |
+
+## Decision constraints
+
+Preserve signs, ranges, duration, lane, product-specific review, and currentness.
+Name quarantine, alternate storage, remapping, and evidence needed to retire temporary controls.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"CURRENT","start_line":1},{"end_line":64,"source_id":"ASSAY","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:CURRENT:1-64+ASSAY:1-64","object_version":"2414038db9136a20fb5a2edc9c0fc29c776ee78ef11e55b7907c944423f908fa","result_id":"RESULT-003","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"CURRENT","start_line":1},{"end_line":64,"source_id":"ASSAY","start_line":1}],"total_source_bytes":8084}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"CURRENT","source_path":"sources/CURRENT_UTILITIES.md","source_sha256":"12b2bcc5b451921b38d9af555f68af1d74e8673e4c037b2ec3d5ef1e6a1b0a55","source_size_bytes":3820,"start_line":1}
+--- exact source range ---
+# Clean utilities, power, and capacity
+
+## Frozen findings
+
+The water-for-injection loop is at 82 degrees Celsius and requires at least 80 degrees at every return point for three consecutive thirty-minute windows. Average temperature cannot substitute for every-point compliance.
+Usable electrical service is 5.4 MW after switchgear derating, while the installed rating is 7.1 MW. Rated and currently usable capacity must not be swapped or added together.
+Emergency generation carries 3.2 MW for twenty-eight hours at current fuel stock. The duration is not twenty-eight days and excludes the lyophilizer start transient.
+
+## Governing relationships
+
+CULTURE and STERILE depend on CURRENT clean utilities; SUPPLY fuel controls generator duration and SIGNAL validates return temperatures and transfer stability.
+A loop balance, sensor, switchgear, generator, or production-load change makes prior utility evidence stale.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| UTL-000 | wfi-loop | v3 | 84.0 | percent-load | superseded |
+| UTL-001 | clean-steam | v3 | 85.7 | percent-load | current |
+| UTL-002 | substation | v3 | 84.5 | percent-load | current |
+| UTL-003 | generator | v3 | 86.2 | percent-load | current |
+| UTL-004 | wfi-loop | v3 | 85.0 | percent-load | current |
+| UTL-005 | clean-steam | v3 | 86.7 | percent-load | current |
+| UTL-006 | substation | v3 | 85.5 | percent-load | current |
+| UTL-007 | generator | v3 | 84.3 | percent-load | current |
+| UTL-008 | wfi-loop | v3 | 86.0 | percent-load | current |
+| UTL-009 | clean-steam | v3 | 84.8 | percent-load | current |
+| UTL-010 | substation | v3 | 86.5 | percent-load | current |
+| UTL-011 | generator | v3 | 85.3 | percent-load | current |
+| UTL-012 | wfi-loop | v4 | 84.1 | percent-load | current |
+| UTL-013 | clean-steam | v4 | 85.8 | percent-load | current |
+| UTL-014 | substation | v4 | 84.6 | percent-load | current |
+| UTL-015 | generator | v4 | 86.3 | percent-load | current |
+| UTL-016 | wfi-loop | v4 | 85.1 | percent-load | current |
+| UTL-017 | clean-steam | v4 | 86.8 | percent-load | superseded |
+| UTL-018 | substation | v4 | 85.6 | percent-load | current |
+| UTL-019 | generator | v4 | 84.4 | percent-load | current |
+| UTL-020 | wfi-loop | v4 | 86.1 | percent-load | current |
+| UTL-021 | clean-steam | v4 | 84.9 | percent-load | current |
+| UTL-022 | substation | v4 | 86.6 | percent-load | current |
+| UTL-023 | generator | v4 | 85.4 | percent-load | current |
+| UTL-024 | wfi-loop | v5 | 84.2 | percent-load | current |
+| UTL-025 | clean-steam | v5 | 85.9 | percent-load | current |
+| UTL-026 | substation | v5 | 84.7 | percent-load | current |
+| UTL-027 | generator | v5 | 86.4 | percent-load | current |
+| UTL-028 | wfi-loop | v5 | 85.2 | percent-load | current |
+| UTL-029 | clean-steam | v5 | 84.0 | percent-load | current |
+| UTL-030 | substation | v5 | 85.7 | percent-load | current |
+| UTL-031 | generator | v5 | 84.5 | percent-load | current |
+| UTL-032 | wfi-loop | v5 | 86.2 | percent-load | current |
+| UTL-033 | clean-steam | v5 | 85.0 | percent-load | current |
+| UTL-034 | substation | v5 | 86.7 | percent-load | superseded |
+| UTL-035 | generator | v5 | 85.5 | percent-load | current |
+| UTL-036 | wfi-loop | v6 | 84.3 | percent-load | current |
+| UTL-037 | clean-steam | v6 | 86.0 | percent-load | current |
+| UTL-038 | substation | v6 | 84.8 | percent-load | current |
+| UTL-039 | generator | v6 | 86.5 | percent-load | current |
+| UTL-040 | wfi-loop | v6 | 85.3 | percent-load | current |
+| UTL-041 | clean-steam | v6 | 84.1 | percent-load | current |
+
+## Decision constraints
+
+Preserve every-point versus average gates, MW meanings, duration, exclusions, and staleness.
+Define load stages, rollback, fuel replenishment, and current verification.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"ASSAY","source_path":"sources/ASSAY_QUALITY.md","source_sha256":"06b691266e9619612bfca550779938fc481d39a96385115299e737f310b306d5","source_size_bytes":3806,"start_line":1}
+--- exact source range ---
+# Analytical results, specification, and lot disposition
+
+## Frozen findings
+
+Current potency is 91 percent of reference with an approved specification of 85 to 115 percent. Ninety-one percent is an observation, not a probability of passing.
+Endotoxin is 0.18 EU per milliliter against a limit of not more than 0.25 EU/mL. A legacy 0.50 EU/mL method is superseded and cannot govern current release.
+Method, reference standard, sample plan, batch genealogy, cold-chain disposition, or candidate change makes prior analytical disposition stale.
+
+## Governing relationships
+
+CULTURE and STERILE supply genealogy and contamination controls; CHILL supplies excursion evidence. CHARTER assigns independent release authority.
+REVIEW may identify blockers but neither REVIEW nor a passing automated check releases a lot.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| QLT-000 | potency | v3 | 91.0 | percent-potency | superseded |
+| QLT-001 | sterility | v3 | 92.7 | percent-potency | current |
+| QLT-002 | endotoxin | v3 | 91.5 | percent-potency | current |
+| QLT-003 | identity | v3 | 93.2 | percent-potency | current |
+| QLT-004 | potency | v3 | 92.0 | percent-potency | current |
+| QLT-005 | sterility | v3 | 93.7 | percent-potency | current |
+| QLT-006 | endotoxin | v3 | 92.5 | percent-potency | current |
+| QLT-007 | identity | v3 | 91.3 | percent-potency | current |
+| QLT-008 | potency | v3 | 93.0 | percent-potency | current |
+| QLT-009 | sterility | v3 | 91.8 | percent-potency | current |
+| QLT-010 | endotoxin | v3 | 93.5 | percent-potency | current |
+| QLT-011 | identity | v3 | 92.3 | percent-potency | current |
+| QLT-012 | potency | v4 | 91.1 | percent-potency | current |
+| QLT-013 | sterility | v4 | 92.8 | percent-potency | current |
+| QLT-014 | endotoxin | v4 | 91.6 | percent-potency | current |
+| QLT-015 | identity | v4 | 93.3 | percent-potency | current |
+| QLT-016 | potency | v4 | 92.1 | percent-potency | current |
+| QLT-017 | sterility | v4 | 93.8 | percent-potency | superseded |
+| QLT-018 | endotoxin | v4 | 92.6 | percent-potency | current |
+| QLT-019 | identity | v4 | 91.4 | percent-potency | current |
+| QLT-020 | potency | v4 | 93.1 | percent-potency | current |
+| QLT-021 | sterility | v4 | 91.9 | percent-potency | current |
+| QLT-022 | endotoxin | v4 | 93.6 | percent-potency | current |
+| QLT-023 | identity | v4 | 92.4 | percent-potency | current |
+| QLT-024 | potency | v5 | 91.2 | percent-potency | current |
+| QLT-025 | sterility | v5 | 92.9 | percent-potency | current |
+| QLT-026 | endotoxin | v5 | 91.7 | percent-potency | current |
+| QLT-027 | identity | v5 | 93.4 | percent-potency | current |
+| QLT-028 | potency | v5 | 92.2 | percent-potency | current |
+| QLT-029 | sterility | v5 | 91.0 | percent-potency | current |
+| QLT-030 | endotoxin | v5 | 92.7 | percent-potency | current |
+| QLT-031 | identity | v5 | 91.5 | percent-potency | current |
+| QLT-032 | potency | v5 | 93.2 | percent-potency | current |
+| QLT-033 | sterility | v5 | 92.0 | percent-potency | current |
+| QLT-034 | endotoxin | v5 | 93.7 | percent-potency | superseded |
+| QLT-035 | identity | v5 | 92.5 | percent-potency | current |
+| QLT-036 | potency | v6 | 91.3 | percent-potency | current |
+| QLT-037 | sterility | v6 | 93.0 | percent-potency | current |
+| QLT-038 | endotoxin | v6 | 91.8 | percent-potency | current |
+| QLT-039 | identity | v6 | 93.5 | percent-potency | current |
+| QLT-040 | potency | v6 | 92.3 | percent-potency | current |
+| QLT-041 | sterility | v6 | 91.1 | percent-potency | current |
+
+## Decision constraints
+
+Preserve observation versus probability, specification range, EU/mL limits, and supersession.
+Bind every release recommendation to exact methods, samples, genealogy, and current candidate.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"GUARD","start_line":1},{"end_line":64,"source_id":"SUPPLY","start_line":1}]
+}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:GUARD:1-64+SUPPLY:1-64","object_version":"bfcf2c0c7a6729e81047ac39d7e47ec95bce86df08e642a97aab3fd7fe5def5e","result_id":"RESULT-004","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"GUARD","start_line":1},{"end_line":64,"source_id":"SUPPLY","start_line":1}],"total_source_bytes":7396}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"GUARD","source_path":"sources/GUARD_CYBER.md","source_sha256":"7dfea87e46a18ed29a974a3175fa0aaf0f31b817a9f7017471ed667e396786e5","source_size_bytes":3437,"start_line":1}
+--- exact source range ---
+# Control-system access, integrity, and evidence custody
+
+## Frozen findings
+
+The exposed service account was disabled at 09:40 UTC. The recipe-signing key was not exposed and remains current under key-set K7.
+Break-glass access expires after two hours and requires dual approval plus immutable session logging. Emergency access is not continuing authorization.
+Online controller logs are retained for 180 days and archived investigation evidence for seven years; the periods serve different obligations.
+
+## Governing relationships
+
+STERILE and CULTURE require GUARD-validated controller access; SIGNAL consumes audit events but does not authorize access.
+Any key-set, role-policy, controller, recipe, or logging mutation makes prior cyber verification stale.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CYB-000 | service-account | v3 | 2.0 | hours | superseded |
+| CYB-001 | recipe-signing | v3 | 3.7 | hours | current |
+| CYB-002 | historian | v3 | 2.5 | hours | current |
+| CYB-003 | audit-store | v3 | 4.2 | hours | current |
+| CYB-004 | service-account | v3 | 3.0 | hours | current |
+| CYB-005 | recipe-signing | v3 | 4.7 | hours | current |
+| CYB-006 | historian | v3 | 3.5 | hours | current |
+| CYB-007 | audit-store | v3 | 2.3 | hours | current |
+| CYB-008 | service-account | v3 | 4.0 | hours | current |
+| CYB-009 | recipe-signing | v3 | 2.8 | hours | current |
+| CYB-010 | historian | v3 | 4.5 | hours | current |
+| CYB-011 | audit-store | v3 | 3.3 | hours | current |
+| CYB-012 | service-account | v4 | 2.1 | hours | current |
+| CYB-013 | recipe-signing | v4 | 3.8 | hours | current |
+| CYB-014 | historian | v4 | 2.6 | hours | current |
+| CYB-015 | audit-store | v4 | 4.3 | hours | current |
+| CYB-016 | service-account | v4 | 3.1 | hours | current |
+| CYB-017 | recipe-signing | v4 | 4.8 | hours | superseded |
+| CYB-018 | historian | v4 | 3.6 | hours | current |
+| CYB-019 | audit-store | v4 | 2.4 | hours | current |
+| CYB-020 | service-account | v4 | 4.1 | hours | current |
+| CYB-021 | recipe-signing | v4 | 2.9 | hours | current |
+| CYB-022 | historian | v4 | 4.6 | hours | current |
+| CYB-023 | audit-store | v4 | 3.4 | hours | current |
+| CYB-024 | service-account | v5 | 2.2 | hours | current |
+| CYB-025 | recipe-signing | v5 | 3.9 | hours | current |
+| CYB-026 | historian | v5 | 2.7 | hours | current |
+| CYB-027 | audit-store | v5 | 4.4 | hours | current |
+| CYB-028 | service-account | v5 | 3.2 | hours | current |
+| CYB-029 | recipe-signing | v5 | 2.0 | hours | current |
+| CYB-030 | historian | v5 | 3.7 | hours | current |
+| CYB-031 | audit-store | v5 | 2.5 | hours | current |
+| CYB-032 | service-account | v5 | 4.2 | hours | current |
+| CYB-033 | recipe-signing | v5 | 3.0 | hours | current |
+| CYB-034 | historian | v5 | 4.7 | hours | superseded |
+| CYB-035 | audit-store | v5 | 3.5 | hours | current |
+| CYB-036 | service-account | v6 | 2.3 | hours | current |
+| CYB-037 | recipe-signing | v6 | 4.0 | hours | current |
+| CYB-038 | historian | v6 | 2.8 | hours | current |
+| CYB-039 | audit-store | v6 | 4.5 | hours | current |
+| CYB-040 | service-account | v6 | 3.3 | hours | current |
+| CYB-041 | recipe-signing | v6 | 2.1 | hours | current |
+
+## Decision constraints
+
+Distinguish account disablement, key status, access duration, approval, and retention.
+Name current evidence required before restoring remote recipe deployment.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"SUPPLY","source_path":"sources/SUPPLY_MATERIALS.md","source_sha256":"5a97d24e023016fa9921576e3584309b03359570afe41d30ad2e8f7084b5fc50","source_size_bytes":3505,"start_line":1}
+--- exact source range ---
+# Materials, fuel, staffing, and supplier continuity
+
+## Frozen findings
+
+Current diesel stock covers twenty-eight hours at emergency load and seventeen hours at full production load. The two consumption regimes must remain distinct.
+Sterile stopper stock covers 4.2 production days, while chromatography resin covers 2.6 batches. Days and batches are different inventory measures.
+Mutual aid provides five qualified operators beginning at 05:30 UTC with travel uncertainty of plus or minus seventy-five minutes.
+
+## Governing relationships
+
+CURRENT generator duration depends on SUPPLY fuel; STERILE depends on stoppers; CULTURE depends on resin and qualified staffing.
+CHILL shipping alternatives require approved packaging and current lane qualification before use.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| SUP-000 | resin | v3 | 31.0 | hours-cover | superseded |
+| SUP-001 | stoppers | v3 | 32.7 | hours-cover | current |
+| SUP-002 | diesel | v3 | 31.5 | hours-cover | current |
+| SUP-003 | operators | v3 | 33.2 | hours-cover | current |
+| SUP-004 | resin | v3 | 32.0 | hours-cover | current |
+| SUP-005 | stoppers | v3 | 33.7 | hours-cover | current |
+| SUP-006 | diesel | v3 | 32.5 | hours-cover | current |
+| SUP-007 | operators | v3 | 31.3 | hours-cover | current |
+| SUP-008 | resin | v3 | 33.0 | hours-cover | current |
+| SUP-009 | stoppers | v3 | 31.8 | hours-cover | current |
+| SUP-010 | diesel | v3 | 33.5 | hours-cover | current |
+| SUP-011 | operators | v3 | 32.3 | hours-cover | current |
+| SUP-012 | resin | v4 | 31.1 | hours-cover | current |
+| SUP-013 | stoppers | v4 | 32.8 | hours-cover | current |
+| SUP-014 | diesel | v4 | 31.6 | hours-cover | current |
+| SUP-015 | operators | v4 | 33.3 | hours-cover | current |
+| SUP-016 | resin | v4 | 32.1 | hours-cover | current |
+| SUP-017 | stoppers | v4 | 33.8 | hours-cover | superseded |
+| SUP-018 | diesel | v4 | 32.6 | hours-cover | current |
+| SUP-019 | operators | v4 | 31.4 | hours-cover | current |
+| SUP-020 | resin | v4 | 33.1 | hours-cover | current |
+| SUP-021 | stoppers | v4 | 31.9 | hours-cover | current |
+| SUP-022 | diesel | v4 | 33.6 | hours-cover | current |
+| SUP-023 | operators | v4 | 32.4 | hours-cover | current |
+| SUP-024 | resin | v5 | 31.2 | hours-cover | current |
+| SUP-025 | stoppers | v5 | 32.9 | hours-cover | current |
+| SUP-026 | diesel | v5 | 31.7 | hours-cover | current |
+| SUP-027 | operators | v5 | 33.4 | hours-cover | current |
+| SUP-028 | resin | v5 | 32.2 | hours-cover | current |
+| SUP-029 | stoppers | v5 | 31.0 | hours-cover | current |
+| SUP-030 | diesel | v5 | 32.7 | hours-cover | current |
+| SUP-031 | operators | v5 | 31.5 | hours-cover | current |
+| SUP-032 | resin | v5 | 33.2 | hours-cover | current |
+| SUP-033 | stoppers | v5 | 32.0 | hours-cover | current |
+| SUP-034 | diesel | v5 | 33.7 | hours-cover | superseded |
+| SUP-035 | operators | v5 | 32.5 | hours-cover | current |
+| SUP-036 | resin | v6 | 31.3 | hours-cover | current |
+| SUP-037 | stoppers | v6 | 33.0 | hours-cover | current |
+| SUP-038 | diesel | v6 | 31.8 | hours-cover | current |
+| SUP-039 | operators | v6 | 33.5 | hours-cover | current |
+| SUP-040 | resin | v6 | 32.3 | hours-cover | current |
+| SUP-041 | stoppers | v6 | 31.1 | hours-cover | current |
+
+## Decision constraints
+
+Preserve load regime, units, staffing time, uncertainty, and supplier qualification.
+Name reorder triggers, alternates, owners, and retirement evidence.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"SAFETY","start_line":1},{"end_line":64,"source_id":"SIGNAL","start_line":1}]
+}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:SAFETY:1-64+SIGNAL:1-64","object_version":"b55ca512d2baa7dcf636e3b7324187193f3b05488fdea16b60f5ebb5ba6aa60c","result_id":"RESULT-005","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"SAFETY","start_line":1},{"end_line":64,"source_id":"SIGNAL","start_line":1}],"total_source_bytes":7644}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"SAFETY","source_path":"sources/SAFETY_ENVIRONMENT.md","source_sha256":"163e6d198789dc487419a4149aea6b41ec06976a16b57924f51e7cae80ae3d6e","source_size_bytes":3423,"start_line":1}
+--- exact source range ---
+# Worker safety, emissions, waste, and notification
+
+## Frozen findings
+
+A material unauthorized solvent release requires initial notice within twenty-four hours of determination, not twenty-four minutes after detection.
+Temporary neutralization may proceed under permit condition N-12, but discharge above 0.021 milligrams per liter at the outfall requires an immediate stop.
+Determination evidence, notices, candidate changes, checks, and closure records must be retained for seven years with access provenance.
+
+## Governing relationships
+
+SIGNAL supplies alarm evidence and CURRENT supplies utility state. CHARTER owns materiality determination; a semantic record cannot make the legal determination.
+COMMUNE supplies notice-delivery records and GUARD protects sensitive facility details.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| ENV-000 | solvent-room | v3 | 24.0 | hours | superseded |
+| ENV-001 | waste-tank | v3 | 25.7 | hours | current |
+| ENV-002 | exhaust | v3 | 24.5 | hours | current |
+| ENV-003 | neutralization | v3 | 26.2 | hours | current |
+| ENV-004 | solvent-room | v3 | 25.0 | hours | current |
+| ENV-005 | waste-tank | v3 | 26.7 | hours | current |
+| ENV-006 | exhaust | v3 | 25.5 | hours | current |
+| ENV-007 | neutralization | v3 | 24.3 | hours | current |
+| ENV-008 | solvent-room | v3 | 26.0 | hours | current |
+| ENV-009 | waste-tank | v3 | 24.8 | hours | current |
+| ENV-010 | exhaust | v3 | 26.5 | hours | current |
+| ENV-011 | neutralization | v3 | 25.3 | hours | current |
+| ENV-012 | solvent-room | v4 | 24.1 | hours | current |
+| ENV-013 | waste-tank | v4 | 25.8 | hours | current |
+| ENV-014 | exhaust | v4 | 24.6 | hours | current |
+| ENV-015 | neutralization | v4 | 26.3 | hours | current |
+| ENV-016 | solvent-room | v4 | 25.1 | hours | current |
+| ENV-017 | waste-tank | v4 | 26.8 | hours | superseded |
+| ENV-018 | exhaust | v4 | 25.6 | hours | current |
+| ENV-019 | neutralization | v4 | 24.4 | hours | current |
+| ENV-020 | solvent-room | v4 | 26.1 | hours | current |
+| ENV-021 | waste-tank | v4 | 24.9 | hours | current |
+| ENV-022 | exhaust | v4 | 26.6 | hours | current |
+| ENV-023 | neutralization | v4 | 25.4 | hours | current |
+| ENV-024 | solvent-room | v5 | 24.2 | hours | current |
+| ENV-025 | waste-tank | v5 | 25.9 | hours | current |
+| ENV-026 | exhaust | v5 | 24.7 | hours | current |
+| ENV-027 | neutralization | v5 | 26.4 | hours | current |
+| ENV-028 | solvent-room | v5 | 25.2 | hours | current |
+| ENV-029 | waste-tank | v5 | 24.0 | hours | current |
+| ENV-030 | exhaust | v5 | 25.7 | hours | current |
+| ENV-031 | neutralization | v5 | 24.5 | hours | current |
+| ENV-032 | solvent-room | v5 | 26.2 | hours | current |
+| ENV-033 | waste-tank | v5 | 25.0 | hours | current |
+| ENV-034 | exhaust | v5 | 26.7 | hours | superseded |
+| ENV-035 | neutralization | v5 | 25.5 | hours | current |
+| ENV-036 | solvent-room | v6 | 24.3 | hours | current |
+| ENV-037 | waste-tank | v6 | 26.0 | hours | current |
+| ENV-038 | exhaust | v6 | 24.8 | hours | current |
+| ENV-039 | neutralization | v6 | 26.5 | hours | current |
+| ENV-040 | solvent-room | v6 | 25.3 | hours | current |
+| ENV-041 | waste-tank | v6 | 24.1 | hours | current |
+
+## Decision constraints
+
+Preserve determination event, clock, permit, threshold, unit, and custody.
+State unknowns and exact evidence that can change reportability.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"SIGNAL","source_path":"sources/SIGNAL_OBSERVABILITY.md","source_sha256":"f0c38d24fd53e1ff8350bbfd06951cf70c9ddc21ed2110829fd8e48e000d85b8","source_size_bytes":3755,"start_line":1}
+--- exact source range ---
+# Monitoring coverage, alerts, and latency
+
+## Frozen findings
+
+Current critical-signal coverage is 94 percent; six percent remains unobserved. Coverage is not confidence and does not prove healthy uninstrumented assets.
+The clean-utility warning threshold is 81 degrees Celsius and the production stop is 79 degrees. Warning and stop thresholds must remain distinct.
+Alarm delivery is 640 milliseconds at p95 and 1,050 milliseconds at p99. Both are observations, not response deadlines.
+
+## Governing relationships
+
+CURRENT, STERILE, CHILL, and GUARD rely on SIGNAL observations, but each domain retains its own gate and authority.
+COMMUNE may report operational state only where SIGNAL coverage and source currency are adequate.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| OBS-000 | temperature | v3 | 94.0 | percent-coverage | superseded |
+| OBS-001 | pressure | v3 | 95.7 | percent-coverage | current |
+| OBS-002 | viable-air | v3 | 94.5 | percent-coverage | current |
+| OBS-003 | power | v3 | 96.2 | percent-coverage | current |
+| OBS-004 | temperature | v3 | 95.0 | percent-coverage | current |
+| OBS-005 | pressure | v3 | 96.7 | percent-coverage | current |
+| OBS-006 | viable-air | v3 | 95.5 | percent-coverage | current |
+| OBS-007 | power | v3 | 94.3 | percent-coverage | current |
+| OBS-008 | temperature | v3 | 96.0 | percent-coverage | current |
+| OBS-009 | pressure | v3 | 94.8 | percent-coverage | current |
+| OBS-010 | viable-air | v3 | 96.5 | percent-coverage | current |
+| OBS-011 | power | v3 | 95.3 | percent-coverage | current |
+| OBS-012 | temperature | v4 | 94.1 | percent-coverage | current |
+| OBS-013 | pressure | v4 | 95.8 | percent-coverage | current |
+| OBS-014 | viable-air | v4 | 94.6 | percent-coverage | current |
+| OBS-015 | power | v4 | 96.3 | percent-coverage | current |
+| OBS-016 | temperature | v4 | 95.1 | percent-coverage | current |
+| OBS-017 | pressure | v4 | 96.8 | percent-coverage | superseded |
+| OBS-018 | viable-air | v4 | 95.6 | percent-coverage | current |
+| OBS-019 | power | v4 | 94.4 | percent-coverage | current |
+| OBS-020 | temperature | v4 | 96.1 | percent-coverage | current |
+| OBS-021 | pressure | v4 | 94.9 | percent-coverage | current |
+| OBS-022 | viable-air | v4 | 96.6 | percent-coverage | current |
+| OBS-023 | power | v4 | 95.4 | percent-coverage | current |
+| OBS-024 | temperature | v5 | 94.2 | percent-coverage | current |
+| OBS-025 | pressure | v5 | 95.9 | percent-coverage | current |
+| OBS-026 | viable-air | v5 | 94.7 | percent-coverage | current |
+| OBS-027 | power | v5 | 96.4 | percent-coverage | current |
+| OBS-028 | temperature | v5 | 95.2 | percent-coverage | current |
+| OBS-029 | pressure | v5 | 94.0 | percent-coverage | current |
+| OBS-030 | viable-air | v5 | 95.7 | percent-coverage | current |
+| OBS-031 | power | v5 | 94.5 | percent-coverage | current |
+| OBS-032 | temperature | v5 | 96.2 | percent-coverage | current |
+| OBS-033 | pressure | v5 | 95.0 | percent-coverage | current |
+| OBS-034 | viable-air | v5 | 96.7 | percent-coverage | superseded |
+| OBS-035 | power | v5 | 95.5 | percent-coverage | current |
+| OBS-036 | temperature | v6 | 94.3 | percent-coverage | current |
+| OBS-037 | pressure | v6 | 96.0 | percent-coverage | current |
+| OBS-038 | viable-air | v6 | 94.8 | percent-coverage | current |
+| OBS-039 | power | v6 | 96.5 | percent-coverage | current |
+| OBS-040 | temperature | v6 | 95.3 | percent-coverage | current |
+| OBS-041 | pressure | v6 | 94.1 | percent-coverage | current |
+
+## Decision constraints
+
+Preserve coverage uncertainty, threshold purpose, percentiles, units, and currentness.
+Define alternate observation routes and evidence for retiring manual watches.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":64,"source_id":"COMMUNE","start_line":1},{"end_line":64,"source_id":"CHANGE","start_line":1}]
+}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:COMMUNE:1-64+CHANGE:1-64","object_version":"c11698048769adf0b677163e15dd7ada8564a747595437aacb4b35c6aef163e1","result_id":"RESULT-006","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":64,"source_id":"COMMUNE","start_line":1},{"end_line":64,"source_id":"CHANGE","start_line":1}],"total_source_bytes":8493}
+--- exact batch segment 1 ---
+{"end_line":64,"source_id":"COMMUNE","source_path":"sources/COMMUNE_COMMUNICATIONS.md","source_sha256":"32bfd24b2b40e1096b1d87dfc1ffce5867a0a07da290766d4766ccc552614860","source_size_bytes":4124,"start_line":1}
+--- exact source range ---
+# Workforce, regulator, and customer communications
+
+## Frozen findings
+
+Restart restrictions reached 89 percent of affected personnel; the missing eleven percent is communication uncertainty, not an eleven-percent reduction in affected staff.
+Public states must distinguish investigation, quarantine, engineering restart, lot release, commercial restart, and closure. Engineering restart does not imply lot release.
+The hotline sustains 1,800 contacts per hour for four hours. Forecast demand is 2,400 per hour unless multilingual outbound messages reduce repeat contacts.
+
+## Governing relationships
+
+CHARTER and ASSAY determine authorized release language; SIGNAL supplies measured operational state and GUARD constrains sensitive details.
+SAFETY supplies mandatory environmental language and SUPPLY supplies verified alternate-shift arrangements.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| COM-000 | sms | v3 | 89.0 | percent-acknowledged | superseded |
+| COM-001 | regulator-portal | v3 | 90.7 | percent-acknowledged | current |
+| COM-002 | hotline | v3 | 89.5 | percent-acknowledged | current |
+| COM-003 | shift-briefing | v3 | 91.2 | percent-acknowledged | current |
+| COM-004 | sms | v3 | 90.0 | percent-acknowledged | current |
+| COM-005 | regulator-portal | v3 | 91.7 | percent-acknowledged | current |
+| COM-006 | hotline | v3 | 90.5 | percent-acknowledged | current |
+| COM-007 | shift-briefing | v3 | 89.3 | percent-acknowledged | current |
+| COM-008 | sms | v3 | 91.0 | percent-acknowledged | current |
+| COM-009 | regulator-portal | v3 | 89.8 | percent-acknowledged | current |
+| COM-010 | hotline | v3 | 91.5 | percent-acknowledged | current |
+| COM-011 | shift-briefing | v3 | 90.3 | percent-acknowledged | current |
+| COM-012 | sms | v4 | 89.1 | percent-acknowledged | current |
+| COM-013 | regulator-portal | v4 | 90.8 | percent-acknowledged | current |
+| COM-014 | hotline | v4 | 89.6 | percent-acknowledged | current |
+| COM-015 | shift-briefing | v4 | 91.3 | percent-acknowledged | current |
+| COM-016 | sms | v4 | 90.1 | percent-acknowledged | current |
+| COM-017 | regulator-portal | v4 | 91.8 | percent-acknowledged | superseded |
+| COM-018 | hotline | v4 | 90.6 | percent-acknowledged | current |
+| COM-019 | shift-briefing | v4 | 89.4 | percent-acknowledged | current |
+| COM-020 | sms | v4 | 91.1 | percent-acknowledged | current |
+| COM-021 | regulator-portal | v4 | 89.9 | percent-acknowledged | current |
+| COM-022 | hotline | v4 | 91.6 | percent-acknowledged | current |
+| COM-023 | shift-briefing | v4 | 90.4 | percent-acknowledged | current |
+| COM-024 | sms | v5 | 89.2 | percent-acknowledged | current |
+| COM-025 | regulator-portal | v5 | 90.9 | percent-acknowledged | current |
+| COM-026 | hotline | v5 | 89.7 | percent-acknowledged | current |
+| COM-027 | shift-briefing | v5 | 91.4 | percent-acknowledged | current |
+| COM-028 | sms | v5 | 90.2 | percent-acknowledged | current |
+| COM-029 | regulator-portal | v5 | 89.0 | percent-acknowledged | current |
+| COM-030 | hotline | v5 | 90.7 | percent-acknowledged | current |
+| COM-031 | shift-briefing | v5 | 89.5 | percent-acknowledged | current |
+| COM-032 | sms | v5 | 91.2 | percent-acknowledged | current |
+| COM-033 | regulator-portal | v5 | 90.0 | percent-acknowledged | current |
+| COM-034 | hotline | v5 | 91.7 | percent-acknowledged | superseded |
+| COM-035 | shift-briefing | v5 | 90.5 | percent-acknowledged | current |
+| COM-036 | sms | v6 | 89.3 | percent-acknowledged | current |
+| COM-037 | regulator-portal | v6 | 91.0 | percent-acknowledged | current |
+| COM-038 | hotline | v6 | 89.8 | percent-acknowledged | current |
+| COM-039 | shift-briefing | v6 | 91.5 | percent-acknowledged | current |
+| COM-040 | sms | v6 | 90.3 | percent-acknowledged | current |
+| COM-041 | regulator-portal | v6 | 89.1 | percent-acknowledged | current |
+
+## Decision constraints
+
+Preserve acknowledgment coverage, state vocabulary, capacity, forecast, accessibility, and privacy.
+State owners, channels, timing, acknowledgments, alternates, and retirement evidence.
+--- exact batch segment 2 ---
+{"end_line":64,"source_id":"CHANGE","source_path":"sources/CHANGE_LINEAGE.md","source_sha256":"a89a287a5ee18083a0cf9765bd56b485a80cbe56d7ed3303ac294bcd21c25328","source_size_bytes":3904,"start_line":1}
+--- exact source range ---
+# Candidate lineage, rollback, and configuration control
+
+## Frozen findings
+
+The current restart candidate is R9 with batch genealogy B14, fill-line configuration F8, utility map U11, and key set K7. Evidence for R8 is historical unless explicitly transferred and rechecked.
+Rollback to R8 is mechanically possible only while recipe V6 and controller firmware C13 remain compatible. Mechanical possibility is not authorization.
+Every mutation must record before and after candidate hashes, changed files, affected evidence, check currency, owner, and rollback effect.
+
+## Governing relationships
+
+CULTURE, STERILE, CHILL, CURRENT, ASSAY, GUARD, and SIGNAL observations can become stale after CHANGE candidate mutations.
+REVIEW evaluates current-candidate evidence independently; CHARTER authorizes execution, release, restart, and closure separately.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CHG-000 | batch-genealogy | v3 | 9.0 | candidate-index | superseded |
+| CHG-001 | fill-line | v3 | 10.7 | candidate-index | current |
+| CHG-002 | utility-map | v3 | 9.5 | candidate-index | current |
+| CHG-003 | key-set | v3 | 11.2 | candidate-index | current |
+| CHG-004 | batch-genealogy | v3 | 10.0 | candidate-index | current |
+| CHG-005 | fill-line | v3 | 11.7 | candidate-index | current |
+| CHG-006 | utility-map | v3 | 10.5 | candidate-index | current |
+| CHG-007 | key-set | v3 | 9.3 | candidate-index | current |
+| CHG-008 | batch-genealogy | v3 | 11.0 | candidate-index | current |
+| CHG-009 | fill-line | v3 | 9.8 | candidate-index | current |
+| CHG-010 | utility-map | v3 | 11.5 | candidate-index | current |
+| CHG-011 | key-set | v3 | 10.3 | candidate-index | current |
+| CHG-012 | batch-genealogy | v4 | 9.1 | candidate-index | current |
+| CHG-013 | fill-line | v4 | 10.8 | candidate-index | current |
+| CHG-014 | utility-map | v4 | 9.6 | candidate-index | current |
+| CHG-015 | key-set | v4 | 11.3 | candidate-index | current |
+| CHG-016 | batch-genealogy | v4 | 10.1 | candidate-index | current |
+| CHG-017 | fill-line | v4 | 11.8 | candidate-index | superseded |
+| CHG-018 | utility-map | v4 | 10.6 | candidate-index | current |
+| CHG-019 | key-set | v4 | 9.4 | candidate-index | current |
+| CHG-020 | batch-genealogy | v4 | 11.1 | candidate-index | current |
+| CHG-021 | fill-line | v4 | 9.9 | candidate-index | current |
+| CHG-022 | utility-map | v4 | 11.6 | candidate-index | current |
+| CHG-023 | key-set | v4 | 10.4 | candidate-index | current |
+| CHG-024 | batch-genealogy | v5 | 9.2 | candidate-index | current |
+| CHG-025 | fill-line | v5 | 10.9 | candidate-index | current |
+| CHG-026 | utility-map | v5 | 9.7 | candidate-index | current |
+| CHG-027 | key-set | v5 | 11.4 | candidate-index | current |
+| CHG-028 | batch-genealogy | v5 | 10.2 | candidate-index | current |
+| CHG-029 | fill-line | v5 | 9.0 | candidate-index | current |
+| CHG-030 | utility-map | v5 | 10.7 | candidate-index | current |
+| CHG-031 | key-set | v5 | 9.5 | candidate-index | current |
+| CHG-032 | batch-genealogy | v5 | 11.2 | candidate-index | current |
+| CHG-033 | fill-line | v5 | 10.0 | candidate-index | current |
+| CHG-034 | utility-map | v5 | 11.7 | candidate-index | superseded |
+| CHG-035 | key-set | v5 | 10.5 | candidate-index | current |
+| CHG-036 | batch-genealogy | v6 | 9.3 | candidate-index | current |
+| CHG-037 | fill-line | v6 | 11.0 | candidate-index | current |
+| CHG-038 | utility-map | v6 | 9.8 | candidate-index | current |
+| CHG-039 | key-set | v6 | 11.5 | candidate-index | current |
+| CHG-040 | batch-genealogy | v6 | 10.3 | candidate-index | current |
+| CHG-041 | fill-line | v6 | 9.1 | candidate-index | current |
+
+## Decision constraints
+
+Keep candidate, genealogy, line, utility, key, recipe, and firmware versions explicit.
+Require effect uptake, current check, repair, recheck, and rollback evidence.<|im_end|>
+<|im_start|>user
+# Current Orchard lifecycle phase
+Phase: construction. `run_check` and `submit` are not currently available. Build exact task work and use `begin_verification` after the frozen mechanical construction milestone is met.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

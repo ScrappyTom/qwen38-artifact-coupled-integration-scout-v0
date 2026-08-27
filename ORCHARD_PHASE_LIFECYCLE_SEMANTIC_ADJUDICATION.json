@@ -1,0 +1,99 @@
+{
+  "schema": "orchard-phase-lifecycle-semantic-adjudication-v0",
+  "run_id": "2026-08-27-orchard-phase-lifecycle-measured-v0",
+  "task_id": "orchard-biologics-restart-decision-v0",
+  "evaluator_id": "orchard-biologics-evaluator-v0-plus-direct-source-bound-review-v0",
+  "actor_visible": false,
+  "records": [
+    {
+      "configuration_id": "F0_FIXED_SCAFFOLD_APPEND_ONLY_VERIFICATION",
+      "candidate_sha256": "074c474d71067d91040b81bea2a3ae260ad0d7f0b34322dc2f97096688db7711",
+      "quality_class": "partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false,
+      "substantive_requirement_summary": {
+        "met": 5,
+        "partial": 7,
+        "not_met": 0
+      },
+      "substantive_met": [
+        "R01_authority",
+        "R02_process",
+        "R03_aseptic",
+        "R09_environment",
+        "R12_currentness"
+      ],
+      "substantive_partial": [
+        "R04_cold_chain",
+        "R05_utilities",
+        "R06_quality",
+        "R07_cyber",
+        "R08_supply",
+        "R10_observation",
+        "R11_communications"
+      ],
+      "artifact_contract": {
+        "decision_title": "met",
+        "decision_heading_order": "met",
+        "decision_source_breadth": "met",
+        "decision_word_range": "not_met_1075_of_1400_to_1900",
+        "ledger_heading": "met",
+        "ledger_exact_source_citation_breadth": "not_met_3_of_8"
+      },
+      "blocking_defects": [
+        "Seven substantive domains retain some correct content but omit one or more frozen governing relationships.",
+        "The decision is 325 words below the minimum.",
+        "The ledger names thirteen source rows but uses only three exact bracketed source-ID citations under the frozen citation contract.",
+        "No repair, current recheck, or submission occurred after the first verification check."
+      ]
+    },
+    {
+      "configuration_id": "P1_PHASE_CONDITIONAL_CURRENT_VERIFICATION",
+      "candidate_sha256": "1b62a34576a60bb9ecb7b9564e1e6208fb4427854594f88e703fc70567828147",
+      "quality_class": "strong_partial",
+      "closure_readiness": "not_ready",
+      "useful_completion": false,
+      "substantive_requirement_summary": {
+        "met": 12,
+        "partial": 0,
+        "not_met": 0
+      },
+      "substantive_met": [
+        "R01_authority",
+        "R02_process",
+        "R03_aseptic",
+        "R04_cold_chain",
+        "R05_utilities",
+        "R06_quality",
+        "R07_cyber",
+        "R08_supply",
+        "R09_environment",
+        "R10_observation",
+        "R11_communications",
+        "R12_currentness"
+      ],
+      "artifact_contract": {
+        "decision_title": "met",
+        "decision_heading_order": "met",
+        "decision_source_breadth": "met",
+        "decision_word_range": "not_met_1365_of_1400_to_1900",
+        "ledger_heading": "met",
+        "ledger_exact_source_citation_breadth": "not_met_3_of_8"
+      },
+      "mechanical_evaluator_reconciliation": {
+        "R05_utilities": "direct_review_met_surface_order_false_negative",
+        "explanation": "The decision states that WFI is 82 degrees Celsius and every return must remain at least 80 degrees Celsius for three consecutive thirty-minute windows. The frozen regex requires the phrase '80 degrees' to precede 'every return', so it reports a surface-order failure despite preserving the relationship."
+      },
+      "blocking_defects": [
+        "The decision is 35 words below the frozen minimum.",
+        "The ledger names thirteen source rows but uses only three exact bracketed source-ID citations under the frozen citation contract.",
+        "The actor did not repair these remaining artifact-contract defects, obtain a passing current check, or submit."
+      ]
+    }
+  ],
+  "claim_limits": [
+    "The direct review establishes local candidate quality, not general evaluator accuracy or independent replication.",
+    "P1's twelve substantive groups are met, but exact deliverable requirements still make the candidate not ready.",
+    "Neither configuration reached useful completion or correct closure."
+  ]
+}

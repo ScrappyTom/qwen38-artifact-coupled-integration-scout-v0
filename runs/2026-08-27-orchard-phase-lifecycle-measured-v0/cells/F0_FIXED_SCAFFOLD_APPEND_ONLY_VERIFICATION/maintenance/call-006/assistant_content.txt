@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM C-001
+SLOT_SOURCE: COMMUNE
+SOURCE_VERSION: 32bfd24b2b40e1096b1d87dfc1ffce5867a0a07da290766d4766ccc552614860
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: The hotline sustains 1,800 contacts per hour for four hours.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: COMMUNE reports the hotline sustains 1,800 contacts per hour for four hours.
+
+## CLAIM C-002
+SLOT_SOURCE: COMMUNE
+SOURCE_VERSION: 32bfd24b2b40e1096b1d87dfc1ffce5867a0a07da290766d4766ccc552614860
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Forecast demand is 2,400 per hour unless multilingual outbound messages reduce repeat contacts.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: COMMUNE reports forecast demand of 2,400 per hour unless multilingual outbound messages reduce repeat contacts.
+
+## CLAIM C-003
+SLOT_SOURCE: CHANGE
+SOURCE_VERSION: a89a287a5ee18083a0cf9765bd56b485a80cbe56d7ed3303ac294bcd21c25328
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: The current restart candidate is R9 with batch genealogy B14, fill-line configuration F8, utility map U11, and key set K7.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CHANGE reports the current restart candidate is R9 with batch genealogy B14, fill-line configuration F8, utility map U11, and key set K7.
+
+## CLAIM C-004
+SLOT_SOURCE: CHANGE
+SOURCE_VERSION: a89a287a5ee18083a0cf9765bd56b485a80cbe56d7ed3303ac294bcd21c25328
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Rollback to R8 is mechanically possible only while recipe V6 and controller firmware C13 remain compatible.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CHANGE reports rollback to R8 is mechanically possible only while recipe V6 and controller firmware C13 remain compatible.

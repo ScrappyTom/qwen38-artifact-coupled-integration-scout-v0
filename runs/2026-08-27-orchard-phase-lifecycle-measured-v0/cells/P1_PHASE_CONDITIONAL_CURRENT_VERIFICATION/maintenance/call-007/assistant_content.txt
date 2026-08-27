@@ -1,0 +1,86 @@
+# Anchored provenance-local delta
+## CLAIM CLM-001
+SLOT_SOURCE: CHARTER
+SOURCE_VERSION: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: Only the independent quality unit may release a manufactured lot, and only the site head may authorize commercial restart after current quality, aseptic, utility, and cyber evidence is reconciled.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The independent quality unit is the sole authority to release a manufactured lot, and the site head is the sole authority to authorize commercial restart after reconciliation of current quality, aseptic, utility, and cyber evidence.
+
+## CLAIM CLM-002
+SLOT_SOURCE: CHARTER
+SOURCE_VERSION: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: A handoff is valid only when the receiving lead acknowledges the same batch genealogy, fill-line configuration, cold-chain map, utility state, and control-system version.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: A handoff is valid only when the receiving lead acknowledges the same batch genealogy, fill-line configuration, cold-chain map, utility state, and control-system version.
+
+## CLAIM CLM-003
+SLOT_SOURCE: CHARTER
+SOURCE_VERSION: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: ASSAY and STERILE provide release evidence but cannot authorize release; REVIEW provides independent readiness findings but cannot execute restart.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: ASSAY, STERILE, REVIEW
+AUTHORITY: non_authoritative_derivative
+STATEMENT: ASSAY and STERILE provide release evidence but cannot authorize release, while REVIEW provides independent readiness findings but cannot execute restart.
+
+## CLAIM CLM-004
+SLOT_SOURCE: CHARTER
+SOURCE_VERSION: 6cb6875c0d4316fa8be25f0b568bd2924e571af7f2cb30e755336344339e5174
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: CHANGE binds candidate lineage while CHARTER preserves separation among stabilization, execution, verification, release, restart authorization, and closure.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: CHANGE, CHARTER
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CHANGE binds candidate lineage while CHARTER preserves separation among stabilization, execution, verification, release, restart authorization, and closure.
+
+## CLAIM CLM-005
+SLOT_SOURCE: REVIEW
+SOURCE_VERSION: 661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: The latest independent review found thirteen open findings: four aseptic, three utility, three quality, two cyber, and one communication.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The latest independent review found thirteen open findings comprising four aseptic, three utility, three quality, two cyber, and one communication finding.
+
+## CLAIM CLM-006
+SLOT_SOURCE: REVIEW
+SOURCE_VERSION: 661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: Blocking findings include two missing media fills, stale generator-transfer evidence, unresolved lane-4 stability disposition, and missing quality-unit acknowledgment.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Blocking findings include two missing media fills, stale generator-transfer evidence, unresolved lane-4 stability disposition, and missing quality-unit acknowledgment.
+
+## CLAIM CLM-007
+SLOT_SOURCE: REVIEW
+SOURCE_VERSION: 661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: Readiness requires current candidate-bound evidence for every blocking control, independent residual-risk review, and explicit acceptance by each authorized owner.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Readiness requires current candidate-bound evidence for every blocking control, independent residual-risk review, and explicit acceptance by each authorized owner.
+
+## CLAIM CLM-008
+SLOT_SOURCE: REVIEW
+SOURCE_VERSION: 661c0269b7146dbf1a492776fd890e3cacbd0f8cf72a2df5ec3613e9a9c9c3d9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: REVIEW consumes evidence from CHARTER, CULTURE, STERILE, CHILL, CURRENT, ASSAY, GUARD, SIGNAL, COMMUNE, and CHANGE but does not mutate their states.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: CHARTER, CULTURE, STERILE, CHILL, CURRENT, ASSAY

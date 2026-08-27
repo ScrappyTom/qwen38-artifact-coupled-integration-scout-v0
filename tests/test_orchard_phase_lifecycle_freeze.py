@@ -15,10 +15,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class OrchardPhaseLifecycleFreezeTests(unittest.TestCase):
-    def test_exact_handoff_and_preflight_pass(self) -> None:
+    def test_exact_handoff_and_postrun_preflight_refuses_duplicate(self) -> None:
         handoff = verify_orchard_pressure_handoff(ROOT)
         result = preflight(write_output=False)
-        self.assertTrue(result["passed"], result["failures"])
+        self.assertFalse(result["passed"])
+        self.assertEqual(["measured_run_root_already_exists"], result["failures"])
         self.assertEqual("RESULT-006", handoff["pending_result_id"])
         self.assertEqual(["RESULT-001"], handoff["positive_relief_result_ids"])
         self.assertFalse(handoff["measured_fork_authorized"])
@@ -37,14 +38,24 @@ class OrchardPhaseLifecycleFreezeTests(unittest.TestCase):
         self.assertIn("same_fallible_anchored_maintenance_on_source_externalization", contract["common_before_transition"])
         self.assertIn("replace_model_facing_verification_projection_after_every_action", contract["P1_after_transition"])
 
-    def test_authorization_is_inert_and_run_is_absent(self) -> None:
+    def test_historical_request_is_inert_and_completed_run_has_exact_receipt(self) -> None:
         request = json.loads(
             (ROOT / "ORCHARD_PHASE_LIFECYCLE_AUTHORIZATION_REQUEST.json").read_text(
                 encoding="utf-8"
             )
         )
         self.assertFalse(request["authorized"])
-        self.assertFalse((ROOT / "runs" / runner.RUN_ID).exists())
+        run_root = ROOT / "runs" / runner.RUN_ID
+        self.assertTrue(run_root.exists())
+        receipt = json.loads(
+            (run_root / "AUTHORIZATION_RECEIPT.json").read_text(encoding="utf-8")
+        )
+        self.assertTrue(receipt["authorized"])
+        self.assertEqual(runner.RUN_ID, receipt["authorized_run_id"])
+        self.assertEqual(
+            "094bbce57407568d1ef0ecd94414ae1a957e3b45",
+            receipt["authorized_freeze_commit"],
+        )
         self.assertEqual(1, request["attempts_per_call"])
         self.assertEqual(0, request["retries"])
 
