@@ -16,12 +16,14 @@ semantic persistence coupled to exact task-native work.
 
 The common pressure fork, model, seed, tools, exact world, action surface,
 first-fit relief, evaluator, and budgets were frozen. W0 wrote a useful
-fourteen-source evidence ledger, then spent fourteen actor decisions reopening
-`RESULT-001` through `RESULT-007` twice and never constructed the required
-decision. L1 paid for seven anchored maintenance calls, wrote a more detailed
-fourteen-source ledger, then made seven consecutive decision-artifact mutations
-without reopening exact sources. It ended with a 1,934-word, twelve-source
-decision and a strong-partial two-file package.
+fourteen-source evidence ledger, spent fourteen actor decisions reopening
+`RESULT-001` through `RESULT-007` twice, and then made two substantial global
+decision-construction attempts. Both attempts consumed the full 4,096-token
+completion allowance, ended as invalid JSON, and produced no admitted candidate
+effect. L1 paid for seven anchored maintenance calls, wrote a more detailed
+fourteen-source ledger, then made seven consecutive admitted decision-artifact
+mutations without reopening exact sources. It ended with a 1,934-word,
+twelve-source decision and a strong-partial two-file package.
 
 The result is not useful completion. Neither arm checked, repaired, rechecked,
 or submitted. Both stopped when the next actor prompt could not fit and no
@@ -32,12 +34,16 @@ unsatisfied.
 
 The supported claim is therefore:
 
-> At this authentic pressure boundary, a fallible, host-anchored semantic
-> register changed the exact-work system from repeated exact fault-in to rapid
-> cumulative artifact construction, while using fewer total calls and tokens.
-> The same configuration also filled its bounded register, paid for three
-> no-change maintenance calls, accumulated a large exact work product, and
-> stopped before verification or closure with an incomplete artifact.
+> At this authentic pressure boundary, the fallible anchored-provenance
+> treatment changed the exact-work trajectory from repeated exact fault-in
+> followed by two unadmitted all-at-once drafts to early, incremental admitted
+> artifact construction, while using fewer total calls and tokens. The causal
+> unit is the full treatment interaction: semantic residue, maintenance-message
+> timing, exact ledger state, action selection, construction granularity, and
+> transport all moved together. The same configuration filled its bounded
+> register, paid for three no-change maintenance calls, accumulated a large
+> exact work product, and stopped before verification or closure with an
+> incomplete artifact.
 
 This is evidence of a valuable interaction and of its next lifecycle failure,
 not an architecture promotion.
@@ -79,13 +85,26 @@ Its actions were:
 
 The fourteen reopens were `RESULT-001` through `RESULT-007`, then the same seven
 results again. The evidence ledger itself was substantial and cited all fourteen
-sources. The required decision remained the initial eleven-word placeholder.
+sources. On calls 17 and 18, Qwen switched from reopening to construction. Each
+visible response attempted a broad, source-cited `replace_decision` action; the
+second was shorter and differently formatted after the first rejection. Both
+hit the 4,096-token generation limit, were rejected as invalid JSON, and left
+the required decision at its initial eleven-word placeholder.
 
-W0 therefore demonstrates that exact task-native evidence work alone was not
-enough to stop a repeat fault-in cycle in this state. Exact custody remained
-operable for 21 positive relief events, but the model did not convert the ledger
-into the required decision before the chronology and receipts reached 21,871
-prompt tokens—879 above the allowance—with nothing eligible left to demote.
+W0 therefore does **not** demonstrate an absence of semantic integration or
+construction intent. Its exact task-native ledger preserved enough cross-source
+meaning for two broad drafts. It demonstrates that this trajectory delayed
+construction, selected all-or-nothing replacement, and failed to transport that
+construction through the bounded action channel. Exact custody remained
+operable for 21 positive relief events, but no decision bytes were admitted
+before chronology and receipts reached 21,871 prompt tokens—879 above the
+allowance—with nothing eligible left to demote.
+
+The call-by-call evidence, exact pre-call residency, candidate/register lineage,
+and qualified demand interpretations are documented in
+`SOLACE_ANCHORED_INTERACTION_QUALITATIVE_TRANSCRIPT_APPENDIX.md`; the auditable
+companion records are `SOLACE_ANCHORED_INTERACTION_CALL_LEDGER.json` and
+`SOLACE_ANCHORED_INTERACTION_REQUIREMENT_LINEAGE.md`.
 
 ## Literal L1 trajectory
 
@@ -212,9 +231,11 @@ selection therefore interacted. No single layer alone explains the artifact.
 
 ## Information economics
 
-L1 used 137,793 fewer serialized tokens than W0, a 38.5 percent reduction, even
-after charging every maintenance call. It also used two fewer provider calls
-and nine fewer actor calls.
+L1 used 137,793 fewer serialized tokens than W0, a 38.5 percent descriptive
+reduction, even after charging every maintenance call. It also used two fewer
+provider calls and nine fewer actor calls. This is not a clean estimate of
+register efficiency: the terminal trajectories differed, and W0 spent 8,192
+completion tokens on its two rejected global drafts.
 
 | Measure | W0 | L1 |
 |---|---:|---:|
@@ -240,15 +261,19 @@ First, exact custody and first-fit relief remain the safety substrate. Both arms
 needed them, and both eventually exhausted the class of exact bodies that could
 be demoted.
 
-Second, bounded semantic residue can be behaviorally and economically valuable
-inside a complete pressured trajectory. This result is materially different
-from a standalone expression qualification: admitted state entered later actor
-prompts and coincided with sustained exact artifact construction.
+Second, the anchored-provenance treatment can have strong behavioral and local
+economic value inside a complete pressured trajectory. This result is
+materially different from a standalone expression qualification: admitted
+state entered later actor prompts and coincided with sustained exact artifact
+construction. It does not isolate register content from maintenance recency,
+actor action selection, or construction granularity.
 
-Third, the exact task artifact was also a major persistence channel. Even after
-the semantic register stopped accepting new sources, L1's evidence ledger
-carried all fourteen source identities and much of their meaning into later
-decision construction. Semantic register and exact work were complementary.
+Third, the exact task artifact was also a major persistence channel. W0's ledger
+was semantically rich enough to support broad late drafts, while L1's ledger and
+incremental decision sections accumulated admitted work much earlier. Even
+after the semantic register stopped accepting new sources, L1's exact artifacts
+carried all fourteen source identities and much of their meaning. Register,
+artifact persistence, action granularity, and transport were complementary.
 
 Fourth, bounded persistence does not eliminate lifecycle pressure. The semantic
 register became fixed stock; the candidate and effect chronology grew; and the
@@ -272,7 +297,8 @@ does not guarantee coverage, synthesis, or readiness.
 | Partial/zero-change safety | local positive |
 | Register capacity across the whole source stream | local negative |
 | Downstream behavioral influence | strong local positive |
-| Artifact progress | strong local positive versus W0 |
+| W0 semantic integration / construction attempts | present, but two global drafts were unadmitted |
+| L1 admitted artifact progress | strong local positive versus W0's admitted candidate |
 | Artifact completeness | negative |
 | Effect uptake after final construction | not achieved |
 | Verification, repair, recheck, closure | not reached |
@@ -290,16 +316,18 @@ may legitimately examine its lifecycle:
 > become the primary cumulative state at an authentic construction-pressure
 > transition?
 
-An offline successor should start from the exact L1 terminal candidate and
+An offline successor may start from the exact L1 terminal candidate and
 prospectively qualify a pressure-triggered fresh verification frame. A useful
 ablation would compare the same current exact task/candidate/currentness state
 with and without the already-produced register, then continue both through
-check, targeted repair, recheck, and closure. This is a lifecycle interaction
-test after a positive joint signal, not another acquisition-time carrier tune.
+check, targeted repair, recheck, and closure. That would estimate the register's
+marginal value *after construction*. It would not identify why W0's acquisition
+trajectory selected late global replacement while L1 selected early section
+updates; the qualitative audit exposes representation × action granularity ×
+transport as a separate interaction boundary.
 
 Before any live successor, the evaluator must be versioned so equivalent unit
 forms and explicit negations are represented correctly. The frozen evaluator
 and current run remain unchanged in custody.
 
 No further GPU run is authorized by this result.
-

@@ -1,14 +1,19 @@
 # Qwen3.8 bounded-work system interaction scouts
 
 Status: the frozen Solace W0/L1 whole-system comparison is complete, sealed,
-and independently audited. W0 wrote a fourteen-source evidence ledger, then
-spent fourteen actor calls reopening seven exact results twice and never
-constructed the decision. L1 paid for seven fallible anchored-maintenance calls,
-made eight consecutive exact candidate mutations with no reopens, and produced
-a 1,934-word strong-partial decision plus a fourteen-source ledger. L1 used
+and independently audited. W0 wrote a fourteen-source evidence ledger, spent
+fourteen actor calls reopening seven exact results twice, and then attempted two
+substantial global decisions. Both drafts exhausted the 4,096-token completion
+allowance and were rejected as invalid JSON, so W0 still had zero admitted
+decision mutations. L1 paid for seven fallible anchored-maintenance calls, made
+eight consecutive exact candidate mutations with no reopens, and produced a
+1,934-word strong-partial decision plus a fourteen-source ledger. L1 used
 220,232 serialized tokens versus W0's 358,025, but neither arm checked,
-repaired, rechecked, submitted, or achieved useful completion. See
-`SOLACE_ANCHORED_INTERACTION_RESULT.md`.
+repaired, rechecked, submitted, or achieved useful completion. The qualitative
+audit therefore attributes the contrast to an interaction among semantic
+residue, artifact persistence, action granularity, and transport—not to a simple
+"W0 never constructed" story. See `SOLACE_ANCHORED_INTERACTION_RESULT.md` and
+`SOLACE_ANCHORED_INTERACTION_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
 
 The exact Meridian route remains closed. The E63 no-GPU audit qualifies
 a minimal apparatus distinction among source-slot ownership, exact evidence,
@@ -286,6 +291,13 @@ architecture promotion.
   satisfied by the completed measured run
 - `SOLACE_ANCHORED_INTERACTION_RESULT.md` — literal trajectory, semantic
   maintenance, artifact, economic, and failure-migration synthesis
+- `SOLACE_ANCHORED_INTERACTION_QUALITATIVE_TRANSCRIPT_APPENDIX.md` — all 34
+  actor/maintenance turns with pre-call visibility, semantic change, artifact
+  uptake/loss, demand interpretation, alternatives, and confidence
+- `SOLACE_ANCHORED_INTERACTION_CALL_LEDGER.json` — machine-readable turn,
+  lifecycle-order, exact-residency, and evidence-path ledger
+- `SOLACE_ANCHORED_INTERACTION_REQUIREMENT_LINEAGE.md` — source-to-maintenance-
+  to-register-to-artifact-to-adjudication requirement lineage
 - `SOLACE_ANCHORED_INTERACTION_AUDIT.json` — independent authorization, seal,
   provider, relief, transition, anchor, evaluator-binding, and release audit
 - `SOLACE_ANCHORED_INTERACTION_SEMANTIC_ADJUDICATION.json` — candidate-bound
