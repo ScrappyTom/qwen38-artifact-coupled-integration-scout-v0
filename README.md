@@ -1,14 +1,15 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status update, 2026-08-28: the offline host-runtime refactor is implemented in
-`host_refactor/` and is in final regression/reconciliation. The new selected
+Status update, 2026-08-28: the offline host-runtime refactor is qualified at
+implementation commit `a84f51ce1797cd00574fbc0f1f8d59945e8da2ff`. The new selected
 path uses one append-only delivery kernel, immutable task configuration, pure
 packet projection, canonical exact-body deduplication, semantic-gate-free
 first-fit relief, replaceable exact candidate state, check currentness,
 one-shot provider custody, and exact checkpoint/review/resume. Frozen E83 now
 replays as six delivered sources plus pending TRANSIT/COMMS; its 21,401-token
 packet becomes feasible by externalizing RESULT-001. Historical runners remain
-unchanged. See `host_refactor/README.md`, `host_refactor/CODE_AUDIT.md`, and
+unchanged. All 266 tests pass. See `HOST_REFACTOR_RESULT.md`,
+`host_refactor/README.md`, `host_refactor/CODE_AUDIT.md`, and
 `host_refactor/TEST_MATRIX.md`. No GPU operation is selected.
 
 Status: the Keystone event-triggered continuation is complete, sealed, and

@@ -1,0 +1,67 @@
+{
+  "schema": "bounded-host-refactor-result-v0",
+  "date": "2026-08-28",
+  "implementation_commit": "a84f51ce1797cd00574fbc0f1f8d59945e8da2ff",
+  "disposition": "offline_host_refactor_qualified",
+  "gpu_calls": 0,
+  "provider_calls": 0,
+  "e83_replay": {
+    "delivered_source_ids": [
+      "CLIMATE",
+      "CLINIC",
+      "COUNCIL",
+      "GRID",
+      "SHELTER",
+      "WATER"
+    ],
+    "pending_source_ids": [
+      "COMMS",
+      "TRANSIT"
+    ],
+    "ordinary_prompt_tokens": 21401,
+    "prompt_limit": 20992,
+    "selected_relief_result_ids": [
+      "RESULT-001"
+    ],
+    "relieved_prompt_tokens": 18785,
+    "feasible": true
+  },
+  "verification": {
+    "ruff": "passed",
+    "mypy_new_host_modules": "passed",
+    "focused_tests_passed": 31,
+    "full_tests_passed": 266,
+    "full_test_seconds": 255.09,
+    "property_tests": "passed"
+  },
+  "qualified_mechanics": [
+    "append_only_delivery_kernel",
+    "completed_invocation_delivery_commit",
+    "pure_packet_projection",
+    "canonical_exact_body_deduplication",
+    "repeat_demand_feedback",
+    "exact_receipt_and_reopen",
+    "semantic_gate_free_positive_first_fit_relief",
+    "replaceable_exact_candidate_state",
+    "check_candidate_currentness",
+    "one_shot_provider_custody",
+    "checkpoint_review_and_resume",
+    "immutable_trellis_task_adapter",
+    "thin_live_style_tranche_path"
+  ],
+  "review_defaults_not_scientific_constants": {
+    "actor_calls_per_tranche": 12,
+    "maximum_actor_calls": 60,
+    "attempts_per_call": 1,
+    "retries": 0,
+    "automatic_loop_classification": false
+  },
+  "limitations": [
+    "historical_runners_not_migrated",
+    "one_pending_exact_result_per_call",
+    "checkpoint_size_unbounded_by_semantic_compaction",
+    "live_model_server_launcher_not_frozen",
+    "no_gpu_utility_evidence"
+  ],
+  "gpu_operation_selected": false
+}
