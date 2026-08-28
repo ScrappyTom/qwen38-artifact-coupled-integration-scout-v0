@@ -41,8 +41,9 @@ def replay(repository_root: Path) -> dict[str, object]:
         run_id="e83-provider-free-refactor-replay",
         task_id="trellis-heat-continuity-decision-v0",
         seed=884_219,
-        prompt_limit=20_992,
+        context_window=25_088,
         response_reserve=4_096,
+        execution_manifest_sha256="a" * 64,
     )
     review = CheckpointController(config).review_packet(
         outcome.kernel,

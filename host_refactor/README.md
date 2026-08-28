@@ -1,6 +1,8 @@
 # Host runtime refactor subproject
 
-Status: active offline refactor; no GPU operation is selected or authorized.
+Status: offline core and live seams qualified provider-free; exact locked-asset
+qualification blocked by the missing frozen tokenizer projection; no GPU
+operation is selected or authorized.
 
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners
@@ -32,6 +34,10 @@ automatic phase inference, loop classification, or model-managed eviction.
 - `ARCHITECTURE.md` defines module responsibilities and data flow.
 - `DECISIONS.md` records consequential choices and alternatives.
 - `WORK_LOG.md` records checkpoints, evidence, and remaining risks.
+- `LIVE_HARDENING_PLAN.md` freezes the final generic-host/live-task acceptance
+  seam before another GPU experiment can be selected.
+- `HOST_LIVE_HARDENING_RESULT.md` records the implemented corrections, test
+  evidence, and exact locked-asset blocker.
 
 ## Completion gate
 
@@ -40,3 +46,7 @@ requires all acceptance criteria in `GOVERNANCE.md`, a clean full historical
 test run, byte-identical offline/live packet projection from common events,
 and documentation of any historical path intentionally left unmigrated.
 
+Those code and regression gates now pass provisionally. Final exact
+qualification still requires restoration of the frozen tokenizer projection,
+verification of its recorded SHA-256, and rerunning the direct E83 replay and
+full suite without an injected compatible tokenizer.

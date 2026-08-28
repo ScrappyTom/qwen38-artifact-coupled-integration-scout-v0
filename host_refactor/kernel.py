@@ -158,6 +158,9 @@ class HostKernel:
         request_sha256: str,
         response_sha256: str,
         usage: Mapping[str, Any] | None = None,
+        request_binding: Mapping[str, Any] | None = None,
+        finish_reason: str = "stop",
+        provider_custody: Mapping[str, str] | None = None,
     ) -> "HostKernel":
         state = self.project()
         if call_index in state.completed_calls or call_index in state.failed_calls:
@@ -178,6 +181,9 @@ class HostKernel:
             {
                 "call_index": call_index,
                 "included_result_ids": list(included),
+                "finish_reason": finish_reason,
+                "provider_custody": dict(provider_custody or {}),
+                "request_binding": dict(request_binding or {}),
                 "request_sha256": request_sha256,
                 "response_sha256": response_sha256,
                 "usage": dict(usage or {}),
@@ -191,6 +197,8 @@ class HostKernel:
         request_sha256: str,
         error_type: str,
         error_message: str,
+        request_binding: Mapping[str, Any] | None = None,
+        provider_custody: Mapping[str, str] | None = None,
     ) -> "HostKernel":
         state = self.project()
         if call_index in state.completed_calls or call_index in state.failed_calls:
@@ -201,10 +209,78 @@ class HostKernel:
                 "call_index": call_index,
                 "error_message": error_message,
                 "error_type": error_type,
+                "provider_custody": dict(provider_custody or {}),
+                "request_binding": dict(request_binding or {}),
                 "request_sha256": request_sha256,
             },
         )
         return failed.record_terminal(TerminalCode.PROVIDER_FAILURE)
+
+    def record_response_rejection(
+        self,
+        *,
+        call_index: int,
+        finish_reason: str,
+        response_sha256: str,
+        rejection_result_id: str,
+    ) -> "HostKernel":
+        return self._append(
+            EventKind.RESPONSE_REJECTED,
+            {
+                "call_index": call_index,
+                "finish_reason": finish_reason,
+                "rejection_result_id": rejection_result_id,
+                "response_sha256": response_sha256,
+            },
+        )
+
+    def record_request_binding_rejection(
+        self,
+        *,
+        call_index: int,
+        packet_sha256: str,
+        packet_manifest_sha256: str,
+        error_message: str,
+    ) -> "HostKernel":
+        return self._append(
+            EventKind.REQUEST_BINDING_REJECTED,
+            {
+                "call_index": call_index,
+                "error_message": error_message,
+                "packet_manifest_sha256": packet_manifest_sha256,
+                "packet_sha256": packet_sha256,
+            },
+        )
+
+    def record_action_disposition(
+        self,
+        *,
+        call_index: int,
+        status: str,
+        response_sha256: str,
+        candidate_sha256_before: str | None,
+        candidate_sha256_after: str | None,
+        action: Mapping[str, Any] | None = None,
+        rejection_code: str | None = None,
+        rejection_message: str | None = None,
+        result_id: str | None = None,
+    ) -> "HostKernel":
+        if status not in {"accepted", "rejected", "response_rejected"}:
+            raise ValueError(f"unsupported action disposition: {status}")
+        return self._append(
+            EventKind.ACTION_DISPOSITION,
+            {
+                "action": None if action is None else dict(action),
+                "call_index": call_index,
+                "candidate_sha256_after": candidate_sha256_after,
+                "candidate_sha256_before": candidate_sha256_before,
+                "rejection_code": rejection_code,
+                "rejection_message": rejection_message,
+                "response_sha256": response_sha256,
+                "result_id": result_id,
+                "status": status,
+            },
+        )
 
     def externalize(self, result_id: str, *, reason: str) -> "HostKernel":
         state = self.project()
@@ -438,6 +514,14 @@ class HostKernel:
                     resident,
                     demand_count=resident.demand_count + 1,
                 )
+            elif event.kind in {
+                EventKind.RESPONSE_REJECTED,
+                EventKind.ACTION_DISPOSITION,
+                EventKind.REQUEST_BINDING_REJECTED,
+            }:
+                # These events are exact audit facts and do not independently
+                # mutate result, state-slot, or terminal projections.
+                pass
             elif event.kind is EventKind.TERMINAL_RECORDED:
                 if terminal is not None:
                     raise InvalidTransition(

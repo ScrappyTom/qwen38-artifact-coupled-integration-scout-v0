@@ -24,12 +24,17 @@ class EventKind(str, Enum):
     RESULT_EXTERNALIZED = "result_externalized"
     REOPEN_REQUESTED = "reopen_requested"
     REPEAT_DEMAND = "repeat_demand"
+    RESPONSE_REJECTED = "response_rejected"
+    ACTION_DISPOSITION = "action_disposition"
+    REQUEST_BINDING_REJECTED = "request_binding_rejected"
     TERMINAL_RECORDED = "terminal_recorded"
 
 
 class TerminalCode(str, Enum):
     PROVIDER_FAILURE = "provider_failure"
     INVALID_ACTION = "invalid_action"
+    DOMAIN_FAILURE = "domain_failure"
+    REQUEST_BINDING_FAILURE = "request_binding_failure"
     CAPACITY_BLOCKED = "capacity_blocked"
     CHECKPOINT_PAUSE = "checkpoint_pause"
     CALL_BUDGET_EXHAUSTED = "call_budget_exhausted"
@@ -290,17 +295,31 @@ class RunConfiguration:
     run_id: str
     task_id: str
     seed: int
-    prompt_limit: int
+    context_window: int
     response_reserve: int
+    execution_manifest_sha256: str
+    accepted_finish_reasons: tuple[str, ...] = ("stop",)
     tranche_calls: int = 12
     maximum_calls: int = 60
     maximum_serialized_tokens: int | None = None
 
     def __post_init__(self) -> None:
-        if self.prompt_limit <= 0:
-            raise ValueError("prompt limit must be positive")
+        if self.context_window <= 0:
+            raise ValueError("context window must be positive")
         if self.response_reserve <= 0:
             raise ValueError("response reserve must be positive")
+        if self.response_reserve >= self.context_window:
+            raise ValueError("response reserve must be smaller than context window")
+        if len(self.execution_manifest_sha256) != 64 or any(
+            character not in "0123456789abcdef"
+            for character in self.execution_manifest_sha256
+        ):
+            raise ValueError("execution manifest must be a lowercase SHA-256")
+        if not self.accepted_finish_reasons or any(
+            not isinstance(value, str) or not value
+            for value in self.accepted_finish_reasons
+        ):
+            raise ValueError("accepted finish reasons must be non-empty strings")
         if self.tranche_calls <= 0 or self.maximum_calls <= 0:
             raise ValueError("call budgets must be positive")
         if self.tranche_calls > self.maximum_calls:
@@ -308,6 +327,9 @@ class RunConfiguration:
 
     def as_dict(self) -> dict[str, Any]:
         return {
+            "accepted_finish_reasons": list(self.accepted_finish_reasons),
+            "context_window": self.context_window,
+            "execution_manifest_sha256": self.execution_manifest_sha256,
             "maximum_calls": self.maximum_calls,
             "maximum_serialized_tokens": self.maximum_serialized_tokens,
             "prompt_limit": self.prompt_limit,
@@ -317,6 +339,12 @@ class RunConfiguration:
             "task_id": self.task_id,
             "tranche_calls": self.tranche_calls,
         }
+
+    @property
+    def prompt_limit(self) -> int:
+        """Effective prompt allowance after the frozen completion reserve."""
+
+        return self.context_window - self.response_reserve
 
     @property
     def sha256(self) -> str:

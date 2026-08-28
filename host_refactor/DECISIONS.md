@@ -55,3 +55,37 @@ telemetry but does not label loops or force closure.
 Reason: pacing is task/model behavior. Codex needs literal transcript evidence
 to distinguish coherent slow work from cycling.
 
+## D007 — the final provider request is the exposure authority
+
+Decision: the host verifies that the provider-facing message list is byte-for-
+byte equivalent to the composed packet. Invocation events bind the packet,
+manifest, final messages, exposed results, and exposed state versions.
+
+Reason: a pre-transform pending list cannot prove that a task payload builder
+actually sent those bytes.
+
+## D008 — ordinary rejection is evidence, not termination
+
+Decision: adapters translate declared parse/action rejections into exact,
+candidate-bound observations that continue through the normal result lifecycle.
+Only unexpected adapter or host failure is terminal.
+
+Reason: rejection, no effect, stale binding, and invalid ranges are ordinary
+feedback events in the experimental systems and may be causally important.
+
+## D009 — reopen authority stays in the kernel
+
+Decision: task adapters validate a reopen request but the runner applies
+`HostKernel.request_reopen()` to the original result. Action availability comes
+from projected delivery state, not rendered receipt positions.
+
+Reason: receipts are representations of chronology; they are not lifecycle
+authority.
+
+## D010 — exact provenance is host-mechanical
+
+Decision: accepted finish reasons, execution package hashes, request exposure,
+resource ceilings, and checkpoint parentage are frozen mechanical bindings.
+
+Reason: these facts can be enforced without semantic judgment and are required
+to interpret later model behavior safely.

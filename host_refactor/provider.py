@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from time import perf_counter
 from typing import Any, Callable, Mapping, Protocol
 
 from reactive_runtime.canonical import write_json
@@ -12,12 +13,14 @@ class ProviderSuccess:
     content: str
     finish_reason: str
     usage: Mapping[str, Any]
+    elapsed_ms: float
 
 
 @dataclass(frozen=True)
 class ProviderFailure:
     error_type: str
     error_message: str
+    elapsed_ms: float
 
 
 ProviderOutcome = ProviderSuccess | ProviderFailure
@@ -43,6 +46,7 @@ class OneShotProvider:
         if self.attempts != 0:
             raise RuntimeError("one-shot provider adapter cannot be invoked twice")
         self.attempts += 1
+        started = perf_counter()
         if custody_root is not None:
             write_json(custody_root / "REQUEST.json", dict(payload))
         try:
@@ -59,10 +63,12 @@ class OneShotProvider:
             if not isinstance(usage, Mapping):
                 raise ValueError("provider response lacks usage")
             outcome: ProviderOutcome = ProviderSuccess(
-                content, finish_reason, dict(usage)
+                content, finish_reason, dict(usage), (perf_counter() - started) * 1000
             )
         except Exception as exc:
-            outcome = ProviderFailure(type(exc).__name__, str(exc))
+            outcome = ProviderFailure(
+                type(exc).__name__, str(exc), (perf_counter() - started) * 1000
+            )
             if custody_root is not None:
                 write_json(
                     custody_root / "FAILURE.json",
@@ -78,6 +84,7 @@ class OneShotProvider:
                 {
                     "attempts": self.attempts,
                     "completed": isinstance(outcome, ProviderSuccess),
+                    "elapsed_ms": outcome.elapsed_ms,
                     "no_retry": True,
                     "schema": "bounded-host-provider-attempt-v0",
                 },

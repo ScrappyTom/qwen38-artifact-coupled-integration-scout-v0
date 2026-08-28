@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from difflib import unified_diff
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -171,11 +172,17 @@ class CheckpointController:
             )
         packet = composer.compose(kernel)
         invocation_rows = []
+        failed_invocation_rows = []
+        action_dispositions = []
         transcript_rows = []
         state_history = []
         for event in kernel.events:
             if event.kind is EventKind.INVOCATION_COMPLETED:
                 invocation_rows.append(dict(event.data))
+            elif event.kind is EventKind.PROVIDER_FAILED:
+                failed_invocation_rows.append(dict(event.data))
+            elif event.kind is EventKind.ACTION_DISPOSITION:
+                action_dispositions.append(dict(event.data))
             elif event.kind is EventKind.STATE_SLOT_SET:
                 value = event.data["state_object"]
                 state_history.append(
@@ -204,14 +211,51 @@ class CheckpointController:
             if row["role"] == "assistant"
         ]
         repeated_assistant_messages = len(assistant_hashes) - len(set(assistant_hashes))
-        candidate_sequence = [
-            row.result.candidate_sha256_after for row in state.results.values()
+        candidate_events = [
+            event
+            for event in kernel.events
+            if event.kind is EventKind.STATE_SLOT_SET
+            and event.data["state_object"]["slot_id"] == "current_candidate"
+        ]
+        candidate_transitions = []
+        for before, after in zip(candidate_events, candidate_events[1:]):
+            left = before.data["state_object"]
+            right = after.data["state_object"]
+            diff = "".join(
+                unified_diff(
+                    str(left["exact_content"]).splitlines(keepends=True),
+                    str(right["exact_content"]).splitlines(keepends=True),
+                    fromfile=str(left["object_version"]),
+                    tofile=str(right["object_version"]),
+                )
+            )
+            candidate_transitions.append(
+                {
+                    "from_content_sha256": left["content_sha256"],
+                    "from_object_version": left["object_version"],
+                    "to_content_sha256": right["content_sha256"],
+                    "to_object_version": right["object_version"],
+                    "unified_diff": diff,
+                }
+            )
+        provider_usage: dict[str, int | float] = {}
+        for invocation in invocation_rows:
+            for key, value in dict(invocation.get("usage", {})).items():
+                if isinstance(value, (int, float)) and not isinstance(value, bool):
+                    provider_usage[key] = provider_usage.get(key, 0) + value
+        provider_custody = [
+            dict(invocation["provider_custody"])
+            for invocation in [*invocation_rows, *failed_invocation_rows]
+            if invocation.get("provider_custody")
         ]
         unchanged_candidate_transitions = sum(
-            left == right
-            for left, right in zip(candidate_sequence, candidate_sequence[1:])
+            row.get("candidate_sha256_before")
+            == row.get("candidate_sha256_after")
+            for row in action_dispositions
         )
         return {
+            "action_dispositions": action_dispositions,
+            "candidate_transitions": candidate_transitions,
             "completed_actor_calls": list(state.completed_calls),
             "configuration_sha256": self.configuration.sha256,
             "counters": counters.as_dict(),
@@ -219,9 +263,13 @@ class CheckpointController:
             "event_interval": [1, len(kernel.events)] if kernel.events else [],
             "events_sha256": state.events_sha256,
             "failed_calls": list(state.failed_calls),
+            "failed_invocations": failed_invocation_rows,
             "invocations": invocation_rows,
             "next_packet_manifest": packet.manifest_dict(),
             "pending_result_ids": list(state.pending_result_ids),
+            "provider_custody": provider_custody,
+            "provider_usage": provider_usage,
+            "provider_timing": [],
             "recurrence": {
                 "exact_repeat_demand_events": events_by_kind.get(
                     EventKind.REPEAT_DEMAND.value, 0

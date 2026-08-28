@@ -7,8 +7,9 @@ from typing import Any, Callable, Mapping
 from reactive_runtime.actions import action_json_schema, parse_action
 from reactive_runtime.configuration import artifact_centered_actor_actions
 from reactive_runtime.keystone_world import KeystoneWorld
-from reactive_runtime.canonical import sha256_bytes
+from reactive_runtime.canonical import canonical_json_bytes, sha256_bytes, sha256_file
 from reactive_runtime.records import ResultLedger, ResultRecord
+from reactive_runtime.world import ActionRejected
 from tools.live_common import provider_payload
 
 from host_refactor.capacity import CapacityManager, CountMessages
@@ -17,12 +18,13 @@ from host_refactor.kernel import HostKernel
 from host_refactor.model import (
     DeliveryState,
     ExactStateObject,
+    ProjectedHostState,
     RunConfiguration,
     TerminalCode,
     TranscriptEntry,
 )
 from host_refactor.packet import ModelPacket, PacketComposer
-from host_refactor.runner import DomainOutcome, HostRunner
+from host_refactor.runner import ActionRejection, DomainOutcome, HostRunner
 from host_refactor.trellis_fixture import historical_result
 
 
@@ -40,17 +42,73 @@ class TrellisRuntimeSpec:
     paths: TrellisPaths
     actor_max_tokens: int = 4_096
     configuration_id: str = "A0_MATRIX_AND_DECISION"
+    execution_manifest: Mapping[str, Any] | None = None
+
+    def __post_init__(self) -> None:
+        if self.actor_max_tokens != self.configuration.response_reserve:
+            raise ValueError(
+                "Trellis provider maximum differs from frozen response reserve"
+            )
+
+
+def trellis_execution_manifest(repository_root: Path) -> dict[str, Any]:
+    root = repository_root.resolve()
+    task_root = root / "task_trellis"
+    declared = [
+        root / "TRELLIS_PRESSURE_SCREEN_CONTRACT.json",
+        root / "TRELLIS_MODEL_PROFILE_LOCK.json",
+        task_root / "ACTIONS.md",
+        task_root / "EVALUATOR.json",
+        task_root / "SOURCE_CATALOG.json",
+        task_root / "SYSTEM.md",
+        task_root / "TASK.md",
+        task_root / "TASK_SOURCE_LOCK.json",
+        task_root / "VERIFICATION_ACTIONS.md",
+        task_root / "WORLD_SPEC.json",
+        task_root / "evaluator" / "evaluate.py",
+        root / "host_refactor" / "binding.py",
+        root / "host_refactor" / "capacity.py",
+        root / "host_refactor" / "checkpoint.py",
+        root / "host_refactor" / "kernel.py",
+        root / "host_refactor" / "model.py",
+        root / "host_refactor" / "packet.py",
+        root / "host_refactor" / "provider.py",
+        root / "host_refactor" / "runner.py",
+        root / "host_refactor" / "trellis_adapter.py",
+        root / "reactive_runtime" / "actions.py",
+        root / "reactive_runtime" / "keystone_world.py",
+        root / "reactive_runtime" / "world.py",
+        root / "tools" / "live_common.py",
+    ]
+    files = {
+        path.relative_to(root).as_posix(): sha256_file(path)
+        for path in sorted(declared)
+    }
+    payload = {
+        "files": files,
+        "payload_builder": "TrellisDomainAdapter.payload:v1",
+        "schema": "trellis-host-execution-manifest-v1",
+    }
+    return {
+        **payload,
+        "execution_manifest_sha256": sha256_bytes(canonical_json_bytes(payload)),
+    }
 
 
 def trellis_spec(repository_root: Path) -> TrellisRuntimeSpec:
     root = repository_root.resolve()
+    execution_manifest = trellis_execution_manifest(root)
     return TrellisRuntimeSpec(
         configuration=RunConfiguration(
             run_id="trellis-host-refactor-v0-not-authorized",
             task_id="trellis-heat-continuity-decision-v0",
             seed=884_219,
-            prompt_limit=20_992,
+            context_window=25_088,
             response_reserve=4_096,
+            execution_manifest_sha256=str(
+                execution_manifest["execution_manifest_sha256"]
+            ),
+            accepted_finish_reasons=("stop",),
             tranche_calls=12,
             maximum_calls=60,
             maximum_serialized_tokens=1_800_000,
@@ -61,6 +119,7 @@ def trellis_spec(repository_root: Path) -> TrellisRuntimeSpec:
             contract_path=root / "TRELLIS_PRESSURE_SCREEN_CONTRACT.json",
             model_lock_path=root / "TRELLIS_MODEL_PROFILE_LOCK.json",
         ),
+        execution_manifest=execution_manifest,
     )
 
 
@@ -138,18 +197,48 @@ class TrellisDomainAdapter:
     def handle(
         self, content: str, *, call_index: int, kernel: HostKernel
     ) -> DomainOutcome:
-        action = parse_action(
-            content,
-            self.allowed_actions,
-            decision_headings=self.world.decision_headings,
-        )
+        try:
+            action = parse_action(
+                content,
+                self.allowed_actions,
+                decision_headings=self.world.decision_headings,
+            )
+        except ValueError as exc:
+            return DomainOutcome(
+                rejection=ActionRejection(
+                    code="invalid_model_output",
+                    message=str(exc),
+                )
+            )
+        if action.get("action") == "reopen_exact":
+            result_id = str(action["result_id"])
+            row = kernel.project().results.get(result_id)
+            if row is None or row.delivery_state is not DeliveryState.DELIVERED_EXTERNAL:
+                return DomainOutcome(
+                    rejection=ActionRejection(
+                        code="result_not_reopenable",
+                        message=f"result is not delivered-external: {result_id}",
+                        attempted_action=action,
+                    )
+                )
+            return DomainOutcome(action=action, reopen_result_id=result_id)
         result_id = f"RESULT-{self.next_result_index:03d}"
         self.next_result_index += 1
-        execution = self.world.execute(
-            action,
-            result_id=result_id,
-            ledger=_legacy_ledger(kernel),
-        )
+        try:
+            execution = self.world.execute(
+                action,
+                result_id=result_id,
+                ledger=_legacy_ledger(kernel),
+            )
+        except ActionRejected as exc:
+            return DomainOutcome(
+                action=action,
+                rejection=ActionRejection(
+                    code=exc.code,
+                    message=exc.message,
+                    attempted_action=action,
+                ),
+            )
         legacy = self.world.make_result_record(
             execution,
             result_id=result_id,
@@ -170,17 +259,19 @@ class TrellisDomainAdapter:
             result=exact,
             state_updates=state_updates,
             terminal=terminal,
+            action=action,
         )
 
     def payload(
-        self, packet: ModelPacket, configuration: RunConfiguration
+        self,
+        packet: ModelPacket,
+        configuration: RunConfiguration,
+        state: ProjectedHostState,
     ) -> Mapping[str, Any]:
-        state = packet.manifest_dict()
-        del state  # The manifest remains in host custody, not provider payload.
         external_ids = tuple(
-            row.result_id
-            for row in packet.manifest
-            if row.representation == "exact_receipt" and row.result_id is not None
+            result_id
+            for result_id, row in state.results.items()
+            if row.delivery_state is DeliveryState.DELIVERED_EXTERNAL
         )
         schema = action_json_schema(
             self.allowed_actions,

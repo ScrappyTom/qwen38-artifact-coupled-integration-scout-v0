@@ -68,12 +68,31 @@ stops for explicit design review rather than repairing around the failure.
     capacity blocker.
 12. A run can pause after twelve completed actor calls, seal state, hydrate it,
     and render the identical next packet.
-13. Provider failure, invalid action, capacity blocker, checkpoint pause, and
-    budget exhaustion have distinct terminal codes.
+13. Provider failure, unexpected domain failure, request-binding failure,
+    capacity blocker, checkpoint pause, and budget exhaustion have distinct
+    terminal codes; expected parse/action rejection remains nonterminal.
 14. Provider attempts are one-shot; the host performs no retry.
 15. The selected offline and live-style adapters render byte-identical packets
     from the same event log.
 16. Existing historical tests remain green.
+
+## Live-hardening acceptance extension
+
+The offline core criteria above remain satisfied but do not by themselves
+qualify a general live experiment host. Before the next GPU authorization, the
+selected path must also satisfy every case in `LIVE_HARDENING_PLAN.md`:
+
+- final-request-to-delivery and state-exposure binding;
+- nonterminal exact action rejection;
+- native kernel reopen through the task adapter;
+- frozen finish-reason admission;
+- mechanically reconciled context/completion and prospective token budgets;
+- execution-manifest-bound checkpoint hydration;
+- chained checkpoints and attempt/completion/failure accounting;
+- investigator-ready mechanical review evidence.
+
+This is one bounded hardening pass. It may not grow into another semantic,
+experiment-design, or historical-runner migration project.
 
 ## Explicit non-goals
 
@@ -86,4 +105,3 @@ stops for explicit design review rather than repairing around the failure.
 - multi-agent control;
 - migration of every historical runner;
 - a universal product memory abstraction.
-

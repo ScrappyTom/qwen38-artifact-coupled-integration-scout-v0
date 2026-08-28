@@ -165,3 +165,80 @@ Disposition:
 - the offline host refactor is implementation-complete pending commit and
   program-level reconciliation;
 - no GPU operation is selected.
+
+## 2026-08-28 — live hardening checkpoint 0: review and bounded scope
+
+Completed:
+
+- reconciled the external review against `runner.py`, `provider.py`,
+  `trellis_adapter.py`, `kernel.py`, `packet.py`, `checkpoint.py`, and
+  `live_path.py`;
+- confirmed six live seams: final-request binding, nonterminal rejection,
+  adapter-native reopen, lifecycle-derived reopen capability, finish-reason
+  admission, and state-slot exposure binding;
+- confirmed five hardening needs: context/reserve reconciliation, prospective
+  serialized budget, execution-manifest binding, richer mechanical review, and
+  chained checkpoint/accounting;
+- froze `LIVE_HARDENING_PLAN.md` as a ten-case bounded acceptance contract;
+- configured future repository-local authorship from the authenticated GitHub
+  account without rewriting published commits.
+
+Decision:
+
+- retain the event-driven core and extend its live seams;
+- write adversarial provider-free tests before implementation;
+- make no GPU/provider call and select no experiment during this pass.
+
+Next slice: add the ten live-hardening acceptance tests and record their
+expected initial failures.
+
+## 2026-08-28 — live hardening checkpoint 1: implementation and qualification
+
+Completed:
+
+- bound every final provider request to the exact composed messages, packet
+  manifest, pending result bodies, current state-slot exposures, completion
+  reserve, and immutable execution manifest;
+- prevented delivery or state-exposure commitment when that binding fails;
+- preserved unacceptable finish reasons and ordinary parse/action rejections
+  as exact nonterminal observations while keeping unexpected adapter failures
+  terminal;
+- routed Trellis reopen through the original result's native lifecycle and
+  derived advertised reopen capability from projected delivery state;
+- made context window, response reserve, prompt allowance, accepted finish
+  reasons, execution manifest, and prospective serialized budget explicit;
+- chained resumed tranches to a verified parent checkpoint and separated
+  provider attempts, completed invocations, and failed invocations;
+- expanded the mechanical review with request bindings, finish reasons, raw
+  custody paths, provider usage and timing, action dispositions, candidate
+  transitions, and exact diffs;
+- corrected an initially observed replay defect: wall-clock timing remains
+  custody/review telemetry and no longer changes the authoritative event log.
+
+Verification:
+
+- adversarial live-hardening tests: 11 passed;
+- combined checkpoint/live/hardening tests: 18 passed;
+- Ruff: passed;
+- mypy over 12 host modules: passed;
+- full compatible-tokenizer regression: 277 passed in 307.51 seconds;
+- no GPU, model-provider, or external inference call occurred.
+
+Qualification limit:
+
+- the exact tokenizer executable remains present and matches
+  `d435fb84f60d6c21dbd2adcb0beb38555f2921894909c98f9236bf0984971b1c`;
+- the frozen tokenizer projection expected at
+  `E:\AI_Models\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\Qwen3.8-27B-AD-IQ2_S.tokenizer-projection.gguf`
+  is absent after the power outage;
+- a different local Qwen3.8 GGUF reproduced the E83 count/relief assertion and
+  passed the full regression when injected only in-process, but it is not the
+  locked asset and cannot substitute for exact qualification.
+
+Disposition:
+
+- code hardening: accepted provider-free;
+- compatible-tokenizer regression: passed provisionally;
+- exact locked-asset qualification: blocked pending restoration and hash
+  verification of the frozen tokenizer projection;
+- live GPU/provider readiness: not claimed and not authorized.

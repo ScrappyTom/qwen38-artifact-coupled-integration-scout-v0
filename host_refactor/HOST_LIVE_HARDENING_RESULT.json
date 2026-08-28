@@ -1,0 +1,24 @@
+{
+  "date": "2026-08-28",
+  "disposition": {
+    "code_hardening": "accepted_provider_free",
+    "compatible_tokenizer_regression": "passed_provisionally",
+    "exact_locked_asset_qualification": "blocked_missing_asset",
+    "gpu_provider_readiness": "not_claimed"
+  },
+  "frozen_tokenizer": {
+    "expected_path": "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.tokenizer-projection.gguf",
+    "expected_sha256": "7047272e809b62b5c68b6427a349cba78b2f45109de04350d48f0338db68eef3",
+    "exists": false
+  },
+  "provider_calls": 0,
+  "schema": "bounded-host-live-hardening-result-v0",
+  "verification": {
+    "adversarial_tests_passed": 11,
+    "combined_host_tests_passed": 18,
+    "full_compatible_regression_passed": 277,
+    "full_compatible_regression_seconds": 307.51,
+    "mypy": "passed_12_modules",
+    "ruff": "passed"
+  }
+}

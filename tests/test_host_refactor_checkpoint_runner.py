@@ -27,8 +27,9 @@ def configuration(*, tranche: int = 12, maximum: int = 60) -> RunConfiguration:
         run_id="refactor-test",
         task_id="task-test",
         seed=42,
-        prompt_limit=10_000,
+        context_window=11_000,
         response_reserve=1_000,
+        execution_manifest_sha256="a" * 64,
         tranche_calls=tranche,
         maximum_calls=maximum,
         maximum_serialized_tokens=100_000,
@@ -202,8 +203,8 @@ class CheckpointAndRunnerTests(unittest.TestCase):
             provider_complete=success,
             domain=InvalidDomain(),
         )
-        self.assertEqual(step.disposition, TerminalCode.INVALID_ACTION)
-        self.assertEqual(step.kernel.project().terminal, TerminalCode.INVALID_ACTION)
+        self.assertEqual(step.disposition, TerminalCode.DOMAIN_FAILURE)
+        self.assertEqual(step.kernel.project().terminal, TerminalCode.DOMAIN_FAILURE)
 
     def test_runner_deduplicates_repeated_resident_acquisition(self) -> None:
         host = runner(configuration(tranche=10, maximum=20))
@@ -248,7 +249,17 @@ class CheckpointAndRunnerTests(unittest.TestCase):
             TerminalCode.CALL_BUDGET_EXHAUSTED,
         )
 
-        config = configuration()
+        config = RunConfiguration(
+            run_id="blocked-test",
+            task_id="task-test",
+            seed=42,
+            context_window=1_001,
+            response_reserve=1_000,
+            execution_manifest_sha256="a" * 64,
+            tranche_calls=12,
+            maximum_calls=60,
+            maximum_serialized_tokens=100_000,
+        )
         composer = PacketComposer()
         blocked_host = HostRunner(
             configuration=config,

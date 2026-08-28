@@ -45,8 +45,9 @@ def test_live_style_tranche_pauses_writes_custody_and_remains_resumable() -> Non
         run_id="live-style-test",
         task_id="task",
         seed=42,
-        prompt_limit=10_000,
+        context_window=11_000,
         response_reserve=1_000,
+        execution_manifest_sha256="a" * 64,
         tranche_calls=2,
         maximum_calls=6,
         maximum_serialized_tokens=10_000,
@@ -93,7 +94,9 @@ def test_live_style_tranche_pauses_writes_custody_and_remains_resumable() -> Non
             )
         )
     assert result.disposition is TerminalCode.CHECKPOINT_PAUSE
-    assert result.calls_attempted == 2
+    assert result.provider_attempts == 2
+    assert result.completed_invocations == 2
+    assert result.failed_invocations == 0
     assert resumed_kernel.as_dict() == result.kernel.as_dict()
     assert resumed_counters == result.counters
     assert domain_state == {"calls": 2, "schema": "test-domain-v0"}

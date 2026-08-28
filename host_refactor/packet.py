@@ -22,6 +22,9 @@ class PacketManifestEntry:
     result_id: str | None = None
     canonical_body_identity: Mapping[str, str] | None = None
     state_slot_id: str | None = None
+    content_sha256: str | None = None
+    object_id: str | None = None
+    object_version: str | None = None
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -30,7 +33,10 @@ class PacketManifestEntry:
                 if self.canonical_body_identity is None
                 else dict(self.canonical_body_identity)
             ),
+            "content_sha256": self.content_sha256,
             "message_index": self.message_index,
+            "object_id": self.object_id,
+            "object_version": self.object_version,
             "representation": self.representation,
             "result_id": self.result_id,
             "role": self.role,
@@ -64,6 +70,10 @@ class ModelPacket:
             "schema": "bounded-host-packet-manifest-v0",
             "state_sha256": self.state_sha256,
         }
+
+    @property
+    def manifest_sha256(self) -> str:
+        return sha256_bytes(canonical_json_bytes(self.manifest_dict()))
 
 
 def exact_receipt(result: ExactResult) -> str:
@@ -110,6 +120,8 @@ class PacketComposer:
             content = entry.content
             representation = entry.entry_kind
             body_identity: Mapping[str, str] | None = None
+            object_id: str | None = None
+            object_version: str | None = None
             if entry.state_slot_id is not None:
                 try:
                     state_object = state.state_slots[entry.state_slot_id]
@@ -119,6 +131,8 @@ class PacketComposer:
                     ) from exc
                 content = state_object.exact_content
                 representation = "current_exact_state"
+                object_id = state_object.object_id
+                object_version = state_object.object_version
             if entry.result_id is not None:
                 try:
                     projected = state.results[entry.result_id]
@@ -128,6 +142,8 @@ class PacketComposer:
                     ) from exc
                 result = projected.result
                 body_identity = result.body_identity.as_dict()
+                object_id = result.object_id
+                object_version = result.object_version
                 if projected.delivery_state is DeliveryState.ACQUIRED:
                     raise InvalidTransition(
                         f"acquired result cannot have model-facing entry: {entry.result_id}"
@@ -162,6 +178,9 @@ class PacketComposer:
                     message_index=message_index,
                     result_id=entry.result_id,
                     canonical_body_identity=body_identity,
+                    content_sha256=sha256_bytes(content.encode("utf-8")),
+                    object_id=object_id,
+                    object_version=object_version,
                     state_slot_id=entry.state_slot_id,
                 )
             )
@@ -175,6 +194,7 @@ class PacketComposer:
                     role="user",
                     representation="mechanical_check_currentness",
                     message_index=message_index,
+                    content_sha256=sha256_bytes(currentness.encode("utf-8")),
                 )
             )
         self._validate_active_body_uniqueness(kernel, manifest)

@@ -12,7 +12,7 @@ ACQUIRED -> PENDING -> DELIVERED_RESIDENT <-> DELIVERED_EXTERNAL
   visibility.
 - Pending means the bytes are selected for a particular prospective call.
 - Delivery occurs only when a completed model invocation names the result as
-  included in its exact request.
+  included in a mechanically verified final provider request.
 - Provider failure never commits delivery.
 - Externalization is legal only after delivery.
 - Exact reopen is legal only from delivered-external state and returns the
@@ -54,6 +54,24 @@ overlap is distinct in v0.
   does not append the exact payload again.
 - Packet manifests explain every exact body, receipt, pending result, and
   mechanical feedback entry.
+- Every provider request is bound to the packet hash, manifest hash, exact
+  provider-message hash, result exposures, and state-slot exposures.
+- Payload transformation may add provider controls but may not drop, reorder,
+  or alter the composed model messages.
+
+## Action and response invariants
+
+- A response is eligible for domain action processing only when its exact
+  provider finish disposition is allowed by frozen configuration.
+- A nonqualified but completed response is preserved exactly, records request
+  exposure, emits a nonterminal rejection observation, and executes no action.
+- Expected parse or domain rejection is an exact result with candidate binding;
+  it does not terminate the trajectory.
+- An unexpected adapter or host failure is terminal and distinct from ordinary
+  action rejection.
+- Reopen capability is derived only from `DELIVERED_EXTERNAL` lifecycle state.
+- A reopen changes the original result lifecycle; it does not create a second
+  result wrapper for the same exact object.
 
 ## Capacity invariants
 
@@ -73,4 +91,9 @@ overlap is distinct in v0.
 - Hydration must reproduce the same state hash and next packet bytes.
 - Review packets contain literal/mechanical evidence and full-custody handles,
   not host-authored semantic judgments.
-
+- Configuration binds a complete execution-manifest hash as well as context,
+  completion, call, and serialized-token limits.
+- A provider attempt may not begin when its frozen maximum request/completion
+  cost would exceed the trajectory ceiling.
+- Completed request exposures and failed attempted exposures remain distinct.
+- Every resumed tranche binds its parent checkpoint hash.
