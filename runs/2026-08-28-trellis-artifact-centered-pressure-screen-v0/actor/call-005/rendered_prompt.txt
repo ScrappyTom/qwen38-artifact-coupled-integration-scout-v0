@@ -1,0 +1,524 @@
+<|im_start|>system
+You are the ordinary actor in a bounded urban heat-continuity system.
+
+Use exact task actions to inspect evidence, build exact task artifacts, check
+the current candidate, repair real blockers, and propose submission only after
+the changed candidate has a current passing check. Exact sources, effects,
+checks, rejected actions, and history remain externally custodied.
+
+Any semantic scaffold is lossy, incomplete, non-authoritative, source-bound,
+and temporary. Use it only to help convert exact evidence into revisable exact
+task work. It cannot authorize operations, readiness, submission, or closure.
+Preserve exact values, units, versions, qualifications, modalities, and
+authority boundaries. Candidate mutation makes prior checks stale.
+
+Return exactly one declared JSON action and no prose.<|im_end|>
+<|im_start|>user
+# Trellis Urban Heat Continuity Task
+
+Produce two exact, source-grounded work products for the synthetic Trellis
+urban heat emergency:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning exactly with
+   `# Trellis Evidence-to-Requirement Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning exactly with
+   `# Trellis Urban Heat Continuity Decision` and containing exactly these
+   ordered level-two headings:
+
+   1. `Authority, scope, and operating states`
+   2. `Heat triggers and geographic staging`
+   3. `Power, water, and cooling continuity`
+   4. `Clinical, shelter, and accessibility operations`
+   5. `Transit, communications, logistics, and staffing`
+   6. `Execution, rollback, verification, and closure`
+
+The final decision must contain 1,200–1,650 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. Reconcile authority,
+hazard thresholds, power, water, clinical surge, cooling-center capacity,
+accessible transit, public communication, logistics, staffing, candidate
+lineage, and independent readiness.
+
+Bind each action and gate to owners, prerequisites, observations, the current
+candidate, falsifiers, rollback, and evidence that retires temporary controls.
+Preserve observations versus gates, probability versus coverage, installed
+versus usable capacity, reserve versus flow, median versus percentile, hours
+versus days, source-local authority, and current versus stale evidence.
+
+Checks are candidate-bound mechanical feedback. They do not independently
+authorize operations, readiness, submission, or closure.<|im_end|>
+<|im_start|>user
+# Trellis construction action contract
+
+Return exactly one JSON action object and no prose.
+
+```text
+{"action":"read_source","source_id":"COUNCIL","start_line":1,"end_line":60}
+{"action":"read_batch","requests":[{"source_id":"COUNCIL","start_line":1,"end_line":60},{"source_id":"CLIMATE","start_line":1,"end_line":60}]}
+{"action":"reopen_exact","result_id":"RESULT-001"}
+{"action":"replace_evidence_ledger","content":"complete compact task-native evidence-to-requirement matrix"}
+{"action":"upsert_decision_section","heading":"Authority, scope, and operating states","body":"exact section body"}
+{"action":"patch_decision","edits":[{"old":"exact unique text","new":"replacement text"}]}
+{"action":"replace_decision","content":"complete exact decision"}
+{"action":"begin_verification"}
+```
+
+One read may contain at most 120 lines. A batch may contain one or two ranges,
+at most 160 lines and 12,000 exact source bytes. Incremental ledger and section
+work is exact, versioned task state and remains available after source bodies
+leave residency. `begin_verification` is valid only after the frozen mechanical
+construction milestone. It changes lifecycle phase, not candidate bytes, and
+does not assert readiness.
+
+
+# Common pre-fork action notice
+No semantic-maintenance output is present during pressure screening. Both future configurations share this ordinary action surface and exact task work.
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":94,"sha256":"1dcfd09e66f004f0cf3b7849dcc7ca097d4d6135809649c33d6cb1784dac88ea","size_bytes":5794,"source_id":"COUNCIL","title":"Heat emergency authority and public operating states"},{"line_count":94,"sha256":"163e45cdae8f3d164079e68b4f2a1386df81616b32290eb79e51bd2ccde99ca7","size_bytes":6017,"source_id":"CLIMATE","title":"Heat index, WBGT, and geographic trigger evidence"},{"line_count":94,"sha256":"2149dcb753ebd817f10869d394e30f61e89ac46d6d4de2ace9bde1cb7c13299d","size_bytes":5546,"source_id":"GRID","title":"Cooling power, feeder limits, and backup capacity"},{"line_count":94,"sha256":"99ff010ef7c523ff6805b118fb7678a403caf6cfb047f9a7607832a51f1e4291","size_bytes":5054,"source_id":"WATER","title":"Potable water, pressure, and hydration logistics"},{"line_count":94,"sha256":"f8db85fe7f667c38151156fa2c5c25f3601462976e555f637ccff746c13a34b4","size_bytes":5990,"source_id":"CLINIC","title":"Clinical surge, triage, and ambulance readiness"},{"line_count":94,"sha256":"dcd71253d29841bf14beafb1e65b01527aa9c8dab2d65d352537ea6faec725fb","size_bytes":5949,"source_id":"SHELTER","title":"Cooling-center capacity, accessibility, and intake"},{"line_count":94,"sha256":"ffbd14f8f91fe0401dc7bd803384dc9fd57fc83e8cf827b06ca4820586cbbd1d","size_bytes":6022,"source_id":"TRANSIT","title":"Transit access, vehicle readiness, and route continuity"},{"line_count":94,"sha256":"eb7a710e40fa9c55f274159b16d44b15b18b566dadfbc0336b1f72a087244c56","size_bytes":5697,"source_id":"COMMS","title":"Public communication, confirmation, and delivery latency"},{"line_count":94,"sha256":"15c6064b6a18aa405d9452ce80723cfe5777c21febe01c5215ebd20c10491f4f","size_bytes":5640,"source_id":"SUPPLY","title":"Fuel, water, medical stock, and resupply"},{"line_count":94,"sha256":"611fd4a34cd63674cd688ee5ee798fb459efe60415670b2ae35fb6410c32905c","size_bytes":5638,"source_id":"LABOR","title":"Staff qualification, fatigue, and mutual aid"},{"line_count":94,"sha256":"5cede2220909ef14f1d0cf59f9abcd5bbd51e64e2348b9319c6c1cf49cd40fd5","size_bytes":5897,"source_id":"LINEAGE","title":"Operating-map lineage, rollback, and evidence currency"},{"line_count":94,"sha256":"bf4c6baceb91ea862cbc726d6e599b944890bc45290c758d0c0faac451fc6581","size_bytes":5819,"source_id":"REVIEW","title":"Independent readiness review and unresolved blockers"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"e7a12171c6523e8881fddf7cdcd0cba3e99f97ff7ef1db9770f7295a596db0ba","candidate_version":"candidate-v000:e7a12171c6523e8881fddf7cdcd0cba3e99f97ff7ef1db9770f7295a596db0ba","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"213b2799a8ddafc74439b51faef4741ea3df4af52d872667ee5cc69b191ec647","EVIDENCE_INTEGRATION_LEDGER.md":"7ac5c38b902ae0eaae69904cfcc70c2302f8c7e889189666917585ea4e981550"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Trellis Evidence-to-Requirement Matrix
+
+No evidence has yet been integrated into exact task work.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Trellis Urban Heat Continuity Decision
+
+Construction has not begun.<|im_end|>
+<|im_start|>assistant
+{
+  "action": "read_batch",
+  "requests": [
+    {"end_line": 60, "source_id": "COUNCIL", "start_line": 1},
+    {"end_line": 60, "source_id": "CLIMATE", "start_line": 1}
+  ]
+}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:COUNCIL:1-60+CLIMATE:1-60","object_version":"e316c261db70916999bfbfdb56ed0316408b03aeabcce976774ede78e612dd0e","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":60,"source_id":"COUNCIL","start_line":1},{"end_line":60,"source_id":"CLIMATE","start_line":1}],"total_source_bytes":8207}
+--- exact batch segment 1 ---
+{"end_line":60,"source_id":"COUNCIL","source_path":"sources/COUNCIL_AUTHORITY.md","source_sha256":"1dcfd09e66f004f0cf3b7849dcc7ca097d4d6135809649c33d6cb1784dac88ea","source_size_bytes":5794,"start_line":1}
+--- exact source range ---
+# Heat emergency authority and public operating states
+
+## Frozen findings
+
+The emergency manager may activate cooling operations and emergency procurement. Only the health commissioner may authorize a citywide heat-health emergency, and only the continuity director may close the incident after current infrastructure, clinical, shelter, transit, staffing, and audit evidence is reconciled.
+A successful mechanical check is not health authority or closure authority. Emergency procurement does not waive water-quality, accessibility, labor, privacy, evidence-custody, or independent-review obligations.
+A handoff is valid only when the receiver acknowledges the same operating map, facility roster, current demand model, communications release, and candidate version. Version mismatch blocks closure.
+
+## Governing relationships
+
+CLIMATE supplies hazard thresholds, GRID and WATER supply infrastructure state, and REVIEW supplies independent findings; none may authorize closure.
+LINEAGE binds the current candidate while COUNCIL separates activation, limited operations, expanded operations, and closure.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUT-000 | incident-command | v3 | 1.0 | approval | superseded |
+| AUT-001 | health-office | v3 | 2.7 | approval | current |
+| AUT-002 | utility-desk | v3 | 1.5 | approval | current |
+| AUT-003 | public-liaison | v3 | 3.2 | approval | current |
+| AUT-004 | incident-command | v3 | 2.0 | approval | current |
+| AUT-005 | health-office | v3 | 3.7 | approval | current |
+| AUT-006 | utility-desk | v3 | 2.5 | approval | current |
+| AUT-007 | public-liaison | v3 | 1.3 | approval | current |
+| AUT-008 | incident-command | v3 | 3.0 | approval | current |
+| AUT-009 | health-office | v3 | 1.8 | approval | current |
+| AUT-010 | utility-desk | v3 | 3.5 | approval | current |
+| AUT-011 | public-liaison | v3 | 2.3 | approval | current |
+| AUT-012 | incident-command | v3 | 1.1 | approval | current |
+| AUT-013 | health-office | v4 | 2.8 | approval | current |
+| AUT-014 | utility-desk | v4 | 1.6 | approval | current |
+| AUT-015 | public-liaison | v4 | 3.3 | approval | current |
+| AUT-016 | incident-command | v4 | 2.1 | approval | current |
+| AUT-017 | health-office | v4 | 3.8 | approval | current |
+| AUT-018 | utility-desk | v4 | 2.6 | approval | current |
+| AUT-019 | public-liaison | v4 | 1.4 | approval | current |
+| AUT-020 | incident-command | v4 | 3.1 | approval | current |
+| AUT-021 | health-office | v4 | 1.9 | approval | current |
+| AUT-022 | utility-desk | v4 | 3.6 | approval | current |
+| AUT-023 | public-liaison | v4 | 2.4 | approval | superseded |
+| AUT-024 | incident-command | v4 | 1.2 | approval | current |
+| AUT-025 | health-office | v4 | 2.9 | approval | current |
+| AUT-026 | utility-desk | v5 | 1.7 | approval | current |
+| AUT-027 | public-liaison | v5 | 3.4 | approval | current |
+| AUT-028 | incident-command | v5 | 2.2 | approval | current |
+| AUT-029 | health-office | v5 | 1.0 | approval | current |
+| AUT-030 | utility-desk | v5 | 2.7 | approval | current |
+| AUT-031 | public-liaison | v5 | 1.5 | approval | current |
+| AUT-032 | incident-command | v5 | 3.2 | approval | current |
+| AUT-033 | health-office | v5 | 2.0 | approval | current |
+| AUT-034 | utility-desk | v5 | 3.7 | approval | current |
+| AUT-035 | public-liaison | v5 | 2.5 | approval | current |
+| AUT-036 | incident-command | v5 | 1.3 | approval | current |
+| AUT-037 | health-office | v5 | 3.0 | approval | current |
+| AUT-038 | utility-desk | v5 | 1.8 | approval | current |
+| AUT-039 | public-liaison | v6 | 3.5 | approval | current |
+| AUT-040 | incident-command | v6 | 2.3 | approval | current |
+| AUT-041 | health-office | v6 | 1.1 | approval | current |
+| AUT-042 | utility-desk | v6 | 2.8 | approval | current |
+--- exact batch segment 2 ---
+{"end_line":60,"source_id":"CLIMATE","source_path":"sources/CLIMATE_THRESHOLDS.md","source_sha256":"163e45cdae8f3d164079e68b4f2a1386df81616b32290eb79e51bd2ccde99ca7","source_size_bytes":6017,"start_line":1}
+--- exact source range ---
+# Heat index, WBGT, and geographic trigger evidence
+
+## Frozen findings
+
+The current central-core wet-bulb globe temperature is 31.4 degrees Celsius. Limited activation begins at 30.0 degrees for two consecutive thirty-minute windows; expanded activation begins at 32.0 degrees, so one 31.4-degree observation is insufficient for expansion.
+Forecast probability of exceeding the expanded threshold is 0.62, while the observed station coverage is 84 percent. Probability and measurement coverage must not be exchanged or multiplied.
+A sensor relocation, calibration, forecast model, district boundary, or candidate operating-map change makes prior hazard evidence stale for the affected scope.
+
+## Governing relationships
+
+SHELTER and TRANSIT staging consume CLIMATE district triggers; COMMS may publish only the operating state authorized by COUNCIL.
+LINEAGE records map changes and REVIEW requires current candidate-bound threshold evidence.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CLI-000 | north-district | v3 | 39.0 | degrees-C-WBGT | superseded |
+| CLI-001 | river-district | v3 | 40.7 | degrees-C-WBGT | current |
+| CLI-002 | central-core | v3 | 39.5 | degrees-C-WBGT | current |
+| CLI-003 | hillside | v3 | 41.2 | degrees-C-WBGT | current |
+| CLI-004 | north-district | v3 | 40.0 | degrees-C-WBGT | current |
+| CLI-005 | river-district | v3 | 41.7 | degrees-C-WBGT | current |
+| CLI-006 | central-core | v3 | 40.5 | degrees-C-WBGT | current |
+| CLI-007 | hillside | v3 | 39.3 | degrees-C-WBGT | current |
+| CLI-008 | north-district | v3 | 41.0 | degrees-C-WBGT | current |
+| CLI-009 | river-district | v3 | 39.8 | degrees-C-WBGT | current |
+| CLI-010 | central-core | v3 | 41.5 | degrees-C-WBGT | current |
+| CLI-011 | hillside | v3 | 40.3 | degrees-C-WBGT | current |
+| CLI-012 | north-district | v3 | 39.1 | degrees-C-WBGT | current |
+| CLI-013 | river-district | v4 | 40.8 | degrees-C-WBGT | current |
+| CLI-014 | central-core | v4 | 39.6 | degrees-C-WBGT | current |
+| CLI-015 | hillside | v4 | 41.3 | degrees-C-WBGT | current |
+| CLI-016 | north-district | v4 | 40.1 | degrees-C-WBGT | current |
+| CLI-017 | river-district | v4 | 41.8 | degrees-C-WBGT | current |
+| CLI-018 | central-core | v4 | 40.6 | degrees-C-WBGT | current |
+| CLI-019 | hillside | v4 | 39.4 | degrees-C-WBGT | current |
+| CLI-020 | north-district | v4 | 41.1 | degrees-C-WBGT | current |
+| CLI-021 | river-district | v4 | 39.9 | degrees-C-WBGT | current |
+| CLI-022 | central-core | v4 | 41.6 | degrees-C-WBGT | current |
+| CLI-023 | hillside | v4 | 40.4 | degrees-C-WBGT | superseded |
+| CLI-024 | north-district | v4 | 39.2 | degrees-C-WBGT | current |
+| CLI-025 | river-district | v4 | 40.9 | degrees-C-WBGT | current |
+| CLI-026 | central-core | v5 | 39.7 | degrees-C-WBGT | current |
+| CLI-027 | hillside | v5 | 41.4 | degrees-C-WBGT | current |
+| CLI-028 | north-district | v5 | 40.2 | degrees-C-WBGT | current |
+| CLI-029 | river-district | v5 | 39.0 | degrees-C-WBGT | current |
+| CLI-030 | central-core | v5 | 40.7 | degrees-C-WBGT | current |
+| CLI-031 | hillside | v5 | 39.5 | degrees-C-WBGT | current |
+| CLI-032 | north-district | v5 | 41.2 | degrees-C-WBGT | current |
+| CLI-033 | river-district | v5 | 40.0 | degrees-C-WBGT | current |
+| CLI-034 | central-core | v5 | 41.7 | degrees-C-WBGT | current |
+| CLI-035 | hillside | v5 | 40.5 | degrees-C-WBGT | current |
+| CLI-036 | north-district | v5 | 39.3 | degrees-C-WBGT | current |
+| CLI-037 | river-district | v5 | 41.0 | degrees-C-WBGT | current |
+| CLI-038 | central-core | v5 | 39.8 | degrees-C-WBGT | current |
+| CLI-039 | hillside | v6 | 41.5 | degrees-C-WBGT | current |
+| CLI-040 | north-district | v6 | 40.3 | degrees-C-WBGT | current |
+| CLI-041 | river-district | v6 | 39.1 | degrees-C-WBGT | current |
+| CLI-042 | central-core | v6 | 40.8 | degrees-C-WBGT | current |<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":94,"source_id":"COUNCIL","start_line":61},{"end_line":94,"source_id":"CLIMATE","start_line":61}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:COUNCIL:61-94+CLIMATE:61-94","object_version":"c551a583a72c00bd810d8d07bb9a3b242a56b01eb150575dd1b9a09aa67315b1","result_id":"RESULT-002","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":94,"source_id":"COUNCIL","start_line":61},{"end_line":94,"source_id":"CLIMATE","start_line":61}],"total_source_bytes":4536}
+--- exact batch segment 1 ---
+{"end_line":94,"source_id":"COUNCIL","source_path":"sources/COUNCIL_AUTHORITY.md","source_sha256":"1dcfd09e66f004f0cf3b7849dcc7ca097d4d6135809649c33d6cb1784dac88ea","source_size_bytes":5794,"start_line":61}
+--- exact source range ---
+| AUT-043 | public-liaison | v6 | 1.6 | approval | current |
+| AUT-044 | incident-command | v6 | 3.3 | approval | current |
+| AUT-045 | health-office | v6 | 2.1 | approval | current |
+| AUT-046 | utility-desk | v6 | 3.8 | approval | superseded |
+| AUT-047 | public-liaison | v6 | 2.6 | approval | current |
+| AUT-048 | incident-command | v6 | 1.4 | approval | current |
+| AUT-049 | health-office | v6 | 3.1 | approval | current |
+| AUT-050 | utility-desk | v6 | 1.9 | approval | current |
+| AUT-051 | public-liaison | v6 | 3.6 | approval | current |
+| AUT-052 | incident-command | v7 | 2.4 | approval | current |
+| AUT-053 | health-office | v7 | 1.2 | approval | current |
+| AUT-054 | utility-desk | v7 | 2.9 | approval | current |
+| AUT-055 | public-liaison | v7 | 1.7 | approval | current |
+| AUT-056 | incident-command | v7 | 3.4 | approval | current |
+| AUT-057 | health-office | v7 | 2.2 | approval | current |
+| AUT-058 | utility-desk | v7 | 1.0 | approval | current |
+| AUT-059 | public-liaison | v7 | 2.7 | approval | current |
+| AUT-060 | incident-command | v7 | 1.5 | approval | current |
+| AUT-061 | health-office | v7 | 3.2 | approval | current |
+| AUT-062 | utility-desk | v7 | 2.0 | approval | current |
+| AUT-063 | public-liaison | v7 | 3.7 | approval | current |
+| AUT-064 | incident-command | v7 | 2.5 | approval | current |
+| AUT-065 | health-office | v8 | 1.3 | approval | current |
+| AUT-066 | utility-desk | v8 | 3.0 | approval | current |
+| AUT-067 | public-liaison | v8 | 1.8 | approval | current |
+| AUT-068 | incident-command | v8 | 3.5 | approval | current |
+| AUT-069 | health-office | v8 | 2.3 | approval | superseded |
+| AUT-070 | utility-desk | v8 | 1.1 | approval | current |
+| AUT-071 | public-liaison | v8 | 2.8 | approval | current |
+
+## Decision constraints
+
+Name who activates, operates, independently verifies, communicates, and closes.
+Treat semantic records and artifact mutations as non-authoritative work products.
+--- exact batch segment 2 ---
+{"end_line":94,"source_id":"CLIMATE","source_path":"sources/CLIMATE_THRESHOLDS.md","source_sha256":"163e45cdae8f3d164079e68b4f2a1386df81616b32290eb79e51bd2ccde99ca7","source_size_bytes":6017,"start_line":61}
+--- exact source range ---
+| CLI-043 | hillside | v6 | 39.6 | degrees-C-WBGT | current |
+| CLI-044 | north-district | v6 | 41.3 | degrees-C-WBGT | current |
+| CLI-045 | river-district | v6 | 40.1 | degrees-C-WBGT | current |
+| CLI-046 | central-core | v6 | 41.8 | degrees-C-WBGT | superseded |
+| CLI-047 | hillside | v6 | 40.6 | degrees-C-WBGT | current |
+| CLI-048 | north-district | v6 | 39.4 | degrees-C-WBGT | current |
+| CLI-049 | river-district | v6 | 41.1 | degrees-C-WBGT | current |
+| CLI-050 | central-core | v6 | 39.9 | degrees-C-WBGT | current |
+| CLI-051 | hillside | v6 | 41.6 | degrees-C-WBGT | current |
+| CLI-052 | north-district | v7 | 40.4 | degrees-C-WBGT | current |
+| CLI-053 | river-district | v7 | 39.2 | degrees-C-WBGT | current |
+| CLI-054 | central-core | v7 | 40.9 | degrees-C-WBGT | current |
+| CLI-055 | hillside | v7 | 39.7 | degrees-C-WBGT | current |
+| CLI-056 | north-district | v7 | 41.4 | degrees-C-WBGT | current |
+| CLI-057 | river-district | v7 | 40.2 | degrees-C-WBGT | current |
+| CLI-058 | central-core | v7 | 39.0 | degrees-C-WBGT | current |
+| CLI-059 | hillside | v7 | 40.7 | degrees-C-WBGT | current |
+| CLI-060 | north-district | v7 | 39.5 | degrees-C-WBGT | current |
+| CLI-061 | river-district | v7 | 41.2 | degrees-C-WBGT | current |
+| CLI-062 | central-core | v7 | 40.0 | degrees-C-WBGT | current |
+| CLI-063 | hillside | v7 | 41.7 | degrees-C-WBGT | current |
+| CLI-064 | north-district | v7 | 40.5 | degrees-C-WBGT | current |
+| CLI-065 | river-district | v8 | 39.3 | degrees-C-WBGT | current |
+| CLI-066 | central-core | v8 | 41.0 | degrees-C-WBGT | current |
+| CLI-067 | hillside | v8 | 39.8 | degrees-C-WBGT | current |
+| CLI-068 | north-district | v8 | 41.5 | degrees-C-WBGT | current |
+| CLI-069 | river-district | v8 | 40.3 | degrees-C-WBGT | superseded |
+| CLI-070 | central-core | v8 | 39.1 | degrees-C-WBGT | current |
+| CLI-071 | hillside | v8 | 40.8 | degrees-C-WBGT | current |
+
+## Decision constraints
+
+Preserve observed versus activation values, windows, probability, coverage, and currentness.
+Define falsifiers, district rollback, and evidence that retires a heat stage.<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":60,"source_id":"GRID","start_line":1},{"end_line":60,"source_id":"WATER","start_line":1}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:GRID:1-60+WATER:1-60","object_version":"d1ecb3814186f1a6327e7fa1b8a7befd76b1617b06163bb6a426511c6e355be8","result_id":"RESULT-003","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":60,"source_id":"GRID","start_line":1},{"end_line":60,"source_id":"WATER","start_line":1}],"total_source_bytes":7344}
+--- exact batch segment 1 ---
+{"end_line":60,"source_id":"GRID","source_path":"sources/GRID_COOLING_POWER.md","source_sha256":"2149dcb753ebd817f10869d394e30f61e89ac46d6d4de2ace9bde1cb7c13299d","source_size_bytes":5546,"start_line":1}
+--- exact source range ---
+# Cooling power, feeder limits, and backup capacity
+
+## Frozen findings
+
+Installed cooling-service capacity is 31.0 megawatts, while current usable capacity after feeder derating is 24.5 megawatts. Installed and usable capacity must not be added or swapped.
+Feeder voltage is 12.6 kilovolts and must remain between 12.2 and 12.9 kilovolts at every critical node for three consecutive fifteen-minute windows. A system average cannot replace every-node compliance.
+Backup generation supplies 8.4 megawatts for sixteen hours at emergency cooling load, but only nine hours at full public load. The load regimes and durations remain distinct.
+
+## Governing relationships
+
+SHELTER occupancy and CLINIC surge demand depend on GRID; SUPPLY controls fuel duration and WATER depends on powered pumps.
+A feeder, transformer, relay, fuel stock, or facility-load change makes earlier power evidence stale.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| GRD-000 | feeder-east | v3 | 28.0 | megawatts | superseded |
+| GRD-001 | feeder-west | v3 | 29.7 | megawatts | current |
+| GRD-002 | library-hub | v3 | 28.5 | megawatts | current |
+| GRD-003 | backup-plant | v3 | 30.2 | megawatts | current |
+| GRD-004 | feeder-east | v3 | 29.0 | megawatts | current |
+| GRD-005 | feeder-west | v3 | 30.7 | megawatts | current |
+| GRD-006 | library-hub | v3 | 29.5 | megawatts | current |
+| GRD-007 | backup-plant | v3 | 28.3 | megawatts | current |
+| GRD-008 | feeder-east | v3 | 30.0 | megawatts | current |
+| GRD-009 | feeder-west | v3 | 28.8 | megawatts | current |
+| GRD-010 | library-hub | v3 | 30.5 | megawatts | current |
+| GRD-011 | backup-plant | v3 | 29.3 | megawatts | current |
+| GRD-012 | feeder-east | v3 | 28.1 | megawatts | current |
+| GRD-013 | feeder-west | v4 | 29.8 | megawatts | current |
+| GRD-014 | library-hub | v4 | 28.6 | megawatts | current |
+| GRD-015 | backup-plant | v4 | 30.3 | megawatts | current |
+| GRD-016 | feeder-east | v4 | 29.1 | megawatts | current |
+| GRD-017 | feeder-west | v4 | 30.8 | megawatts | current |
+| GRD-018 | library-hub | v4 | 29.6 | megawatts | current |
+| GRD-019 | backup-plant | v4 | 28.4 | megawatts | current |
+| GRD-020 | feeder-east | v4 | 30.1 | megawatts | current |
+| GRD-021 | feeder-west | v4 | 28.9 | megawatts | current |
+| GRD-022 | library-hub | v4 | 30.6 | megawatts | current |
+| GRD-023 | backup-plant | v4 | 29.4 | megawatts | superseded |
+| GRD-024 | feeder-east | v4 | 28.2 | megawatts | current |
+| GRD-025 | feeder-west | v4 | 29.9 | megawatts | current |
+| GRD-026 | library-hub | v5 | 28.7 | megawatts | current |
+| GRD-027 | backup-plant | v5 | 30.4 | megawatts | current |
+| GRD-028 | feeder-east | v5 | 29.2 | megawatts | current |
+| GRD-029 | feeder-west | v5 | 28.0 | megawatts | current |
+| GRD-030 | library-hub | v5 | 29.7 | megawatts | current |
+| GRD-031 | backup-plant | v5 | 28.5 | megawatts | current |
+| GRD-032 | feeder-east | v5 | 30.2 | megawatts | current |
+| GRD-033 | feeder-west | v5 | 29.0 | megawatts | current |
+| GRD-034 | library-hub | v5 | 30.7 | megawatts | current |
+| GRD-035 | backup-plant | v5 | 29.5 | megawatts | current |
+| GRD-036 | feeder-east | v5 | 28.3 | megawatts | current |
+| GRD-037 | feeder-west | v5 | 30.0 | megawatts | current |
+| GRD-038 | library-hub | v5 | 28.8 | megawatts | current |
+| GRD-039 | backup-plant | v6 | 30.5 | megawatts | current |
+| GRD-040 | feeder-east | v6 | 29.3 | megawatts | current |
+| GRD-041 | feeder-west | v6 | 28.1 | megawatts | current |
+| GRD-042 | library-hub | v6 | 29.8 | megawatts | current |
+--- exact batch segment 2 ---
+{"end_line":60,"source_id":"WATER","source_path":"sources/WATER_HYDRATION.md","source_sha256":"99ff010ef7c523ff6805b118fb7678a403caf6cfb047f9a7607832a51f1e4291","source_size_bytes":5054,"start_line":1}
+--- exact source range ---
+# Potable water, pressure, and hydration logistics
+
+## Frozen findings
+
+Current minimum pressure is 38 psi. Public cooling sites require at least 35 psi at every served node for three consecutive ten-minute windows; one network average is insufficient.
+Potable reserve is 1.6 million liters, while forecast consumption is 0.19 million liters per hour at expanded operations. Reserve and hourly flow use different units and must not be added.
+A main repair, pump change, tank refill, disinfection event, sampling method, or candidate facility-roster change makes earlier water evidence stale.
+
+## Governing relationships
+
+GRID powers pumps, SHELTER and CLINIC consume potable reserve, and SUPPLY controls tanker replenishment.
+REVIEW requires current pressure and quality evidence before closure; COUNCIL retains operating authority.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| WTR-000 | north-loop | v3 | 38.0 | psi | superseded |
+| WTR-001 | central-loop | v3 | 39.7 | psi | current |
+| WTR-002 | clinic-tank | v3 | 38.5 | psi | current |
+| WTR-003 | mobile-cache | v3 | 40.2 | psi | current |
+| WTR-004 | north-loop | v3 | 39.0 | psi | current |
+| WTR-005 | central-loop | v3 | 40.7 | psi | current |
+| WTR-006 | clinic-tank | v3 | 39.5 | psi | current |
+| WTR-007 | mobile-cache | v3 | 38.3 | psi | current |
+| WTR-008 | north-loop | v3 | 40.0 | psi | current |
+| WTR-009 | central-loop | v3 | 38.8 | psi | current |
+| WTR-010 | clinic-tank | v3 | 40.5 | psi | current |
+| WTR-011 | mobile-cache | v3 | 39.3 | psi | current |
+| WTR-012 | north-loop | v3 | 38.1 | psi | current |
+| WTR-013 | central-loop | v4 | 39.8 | psi | current |
+| WTR-014 | clinic-tank | v4 | 38.6 | psi | current |
+| WTR-015 | mobile-cache | v4 | 40.3 | psi | current |
+| WTR-016 | north-loop | v4 | 39.1 | psi | current |
+| WTR-017 | central-loop | v4 | 40.8 | psi | current |
+| WTR-018 | clinic-tank | v4 | 39.6 | psi | current |
+| WTR-019 | mobile-cache | v4 | 38.4 | psi | current |
+| WTR-020 | north-loop | v4 | 40.1 | psi | current |
+| WTR-021 | central-loop | v4 | 38.9 | psi | current |
+| WTR-022 | clinic-tank | v4 | 40.6 | psi | current |
+| WTR-023 | mobile-cache | v4 | 39.4 | psi | superseded |
+| WTR-024 | north-loop | v4 | 38.2 | psi | current |
+| WTR-025 | central-loop | v4 | 39.9 | psi | current |
+| WTR-026 | clinic-tank | v5 | 38.7 | psi | current |
+| WTR-027 | mobile-cache | v5 | 40.4 | psi | current |
+| WTR-028 | north-loop | v5 | 39.2 | psi | current |
+| WTR-029 | central-loop | v5 | 38.0 | psi | current |
+| WTR-030 | clinic-tank | v5 | 39.7 | psi | current |
+| WTR-031 | mobile-cache | v5 | 38.5 | psi | current |
+| WTR-032 | north-loop | v5 | 40.2 | psi | current |
+| WTR-033 | central-loop | v5 | 39.0 | psi | current |
+| WTR-034 | clinic-tank | v5 | 40.7 | psi | current |
+| WTR-035 | mobile-cache | v5 | 39.5 | psi | current |
+| WTR-036 | north-loop | v5 | 38.3 | psi | current |
+| WTR-037 | central-loop | v5 | 40.0 | psi | current |
+| WTR-038 | clinic-tank | v5 | 38.8 | psi | current |
+| WTR-039 | mobile-cache | v6 | 40.5 | psi | current |
+| WTR-040 | north-loop | v6 | 39.3 | psi | current |
+| WTR-041 | central-loop | v6 | 38.1 | psi | current |
+| WTR-042 | clinic-tank | v6 | 39.8 | psi | current |<|im_end|>
+<|im_start|>assistant
+{"action":"read_batch","requests":[{"end_line":94,"source_id":"GRID","start_line":61},{"end_line":94,"source_id":"WATER","start_line":61}]}<|im_end|>
+<|im_start|>user
+{"object_id":"batch:GRID:61-94+WATER:61-94","object_version":"0a512ceebbf0032537742c137a1c3263e34aa76632bf48eec856083287b0b871","result_id":"RESULT-004","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"schema":"architecture-batch-observation-v0","segments":[{"end_line":94,"source_id":"GRID","start_line":61},{"end_line":94,"source_id":"WATER","start_line":61}],"total_source_bytes":4174}
+--- exact batch segment 1 ---
+{"end_line":94,"source_id":"GRID","source_path":"sources/GRID_COOLING_POWER.md","source_sha256":"2149dcb753ebd817f10869d394e30f61e89ac46d6d4de2ace9bde1cb7c13299d","source_size_bytes":5546,"start_line":61}
+--- exact source range ---
+| GRD-043 | backup-plant | v6 | 28.6 | megawatts | current |
+| GRD-044 | feeder-east | v6 | 30.3 | megawatts | current |
+| GRD-045 | feeder-west | v6 | 29.1 | megawatts | current |
+| GRD-046 | library-hub | v6 | 30.8 | megawatts | superseded |
+| GRD-047 | backup-plant | v6 | 29.6 | megawatts | current |
+| GRD-048 | feeder-east | v6 | 28.4 | megawatts | current |
+| GRD-049 | feeder-west | v6 | 30.1 | megawatts | current |
+| GRD-050 | library-hub | v6 | 28.9 | megawatts | current |
+| GRD-051 | backup-plant | v6 | 30.6 | megawatts | current |
+| GRD-052 | feeder-east | v7 | 29.4 | megawatts | current |
+| GRD-053 | feeder-west | v7 | 28.2 | megawatts | current |
+| GRD-054 | library-hub | v7 | 29.9 | megawatts | current |
+| GRD-055 | backup-plant | v7 | 28.7 | megawatts | current |
+| GRD-056 | feeder-east | v7 | 30.4 | megawatts | current |
+| GRD-057 | feeder-west | v7 | 29.2 | megawatts | current |
+| GRD-058 | library-hub | v7 | 28.0 | megawatts | current |
+| GRD-059 | backup-plant | v7 | 29.7 | megawatts | current |
+| GRD-060 | feeder-east | v7 | 28.5 | megawatts | current |
+| GRD-061 | feeder-west | v7 | 30.2 | megawatts | current |
+| GRD-062 | library-hub | v7 | 29.0 | megawatts | current |
+| GRD-063 | backup-plant | v7 | 30.7 | megawatts | current |
+| GRD-064 | feeder-east | v7 | 29.5 | megawatts | current |
+| GRD-065 | feeder-west | v8 | 28.3 | megawatts | current |
+| GRD-066 | library-hub | v8 | 30.0 | megawatts | current |
+| GRD-067 | backup-plant | v8 | 28.8 | megawatts | current |
+| GRD-068 | feeder-east | v8 | 30.5 | megawatts | current |
+| GRD-069 | feeder-west | v8 | 29.3 | megawatts | superseded |
+| GRD-070 | library-hub | v8 | 28.1 | megawatts | current |
+| GRD-071 | backup-plant | v8 | 29.8 | megawatts | current |
+
+## Decision constraints
+
+Preserve installed versus usable MW, every-node voltage, windows, load regime, and duration.
+Define staged load, rollback, replenishment, and current verification.
+--- exact batch segment 2 ---
+{"end_line":94,"source_id":"WATER","source_path":"sources/WATER_HYDRATION.md","source_sha256":"99ff010ef7c523ff6805b118fb7678a403caf6cfb047f9a7607832a51f1e4291","source_size_bytes":5054,"start_line":61}
+--- exact source range ---
+| WTR-043 | mobile-cache | v6 | 38.6 | psi | current |
+| WTR-044 | north-loop | v6 | 40.3 | psi | current |
+| WTR-045 | central-loop | v6 | 39.1 | psi | current |
+| WTR-046 | clinic-tank | v6 | 40.8 | psi | superseded |
+| WTR-047 | mobile-cache | v6 | 39.6 | psi | current |
+| WTR-048 | north-loop | v6 | 38.4 | psi | current |
+| WTR-049 | central-loop | v6 | 40.1 | psi | current |
+| WTR-050 | clinic-tank | v6 | 38.9 | psi | current |
+| WTR-051 | mobile-cache | v6 | 40.6 | psi | current |
+| WTR-052 | north-loop | v7 | 39.4 | psi | current |
+| WTR-053 | central-loop | v7 | 38.2 | psi | current |
+| WTR-054 | clinic-tank | v7 | 39.9 | psi | current |
+| WTR-055 | mobile-cache | v7 | 38.7 | psi | current |
+| WTR-056 | north-loop | v7 | 40.4 | psi | current |
+| WTR-057 | central-loop | v7 | 39.2 | psi | current |
+| WTR-058 | clinic-tank | v7 | 38.0 | psi | current |
+| WTR-059 | mobile-cache | v7 | 39.7 | psi | current |
+| WTR-060 | north-loop | v7 | 38.5 | psi | current |
+| WTR-061 | central-loop | v7 | 40.2 | psi | current |
+| WTR-062 | clinic-tank | v7 | 39.0 | psi | current |
+| WTR-063 | mobile-cache | v7 | 40.7 | psi | current |
+| WTR-064 | north-loop | v7 | 39.5 | psi | current |
+| WTR-065 | central-loop | v8 | 38.3 | psi | current |
+| WTR-066 | clinic-tank | v8 | 40.0 | psi | current |
+| WTR-067 | mobile-cache | v8 | 38.8 | psi | current |
+| WTR-068 | north-loop | v8 | 40.5 | psi | current |
+| WTR-069 | central-loop | v8 | 39.3 | psi | superseded |
+| WTR-070 | clinic-tank | v8 | 38.1 | psi | current |
+| WTR-071 | mobile-cache | v8 | 39.8 | psi | current |
+
+## Decision constraints
+
+Preserve psi, every-node rule, window count, reserve versus flow, and currentness.
+Name conservation stages, alternate supply, quality holds, and release evidence.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

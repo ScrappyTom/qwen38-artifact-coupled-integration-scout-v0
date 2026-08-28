@@ -1,5 +1,13 @@
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from reactive_runtime.configuration import artifact_centered_actor_actions
 from reactive_runtime.keystone_world import KeystoneWorld
 from tools import run_solace_pressure_screen as runner

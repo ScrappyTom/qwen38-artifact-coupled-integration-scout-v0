@@ -1,0 +1,7 @@
+{
+  "action": "read_batch",
+  "requests": [
+    {"end_line": 60, "source_id": "COUNCIL", "start_line": 1},
+    {"end_line": 60, "source_id": "CLIMATE", "start_line": 1}
+  ]
+}

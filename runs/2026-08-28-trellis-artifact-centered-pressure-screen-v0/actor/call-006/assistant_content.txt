@@ -1,0 +1,7 @@
+{
+  "action": "read_batch",
+  "requests": [
+    {"end_line": 94, "source_id": "CLINIC", "start_line": 61},
+    {"end_line": 94, "source_id": "SHELTER", "start_line": 61}
+  ]
+}
