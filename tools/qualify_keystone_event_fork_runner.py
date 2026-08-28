@@ -46,7 +46,10 @@ OUTPUT = ROOT / "KEYSTONE_EVENT_FORK_RUNNER_QUALIFICATION.json"
 
 def qualify(*, write_output: bool = True) -> dict[str, Any]:
     failures: list[str] = []
-    contract = verify_frozen_inputs()
+    # The qualification is what creates the runner-binding receipt. Validate
+    # every frozen parent/contract input, but defer checking this output's own
+    # hash until the live runner starts.
+    contract = verify_frozen_inputs(verify_runner_binding=False)
     preflight_result = preflight(write_outputs=False)
     if preflight_result.get("passed") is not True:
         failures.append("parent_preflight")

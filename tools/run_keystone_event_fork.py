@@ -144,13 +144,30 @@ def validate_authorization(path: Path) -> dict[str, Any]:
     return receipt
 
 
-def verify_frozen_inputs() -> dict[str, Any]:
+def verify_frozen_inputs(*, verify_runner_binding: bool = True) -> dict[str, Any]:
     contract = load(CONTRACT)
     preflight = load(PREFLIGHT)
     if preflight.get("passed") is not True:
         raise RuntimeError("frozen provider-free preflight did not pass")
     if preflight.get("contract_sha256") != sha256_file(CONTRACT):
         raise RuntimeError("frozen preflight does not bind the current contract")
+    if verify_runner_binding:
+        runner = contract.get("runner")
+        if not isinstance(runner, dict):
+            raise RuntimeError("frozen contract lacks runner binding")
+        runner_path = ROOT / str(runner.get("path"))
+        qualification_path = ROOT / str(runner.get("qualification_path"))
+        if runner.get("runner_sha256") != sha256_file(runner_path):
+            raise RuntimeError("frozen contract does not bind the live runner")
+        if runner.get("qualification_sha256") != sha256_file(qualification_path):
+            raise RuntimeError("frozen contract does not bind runner qualification")
+        qualification = load(qualification_path)
+        if qualification.get("passed") is not True:
+            raise RuntimeError("frozen runner qualification did not pass")
+        if qualification.get("runner_source_bound") is not True:
+            raise RuntimeError("runner qualification did not bind its source")
+        if qualification.get("runner_sha256") != runner.get("runner_sha256"):
+            raise RuntimeError("runner qualification binds a different runner")
     parent = contract["parent"]
     locks = contract["source_locks"]
     expected = {

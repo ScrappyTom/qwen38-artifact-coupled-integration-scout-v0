@@ -27,6 +27,7 @@ from tools.keystone_stage0 import (
 )
 from tools.preflight_keystone_event_fork import preflight
 from tools.run_keystone_event_fork import trace_metrics
+from tools.run_keystone_event_fork import verify_frozen_inputs
 from tools.qualify_keystone_event_fork_runner import qualify
 
 
@@ -124,6 +125,9 @@ def test_integrated_runner_qualifies_provider_free_without_gpu_authority() -> No
     assert result["bound_repair_live_schema_closed"] is True
     assert len(result["runner_sha256"]) == 64
     assert result["runner_source_bound"] is True
+    assert verify_frozen_inputs()["runner"]["runner_sha256"] == result[
+        "runner_sha256"
+    ]
 
 
 def test_routing_documents_keep_product_and_research_separate() -> None:
