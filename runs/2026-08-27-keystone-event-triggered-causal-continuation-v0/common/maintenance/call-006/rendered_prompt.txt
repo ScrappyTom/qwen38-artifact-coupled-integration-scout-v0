@@ -1,0 +1,165 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+CREW: b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Keystone Regional Rail Restoration Task
+
+Produce two exact, source-grounded work products for the synthetic Keystone
+regional rail network:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning exactly with
+   `# Keystone Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning exactly with
+   `# Keystone Regional Rail Restoration Decision` and containing exactly
+   these ordered level-two headings:
+
+   1. `Authority, scope, and operating states`
+   2. `Track, route, and environmental restrictions`
+   3. `Signals, cyber controls, and telemetry`
+   4. `Traction power, fuel, and staged load`
+   5. `Rolling stock, crews, and movement readiness`
+   6. `Freight, passengers, accessibility, and communication`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. Reconcile authority,
+track geometry, signal proving, traction power, rolling stock, staffing,
+weather, fuel and spares, cyber controls, monitoring, freight restrictions,
+passenger continuity, candidate lineage, and independent readiness.
+
+Bind every action and gate to owners, prerequisites, observations, the current
+candidate, falsifiers, rollback, and evidence that retires temporary controls.
+Preserve observations versus gates, warning versus stop thresholds, installed
+versus usable capacity, percent versus probability, hours versus days,
+source-local authority, and current versus stale evidence.
+
+Checks are candidate-bound mechanical feedback. They do not independently
+authorize engineering movement, passenger service, or closure.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-006 ---
+{"object_id":"source:CREW:1-86","object_version":"b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98","result_id":"RESULT-006","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"CREW","source_path":"sources/CREW_QUALIFICATION.md","source_sha256":"b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98","source_size_bytes":5271,"start_line":1}
+--- exact source range ---
+# Crew qualification, fatigue, and staffing
+
+## Frozen findings
+
+Current qualified coverage is twelve engineers and ten conductors. The first passenger stage requires ten engineers, ten conductors, two signal technicians, and two traction-power technicians on duty simultaneously.
+No operating crew member may exceed twelve hours on duty and each must receive at least ten consecutive hours off before the next covered shift. Twelve on duty and ten off serve different rules.
+Mutual aid supplies four engineers at 06:15 UTC with arrival uncertainty of plus or minus fifty minutes; announced availability is not confirmed on-duty coverage.
+
+## Governing relationships
+
+ROLLING service requires qualified engineers and conductors; SIGNAL and POWER restrictions require their specialist technicians.
+COMMS distributes assignments, while MANDATE retains operating authority and REVIEW checks current rosters.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CRW-000 | engineers | v4 | 9.0 | hours-on-duty | superseded |
+| CRW-001 | conductors | v4 | 10.9 | hours-on-duty | current |
+| CRW-002 | signal-techs | v4 | 9.7 | hours-on-duty | current |
+| CRW-003 | power-techs | v4 | 11.6 | hours-on-duty | current |
+| CRW-004 | engineers | v4 | 10.4 | hours-on-duty | current |
+| CRW-005 | conductors | v4 | 9.2 | hours-on-duty | current |
+| CRW-006 | signal-techs | v4 | 11.1 | hours-on-duty | current |
+| CRW-007 | power-techs | v4 | 9.9 | hours-on-duty | current |
+| CRW-008 | engineers | v4 | 11.8 | hours-on-duty | current |
+| CRW-009 | conductors | v4 | 10.6 | hours-on-duty | current |
+| CRW-010 | signal-techs | v4 | 9.4 | hours-on-duty | current |
+| CRW-011 | power-techs | v5 | 11.3 | hours-on-duty | current |
+| CRW-012 | engineers | v5 | 10.1 | hours-on-duty | current |
+| CRW-013 | conductors | v5 | 12.0 | hours-on-duty | current |
+| CRW-014 | signal-techs | v5 | 10.8 | hours-on-duty | current |
+| CRW-015 | power-techs | v5 | 9.6 | hours-on-duty | current |
+| CRW-016 | engineers | v5 | 11.5 | hours-on-duty | current |
+| CRW-017 | conductors | v5 | 10.3 | hours-on-duty | current |
+| CRW-018 | signal-techs | v5 | 9.1 | hours-on-duty | current |
+| CRW-019 | power-techs | v5 | 11.0 | hours-on-duty | superseded |
+| CRW-020 | engineers | v5 | 9.8 | hours-on-duty | current |
+| CRW-021 | conductors | v5 | 11.7 | hours-on-duty | current |
+| CRW-022 | signal-techs | v6 | 10.5 | hours-on-duty | current |
+| CRW-023 | power-techs | v6 | 9.3 | hours-on-duty | current |
+| CRW-024 | engineers | v6 | 11.2 | hours-on-duty | current |
+| CRW-025 | conductors | v6 | 10.0 | hours-on-duty | current |
+| CRW-026 | signal-techs | v6 | 11.9 | hours-on-duty | current |
+| CRW-027 | power-techs | v6 | 10.7 | hours-on-duty | current |
+| CRW-028 | engineers | v6 | 9.5 | hours-on-duty | current |
+| CRW-029 | conductors | v6 | 11.4 | hours-on-duty | current |
+| CRW-030 | signal-techs | v6 | 10.2 | hours-on-duty | current |
+| CRW-031 | power-techs | v6 | 9.0 | hours-on-duty | current |
+| CRW-032 | engineers | v6 | 10.9 | hours-on-duty | current |
+| CRW-033 | conductors | v7 | 9.7 | hours-on-duty | current |
+| CRW-034 | signal-techs | v7 | 11.6 | hours-on-duty | current |
+| CRW-035 | power-techs | v7 | 10.4 | hours-on-duty | current |
+| CRW-036 | engineers | v7 | 9.2 | hours-on-duty | current |
+| CRW-037 | conductors | v7 | 11.1 | hours-on-duty | current |
+| CRW-038 | signal-techs | v7 | 9.9 | hours-on-duty | superseded |
+| CRW-039 | power-techs | v7 | 11.8 | hours-on-duty | current |
+| CRW-040 | engineers | v7 | 10.6 | hours-on-duty | current |
+| CRW-041 | conductors | v7 | 9.4 | hours-on-duty | current |
+| CRW-042 | signal-techs | v7 | 11.3 | hours-on-duty | current |
+| CRW-043 | power-techs | v7 | 10.1 | hours-on-duty | current |
+| CRW-044 | engineers | v8 | 12.0 | hours-on-duty | current |
+| CRW-045 | conductors | v8 | 10.8 | hours-on-duty | current |
+| CRW-046 | signal-techs | v8 | 9.6 | hours-on-duty | current |
+| CRW-047 | power-techs | v8 | 11.5 | hours-on-duty | current |
+| CRW-048 | engineers | v8 | 10.3 | hours-on-duty | current |
+| CRW-049 | conductors | v8 | 9.1 | hours-on-duty | current |
+| CRW-050 | signal-techs | v8 | 11.0 | hours-on-duty | current |
+| CRW-051 | power-techs | v8 | 9.8 | hours-on-duty | current |
+| CRW-052 | engineers | v8 | 11.7 | hours-on-duty | current |
+| CRW-053 | conductors | v8 | 10.5 | hours-on-duty | current |
+| CRW-054 | signal-techs | v8 | 9.3 | hours-on-duty | current |
+| CRW-055 | power-techs | v9 | 11.2 | hours-on-duty | current |
+| CRW-056 | engineers | v9 | 10.0 | hours-on-duty | current |
+| CRW-057 | conductors | v9 | 11.9 | hours-on-duty | superseded |
+| CRW-058 | signal-techs | v9 | 10.7 | hours-on-duty | current |
+| CRW-059 | power-techs | v9 | 9.5 | hours-on-duty | current |
+| CRW-060 | engineers | v9 | 11.4 | hours-on-duty | current |
+| CRW-061 | conductors | v9 | 10.2 | hours-on-duty | current |
+| CRW-062 | signal-techs | v9 | 9.0 | hours-on-duty | current |
+| CRW-063 | power-techs | v9 | 10.9 | hours-on-duty | current |
+
+## Decision constraints
+
+Preserve roles, simultaneous counts, on/off-duty hours, start time, and uncertainty.
+State alternates, fatigue stop rules, and evidence that retires mutual-aid dependence.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

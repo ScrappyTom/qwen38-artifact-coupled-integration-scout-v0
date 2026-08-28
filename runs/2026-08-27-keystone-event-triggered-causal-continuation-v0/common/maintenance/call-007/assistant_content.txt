@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM WTH-001-RAIN
+SLOT_SOURCE: WEATHER
+SOURCE_VERSION: f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: 15.9
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The current rainfall observation at river-bridge is 15.9 millimeters-hour.
+
+## CLAIM WTH-003-RAIN
+SLOT_SOURCE: WEATHER
+SOURCE_VERSION: f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: 16.6
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The current rainfall observation at north-main is 16.6 millimeters-hour.
+
+## CLAIM WTH-008-RAIN
+SLOT_SOURCE: WEATHER
+SOURCE_VERSION: f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: 16.8
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The current rainfall observation at ridge-cut is 16.8 millimeters-hour.
+
+## CLAIM WTH-013-RAIN
+SLOT_SOURCE: WEATHER
+SOURCE_VERSION: f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9
+EVIDENCE_RESULT: RESULT-007
+EVIDENCE_ANCHOR: 17.0
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The current rainfall observation at river-bridge is 17.0 millimeters-hour.

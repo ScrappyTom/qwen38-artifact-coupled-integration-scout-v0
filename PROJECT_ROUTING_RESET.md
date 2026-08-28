@@ -2,7 +2,8 @@
 
 Date: 2026-08-27
 
-Status: active routing rule; no GPU operation authorized by this document
+Status: active routing rule; Keystone continuation closed; no GPU operation
+authorized by this document
 
 ## Two separate lanes
 
@@ -78,6 +79,18 @@ If the exact trigger never occurs, Keystone closes as non-diagnostic. If V1
 does not improve alternative repair, effect uptake, current recheck, readiness,
 or truthful closure, the bounded-causal route closes rather than creating
 another task world or activation screen.
+
+## Keystone closure
+
+The one authorized continuation completed from the exact E79 prefix. The common
+system acquired all 14 source objects but never constructed a nontrivial
+candidate or entered verification. The causal trigger did not occur, no V0/V1
+branch was created, and Keystone is closed as non-diagnostic.
+
+The corrected whole activation tax is 27 model calls and 300,754 serialized
+tokens for zero treatment-dependent decisions. See
+`KEYSTONE_EVENT_FORK_RESULT.md` and `KEYSTONE_EVENT_FORK_AUDIT.json`. No same-world
+rerun, replacement eligibility screen, or successor controller is authorized.
 
 ## Experimental-economy rule
 

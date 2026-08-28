@@ -1,0 +1,758 @@
+<|im_start|>system
+You are the ordinary actor in a bounded regional-rail restoration system.
+
+Use exact task actions to inspect evidence, build exact task artifacts, check
+the current candidate, repair real blockers, and propose submission only after
+the changed candidate has a current passing check. Exact sources, effects,
+checks, rejected actions, and history remain externally custodied.
+
+Any semantic scaffold is lossy, incomplete, non-authoritative, and
+source-bound. Use it as provisional construction support, never as movement,
+passenger-service, or closure authority. Preserve exact values, units,
+versions, qualifications, modalities, and authority boundaries. Candidate
+mutation makes prior checks stale.
+
+Return exactly one declared JSON action and no prose.<|im_end|>
+<|im_start|>user
+# Keystone Regional Rail Restoration Task
+
+Produce two exact, source-grounded work products for the synthetic Keystone
+regional rail network:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning exactly with
+   `# Keystone Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning exactly with
+   `# Keystone Regional Rail Restoration Decision` and containing exactly
+   these ordered level-two headings:
+
+   1. `Authority, scope, and operating states`
+   2. `Track, route, and environmental restrictions`
+   3. `Signals, cyber controls, and telemetry`
+   4. `Traction power, fuel, and staged load`
+   5. `Rolling stock, crews, and movement readiness`
+   6. `Freight, passengers, accessibility, and communication`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. Reconcile authority,
+track geometry, signal proving, traction power, rolling stock, staffing,
+weather, fuel and spares, cyber controls, monitoring, freight restrictions,
+passenger continuity, candidate lineage, and independent readiness.
+
+Bind every action and gate to owners, prerequisites, observations, the current
+candidate, falsifiers, rollback, and evidence that retires temporary controls.
+Preserve observations versus gates, warning versus stop thresholds, installed
+versus usable capacity, percent versus probability, hours versus days,
+source-local authority, and current versus stale evidence.
+
+Checks are candidate-bound mechanical feedback. They do not independently
+authorize engineering movement, passenger service, or closure.<|im_end|>
+<|im_start|>user
+# Keystone construction action contract
+
+Return exactly one JSON action object and no prose.
+
+```text
+{"action":"read_source","source_id":"MANDATE","start_line":1,"end_line":60}
+{"action":"read_batch","requests":[{"source_id":"MANDATE","start_line":1,"end_line":60},{"source_id":"TRACK","start_line":1,"end_line":60}]}
+{"action":"reopen_exact","result_id":"RESULT-001"}
+{"action":"replace_evidence_ledger","content":"complete compact task-native matrix"}
+{"action":"upsert_decision_section","heading":"Authority, scope, and operating states","body":"exact section body"}
+{"action":"patch_decision","edits":[{"old":"exact unique text","new":"replacement text"}]}
+{"action":"replace_decision","content":"complete exact decision"}
+{"action":"begin_verification"}
+```
+
+One read may contain at most 120 lines. A batch may contain one or two ranges,
+at most 160 lines and 12,000 exact source bytes. `begin_verification` is valid
+only after the frozen mechanical construction milestone. It changes lifecycle
+phase, not candidate bytes, and does not assert readiness.
+
+
+# Common pre-fork action notice
+No semantic-maintenance output is present during pressure screening. Both future configurations share this ordinary action surface and exact task work.
+
+# Exact source catalog
+{"schema":"architecture-source-catalog-v0","sources":[{"line_count":86,"sha256":"df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a","size_bytes":5400,"source_id":"MANDATE","title":"Restoration authority and operating states"},{"line_count":86,"sha256":"ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc","size_bytes":5136,"source_id":"TRACK","title":"Track geometry, inspection, and route restrictions"},{"line_count":86,"sha256":"88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71","size_bytes":5375,"source_id":"SIGNAL","title":"Interlocking, route proving, and crossing logic"},{"line_count":86,"sha256":"fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157","size_bytes":5128,"source_id":"POWER","title":"Traction power, substations, and emergency supply"},{"line_count":86,"sha256":"1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937","size_bytes":5276,"source_id":"ROLLING","title":"Rolling stock, braking, and consist readiness"},{"line_count":86,"sha256":"b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98","size_bytes":5271,"source_id":"CREW","title":"Crew qualification, fatigue, and staffing"},{"line_count":86,"sha256":"f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9","size_bytes":5364,"source_id":"WEATHER","title":"Weather, slope stability, and operating envelopes"},{"line_count":86,"sha256":"b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc","size_bytes":4908,"source_id":"FUEL","title":"Fuel, spares, and logistics continuity"},{"line_count":86,"sha256":"cde76ff942eecc83603f861eb922c3864e9578b9c13ec9c95b27b0f07b7cfa32","size_bytes":5161,"source_id":"CYBER","title":"Control access, signing, and audit custody"},{"line_count":86,"sha256":"4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71","size_bytes":5120,"source_id":"TELEMETRY","title":"Monitoring coverage, alarms, and delivery latency"},{"line_count":86,"sha256":"47fd04643fa8de992686f6cae89cc861488f99b9320bc00596cefbbf86084be6","size_bytes":4959,"source_id":"LOADS","title":"Freight, hazardous materials, and axle restrictions"},{"line_count":86,"sha256":"23d2e111c7eb6c1f98d8e99ee7049e33c8d6986c5b42d3c3404b7df5adfeaf73","size_bytes":5571,"source_id":"PASSENGER","title":"Passenger continuity, accessibility, and communication"},{"line_count":86,"sha256":"cf43603a1709c134c673ca06269dc5a9c7e3df44bc5f7b57c30b18f284b5a031","size_bytes":5595,"source_id":"LINEAGE","title":"Candidate lineage, rollback, and configuration control"},{"line_count":86,"sha256":"5acab8507af856a1f51e9327a9f4e568c2ae74ec4312770e3640b5fe66db85fb","size_bytes":5073,"source_id":"REVIEW","title":"Independent readiness review and blockers"}]}<|im_end|>
+<|im_start|>user
+# Exact current candidate
+{"candidate_sha256":"5b25793a20b182d59645e87d81a7e92b78bc4fed9403827ed559f454c16126aa","candidate_version":"candidate-v000:5b25793a20b182d59645e87d81a7e92b78bc4fed9403827ed559f454c16126aa","files":{"BOUNDED_AGENT_ARCHITECTURE_DECISION.md":"29e1802b47e10ee1de2c04a505930e77ed592aed7a0682ec096b0af832d2227e","EVIDENCE_INTEGRATION_LEDGER.md":"2233b7ed0c11c2e8d7ffeee0e72920e6bd4c2fe3c601163f2f48d6b0ac9021f2"},"schema":"architecture-current-candidate-v0"}
+--- exact candidate file: EVIDENCE_INTEGRATION_LEDGER.md ---
+# Keystone Evidence and Decision Matrix
+
+No evidence has yet been integrated.
+
+--- exact candidate file: BOUNDED_AGENT_ARCHITECTURE_DECISION.md ---
+# Keystone Regional Rail Restoration Decision
+
+Construction has not yet begun.<|im_end|>
+<|im_start|>assistant
+{
+  "action": "read_source",
+  "end_line": 86,
+  "source_id": "MANDATE",
+  "start_line": 1
+}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":2,"exact_result_sha256":"2632d66cecdf4f64cc66a08f5dcaab779836623dd7909896983a50cfbbc4245e","exact_result_size_bytes":5872,"object_id":"source:MANDATE:1-86","object_version":"df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a","observed_ranges":[{"end_line":86,"source_id":"MANDATE","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-001"},"reopen_handle":"result://sha256/2632d66cecdf4f64cc66a08f5dcaab779836623dd7909896983a50cfbbc4245e","resident":false,"result_id":"RESULT-001","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"MANDATE","source_ids":["MANDATE"],"source_path":"sources/MANDATE_AUTHORITY.md","source_sha256":"df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a","source_size_bytes":5400,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"TRACK","start_line":1}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":3,"exact_result_sha256":"90a39784a25c0c9dea8388f131d3193bdafa5eebdd95f20213cc31b05a2238af","exact_result_size_bytes":5601,"object_id":"source:TRACK:1-86","object_version":"ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc","observed_ranges":[{"end_line":86,"source_id":"TRACK","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-002"},"reopen_handle":"result://sha256/90a39784a25c0c9dea8388f131d3193bdafa5eebdd95f20213cc31b05a2238af","resident":false,"result_id":"RESULT-002","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"TRACK","source_ids":["TRACK"],"source_path":"sources/TRACK_GEOMETRY.md","source_sha256":"ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc","source_size_bytes":5136,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"SIGNAL","start_line":1}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":4,"exact_result_sha256":"ea0525fe416e4c249e395009164a08da7f55f301cb84e0772ae01529829cd1a1","exact_result_size_bytes":5847,"object_id":"source:SIGNAL:1-86","object_version":"88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71","observed_ranges":[{"end_line":86,"source_id":"SIGNAL","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-003"},"reopen_handle":"result://sha256/ea0525fe416e4c249e395009164a08da7f55f301cb84e0772ae01529829cd1a1","resident":false,"result_id":"RESULT-003","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"SIGNAL","source_ids":["SIGNAL"],"source_path":"sources/SIGNAL_INTERLOCKING.md","source_sha256":"88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71","source_size_bytes":5375,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"POWER","start_line":1}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":5,"exact_result_sha256":"b32713ede41137129f03b1626611e2d4a3bb2cbea9d4a2819f0810652e4af490","exact_result_size_bytes":5593,"object_id":"source:POWER:1-86","object_version":"fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157","observed_ranges":[{"end_line":86,"source_id":"POWER","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-004"},"reopen_handle":"result://sha256/b32713ede41137129f03b1626611e2d4a3bb2cbea9d4a2819f0810652e4af490","resident":false,"result_id":"RESULT-004","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"POWER","source_ids":["POWER"],"source_path":"sources/POWER_TRACTION.md","source_sha256":"fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157","source_size_bytes":5128,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"ROLLING","start_line":1}<|im_end|>
+<|im_start|>user
+{"delivery_ordinal":6,"exact_result_sha256":"4b0173b0c7d6ba48a7489a4ab67845fb0274495bfd7c86ef8a40390a397993b6","exact_result_size_bytes":5744,"object_id":"source:ROLLING:1-86","object_version":"1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937","observed_ranges":[{"end_line":86,"source_id":"ROLLING","start_line":1}],"previously_model_visible":true,"reopen_action":{"action":"reopen_exact","result_id":"RESULT-005"},"reopen_handle":"result://sha256/4b0173b0c7d6ba48a7489a4ab67845fb0274495bfd7c86ef8a40390a397993b6","resident":false,"result_id":"RESULT-005","result_kind":"source_observation","schema_version":"ceiba-exact-result-receipt-v1","source_id":"ROLLING","source_ids":["ROLLING"],"source_path":"sources/ROLLING_STOCK.md","source_sha256":"1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937","source_size_bytes":5276,"total_source_bytes":null}<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"CREW","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:CREW:1-86","object_version":"b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98","result_id":"RESULT-006","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"CREW","source_path":"sources/CREW_QUALIFICATION.md","source_sha256":"b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98","source_size_bytes":5271,"start_line":1}
+--- exact source range ---
+# Crew qualification, fatigue, and staffing
+
+## Frozen findings
+
+Current qualified coverage is twelve engineers and ten conductors. The first passenger stage requires ten engineers, ten conductors, two signal technicians, and two traction-power technicians on duty simultaneously.
+No operating crew member may exceed twelve hours on duty and each must receive at least ten consecutive hours off before the next covered shift. Twelve on duty and ten off serve different rules.
+Mutual aid supplies four engineers at 06:15 UTC with arrival uncertainty of plus or minus fifty minutes; announced availability is not confirmed on-duty coverage.
+
+## Governing relationships
+
+ROLLING service requires qualified engineers and conductors; SIGNAL and POWER restrictions require their specialist technicians.
+COMMS distributes assignments, while MANDATE retains operating authority and REVIEW checks current rosters.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CRW-000 | engineers | v4 | 9.0 | hours-on-duty | superseded |
+| CRW-001 | conductors | v4 | 10.9 | hours-on-duty | current |
+| CRW-002 | signal-techs | v4 | 9.7 | hours-on-duty | current |
+| CRW-003 | power-techs | v4 | 11.6 | hours-on-duty | current |
+| CRW-004 | engineers | v4 | 10.4 | hours-on-duty | current |
+| CRW-005 | conductors | v4 | 9.2 | hours-on-duty | current |
+| CRW-006 | signal-techs | v4 | 11.1 | hours-on-duty | current |
+| CRW-007 | power-techs | v4 | 9.9 | hours-on-duty | current |
+| CRW-008 | engineers | v4 | 11.8 | hours-on-duty | current |
+| CRW-009 | conductors | v4 | 10.6 | hours-on-duty | current |
+| CRW-010 | signal-techs | v4 | 9.4 | hours-on-duty | current |
+| CRW-011 | power-techs | v5 | 11.3 | hours-on-duty | current |
+| CRW-012 | engineers | v5 | 10.1 | hours-on-duty | current |
+| CRW-013 | conductors | v5 | 12.0 | hours-on-duty | current |
+| CRW-014 | signal-techs | v5 | 10.8 | hours-on-duty | current |
+| CRW-015 | power-techs | v5 | 9.6 | hours-on-duty | current |
+| CRW-016 | engineers | v5 | 11.5 | hours-on-duty | current |
+| CRW-017 | conductors | v5 | 10.3 | hours-on-duty | current |
+| CRW-018 | signal-techs | v5 | 9.1 | hours-on-duty | current |
+| CRW-019 | power-techs | v5 | 11.0 | hours-on-duty | superseded |
+| CRW-020 | engineers | v5 | 9.8 | hours-on-duty | current |
+| CRW-021 | conductors | v5 | 11.7 | hours-on-duty | current |
+| CRW-022 | signal-techs | v6 | 10.5 | hours-on-duty | current |
+| CRW-023 | power-techs | v6 | 9.3 | hours-on-duty | current |
+| CRW-024 | engineers | v6 | 11.2 | hours-on-duty | current |
+| CRW-025 | conductors | v6 | 10.0 | hours-on-duty | current |
+| CRW-026 | signal-techs | v6 | 11.9 | hours-on-duty | current |
+| CRW-027 | power-techs | v6 | 10.7 | hours-on-duty | current |
+| CRW-028 | engineers | v6 | 9.5 | hours-on-duty | current |
+| CRW-029 | conductors | v6 | 11.4 | hours-on-duty | current |
+| CRW-030 | signal-techs | v6 | 10.2 | hours-on-duty | current |
+| CRW-031 | power-techs | v6 | 9.0 | hours-on-duty | current |
+| CRW-032 | engineers | v6 | 10.9 | hours-on-duty | current |
+| CRW-033 | conductors | v7 | 9.7 | hours-on-duty | current |
+| CRW-034 | signal-techs | v7 | 11.6 | hours-on-duty | current |
+| CRW-035 | power-techs | v7 | 10.4 | hours-on-duty | current |
+| CRW-036 | engineers | v7 | 9.2 | hours-on-duty | current |
+| CRW-037 | conductors | v7 | 11.1 | hours-on-duty | current |
+| CRW-038 | signal-techs | v7 | 9.9 | hours-on-duty | superseded |
+| CRW-039 | power-techs | v7 | 11.8 | hours-on-duty | current |
+| CRW-040 | engineers | v7 | 10.6 | hours-on-duty | current |
+| CRW-041 | conductors | v7 | 9.4 | hours-on-duty | current |
+| CRW-042 | signal-techs | v7 | 11.3 | hours-on-duty | current |
+| CRW-043 | power-techs | v7 | 10.1 | hours-on-duty | current |
+| CRW-044 | engineers | v8 | 12.0 | hours-on-duty | current |
+| CRW-045 | conductors | v8 | 10.8 | hours-on-duty | current |
+| CRW-046 | signal-techs | v8 | 9.6 | hours-on-duty | current |
+| CRW-047 | power-techs | v8 | 11.5 | hours-on-duty | current |
+| CRW-048 | engineers | v8 | 10.3 | hours-on-duty | current |
+| CRW-049 | conductors | v8 | 9.1 | hours-on-duty | current |
+| CRW-050 | signal-techs | v8 | 11.0 | hours-on-duty | current |
+| CRW-051 | power-techs | v8 | 9.8 | hours-on-duty | current |
+| CRW-052 | engineers | v8 | 11.7 | hours-on-duty | current |
+| CRW-053 | conductors | v8 | 10.5 | hours-on-duty | current |
+| CRW-054 | signal-techs | v8 | 9.3 | hours-on-duty | current |
+| CRW-055 | power-techs | v9 | 11.2 | hours-on-duty | current |
+| CRW-056 | engineers | v9 | 10.0 | hours-on-duty | current |
+| CRW-057 | conductors | v9 | 11.9 | hours-on-duty | superseded |
+| CRW-058 | signal-techs | v9 | 10.7 | hours-on-duty | current |
+| CRW-059 | power-techs | v9 | 9.5 | hours-on-duty | current |
+| CRW-060 | engineers | v9 | 11.4 | hours-on-duty | current |
+| CRW-061 | conductors | v9 | 10.2 | hours-on-duty | current |
+| CRW-062 | signal-techs | v9 | 9.0 | hours-on-duty | current |
+| CRW-063 | power-techs | v9 | 10.9 | hours-on-duty | current |
+
+## Decision constraints
+
+Preserve roles, simultaneous counts, on/off-duty hours, start time, and uncertainty.
+State alternates, fatigue stop rules, and evidence that retires mutual-aid dependence.<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"WEATHER","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:WEATHER:1-86","object_version":"f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9","result_id":"RESULT-007","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"WEATHER","source_path":"sources/WEATHER_SLOPE.md","source_sha256":"f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9","source_size_bytes":5364,"start_line":1}
+--- exact source range ---
+# Weather, slope stability, and operating envelopes
+
+## Frozen findings
+
+Rainfall at ridge-cut is 14 millimeters per hour. A geotechnical watch begins above 16 mm/h and operations stop above 24 mm/h; watch and stop thresholds must remain distinct.
+River crosswind is 42 miles per hour at p95. Passenger service is restricted above 50 mph, while empty-stock movement is restricted above 58 mph.
+A slope repair, drainage change, sensor move, forecast model, or operating-consist change makes prior weather-envelope evidence stale.
+
+## Governing relationships
+
+TRACK restrictions consume slope and rainfall evidence; ROLLING consist type determines the applicable crosswind gate.
+TELEMETRY provides observations but WEATHER owns threshold interpretation and MANDATE owns service decisions.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| WTH-000 | ridge-cut | v4 | 14.0 | millimeters-hour | superseded |
+| WTH-001 | river-bridge | v4 | 15.9 | millimeters-hour | current |
+| WTH-002 | tunnel-east | v4 | 14.7 | millimeters-hour | current |
+| WTH-003 | north-main | v4 | 16.6 | millimeters-hour | current |
+| WTH-004 | ridge-cut | v4 | 15.4 | millimeters-hour | current |
+| WTH-005 | river-bridge | v4 | 14.2 | millimeters-hour | current |
+| WTH-006 | tunnel-east | v4 | 16.1 | millimeters-hour | current |
+| WTH-007 | north-main | v4 | 14.9 | millimeters-hour | current |
+| WTH-008 | ridge-cut | v4 | 16.8 | millimeters-hour | current |
+| WTH-009 | river-bridge | v4 | 15.6 | millimeters-hour | current |
+| WTH-010 | tunnel-east | v4 | 14.4 | millimeters-hour | current |
+| WTH-011 | north-main | v5 | 16.3 | millimeters-hour | current |
+| WTH-012 | ridge-cut | v5 | 15.1 | millimeters-hour | current |
+| WTH-013 | river-bridge | v5 | 17.0 | millimeters-hour | current |
+| WTH-014 | tunnel-east | v5 | 15.8 | millimeters-hour | current |
+| WTH-015 | north-main | v5 | 14.6 | millimeters-hour | current |
+| WTH-016 | ridge-cut | v5 | 16.5 | millimeters-hour | current |
+| WTH-017 | river-bridge | v5 | 15.3 | millimeters-hour | current |
+| WTH-018 | tunnel-east | v5 | 14.1 | millimeters-hour | current |
+| WTH-019 | north-main | v5 | 16.0 | millimeters-hour | superseded |
+| WTH-020 | ridge-cut | v5 | 14.8 | millimeters-hour | current |
+| WTH-021 | river-bridge | v5 | 16.7 | millimeters-hour | current |
+| WTH-022 | tunnel-east | v6 | 15.5 | millimeters-hour | current |
+| WTH-023 | north-main | v6 | 14.3 | millimeters-hour | current |
+| WTH-024 | ridge-cut | v6 | 16.2 | millimeters-hour | current |
+| WTH-025 | river-bridge | v6 | 15.0 | millimeters-hour | current |
+| WTH-026 | tunnel-east | v6 | 16.9 | millimeters-hour | current |
+| WTH-027 | north-main | v6 | 15.7 | millimeters-hour | current |
+| WTH-028 | ridge-cut | v6 | 14.5 | millimeters-hour | current |
+| WTH-029 | river-bridge | v6 | 16.4 | millimeters-hour | current |
+| WTH-030 | tunnel-east | v6 | 15.2 | millimeters-hour | current |
+| WTH-031 | north-main | v6 | 14.0 | millimeters-hour | current |
+| WTH-032 | ridge-cut | v6 | 15.9 | millimeters-hour | current |
+| WTH-033 | river-bridge | v7 | 14.7 | millimeters-hour | current |
+| WTH-034 | tunnel-east | v7 | 16.6 | millimeters-hour | current |
+| WTH-035 | north-main | v7 | 15.4 | millimeters-hour | current |
+| WTH-036 | ridge-cut | v7 | 14.2 | millimeters-hour | current |
+| WTH-037 | river-bridge | v7 | 16.1 | millimeters-hour | current |
+| WTH-038 | tunnel-east | v7 | 14.9 | millimeters-hour | superseded |
+| WTH-039 | north-main | v7 | 16.8 | millimeters-hour | current |
+| WTH-040 | ridge-cut | v7 | 15.6 | millimeters-hour | current |
+| WTH-041 | river-bridge | v7 | 14.4 | millimeters-hour | current |
+| WTH-042 | tunnel-east | v7 | 16.3 | millimeters-hour | current |
+| WTH-043 | north-main | v7 | 15.1 | millimeters-hour | current |
+| WTH-044 | ridge-cut | v8 | 17.0 | millimeters-hour | current |
+| WTH-045 | river-bridge | v8 | 15.8 | millimeters-hour | current |
+| WTH-046 | tunnel-east | v8 | 14.6 | millimeters-hour | current |
+| WTH-047 | north-main | v8 | 16.5 | millimeters-hour | current |
+| WTH-048 | ridge-cut | v8 | 15.3 | millimeters-hour | current |
+| WTH-049 | river-bridge | v8 | 14.1 | millimeters-hour | current |
+| WTH-050 | tunnel-east | v8 | 16.0 | millimeters-hour | current |
+| WTH-051 | north-main | v8 | 14.8 | millimeters-hour | current |
+| WTH-052 | ridge-cut | v8 | 16.7 | millimeters-hour | current |
+| WTH-053 | river-bridge | v8 | 15.5 | millimeters-hour | current |
+| WTH-054 | tunnel-east | v8 | 14.3 | millimeters-hour | current |
+| WTH-055 | north-main | v9 | 16.2 | millimeters-hour | current |
+| WTH-056 | ridge-cut | v9 | 15.0 | millimeters-hour | current |
+| WTH-057 | river-bridge | v9 | 16.9 | millimeters-hour | superseded |
+| WTH-058 | tunnel-east | v9 | 15.7 | millimeters-hour | current |
+| WTH-059 | north-main | v9 | 14.5 | millimeters-hour | current |
+| WTH-060 | ridge-cut | v9 | 16.4 | millimeters-hour | current |
+| WTH-061 | river-bridge | v9 | 15.2 | millimeters-hour | current |
+| WTH-062 | tunnel-east | v9 | 14.0 | millimeters-hour | current |
+| WTH-063 | north-main | v9 | 15.9 | millimeters-hour | current |
+
+## Decision constraints
+
+Preserve observed versus watch/stop values, units, percentiles, and consist-specific gates.
+Define alternate monitoring, rollback, and evidence needed to retire watches.<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"FUEL","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:FUEL:1-86","object_version":"b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc","result_id":"RESULT-008","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"FUEL","source_path":"sources/FUEL_MATERIALS.md","source_sha256":"b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc","source_size_bytes":4908,"start_line":1}
+--- exact source range ---
+# Fuel, spares, and logistics continuity
+
+## Frozen findings
+
+Backup-plant fuel covers eighteen hours at emergency traction load and eleven hours at full passenger peak. The two consumption regimes must remain distinct.
+Replacement switch machines cover 3.5 route-days, while traction sand covers 2.4 operating days. Route-days and operating days are different inventory measures.
+Six accessible buses arrive at 07:10 UTC with travel uncertainty of plus or minus forty minutes; planned arrival is not deployed capacity.
+
+## Governing relationships
+
+POWER backup duration depends on FUEL, SIGNAL depends on switch machines, and PASSENGER depends on accessible bus bridging.
+WEATHER may alter logistics routes and CREW must qualify receiving and installation teams.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| FUL-000 | diesel | v4 | 18.0 | hours-cover | superseded |
+| FUL-001 | switch-machines | v4 | 19.9 | hours-cover | current |
+| FUL-002 | sand | v4 | 18.7 | hours-cover | current |
+| FUL-003 | bus-bridges | v4 | 20.6 | hours-cover | current |
+| FUL-004 | diesel | v4 | 19.4 | hours-cover | current |
+| FUL-005 | switch-machines | v4 | 18.2 | hours-cover | current |
+| FUL-006 | sand | v4 | 20.1 | hours-cover | current |
+| FUL-007 | bus-bridges | v4 | 18.9 | hours-cover | current |
+| FUL-008 | diesel | v4 | 20.8 | hours-cover | current |
+| FUL-009 | switch-machines | v4 | 19.6 | hours-cover | current |
+| FUL-010 | sand | v4 | 18.4 | hours-cover | current |
+| FUL-011 | bus-bridges | v5 | 20.3 | hours-cover | current |
+| FUL-012 | diesel | v5 | 19.1 | hours-cover | current |
+| FUL-013 | switch-machines | v5 | 21.0 | hours-cover | current |
+| FUL-014 | sand | v5 | 19.8 | hours-cover | current |
+| FUL-015 | bus-bridges | v5 | 18.6 | hours-cover | current |
+| FUL-016 | diesel | v5 | 20.5 | hours-cover | current |
+| FUL-017 | switch-machines | v5 | 19.3 | hours-cover | current |
+| FUL-018 | sand | v5 | 18.1 | hours-cover | current |
+| FUL-019 | bus-bridges | v5 | 20.0 | hours-cover | superseded |
+| FUL-020 | diesel | v5 | 18.8 | hours-cover | current |
+| FUL-021 | switch-machines | v5 | 20.7 | hours-cover | current |
+| FUL-022 | sand | v6 | 19.5 | hours-cover | current |
+| FUL-023 | bus-bridges | v6 | 18.3 | hours-cover | current |
+| FUL-024 | diesel | v6 | 20.2 | hours-cover | current |
+| FUL-025 | switch-machines | v6 | 19.0 | hours-cover | current |
+| FUL-026 | sand | v6 | 20.9 | hours-cover | current |
+| FUL-027 | bus-bridges | v6 | 19.7 | hours-cover | current |
+| FUL-028 | diesel | v6 | 18.5 | hours-cover | current |
+| FUL-029 | switch-machines | v6 | 20.4 | hours-cover | current |
+| FUL-030 | sand | v6 | 19.2 | hours-cover | current |
+| FUL-031 | bus-bridges | v6 | 18.0 | hours-cover | current |
+| FUL-032 | diesel | v6 | 19.9 | hours-cover | current |
+| FUL-033 | switch-machines | v7 | 18.7 | hours-cover | current |
+| FUL-034 | sand | v7 | 20.6 | hours-cover | current |
+| FUL-035 | bus-bridges | v7 | 19.4 | hours-cover | current |
+| FUL-036 | diesel | v7 | 18.2 | hours-cover | current |
+| FUL-037 | switch-machines | v7 | 20.1 | hours-cover | current |
+| FUL-038 | sand | v7 | 18.9 | hours-cover | superseded |
+| FUL-039 | bus-bridges | v7 | 20.8 | hours-cover | current |
+| FUL-040 | diesel | v7 | 19.6 | hours-cover | current |
+| FUL-041 | switch-machines | v7 | 18.4 | hours-cover | current |
+| FUL-042 | sand | v7 | 20.3 | hours-cover | current |
+| FUL-043 | bus-bridges | v7 | 19.1 | hours-cover | current |
+| FUL-044 | diesel | v8 | 21.0 | hours-cover | current |
+| FUL-045 | switch-machines | v8 | 19.8 | hours-cover | current |
+| FUL-046 | sand | v8 | 18.6 | hours-cover | current |
+| FUL-047 | bus-bridges | v8 | 20.5 | hours-cover | current |
+| FUL-048 | diesel | v8 | 19.3 | hours-cover | current |
+| FUL-049 | switch-machines | v8 | 18.1 | hours-cover | current |
+| FUL-050 | sand | v8 | 20.0 | hours-cover | current |
+| FUL-051 | bus-bridges | v8 | 18.8 | hours-cover | current |
+| FUL-052 | diesel | v8 | 20.7 | hours-cover | current |
+| FUL-053 | switch-machines | v8 | 19.5 | hours-cover | current |
+| FUL-054 | sand | v8 | 18.3 | hours-cover | current |
+| FUL-055 | bus-bridges | v9 | 20.2 | hours-cover | current |
+| FUL-056 | diesel | v9 | 19.0 | hours-cover | current |
+| FUL-057 | switch-machines | v9 | 20.9 | hours-cover | superseded |
+| FUL-058 | sand | v9 | 19.7 | hours-cover | current |
+| FUL-059 | bus-bridges | v9 | 18.5 | hours-cover | current |
+| FUL-060 | diesel | v9 | 20.4 | hours-cover | current |
+| FUL-061 | switch-machines | v9 | 19.2 | hours-cover | current |
+| FUL-062 | sand | v9 | 18.0 | hours-cover | current |
+| FUL-063 | bus-bridges | v9 | 19.9 | hours-cover | current |
+
+## Decision constraints
+
+Preserve load regime, inventory units, arrival time, uncertainty, and qualification.
+Name reorder triggers, alternates, owners, and retirement evidence.<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"CYBER","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:CYBER:1-86","object_version":"cde76ff942eecc83603f861eb922c3864e9578b9c13ec9c95b27b0f07b7cfa32","result_id":"RESULT-009","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"CYBER","source_path":"sources/CYBER_CONTROL.md","source_sha256":"cde76ff942eecc83603f861eb922c3864e9578b9c13ec9c95b27b0f07b7cfa32","source_size_bytes":5161,"start_line":1}
+--- exact source range ---
+# Control access, signing, and audit custody
+
+## Frozen findings
+
+The exposed dispatch service account was disabled at 11:25 UTC. The interlocking-signing key was not exposed and remains current under key set K12.
+Break-glass control access expires after two hours and requires dual approval plus immutable session logging. Emergency access is not continuing authorization.
+Online controller logs are retained for 210 days and archived investigation evidence for six years; the periods serve different obligations.
+
+## Governing relationships
+
+SIGNAL and POWER require CYBER-validated control access; TELEMETRY consumes audit events but cannot authorize access.
+Any key-set, role-policy, controller, route-table, or logging mutation makes prior cyber verification stale.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| CYB-000 | service-account | v4 | 2.0 | hours-access | superseded |
+| CYB-001 | logic-signing | v4 | 3.9 | hours-access | current |
+| CYB-002 | dispatch-api | v4 | 2.7 | hours-access | current |
+| CYB-003 | audit-store | v4 | 4.6 | hours-access | current |
+| CYB-004 | service-account | v4 | 3.4 | hours-access | current |
+| CYB-005 | logic-signing | v4 | 2.2 | hours-access | current |
+| CYB-006 | dispatch-api | v4 | 4.1 | hours-access | current |
+| CYB-007 | audit-store | v4 | 2.9 | hours-access | current |
+| CYB-008 | service-account | v4 | 4.8 | hours-access | current |
+| CYB-009 | logic-signing | v4 | 3.6 | hours-access | current |
+| CYB-010 | dispatch-api | v4 | 2.4 | hours-access | current |
+| CYB-011 | audit-store | v5 | 4.3 | hours-access | current |
+| CYB-012 | service-account | v5 | 3.1 | hours-access | current |
+| CYB-013 | logic-signing | v5 | 5.0 | hours-access | current |
+| CYB-014 | dispatch-api | v5 | 3.8 | hours-access | current |
+| CYB-015 | audit-store | v5 | 2.6 | hours-access | current |
+| CYB-016 | service-account | v5 | 4.5 | hours-access | current |
+| CYB-017 | logic-signing | v5 | 3.3 | hours-access | current |
+| CYB-018 | dispatch-api | v5 | 2.1 | hours-access | current |
+| CYB-019 | audit-store | v5 | 4.0 | hours-access | superseded |
+| CYB-020 | service-account | v5 | 2.8 | hours-access | current |
+| CYB-021 | logic-signing | v5 | 4.7 | hours-access | current |
+| CYB-022 | dispatch-api | v6 | 3.5 | hours-access | current |
+| CYB-023 | audit-store | v6 | 2.3 | hours-access | current |
+| CYB-024 | service-account | v6 | 4.2 | hours-access | current |
+| CYB-025 | logic-signing | v6 | 3.0 | hours-access | current |
+| CYB-026 | dispatch-api | v6 | 4.9 | hours-access | current |
+| CYB-027 | audit-store | v6 | 3.7 | hours-access | current |
+| CYB-028 | service-account | v6 | 2.5 | hours-access | current |
+| CYB-029 | logic-signing | v6 | 4.4 | hours-access | current |
+| CYB-030 | dispatch-api | v6 | 3.2 | hours-access | current |
+| CYB-031 | audit-store | v6 | 2.0 | hours-access | current |
+| CYB-032 | service-account | v6 | 3.9 | hours-access | current |
+| CYB-033 | logic-signing | v7 | 2.7 | hours-access | current |
+| CYB-034 | dispatch-api | v7 | 4.6 | hours-access | current |
+| CYB-035 | audit-store | v7 | 3.4 | hours-access | current |
+| CYB-036 | service-account | v7 | 2.2 | hours-access | current |
+| CYB-037 | logic-signing | v7 | 4.1 | hours-access | current |
+| CYB-038 | dispatch-api | v7 | 2.9 | hours-access | superseded |
+| CYB-039 | audit-store | v7 | 4.8 | hours-access | current |
+| CYB-040 | service-account | v7 | 3.6 | hours-access | current |
+| CYB-041 | logic-signing | v7 | 2.4 | hours-access | current |
+| CYB-042 | dispatch-api | v7 | 4.3 | hours-access | current |
+| CYB-043 | audit-store | v7 | 3.1 | hours-access | current |
+| CYB-044 | service-account | v8 | 5.0 | hours-access | current |
+| CYB-045 | logic-signing | v8 | 3.8 | hours-access | current |
+| CYB-046 | dispatch-api | v8 | 2.6 | hours-access | current |
+| CYB-047 | audit-store | v8 | 4.5 | hours-access | current |
+| CYB-048 | service-account | v8 | 3.3 | hours-access | current |
+| CYB-049 | logic-signing | v8 | 2.1 | hours-access | current |
+| CYB-050 | dispatch-api | v8 | 4.0 | hours-access | current |
+| CYB-051 | audit-store | v8 | 2.8 | hours-access | current |
+| CYB-052 | service-account | v8 | 4.7 | hours-access | current |
+| CYB-053 | logic-signing | v8 | 3.5 | hours-access | current |
+| CYB-054 | dispatch-api | v8 | 2.3 | hours-access | current |
+| CYB-055 | audit-store | v9 | 4.2 | hours-access | current |
+| CYB-056 | service-account | v9 | 3.0 | hours-access | current |
+| CYB-057 | logic-signing | v9 | 4.9 | hours-access | superseded |
+| CYB-058 | dispatch-api | v9 | 3.7 | hours-access | current |
+| CYB-059 | audit-store | v9 | 2.5 | hours-access | current |
+| CYB-060 | service-account | v9 | 4.4 | hours-access | current |
+| CYB-061 | logic-signing | v9 | 3.2 | hours-access | current |
+| CYB-062 | dispatch-api | v9 | 2.0 | hours-access | current |
+| CYB-063 | audit-store | v9 | 3.9 | hours-access | current |
+
+## Decision constraints
+
+Distinguish account disablement, key state, access duration, approval, and retention.
+Name current evidence required before restoring remote dispatch control.<|im_end|>
+<|im_start|>user
+# Anchored provenance-local source register
+NON-AUTHORITATIVE, INCOMPLETE SEMANTIC RESIDUE. Omission is not evidence that a source or requirement was covered. Exact sources remain reopenable.
+
+## CLAIM MANDATE-001
+SLOT_SOURCE: MANDATE
+SOURCE_VERSION: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Only network control may authorize an engineering movement
+ANCHOR_BYTES: 151-209
+ANCHOR_SHA256: 085abc73735679fc3094fc28cb631c58f63fe3faf39d3f7e876530ef1436981c
+CONTEXT_LINES: 5-5
+CONTEXT_SHA256: 799fb01431001de261aadfebed7a3600bd70ab3db1a15e7264eec8b32fb69c1b
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The MANDATE source states that only network control may authorize an engineering movement.
+
+## CLAIM MANDATE-002
+SLOT_SOURCE: MANDATE
+SOURCE_VERSION: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: only the rail-safety director may authorize passenger service
+ANCHOR_BYTES: 215-276
+ANCHOR_SHA256: 98bcd7a27d556e7f6bc61dd0b1faf69b93685f1bffd5c7f442535d57c5ff2d9b
+CONTEXT_LINES: 5-5
+CONTEXT_SHA256: 799fb01431001de261aadfebed7a3600bd70ab3db1a15e7264eec8b32fb69c1b
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The MANDATE source states that only the rail-safety director may authorize passenger service.
+
+## CLAIM PWR-001
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Installed traction capacity is 34.0 megawatts, while current usable capacity after feeder derating is 26.5 megawatts
+ANCHOR_BYTES: 73-189
+ANCHOR_SHA256: 7198849a1f47a163ec3270c14024935c5b5a82b0a4b1e391cba12b85b86152bb
+CONTEXT_LINES: 5-5
+CONTEXT_SHA256: 7e99c7d7cd676beca4f42b249b07b28676db7f8fdc13641cd02dbaf3a9437599
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The installed traction capacity is 34.0 megawatts and the current usable capacity after feeder derating is 26.5 megawatts.
+
+## CLAIM PWR-002
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Feeder voltage is 24.7 kilovolts and must remain between 24.0 and 25.2 kilovolts at every monitored node for three consecutive fifteen-minute windows
+ANCHOR_BYTES: 260-409
+ANCHOR_SHA256: 71f4f3ae1e7333d0d6289c42e079bbb28e13ba024cac3cd4451e1e8a78d0c5f9
+CONTEXT_LINES: 6-6
+CONTEXT_SHA256: f73f18942e2f605e94b6e751f1ef45e404d9f56a798d65cfb67f946c679b9215
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The feeder voltage is 24.7 kilovolts and must remain between 24.0 and 25.2 kilovolts at every monitored node for three consecutive fifteen-minute windows.
+
+## CLAIM PWR-003
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: The backup plant carries 11.8 megawatts for eighteen hours at current fuel stock; it does not carry full passenger peak and eighteen hours is not eighteen days
+ANCHOR_BYTES: 460-619
+ANCHOR_SHA256: 2f6411a594dfe9901bd373c306057576ae894b81af615a575197cac947e5b2b7
+CONTEXT_LINES: 7-7
+CONTEXT_SHA256: 1935f5b3982a737340be4a04a3a1e78760db2973e6a7e19b8f3173bf030a3262
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The backup plant carries 11.8 megawatts for eighteen hours at current fuel stock, does not carry full passenger peak, and the duration is eighteen hours rather than eighteen days.<|im_end|>
+<|im_start|>user
+# Current Keystone lifecycle phase
+Phase: construction. Build exact task work and use `begin_verification` only after the frozen mechanical construction milestone is met.<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"TELEMETRY","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:TELEMETRY:1-86","object_version":"4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71","result_id":"RESULT-010","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"TELEMETRY","source_path":"sources/TELEMETRY_COVERAGE.md","source_sha256":"4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71","source_size_bytes":5120,"start_line":1}
+--- exact source range ---
+# Monitoring coverage, alarms, and delivery latency
+
+## Frozen findings
+
+Current critical-signal coverage is 93 percent; seven percent remains unobserved. Coverage is not confidence and does not prove uninstrumented assets healthy.
+Route-state delivery is 720 milliseconds at p95 and 1,180 milliseconds at p99. These are observations, not response deadlines.
+The power warning threshold is 24.2 kilovolts and the operating stop is 23.8 kilovolts. Warning and stop semantics must remain distinct.
+
+## Governing relationships
+
+TRACK, SIGNAL, POWER, ROLLING, and WEATHER rely on TELEMETRY observations while retaining their own gates and authorities.
+COMMS may report state only where coverage and source currency are adequate.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| TEL-000 | track-circuits | v4 | 93.0 | percent-coverage | superseded |
+| TEL-001 | voltage | v4 | 94.9 | percent-coverage | current |
+| TEL-002 | wind | v4 | 93.7 | percent-coverage | current |
+| TEL-003 | brakes | v4 | 95.6 | percent-coverage | current |
+| TEL-004 | track-circuits | v4 | 94.4 | percent-coverage | current |
+| TEL-005 | voltage | v4 | 93.2 | percent-coverage | current |
+| TEL-006 | wind | v4 | 95.1 | percent-coverage | current |
+| TEL-007 | brakes | v4 | 93.9 | percent-coverage | current |
+| TEL-008 | track-circuits | v4 | 95.8 | percent-coverage | current |
+| TEL-009 | voltage | v4 | 94.6 | percent-coverage | current |
+| TEL-010 | wind | v4 | 93.4 | percent-coverage | current |
+| TEL-011 | brakes | v5 | 95.3 | percent-coverage | current |
+| TEL-012 | track-circuits | v5 | 94.1 | percent-coverage | current |
+| TEL-013 | voltage | v5 | 96.0 | percent-coverage | current |
+| TEL-014 | wind | v5 | 94.8 | percent-coverage | current |
+| TEL-015 | brakes | v5 | 93.6 | percent-coverage | current |
+| TEL-016 | track-circuits | v5 | 95.5 | percent-coverage | current |
+| TEL-017 | voltage | v5 | 94.3 | percent-coverage | current |
+| TEL-018 | wind | v5 | 93.1 | percent-coverage | current |
+| TEL-019 | brakes | v5 | 95.0 | percent-coverage | superseded |
+| TEL-020 | track-circuits | v5 | 93.8 | percent-coverage | current |
+| TEL-021 | voltage | v5 | 95.7 | percent-coverage | current |
+| TEL-022 | wind | v6 | 94.5 | percent-coverage | current |
+| TEL-023 | brakes | v6 | 93.3 | percent-coverage | current |
+| TEL-024 | track-circuits | v6 | 95.2 | percent-coverage | current |
+| TEL-025 | voltage | v6 | 94.0 | percent-coverage | current |
+| TEL-026 | wind | v6 | 95.9 | percent-coverage | current |
+| TEL-027 | brakes | v6 | 94.7 | percent-coverage | current |
+| TEL-028 | track-circuits | v6 | 93.5 | percent-coverage | current |
+| TEL-029 | voltage | v6 | 95.4 | percent-coverage | current |
+| TEL-030 | wind | v6 | 94.2 | percent-coverage | current |
+| TEL-031 | brakes | v6 | 93.0 | percent-coverage | current |
+| TEL-032 | track-circuits | v6 | 94.9 | percent-coverage | current |
+| TEL-033 | voltage | v7 | 93.7 | percent-coverage | current |
+| TEL-034 | wind | v7 | 95.6 | percent-coverage | current |
+| TEL-035 | brakes | v7 | 94.4 | percent-coverage | current |
+| TEL-036 | track-circuits | v7 | 93.2 | percent-coverage | current |
+| TEL-037 | voltage | v7 | 95.1 | percent-coverage | current |
+| TEL-038 | wind | v7 | 93.9 | percent-coverage | superseded |
+| TEL-039 | brakes | v7 | 95.8 | percent-coverage | current |
+| TEL-040 | track-circuits | v7 | 94.6 | percent-coverage | current |
+| TEL-041 | voltage | v7 | 93.4 | percent-coverage | current |
+| TEL-042 | wind | v7 | 95.3 | percent-coverage | current |
+| TEL-043 | brakes | v7 | 94.1 | percent-coverage | current |
+| TEL-044 | track-circuits | v8 | 96.0 | percent-coverage | current |
+| TEL-045 | voltage | v8 | 94.8 | percent-coverage | current |
+| TEL-046 | wind | v8 | 93.6 | percent-coverage | current |
+| TEL-047 | brakes | v8 | 95.5 | percent-coverage | current |
+| TEL-048 | track-circuits | v8 | 94.3 | percent-coverage | current |
+| TEL-049 | voltage | v8 | 93.1 | percent-coverage | current |
+| TEL-050 | wind | v8 | 95.0 | percent-coverage | current |
+| TEL-051 | brakes | v8 | 93.8 | percent-coverage | current |
+| TEL-052 | track-circuits | v8 | 95.7 | percent-coverage | current |
+| TEL-053 | voltage | v8 | 94.5 | percent-coverage | current |
+| TEL-054 | wind | v8 | 93.3 | percent-coverage | current |
+| TEL-055 | brakes | v9 | 95.2 | percent-coverage | current |
+| TEL-056 | track-circuits | v9 | 94.0 | percent-coverage | current |
+| TEL-057 | voltage | v9 | 95.9 | percent-coverage | superseded |
+| TEL-058 | wind | v9 | 94.7 | percent-coverage | current |
+| TEL-059 | brakes | v9 | 93.5 | percent-coverage | current |
+| TEL-060 | track-circuits | v9 | 95.4 | percent-coverage | current |
+| TEL-061 | voltage | v9 | 94.2 | percent-coverage | current |
+| TEL-062 | wind | v9 | 93.0 | percent-coverage | current |
+| TEL-063 | brakes | v9 | 94.9 | percent-coverage | current |
+
+## Decision constraints
+
+Preserve coverage uncertainty, percentile latency, voltage, purpose, and currentness.
+Define alternate observation routes and evidence for retiring manual watches.<|im_end|>
+<|im_start|>assistant
+{"action":"read_source","end_line":86,"source_id":"LOADS","start_line":1}<|im_end|>
+<|im_start|>user
+{"object_id":"source:LOADS:1-86","object_version":"47fd04643fa8de992686f6cae89cc861488f99b9320bc00596cefbbf86084be6","result_id":"RESULT-011","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"LOADS","source_path":"sources/LOADS_FREIGHT.md","source_sha256":"47fd04643fa8de992686f6cae89cc861488f99b9320bc00596cefbbf86084be6","source_size_bytes":4959,"start_line":1}
+--- exact source range ---
+# Freight, hazardous materials, and axle restrictions
+
+## Frozen findings
+
+River-bridge temporary axle load is limited to 20.5 tonnes. The normal 23.0-tonne rating is suspended and cannot govern the current candidate.
+Hazardous-material consist H71 requires a 600-meter separation from passenger platforms and an independent route clearance before movement.
+A consist, axle map, bridge inspection, route, cargo classification, or separation-plan change makes earlier freight clearance stale.
+
+## Governing relationships
+
+TRACK supplies bridge and route state, SIGNAL supplies route locking, and MANDATE separates freight from passenger authority.
+PASSENGER plans must preserve H71 separation and COMMS must not disclose protected cargo details.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| LOD-000 | hazmat-71 | v4 | 20.0 | tonnes-axle | superseded |
+| LOD-001 | grain-22 | v4 | 21.9 | tonnes-axle | current |
+| LOD-002 | intermodal-9 | v4 | 20.7 | tonnes-axle | current |
+| LOD-003 | bridge-axle | v4 | 22.6 | tonnes-axle | current |
+| LOD-004 | hazmat-71 | v4 | 21.4 | tonnes-axle | current |
+| LOD-005 | grain-22 | v4 | 20.2 | tonnes-axle | current |
+| LOD-006 | intermodal-9 | v4 | 22.1 | tonnes-axle | current |
+| LOD-007 | bridge-axle | v4 | 20.9 | tonnes-axle | current |
+| LOD-008 | hazmat-71 | v4 | 22.8 | tonnes-axle | current |
+| LOD-009 | grain-22 | v4 | 21.6 | tonnes-axle | current |
+| LOD-010 | intermodal-9 | v4 | 20.4 | tonnes-axle | current |
+| LOD-011 | bridge-axle | v5 | 22.3 | tonnes-axle | current |
+| LOD-012 | hazmat-71 | v5 | 21.1 | tonnes-axle | current |
+| LOD-013 | grain-22 | v5 | 23.0 | tonnes-axle | current |
+| LOD-014 | intermodal-9 | v5 | 21.8 | tonnes-axle | current |
+| LOD-015 | bridge-axle | v5 | 20.6 | tonnes-axle | current |
+| LOD-016 | hazmat-71 | v5 | 22.5 | tonnes-axle | current |
+| LOD-017 | grain-22 | v5 | 21.3 | tonnes-axle | current |
+| LOD-018 | intermodal-9 | v5 | 20.1 | tonnes-axle | current |
+| LOD-019 | bridge-axle | v5 | 22.0 | tonnes-axle | superseded |
+| LOD-020 | hazmat-71 | v5 | 20.8 | tonnes-axle | current |
+| LOD-021 | grain-22 | v5 | 22.7 | tonnes-axle | current |
+| LOD-022 | intermodal-9 | v6 | 21.5 | tonnes-axle | current |
+| LOD-023 | bridge-axle | v6 | 20.3 | tonnes-axle | current |
+| LOD-024 | hazmat-71 | v6 | 22.2 | tonnes-axle | current |
+| LOD-025 | grain-22 | v6 | 21.0 | tonnes-axle | current |
+| LOD-026 | intermodal-9 | v6 | 22.9 | tonnes-axle | current |
+| LOD-027 | bridge-axle | v6 | 21.7 | tonnes-axle | current |
+| LOD-028 | hazmat-71 | v6 | 20.5 | tonnes-axle | current |
+| LOD-029 | grain-22 | v6 | 22.4 | tonnes-axle | current |
+| LOD-030 | intermodal-9 | v6 | 21.2 | tonnes-axle | current |
+| LOD-031 | bridge-axle | v6 | 20.0 | tonnes-axle | current |
+| LOD-032 | hazmat-71 | v6 | 21.9 | tonnes-axle | current |
+| LOD-033 | grain-22 | v7 | 20.7 | tonnes-axle | current |
+| LOD-034 | intermodal-9 | v7 | 22.6 | tonnes-axle | current |
+| LOD-035 | bridge-axle | v7 | 21.4 | tonnes-axle | current |
+| LOD-036 | hazmat-71 | v7 | 20.2 | tonnes-axle | current |
+| LOD-037 | grain-22 | v7 | 22.1 | tonnes-axle | current |
+| LOD-038 | intermodal-9 | v7 | 20.9 | tonnes-axle | superseded |
+| LOD-039 | bridge-axle | v7 | 22.8 | tonnes-axle | current |
+| LOD-040 | hazmat-71 | v7 | 21.6 | tonnes-axle | current |
+| LOD-041 | grain-22 | v7 | 20.4 | tonnes-axle | current |
+| LOD-042 | intermodal-9 | v7 | 22.3 | tonnes-axle | current |
+| LOD-043 | bridge-axle | v7 | 21.1 | tonnes-axle | current |
+| LOD-044 | hazmat-71 | v8 | 23.0 | tonnes-axle | current |
+| LOD-045 | grain-22 | v8 | 21.8 | tonnes-axle | current |
+| LOD-046 | intermodal-9 | v8 | 20.6 | tonnes-axle | current |
+| LOD-047 | bridge-axle | v8 | 22.5 | tonnes-axle | current |
+| LOD-048 | hazmat-71 | v8 | 21.3 | tonnes-axle | current |
+| LOD-049 | grain-22 | v8 | 20.1 | tonnes-axle | current |
+| LOD-050 | intermodal-9 | v8 | 22.0 | tonnes-axle | current |
+| LOD-051 | bridge-axle | v8 | 20.8 | tonnes-axle | current |
+| LOD-052 | hazmat-71 | v8 | 22.7 | tonnes-axle | current |
+| LOD-053 | grain-22 | v8 | 21.5 | tonnes-axle | current |
+| LOD-054 | intermodal-9 | v8 | 20.3 | tonnes-axle | current |
+| LOD-055 | bridge-axle | v9 | 22.2 | tonnes-axle | current |
+| LOD-056 | hazmat-71 | v9 | 21.0 | tonnes-axle | current |
+| LOD-057 | grain-22 | v9 | 22.9 | tonnes-axle | superseded |
+| LOD-058 | intermodal-9 | v9 | 21.7 | tonnes-axle | current |
+| LOD-059 | bridge-axle | v9 | 20.5 | tonnes-axle | current |
+| LOD-060 | hazmat-71 | v9 | 22.4 | tonnes-axle | current |
+| LOD-061 | grain-22 | v9 | 21.2 | tonnes-axle | current |
+| LOD-062 | intermodal-9 | v9 | 20.0 | tonnes-axle | current |
+| LOD-063 | bridge-axle | v9 | 21.9 | tonnes-axle | current |
+
+## Decision constraints
+
+Preserve current versus suspended load, tonnes, separation distance, and currentness.
+Name quarantine siding, alternate route, owners, and clearance evidence.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

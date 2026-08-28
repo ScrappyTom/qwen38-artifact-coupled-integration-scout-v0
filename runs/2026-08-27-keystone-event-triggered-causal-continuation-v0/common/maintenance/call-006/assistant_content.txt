@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM CREW-001
+SLOT_SOURCE: CREW
+SOURCE_VERSION: b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Current qualified coverage is twelve engineers and ten conductors.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CREW reports current qualified coverage as twelve engineers and ten conductors.
+
+## CLAIM CREW-002
+SLOT_SOURCE: CREW
+SOURCE_VERSION: b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: The first passenger stage requires ten engineers, ten conductors, two signal technicians, and two traction-power technicians on duty simultaneously.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CREW reports that the first passenger stage requires ten engineers, ten conductors, two signal technicians, and two traction-power technicians on duty simultaneously.
+
+## CLAIM CREW-003
+SLOT_SOURCE: CREW
+SOURCE_VERSION: b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: No operating crew member may exceed twelve hours on duty and each must receive at least ten consecutive hours off before the next covered shift.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CREW reports that no operating crew member may exceed twelve hours on duty and each must receive at least ten consecutive hours off before the next covered shift.
+
+## CLAIM CREW-004
+SLOT_SOURCE: CREW
+SOURCE_VERSION: b253e1ab2a30b03ce81464368a59764adebfb0f221b4c6d88aeb70492bc1fe98
+EVIDENCE_RESULT: RESULT-006
+EVIDENCE_ANCHOR: Mutual aid supplies four engineers at 06:15 UTC with arrival uncertainty of plus or minus fifty minutes; announced availability is not confirmed on-duty coverage.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: CREW reports that mutual aid supplies four engineers at 06:15 UTC with arrival uncertainty of plus or minus fifty minutes, and announced availability is not confirmed on-duty coverage.

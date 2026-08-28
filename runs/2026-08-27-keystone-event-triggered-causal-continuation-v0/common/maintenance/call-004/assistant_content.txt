@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM PWR-001
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Installed traction capacity is 34.0 megawatts, while current usable capacity after feeder derating is 26.5 megawatts
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The installed traction capacity is 34.0 megawatts and the current usable capacity after feeder derating is 26.5 megawatts.
+
+## CLAIM PWR-002
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: Feeder voltage is 24.7 kilovolts and must remain between 24.0 and 25.2 kilovolts at every monitored node for three consecutive fifteen-minute windows
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The feeder voltage is 24.7 kilovolts and must remain between 24.0 and 25.2 kilovolts at every monitored node for three consecutive fifteen-minute windows.
+
+## CLAIM PWR-003
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: The backup plant carries 11.8 megawatts for eighteen hours at current fuel stock; it does not carry full passenger peak and eighteen hours is not eighteen days
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The backup plant carries 11.8 megawatts for eighteen hours at current fuel stock, does not carry full passenger peak, and the duration is eighteen hours rather than eighteen days.
+
+## CLAIM PWR-004
+SLOT_SOURCE: POWER
+SOURCE_VERSION: fce863b5472f7d368c3b4e8db0391b4a083e633d52694997dc3b767f90349157
+EVIDENCE_RESULT: RESULT-004
+EVIDENCE_ANCHOR: TRACK work windows and ROLLING consist demand depend on POWER; FUEL controls backup duration and TELEMETRY validates node voltage
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: Track work windows and rolling stock consist demand depend on power, fuel controls backup duration, and telemetry validates node voltage.

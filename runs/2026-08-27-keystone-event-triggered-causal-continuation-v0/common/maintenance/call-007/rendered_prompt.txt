@@ -1,0 +1,165 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+WEATHER: f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Keystone Regional Rail Restoration Task
+
+Produce two exact, source-grounded work products for the synthetic Keystone
+regional rail network:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning exactly with
+   `# Keystone Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning exactly with
+   `# Keystone Regional Rail Restoration Decision` and containing exactly
+   these ordered level-two headings:
+
+   1. `Authority, scope, and operating states`
+   2. `Track, route, and environmental restrictions`
+   3. `Signals, cyber controls, and telemetry`
+   4. `Traction power, fuel, and staged load`
+   5. `Rolling stock, crews, and movement readiness`
+   6. `Freight, passengers, accessibility, and communication`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. Reconcile authority,
+track geometry, signal proving, traction power, rolling stock, staffing,
+weather, fuel and spares, cyber controls, monitoring, freight restrictions,
+passenger continuity, candidate lineage, and independent readiness.
+
+Bind every action and gate to owners, prerequisites, observations, the current
+candidate, falsifiers, rollback, and evidence that retires temporary controls.
+Preserve observations versus gates, warning versus stop thresholds, installed
+versus usable capacity, percent versus probability, hours versus days,
+source-local authority, and current versus stale evidence.
+
+Checks are candidate-bound mechanical feedback. They do not independently
+authorize engineering movement, passenger service, or closure.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-007 ---
+{"object_id":"source:WEATHER:1-86","object_version":"f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9","result_id":"RESULT-007","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"WEATHER","source_path":"sources/WEATHER_SLOPE.md","source_sha256":"f9a96e3330845b82b6ad38efee933395caada5ad9f2681511366a2aee7faada9","source_size_bytes":5364,"start_line":1}
+--- exact source range ---
+# Weather, slope stability, and operating envelopes
+
+## Frozen findings
+
+Rainfall at ridge-cut is 14 millimeters per hour. A geotechnical watch begins above 16 mm/h and operations stop above 24 mm/h; watch and stop thresholds must remain distinct.
+River crosswind is 42 miles per hour at p95. Passenger service is restricted above 50 mph, while empty-stock movement is restricted above 58 mph.
+A slope repair, drainage change, sensor move, forecast model, or operating-consist change makes prior weather-envelope evidence stale.
+
+## Governing relationships
+
+TRACK restrictions consume slope and rainfall evidence; ROLLING consist type determines the applicable crosswind gate.
+TELEMETRY provides observations but WEATHER owns threshold interpretation and MANDATE owns service decisions.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| WTH-000 | ridge-cut | v4 | 14.0 | millimeters-hour | superseded |
+| WTH-001 | river-bridge | v4 | 15.9 | millimeters-hour | current |
+| WTH-002 | tunnel-east | v4 | 14.7 | millimeters-hour | current |
+| WTH-003 | north-main | v4 | 16.6 | millimeters-hour | current |
+| WTH-004 | ridge-cut | v4 | 15.4 | millimeters-hour | current |
+| WTH-005 | river-bridge | v4 | 14.2 | millimeters-hour | current |
+| WTH-006 | tunnel-east | v4 | 16.1 | millimeters-hour | current |
+| WTH-007 | north-main | v4 | 14.9 | millimeters-hour | current |
+| WTH-008 | ridge-cut | v4 | 16.8 | millimeters-hour | current |
+| WTH-009 | river-bridge | v4 | 15.6 | millimeters-hour | current |
+| WTH-010 | tunnel-east | v4 | 14.4 | millimeters-hour | current |
+| WTH-011 | north-main | v5 | 16.3 | millimeters-hour | current |
+| WTH-012 | ridge-cut | v5 | 15.1 | millimeters-hour | current |
+| WTH-013 | river-bridge | v5 | 17.0 | millimeters-hour | current |
+| WTH-014 | tunnel-east | v5 | 15.8 | millimeters-hour | current |
+| WTH-015 | north-main | v5 | 14.6 | millimeters-hour | current |
+| WTH-016 | ridge-cut | v5 | 16.5 | millimeters-hour | current |
+| WTH-017 | river-bridge | v5 | 15.3 | millimeters-hour | current |
+| WTH-018 | tunnel-east | v5 | 14.1 | millimeters-hour | current |
+| WTH-019 | north-main | v5 | 16.0 | millimeters-hour | superseded |
+| WTH-020 | ridge-cut | v5 | 14.8 | millimeters-hour | current |
+| WTH-021 | river-bridge | v5 | 16.7 | millimeters-hour | current |
+| WTH-022 | tunnel-east | v6 | 15.5 | millimeters-hour | current |
+| WTH-023 | north-main | v6 | 14.3 | millimeters-hour | current |
+| WTH-024 | ridge-cut | v6 | 16.2 | millimeters-hour | current |
+| WTH-025 | river-bridge | v6 | 15.0 | millimeters-hour | current |
+| WTH-026 | tunnel-east | v6 | 16.9 | millimeters-hour | current |
+| WTH-027 | north-main | v6 | 15.7 | millimeters-hour | current |
+| WTH-028 | ridge-cut | v6 | 14.5 | millimeters-hour | current |
+| WTH-029 | river-bridge | v6 | 16.4 | millimeters-hour | current |
+| WTH-030 | tunnel-east | v6 | 15.2 | millimeters-hour | current |
+| WTH-031 | north-main | v6 | 14.0 | millimeters-hour | current |
+| WTH-032 | ridge-cut | v6 | 15.9 | millimeters-hour | current |
+| WTH-033 | river-bridge | v7 | 14.7 | millimeters-hour | current |
+| WTH-034 | tunnel-east | v7 | 16.6 | millimeters-hour | current |
+| WTH-035 | north-main | v7 | 15.4 | millimeters-hour | current |
+| WTH-036 | ridge-cut | v7 | 14.2 | millimeters-hour | current |
+| WTH-037 | river-bridge | v7 | 16.1 | millimeters-hour | current |
+| WTH-038 | tunnel-east | v7 | 14.9 | millimeters-hour | superseded |
+| WTH-039 | north-main | v7 | 16.8 | millimeters-hour | current |
+| WTH-040 | ridge-cut | v7 | 15.6 | millimeters-hour | current |
+| WTH-041 | river-bridge | v7 | 14.4 | millimeters-hour | current |
+| WTH-042 | tunnel-east | v7 | 16.3 | millimeters-hour | current |
+| WTH-043 | north-main | v7 | 15.1 | millimeters-hour | current |
+| WTH-044 | ridge-cut | v8 | 17.0 | millimeters-hour | current |
+| WTH-045 | river-bridge | v8 | 15.8 | millimeters-hour | current |
+| WTH-046 | tunnel-east | v8 | 14.6 | millimeters-hour | current |
+| WTH-047 | north-main | v8 | 16.5 | millimeters-hour | current |
+| WTH-048 | ridge-cut | v8 | 15.3 | millimeters-hour | current |
+| WTH-049 | river-bridge | v8 | 14.1 | millimeters-hour | current |
+| WTH-050 | tunnel-east | v8 | 16.0 | millimeters-hour | current |
+| WTH-051 | north-main | v8 | 14.8 | millimeters-hour | current |
+| WTH-052 | ridge-cut | v8 | 16.7 | millimeters-hour | current |
+| WTH-053 | river-bridge | v8 | 15.5 | millimeters-hour | current |
+| WTH-054 | tunnel-east | v8 | 14.3 | millimeters-hour | current |
+| WTH-055 | north-main | v9 | 16.2 | millimeters-hour | current |
+| WTH-056 | ridge-cut | v9 | 15.0 | millimeters-hour | current |
+| WTH-057 | river-bridge | v9 | 16.9 | millimeters-hour | superseded |
+| WTH-058 | tunnel-east | v9 | 15.7 | millimeters-hour | current |
+| WTH-059 | north-main | v9 | 14.5 | millimeters-hour | current |
+| WTH-060 | ridge-cut | v9 | 16.4 | millimeters-hour | current |
+| WTH-061 | river-bridge | v9 | 15.2 | millimeters-hour | current |
+| WTH-062 | tunnel-east | v9 | 14.0 | millimeters-hour | current |
+| WTH-063 | north-main | v9 | 15.9 | millimeters-hour | current |
+
+## Decision constraints
+
+Preserve observed versus watch/stop values, units, percentiles, and consist-specific gates.
+Define alternate monitoring, rollback, and evidence needed to retire watches.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

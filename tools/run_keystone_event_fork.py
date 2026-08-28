@@ -774,6 +774,13 @@ def run_common(
             )
     if release is None or release.get("released") is not True:
         raise RuntimeError("common runtime release failed")
+    # Recompute from the complete trace even when construction never reached
+    # verification.  The in-loop detector is only needed to stop at a live
+    # fork; it must not leave the terminal receipt at its empty-trace default.
+    activation = detect_causal_fork_activation(
+        trace,
+        initial_candidate_sha256=str(parent["candidate_sha256"]),
+    )
     result = {
         "schema": "keystone-common-continuation-result-v0",
         "terminal_disposition": terminal,
@@ -790,6 +797,7 @@ def run_common(
             parent_calls=int(parent["actor_calls"]),
             parent_serialized_tokens=int(parent["serialized_tokens"]),
             continuation_trace=trace,
+            maintenance_trace=maintenance_trace,
         ),
     }
     write_json(common_root / "COMMON_RESULT.json", result)

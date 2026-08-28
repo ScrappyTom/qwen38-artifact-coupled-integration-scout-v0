@@ -214,8 +214,15 @@ def activation_tax(
     parent_calls: int,
     parent_serialized_tokens: int,
     continuation_trace: list[dict[str, Any]],
+    maintenance_trace: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    """Report cost before the first treatment-dependent actor decision."""
+    """Report every model-call cost before the first treatment decision.
+
+    ``continuation_trace`` contains actor calls.  Some integrated runners also
+    make semantic-maintenance model calls before those actor decisions.  Those
+    calls are part of activation cost even though they cannot themselves
+    activate the causal fork.
+    """
 
     cutoff = activation.subsequent_observation_call
     counted = [
@@ -223,20 +230,33 @@ def activation_tax(
         for index, row in enumerate(continuation_trace)
         if cutoff is None or _call(row, index + 1) <= cutoff
     ]
-    continuation_tokens = 0
-    for row in counted:
-        usage = row.get("usage")
-        if isinstance(usage, dict):
-            total = usage.get("total_tokens")
-            if isinstance(total, int) and total >= 0:
-                continuation_tokens += total
+    counted_maintenance = [] if maintenance_trace is None else maintenance_trace
+
+    def serialized_tokens(rows: Iterable[dict[str, Any]]) -> int:
+        total_tokens = 0
+        for row in rows:
+            usage = row.get("usage")
+            if isinstance(usage, dict):
+                total = usage.get("total_tokens")
+                if isinstance(total, int) and total >= 0:
+                    total_tokens += total
+        return total_tokens
+
+    actor_tokens = serialized_tokens(counted)
+    maintenance_tokens = serialized_tokens(counted_maintenance)
+    continuation_calls = len(counted) + len(counted_maintenance)
+    continuation_tokens = actor_tokens + maintenance_tokens
     return {
-        "schema": "activation-tax-v0",
+        "schema": "activation-tax-v1",
         "treatment_activated": activation.qualified,
         "parent_calls": parent_calls,
-        "continuation_calls": len(counted),
-        "calls_before_first_treatment_decision": parent_calls + len(counted),
+        "continuation_actor_calls": len(counted),
+        "continuation_maintenance_calls": len(counted_maintenance),
+        "continuation_calls": continuation_calls,
+        "calls_before_first_treatment_decision": parent_calls + continuation_calls,
         "parent_serialized_tokens": parent_serialized_tokens,
+        "continuation_actor_serialized_tokens": actor_tokens,
+        "continuation_maintenance_serialized_tokens": maintenance_tokens,
         "continuation_serialized_tokens": continuation_tokens,
         "serialized_tokens_before_first_treatment_decision": (
             parent_serialized_tokens + continuation_tokens

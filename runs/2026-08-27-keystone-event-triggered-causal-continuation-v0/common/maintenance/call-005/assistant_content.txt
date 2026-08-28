@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM ROLLING-001
+SLOT_SOURCE: ROLLING
+SOURCE_VERSION: 1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: Fourteen of sixteen electric multiple units passed static inspection.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The ROLLING source reports that fourteen of sixteen electric multiple units passed static inspection.
+
+## CLAIM ROLLING-002
+SLOT_SOURCE: ROLLING
+SOURCE_VERSION: 1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: Passenger restoration requires fourteen available units plus one independently verified rescue locomotive; fourteen units alone are insufficient.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The ROLLING source states that passenger restoration requires fourteen available units plus one independently verified rescue locomotive, and that fourteen units alone are insufficient.
+
+## CLAIM ROLLING-003
+SLOT_SOURCE: ROLLING
+SOURCE_VERSION: 1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: Brake-pipe pressure is 72 psi against a required range of 68 to 76 psi.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The ROLLING source reports that brake-pipe pressure is 72 psi against a required range of 68 to 76 psi.
+
+## CLAIM ROLLING-004
+SLOT_SOURCE: ROLLING
+SOURCE_VERSION: 1e28852c7a734de64f54d2a4bfc27d563f2fcb122d28a73385a35b9204324937
+EVIDENCE_RESULT: RESULT-005
+EVIDENCE_ANCHOR: A wheelset, brake controller, consist, firmware, inspection method, or rescue-locomotive change makes earlier rolling-stock evidence stale.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The ROLLING source states that a wheelset, brake controller, consist, firmware, inspection method, or rescue-locomotive change makes earlier rolling-stock evidence stale.

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Any
+
 from reactive_runtime.causal_activation import (
     activation_tax,
     detect_causal_fork_activation,
@@ -21,7 +23,7 @@ def event(
     rejection: str | None = None,
     check_candidate: str | None = None,
     total_tokens: int = 100,
-) -> dict:
+) -> dict[str, Any]:
     return {
         "actor_call": call,
         "parsed_action": {"action": action},
@@ -38,7 +40,7 @@ def event(
     }
 
 
-def qualifying_trace() -> list[dict]:
+def qualifying_trace() -> list[dict[str, Any]]:
     return [
         event(
             10,
@@ -129,6 +131,31 @@ def test_activation_tax_counts_only_the_common_prefix_before_the_fork() -> None:
     assert tax["calls_before_first_treatment_decision"] == 14
     assert tax["continuation_serialized_tokens"] == 500
     assert tax["serialized_tokens_before_first_treatment_decision"] == 102_509
+
+
+def test_activation_tax_includes_semantic_maintenance_model_calls() -> None:
+    trace = qualifying_trace()
+    activation = detect_causal_fork_activation(trace, initial_candidate_sha256=C0)
+    maintenance = [
+        {"maintenance_call": 1, "usage": {"total_tokens": 40}},
+        {"maintenance_call": 2, "usage": {"total_tokens": 60}},
+    ]
+    tax = activation_tax(
+        activation,
+        parent_calls=9,
+        parent_serialized_tokens=102_009,
+        continuation_trace=trace,
+        maintenance_trace=maintenance,
+    )
+    assert tax["schema"] == "activation-tax-v1"
+    assert tax["continuation_actor_calls"] == 5
+    assert tax["continuation_maintenance_calls"] == 2
+    assert tax["continuation_calls"] == 7
+    assert tax["calls_before_first_treatment_decision"] == 16
+    assert tax["continuation_actor_serialized_tokens"] == 500
+    assert tax["continuation_maintenance_serialized_tokens"] == 100
+    assert tax["continuation_serialized_tokens"] == 600
+    assert tax["serialized_tokens_before_first_treatment_decision"] == 102_609
 
 
 def test_admitted_candidate_change_before_current_check_starts_a_new_epoch() -> None:

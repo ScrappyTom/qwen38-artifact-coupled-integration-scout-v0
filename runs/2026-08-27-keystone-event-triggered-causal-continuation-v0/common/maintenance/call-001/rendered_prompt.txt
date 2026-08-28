@@ -1,0 +1,165 @@
+<|im_start|>system
+Return only the bounded anchored provenance delta. No JSON, code fence, commentary, task action, or readiness judgment.<|im_end|>
+<|im_start|>user
+You are in bounded semantic-maintenance mode. Select source-grounded meaning from the newly externalized results. Do not continue the task, judge readiness, or authorize closure.
+
+Use this exact plain-text carrier once:
+# Anchored provenance-local delta
+## CLAIM <UNIQUE_ID>
+SLOT_SOURCE: <one newly externalized source ID>
+SOURCE_VERSION: <exact 64-hex version>
+EVIDENCE_RESULT: <exact newly externalized RESULT ID>
+EVIDENCE_ANCHOR: <one exact unique single-line substring copied from that source inside the delivered result>
+MODE: source_reported_fact or source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE or comma-separated exact source IDs named by both the statement and the anchor's containing source line
+AUTHORITY: non_authoritative_derivative
+STATEMENT: <one complete single-line source-attributed fact or relationship>
+
+The host, not you, resolves the exact anchor, derives its containing complete source line, byte offsets, hashes, source/version binding, and reopen path. Copy only the smallest exact substring that supports the statement. The containing line preserves adjacent context and qualifications. Each claim is admitted independently; rejected claims consume cost and are discarded without repair or retry. A zero-valid update leaves prior state unchanged and ordinary task work continues.
+
+Emit at most 4 claims per source and 8 total, <= 1500 tokenizer tokens overall and <= 650 per source. A fact cannot name an external source. A relationship may name external objects when the owner-source context names them, but cannot mutate their slots or assert their authoritative current state. Cross-source synthesis belongs in exact task work, not this register.
+
+NEW SOURCE VERSIONS
+MANDATE: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+
+PRIOR CURRENT RECORDS FOR THESE SOURCES
+# Anchored provenance-local source register
+
+EMPTY
+
+
+AUTHORITATIVE TASK (relevance only; never evidence)
+# Keystone Regional Rail Restoration Task
+
+Produce two exact, source-grounded work products for the synthetic Keystone
+regional rail network:
+
+1. `EVIDENCE_INTEGRATION_LEDGER.md`, beginning exactly with
+   `# Keystone Evidence and Decision Matrix`.
+2. `BOUNDED_AGENT_ARCHITECTURE_DECISION.md`, beginning exactly with
+   `# Keystone Regional Rail Restoration Decision` and containing exactly
+   these ordered level-two headings:
+
+   1. `Authority, scope, and operating states`
+   2. `Track, route, and environmental restrictions`
+   3. `Signals, cyber controls, and telemetry`
+   4. `Traction power, fuel, and staged load`
+   5. `Rolling stock, crews, and movement readiness`
+   6. `Freight, passengers, accessibility, and communication`
+   7. `Execution, rollback, and contingencies`
+   8. `Verification, blockers, falsifiers, and closure`
+
+The final decision must contain 1,400–1,900 words excluding bracketed source
+citations and cite at least ten distinct exact source IDs. Reconcile authority,
+track geometry, signal proving, traction power, rolling stock, staffing,
+weather, fuel and spares, cyber controls, monitoring, freight restrictions,
+passenger continuity, candidate lineage, and independent readiness.
+
+Bind every action and gate to owners, prerequisites, observations, the current
+candidate, falsifiers, rollback, and evidence that retires temporary controls.
+Preserve observations versus gates, warning versus stop thresholds, installed
+versus usable capacity, percent versus probability, hours versus days,
+source-local authority, and current versus stale evidence.
+
+Checks are candidate-bound mechanical feedback. They do not independently
+authorize engineering movement, passenger service, or closure.
+
+
+EXACT NEWLY EXTERNALIZED RESULTS
+--- NEWLY EXTERNALIZED RESULT-001 ---
+{"object_id":"source:MANDATE:1-86","object_version":"df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a","result_id":"RESULT-001","result_kind":"source_observation","schema":"ceiba-action-result-v1"}
+--- exact result body ---
+{"end_line":86,"source_id":"MANDATE","source_path":"sources/MANDATE_AUTHORITY.md","source_sha256":"df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a","source_size_bytes":5400,"start_line":1}
+--- exact source range ---
+# Restoration authority and operating states
+
+## Frozen findings
+
+The incident commander may isolate infrastructure and order emergency stabilization. Only network control may authorize an engineering movement, and only the rail-safety director may authorize passenger service after current track, signal, traction-power, rolling-stock, and crew evidence is reconciled.
+A successful automated check is neither an engineering-movement authority nor passenger-service authority. Emergency procurement does not waive inspection, route proving, hours-of-service, hazardous-material, accessibility, or evidence-custody obligations.
+A handoff is valid only when the receiving controller acknowledges the same route topology, interlocking build, traction-power map, consist roster, and candidate version. A version mismatch blocks closure.
+
+## Governing relationships
+
+TRACK, SIGNAL, POWER, ROLLING, and CREW provide evidence but cannot authorize passenger service; REVIEW provides independent readiness findings but cannot dispatch a train.
+LINEAGE binds candidate state while MANDATE separates stabilization, engineering movement, freight movement, passenger service, and closure.
+
+## Operational evidence
+
+| record | asset/zone | version | measure | unit | status |
+|---|---|---|---:|---|---|
+| AUT-000 | incident-command | v4 | 1.0 | approval | superseded |
+| AUT-001 | rail-safety | v4 | 2.9 | approval | current |
+| AUT-002 | network-control | v4 | 1.7 | approval | current |
+| AUT-003 | public-liaison | v4 | 3.6 | approval | current |
+| AUT-004 | incident-command | v4 | 2.4 | approval | current |
+| AUT-005 | rail-safety | v4 | 1.2 | approval | current |
+| AUT-006 | network-control | v4 | 3.1 | approval | current |
+| AUT-007 | public-liaison | v4 | 1.9 | approval | current |
+| AUT-008 | incident-command | v4 | 3.8 | approval | current |
+| AUT-009 | rail-safety | v4 | 2.6 | approval | current |
+| AUT-010 | network-control | v4 | 1.4 | approval | current |
+| AUT-011 | public-liaison | v5 | 3.3 | approval | current |
+| AUT-012 | incident-command | v5 | 2.1 | approval | current |
+| AUT-013 | rail-safety | v5 | 4.0 | approval | current |
+| AUT-014 | network-control | v5 | 2.8 | approval | current |
+| AUT-015 | public-liaison | v5 | 1.6 | approval | current |
+| AUT-016 | incident-command | v5 | 3.5 | approval | current |
+| AUT-017 | rail-safety | v5 | 2.3 | approval | current |
+| AUT-018 | network-control | v5 | 1.1 | approval | current |
+| AUT-019 | public-liaison | v5 | 3.0 | approval | superseded |
+| AUT-020 | incident-command | v5 | 1.8 | approval | current |
+| AUT-021 | rail-safety | v5 | 3.7 | approval | current |
+| AUT-022 | network-control | v6 | 2.5 | approval | current |
+| AUT-023 | public-liaison | v6 | 1.3 | approval | current |
+| AUT-024 | incident-command | v6 | 3.2 | approval | current |
+| AUT-025 | rail-safety | v6 | 2.0 | approval | current |
+| AUT-026 | network-control | v6 | 3.9 | approval | current |
+| AUT-027 | public-liaison | v6 | 2.7 | approval | current |
+| AUT-028 | incident-command | v6 | 1.5 | approval | current |
+| AUT-029 | rail-safety | v6 | 3.4 | approval | current |
+| AUT-030 | network-control | v6 | 2.2 | approval | current |
+| AUT-031 | public-liaison | v6 | 1.0 | approval | current |
+| AUT-032 | incident-command | v6 | 2.9 | approval | current |
+| AUT-033 | rail-safety | v7 | 1.7 | approval | current |
+| AUT-034 | network-control | v7 | 3.6 | approval | current |
+| AUT-035 | public-liaison | v7 | 2.4 | approval | current |
+| AUT-036 | incident-command | v7 | 1.2 | approval | current |
+| AUT-037 | rail-safety | v7 | 3.1 | approval | current |
+| AUT-038 | network-control | v7 | 1.9 | approval | superseded |
+| AUT-039 | public-liaison | v7 | 3.8 | approval | current |
+| AUT-040 | incident-command | v7 | 2.6 | approval | current |
+| AUT-041 | rail-safety | v7 | 1.4 | approval | current |
+| AUT-042 | network-control | v7 | 3.3 | approval | current |
+| AUT-043 | public-liaison | v7 | 2.1 | approval | current |
+| AUT-044 | incident-command | v8 | 4.0 | approval | current |
+| AUT-045 | rail-safety | v8 | 2.8 | approval | current |
+| AUT-046 | network-control | v8 | 1.6 | approval | current |
+| AUT-047 | public-liaison | v8 | 3.5 | approval | current |
+| AUT-048 | incident-command | v8 | 2.3 | approval | current |
+| AUT-049 | rail-safety | v8 | 1.1 | approval | current |
+| AUT-050 | network-control | v8 | 3.0 | approval | current |
+| AUT-051 | public-liaison | v8 | 1.8 | approval | current |
+| AUT-052 | incident-command | v8 | 3.7 | approval | current |
+| AUT-053 | rail-safety | v8 | 2.5 | approval | current |
+| AUT-054 | network-control | v8 | 1.3 | approval | current |
+| AUT-055 | public-liaison | v9 | 3.2 | approval | current |
+| AUT-056 | incident-command | v9 | 2.0 | approval | current |
+| AUT-057 | rail-safety | v9 | 3.9 | approval | superseded |
+| AUT-058 | network-control | v9 | 2.7 | approval | current |
+| AUT-059 | public-liaison | v9 | 1.5 | approval | current |
+| AUT-060 | incident-command | v9 | 3.4 | approval | current |
+| AUT-061 | rail-safety | v9 | 2.2 | approval | current |
+| AUT-062 | network-control | v9 | 1.0 | approval | current |
+| AUT-063 | public-liaison | v9 | 2.9 | approval | current |
+
+## Decision constraints
+
+Name who may isolate, inspect, verify, dispatch, restore passenger service, and close.
+Treat semantic records and artifact mutations as non-authoritative work products.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

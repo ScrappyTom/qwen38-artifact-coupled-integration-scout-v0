@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM TEL-010-01
+SLOT_SOURCE: TELEMETRY
+SOURCE_VERSION: 4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71
+EVIDENCE_RESULT: RESULT-010
+EVIDENCE_ANCHOR: Current critical-signal coverage is 93 percent; seven percent remains unobserved.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: TELEMETRY reports current critical-signal coverage as 93 percent with seven percent remaining unobserved.
+
+## CLAIM TEL-010-02
+SLOT_SOURCE: TELEMETRY
+SOURCE_VERSION: 4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71
+EVIDENCE_RESULT: RESULT-010
+EVIDENCE_ANCHOR: Route-state delivery is 720 milliseconds at p95 and 1,180 milliseconds at p99.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: TELEMETRY reports route-state delivery latency as 720 milliseconds at p95 and 1,180 milliseconds at p99.
+
+## CLAIM TEL-010-03
+SLOT_SOURCE: TELEMETRY
+SOURCE_VERSION: 4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71
+EVIDENCE_RESULT: RESULT-010
+EVIDENCE_ANCHOR: The power warning threshold is 24.2 kilovolts and the operating stop is 23.8 kilovolts.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: TELEMETRY reports a power warning threshold of 24.2 kilovolts and an operating stop threshold of 23.8 kilovolts.
+
+## CLAIM TEL-010-04
+SLOT_SOURCE: TELEMETRY
+SOURCE_VERSION: 4c1bef4a93d7df8167a8b1a290697972feb2b3ff881c3758a7214b3ee2035d71
+EVIDENCE_RESULT: RESULT-010
+EVIDENCE_ANCHOR: TRACK, SIGNAL, POWER, ROLLING, and WEATHER rely on TELEMETRY observations while retaining their own gates and authorities.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: TELEMETRY states that TRACK, SIGNAL, POWER, ROLLING, and WEATHER rely on TELEMETRY observations while retaining their own gates and authorities.

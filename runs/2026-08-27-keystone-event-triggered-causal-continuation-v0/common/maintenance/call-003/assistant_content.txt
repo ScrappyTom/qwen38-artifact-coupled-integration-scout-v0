@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM SIG-CLAIM-01
+SLOT_SOURCE: SIGNAL
+SOURCE_VERSION: 88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: 99.2 percent is not a probability of safety
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The source states that 99.2 percent is not a probability of safety.
+
+## CLAIM SIG-CLAIM-02
+SLOT_SOURCE: SIGNAL
+SOURCE_VERSION: 88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: Crossing 12 warning time is 27 seconds against a minimum of 25 seconds
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The source states that Crossing 12 warning time is 27 seconds against a minimum of 25 seconds.
+
+## CLAIM SIG-CLAIM-03
+SLOT_SOURCE: SIGNAL
+SOURCE_VERSION: 88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: A logic build, route table, crossing controller, axle-counter reset, or dispatcher-link change makes prior signal evidence stale
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The source states that a logic build, route table, crossing controller, axle-counter reset, or dispatcher-link change makes prior signal evidence stale.
+
+## CLAIM SIG-CLAIM-04
+SLOT_SOURCE: SIGNAL
+SOURCE_VERSION: 88f6d41a54ff56cc0c89dec4e0402ae4e8ec90e00ed307fd6fddd2a673a37c71
+EVIDENCE_RESULT: RESULT-003
+EVIDENCE_ANCHOR: TRACK supplies route topology, CYBER supplies signed build custody, and TELEMETRY supplies current event delivery; none authorizes service alone.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: TRACK,CYBER,TELEMETRY
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The source states that TRACK supplies route topology, CYBER supplies signed build custody, and TELEMETRY supplies current event delivery; none authorizes service alone.

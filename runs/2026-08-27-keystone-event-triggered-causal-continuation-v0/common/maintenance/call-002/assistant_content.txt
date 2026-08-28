@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM TRACK-001
+SLOT_SOURCE: TRACK
+SOURCE_VERSION: ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: The current north-main alignment deviation is 3.2 millimeters.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The current north-main alignment deviation is 3.2 millimeters.
+
+## CLAIM TRACK-002
+SLOT_SOURCE: TRACK
+SOURCE_VERSION: ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: The passenger-service gate is no more than 4.0 millimeters in two consecutive geometry runs; one 3.2-millimeter run is insufficient.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The passenger-service gate is no more than 4.0 millimeters in two consecutive geometry runs, and one 3.2-millimeter run is insufficient.
+
+## CLAIM TRACK-003
+SLOT_SOURCE: TRACK
+SOURCE_VERSION: ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: River-bridge speed is limited to 25 miles per hour until ultrasonic inspection and bearing-temperature evidence are current.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: River-bridge speed is limited to 25 miles per hour until ultrasonic inspection and bearing-temperature evidence are current.
+
+## CLAIM TRACK-004
+SLOT_SOURCE: TRACK
+SOURCE_VERSION: ac72bbc05e4884494fb3237efaad511b5a68747011a36e4326e2fbd357ea2acc
+EVIDENCE_RESULT: RESULT-002
+EVIDENCE_ANCHOR: SIGNAL route proving consumes TRACK topology, while WEATHER and LOADS constrain speed and axle restrictions.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: SIGNAL, WEATHER, LOADS
+AUTHORITY: non_authoritative_derivative
+STATEMENT: SIGNAL route proving consumes TRACK topology, while WEATHER and LOADS constrain speed and axle restrictions.

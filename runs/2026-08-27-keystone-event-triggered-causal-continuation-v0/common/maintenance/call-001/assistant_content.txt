@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM MANDATE-001
+SLOT_SOURCE: MANDATE
+SOURCE_VERSION: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: Only network control may authorize an engineering movement
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The MANDATE source states that only network control may authorize an engineering movement.
+
+## CLAIM MANDATE-002
+SLOT_SOURCE: MANDATE
+SOURCE_VERSION: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: only the rail-safety director may authorize passenger service
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The MANDATE source states that only the rail-safety director may authorize passenger service.
+
+## CLAIM MANDATE-003
+SLOT_SOURCE: MANDATE
+SOURCE_VERSION: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: TRACK, SIGNAL, POWER, ROLLING, and CREW provide evidence but cannot authorize passenger service
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The MANDATE source states that TRACK, SIGNAL, POWER, ROLLING, and CREW provide evidence but cannot authorize passenger service.
+
+## CLAIM MANDATE-004
+SLOT_SOURCE: MANDATE
+SOURCE_VERSION: df5e0ae25a22101747f338fe585656baf46dd1dbf02669fbc7400544c03dcd4a
+EVIDENCE_RESULT: RESULT-001
+EVIDENCE_ANCHOR: REVIEW provides independent readiness findings but cannot dispatch a train
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: The MANDATE source states that REVIEW provides independent readiness findings but cannot dispatch a train.

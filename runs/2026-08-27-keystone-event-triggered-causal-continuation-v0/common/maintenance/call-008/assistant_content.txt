@@ -1,0 +1,44 @@
+# Anchored provenance-local delta
+## CLAIM FUEL-001
+SLOT_SOURCE: FUEL
+SOURCE_VERSION: b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: Backup-plant fuel covers eighteen hours at emergency traction load and eleven hours at full passenger peak.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: FUEL backup plant fuel covers eighteen hours at emergency traction load and eleven hours at full passenger peak.
+
+## CLAIM FUEL-002
+SLOT_SOURCE: FUEL
+SOURCE_VERSION: b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: Replacement switch machines cover 3.5 route-days, while traction sand covers 2.4 operating days.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: FUEL replacement switch machines cover 3.5 route-days and traction sand covers 2.4 operating days.
+
+## CLAIM FUEL-003
+SLOT_SOURCE: FUEL
+SOURCE_VERSION: b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: Six accessible buses arrive at 07:10 UTC with travel uncertainty of plus or minus forty minutes; planned arrival is not deployed capacity.
+MODE: source_reported_fact
+ATTRIBUTION: owner_source_reported
+REFERENTS: NONE
+AUTHORITY: non_authoritative_derivative
+STATEMENT: FUEL six accessible buses arrive at 07:10 UTC with travel uncertainty of plus or minus forty minutes, and planned arrival is not deployed capacity.
+
+## CLAIM FUEL-004
+SLOT_SOURCE: FUEL
+SOURCE_VERSION: b729f4f3e1ffd87cb340013e8fce71546b10ccb86e7d729ecd12e0d42a33a5bc
+EVIDENCE_RESULT: RESULT-008
+EVIDENCE_ANCHOR: POWER backup duration depends on FUEL, SIGNAL depends on switch machines, and PASSENGER depends on accessible bus bridging.
+MODE: source_reported_relationship
+ATTRIBUTION: owner_source_reported
+REFERENTS: POWER, SIGNAL, PASSENGER
+AUTHORITY: non_authoritative_derivative
+STATEMENT: FUEL POWER backup duration depends on FUEL, SIGNAL depends on switch machines, and PASSENGER depends on accessible bus bridging.
