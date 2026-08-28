@@ -1,5 +1,15 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-28: GPU experimentation is paused for host-apparatus
+review and refactor. The valid Trellis screen exposed divergent pending-versus-
+delivered accounting between provider-free Stage 0 and live execution. The
+current runner family also relies on large orchestration scripts and task
+wrappers that mutate shared module globals. Before another live study, the host
+must use one replayable delivery state machine, exact-body deduplication,
+semantic-gate-free capacity relief, and resumable twelve-call review tranches.
+See `HOST_APPARATUS_REVIEW_HANDOFF.md` and
+`TRELLIS_PRESSURE_SCREEN_RESULT.md`. No GPU operation is selected.
+
 Status: the Keystone event-triggered continuation is complete, sealed, and
 independently audited. The common system used 18 new model calls—ten semantic
 maintenance and eight actor calls—and 198,745 serialized tokens. It delivered
