@@ -1,0 +1,10 @@
+{
+  "schema": "keystone-event-triggered-causal-continuation-authorization-request-v0",
+  "run_id": "2026-08-27-keystone-event-triggered-causal-continuation-v0",
+  "scope": "one common continuation from the sealed E79 prefix plus a conditional exact V0/V1 fork if and only if the lifecycle trigger occurs",
+  "authorized": false,
+  "authorized_freeze_commit": null,
+  "retries": 0,
+  "provider_free_runner_qualified": true,
+  "note": "The integrated runner is provider-free qualified. A clean freeze commit and a separate exact external receipt are still required. This request does not authorize a GPU call."
+}

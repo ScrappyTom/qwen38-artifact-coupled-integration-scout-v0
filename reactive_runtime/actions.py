@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from typing import Any, Iterable
 
 from reactive_runtime.canonical import canonical_json_text
@@ -41,6 +42,13 @@ ACTION_FIELDS: dict[str, dict[str, type]] = {
     "upsert_decision_section": {"heading": str, "body": str},
     "patch_decision": {"edits": list},
     "replace_decision": {"content": str},
+    "replace_artifact_section": {
+        "candidate_sha256": str,
+        "artifact_sha256": str,
+        "section_heading": str,
+        "expected_section_sha256": str,
+        "replacement_section": str,
+    },
     "begin_verification": {},
     "run_check": {},
     "submit": {},
@@ -82,7 +90,9 @@ def _validate_range(request: Any, *, label: str) -> dict[str, Any]:
     if set(request) != expected:
         raise ValueError(f"{label} fields must be exactly {sorted(expected)}")
     source_id, start, end = (
-        request["source_id"], request["start_line"], request["end_line"]
+        request["source_id"],
+        request["start_line"],
+        request["end_line"],
     )
     if not isinstance(source_id, str) or not source_id:
         raise ValueError(f"{label}.source_id must be a non-empty string")
@@ -99,7 +109,9 @@ def parse_action(
     *,
     decision_headings: Iterable[str] = DECISION_HEADINGS,
 ) -> dict[str, Any]:
-    value = json.loads(content, parse_constant=_reject_constant, object_pairs_hook=_unique_object)
+    value = json.loads(
+        content, parse_constant=_reject_constant, object_pairs_hook=_unique_object
+    )
     if not isinstance(value, dict) or not isinstance(value.get("action"), str):
         raise ValueError("assistant content is not one action object")
     action = value["action"]
@@ -113,9 +125,17 @@ def parse_action(
         requests = value["requests"]
         if not isinstance(requests, list) or not 1 <= len(requests) <= MAX_BATCH_RANGES:
             raise ValueError(f"read_batch must contain 1..{MAX_BATCH_RANGES} ranges")
-        rows = [_validate_range(row, label=f"requests[{i}]") for i, row in enumerate(requests)]
-        if sum(row["end_line"] - row["start_line"] + 1 for row in rows) > MAX_BATCH_TOTAL_LINES:
-            raise ValueError(f"read_batch may contain at most {MAX_BATCH_TOTAL_LINES} lines")
+        rows = [
+            _validate_range(row, label=f"requests[{i}]")
+            for i, row in enumerate(requests)
+        ]
+        if (
+            sum(row["end_line"] - row["start_line"] + 1 for row in rows)
+            > MAX_BATCH_TOTAL_LINES
+        ):
+            raise ValueError(
+                f"read_batch may contain at most {MAX_BATCH_TOTAL_LINES} lines"
+            )
         for i, left in enumerate(rows):
             for right in rows[i + 1 :]:
                 if left["source_id"] == right["source_id"] and not (
@@ -131,17 +151,23 @@ def parse_action(
         total_new = 0
         for index, edit in enumerate(edits):
             if not isinstance(edit, dict) or set(edit) != {"old", "new"}:
-                raise ValueError(f"edits[{index}] fields must be exactly ['new', 'old']")
+                raise ValueError(
+                    f"edits[{index}] fields must be exactly ['new', 'old']"
+                )
             old, new = edit["old"], edit["new"]
             if not isinstance(old, str) or not old:
                 raise ValueError(f"edits[{index}].old must be a non-empty string")
             if not isinstance(new, str):
                 raise ValueError(f"edits[{index}].new must be a string")
             if len(old.encode("utf-8")) > MAX_PATCH_OLD_BYTES:
-                raise ValueError(f"edits[{index}].old exceeds {MAX_PATCH_OLD_BYTES} bytes")
+                raise ValueError(
+                    f"edits[{index}].old exceeds {MAX_PATCH_OLD_BYTES} bytes"
+                )
             total_new += len(new.encode("utf-8"))
         if total_new > MAX_PATCH_NEW_BYTES:
-            raise ValueError(f"patch_decision new text exceeds {MAX_PATCH_NEW_BYTES} bytes")
+            raise ValueError(
+                f"patch_decision new text exceeds {MAX_PATCH_NEW_BYTES} bytes"
+            )
         return value
     for field, expected_type in fields.items():
         observed = value[field]
@@ -152,13 +178,39 @@ def parse_action(
         if expected_type is str and not observed:
             raise ValueError(f"{field} must be non-empty")
     if action == "read_source":
-        _validate_range({key: value[key] for key in ("source_id", "start_line", "end_line")}, label=action)
-    if action == "upsert_decision_section" and value["heading"] not in tuple(decision_headings):
+        _validate_range(
+            {key: value[key] for key in ("source_id", "start_line", "end_line")},
+            label=action,
+        )
+    if action == "upsert_decision_section" and value["heading"] not in tuple(
+        decision_headings
+    ):
         raise ValueError("heading is not a declared decision section")
-    if action in {"replace_evidence_ledger", "replace_decision", "upsert_evidence_slot"}:
+    if action == "replace_artifact_section":
+        if value["section_heading"] not in tuple(decision_headings):
+            raise ValueError("section_heading is not a declared decision section")
+        for field in (
+            "candidate_sha256",
+            "artifact_sha256",
+            "expected_section_sha256",
+        ):
+            if not re.fullmatch(r"[0-9a-f]{64}", value[field]):
+                raise ValueError(f"{field} must be a lowercase SHA-256")
+        replacement_size = len(value["replacement_section"].encode("utf-8"))
+        if not 1 <= replacement_size <= MAX_ARTIFACT_BYTES:
+            raise ValueError(
+                f"replacement_section must contain 1..{MAX_ARTIFACT_BYTES} bytes"
+            )
+    if action in {
+        "replace_evidence_ledger",
+        "replace_decision",
+        "upsert_evidence_slot",
+    }:
         size = len(value["content"].encode("utf-8"))
         if not 1 <= size <= MAX_ARTIFACT_BYTES:
-            raise ValueError(f"artifact content must contain 1..{MAX_ARTIFACT_BYTES} bytes")
+            raise ValueError(
+                f"artifact content must contain 1..{MAX_ARTIFACT_BYTES} bytes"
+            )
     return value
 
 
@@ -226,6 +278,14 @@ def action_json_schema(
                     rule["enum"] = reopen
                 if field == "heading":
                     rule["enum"] = list(decision_headings)
+                if field == "section_heading":
+                    rule["enum"] = list(decision_headings)
+                if field in {
+                    "candidate_sha256",
+                    "artifact_sha256",
+                    "expected_section_sha256",
+                }:
+                    rule["pattern"] = "^[0-9a-f]{64}$"
                 if field in {"start_line", "end_line"}:
                     rule["minimum"] = 1
                 properties[field] = rule

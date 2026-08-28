@@ -193,7 +193,11 @@ def main() -> int:
                     raise RuntimeError("prompt overflow lacks a newly pending exact result")
                 pending = ledger.get(pending_result_id)
                 activation = activation_snapshot(
-                    pending=pending, ledger=ledger, world=world
+                    pending=pending,
+                    ledger=ledger,
+                    world=world,
+                    minimum_qualifying_sources=MIN_QUALIFYING_SOURCES,
+                    minimum_evidence_domains=MIN_QUALIFYING_DOMAINS,
                 )
                 ineligible: list[str] = []
                 if len(activation.qualifying_sources) < MIN_QUALIFYING_SOURCES:

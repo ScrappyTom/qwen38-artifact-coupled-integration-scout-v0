@@ -1,0 +1,99 @@
+{
+  "schema": "keystone-event-triggered-causal-continuation-contract-v0",
+  "run_id": "2026-08-27-keystone-event-triggered-causal-continuation-v0",
+  "task_id": "keystone-rail-restoration-decision-v0",
+  "status": "integrated_runner_provider_free_qualified",
+  "parent": {
+    "repository_commit": "eacafe5e4b46fcb3ffbadd90e9823d16796f6f4e",
+    "run_id": "2026-08-27-keystone-bounded-causal-pressure-screen-v0",
+    "run_seal_sha256": "cd5ef6975afa16bccf236353ca90a23470c369a60436f5410b35d53a661af8e5",
+    "pressure_boundary_sha256": "9b5fdc39827ea05b2f346ddb7f768f4b7d476d3ac00953713a4620d3f8b6c4fc",
+    "screen_result_sha256": "c3dbdaf6f47bb509da7e39738beccd2bbabb523cc5326507499231fe550328da",
+    "actor_calls": 9,
+    "serialized_tokens": 102009,
+    "candidate_sha256": "5b25793a20b182d59645e87d81a7e92b78bc4fed9403827ed559f454c16126aa",
+    "pending_result_id": "RESULT-009"
+  },
+  "source_locks": {
+    "task_source_lock_sha256": "c45d5c6dba9122c3d24210562e5da165956457150898c6b6e7663e7cf714939a",
+    "model_profile_lock_sha256": "09e3a397ae8787d9b4ea520ec7c15b65932243dfd0e23c22ddd5b7096587322a",
+    "tokenizer_projection_lock_sha256": "261ed098ede469474470c973ed7b98d8522aa1ea1b258dce4e4d719a4c1f7000"
+  },
+  "common_continuation": {
+    "positive_savings_first_fit_relief": true,
+    "first_relief_result_ids": [
+      "RESULT-001"
+    ],
+    "pending_result_delivery": "RESULT-009",
+    "actor_selected_ingress": true,
+    "semantic_scaffold": "common_temporary_anchored_non_authoritative",
+    "exact_incremental_artifact": true,
+    "actor_selected_verification_transition": true,
+    "current_candidate_bound_check": true,
+    "candidate_artifact_section_bound_repair": true
+  },
+  "activation": {
+    "detector": "reactive_runtime.causal_activation.detect_causal_fork_activation",
+    "unit": "exact_lifecycle_event_sequence",
+    "required_events": [
+      "nontrivial_candidate_enters_verification",
+      "current_candidate_bound_check_delivered",
+      "repair_rejected",
+      "candidate_remains_unchanged",
+      "later_exact_observation_acquired_for_next_decision"
+    ],
+    "fork_before": "next_actor_decision",
+    "excluded_units": [
+      "source_count",
+      "domain_count",
+      "accessible_world_size",
+      "first_context_pressure",
+      "host_semantic_readiness"
+    ]
+  },
+  "configuration_order": [
+    "V0_CURRENT_ONLY",
+    "V1_BOUNDED_CAUSAL_CONTINUITY"
+  ],
+  "runner": {
+    "path": "tools/run_keystone_event_fork.py",
+    "qualification_path": "KEYSTONE_EVENT_FORK_RUNNER_QUALIFICATION.json",
+    "qualification_sha256": "caf3ebb55003e386316bc2124469e1a85246643cdde0686d187c50d3cb9e7632",
+    "common_prefix_execution_count": 1,
+    "branch_clone_boundary": "after_trigger_before_next_actor_decision",
+    "branch_candidate_worlds_independent": true,
+    "additional_model_calls_by_host": 0,
+    "live_bound_repair_schema_closed": true
+  },
+  "budgets": {
+    "maximum_common_continuation_calls": 18,
+    "maximum_calls_per_arm": 8,
+    "maximum_new_model_calls": 34,
+    "maximum_new_serialized_tokens": 700000,
+    "attempts_per_call": 1,
+    "retries": 0
+  },
+  "terminal_dispositions": {
+    "trigger_absent": "causal_trigger_not_observed",
+    "branch_infeasible": "exact_branch_infeasible",
+    "candidate_not_ready": "stop_incomplete",
+    "passing_current_check_and_submission": "submitted"
+  },
+  "required_metrics": [
+    "activation_tax",
+    "alternative_repair",
+    "effect_uptake",
+    "current_recheck",
+    "readiness",
+    "truthful_closure",
+    "prompt_and_response_tokens",
+    "wall_time"
+  ],
+  "promotion": {
+    "product_default_authorized": false,
+    "custom_controller_authorized": false,
+    "new_acquisition_gate_authorized": false,
+    "same_task_retry_authorized": false
+  },
+  "gpu_authorized": false
+}

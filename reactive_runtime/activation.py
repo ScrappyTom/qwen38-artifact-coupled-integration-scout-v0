@@ -92,12 +92,14 @@ class ActivationSnapshot:
     qualifying_sources: tuple[str, ...]
     qualifying_domains: tuple[str, ...]
     pending_novel_lines: int
+    minimum_qualifying_sources: int = MINIMUM_QUALIFYING_SOURCES
+    minimum_evidence_domains: int = MINIMUM_EVIDENCE_DOMAINS
 
     def as_dict(self) -> dict[str, Any]:
         return {
             "coverage_lines": self.coverage_lines,
-            "minimum_evidence_domains": MINIMUM_EVIDENCE_DOMAINS,
-            "minimum_qualifying_sources": MINIMUM_QUALIFYING_SOURCES,
+            "minimum_evidence_domains": self.minimum_evidence_domains,
+            "minimum_qualifying_sources": self.minimum_qualifying_sources,
             "pending_novel_lines": self.pending_novel_lines,
             "qualifying_domains": list(self.qualifying_domains),
             "qualifying_sources": list(self.qualifying_sources),
@@ -106,7 +108,12 @@ class ActivationSnapshot:
 
 
 def activation_snapshot(
-    *, pending: ResultRecord, ledger: ResultLedger, world: ArchitectureWorld
+    *,
+    pending: ResultRecord,
+    ledger: ResultLedger,
+    world: ArchitectureWorld,
+    minimum_qualifying_sources: int = MINIMUM_QUALIFYING_SOURCES,
+    minimum_evidence_domains: int = MINIMUM_EVIDENCE_DOMAINS,
 ) -> ActivationSnapshot:
     coverage = delivered_coverage(ledger)
     qualifying = tuple(
@@ -125,6 +132,8 @@ def activation_snapshot(
         qualifying_sources=qualifying,
         qualifying_domains=domains,
         pending_novel_lines=pending_novel_lines(pending, ledger),
+        minimum_qualifying_sources=minimum_qualifying_sources,
+        minimum_evidence_domains=minimum_evidence_domains,
     )
 
 
@@ -134,15 +143,23 @@ def boundary_eligibility_failures(
     ledger: ResultLedger,
     world: ArchitectureWorld,
     initial_candidate_sha256: str,
+    minimum_qualifying_sources: int = MINIMUM_QUALIFYING_SOURCES,
+    minimum_evidence_domains: int = MINIMUM_EVIDENCE_DOMAINS,
 ) -> tuple[list[str], ActivationSnapshot]:
     """Classify a realized overflow without semantic host judgment."""
-    snapshot = activation_snapshot(pending=pending, ledger=ledger, world=world)
+    snapshot = activation_snapshot(
+        pending=pending,
+        ledger=ledger,
+        world=world,
+        minimum_qualifying_sources=minimum_qualifying_sources,
+        minimum_evidence_domains=minimum_evidence_domains,
+    )
     failures: list[str] = []
     if pending.result_kind != "source_observation":
         failures.append("pending_result_is_not_source_observation")
-    if len(snapshot.qualifying_sources) < MINIMUM_QUALIFYING_SOURCES:
+    if len(snapshot.qualifying_sources) < minimum_qualifying_sources:
         failures.append("insufficient_delivered_source_coverage")
-    if len(snapshot.qualifying_domains) < MINIMUM_EVIDENCE_DOMAINS:
+    if len(snapshot.qualifying_domains) < minimum_evidence_domains:
         failures.append("insufficient_delivered_evidence_domains")
     if snapshot.pending_novel_lines < 1:
         failures.append("pending_observation_has_no_novel_source_lines")

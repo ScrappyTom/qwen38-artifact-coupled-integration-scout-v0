@@ -4,13 +4,23 @@ Status: the fresh Keystone bounded-causal verification pressure screen is
 complete, sealed, and independently audited. The actor made nine clean novel
 source reads and reached authentic pending-result pressure at 22,267 tokens,
 1,275 over the 20,992-token allowance. Deterministic first-fit relief of only
-`RESULT-001` would restore feasibility at 20,648 tokens. The fork is nonetheless
-non-qualifying: only eight sources and eight evidence domains had crossed a
-later actor boundary, below the frozen ten/ten interaction gate. No treatment,
-maintenance, construction, or measured V0/V1 continuation ran. The next
-eligible work is offline activation-geometry reconciliation; no further GPU
-run is authorized. See `KEYSTONE_PRESSURE_SCREEN_RESULT.md` and
-`KEYSTONE_PRESSURE_SCREEN_AUDIT.json`.
+`RESULT-001` would restore feasibility at 20,648 tokens. The run is retained as
+a non-qualifying diagnosis: it consumed 102,009 serialized tokens without
+construction, verification, or a treatment-dependent decision.
+
+The count-based ten-source/ten-domain pressure gate is now retired. First-fit
+relief returns to common infrastructure, and one event-triggered continuation
+from the sealed E79 prefix has passed provider-free qualification. It may fork
+only after a nontrivial candidate, current candidate-bound check, rejected
+repair, unchanged candidate, and later exact observation acquisition actually
+occur. This research
+lane is explicitly separate from the donor-preserving Franken Agent product
+path. No GPU run is authorized. See `PROJECT_ROUTING_RESET.md`,
+`KEYSTONE_EVENT_FORK_PLAN.md`, `KEYSTONE_EVENT_FORK_PREFLIGHT.json`,
+`KEYSTONE_EVENT_FORK_RUNNER_QUALIFICATION.json`,
+`KEYSTONE_PRESSURE_SCREEN_RESULT.md`, and `KEYSTONE_PRESSURE_SCREEN_AUDIT.json`.
+The transcript-level interpretation is
+in `KEYSTONE_PRESSURE_SCREEN_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
 
 The Orchard F0/P1 phase-lifecycle interaction is complete, sealed, and
 independently audited. Both configurations followed the same pressured
