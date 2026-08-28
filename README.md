@@ -1,26 +1,26 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status: the fresh Keystone bounded-causal verification pressure screen is
-complete, sealed, and independently audited. The actor made nine clean novel
-source reads and reached authentic pending-result pressure at 22,267 tokens,
-1,275 over the 20,992-token allowance. Deterministic first-fit relief of only
-`RESULT-001` would restore feasibility at 20,648 tokens. The run is retained as
-a non-qualifying diagnosis: it consumed 102,009 serialized tokens without
-construction, verification, or a treatment-dependent decision.
+Status: the Keystone event-triggered continuation is complete, sealed, and
+independently audited. The common system used 18 new model calls—ten semantic
+maintenance and eight actor calls—and 198,745 serialized tokens. It delivered
+all fourteen sources, but the candidate remained the empty seed. The actor then
+attempted an invalid MANDATE/TRACK batch and reread both sources separately.
+The exact rejected-repair trigger never occurred, so no V0/V1 branch or
+treatment-dependent decision existed.
 
-The count-based ten-source/ten-domain pressure gate is now retired. First-fit
-relief returns to common infrastructure, and one event-triggered continuation
-from the sealed E79 prefix has passed provider-free qualification. It may fork
-only after a nontrivial candidate, current candidate-bound check, rejected
-repair, unchanged candidate, and later exact observation acquisition actually
-occur. This research
-lane is explicitly separate from the donor-preserving Franken Agent product
-path. No GPU run is authorized. See `PROJECT_ROUTING_RESET.md`,
-`KEYSTONE_EVENT_FORK_PLAN.md`, `KEYSTONE_EVENT_FORK_PREFLIGHT.json`,
-`KEYSTONE_EVENT_FORK_RUNNER_QUALIFICATION.json`,
-`KEYSTONE_PRESSURE_SCREEN_RESULT.md`, and `KEYSTONE_PRESSURE_SCREEN_AUDIT.json`.
-The transcript-level interpretation is
-in `KEYSTONE_PRESSURE_SCREEN_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
+The corrected pre-treatment total is 27 model calls and 300,754 serialized
+tokens. The semantic carrier admitted only 8 of 48 proposed claims, covered
+three sources, and retained no relationship claims. This makes the result more
+than a trigger no-show: exact custody, relief, semantic maintenance, and
+incremental artifact affordances interacted without converting complete source
+coverage into cumulative work. Keystone is closed under its frozen stop rule;
+no same-world retry, threshold change, or successor mechanism is authorized.
+This research lane remains separate from the donor-preserving Franken Agent
+product path. See `KEYSTONE_EVENT_FORK_RESULT.md`,
+`KEYSTONE_EVENT_FORK_AUDIT.json`, and
+`KEYSTONE_EVENT_FORK_QUALITATIVE_TRANSCRIPT_APPENDIX.md`. The immutable parent
+screen remains documented in `KEYSTONE_PRESSURE_SCREEN_RESULT.md` and
+`KEYSTONE_PRESSURE_SCREEN_QUALITATIVE_TRANSCRIPT_APPENDIX.md`.
 
 The Orchard F0/P1 phase-lifecycle interaction is complete, sealed, and
 independently audited. Both configurations followed the same pressured
