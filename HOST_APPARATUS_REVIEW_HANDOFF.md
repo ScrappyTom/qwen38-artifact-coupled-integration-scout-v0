@@ -2,8 +2,18 @@
 
 Date: 2026-08-28
 
-Status: review-only return point; do not run GPU experiments from the current
-runner family
+Status: handoff implemented in the isolated `host_refactor/` subproject;
+historical runner family remains frozen and must not be used for a new GPU
+experiment
+
+Implementation outcome, 2026-08-28: the selected new path now has the shared
+delivery kernel, packet/deduplication projection, common capacity relief,
+current candidate/check binding, one-shot provider custody, exact
+checkpoint/review/resume, immutable Trellis adapter, and provider-free E83
+replay requested below. See `host_refactor/WORK_LOG.md` and
+`host_refactor/TEST_MATRIX.md` for the governing process and evidence. This
+handoff remains the historical diagnosis; the refactor result is recorded
+separately after the implementation commit is created.
 
 ## Immediate diagnosis
 
