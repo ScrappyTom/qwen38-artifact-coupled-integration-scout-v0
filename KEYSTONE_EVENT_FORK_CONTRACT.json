@@ -58,7 +58,8 @@
   "runner": {
     "path": "tools/run_keystone_event_fork.py",
     "qualification_path": "KEYSTONE_EVENT_FORK_RUNNER_QUALIFICATION.json",
-    "qualification_sha256": "caf3ebb55003e386316bc2124469e1a85246643cdde0686d187c50d3cb9e7632",
+    "qualification_sha256": "db6eb7e6164905e483d88a95347961466797108b6c7ad6ffd786b626400670d8",
+    "runner_sha256": "c221e86b53e3de00d7ad5598ee1651e12a3f811bf2e6e09e20dcd765607855f0",
     "common_prefix_execution_count": 1,
     "branch_clone_boundary": "after_trigger_before_next_actor_decision",
     "branch_candidate_worlds_independent": true,

@@ -144,17 +144,18 @@ def detect_causal_fork_activation(
         ):
             continue
         phase_seen = True
-        candidate = _candidate_after(phase_row)
-        if not candidate or candidate == initial_candidate_sha256:
+        phase_candidate = _candidate_after(phase_row)
+        if not phase_candidate or phase_candidate == initial_candidate_sha256:
             continue
 
         for check_index in range(phase_index + 1, len(trace)):
             check_row = trace[check_index]
+            candidate = _current_check_candidate(check_row)
             if (
                 check_row.get("result_kind") != "check_observation"
-                or _current_check_candidate(check_row) != candidate
+                or not candidate
+                or candidate == initial_candidate_sha256
                 or not _candidate_is_unchanged(check_row, candidate)
-                or not _all_unchanged(trace[phase_index + 1 : check_index], candidate)
             ):
                 continue
             current_check_seen = True

@@ -1,11 +1,11 @@
-from __future__ import annotations
-
 """Mechanical activation semantics aligned to the actor's ingress contract.
 
 Eligibility is expressed in delivered source-line coverage, never in result
 object count.  This makes one full-source read and a two-source batch comparable
 without asking the host to infer what the evidence means.
 """
+
+from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Any, Iterable
@@ -63,7 +63,9 @@ def delivered_coverage(ledger: ResultLedger) -> dict[str, int]:
             ranges.setdefault(str(row["source_id"]), []).append(
                 (int(row["start_line"]), int(row["end_line"]))
             )
-    return {source_id: _covered_lines(rows) for source_id, rows in sorted(ranges.items())}
+    return {
+        source_id: _covered_lines(rows) for source_id, rows in sorted(ranges.items())
+    }
 
 
 def pending_novel_lines(pending: ResultRecord, ledger: ResultLedger) -> int:

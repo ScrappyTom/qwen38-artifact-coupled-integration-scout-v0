@@ -755,7 +755,6 @@ def run_common(
             write_json(
                 common_root / "COMMON_FORK_STATE.json", common_state.binding(world)
             )
-        seal_tree(common_root, common_root / "RUN_SEAL.json")
     if release is None or release.get("released") is not True:
         raise RuntimeError("common runtime release failed")
     result = {
@@ -777,6 +776,7 @@ def run_common(
         ),
     }
     write_json(common_root / "COMMON_RESULT.json", result)
+    seal_tree(common_root, common_root / "RUN_SEAL.json")
     return common_state, world, result
 
 
@@ -1168,9 +1168,17 @@ def main() -> int:
     print(json.dumps(aggregate, indent=2, sort_keys=True))
     observed_model_calls = common_calls + branch_calls
     observed_serialized_tokens = common_tokens + branch_tokens
+    common_terminal = (
+        None if common_result is None else common_result.get("terminal_disposition")
+    )
     passed = (
         failure is None
         and common_result is not None
+        and common_terminal
+        in {
+            "causal_trigger_not_observed",
+            "causal_trigger_observed_before_next_actor_decision",
+        }
         and (
             common_result.get("trigger_observed") is False
             or len(branches) == len(CONFIGURATION_ORDER)

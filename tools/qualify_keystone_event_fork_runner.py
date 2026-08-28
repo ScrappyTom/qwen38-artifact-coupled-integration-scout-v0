@@ -16,7 +16,7 @@ if str(ROOT) not in sys.path:
 
 from reactive_runtime.actions import action_json_schema, parse_action
 from reactive_runtime.anchored_provenance import AnchoredProvenanceRegister
-from reactive_runtime.canonical import write_json
+from reactive_runtime.canonical import sha256_file, write_json
 from reactive_runtime.configuration import causal_verification_actor_actions
 from reactive_runtime.keystone_event_fork import (
     CommonForkState,
@@ -61,6 +61,12 @@ def qualify(*, write_output: bool = True) -> dict[str, Any]:
     for key, value in observed_budgets.items():
         if budgets.get(key) != value:
             failures.append(f"budget:{key}")
+    runner_sha256 = sha256_file(ROOT / "tools" / "run_keystone_event_fork.py")
+    runner_source_bound = (
+        contract.get("runner", {}).get("runner_sha256") == runner_sha256
+    )
+    if not runner_source_bound:
+        failures.append("runner_source_binding")
 
     actions = causal_verification_actor_actions(
         "V1_BOUNDED_CAUSAL_CONTINUITY", phase="verification"
@@ -162,6 +168,8 @@ def qualify(*, write_output: bool = True) -> dict[str, Any]:
         "run_id": RUN_ID,
         "scope": SCOPE,
         "runner_path": "tools/run_keystone_event_fork.py",
+        "runner_sha256": runner_sha256,
+        "runner_source_bound": runner_source_bound,
         "model_calls": 0,
         "provider_calls": 0,
         "gpu_authorized": False,

@@ -129,3 +129,26 @@ def test_activation_tax_counts_only_the_common_prefix_before_the_fork() -> None:
     assert tax["calls_before_first_treatment_decision"] == 14
     assert tax["continuation_serialized_tokens"] == 500
     assert tax["serialized_tokens_before_first_treatment_decision"] == 102_509
+
+
+def test_admitted_candidate_change_before_current_check_starts_a_new_epoch() -> None:
+    trace = qualifying_trace()
+    trace.insert(
+        2,
+        event(
+            12,
+            "replace_artifact_section",
+            before=C1,
+            after=C2,
+            result_kind="candidate_effect",
+        ),
+    )
+    for call, row in enumerate(trace[3:], start=13):
+        row["actor_call"] = call
+        row["candidate_sha256_before"] = C2
+        row["candidate_sha256_after"] = C2
+        if row.get("current_check_binding"):
+            row["current_check_binding"]["evaluated_candidate_sha256"] = C2
+    activation = detect_causal_fork_activation(trace, initial_candidate_sha256=C0)
+    assert activation.qualified is True
+    assert activation.candidate_sha256 == C2

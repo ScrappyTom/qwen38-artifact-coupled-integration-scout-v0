@@ -75,6 +75,12 @@ def test_contract_has_one_integrated_run_and_no_product_promotion() -> None:
     assert contract["common_continuation"]["positive_savings_first_fit_relief"] is True
     assert contract["budgets"]["maximum_common_continuation_calls"] == 18
     assert contract["budgets"]["maximum_calls_per_arm"] == 8
+    assert contract["runner"]["runner_sha256"] == sha256_file(
+        ROOT / contract["runner"]["path"]
+    )
+    assert contract["runner"]["qualification_sha256"] == sha256_file(
+        ROOT / contract["runner"]["qualification_path"]
+    )
     assert contract["promotion"] == {
         "product_default_authorized": False,
         "custom_controller_authorized": False,
@@ -116,6 +122,8 @@ def test_integrated_runner_qualifies_provider_free_without_gpu_authority() -> No
     assert result["branch_bindings_equal_before_projection"] is True
     assert result["branch_mutable_state_independent"] is True
     assert result["bound_repair_live_schema_closed"] is True
+    assert len(result["runner_sha256"]) == 64
+    assert result["runner_source_bound"] is True
 
 
 def test_routing_documents_keep_product_and_research_separate() -> None:
