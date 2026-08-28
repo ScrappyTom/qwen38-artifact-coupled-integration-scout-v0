@@ -22,6 +22,10 @@ CAUSAL_VERIFICATION_CONFIGURATIONS = (
     "V0_CURRENT_ONLY",
     "V1_BOUNDED_CAUSAL_CONTINUITY",
 )
+ARTIFACT_CENTERED_LIFECYCLE_CONFIGURATIONS = (
+    "A0_MATRIX_AND_DECISION",
+    "A1_SCAFFOLD_MATRIX_DECISION",
+)
 
 
 @dataclass(frozen=True)
@@ -143,6 +147,36 @@ def causal_verification_actor_actions(
             "replace_decision",
             "begin_verification",
         )
+    if phase == "verification":
+        return (
+            "replace_artifact_section",
+            "run_check",
+            "read_source",
+            "read_batch",
+            "reopen_exact",
+            "submit",
+        )
+    raise ValueError(f"unknown phase: {phase}")
+
+
+def artifact_centered_actor_actions(
+    configuration_id: str, *, phase: str
+) -> tuple[str, ...]:
+    """Common viable action geometry for the Trellis three-arm scout."""
+
+    if configuration_id not in ARTIFACT_CENTERED_LIFECYCLE_CONFIGURATIONS:
+        raise ValueError(f"unknown artifact-centered configuration: {configuration_id}")
+    if phase == "construction":
+        actions = (
+            "read_source",
+            "read_batch",
+            "reopen_exact",
+            "upsert_decision_section",
+            "patch_decision",
+            "replace_decision",
+            "begin_verification",
+        )
+        return (*actions[:3], "replace_evidence_ledger", *actions[3:])
     if phase == "verification":
         return (
             "replace_artifact_section",

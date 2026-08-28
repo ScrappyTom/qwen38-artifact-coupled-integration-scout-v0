@@ -1,0 +1,66 @@
+{
+  "schema_version": "trellis-heat-evaluator-v0",
+  "evaluator_id": "trellis-heat-evaluator-v0",
+  "task_id": "trellis-heat-continuity-decision-v0",
+  "ledger_title": "# Trellis Evidence-to-Requirement Matrix",
+  "decision_title": "# Trellis Urban Heat Continuity Decision",
+  "decision_word_range": [1200, 1650],
+  "construction_milestone_minimum_words": 760,
+  "construction_milestone_minimum_sources": 7,
+  "minimum_unique_sources": 10,
+  "minimum_ledger_sources": 8,
+  "source_ids": ["COUNCIL", "CLIMATE", "GRID", "WATER", "CLINIC", "SHELTER", "TRANSIT", "COMMS", "SUPPLY", "LABOR", "LINEAGE", "REVIEW"],
+  "decision_headings": [
+    "Authority, scope, and operating states",
+    "Heat triggers and geographic staging",
+    "Power, water, and cooling continuity",
+    "Clinical, shelter, and accessibility operations",
+    "Transit, communications, logistics, and staffing",
+    "Execution, rollback, verification, and closure"
+  ],
+  "relation_requirements": {
+    "T01_authority": {
+      "expected": "Emergency manager activates; health commissioner authorizes citywide emergency; continuity director closes after current evidence; checks are not authority.",
+      "patterns": ["emergency manager.{0,100}activat", "health commissioner.{0,100}(citywide|heat-health)", "continuity director.{0,100}clos", "(mechanical|successful) check.{0,80}(not|neither).{0,80}(authority|authorize)"]
+    },
+    "T02_heat": {
+      "expected": "31.4 C observed; limited 30.0 for two windows; expanded 32.0; 0.62 forecast probability differs from 84 percent coverage.",
+      "patterns": ["31\\.4 degrees.{0,100}30\\.0.{0,100}two consecutive", "32\\.0 degrees", "0\\.62.{0,100}84 percent.{0,100}(coverage|station)"]
+    },
+    "T03_power": {
+      "expected": "31.0 MW installed versus 24.5 usable; 12.6 kV within 12.2-12.9 at every node for three windows; backup 8.4 MW for 16 emergency versus 9 full-load hours.",
+      "patterns": ["31\\.0 megawatts.{0,100}24\\.5 megawatts", "12\\.6 kilovolts.{0,100}12\\.2.{0,40}12\\.9.{0,100}every.{0,30}node", "three consecutive.{0,40}(fifteen|15)-minute", "8\\.4 megawatts.{0,100}(sixteen|16) hours.{0,100}(nine|9) hours"]
+    },
+    "T04_water": {
+      "expected": "38 psi observed; >=35 psi every node for three windows; 1.6 million liters reserve versus 0.19 million liters/hour.",
+      "patterns": ["38 psi.{0,100}35 psi.{0,100}every.{0,30}node", "three consecutive.{0,40}(ten|10)-minute", "1\\.6 million liters.{0,100}0\\.19 million liters per hour"]
+    },
+    "T05_clinic_shelter": {
+      "expected": "71 percent occupancy versus <=82 for two windows plus 12 staffed beds; shelter 2400 installed versus 1760 staffed and accessible.",
+      "patterns": ["71 percent.{0,100}82 percent.{0,100}two consecutive", "twelve staffed cooling beds", "2,?400 seats.{0,100}1,?760 seats.{0,100}(staffed|accessible)"]
+    },
+    "T06_transit_comms": {
+      "expected": "22 of 26 shuttles plus four accessible; route median 26 versus p95 44; 89 percent delivery leaves 11 uncertainty; latency 680 p95 and 1140 p99.",
+      "patterns": ["twenty-two.{0,40}twenty-six.{0,160}four.{0,60}accessible", "median.{0,40}26 minutes.{0,100}p95.{0,40}44 minutes", "89 percent.{0,100}(eleven|11) percent.{0,80}(uncertainty|undelivered)", "680.{0,30}(milliseconds|ms).{0,30}p95.{0,80}1,?140.{0,30}(milliseconds|ms).{0,30}p99"]
+    },
+    "T07_supply_labor": {
+      "expected": "Fuel 16 emergency versus 9 full-load hours; distinct inventory units; simultaneous labor roles and 12 on versus 10 off.",
+      "patterns": ["(sixteen|16) hours.{0,100}(nine|9) hours", "2\\.8 operating days.{0,100}3\\.6 clinic-days", "twelve hours.{0,100}ten consecutive hours", "twenty-six drivers.{0,100}ten interpreters"]
+    },
+    "T08_currentness": {
+      "expected": "T9 binds F6/G4/R8/L11/C7; T8 historical unless transferred and rechecked; independent authorized acceptance required.",
+      "patterns": ["t9.{0,50}f6.{0,50}g4.{0,50}r8.{0,50}l11.{0,50}c7", "t8.{0,100}historical.{0,100}(recheck|rechecked)", "independent.{0,100}(accept|acceptance).{0,100}(authorized|owner)"]
+    }
+  },
+  "forbidden_relation_patterns": {
+    "heat_gate_reversal": ["31.4 degrees is the expanded gate", "one 31.4-degree observation is sufficient"],
+    "power_sum_reversal": ["55.5 megawatts available", "31.0 plus 24.5 megawatts"],
+    "capacity_reversal": ["2,400 staffed accessible seats", "twenty-two shuttles alone are sufficient"],
+    "coverage_reversal": ["84 percent probability", "89 percent exposed residents"],
+    "self_authorized_readiness": ["semantic scaffold proves readiness", "mechanical check proves readiness", "submission proves readiness"]
+  },
+  "negation_aware_forbidden_patterns": {
+    "duration_reversal": ["sixteen days", "16 days"],
+    "labor_rule_reversal": ["ten hours on duty and twelve hours off"]
+  }
+}
