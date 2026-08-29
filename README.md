@@ -1,5 +1,18 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-29: an offline future-only bounded candidate
+causal-history lifecycle now passes exact E96 replay, adversarial, reopen,
+checkpoint, and provider-free writable-lifecycle qualification. It compacts an
+already delivered mutation action/effect pair only after exact lineage proves
+that the current candidate contains the effect; pending effects and actions
+remain exact, and semantic uptake is never inferred. At the sealed E96 V1
+pre-terminal event prefix, five delivered pairs become compact receipts while
+pending `RESULT-018` remains exact, reducing the locked offline packet from
+21,023 to 19,116 tokens. The old 21,041-token live result remains sealed and
+unchanged. See `TRELLIS_CANDIDATE_EFFECT_LIFECYCLE_STAGE0.md`,
+`TRELLIS_CANDIDATE_EFFECT_LIFECYCLE_RESULT.md`, and
+`host_refactor/effect_lifecycle/`.
+
 Status update, 2026-08-29: the first refactored-host Trellis interaction tranche
 is complete and sealed at result commit
 `0626259773f1411272566caa1b4a00c83e70e606`. Both actors made the same twelve

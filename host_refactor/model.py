@@ -22,6 +22,7 @@ class EventKind(str, Enum):
     INVOCATION_COMPLETED = "invocation_completed"
     PROVIDER_FAILED = "provider_failed"
     RESULT_EXTERNALIZED = "result_externalized"
+    CANDIDATE_EFFECT_EXTERNALIZED = "candidate_effect_externalized"
     REOPEN_REQUESTED = "reopen_requested"
     REPEAT_DEMAND = "repeat_demand"
     RESPONSE_REJECTED = "response_rejected"

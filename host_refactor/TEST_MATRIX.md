@@ -37,6 +37,10 @@ Date: 2026-08-28
 | One-call integrated live-smoke path | provider-free test starts from E83, verifies 21,401-token pressure, externalizes RESULT-001, delivers RESULT-007 on call 8, admits one action, and writes a chained checkpoint/review |
 | Exact offline/live tokenizer projections | v1 custody plus two fresh-server diagnostics bind identical relieved prompt bytes to 18,785 offline and 18,786 running-server tokens; v2 fails on deviation from either exact count |
 | Qualified integrated live path | sealed v2 custody proves one 18,786-token live request delivered RESULT-007 on call 8, admitted one valid batch read, acquired RESULT-008 as pending, wrote checkpoint/review, and released the server |
+| Bounded candidate causal history | exact E96 replay externalizes delivered RESULT-013–017 action/effect pairs, retains pending RESULT-018, preserves hashes, and restores offline packet feasibility |
+| Candidate lifecycle fail-closed behavior | pending effect, provider failure, wrong candidate hash, broken lineage, and tampered causal-action hash tests |
+| Candidate lifecycle checkpoint/reopen | exact effect reopen and checkpoint hydration reproduce event and packet bytes |
+| Provider-free writable lifecycle | fresh Trellis fixture traverses ledger mutation, full decision, verification, check, repair, current recheck, and submission with bounded applied history |
 
 ## Verification commands
 
@@ -72,3 +76,6 @@ prompt tokens, RESULT-001 relief, and a feasible packet.
   exact locked tokenizer without provider I/O.
 - All 282 repository tests pass in 329.53 seconds after adding the live-smoke
   contract and tests.
+- Five candidate causal-history tests pass, Ruff and mypy pass, and the full
+  current repository regression passes 303 tests in 422.95 seconds. This is an
+  offline future-path qualification and made zero GPU/provider calls.

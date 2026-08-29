@@ -89,3 +89,17 @@ resource ceilings, and checkpoint parentage are frozen mechanical bindings.
 
 Reason: these facts can be enforced without semantic judgment and are required
 to interpret later model behavior safely.
+
+## D011 — bound applied mutation history as a causal pair
+
+Decision: once a candidate effect has crossed a completed model call and the
+exact effect lineage ends at the current candidate, the host may replace both
+the old effect body and its bound assistant mutation action with compact
+model-facing receipts. Pending effects and their actions remain exact.
+
+Reason: Trellis E96 retained multiple copies of artifact content in the current
+candidate, mutation actions, and effect results. Generic pressure relief could
+not touch those non-relief-eligible effects, while generic receipts could be
+larger than the small effect bodies. The causal-pair transition removes only
+mechanically proven redundancy and does not infer model understanding,
+readiness, or semantic value.

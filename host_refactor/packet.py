@@ -96,6 +96,23 @@ def exact_receipt(result: ExactResult) -> str:
     )
 
 
+def applied_candidate_effect_receipt(result: ExactResult) -> str:
+    """Render compact model-facing custody for an applied candidate effect."""
+
+    return canonical_json_text(
+        {
+            "candidate_sha256_after": result.candidate_sha256_after,
+            "exact_result_sha256": result.exact_content_sha256,
+            "reopen_action": {
+                "action": "reopen_exact",
+                "result_id": result.result_id,
+            },
+            "result_id": result.result_id,
+            "schema": "bounded-host-applied-candidate-effect-receipt-v0",
+        }
+    )
+
+
 def duplicate_suppression(result: ExactResult, resident_result_id: str) -> str:
     return canonical_json_text(
         {
@@ -152,8 +169,15 @@ class PacketComposer:
                     projected.delivery_state is DeliveryState.DELIVERED_EXTERNAL
                     or entry.entry_id != projected.transcript_entry_id
                 ):
-                    content = exact_receipt(result)
-                    representation = "exact_receipt"
+                    if (
+                        projected.delivery_state is DeliveryState.DELIVERED_EXTERNAL
+                        and result.result_kind == "candidate_effect"
+                    ):
+                        content = applied_candidate_effect_receipt(result)
+                        representation = "applied_candidate_effect_receipt"
+                    else:
+                        content = exact_receipt(result)
+                        representation = "exact_receipt"
                 else:
                     identity = result.body_identity
                     prior = rendered_bodies.get(identity)

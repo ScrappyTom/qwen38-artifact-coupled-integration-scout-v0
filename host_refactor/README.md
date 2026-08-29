@@ -17,7 +17,11 @@ Both runs are sealed. V2 froze both exact projections, completed the one
 permitted live call, delivered pending `RESULT-007`, admitted a valid batch
 read, acquired the resulting exact observation as pending, and stopped at the
 mandatory checkpoint. The seal and runtime release verify. This subproject has
-now made exactly one model call. All 282 pre-run repository tests pass.
+now made exactly one model call. A future-only bounded candidate causal-history
+module is also implemented offline: delivered mutation action/effect pairs may
+leave residency only after exact lineage proof, while pending effects remain
+exact and a replaceable mechanical current-effect record remains visible.
+Historical runners and sealed results remain unchanged.
 
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners

@@ -3,8 +3,11 @@ from __future__ import annotations
 from dataclasses import replace
 from typing import Any, Iterable, Mapping
 
-from reactive_runtime.canonical import canonical_json_bytes, sha256_bytes
-from reactive_runtime.canonical import canonical_json_text
+from reactive_runtime.canonical import (
+    canonical_json_bytes,
+    canonical_json_text,
+    sha256_bytes,
+)
 
 from host_refactor.model import (
     DeliveryState,
@@ -296,6 +299,64 @@ class HostKernel:
             {"reason": reason, "result_id": result_id},
         )
 
+    def externalize_applied_candidate_effect(
+        self,
+        result_id: str,
+        *,
+        current_candidate_sha256: str,
+    ) -> "HostKernel":
+        """Move a delivered effect out of residency after exact lineage proof.
+
+        This is a lifecycle transition, not ordinary pressure relief. The
+        result's exact bytes and delivery history remain in the event ledger.
+        """
+
+        state = self.project()
+        row = self._result(state, result_id)
+        if row.delivery_state is not DeliveryState.DELIVERED_RESIDENT:
+            raise InvalidTransition(
+                f"cannot lifecycle-externalize {result_id} from "
+                f"{row.delivery_state.value}"
+            )
+        if row.result.result_kind != "candidate_effect":
+            raise InvalidTransition(
+                f"result is not a candidate effect: {result_id}"
+            )
+        observed_current = self._current_candidate_sha256(state)
+        if observed_current != current_candidate_sha256:
+            raise InvalidTransition("declared current candidate hash mismatch")
+        if not self._effect_is_ancestor_of_current(state, result_id):
+            raise InvalidTransition(
+                f"candidate effect is not in current candidate lineage: {result_id}"
+            )
+        action_entry_id = f"CALL-{row.result.acquired_call:06d}-ASSISTANT"
+        try:
+            action_entry = next(
+                entry
+                for entry in state.transcript
+                if entry.entry_id == action_entry_id
+            )
+        except StopIteration as exc:
+            raise InvalidTransition(
+                f"candidate effect lacks exact causal action: {result_id}"
+            ) from exc
+        if action_entry.role != "assistant" or action_entry.result_id is not None:
+            raise InvalidTransition(
+                f"candidate effect causal action is not ordinary assistant output: "
+                f"{result_id}"
+            )
+        action_sha256 = sha256_bytes(action_entry.content.encode("utf-8"))
+        return self._append(
+            EventKind.CANDIDATE_EFFECT_EXTERNALIZED,
+            {
+                "action_entry_id": action_entry_id,
+                "action_sha256": action_sha256,
+                "current_candidate_sha256": current_candidate_sha256,
+                "reason": "effect_represented_by_current_candidate",
+                "result_id": result_id,
+            },
+        )
+
     def request_reopen(
         self,
         result_id: str,
@@ -493,6 +554,75 @@ class HostKernel:
                     row,
                     delivery_state=DeliveryState.DELIVERED_EXTERNAL,
                 )
+            elif event.kind is EventKind.CANDIDATE_EFFECT_EXTERNALIZED:
+                result_id = str(data["result_id"])
+                row = self._result_map(results, result_id)
+                if row.delivery_state is not DeliveryState.DELIVERED_RESIDENT:
+                    raise InvalidTransition(
+                        f"cannot lifecycle-externalize {result_id} from "
+                        f"{row.delivery_state.value}"
+                    )
+                if row.result.result_kind != "candidate_effect":
+                    raise InvalidTransition(
+                        f"result is not a candidate effect: {result_id}"
+                    )
+                declared_current = str(data["current_candidate_sha256"])
+                if self._current_candidate_sha256_from_slots(state_slots) != declared_current:
+                    raise InvalidTransition("declared current candidate hash mismatch")
+                projected_state = ProjectedHostState(
+                    results=results,
+                    state_slots=state_slots,
+                    transcript=tuple(transcript),
+                    completed_calls=tuple(completed),
+                    failed_calls=tuple(failed),
+                    terminal=terminal,
+                    events_sha256="",
+                )
+                if not self._effect_is_ancestor_of_current(
+                    projected_state, result_id
+                ):
+                    raise InvalidTransition(
+                        f"candidate effect is not in current candidate lineage: {result_id}"
+                    )
+                action_entry_id = str(data["action_entry_id"])
+                expected_action_entry_id = (
+                    f"CALL-{row.result.acquired_call:06d}-ASSISTANT"
+                )
+                if action_entry_id != expected_action_entry_id:
+                    raise InvalidTransition(
+                        f"candidate effect causal action mismatch: {result_id}"
+                    )
+                try:
+                    action_index = next(
+                        index
+                        for index, entry in enumerate(transcript)
+                        if entry.entry_id == action_entry_id
+                    )
+                except StopIteration as exc:
+                    raise InvalidTransition(
+                        f"candidate effect lacks exact causal action: {result_id}"
+                    ) from exc
+                action_entry = transcript[action_index]
+                action_sha256 = sha256_bytes(
+                    action_entry.content.encode("utf-8")
+                )
+                if action_sha256 != data["action_sha256"]:
+                    raise InvalidTransition(
+                        f"candidate effect causal action hash mismatch: {result_id}"
+                    )
+                transcript[action_index] = replace(
+                    action_entry,
+                    content=self._applied_candidate_action_receipt(
+                        row.result,
+                        action_entry_id=action_entry_id,
+                        action_sha256=action_sha256,
+                    ),
+                    entry_kind="applied_candidate_action_receipt",
+                )
+                results[result_id] = replace(
+                    row,
+                    delivery_state=DeliveryState.DELIVERED_EXTERNAL,
+                )
             elif event.kind is EventKind.REOPEN_REQUESTED:
                 result_id = str(data["result_id"])
                 row = self._result_map(results, result_id)
@@ -570,3 +700,62 @@ class HostKernel:
             return results[result_id]
         except KeyError as exc:
             raise InvalidTransition(f"unknown result id: {result_id}") from exc
+
+    @staticmethod
+    def _current_candidate_sha256(state: ProjectedHostState) -> str | None:
+        return HostKernel._current_candidate_sha256_from_slots(state.state_slots)
+
+    @staticmethod
+    def _current_candidate_sha256_from_slots(
+        state_slots: Mapping[str, ExactStateObject],
+    ) -> str | None:
+        candidate = state_slots.get("current_candidate")
+        if candidate is None:
+            return None
+        value = candidate.metadata.get("candidate_sha256")
+        return None if value is None else str(value)
+
+    @staticmethod
+    def _effect_is_ancestor_of_current(
+        state: ProjectedHostState,
+        result_id: str,
+    ) -> bool:
+        effects = sorted(
+            (
+                row.result
+                for row in state.results.values()
+                if row.result.result_kind == "candidate_effect"
+            ),
+            key=lambda result: (result.acquired_call, result.result_id),
+        )
+        try:
+            start = next(
+                index
+                for index, result in enumerate(effects)
+                if result.result_id == result_id
+            )
+        except StopIteration:
+            return False
+        after = effects[start].candidate_sha256_after
+        for later in effects[start + 1 :]:
+            if later.metadata.get("before_sha256") != after:
+                return False
+            after = later.candidate_sha256_after
+        return after == HostKernel._current_candidate_sha256(state)
+
+    @staticmethod
+    def _applied_candidate_action_receipt(
+        result: ExactResult,
+        *,
+        action_entry_id: str,
+        action_sha256: str,
+    ) -> str:
+        return canonical_json_text(
+            {
+                "candidate_sha256_after": result.candidate_sha256_after,
+                "exact_action_sha256": action_sha256,
+                "exact_history_entry_id": action_entry_id,
+                "result_id": result.result_id,
+                "schema": "bounded-host-applied-candidate-action-receipt-v0",
+            }
+        )

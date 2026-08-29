@@ -7,9 +7,8 @@ import pytest
 from reactive_runtime.seal import verify_tree_seal
 
 from interaction_scout.continuation import hydrate_continuation
-from interaction_scout.fixtures import GroundedMaintenanceFixture, ScriptedActorProvider
+from interaction_scout.fixtures import GroundedMaintenanceFixture
 from interaction_scout.lifecycle import TREATMENT_CONFIGURATION
-from interaction_scout.live_path import run_interaction_tranche
 from interaction_scout.system import CONFIGURATION_ORDER
 from tools.offline_tokenizer import OfflineTokenizer
 from tools.run_refactored_interaction_continuation import (
@@ -40,7 +39,7 @@ def test_continuation_freeze_and_parent_seal() -> None:
 
 
 @pytest.mark.parametrize("configuration_id", CONFIGURATION_ORDER)
-def test_exact_checkpoint_resume_reaches_common_scripted_closure(
+def test_historical_checkpoint_rejects_changed_execution_manifest(
     tmp_path: Path,
     configuration_id: str,
 ) -> None:
@@ -56,37 +55,18 @@ def test_exact_checkpoint_resume_reaches_common_scripted_closure(
         / "tranche-001"
         / "CHECKPOINT.json"
     )
-    orchestrator, adapter, kernel, counters = hydrate_continuation(
-        repository_root=ROOT,
-        checkpoint_path=checkpoint,
-        trajectory_root=tmp_path / configuration_id,
-        configuration_id=configuration_id,
-        count_messages=tokenizer.count_messages,
-        count_text=tokenizer.count_text,
-        maintenance_complete=(
-            maintenance if configuration_id == TREATMENT_CONFIGURATION else None
-        ),
-    )
-    state = kernel.project()
-    assert len(state.completed_calls) == 12
-    assert state.results["RESULT-012"].delivery_state.value == "pending"
-    actor = ScriptedActorProvider(adapter, tokenizer.count_messages, tokenizer.count_text)
-    actor.calls = 12
-    result = run_interaction_tranche(
-        orchestrator=orchestrator,
-        kernel=kernel,
-        counters=counters,
-        actor_complete=actor,
-        run_root=tmp_path / f"run-{configuration_id}",
-        parent_checkpoint_path=checkpoint,
-    )
-    assert result.disposition.value == "completed"
-    assert result.actor_attempts == 7
-    assert adapter.world.submitted is True
-    assert adapter.world.last_check_projection is not None
-    assert adapter.world.last_check_projection["passed"] is True
-    if configuration_id == TREATMENT_CONFIGURATION:
-        assert result.maintenance_attempts <= 6
-    else:
-        assert result.maintenance_attempts == 0
+    with pytest.raises(ValueError, match="checkpoint configuration mismatch"):
+        hydrate_continuation(
+            repository_root=ROOT,
+            checkpoint_path=checkpoint,
+            trajectory_root=tmp_path / configuration_id,
+            configuration_id=configuration_id,
+            count_messages=tokenizer.count_messages,
+            count_text=tokenizer.count_text,
+            maintenance_complete=(
+                maintenance
+                if configuration_id == TREATMENT_CONFIGURATION
+                else None
+            ),
+        )
     assert RUN_ID.endswith("continuation-v0")

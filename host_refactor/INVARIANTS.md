@@ -18,6 +18,11 @@ ACQUIRED -> PENDING -> DELIVERED_RESIDENT <-> DELIVERED_EXTERNAL
 - Exact reopen is legal only from delivered-external state and returns the
   object to pending for a later completed invocation.
 - Currentness is independent of delivery.
+- A delivered candidate effect may move to lifecycle-external state only when
+  its exact mutation lineage ends at the exact current candidate.
+- That transition may compact the bound assistant mutation action and effect
+  together, but preserves both originals in append-only custody.
+- Pending candidate effects and their causal actions remain exact-resident.
 
 ## Event and replay invariants
 
@@ -54,6 +59,8 @@ overlap is distinct in v0.
   does not append the exact payload again.
 - Packet manifests explain every exact body, receipt, pending result, and
   mechanical feedback entry.
+- Applied candidate mutations use compact action/effect receipts only after
+  completed delivery and exact candidate-lineage proof.
 - Every provider request is bound to the packet hash, manifest hash, exact
   provider-message hash, result exposures, and state-slot exposures.
 - Payload transformation may add provider controls but may not drop, reorder,
