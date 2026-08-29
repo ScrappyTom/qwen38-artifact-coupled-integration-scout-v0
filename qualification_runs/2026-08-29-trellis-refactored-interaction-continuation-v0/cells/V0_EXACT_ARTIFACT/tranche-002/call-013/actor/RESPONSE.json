@@ -1,0 +1,1 @@
+{"content":"{\"action\":\"read_batch\",\"requests\":[{\"end_line\":60,\"source_id\":\"COUNCIL\",\"start_line\":1},{\"end_line\":60,\"source_id\":\"CLIMATE\",\"start_line\":1}]}","finish_reason":"stop","usage":{"completion_tokens":45,"prompt_tokens":18475,"prompt_tokens_details":{"cached_tokens":0},"total_tokens":18520}}
