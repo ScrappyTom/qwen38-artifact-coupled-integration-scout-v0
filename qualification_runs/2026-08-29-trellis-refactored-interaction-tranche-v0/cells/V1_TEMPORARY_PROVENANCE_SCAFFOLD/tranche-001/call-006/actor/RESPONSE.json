@@ -1,0 +1,1 @@
+{"content":"{\n  \"action\": \"read_batch\",\n  \"requests\": [\n    {\"end_line\": 94, \"source_id\": \"CLINIC\", \"start_line\": 61},\n    {\"end_line\": 94, \"source_id\": \"SHELTER\", \"start_line\": 61}\n  ]\n}","finish_reason":"stop","usage":{"completion_tokens":76,"prompt_tokens":16106,"prompt_tokens_details":{"cached_tokens":12829},"total_tokens":16182}}

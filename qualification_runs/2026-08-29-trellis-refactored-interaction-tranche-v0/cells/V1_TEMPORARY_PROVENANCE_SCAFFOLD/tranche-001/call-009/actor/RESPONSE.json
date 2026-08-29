@@ -1,0 +1,1 @@
+{"content":"{\n  \"action\": \"read_batch\",\n  \"requests\": [\n    {\"end_line\": 60, \"source_id\": \"SUPPLY\", \"start_line\": 1},\n    {\"end_line\": 60, \"source_id\": \"LABOR\", \"start_line\": 1}\n  ]\n}","finish_reason":"stop","usage":{"completion_tokens":72,"prompt_tokens":20091,"prompt_tokens_details":{"cached_tokens":0},"total_tokens":20163}}
