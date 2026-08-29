@@ -312,3 +312,23 @@ Verification:
 - mypy passed over all 13 host modules;
 - all 282 repository tests passed in 329.53 seconds;
 - GPU/provider calls remained zero.
+
+## 2026-08-28 — live smoke v0 environmental stop
+
+Observed:
+
+- authorization and selected-asset verification passed;
+- the fresh-runtime gate found pre-existing `llama-server` PID 12992 and
+  stopped before starting this project's server;
+- inspection showed that the process served an active Franken Agent job on
+  port 18084 and occupied nearly all available VRAM;
+- the process was not terminated;
+- provider attempts and model calls were both zero;
+- the v0 run was sealed and remains closed under its no-retry rule.
+
+Disposition:
+
+- no host or model claim follows from v0;
+- preserve the exact failure as `HOST_LIVE_SMOKE_V0_RESULT.md`;
+- freeze the unchanged one-call design under v1 and wait for the other GPU job
+  to release the device before seeking new exact authorization.

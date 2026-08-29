@@ -1,0 +1,12 @@
+{
+  "apparatus_commit": "fbc1db052051b23cfb8667780eab0a9939dee11a",
+  "failure": "pre_existing_unrelated_active_llama_server",
+  "model_calls": 0,
+  "provider_attempts": 0,
+  "retries": 0,
+  "run_id": "2026-08-28-host-refactor-live-smoke-v0",
+  "run_seal_sha256": "cee41353d20a360aea2dd7ff920eaa2d261eb4cf994c66b370818df3784316dd",
+  "schema": "host-refactor-live-smoke-v0-result-v0",
+  "status": "sealed_pre_provider_environment_block",
+  "v1_disposition": "same_one_call_design_new_run_identity_required_after_gpu_becomes_free"
+}

@@ -13,6 +13,8 @@ from host_refactor.live_smoke import (
     build_live_smoke_system,
     live_smoke_execution_manifest,
     qualifying_disposition,
+    RUN_ID,
+    SCOPE,
 )
 from host_refactor.model import DeliveryState
 from tools.offline_tokenizer import OfflineTokenizer
@@ -48,6 +50,8 @@ def test_live_smoke_manifest_binds_runner_contract_and_base_host() -> None:
     assert "HOST_LIVE_SMOKE_CONTRACT.json" in manifest["files"]
     assert "tools/run_host_refactor_live_smoke.py" in manifest["files"]
     assert len(str(manifest["execution_manifest_sha256"])) == 64
+    assert RUN_ID == "2026-08-28-host-refactor-live-smoke-v1"
+    assert SCOPE == "host_refactor_live_smoke_v1"
 
 
 def test_one_call_smoke_crosses_pressure_delivery_action_and_checkpoint() -> None:

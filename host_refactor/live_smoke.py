@@ -21,8 +21,8 @@ from host_refactor.trellis_adapter import (
 from host_refactor.trellis_fixture import build_e83_kernel
 
 
-RUN_ID = "2026-08-28-host-refactor-live-smoke-v0"
-SCOPE = "host_refactor_live_smoke_v0"
+RUN_ID = "2026-08-28-host-refactor-live-smoke-v1"
+SCOPE = "host_refactor_live_smoke_v1"
 MAXIMUM_NEW_MODEL_CALLS = 1
 MAXIMUM_SERIALIZED_TOKENS = 30_000
 EXPECTED_ORDINARY_TOKENS = 21_401

@@ -28,9 +28,9 @@
     "checkpoint, mechanical review, raw HTTP custody, runtime release, and tree seal"
   ],
   "retries": 0,
-  "run_id": "2026-08-28-host-refactor-live-smoke-v0",
-  "schema": "host-refactor-live-smoke-contract-v0",
-  "scope": "host_refactor_live_smoke_v0",
+  "run_id": "2026-08-28-host-refactor-live-smoke-v1",
+  "schema": "host-refactor-live-smoke-contract-v1",
+  "scope": "host_refactor_live_smoke_v1",
   "status": "frozen_pending_exact_commit_and_external_authorization",
   "task_id": "trellis-heat-continuity-decision-v0"
 }

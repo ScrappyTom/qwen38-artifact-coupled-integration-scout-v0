@@ -2,8 +2,9 @@
 
 Date: 2026-08-28
 
-Status: offline-qualified; pending a clean frozen commit and separate exact GPU
-authorization.
+Status: v0 sealed before provider I/O because a separate authorized GPU job was
+active; identical v1 design is offline-qualified pending a new clean freeze
+commit and separate exact GPU authorization.
 
 ## Purpose
 
@@ -41,15 +42,16 @@ all custody and shutdown gates pass.
 
 ## Frozen limits
 
-- Run ID: `2026-08-28-host-refactor-live-smoke-v0`
-- Scope: `host_refactor_live_smoke_v0`
+- Run ID: `2026-08-28-host-refactor-live-smoke-v1`
+- Scope: `host_refactor_live_smoke_v1`
 - New model calls: at most 1
 - Serialized tokens: at most 30,000
 - Attempts per call: 1
 - Retries: 0
 - Automatic continuation: prohibited
 
-The launcher requires an authorization receipt outside the repository that
+The v0 run is permanently closed and preserved in
+`HOST_LIVE_SMOKE_V0_RESULT.md`. The v1 launcher requires an authorization receipt outside the repository that
 binds those values to the eventual clean freeze commit. It refuses a dirty
 tree, an existing run directory, mismatched assets, or any failed runtime gate.
 
