@@ -39,12 +39,31 @@
   18,963 call-21 characters exactly before continuing six characters.
 - The next packet measured 23,811 tokens and stopped before provider I/O. The
   runtime released and the run seal verifies.
-- Review found an apparatus censor: the live verification request declared no
-  `run_check`, repair, recheck, or submit contract. Provider-free fixtures had
-  bypassed this actor-facing seam by invoking actions directly.
+- Review found an apparatus censor: the live response schema permitted
+  verification actions, but the natural-language request still supplied only
+  the construction contract and no check/repair/recheck guidance.
+  Provider-free fixtures had bypassed this actor-facing seam by invoking
+  actions directly.
 - Review also found a rejected-response lifecycle gap: the full rejected
   assistant body remained resident beside the compact rejection observation,
   even though no world transition occurred.
 - The sealed v0 route will not be resumed under changed code. A repaired route
   requires provider-free actor-request inspection, compact rejected-response
   projection with exact external custody, a new run ID, and new authorization.
+
+## 2026-08-29 — repaired apparatus implemented offline
+
+- Added a replaceable exact `current_action_contract` state object at
+  verification entry. It supersedes the construction contract and explains
+  current check, bounded repair, effect uptake, recheck, and closure discipline.
+- Hardened provider-free fixtures: a scripted action now fails unless it is
+  present in both the response JSON schema and readable action contract.
+- Added an append-only `rejected_response_externalized` transition. The exact
+  raw response remains in provider custody and event history; ordinary prompt
+  projection receives a compact hash-bound receipt because no action or world
+  transition was admitted.
+- Replayed the exact sealed calls 19–22 provider-free. Both truncated bodies
+  were compacted, the phase contract was visible, and the prospective next
+  packet remained feasible.
+- The sealed v0 route remains closed. A repaired live route requires a new
+  Stage 0, run ID, frozen commit, and explicit authorization.

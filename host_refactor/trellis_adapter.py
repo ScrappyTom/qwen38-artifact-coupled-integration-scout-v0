@@ -194,6 +194,32 @@ class TrellisDomainAdapter:
             },
         )
 
+    def current_action_contract_state(self) -> ExactStateObject:
+        if self.world.phase != "verification":
+            raise ValueError("current action-contract state is verification-only")
+        contract = (
+            self.spec.paths.task_root / "VERIFICATION_ACTIONS.md"
+        ).read_text(encoding="utf-8")
+        content = (
+            "# Current phase action contract\n\n"
+            "PHASE: verification\n\n"
+            "This contract supersedes the earlier construction action contract. "
+            "Run a current candidate-bound check before repair. Repair only the "
+            "failed criteria through bounded section replacement, then run a new "
+            "check against the changed candidate before considering submission.\n\n"
+            + contract
+        )
+        return ExactStateObject(
+            slot_id="current_action_contract",
+            object_id=f"action-contract:{self.spec.configuration.task_id}",
+            object_version="verification-v1",
+            exact_content=content,
+            metadata={
+                "phase": "verification",
+                "supersedes": "task_trellis/ACTIONS.md",
+            },
+        )
+
     def handle(
         self, content: str, *, call_index: int, kernel: HostKernel
     ) -> DomainOutcome:
@@ -248,16 +274,26 @@ class TrellisDomainAdapter:
         terminal = TerminalCode.COMPLETED if action.get("action") == "submit" else None
         current = kernel.project().state_slots.get("current_candidate")
         candidate_state = self.current_candidate_state()
-        state_updates = (
-            ()
-            if current is not None
+        state_updates: list[ExactStateObject] = []
+        if not (
+            current is not None
             and current.object_version == candidate_state.object_version
             and current.content_sha256 == candidate_state.content_sha256
-            else (candidate_state,)
-        )
+        ):
+            state_updates.append(candidate_state)
+        if self.world.phase == "verification":
+            action_contract = self.current_action_contract_state()
+            current_contract = kernel.project().state_slots.get(
+                action_contract.slot_id
+            )
+            if (
+                current_contract is None
+                or current_contract.as_dict() != action_contract.as_dict()
+            ):
+                state_updates.append(action_contract)
         return DomainOutcome(
             result=exact,
-            state_updates=state_updates,
+            state_updates=tuple(state_updates),
             terminal=terminal,
             action=action,
         )

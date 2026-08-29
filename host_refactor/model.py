@@ -26,6 +26,7 @@ class EventKind(str, Enum):
     REOPEN_REQUESTED = "reopen_requested"
     REPEAT_DEMAND = "repeat_demand"
     RESPONSE_REJECTED = "response_rejected"
+    REJECTED_RESPONSE_EXTERNALIZED = "rejected_response_externalized"
     ACTION_DISPOSITION = "action_disposition"
     REQUEST_BINDING_REJECTED = "request_binding_rejected"
     TERMINAL_RECORDED = "terminal_recorded"

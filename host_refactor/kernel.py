@@ -237,6 +237,33 @@ class HostKernel:
             },
         )
 
+    def externalize_rejected_response(
+        self,
+        *,
+        call_index: int,
+        finish_reason: str,
+        response_sha256: str,
+        rejection_result_id: str,
+        transcript_entry_id: str,
+    ) -> "HostKernel":
+        """Remove an unadmitted response body from ordinary prompt residency.
+
+        The exact body remains in the append-only event log and provider custody.
+        This transition is allowed only after the completed invocation has been
+        explicitly rejected and therefore caused no admitted domain action.
+        """
+
+        return self._append(
+            EventKind.REJECTED_RESPONSE_EXTERNALIZED,
+            {
+                "call_index": call_index,
+                "finish_reason": finish_reason,
+                "rejection_result_id": rejection_result_id,
+                "response_sha256": response_sha256,
+                "transcript_entry_id": transcript_entry_id,
+            },
+        )
+
     def record_request_binding_rejection(
         self,
         *,
@@ -449,6 +476,8 @@ class HostKernel:
         transcript: list[TranscriptEntry] = []
         completed: list[int] = []
         failed: list[int] = []
+        completed_responses: dict[int, dict[str, str]] = {}
+        rejected_responses: dict[int, dict[str, str]] = {}
         terminal: TerminalCode | None = None
         for event in self._events:
             data = event.data
@@ -534,6 +563,10 @@ class HostKernel:
                         last_delivered_call=call_index,
                     )
                 completed.append(call_index)
+                completed_responses[call_index] = {
+                    "finish_reason": str(data["finish_reason"]),
+                    "response_sha256": str(data["response_sha256"]),
+                }
             elif event.kind is EventKind.PROVIDER_FAILED:
                 call_index = int(data["call_index"])
                 if call_index in completed or call_index in failed:
@@ -644,8 +677,73 @@ class HostKernel:
                     resident,
                     demand_count=resident.demand_count + 1,
                 )
+            elif event.kind is EventKind.RESPONSE_REJECTED:
+                call_index = int(data["call_index"])
+                invocation = completed_responses.get(call_index)
+                if invocation is None:
+                    raise InvalidTransition(
+                        f"response rejection precedes completed call: {call_index}"
+                    )
+                if invocation != {
+                    "finish_reason": str(data["finish_reason"]),
+                    "response_sha256": str(data["response_sha256"]),
+                }:
+                    raise InvalidTransition(
+                        f"response rejection does not bind completed call: {call_index}"
+                    )
+                rejected_responses[call_index] = {
+                    "finish_reason": str(data["finish_reason"]),
+                    "rejection_result_id": str(data["rejection_result_id"]),
+                    "response_sha256": str(data["response_sha256"]),
+                }
+            elif event.kind is EventKind.REJECTED_RESPONSE_EXTERNALIZED:
+                call_index = int(data["call_index"])
+                rejection = rejected_responses.get(call_index)
+                expected = {
+                    "finish_reason": str(data["finish_reason"]),
+                    "rejection_result_id": str(data["rejection_result_id"]),
+                    "response_sha256": str(data["response_sha256"]),
+                }
+                if rejection != expected:
+                    raise InvalidTransition(
+                        f"rejected response externalization lacks exact rejection: {call_index}"
+                    )
+                entry_id = str(data["transcript_entry_id"])
+                try:
+                    entry_index = next(
+                        index
+                        for index, entry in enumerate(transcript)
+                        if entry.entry_id == entry_id
+                    )
+                except StopIteration as exc:
+                    raise InvalidTransition(
+                        f"rejected response transcript entry missing: {entry_id}"
+                    ) from exc
+                entry = transcript[entry_index]
+                if entry.role != "assistant":
+                    raise InvalidTransition(
+                        f"rejected response transcript role is not assistant: {entry_id}"
+                    )
+                if entry.entry_kind == "rejected_assistant_response_receipt":
+                    raise InvalidTransition(
+                        f"rejected response already externalized: {entry_id}"
+                    )
+                if sha256_bytes(entry.content.encode("utf-8")) != expected["response_sha256"]:
+                    raise InvalidTransition(
+                        f"rejected response transcript hash mismatch: {entry_id}"
+                    )
+                transcript[entry_index] = replace(
+                    entry,
+                    content=self._rejected_response_receipt(
+                        call_index=call_index,
+                        finish_reason=expected["finish_reason"],
+                        response_sha256=expected["response_sha256"],
+                        rejection_result_id=expected["rejection_result_id"],
+                        transcript_entry_id=entry_id,
+                    ),
+                    entry_kind="rejected_assistant_response_receipt",
+                )
             elif event.kind in {
-                EventKind.RESPONSE_REJECTED,
                 EventKind.ACTION_DISPOSITION,
                 EventKind.REQUEST_BINDING_REJECTED,
             }:
@@ -669,6 +767,30 @@ class HostKernel:
             failed_calls=tuple(failed),
             terminal=terminal,
             events_sha256=sha256_bytes(event_bytes),
+        )
+
+    @staticmethod
+    def _rejected_response_receipt(
+        *,
+        call_index: int,
+        finish_reason: str,
+        response_sha256: str,
+        rejection_result_id: str,
+        transcript_entry_id: str,
+    ) -> str:
+        return canonical_json_text(
+            {
+                "admitted_action": False,
+                "call_index": call_index,
+                "exact_response_retained_externally": True,
+                "finish_reason": finish_reason,
+                "history_handle": f"response://sha256/{response_sha256}",
+                "rejection_result_id": rejection_result_id,
+                "response_sha256": response_sha256,
+                "schema": "bounded-host-rejected-response-receipt-v0",
+                "transcript_entry_id": transcript_entry_id,
+                "world_transition_applied": False,
+            }
         )
 
     def as_dict(self) -> dict[str, Any]:

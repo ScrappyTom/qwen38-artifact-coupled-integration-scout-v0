@@ -93,6 +93,7 @@ def test_stage0_provider_free_lifecycle_qualifies() -> None:
     assert result["additional_actor_calls"] == 11
     assert result["additional_maintenance_calls"] == 0
     assert result["tranche_dispositions"] == ["checkpoint_pause", "completed"]
+    assert "current_action_contract" in result["state_slots_exposed"]
 
 
 def test_authorization_contract_has_checkpoint_and_no_retry() -> None:

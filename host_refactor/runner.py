@@ -261,6 +261,13 @@ class HostRunner:
                 rejection_message=rejection.payload_content,
                 result_id=rejection_id,
             )
+            completed = completed.externalize_rejected_response(
+                call_index=next_call,
+                finish_reason=provider_outcome.finish_reason,
+                response_sha256=response_sha256,
+                rejection_result_id=rejection_id,
+                transcript_entry_id=f"CALL-{next_call:06d}-ASSISTANT",
+            )
             completed = completed.acquire(rejection).schedule(
                 rejection_id,
                 call_index=next_call + 1,
@@ -330,6 +337,19 @@ class HostRunner:
             current = completed.project().state_slots.get(state_object.slot_id)
             if current is None or current.as_dict() != state_object.as_dict():
                 completed = completed.set_state_object(state_object)
+                if current is None:
+                    completed = completed.append_transcript(
+                        TranscriptEntry(
+                            entry_id=(
+                                f"CALL-{next_call:06d}-STATE-"
+                                f"{state_object.slot_id.upper()}"
+                            ),
+                            role="user",
+                            content=state_object.exact_content,
+                            state_slot_id=state_object.slot_id,
+                            entry_kind="exact_state_slot",
+                        )
+                    )
         candidate_after = self._candidate_sha256(completed)
         completed = completed.record_action_disposition(
             call_index=next_call,

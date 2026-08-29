@@ -1,5 +1,20 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-29: the sealed E98 live verification-lifecycle scout
+crossed the pending effect, added the missing sixth section, and entered
+verification, but then exposed two apparatus faults. Its machine response
+schema permitted verification actions while its readable messages remained
+construction-only; two truncated, unadmitted assistant bodies also remained
+fully prompt-resident and caused exact recurrence plus a new capacity block.
+The record has been corrected to preserve that interface split. Offline host
+repairs now expose an exact phase-specific action contract and replace rejected
+response bodies with hash-bound prompt receipts while preserving raw provider
+custody and append-only history. The exact four-call failure sequence now
+replays to a feasible next packet. The sealed v0 route will not be resumed; a
+new Stage 0 and authorization are required. See
+`TRELLIS_E97_VERIFICATION_LIFECYCLE_SCOUT_RESULT.md` and
+`host_refactor/lifecycle_scout/E98_REPAIR_PLAN.md`.
+
 Status update, 2026-08-29: the next live question is now frozen as a
 donor-derived E97 verification-lifecycle scout. It imports the exact E96 V1
 state before its historical `capacity_blocked` terminal through an explicit

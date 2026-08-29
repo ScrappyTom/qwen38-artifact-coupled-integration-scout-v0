@@ -9,6 +9,7 @@ from host_refactor.model import (
     ExactStateObject,
     TranscriptEntry,
 )
+from reactive_runtime.canonical import sha256_bytes
 
 
 def result(result_id: str = "RESULT-001", *, version: str = "v1") -> ExactResult:
@@ -94,6 +95,71 @@ class HostKernelTests(unittest.TestCase):
             hydrated.project().events_sha256,
             kernel.project().events_sha256,
         )
+
+    def test_rejected_response_externalization_requires_exact_prior_rejection(
+        self,
+    ) -> None:
+        content = '{"action":"partial"}'
+        response_sha256 = sha256_bytes(content.encode("utf-8"))
+        kernel = (
+            HostKernel()
+            .complete_invocation(
+                call_index=1,
+                included_result_ids=(),
+                request_sha256="request",
+                response_sha256=response_sha256,
+                finish_reason="length",
+            )
+            .append_transcript(
+                TranscriptEntry(
+                    "CALL-000001-ASSISTANT",
+                    "assistant",
+                    content,
+                )
+            )
+        )
+        with self.assertRaises(InvalidTransition):
+            kernel.externalize_rejected_response(
+                call_index=1,
+                finish_reason="length",
+                response_sha256=response_sha256,
+                rejection_result_id="REJECTION-1",
+                transcript_entry_id="CALL-000001-ASSISTANT",
+            )
+        rejected = kernel.record_response_rejection(
+            call_index=1,
+            finish_reason="length",
+            response_sha256=response_sha256,
+            rejection_result_id="REJECTION-1",
+        )
+        with self.assertRaises(InvalidTransition):
+            rejected.externalize_rejected_response(
+                call_index=1,
+                finish_reason="length",
+                response_sha256="wrong",
+                rejection_result_id="REJECTION-1",
+                transcript_entry_id="CALL-000001-ASSISTANT",
+            )
+        externalized = rejected.externalize_rejected_response(
+            call_index=1,
+            finish_reason="length",
+            response_sha256=response_sha256,
+            rejection_result_id="REJECTION-1",
+            transcript_entry_id="CALL-000001-ASSISTANT",
+        )
+        receipt = externalized.project().transcript[-1]
+        self.assertEqual(
+            receipt.entry_kind, "rejected_assistant_response_receipt"
+        )
+        self.assertNotIn(content, receipt.content)
+        with self.assertRaises(InvalidTransition):
+            externalized.externalize_rejected_response(
+                call_index=1,
+                finish_reason="length",
+                response_sha256=response_sha256,
+                rejection_result_id="REJECTION-1",
+                transcript_entry_id="CALL-000001-ASSISTANT",
+            )
 
     def test_state_slot_replaces_current_value_without_rewriting_history(self) -> None:
         first = ExactStateObject(

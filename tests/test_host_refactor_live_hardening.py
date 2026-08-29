@@ -179,16 +179,22 @@ def test_payload_builder_cannot_drop_pending_result_and_commit_delivery() -> Non
 
 def test_length_response_is_custodied_rejected_and_never_executed() -> None:
     domain = NoResultDomain()
+    raw_content = '{"action":"noop","padding":"' + ("x" * 8_000) + '"}'
+    host = make_host(config())
     with tempfile.TemporaryDirectory() as temp:
         custody = Path(temp) / "provider"
-        step = make_host(config()).step(
+        step = host.step(
             kernel=HostKernel(),
             counters=RuntimeCounters(),
-            provider_complete=provider("{\"action\":\"noop\"}", "length"),
+            provider_complete=provider(raw_content, "length"),
             domain=domain,
             provider_custody_root=custody,
         )
         assert (custody / "RESPONSE.json").is_file()
+        custodied_response = json.loads(
+            (custody / "RESPONSE.json").read_text(encoding="utf-8")
+        )
+        assert custodied_response["content"] == raw_content
     state = step.kernel.project()
     assert domain.calls == 0
     assert state.terminal is None
@@ -197,6 +203,47 @@ def test_length_response_is_custodied_rejected_and_never_executed() -> None:
     rejection = state.results[state.pending_result_ids[0]].result
     assert rejection.result_kind == "response_rejection"
     assert any(event.kind is EventKind.RESPONSE_REJECTED for event in step.kernel.events)
+    assert any(
+        event.kind is EventKind.REJECTED_RESPONSE_EXTERNALIZED
+        for event in step.kernel.events
+    )
+    assistant = next(
+        row for row in state.transcript if row.entry_id == "CALL-000001-ASSISTANT"
+    )
+    assert assistant.entry_kind == "rejected_assistant_response_receipt"
+    assert raw_content not in assistant.content
+    receipt = json.loads(assistant.content)
+    assert receipt["admitted_action"] is False
+    assert receipt["world_transition_applied"] is False
+    assert receipt["exact_response_retained_externally"] is True
+    raw_append = next(
+        event
+        for event in step.kernel.events
+        if event.kind is EventKind.TRANSCRIPT_APPENDED
+        and event.data["entry"]["entry_id"] == "CALL-000001-ASSISTANT"
+    )
+    assert raw_append.data["entry"]["content"] == raw_content
+    assert len(assistant.content) < len(raw_content) // 10
+
+    second = host.step(
+        kernel=step.kernel,
+        counters=step.counters,
+        provider_complete=provider(raw_content, "length"),
+        domain=domain,
+    )
+    second_state = second.kernel.project()
+    assert second_state.completed_calls == (1, 2)
+    assert domain.calls == 0
+    receipts = [
+        row
+        for row in second_state.transcript
+        if row.entry_kind == "rejected_assistant_response_receipt"
+    ]
+    assert len(receipts) == 2
+    packet_text = "\n".join(
+        row["content"] for row in host.composer.compose(second.kernel).messages
+    )
+    assert raw_content not in packet_text
 
 
 def test_ordinary_action_rejection_is_exact_nonterminal_and_continuable() -> None:
