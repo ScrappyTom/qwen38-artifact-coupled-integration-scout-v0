@@ -1,5 +1,16 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-29: the refactored host is now composed through the
+separate `interaction_scout` layer into a complete provider-free Trellis
+pressure-to-repair lifecycle. Both configurations exercised authentic relief,
+exact candidate mutation, checkpoint/resume, a current failing check, uniquely
+bound repair, effect uptake, current passing recheck, and submission proposal.
+The treatment also exercised charged anchored maintenance and scaffold
+demotion at verification. These are scripted lifecycle facts, not model
+behavior. The selected first twelve-call live tranche is not yet authorized.
+See `TRELLIS_REFACTORED_INTERACTION_STAGE0.md` and
+`interaction_scout/GOVERNANCE.md`.
+
 Status update, 2026-08-28: the host-runtime refactor is exactly qualified
 provider-free. The immutable full Qwen3.8 asset named by the frozen model lock
 has been restored and hash-verified, the tokenizer path now safely falls back

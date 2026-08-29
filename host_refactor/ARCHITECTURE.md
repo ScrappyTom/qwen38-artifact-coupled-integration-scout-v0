@@ -92,6 +92,15 @@ invocations, and failed invocations separately.
 Converts frozen E83 custody into common events and supplies provider-free
 acceptance fixtures. It is a migration boundary, not a general task policy.
 
+## Whole-system consumer
+
+`interaction_scout` is the first experiment-scoped consumer of this host. It
+keeps semantic maintenance outside the kernel, charges it separately, and
+uses replaceable exact state slots for temporary scaffold and current
+verification state. This preserves the semantic-free host boundary while the
+project studies evidence, semantic residue, exact work, effects, checks,
+repair, and checkpoints as one interaction.
+
 ## Historical cut line
 
 The existing `reactive_runtime` and historical `tools/run_*` files remain as

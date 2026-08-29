@@ -1,0 +1,63 @@
+{
+  "schema": "trellis-refactored-interaction-contract-v0",
+  "run_id": "2026-08-29-trellis-refactored-interaction-tranche-v0",
+  "task_id": "trellis-heat-continuity-decision-v0",
+  "configuration_order": [
+    "V0_EXACT_ARTIFACT",
+    "V1_TEMPORARY_PROVENANCE_SCAFFOLD"
+  ],
+  "causal_unit": "complete bounded information-to-work configuration",
+  "common_runtime": {
+    "fresh_trajectory_per_configuration": true,
+    "context_window_tokens": 25088,
+    "actor_response_reserve_tokens": 4096,
+    "actor_seed": 884219,
+    "checkpoint_every_completed_actor_calls": 12,
+    "exact_external_custody": true,
+    "deterministic_first_positive_relief": true,
+    "exact_reopen": true,
+    "exact_incremental_candidate": true,
+    "candidate_effect_binding": true,
+    "candidate_bound_check": true,
+    "bounded_section_repair": true,
+    "external_evaluation_actor_visible": false,
+    "automatic_loop_classification": false
+  },
+  "treatment_difference": {
+    "construction": "charged fallible anchored-provenance maintenance only when exact source results are mechanically externalized",
+    "admission": "per-claim validation with unchanged-register fallback",
+    "verification": "semantic scaffold replaced by a compact external-custody receipt; exact artifact and current verification frame remain",
+    "readiness_authority": false
+  },
+  "first_authorization_tranche": {
+    "maximum_actor_calls_total": 24,
+    "maximum_actor_calls_per_configuration": 12,
+    "maximum_maintenance_calls_total": 12,
+    "maximum_provider_calls_total": 36,
+    "maximum_serialized_tokens_total": 900000,
+    "attempts_per_call": 1,
+    "retries": 0,
+    "mandatory_review_after_each_configuration": true
+  },
+  "continuation_rule": "No automatic continuation. Literal actor and maintenance transcripts, demand, candidate changes, effects, and recurrence are reviewed at each checkpoint. A policy change creates a new experiment.",
+  "primary_outcomes": [
+    "admitted cumulative artifact work",
+    "effect uptake",
+    "current check and repair progression",
+    "correct readiness or explicit incomplete stop"
+  ],
+  "secondary_outcomes": [
+    "pressure and relief events",
+    "maintenance yield and cost",
+    "exact reopens and repeated demand",
+    "action rejection and transport",
+    "prompt completion and cache tokens",
+    "failure migration"
+  ],
+  "claim_limits": [
+    "The first tranche is exploratory and cannot promote an architecture.",
+    "A treatment difference supports the whole configuration, not the scaffold in isolation.",
+    "A checkpoint pause is not useful completion.",
+    "Fewer tokens or earlier submission is not a win unless candidate-bound quality and readiness support it."
+  ]
+}

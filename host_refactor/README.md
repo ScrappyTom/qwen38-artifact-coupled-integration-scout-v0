@@ -1,5 +1,9 @@
 # Host runtime refactor subproject
 
+The core is now consumed by `../interaction_scout` for the first complete
+provider-free pressure-to-repair lifecycle. Semantic maintenance remains
+outside this directory and does not alter the host's mechanical authority.
+
 Status: core, live seams, and locked-tokenizer behavior are exactly qualified
 provider-free. The immutable full model from the frozen lock is restored and
 is the verified fallback when the historical sparse tokenizer projection is

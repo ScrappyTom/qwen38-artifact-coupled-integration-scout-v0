@@ -1,0 +1,16 @@
+{
+  "schema": "trellis-refactored-interaction-authorization-request-v0",
+  "run_id": "2026-08-29-trellis-refactored-interaction-tranche-v0",
+  "scope": "trellis_refactored_interaction_tranche_v0",
+  "configuration_order": [
+    "V0_EXACT_ARTIFACT",
+    "V1_TEMPORARY_PROVENANCE_SCAFFOLD"
+  ],
+  "maximum_actor_calls": 24,
+  "maximum_maintenance_calls": 12,
+  "maximum_provider_calls": 36,
+  "maximum_serialized_tokens": 900000,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "expected_user_quote_template": "I authorize the frozen Trellis refactored-host interaction tranche at commit {commit}, run ID 2026-08-29-trellis-refactored-interaction-tranche-v0: configurations V0_EXACT_ARTIFACT then V1_TEMPORARY_PROVENANCE_SCAFFOLD; at most 24 actor calls and 12 maintenance calls, at most 36 provider calls and 900,000 serialized tokens total, one attempt per call, zero retries."
+}

@@ -1,5 +1,18 @@
 # Refactor work log
 
+## 2026-08-29 — first whole-system consumer qualified offline
+
+- Added `interaction_scout` as a separate orchestration layer; the event,
+  packet, capacity, request-binding, and checkpoint cores remain unchanged.
+- A full provider-free Trellis lifecycle now exposes the canonical candidate
+  on every request, replaces it after mutations, binds stale/current checks,
+  resumes from a composite checkpoint, repairs a uniquely bound section, and
+  reaches a current passing recheck and submission proposal.
+- Treatment-only semantic maintenance is charged outside the host and its
+  scaffold is demoted at verification. The baseline never receives the slot.
+- This closes the offline writable-candidate/resume/check/repair qualification
+  gap identified after the one-call live smoke. Live behavior remains untested.
+
 ## 2026-08-28 — checkpoint 0: baseline and cut line
 
 Completed:

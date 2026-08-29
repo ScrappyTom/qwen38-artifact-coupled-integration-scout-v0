@@ -43,6 +43,22 @@ class MaterializedAnchor:
     context_start_line: int
     context_end_line: int
 
+    @classmethod
+    def from_dict(cls, value: Mapping[str, object]) -> "MaterializedAnchor":
+        return cls(
+            source_id=str(value["source_id"]),
+            source_version=str(value["source_version"]),
+            result_id=str(value["result_id"]),
+            anchor_text=str(value["anchor_text"]),
+            anchor_sha256=str(value["anchor_sha256"]),
+            anchor_start_byte=int(str(value["anchor_start_byte"])),
+            anchor_end_byte=int(str(value["anchor_end_byte"])),
+            context_text=str(value["context_text"]),
+            context_sha256=str(value["context_sha256"]),
+            context_start_line=int(str(value["context_start_line"])),
+            context_end_line=int(str(value["context_end_line"])),
+        )
+
 
 @dataclass(frozen=True)
 class AnchoredClaim:
@@ -55,6 +71,26 @@ class AnchoredClaim:
     referents: tuple[str, ...]
     statement: str
     body_tokens: int
+
+    @classmethod
+    def from_dict(cls, value: Mapping[str, object]) -> "AnchoredClaim":
+        anchor = value.get("anchor")
+        if not isinstance(anchor, Mapping):
+            raise ValueError("anchored claim lacks anchor object")
+        referents = value.get("referents", ())
+        if not isinstance(referents, (list, tuple)):
+            raise ValueError("anchored claim referents must be a sequence")
+        return cls(
+            claim_id=str(value["claim_id"]),
+            source_id=str(value["source_id"]),
+            source_version=str(value["source_version"]),
+            evidence_result_id=str(value["evidence_result_id"]),
+            anchor=MaterializedAnchor.from_dict(anchor),
+            assertion_mode=str(value["assertion_mode"]),
+            referents=tuple(str(item) for item in referents),
+            statement=str(value["statement"]),
+            body_tokens=int(str(value["body_tokens"])),
+        )
 
     @property
     def stable_key(self) -> tuple[str, str, str]:
@@ -430,14 +466,14 @@ def admit_anchored_delta(
         if extra is None:
             normalized.append(record)
             continue
-        issues = tuple(dict.fromkeys((*record.issues, extra)))
+        normalized_issues = tuple(dict.fromkeys((*record.issues, extra)))
         normalized.append(
             ClaimAdmission(
                 claim_id=record.claim_id,
                 source_id=record.source_id,
                 admitted=False,
                 code=record.code if record.issues else extra,
-                issues=issues,
+                issues=normalized_issues,
                 claim=record.claim,
                 provenance=record.provenance,
             )
@@ -457,6 +493,50 @@ def admit_anchored_delta(
 @dataclass(frozen=True)
 class AnchoredProvenanceRegister:
     claims: tuple[AnchoredClaim, ...] = ()
+
+    def as_dict(self) -> dict[str, object]:
+        return {
+            "claims": [
+                {
+                    "anchor": {
+                        "anchor_end_byte": claim.anchor.anchor_end_byte,
+                        "anchor_sha256": claim.anchor.anchor_sha256,
+                        "anchor_start_byte": claim.anchor.anchor_start_byte,
+                        "anchor_text": claim.anchor.anchor_text,
+                        "context_end_line": claim.anchor.context_end_line,
+                        "context_sha256": claim.anchor.context_sha256,
+                        "context_start_line": claim.anchor.context_start_line,
+                        "context_text": claim.anchor.context_text,
+                        "result_id": claim.anchor.result_id,
+                        "source_id": claim.anchor.source_id,
+                        "source_version": claim.anchor.source_version,
+                    },
+                    "assertion_mode": claim.assertion_mode,
+                    "body_tokens": claim.body_tokens,
+                    "claim_id": claim.claim_id,
+                    "evidence_result_id": claim.evidence_result_id,
+                    "referents": list(claim.referents),
+                    "source_id": claim.source_id,
+                    "source_version": claim.source_version,
+                    "statement": claim.statement,
+                }
+                for claim in self.claims
+            ],
+            "register_sha256": self.sha256,
+            "schema": "anchored-provenance-register-v0",
+        }
+
+    @classmethod
+    def from_dict(cls, value: Mapping[str, object]) -> "AnchoredProvenanceRegister":
+        if value.get("schema") != "anchored-provenance-register-v0":
+            raise ValueError("unsupported anchored provenance register schema")
+        rows = value.get("claims")
+        if not isinstance(rows, list) or not all(isinstance(row, Mapping) for row in rows):
+            raise ValueError("anchored provenance register claims must be objects")
+        register = cls(tuple(AnchoredClaim.from_dict(row) for row in rows))
+        if value.get("register_sha256") != register.sha256:
+            raise ValueError("anchored provenance register hash mismatch")
+        return register
 
     def apply(
         self,
