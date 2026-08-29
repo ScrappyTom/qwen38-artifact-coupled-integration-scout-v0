@@ -23,3 +23,25 @@
 - Ruff: passed for all new source and test files.
 - Mypy: passed for the five new lifecycle-scout modules with imported historical modules skipped; the repository's previously recorded unrelated typing debt remains outside this change.
 - No GPU, live tokenizer, or live provider call occurred.
+
+## 2026-08-29 — live v0 stopped and reviewed
+
+- Four authorized actor calls ran; zero maintenance calls and zero retries ran.
+- `RESULT-018` crossed call 19. Qwen added the missing sixth section through a
+  bounded admitted action, then entered verification on call 20.
+- The checkpoint candidate grew from 904 to 1,145 words and satisfied heading
+  order, but remained `not_ready` with all eight substantive groups failing.
+- Calls 21 and 22 each exhausted 4,096 completion tokens while attempting an
+  undeclared whole-document `replace_artifact_section`. Call 22 reproduced all
+  18,963 call-21 characters exactly before continuing six characters.
+- The next packet measured 23,811 tokens and stopped before provider I/O. The
+  runtime released and the run seal verifies.
+- Review found an apparatus censor: the live verification request declared no
+  `run_check`, repair, recheck, or submit contract. Provider-free fixtures had
+  bypassed this actor-facing seam by invoking actions directly.
+- Review also found a rejected-response lifecycle gap: the full rejected
+  assistant body remained resident beside the compact rejection observation,
+  even though no world transition occurred.
+- The sealed v0 route will not be resumed under changed code. A repaired route
+  requires provider-free actor-request inspection, compact rejected-response
+  projection with exact external custody, a new run ID, and new authorization.
