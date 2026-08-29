@@ -54,8 +54,13 @@ prompt tokens, RESULT-001 relief, and a feasible packet.
 - 11 adversarial hardening tests passed.
 - 18 combined checkpoint/live/hardening tests passed.
 - Ruff and mypy passed.
-- 277 repository tests passed using a tokenizer-compatible local Qwen3.8 GGUF
-  injected only into the test process.
-- The direct exact replay command is currently blocked because the tokenizer
-  projection frozen in `MODEL_PROFILE_LOCK.json` is absent. The compatible run
-  is regression evidence, not an exact-lock qualification.
+- Three locked-tokenizer asset-resolution tests passed: verified projection
+  preference, verified full-model fallback, and rejection of mismatched files.
+- The exact full model named by `MODEL_PROFILE_LOCK.json` is restored at its
+  frozen path, has 11,141,912,032 bytes, and matches SHA-256
+  `d416fa422c9035605c778f60d90a94b288c38b4f9ec2126b58ef938ce8d5f716`.
+- The direct replay uses that exact locked asset and reports 21,401 ordinary
+  prompt tokens, `RESULT-001` relief, 18,785 treated tokens, and feasibility.
+- All 280 repository tests passed in 299.79 seconds without an injected model
+  substitution.
+- GPU/provider calls: zero.

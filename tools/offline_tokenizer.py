@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -13,11 +14,55 @@ from reactive_runtime.tokenizer import render_qwen_messages
 ROOT = Path(__file__).resolve().parents[1]
 
 
+@lru_cache(maxsize=8)
+def _verified_sha256(path_text: str, size: int, mtime_ns: int) -> str:
+    """Hash one immutable runtime asset once per process and file identity."""
+
+    del size, mtime_ns
+    digest = hashlib.sha256()
+    with Path(path_text).open("rb") as stream:
+        for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _matches_locked_asset(path: Path, expected_sha256: str) -> bool:
+    if not path.is_file():
+        return False
+    stat = path.stat()
+    return (
+        _verified_sha256(str(path), stat.st_size, stat.st_mtime_ns)
+        == expected_sha256.lower()
+    )
+
+
+def resolve_locked_tokenizer_model(profile: dict[str, Any]) -> Path:
+    """Select only a hash-verified tokenizer-bearing asset from the model lock.
+
+    The historical sparse tokenizer projection was a convenience, not a live
+    inference asset.  If it is unavailable, the immutable full model declared
+    by the same lock is an exact tokenizer source and is the durable fallback.
+    """
+
+    candidates = (
+        (
+            Path(str(profile["tokenizer_projection_path"])),
+            str(profile["tokenizer_projection_sha256"]),
+        ),
+        (Path(str(profile["model_path"])), str(profile["model_sha256"])),
+    )
+    for path, expected_sha256 in candidates:
+        if _matches_locked_asset(path, expected_sha256):
+            return path
+    rendered = ", ".join(str(path) for path, _ in candidates)
+    raise RuntimeError(f"no hash-verified tokenizer asset is available: {rendered}")
+
+
 class OfflineTokenizer:
     def __init__(self) -> None:
         profile = json.loads((ROOT / "MODEL_PROFILE_LOCK.json").read_text(encoding="utf-8"))
         self.executable = str(profile["tokenizer_executable"])
-        self.model = str(profile["tokenizer_projection_path"])
+        self.model = str(resolve_locked_tokenizer_model(profile))
 
     @lru_cache(maxsize=256)
     def count_text(self, text: str) -> int:

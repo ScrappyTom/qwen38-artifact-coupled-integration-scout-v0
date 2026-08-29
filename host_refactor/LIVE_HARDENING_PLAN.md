@@ -80,9 +80,17 @@ and reconcile program documentation before selecting any live experiment.
 All ten code-level acceptance cases are implemented and covered provider-free.
 The focused suite, static checks, and a full 277-test regression using a locally
 available tokenizer-compatible Qwen3.8 model pass. Exact replay qualification
-cannot be claimed because the frozen tokenizer projection at the path and hash
-declared by `MODEL_PROFILE_LOCK.json` disappeared during the power outage.
+could not yet be claimed because the frozen tokenizer projection at the path
+and hash declared by `MODEL_PROFILE_LOCK.json` was found missing after the
+power outage.
 
 The compatible model was injected only inside the test process. No lock,
 runtime path, sealed fixture, or historical result was changed. See
 `HOST_LIVE_HARDENING_RESULT.md`.
+
+## Subsequent resolution
+
+`HOST_ASSET_RESTORATION_RESULT.md` closes this checkpoint's asset blocker. The
+immutable full model already named and hashed by the frozen lock was restored,
+the tokenizer resolver gained a hash-verified full-model fallback, the exact
+E83 replay passed, and all 280 repository tests passed without substitution.

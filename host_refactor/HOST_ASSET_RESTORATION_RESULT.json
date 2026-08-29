@@ -1,0 +1,29 @@
+{
+  "date": "2026-08-28",
+  "disposition": {
+    "exact_provider_free_host_qualification": "passed",
+    "historical_sparse_projection_dependency": "removed",
+    "live_gpu_provider_behavior": "not_exercised"
+  },
+  "locked_full_model": {
+    "bytes": 11141912032,
+    "path": "E:\\AI_Models\\AtomicChat__Qwen3.8-27B-GGUF__ca10ebceb188\\Qwen3.8-27B-AD-IQ2_S.gguf",
+    "sha256": "d416fa422c9035605c778f60d90a94b288c38b4f9ec2126b58ef938ce8d5f716",
+    "verified": true
+  },
+  "provider_calls": 0,
+  "replay": {
+    "ordinary_prompt_tokens": 21401,
+    "relief_prompt_tokens": 18785,
+    "relief_result_ids": ["RESULT-001"],
+    "feasible": true
+  },
+  "schema": "host-locked-asset-restoration-result-v0",
+  "verification": {
+    "asset_resolution_tests_passed": 3,
+    "full_regression_passed": 280,
+    "full_regression_seconds": 299.79,
+    "mypy": "passed_13_sources",
+    "ruff": "passed"
+  }
+}

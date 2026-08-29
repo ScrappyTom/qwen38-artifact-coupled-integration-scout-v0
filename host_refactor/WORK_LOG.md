@@ -242,3 +242,32 @@ Disposition:
 - exact locked-asset qualification: blocked pending restoration and hash
   verification of the frozen tokenizer projection;
 - live GPU/provider readiness: not claimed and not authorized.
+
+## 2026-08-28 — locked asset restoration and exact qualification
+
+Completed:
+
+- recovered the archived construction history for the missing sparse tokenizer
+  projection and established that it was a transient snapshot of an in-progress
+  download rather than a reproducible immutable repository asset;
+- downloaded the full model from the exact repository revision already frozen
+  by `MODEL_PROFILE_LOCK.json`;
+- verified its exact 11,141,912,032-byte length and SHA-256
+  `d416fa422c9035605c778f60d90a94b288c38b4f9ec2126b58ef938ce8d5f716`;
+- changed the offline tokenizer resolver to accept only a hash-verified sparse
+  projection or, when it is absent, the hash-verified full model from the same
+  frozen lock;
+- added tests proving projection preference, exact full-model fallback, and
+  rejection of present but mismatched assets;
+- reproduced the E83 packet geometry exactly: 21,401 ordinary tokens,
+  `RESULT-001` relief, 18,785 treated tokens, feasible;
+- passed all 280 repository tests in 299.79 seconds without monkeypatching or
+  substituting another model.
+
+Disposition:
+
+- exact provider-free host qualification: passed;
+- historical projection remains an optional convenience, not a runtime
+  dependency;
+- live GPU/provider behavior: not exercised by this qualification;
+- no behavioral experiment is selected by this result.

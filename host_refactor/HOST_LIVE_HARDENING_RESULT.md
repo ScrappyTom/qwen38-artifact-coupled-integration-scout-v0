@@ -2,6 +2,11 @@
 
 Date: 2026-08-28
 
+Historical checkpoint note: the asset blocker recorded below was subsequently
+resolved by restoring and hash-verifying the immutable full model already named
+in the same lock. See `HOST_ASSET_RESTORATION_RESULT.md`. The wording below is
+retained as the disposition at the end of the original hardening pass.
+
 ## Outcome
 
 The bounded hardening pass succeeded at the code and provider-free apparatus
@@ -45,8 +50,8 @@ assertion locally.
 
 ## Exact qualification blocker
 
-The frozen tokenizer projection declared by `MODEL_PROFILE_LOCK.json` is
-missing after the power outage:
+The frozen tokenizer projection declared by `MODEL_PROFILE_LOCK.json` was
+found missing after the power outage:
 
 ```text
 path:

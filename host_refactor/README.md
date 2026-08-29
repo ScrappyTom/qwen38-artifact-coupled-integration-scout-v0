@@ -1,8 +1,10 @@
 # Host runtime refactor subproject
 
-Status: offline core and live seams qualified provider-free; exact locked-asset
-qualification blocked by the missing frozen tokenizer projection; no GPU
-operation is selected or authorized.
+Status: core, live seams, and locked-tokenizer behavior are exactly qualified
+provider-free. The immutable full model from the frozen lock is restored and
+is the verified fallback when the historical sparse tokenizer projection is
+absent. The direct E83 replay and all 280 repository tests pass. No GPU/model
+provider call was made and no behavioral experiment is selected here.
 
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners
@@ -37,7 +39,9 @@ automatic phase inference, loop classification, or model-managed eviction.
 - `LIVE_HARDENING_PLAN.md` freezes the final generic-host/live-task acceptance
   seam before another GPU experiment can be selected.
 - `HOST_LIVE_HARDENING_RESULT.md` records the implemented corrections, test
-  evidence, and exact locked-asset blocker.
+  evidence, and the locked-asset issue found at that checkpoint.
+- `HOST_ASSET_RESTORATION_RESULT.md` records the durable asset restoration,
+  exact replay, and final provider-free qualification.
 
 ## Completion gate
 
@@ -46,7 +50,7 @@ requires all acceptance criteria in `GOVERNANCE.md`, a clean full historical
 test run, byte-identical offline/live packet projection from common events,
 and documentation of any historical path intentionally left unmigrated.
 
-Those code and regression gates now pass provisionally. Final exact
-qualification still requires restoration of the frozen tokenizer projection,
-verification of its recorded SHA-256, and rerunning the direct E83 replay and
-full suite without an injected compatible tokenizer.
+Those gates now pass exactly. Tokenization uses only a hash-verified asset
+named by the frozen model lock: the historical sparse projection when present,
+otherwise the immutable full model. The full-model fallback reproduced the
+frozen replay and passed the full suite without monkeypatching.
