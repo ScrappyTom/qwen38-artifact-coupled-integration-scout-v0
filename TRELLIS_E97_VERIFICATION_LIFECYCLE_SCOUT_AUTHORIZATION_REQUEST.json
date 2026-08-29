@@ -1,0 +1,14 @@
+{
+  "schema": "trellis-e97-verification-lifecycle-scout-authorization-request-v0",
+  "run_id": "2026-08-29-trellis-e97-verification-lifecycle-scout-v0",
+  "scope": "trellis_e97_verification_lifecycle_scout_v0",
+  "configuration": "V1_E97_DONOR_DERIVED_LIFECYCLE",
+  "maximum_actor_calls": 18,
+  "maximum_maintenance_calls": 1,
+  "maximum_provider_calls": 19,
+  "maximum_serialized_tokens": 450000,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "first_checkpoint_after_at_most_actor_calls": 6,
+  "expected_user_quote_template": "I authorize the frozen Trellis E97 verification-lifecycle scout at commit {commit}, run ID 2026-08-29-trellis-e97-verification-lifecycle-scout-v0: configuration V1_E97_DONOR_DERIVED_LIFECYCLE; at most 18 actor calls and 1 maintenance call, at most 19 provider calls and 450,000 additional serialized tokens, one attempt per call, zero retries; mandatory review after at most 6 additional actor calls."
+}

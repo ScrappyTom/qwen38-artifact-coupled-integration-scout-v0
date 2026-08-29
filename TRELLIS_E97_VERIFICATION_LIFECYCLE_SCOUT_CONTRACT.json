@@ -1,0 +1,52 @@
+{
+  "schema": "trellis-e97-verification-lifecycle-scout-contract-v0",
+  "run_id": "2026-08-29-trellis-e97-verification-lifecycle-scout-v0",
+  "task_id": "trellis-heat-continuity-decision-v0",
+  "configuration": "V1_E97_DONOR_DERIVED_LIFECYCLE",
+  "scientific_identity": "descriptive donor-derived lifecycle scout; not fresh-world transfer and not an ablation of the earlier construction divergence",
+  "donor": {
+    "run_id": "2026-08-29-trellis-refactored-interaction-continuation-v0",
+    "checkpoint_sha256": "1be26e7d366f4c6f14c1f5975cb70c317768b0702fd36a53b1cc1f224546b955",
+    "candidate_sha256": "d133a537f9aef2b3635359316743f39196095c0be3dc6a4b5c86444cdc8a52d9",
+    "provider_attempts_inherited": 29,
+    "serialized_tokens_inherited": 350510,
+    "migration": "verify exact checkpoint, import the event state before its capacity_blocked terminal, preserve excluded event in receipt, apply E97, create a new-manifest checkpoint"
+  },
+  "runtime": {
+    "context_window_tokens": 25088,
+    "response_reserve_tokens": 4096,
+    "actor_seed": 884219,
+    "checkpoint_every_additional_actor_calls": 6,
+    "maximum_additional_actor_calls": 18,
+    "maximum_additional_maintenance_calls": 1,
+    "maximum_additional_provider_calls": 19,
+    "maximum_additional_serialized_tokens": 450000,
+    "attempts_per_call": 1,
+    "retries": 0,
+    "automatic_continuation": false
+  },
+  "integrated_system": [
+    "exact external custody and ordinary demand",
+    "deterministic first-positive result relief",
+    "frozen temporary provenance scaffold during construction",
+    "exact evidence ledger and exact incremental candidate",
+    "E97 applied action/effect pair compaction after delivery and exact lineage proof",
+    "exact pending effect and current candidate/effect binding",
+    "candidate-bound check, bounded section repair, current recheck, and submission proposal",
+    "exact raw evaluator custody plus a compact actor-visible candidate-bound failure projection"
+  ],
+  "frozen_prebehavior_readiness": {
+    "closure_readiness": "not_ready",
+    "adjudication_path": "TRELLIS_E97_DONOR_READINESS_ADJUDICATION.json",
+    "actor_visible": false
+  },
+  "live_token_rule": "The exact packet and manifest hashes are frozen. The running server's apply-template plus tokenize count is operationally authoritative and may differ from the offline projection; it must remain at or below the frozen 20,992-token prompt limit and is recorded before completion.",
+  "review": "Pause after six additional completed actor calls or any earlier terminal state. Review literal actor/maintenance transcripts, candidate/effect uptake, checks, repairs, recurrence, exact reopens, and cumulative plus marginal cost before any continuation.",
+  "claim_limits": [
+    "Packet fit is not behavioral success.",
+    "A positive result is donor-derived and requires fresh-world transfer.",
+    "The scaffold is not isolated as the cause of any action.",
+    "A passing mechanical check does not itself authorize readiness.",
+    "No policy change is permitted inside the frozen run."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "trellis-e97-donor-readiness-adjudication-v0",
+  "task_id": "trellis-heat-continuity-decision-v0",
+  "candidate_sha256": "d133a537f9aef2b3635359316743f39196095c0be3dc6a4b5c86444cdc8a52d9",
+  "evaluator_id": "trellis-heat-evaluator-v0",
+  "closure_readiness": "not_ready",
+  "actor_visible": false,
+  "frozen_before_live_behavior": true,
+  "decision_word_count": 904,
+  "decision_source_ids": [
+    "CLIMATE",
+    "CLINIC",
+    "GRID",
+    "LINEAGE",
+    "REVIEW",
+    "SHELTER",
+    "TRANSIT",
+    "WATER"
+  ],
+  "blocking_criterion_ids": [
+    "decision_heading_order",
+    "decision_word_range",
+    "decision_source_breadth",
+    "T01_authority",
+    "T02_heat",
+    "T03_power",
+    "T04_water",
+    "T05_clinic_shelter",
+    "T06_transit_comms",
+    "T07_supply_labor",
+    "T08_currentness"
+  ],
+  "known_artifact_state": "The sixth required section is absent; the decision is below the frozen word range and source breadth; all eight substantive relationship groups have at least one missing pattern.",
+  "readiness_authority": "external candidate-bound evaluation ledger; never inferred from scaffold, construction, check execution, or submission"
+}

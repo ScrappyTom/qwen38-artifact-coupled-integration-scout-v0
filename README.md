@@ -1,5 +1,21 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-29: the next live question is now frozen as a
+donor-derived E97 verification-lifecycle scout. It imports the exact E96 V1
+state before its historical `capacity_blocked` terminal through an explicit
+hash-bound migration, preserves 350,510 inherited serialized tokens and 29
+provider attempts, compacts five delivered applied mutation pairs, and keeps
+pending `RESULT-018` exact. The donor candidate is independently frozen
+`not_ready` at 904 words with its sixth section absent and all eight substantive
+relationship groups incomplete. Provider-free qualification crosses pending
+effect delivery, construction completion, a failing current check, six bounded
+repairs, a passing current recheck, and closure across an exact checkpoint.
+Raw evaluator output remains exact externally while the actor receives a
+bounded candidate-linked diagnostic. The live runner pauses after at most six
+new actor calls and is not yet GPU-authorized. See
+`TRELLIS_E97_VERIFICATION_LIFECYCLE_STAGE0.md` and
+`host_refactor/lifecycle_scout/`.
+
 Status update, 2026-08-29: an offline future-only bounded candidate
 causal-history lifecycle now passes exact E96 replay, adversarial, reopen,
 checkpoint, and provider-free writable-lifecycle qualification. It compacts an
