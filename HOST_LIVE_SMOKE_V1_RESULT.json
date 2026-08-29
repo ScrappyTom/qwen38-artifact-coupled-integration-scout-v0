@@ -1,0 +1,13 @@
+{
+  "apparatus_commit": "a92577d64612a6a5f7c623e02de89eb527b47017",
+  "live_ordinary_prompt_tokens": 21401,
+  "live_relief_prompt_tokens": 18786,
+  "model_calls": 0,
+  "offline_relief_prompt_tokens": 18785,
+  "provider_attempts": 0,
+  "retries": 0,
+  "run_id": "2026-08-28-host-refactor-live-smoke-v1",
+  "run_seal_sha256": "5dfbc9bc52f3f220602097ff4f4ed5572e45e74f17be6c0e0e91dbfc9d29602f",
+  "schema": "host-refactor-live-smoke-v1-result-v0",
+  "status": "sealed_pre_provider_live_tokenizer_projection_mismatch"
+}

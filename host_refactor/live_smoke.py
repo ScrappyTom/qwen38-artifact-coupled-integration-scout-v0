@@ -21,12 +21,13 @@ from host_refactor.trellis_adapter import (
 from host_refactor.trellis_fixture import build_e83_kernel
 
 
-RUN_ID = "2026-08-28-host-refactor-live-smoke-v1"
-SCOPE = "host_refactor_live_smoke_v1"
+RUN_ID = "2026-08-28-host-refactor-live-smoke-v2"
+SCOPE = "host_refactor_live_smoke_v2"
 MAXIMUM_NEW_MODEL_CALLS = 1
 MAXIMUM_SERIALIZED_TOKENS = 30_000
 EXPECTED_ORDINARY_TOKENS = 21_401
 EXPECTED_RELIEF_TOKENS = 18_785
+EXPECTED_LIVE_RELIEF_TOKENS = 18_786
 EXPECTED_RELIEF_RESULT_IDS = ("RESULT-001",)
 EXPECTED_PENDING_RESULT_ID = "RESULT-007"
 
@@ -100,7 +101,12 @@ def build_live_smoke_system(
     return host, adapter, build_e83_kernel(repository_root), RuntimeCounters()
 
 
-def assert_pressure_preflight(host: HostRunner, kernel: HostKernel) -> None:
+def assert_pressure_preflight(
+    host: HostRunner,
+    kernel: HostKernel,
+    *,
+    expected_relief_tokens: int = EXPECTED_RELIEF_TOKENS,
+) -> None:
     ordinary = host.composer.compose(kernel)
     ordinary_tokens = host.capacity.count_messages(ordinary.message_list())
     if ordinary_tokens != EXPECTED_ORDINARY_TOKENS:
@@ -118,9 +124,9 @@ def assert_pressure_preflight(host: HostRunner, kernel: HostKernel) -> None:
             "E83 live-smoke relief selection mismatch: "
             f"{outcome.selected_result_ids} != {EXPECTED_RELIEF_RESULT_IDS}"
         )
-    if outcome.prompt_tokens != EXPECTED_RELIEF_TOKENS:
+    if outcome.prompt_tokens != expected_relief_tokens:
         raise RuntimeError(
-            f"E83 relief token mismatch: {outcome.prompt_tokens} != {EXPECTED_RELIEF_TOKENS}"
+            f"E83 relief token mismatch: {outcome.prompt_tokens} != {expected_relief_tokens}"
         )
     state = kernel.project()
     if state.pending_result_ids != (EXPECTED_PENDING_RESULT_ID,):

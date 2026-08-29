@@ -19,6 +19,7 @@ from reactive_runtime.seal import seal_tree
 from host_refactor.live_path import run_tranche
 from host_refactor.live_smoke import (
     EXPECTED_PENDING_RESULT_ID,
+    EXPECTED_LIVE_RELIEF_TOKENS,
     MAXIMUM_NEW_MODEL_CALLS,
     MAXIMUM_SERIALIZED_TOKENS,
     RUN_ID,
@@ -123,7 +124,11 @@ def main() -> int:
             count_messages=lambda messages: tokenizer.count_messages(messages)[0],
             count_text=lambda text: len(tokenizer.tokenize(text)),
         )
-        assert_pressure_preflight(host, kernel)
+        assert_pressure_preflight(
+            host,
+            kernel,
+            expected_relief_tokens=EXPECTED_LIVE_RELIEF_TOKENS,
+        )
         parent_checkpoint_path = run_root / "PARENT_CHECKPOINT.json"
         host.checkpoint.write(
             parent_checkpoint_path,

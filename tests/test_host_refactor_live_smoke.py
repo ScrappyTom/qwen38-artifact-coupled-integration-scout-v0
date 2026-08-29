@@ -6,6 +6,7 @@ from pathlib import Path
 
 from host_refactor.live_path import run_tranche
 from host_refactor.live_smoke import (
+    EXPECTED_LIVE_RELIEF_TOKENS,
     EXPECTED_PENDING_RESULT_ID,
     EXPECTED_RELIEF_RESULT_IDS,
     EXPECTED_RELIEF_TOKENS,
@@ -50,8 +51,10 @@ def test_live_smoke_manifest_binds_runner_contract_and_base_host() -> None:
     assert "HOST_LIVE_SMOKE_CONTRACT.json" in manifest["files"]
     assert "tools/run_host_refactor_live_smoke.py" in manifest["files"]
     assert len(str(manifest["execution_manifest_sha256"])) == 64
-    assert RUN_ID == "2026-08-28-host-refactor-live-smoke-v1"
-    assert SCOPE == "host_refactor_live_smoke_v1"
+    assert RUN_ID == "2026-08-28-host-refactor-live-smoke-v2"
+    assert SCOPE == "host_refactor_live_smoke_v2"
+    assert EXPECTED_RELIEF_TOKENS == 18_785
+    assert EXPECTED_LIVE_RELIEF_TOKENS == 18_786
 
 
 def test_one_call_smoke_crosses_pressure_delivery_action_and_checkpoint() -> None:

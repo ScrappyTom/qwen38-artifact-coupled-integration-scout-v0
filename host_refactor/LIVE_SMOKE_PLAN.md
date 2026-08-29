@@ -2,9 +2,10 @@
 
 Date: 2026-08-28
 
-Status: v0 sealed before provider I/O because a separate authorized GPU job was
-active; identical v1 design is offline-qualified pending a new clean freeze
-commit and separate exact GPU authorization.
+Status: v0 and v1 are sealed before provider I/O. V0 encountered an unrelated
+active GPU process. V1 exposed a stable one-token split between the exact
+offline and running-server tokenizer projections. V2 freezes both projections
+exactly and is pending a new clean commit and separate exact GPU authorization.
 
 ## Purpose
 
@@ -16,7 +17,9 @@ The test resumes the authentic E83 pressure boundary after seven historical
 actor calls. `RESULT-007` (COMMS and TRANSIT) is pending. The ordinary packet is
 21,401 tokenizer tokens and cannot fit the 20,992-token prompt allowance. The
 frozen first-fit rule externalizes `RESULT-001`, producing an 18,785-token
-packet. One live model invocation is then allowed.
+offline projection and an 18,786-token running-server projection over identical
+49,518 rendered prompt bytes. The live count is authoritative for capacity;
+both are comfortably feasible. One live model invocation is then allowed.
 
 ## What the one call exercises together
 
@@ -42,18 +45,20 @@ all custody and shutdown gates pass.
 
 ## Frozen limits
 
-- Run ID: `2026-08-28-host-refactor-live-smoke-v1`
-- Scope: `host_refactor_live_smoke_v1`
+- Run ID: `2026-08-28-host-refactor-live-smoke-v2`
+- Scope: `host_refactor_live_smoke_v2`
 - New model calls: at most 1
 - Serialized tokens: at most 30,000
 - Attempts per call: 1
 - Retries: 0
 - Automatic continuation: prohibited
 
-The v0 run is permanently closed and preserved in
-`HOST_LIVE_SMOKE_V0_RESULT.md`. The v1 launcher requires an authorization receipt outside the repository that
-binds those values to the eventual clean freeze commit. It refuses a dirty
-tree, an existing run directory, mismatched assets, or any failed runtime gate.
+The v0 and v1 runs are permanently closed and preserved in
+`HOST_LIVE_SMOKE_V0_RESULT.md` and `HOST_LIVE_SMOKE_V1_RESULT.md`. The v2
+launcher requires an authorization receipt outside the repository that binds
+these values to the eventual clean freeze commit. It refuses a dirty tree, an
+existing run directory, mismatched assets, either tokenizer projection
+deviating from its frozen exact count, or any failed runtime gate.
 
 ## Claim limits
 

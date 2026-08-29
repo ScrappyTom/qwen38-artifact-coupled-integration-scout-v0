@@ -5,10 +5,13 @@ provider-free. The immutable full model from the frozen lock is restored and
 is the verified fallback when the historical sparse tokenizer projection is
 absent. A one-call live-smoke path is now implemented and provider-free
 qualified against the authentic E83 pressure boundary. V0 stopped before
-provider I/O because another authorized GPU job was active. That run is sealed;
-the identical v1 design awaits a new clean freeze commit and separate exact GPU
-authorization. No model call has yet been made by this subproject. All 282
-repository tests pass.
+provider I/O because another authorized GPU job was active. V1 passed the live
+runtime gates but stopped before completion I/O when the running server counted
+the relieved packet at 18,786 tokens versus the exact offline count of 18,785.
+Two fresh-server diagnostics reproduced the split over byte-identical prompts.
+Both runs are sealed; v2 freezes both exact projections and awaits a new clean
+commit and separate authorization. No model call has yet been made by this
+subproject. All 282 repository tests pass.
 
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners

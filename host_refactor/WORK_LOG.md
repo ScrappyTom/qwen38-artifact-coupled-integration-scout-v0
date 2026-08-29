@@ -332,3 +332,33 @@ Disposition:
 - preserve the exact failure as `HOST_LIVE_SMOKE_V0_RESULT.md`;
 - freeze the unchanged one-call design under v1 and wait for the other GPU job
   to release the device before seeking new exact authorization.
+
+## 2026-08-28 — live smoke v1 tokenizer-projection stop
+
+Observed:
+
+- selected assets and all live server gates passed, including the frozen model
+  alias/build, 25,088-token context, 66/66 GPU offload, and PID-on-GPU check;
+- the running server reproduced the ordinary packet at exactly 21,401 tokens;
+- after deterministic `RESULT-001` relief, it counted 18,786 tokens rather than
+  the frozen 18,785-token offline projection;
+- the exact-equality gate stopped before completion I/O, released the server,
+  sealed the run, and consumed zero provider attempts and zero model calls.
+
+Diagnosis:
+
+- two additional fresh live-server loads reproduced the 18,786 count;
+- offline and live paths rendered the same 49,518 bytes with SHA-256
+  `fdc87d49f9b66200343f38af6beb5ceeabc6367162126b58efb97fc875a88bcf695`;
+- the ordinary packet produced identical token IDs on both paths;
+- relieved tokenization first diverged at token index 2,580 and later
+  reconverged, so this is a stable tokenizer-engine projection difference, not
+  altered messages, model identity, relief selection, or an added BOS token.
+
+Disposition:
+
+- v1 is closed and preserved in `HOST_LIVE_SMOKE_V1_RESULT.md`;
+- do not add a tolerance or weaken exact gating;
+- v2 freezes 18,785 offline and 18,786 live as distinct exact projections over
+  the same frozen prompt bytes;
+- a new commit-bound authorization is required before any completion call.

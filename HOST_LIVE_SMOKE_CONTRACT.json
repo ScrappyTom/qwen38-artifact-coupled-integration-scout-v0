@@ -14,7 +14,8 @@
     "parent_run_id": "2026-08-28-trellis-artifact-centered-pressure-screen-v0",
     "pending_result_id": "RESULT-007",
     "pending_source_ids": ["COMMS", "TRANSIT"],
-    "relief_prompt_tokens": 18785,
+    "offline_relief_prompt_tokens": 18785,
+    "live_relief_prompt_tokens": 18786,
     "relief_result_ids": ["RESULT-001"]
   },
   "required_live_gates": [
@@ -28,9 +29,9 @@
     "checkpoint, mechanical review, raw HTTP custody, runtime release, and tree seal"
   ],
   "retries": 0,
-  "run_id": "2026-08-28-host-refactor-live-smoke-v1",
-  "schema": "host-refactor-live-smoke-contract-v1",
-  "scope": "host_refactor_live_smoke_v1",
+  "run_id": "2026-08-28-host-refactor-live-smoke-v2",
+  "schema": "host-refactor-live-smoke-contract-v2",
+  "scope": "host_refactor_live_smoke_v2",
   "status": "frozen_pending_exact_commit_and_external_authorization",
   "task_id": "trellis-heat-continuity-decision-v0"
 }

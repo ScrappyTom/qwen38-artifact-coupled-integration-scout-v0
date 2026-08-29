@@ -7,10 +7,16 @@ from the historical sparse projection to that same locked full model, and the
 direct E83 replay reproduces 21,401 tokens and first-fit `RESULT-001` relief.
 A manifest-bound one-call live smoke is now implemented and provider-free
 qualified. V0 stopped safely before provider I/O because a separate authorized
-Franken Agent job was using the GPU; no model call was consumed. The sealed
-result is `HOST_LIVE_SMOKE_V0_RESULT.md`. The unchanged v1 design will deliver
-pending `RESULT-007` through the restored CUDA/model path, then stop at a review
-checkpoint. It requires new authorization bound to its eventual clean commit. See
+Franken Agent job was using the GPU. V1 passed every model/runtime gate but
+stopped before completion I/O because the running server counted the relieved
+packet as 18,786 tokens while the exact offline tokenizer counted 18,785. Two
+fresh-server diagnostics reproduced that one-token projection split over
+identical rendered bytes; the ordinary packet remained identical at 21,401.
+Both stopped runs consumed zero model calls. V2 now freezes the exact offline
+and live projections separately and will deliver pending `RESULT-007`, then stop
+at a review checkpoint. It requires new authorization bound to its eventual
+clean commit. See `HOST_LIVE_SMOKE_V0_RESULT.md`,
+`HOST_LIVE_SMOKE_V1_RESULT.md`,
 `host_refactor/HOST_ASSET_RESTORATION_RESULT.md` and
 `host_refactor/LIVE_SMOKE_PLAN.md`. All 282 repository tests pass.
 

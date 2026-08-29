@@ -35,6 +35,7 @@ Date: 2026-08-28
 | Chained tranche resume | second tranche verifies and binds its exact parent checkpoint |
 | Rich mechanical review | request/exposure, custody, usage/timing, action disposition, candidate diff, and recurrence evidence are present |
 | One-call integrated live-smoke path | provider-free test starts from E83, verifies 21,401-token pressure, externalizes RESULT-001, delivers RESULT-007 on call 8, admits one action, and writes a chained checkpoint/review |
+| Exact offline/live tokenizer projections | v1 custody plus two fresh-server diagnostics bind identical relieved prompt bytes to 18,785 offline and 18,786 running-server tokens; v2 fails on deviation from either exact count |
 
 ## Verification commands
 
