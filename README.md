@@ -3,10 +3,14 @@
 Status update, 2026-08-28: the host-runtime refactor is exactly qualified
 provider-free. The immutable full Qwen3.8 asset named by the frozen model lock
 has been restored and hash-verified, the tokenizer path now safely falls back
-from the historical sparse projection to that same locked full model, the
-direct E83 replay reproduces 21,401 tokens and first-fit `RESULT-001` relief,
-and all 280 repository tests pass without an injected substitute. See
-`host_refactor/HOST_ASSET_RESTORATION_RESULT.md`.
+from the historical sparse projection to that same locked full model, and the
+direct E83 replay reproduces 21,401 tokens and first-fit `RESULT-001` relief.
+A manifest-bound one-call live smoke is now implemented and provider-free
+qualified. It will deliver pending `RESULT-007` through the restored CUDA/model
+path, then stop at a review checkpoint. It has not been launched and requires
+separate authorization bound to its eventual clean commit. See
+`host_refactor/HOST_ASSET_RESTORATION_RESULT.md` and
+`host_refactor/LIVE_SMOKE_PLAN.md`. All 282 repository tests pass.
 
 The refactor implementation began at commit
 `a84f51ce1797cd00574fbc0f1f8d59945e8da2ff`. The new selected

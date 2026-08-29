@@ -3,8 +3,10 @@
 Status: core, live seams, and locked-tokenizer behavior are exactly qualified
 provider-free. The immutable full model from the frozen lock is restored and
 is the verified fallback when the historical sparse tokenizer projection is
-absent. The direct E83 replay and all 280 repository tests pass. No GPU/model
-provider call was made and no behavioral experiment is selected here.
+absent. A one-call live-smoke path is now implemented and provider-free
+qualified against the authentic E83 pressure boundary. It awaits a clean
+freeze commit and separate exact GPU authorization; no live call has yet been
+made by this subproject. All 282 repository tests pass.
 
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners
@@ -42,6 +44,8 @@ automatic phase inference, loop classification, or model-managed eviction.
   evidence, and the locked-asset issue found at that checkpoint.
 - `HOST_ASSET_RESTORATION_RESULT.md` records the durable asset restoration,
   exact replay, and final provider-free qualification.
+- `LIVE_SMOKE_PLAN.md` defines the one-call integrated live qualification and
+  its deliberately narrow claim limits.
 
 ## Completion gate
 

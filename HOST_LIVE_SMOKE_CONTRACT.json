@@ -1,0 +1,36 @@
+{
+  "attempts_per_call": 1,
+  "claim_limits": [
+    "host_live_path_qualification_only",
+    "one_model_response_is_not_behavioral_evidence",
+    "no_information_management_utility_claim",
+    "no_automatic_continuation"
+  ],
+  "maximum_new_model_calls": 1,
+  "maximum_serialized_tokens": 30000,
+  "parent_pressure_boundary": {
+    "delivered_source_ids": ["CLIMATE", "CLINIC", "COUNCIL", "GRID", "SHELTER", "WATER"],
+    "ordinary_prompt_tokens": 21401,
+    "parent_run_id": "2026-08-28-trellis-artifact-centered-pressure-screen-v0",
+    "pending_result_id": "RESULT-007",
+    "pending_source_ids": ["COMMS", "TRANSIT"],
+    "relief_prompt_tokens": 18785,
+    "relief_result_ids": ["RESULT-001"]
+  },
+  "required_live_gates": [
+    "clean frozen commit and external authorization receipt",
+    "exact model, server, and tokenizer executable verification plus runtime bundle hash recording",
+    "fresh hidden llama-server process",
+    "model alias, build, 25088 context, 66/66 GPU offload, and PID-on-GPU verification",
+    "exact E83 pressure and first-fit relief reproduction before provider call",
+    "exact RESULT-007 exposure in one completed invocation",
+    "one attempt and zero retries",
+    "checkpoint, mechanical review, raw HTTP custody, runtime release, and tree seal"
+  ],
+  "retries": 0,
+  "run_id": "2026-08-28-host-refactor-live-smoke-v0",
+  "schema": "host-refactor-live-smoke-contract-v0",
+  "scope": "host_refactor_live_smoke_v0",
+  "status": "frozen_pending_exact_commit_and_external_authorization",
+  "task_id": "trellis-heat-continuity-decision-v0"
+}

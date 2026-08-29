@@ -271,3 +271,44 @@ Disposition:
   dependency;
 - live GPU/provider behavior: not exercised by this qualification;
 - no behavioral experiment is selected by this result.
+
+## 2026-08-28 — integrated one-call live-smoke Stage 0
+
+Implemented:
+
+- a frozen one-call contract over the authentic E83 pressure boundary;
+- a manifest-bound launcher requiring a clean commit and an external receipt
+  for one call, 30,000 serialized tokens, one attempt, and zero retries;
+- exact selected-asset verification and the existing CUDA/model runtime gate;
+- verified historical parent checkpoint creation before the resumed call;
+- exact preflight for 21,401 ordinary tokens, `RESULT-001` first-fit relief,
+  18,785 treated tokens, and pending `RESULT-007`;
+- raw HTTP and host-provider custody, request/result binding checks, checkpoint,
+  mechanical review, runtime release, and final tree seal;
+- provider-free tests for the manifest and the entire one-call host transition.
+
+Offline defects caught and repaired before freeze:
+
+- a resumed historical kernel initially lacked the parent checkpoint required
+  by the hardened tranche interface;
+- the launcher initially queried a review-only invocation structure instead of
+  the authoritative event log;
+- the raw response check initially named the wrong custody file.
+
+Disposition:
+
+- Stage 0 implementation and focused offline qualification: passed;
+- live model behavior: not yet measured;
+- next permissible operation after full regression and freeze: the separately
+  authorized one-call smoke in `LIVE_SMOKE_PLAN.md`.
+
+Verification:
+
+- selected model/server/tokenizer assets passed exact hash verification and the
+  CUDA server bundle received a complete file-hash inventory;
+- direct E83 replay passed with the frozen 21,401 / 18,785 token geometry;
+- 44 refactored-host tests passed;
+- Ruff passed over the selected host/tests/tools path;
+- mypy passed over all 13 host modules;
+- all 282 repository tests passed in 329.53 seconds;
+- GPU/provider calls remained zero.

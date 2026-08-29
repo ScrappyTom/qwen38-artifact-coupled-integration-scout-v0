@@ -34,6 +34,7 @@ Date: 2026-08-28
 | Prospective total budget | serialized budget blocks before provider invocation |
 | Chained tranche resume | second tranche verifies and binds its exact parent checkpoint |
 | Rich mechanical review | request/exposure, custody, usage/timing, action disposition, candidate diff, and recurrence evidence are present |
+| One-call integrated live-smoke path | provider-free test starts from E83, verifies 21,401-token pressure, externalizes RESULT-001, delivers RESULT-007 on call 8, admits one action, and writes a chained checkpoint/review |
 
 ## Verification commands
 
@@ -64,3 +65,8 @@ prompt tokens, RESULT-001 relief, and a feasible packet.
 - All 280 repository tests passed in 299.79 seconds without an injected model
   substitution.
 - GPU/provider calls: zero.
+- The live-smoke manifest binds its contract, launcher, restored model/runtime
+  locks, and base host execution manifest. Two focused tests pass against the
+  exact locked tokenizer without provider I/O.
+- All 282 repository tests pass in 329.53 seconds after adding the live-smoke
+  contract and tests.
