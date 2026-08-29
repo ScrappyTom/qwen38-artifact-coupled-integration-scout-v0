@@ -1,0 +1,33 @@
+{
+  "schema": "trellis-refactored-interaction-continuation-stage0-v0",
+  "date": "2026-08-29",
+  "status": "provider_free_qualified_live_unauthorized",
+  "parent_run_id": "2026-08-29-trellis-refactored-interaction-tranche-v0",
+  "parent_result_commit": "0626259773f1411272566caa1b4a00c83e70e606",
+  "run_id": "2026-08-29-trellis-refactored-interaction-continuation-v0",
+  "configuration_order": [
+    "V0_EXACT_ARTIFACT",
+    "V1_TEMPORARY_PROVENANCE_SCAFFOLD"
+  ],
+  "parent_checkpoint": {
+    "actor_calls_per_configuration": 12,
+    "pending_result_id": "RESULT-012",
+    "candidate_changed": false,
+    "catalog_traversal_actions_identical": true,
+    "treatment_maintenance_calls": 6,
+    "treatment_maintenance_serialized_tokens": 31578
+  },
+  "policy_change": false,
+  "focused_provider_free_tests_passed": 3,
+  "full_regression_tests_passed": 295,
+  "additional_limits": {
+    "maximum_actor_calls": 24,
+    "maximum_maintenance_calls": 6,
+    "maximum_provider_calls": 30,
+    "maximum_serialized_tokens": 520028,
+    "attempts_per_call": 1,
+    "retries": 0
+  },
+  "live_authorized": false,
+  "automatic_continuation": false
+}

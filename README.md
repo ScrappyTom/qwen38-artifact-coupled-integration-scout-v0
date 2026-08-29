@@ -1,14 +1,22 @@
 # Qwen3.8 bounded-work system interaction scouts
 
-Status update, 2026-08-29: the refactored host is now composed through the
-separate `interaction_scout` layer into a complete provider-free Trellis
-pressure-to-repair lifecycle. Both configurations exercised authentic relief,
-exact candidate mutation, checkpoint/resume, a current failing check, uniquely
-bound repair, effect uptake, current passing recheck, and submission proposal.
-The treatment also exercised charged anchored maintenance and scaffold
-demotion at verification. These are scripted lifecycle facts, not model
-behavior. The selected first twelve-call live tranche is not yet authorized.
-See `TRELLIS_REFACTORED_INTERACTION_STAGE0.md` and
+Status update, 2026-08-29: the first refactored-host Trellis interaction tranche
+is complete and sealed at result commit
+`0626259773f1411272566caa1b4a00c83e70e606`. Both actors made the same twelve
+catalog-traversal reads and left `RESULT-012` pending; neither changed the
+candidate. V1 paid 31,578 serialized tokens for six grounded maintenance calls
+but also exposed a semantically lossy source-slot replacement cadence. The
+literal result and turn-by-turn qualitative appendix are in
+`TRELLIS_REFACTORED_INTERACTION_TRANCHE_RESULT.md` and
+`TRELLIS_REFACTORED_INTERACTION_QUALITATIVE_APPENDIX.md`.
+
+An unchanged exact-checkpoint continuation is now provider-free qualified. It
+delivers the pending final catalog pair and preserves the same whole systems so
+their first post-acquisition construction decisions can be observed. The
+continuation neither repairs nor tunes the scaffold; any changed policy would
+be a new experiment. It is frozen for a separately authorized second tranche
+and no GPU/provider call is authorized yet. See
+`TRELLIS_REFACTORED_INTERACTION_CONTINUATION_STAGE0.md` and
 `interaction_scout/GOVERNANCE.md`.
 
 Status update, 2026-08-28: the host-runtime refactor is exactly qualified

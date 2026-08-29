@@ -1,0 +1,27 @@
+{
+  "schema": "trellis-refactored-interaction-continuation-contract-v0",
+  "run_id": "2026-08-29-trellis-refactored-interaction-continuation-v0",
+  "parent_run_id": "2026-08-29-trellis-refactored-interaction-tranche-v0",
+  "parent_result_commit": "0626259773f1411272566caa1b4a00c83e70e606",
+  "configuration_order": [
+    "V0_EXACT_ARTIFACT",
+    "V1_TEMPORARY_PROVENANCE_SCAFFOLD"
+  ],
+  "policy_change": false,
+  "reason": "deliver pending RESULT-012 and observe the first post-catalog construction decisions under the unchanged whole configurations",
+  "additional_limits": {
+    "maximum_actor_calls": 24,
+    "maximum_maintenance_calls": 6,
+    "maximum_provider_calls": 30,
+    "maximum_serialized_tokens": 520028,
+    "attempts_per_call": 1,
+    "retries": 0
+  },
+  "checkpoint_rule": "pause after each configuration reaches 24 cumulative completed actor calls or an earlier terminal/resource disposition",
+  "claim_limits": [
+    "The continuation cannot repair or tune the scaffold discovered at checkpoint one.",
+    "A difference supports the whole evolving configuration, not the scaffold alone.",
+    "Identical acquisition before RESULT-012 delivery does not establish semantic equivalence.",
+    "No automatic continuation follows checkpoint two."
+  ]
+}
