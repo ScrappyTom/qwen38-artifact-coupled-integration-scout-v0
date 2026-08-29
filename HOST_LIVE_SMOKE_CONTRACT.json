@@ -32,6 +32,6 @@
   "run_id": "2026-08-28-host-refactor-live-smoke-v2",
   "schema": "host-refactor-live-smoke-contract-v2",
   "scope": "host_refactor_live_smoke_v2",
-  "status": "frozen_pending_exact_commit_and_external_authorization",
+  "status": "completed_by_qualified_v2_checkpoint_pause",
   "task_id": "trellis-heat-continuity-decision-v0"
 }

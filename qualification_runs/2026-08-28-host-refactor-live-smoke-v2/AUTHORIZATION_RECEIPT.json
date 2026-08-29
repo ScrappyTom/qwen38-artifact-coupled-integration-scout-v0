@@ -1,0 +1,1 @@
+{"attempts_per_call":1,"authorized":true,"authorized_freeze_commit":"3afd9e269abb437512ea961772b43f4a12ea0f30","authorized_run_id":"2026-08-28-host-refactor-live-smoke-v2","authorized_scopes":["host_refactor_live_smoke_v2"],"maximum_model_calls":1,"maximum_serialized_tokens":30000,"retries":0}

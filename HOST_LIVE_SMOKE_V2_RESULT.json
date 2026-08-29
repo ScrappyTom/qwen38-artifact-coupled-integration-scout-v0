@@ -1,0 +1,40 @@
+{
+  "accepted_action": {
+    "action": "read_batch",
+    "requests": [
+      {
+        "end_line": 94,
+        "source_id": "TRANSIT",
+        "start_line": 61
+      },
+      {
+        "end_line": 94,
+        "source_id": "COMMS",
+        "start_line": 61
+      }
+    ]
+  },
+  "apparatus_commit": "3afd9e269abb437512ea961772b43f4a12ea0f30",
+  "candidate_changed": false,
+  "completion_tokens": 74,
+  "disposition": "checkpoint_pause",
+  "failed_invocations": 0,
+  "live_prompt_tokens": 18786,
+  "model_calls": 1,
+  "next_pending_result_id": "RESULT-008",
+  "pending_result_first_delivered_call": 8,
+  "provider_attempts": 1,
+  "provider_elapsed_ms": 26977.284699998563,
+  "qualification_failures": [],
+  "qualified": true,
+  "relief_result_ids": [
+    "RESULT-001"
+  ],
+  "retries": 0,
+  "run_id": "2026-08-28-host-refactor-live-smoke-v2",
+  "run_seal_sha256": "2eb130f3ed5d1cea7c399bbf018c7b15e618624b20f31e8eec421ac9cda021d3",
+  "runtime_released": true,
+  "schema": "host-refactor-live-smoke-v2-result-v0",
+  "serialized_tokens": 18860,
+  "status": "qualified_checkpoint_pause"
+}

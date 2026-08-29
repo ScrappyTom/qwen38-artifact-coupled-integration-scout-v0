@@ -57,6 +57,23 @@ def test_live_smoke_manifest_binds_runner_contract_and_base_host() -> None:
     assert EXPECTED_LIVE_RELIEF_TOKENS == 18_786
 
 
+def test_v2_result_records_qualified_single_call_checkpoint() -> None:
+    result = json.loads(
+        (ROOT / "HOST_LIVE_SMOKE_V2_RESULT.json").read_text(encoding="utf-8")
+    )
+    assert result["apparatus_commit"] == "3afd9e269abb437512ea961772b43f4a12ea0f30"
+    assert result["run_id"] == "2026-08-28-host-refactor-live-smoke-v2"
+    assert result["qualified"] is True
+    assert result["model_calls"] == 1
+    assert result["provider_attempts"] == 1
+    assert result["retries"] == 0
+    assert result["live_prompt_tokens"] == EXPECTED_LIVE_RELIEF_TOKENS
+    assert result["pending_result_first_delivered_call"] == 8
+    assert result["next_pending_result_id"] == "RESULT-008"
+    assert result["candidate_changed"] is False
+    assert result["runtime_released"] is True
+
+
 def test_one_call_smoke_crosses_pressure_delivery_action_and_checkpoint() -> None:
     tokenizer = OfflineTokenizer()
     with tempfile.TemporaryDirectory() as directory:

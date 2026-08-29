@@ -2,10 +2,11 @@
 
 Date: 2026-08-28
 
-Status: v0 and v1 are sealed before provider I/O. V0 encountered an unrelated
+Status: completed by the qualified v2 checkpoint pause. V0 and v1 are sealed
+before provider I/O. V0 encountered an unrelated
 active GPU process. V1 exposed a stable one-token split between the exact
 offline and running-server tokenizer projections. V2 freezes both projections
-exactly and is pending a new clean commit and separate exact GPU authorization.
+exactly; the authorized v2 call passed and is sealed.
 
 ## Purpose
 
@@ -74,6 +75,8 @@ unattended long trajectory.
 
 ## Successor rule
 
-After a passing smoke, the next step is a separately designed and authorized
-bounded live tranche with a human review pause. A failed smoke is repaired at
-the exact host/runtime boundary it exposes; it is not retried under this run ID.
+After this passing smoke, any next step must be a separately designed and
+authorized bounded live tranche resumed from the exact checkpoint. No
+continuation is selected automatically. A failed smoke is repaired at the
+exact host/runtime boundary it exposes; it is not retried under the same run
+ID.

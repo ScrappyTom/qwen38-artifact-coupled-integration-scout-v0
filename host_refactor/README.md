@@ -9,9 +9,11 @@ provider I/O because another authorized GPU job was active. V1 passed the live
 runtime gates but stopped before completion I/O when the running server counted
 the relieved packet at 18,786 tokens versus the exact offline count of 18,785.
 Two fresh-server diagnostics reproduced the split over byte-identical prompts.
-Both runs are sealed; v2 freezes both exact projections and awaits a new clean
-commit and separate authorization. No model call has yet been made by this
-subproject. All 282 repository tests pass.
+Both runs are sealed. V2 froze both exact projections, completed the one
+permitted live call, delivered pending `RESULT-007`, admitted a valid batch
+read, acquired the resulting exact observation as pending, and stopped at the
+mandatory checkpoint. The seal and runtime release verify. This subproject has
+now made exactly one model call. All 282 pre-run repository tests pass.
 
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners

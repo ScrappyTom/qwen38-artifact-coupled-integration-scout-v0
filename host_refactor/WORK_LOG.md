@@ -362,3 +362,30 @@ Disposition:
 - v2 freezes 18,785 offline and 18,786 live as distinct exact projections over
   the same frozen prompt bytes;
 - a new commit-bound authorization is required before any completion call.
+
+## 2026-08-29 — live smoke v2 qualified checkpoint
+
+Observed:
+
+- all frozen asset and live runtime gates passed;
+- exact first-fit `RESULT-001` relief produced the frozen 18,786-token live
+  request and preserved the 4,096-token response reserve;
+- completed call 8 delivered pending `RESULT-007`;
+- Qwen returned a valid batch read for TRANSIT 61–94 and COMMS 61–94;
+- the host admitted the action, acquired `RESULT-008`, and left it pending for
+  a later invocation rather than falsely marking it delivered;
+- one provider attempt completed with 18,786 prompt and 74 completion tokens;
+- the candidate remained unchanged and no reopen, repeat demand, failed call,
+  or repeated response occurred;
+- checkpoint, mechanical review, exact custody, run seal, and runtime release
+  verify; the seal SHA-256 is
+  `2eb130f3ed5d1cea7c399bbf018c7b15e618624b20f31e8eec421ac9cda021d3`.
+
+Disposition:
+
+- the one-call refactored live host path is qualified at this boundary;
+- the action is coherent with the actor's prior depth-first pair pacing, but
+  does not establish task integration, artifact quality, loop avoidance, or
+  closure behavior;
+- v2 is closed after its sole authorized attempt;
+- no continuation is selected or authorized by this apparatus result.

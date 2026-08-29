@@ -36,6 +36,7 @@ Date: 2026-08-28
 | Rich mechanical review | request/exposure, custody, usage/timing, action disposition, candidate diff, and recurrence evidence are present |
 | One-call integrated live-smoke path | provider-free test starts from E83, verifies 21,401-token pressure, externalizes RESULT-001, delivers RESULT-007 on call 8, admits one action, and writes a chained checkpoint/review |
 | Exact offline/live tokenizer projections | v1 custody plus two fresh-server diagnostics bind identical relieved prompt bytes to 18,785 offline and 18,786 running-server tokens; v2 fails on deviation from either exact count |
+| Qualified integrated live path | sealed v2 custody proves one 18,786-token live request delivered RESULT-007 on call 8, admitted one valid batch read, acquired RESULT-008 as pending, wrote checkpoint/review, and released the server |
 
 ## Verification commands
 
