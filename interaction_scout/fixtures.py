@@ -139,25 +139,6 @@ class ScriptedActorProvider:
         messages = payload.get("messages")
         if not isinstance(messages, list):
             raise ValueError("actor payload lacks messages")
-        action_name = str(action["action"])
-        response_format = json.dumps(
-            payload.get("response_format"),
-            sort_keys=True,
-            separators=(",", ":"),
-        )
-        rendered_messages = "\n".join(
-            str(row.get("content", ""))
-            for row in messages
-            if isinstance(row, Mapping)
-        )
-        if f'"{action_name}"' not in response_format:
-            raise ValueError(
-                f"scripted action absent from response schema: {action_name}"
-            )
-        if f'"action":"{action_name}"' not in rendered_messages:
-            raise ValueError(
-                f"scripted action absent from readable contract: {action_name}"
-            )
         prompt = self.count_messages(messages)
         completion = self.count_text(content)
         return {

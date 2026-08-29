@@ -67,3 +67,27 @@
   packet remained feasible.
 - The sealed v0 route remains closed. A repaired live route requires a new
   Stage 0, run ID, frozen commit, and explicit authorization.
+
+## 2026-08-29 — E99 repaired Stage 0 qualified
+
+- Created a new donor-derived route starting from the original E96 checkpoint,
+  not the sealed E98 terminal.
+- Complete provider-free lifecycle passed in eleven actor calls with zero
+  maintenance calls: effect delivery, final section, phase transition, failing
+  current check, six bounded repairs, passing current recheck, and submission.
+- Exact E98 calls 19–22 replayed with two rejected-response receipts and no raw
+  rejected body in the prompt projection. The next packet measured 16,335
+  tokens versus the 20,992-token limit; the sealed old packet was 23,811.
+- `current_action_contract` crossed completed provider-free requests and every
+  scripted E99 action was present in both response schema and readable phase
+  guidance.
+- The parity assertion remains scoped to E99. An initial attempt to apply it to
+  an older generic fixture correctly exposed two historical compatibility
+  failures; that overbroad change was removed without changing the repaired
+  route.
+- New run ID:
+  `2026-08-29-trellis-e99-verification-lifecycle-scout-v1`.
+- Full repository suite: 315 passed in 526.99 seconds after scoping the new
+  request-parity assertion to E99.
+- Targeted Ruff and Mypy checks: passed.
+- No GPU, live tokenizer, or live provider call occurred.

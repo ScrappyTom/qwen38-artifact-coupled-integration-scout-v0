@@ -699,12 +699,12 @@ class HostKernel:
             elif event.kind is EventKind.REJECTED_RESPONSE_EXTERNALIZED:
                 call_index = int(data["call_index"])
                 rejection = rejected_responses.get(call_index)
-                expected = {
+                expected_rejection = {
                     "finish_reason": str(data["finish_reason"]),
                     "rejection_result_id": str(data["rejection_result_id"]),
                     "response_sha256": str(data["response_sha256"]),
                 }
-                if rejection != expected:
+                if rejection != expected_rejection:
                     raise InvalidTransition(
                         f"rejected response externalization lacks exact rejection: {call_index}"
                     )
@@ -728,7 +728,10 @@ class HostKernel:
                     raise InvalidTransition(
                         f"rejected response already externalized: {entry_id}"
                     )
-                if sha256_bytes(entry.content.encode("utf-8")) != expected["response_sha256"]:
+                if (
+                    sha256_bytes(entry.content.encode("utf-8"))
+                    != expected_rejection["response_sha256"]
+                ):
                     raise InvalidTransition(
                         f"rejected response transcript hash mismatch: {entry_id}"
                     )
@@ -736,9 +739,11 @@ class HostKernel:
                     entry,
                     content=self._rejected_response_receipt(
                         call_index=call_index,
-                        finish_reason=expected["finish_reason"],
-                        response_sha256=expected["response_sha256"],
-                        rejection_result_id=expected["rejection_result_id"],
+                        finish_reason=expected_rejection["finish_reason"],
+                        response_sha256=expected_rejection["response_sha256"],
+                        rejection_result_id=expected_rejection[
+                            "rejection_result_id"
+                        ],
                         transcript_entry_id=entry_id,
                     ),
                     entry_kind="rejected_assistant_response_receipt",

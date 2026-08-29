@@ -81,6 +81,7 @@ def migrate_e96_donor(
     maintenance_complete: Callable[[Mapping[str, Any]], Mapping[str, Any]],
     checkpoint_output: Path | None = None,
     receipt_output: Path | None = None,
+    system_builder: Callable[..., tuple[Any, Any, Any]] | None = None,
 ) -> MigrationOutcome:
     donor_path = donor_checkpoint_path(repository_root)
     donor = load_json(donor_path)
@@ -115,7 +116,8 @@ def migrate_e96_donor(
     if preterminal.project().terminal is not None:
         raise ValueError("donor preterminal state is unexpectedly terminal")
 
-    host, adapter, orchestrator = build_lifecycle_scout_system(
+    builder = build_lifecycle_scout_system if system_builder is None else system_builder
+    host, adapter, orchestrator = builder(
         repository_root=repository_root,
         trajectory_root=trajectory_root,
         domain_snapshot=trellis,

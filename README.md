@@ -1,5 +1,16 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-29: the repaired E99 donor-derived
+verification-lifecycle route is frozen and qualified offline. It begins again
+from the original E96 donor, exposes a readable verification contract aligned
+with the response schema, and projects unadmitted rejected responses as compact
+hash-bound receipts while retaining exact raw custody and event history. The
+complete provider-free lifecycle reached failing check, six bounded repairs,
+passing current recheck, and closure in eleven actor calls. Replaying the exact
+four E98 responses now leaves a feasible 16,335-token next packet instead of
+the historical 23,811-token block. No live call is authorized yet. See
+`TRELLIS_E99_VERIFICATION_LIFECYCLE_STAGE0.md`.
+
 Status update, 2026-08-29: the sealed E98 live verification-lifecycle scout
 crossed the pending effect, added the missing sixth section, and entered
 verification, but then exposed two apparatus faults. Its machine response
