@@ -55,7 +55,7 @@
       "finish_reason": "length",
       "action": null,
       "disposition": "response_rejected",
-      "raw_intent": "undeclared_replace_artifact_section_with_complete_document_and_repeated_sections"
+      "raw_intent": "schema_allowed_but_semantically_unexplained_replace_artifact_section_with_complete_document_and_repeated_sections"
     },
     {
       "absolute_call": 22,
@@ -86,9 +86,10 @@
     "e97_made_the_initial_live_boundary_reachable": true
   },
   "censor": {
-    "actor_visible_verification_action_contract_present": false,
-    "run_check_declared_in_call_21_request": false,
-    "replace_artifact_section_declared_in_call_21_request": false,
+    "actor_visible_verification_natural_language_contract_present": false,
+    "verification_response_schema_present": true,
+    "run_check_allowed_by_response_schema": true,
+    "replace_artifact_section_allowed_by_response_schema": true,
     "current_check_delivered": false,
     "full_rejected_assistant_response_retained_in_prompt": true,
     "compact_rejection_receipt_also_retained": true,
@@ -99,7 +100,7 @@
   "claim_limits": [
     "The run does not test Qwen use of a current check because no check was run or shown.",
     "The run does not establish repair or closure utility.",
-    "The two truncated repair attempts are real behavior but are materially confounded by the missing actor-facing verification action surface.",
+    "The two truncated repair attempts are real behavior but are materially confounded by a split interface: the response schema allowed verification actions while the natural-language messages supplied only the construction contract and no check/repair/recheck guidance.",
     "E97 is locally supported as enabling effect delivery, one further admitted mutation, and verification-phase entry; it did not prevent rejected-output chronology from becoming the next capacity burden.",
     "A repaired route requires a new commit, run ID, and authorization; this sealed terminal is not resumed."
   ],

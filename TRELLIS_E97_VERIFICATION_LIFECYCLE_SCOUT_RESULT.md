@@ -17,9 +17,11 @@ seal verifies.
 
 This is not a clean negative for the intended verification lifecycle. The live
 trajectory exposed an actor-facing apparatus omission that the provider-free
-fixture had not tested: after `begin_verification`, the request still contained
-only the construction action contract. It declared no `run_check`, bounded
-repair, recheck, or submit action.
+fixture had not tested: after `begin_verification`, the natural-language
+messages still contained only the construction action contract. The request's
+JSON response schema did permit `run_check` and `replace_artifact_section`, but
+the readable instructions did not explain those actions or the intended
+check/repair/recheck discipline.
 
 ## What crossed successfully
 
@@ -37,9 +39,11 @@ recheck, or submission occurred.
 ## Where the route failed
 
 Call 21 received the exact verification-phase effect and a current verification
-frame with `check_binding: null`. It did not receive a declared verification
-action surface. Qwen improvised an undeclared `replace_artifact_section`
-response containing the entire document rather than a bounded section. The
+frame with `check_binding: null`. Its machine-readable response schema allowed
+verification actions, but its natural-language contract remained
+construction-only. Qwen emitted a schema-allowed but semantically unexplained
+`replace_artifact_section` response containing the entire document rather than
+a bounded section. The
 generation repeated the final heading six times and exhausted all 4,096
 completion tokens, so the host rejected it without mutation.
 
@@ -80,9 +84,11 @@ failure:
 ```text
 verification phase entered
         +
-no actor-visible verification action contract
+verification syntax in response schema
+        +
+no natural-language verification workflow or action guidance
         ↓
-model improvises oversized undeclared repair
+model emits oversized global repair before a current check
         +
 full rejected output remains resident beside rejection receipt
         ↓
@@ -106,8 +112,8 @@ code.
 A repaired v1 requires:
 
 1. an explicit actor-visible verification contract after phase entry;
-2. provider-free assertions that every scripted action is actually declared in
-   the corresponding actor request;
+2. provider-free assertions that every scripted action is declared in both the
+   corresponding response schema and readable phase contract;
 3. exact external custody but compact model-facing representation of rejected
    assistant bodies after rejection, because they caused no world transition;
 4. a new run ID, clean frozen commit, and separate GPU authorization.

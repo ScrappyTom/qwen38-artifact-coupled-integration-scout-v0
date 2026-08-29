@@ -51,6 +51,13 @@ def test_live_calls_cross_construction_and_phase_but_not_check() -> None:
     assert '"action":"run_check"' not in rendered
     assert '"action":"replace_artifact_section"' not in rendered
     assert '"check_binding":null' in rendered
+    response_schema = json.dumps(
+        call21_request["response_format"],
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    assert '"run_check"' in response_schema
+    assert '"replace_artifact_section"' in response_schema
 
 
 def test_two_length_rejections_are_exact_prefix_recurrence() -> None:

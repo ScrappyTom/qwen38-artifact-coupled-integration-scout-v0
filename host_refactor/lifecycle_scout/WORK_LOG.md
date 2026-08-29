@@ -32,7 +32,10 @@
 - The checkpoint candidate grew from 904 to 1,145 words and satisfied heading
   order, but remained `not_ready` with all eight substantive groups failing.
 - Calls 21 and 22 each exhausted 4,096 completion tokens while attempting an
-  undeclared whole-document `replace_artifact_section`. Call 22 reproduced all
+  schema-allowed but semantically unexplained whole-document
+  `replace_artifact_section`. The machine response schema permitted verification
+  actions, while the readable messages still supplied only the construction
+  contract. Call 22 reproduced all
   18,963 call-21 characters exactly before continuing six characters.
 - The next packet measured 23,811 tokens and stopped before provider I/O. The
   runtime released and the run seal verifies.
