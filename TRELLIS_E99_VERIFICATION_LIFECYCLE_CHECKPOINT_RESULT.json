@@ -1,0 +1,60 @@
+{
+  "schema": "trellis-e99-verification-lifecycle-checkpoint-result-v1",
+  "date": "2026-08-30",
+  "freeze_commit": "76091fc5885d25d31becccbb0edb8fc6a3681bac",
+  "run_id": "2026-08-29-trellis-e99-verification-lifecycle-scout-v1",
+  "status": "qualified_mandatory_checkpoint_pause",
+  "actual_additional": {
+    "actor_calls": 6,
+    "maintenance_calls": 0,
+    "provider_calls": 6,
+    "serialized_tokens": 111198,
+    "attempts_per_call": 1,
+    "retries": 0
+  },
+  "action_sequence": [
+    "upsert_decision_section:accepted",
+    "begin_verification:accepted",
+    "run_check:accepted",
+    "replace_artifact_section:rejected_section_version_mismatch",
+    "replace_artifact_section:accepted",
+    "run_check:accepted"
+  ],
+  "candidate": {
+    "sha256": "d927aeecd8f1de60e9848f7f536dcdc31dbebbf83f3c79124f5d8306f609a633",
+    "word_count": 1041,
+    "decision_source_breadth": 9,
+    "substantive_groups_met": ["T01_authority"],
+    "substantive_groups_still_failing": [
+      "T02_heat",
+      "T03_power",
+      "T04_water",
+      "T05_clinic_shelter",
+      "T06_transit_comms",
+      "T07_supply_labor",
+      "T08_currentness"
+    ],
+    "closure_readiness": "not_ready",
+    "submitted": false
+  },
+  "checkpoint": {
+    "checkpoint_sha256": "4395a0bfa3de1d676040373e35944b93fb7d2b326bd23f9ae4eb8faed3b5d4a6",
+    "pending_result_id": "RESULT-024",
+    "pending_result_kind": "check_observation",
+    "run_seal_sha256": "3691dc95dbe09cb666d78cb7e5ae6adf0c837d71f08780ae67904bb00169ec93",
+    "runtime_released": true
+  },
+  "qualitative_review": {
+    "pending_effect_uptake": true,
+    "verification_entered": true,
+    "current_check_used": true,
+    "bounded_repair_attempted": true,
+    "section_version_rejection_recovered": true,
+    "changed_candidate_rechecked": true,
+    "looping_observed": false,
+    "orientation_loss_observed": false,
+    "useful_completion": false,
+    "unchanged_policy_continuation_scientifically_eligible": true
+  },
+  "claim": "The repaired interface enabled real effect uptake, verification, candidate-bound checking, recovery from an exact section-version rejection, one admitted bounded repair, and recheck without looping; the artifact remains not ready and continuation utility is unresolved."
+}

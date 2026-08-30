@@ -1,0 +1,56 @@
+{
+  "schema": "trellis-e99-verification-lifecycle-continuation-contract-v1",
+  "run_id": "2026-08-30-trellis-e99-verification-lifecycle-continuation-v1",
+  "parent_run_id": "2026-08-29-trellis-e99-verification-lifecycle-scout-v1",
+  "configuration": "V1_E97_REPAIRED_DONOR_DERIVED_LIFECYCLE",
+  "scientific_identity": "unchanged-policy continuation from the exact mandatory-review checkpoint; not a retry, repair, or fresh-world transfer",
+  "checkpoint_review": {
+    "additional_actor_calls": 6,
+    "additional_maintenance_calls": 0,
+    "additional_provider_calls": 6,
+    "additional_serialized_tokens": 111198,
+    "candidate_sha256": "d927aeecd8f1de60e9848f7f536dcdc31dbebbf83f3c79124f5d8306f609a633",
+    "closure_readiness": "not_ready",
+    "substantive_groups_met": ["T01_authority"],
+    "substantive_groups_still_failing": [
+      "T02_heat",
+      "T03_power",
+      "T04_water",
+      "T05_clinic_shelter",
+      "T06_transit_comms",
+      "T07_supply_labor",
+      "T08_currentness"
+    ],
+    "qualitative_disposition": "coherent_forward_verification_and_repair_progress_without_looping"
+  },
+  "unchanged_runtime_policy": [
+    "exact external custody and deterministic first-positive relief",
+    "temporary scaffold remains demoted during verification",
+    "exact current candidate, pending effect, and candidate-bound check",
+    "bounded section replacement with optimistic section-version binding",
+    "current recheck after mutation effect uptake",
+    "no retries and no semantic host repair"
+  ],
+  "remaining_authorization_envelope": {
+    "maximum_actor_calls": 12,
+    "maximum_maintenance_calls": 1,
+    "maximum_provider_calls": 13,
+    "maximum_serialized_tokens": 338802
+  },
+  "this_tranche": {
+    "maximum_actor_calls": 6,
+    "maximum_maintenance_calls": 1,
+    "maximum_provider_calls": 7,
+    "maximum_serialized_tokens": 338802,
+    "attempts_per_call": 1,
+    "retries": 0,
+    "automatic_continuation": false
+  },
+  "review": "Pause after at most six further actor calls or any earlier terminal. Review current-check delivery, section-version recovery, repairs, rechecks, candidate quality, recurrence, and cost before any final tranche.",
+  "claim_limits": [
+    "The first live tranche is donor-derived and not independent transfer.",
+    "The checkpoint shows one successful repair, not useful completion.",
+    "No host or policy change is introduced by this continuation.",
+    "A passing mechanical check does not independently authorize readiness."
+  ]
+}
