@@ -1,0 +1,46 @@
+{
+  "additional_limits": {
+    "actor_calls": 12,
+    "attempts_per_call": 1,
+    "maintenance_calls": 6,
+    "provider_calls": 18,
+    "retries": 0,
+    "serialized_tokens": 400000
+  },
+  "automatic_continuation": false,
+  "configuration": "V1_CLEAN_PROSPECTIVE_LIFECYCLE",
+  "hydrated_state": {
+    "candidate_sha256": "e7a12171c6523e8881fddf7cdcd0cba3e99f97ff7ef1db9770f7295a596db0ba",
+    "completed_actor_calls": 12,
+    "maintenance_calls": 6,
+    "pending_result_ids": [
+      "RESULT-012"
+    ],
+    "provider_calls": 18,
+    "serialized_tokens": 205399
+  },
+  "live_authorized": false,
+  "next_live_operation": "separately_authorized_exact_checkpoint_continuation_only",
+  "parent_bindings": {
+    "checkpoint_sha256": "88b7d472079262d7c12305dbc6eb8251b9554215a8cf75d39cea7e179b51bf32",
+    "run_seal_sha256": "1288911f926caf36b5bf3d864142adc07c9700fd458fb0e7cf3c976fe283ff1d",
+    "seal_errors": [],
+    "tranche_result_sha256": "cdfb3d4746a5f426f2de3234f44c17abda7bce098f2607285946844b85db1a71"
+  },
+  "parent_result_commit": "fa67aecdf833b72f282a03819a3fbc35e263c320",
+  "parent_run_id": "2026-08-30-trellis-clean-whole-lifecycle-v0",
+  "passed": true,
+  "policy_change": false,
+  "provider_calls": 0,
+  "provider_free_continuation": {
+    "additional_actor_calls": 7,
+    "additional_maintenance_calls": 3,
+    "additional_provider_calls": 10,
+    "additional_serialized_tokens": 142329,
+    "closure_readiness": "ready",
+    "disposition": "completed",
+    "final_candidate_sha256": "42a19dacd584e3db9fe1fd69346bd8b7cdc9af360a8e9f35e1e62ad80016517b",
+    "submitted": true
+  },
+  "schema": "trellis-clean-whole-lifecycle-continuation-stage0-v0"
+}

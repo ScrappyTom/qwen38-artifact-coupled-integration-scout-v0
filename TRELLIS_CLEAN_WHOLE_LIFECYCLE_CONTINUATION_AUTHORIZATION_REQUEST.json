@@ -1,0 +1,13 @@
+{
+  "schema": "trellis-clean-whole-lifecycle-continuation-authorization-request-v0",
+  "scope": "trellis_clean_whole_lifecycle_continuation_v0",
+  "run_id": "2026-08-30-trellis-clean-whole-lifecycle-continuation-v0",
+  "configuration": "V1_CLEAN_PROSPECTIVE_LIFECYCLE",
+  "maximum_actor_calls": 12,
+  "maximum_maintenance_calls": 6,
+  "maximum_provider_calls": 18,
+  "maximum_serialized_tokens": 400000,
+  "attempts_per_call": 1,
+  "retries": 0,
+  "expected_user_quote_template": "I authorize the frozen Trellis clean whole-lifecycle continuation at commit {commit}, run ID 2026-08-30-trellis-clean-whole-lifecycle-continuation-v0: configuration V1_CLEAN_PROSPECTIVE_LIFECYCLE; at most 12 additional actor calls and 6 additional maintenance calls, at most 18 additional provider calls and 400,000 additional serialized tokens, one attempt per call, zero retries; mandatory review at the tranche end or any earlier terminal."
+}
