@@ -1,0 +1,1 @@
+{"content":"{\"action\":\"read_batch\",\"requests\":[{\"end_line\":94,\"source_id\":\"GRID\",\"start_line\":61},{\"end_line\":94,\"source_id\":\"WATER\",\"start_line\":61}]}","finish_reason":"stop","usage":{"completion_tokens":45,"prompt_tokens":10766,"prompt_tokens_details":{"cached_tokens":7604},"total_tokens":10811}}

@@ -1,0 +1,72 @@
+{
+  "schema": "trellis-clean-whole-lifecycle-checkpoint-result-v0",
+  "run_id": "2026-08-30-trellis-clean-whole-lifecycle-v0",
+  "freeze_commit": "fc5acada791bc53dc3562e3f3e2e0b62c1f367a0",
+  "configuration": "V1_CLEAN_PROSPECTIVE_LIFECYCLE",
+  "disposition": "checkpoint_pause",
+  "actor_calls": 12,
+  "maintenance_calls": 6,
+  "provider_calls": 18,
+  "serialized_tokens": 205399,
+  "actor_prompt_tokens": 173165,
+  "actor_completion_tokens": 656,
+  "maintenance_prompt_tokens": 27839,
+  "maintenance_completion_tokens": 3739,
+  "reported_cached_prompt_tokens": 55390,
+  "actor_actions": {
+    "accepted_read_batch": 12,
+    "candidate_mutations": 0,
+    "checks": 0,
+    "submissions": 0,
+    "rejected": 0
+  },
+  "recurrence": {
+    "exact_reopens": 0,
+    "exact_repeat_demands": 0,
+    "repeated_assistant_messages": 0
+  },
+  "relief": {
+    "events": 6,
+    "externalized_result_ids": [
+      "RESULT-001",
+      "RESULT-002",
+      "RESULT-003",
+      "RESULT-004",
+      "RESULT-005",
+      "RESULT-006",
+      "RESULT-007"
+    ]
+  },
+  "semantic_maintenance": {
+    "events": 6,
+    "claims_admitted_over_time": 20,
+    "current_claims": 10,
+    "all_events_changed_register": true,
+    "all_events_full_admission": true,
+    "relationship_claims_current": 0,
+    "selection_loss_observed": true
+  },
+  "checkpoint_state": {
+    "candidate_sha256": "e7a12171c6523e8881fddf7cdcd0cba3e99f97ff7ef1db9770f7295a596db0ba",
+    "candidate_changed": false,
+    "closure_readiness": "not_ready",
+    "pending_result_ids": ["RESULT-012"],
+    "resident_result_ids": [
+      "RESULT-008",
+      "RESULT-009",
+      "RESULT-010",
+      "RESULT-011"
+    ],
+    "complete_catalog_requested": true,
+    "complete_catalog_delivered": false
+  },
+  "bindings": {
+    "tranche_result_sha256": "cdfb3d4746a5f426f2de3234f44c17abda7bce098f2607285946844b85db1a71",
+    "run_seal_sha256": "1288911f926caf36b5bf3d864142adc07c9700fd458fb0e7cf3c976fe283ff1d",
+    "checkpoint_sha256": "88b7d472079262d7c12305dbc6eb8251b9554215a8cf75d39cea7e179b51bf32",
+    "mechanical_review_sha256": "c10ff1203fd7d9141c9a2babf7e061b4fcb1f61bf3cccea89643a912022f8b05",
+    "external_evaluation_sha256": "fcd69d33888bd381c610494b4c8bf6c9d7e3feb38db05abc1b5b61dfa3640b02",
+    "readiness_adjudication_sha256": "d36b4e77b2c17c94d934dd502099058888ec44da0a8cdf6e34014163a2c0009e"
+  },
+  "next_operation": "unchanged_policy_exact_checkpoint_continuation_requires_separate_authorization"
+}
