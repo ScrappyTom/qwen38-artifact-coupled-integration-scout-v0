@@ -402,3 +402,23 @@ Disposition:
   closure behavior;
 - v2 is closed after its sole authorized attempt;
 - no continuation is selected or authorized by this apparatus result.
+
+## 2026-08-30 — E105 clean whole-lifecycle Stage 0
+
+Implemented a new prospective system rather than reconstructing E103:
+
+- original clean Trellis candidate and world;
+- corrected section-boundary transport;
+- temporary anchored construction scaffold;
+- exact incremental artifact state;
+- E97 applied-effect and E104 delivered-check turnover;
+- exact checkpoint hydration, current checks, bounded repair, and an external
+  candidate-bound readiness rule.
+
+The provider-free fixture completed in two tranches with 19 actor calls, seven
+maintenance calls, 26 total attempts, and 343,119 serialized tokens. It
+exercised seven relief events, externalized three delivered effects and the
+failed delivered check, preserved all six headings, failed then passed current
+checks, received `ready` only from the frozen external adjudicator, and
+submitted. No GPU call occurred. The first live tranche is frozen at twelve
+actor calls with mandatory review and no automatic continuation.

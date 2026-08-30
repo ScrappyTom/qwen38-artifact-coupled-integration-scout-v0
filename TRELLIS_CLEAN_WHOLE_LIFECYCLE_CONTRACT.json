@@ -1,0 +1,63 @@
+{
+  "schema": "trellis-clean-whole-lifecycle-contract-v0",
+  "run_id": "2026-08-30-trellis-clean-whole-lifecycle-v0",
+  "task_id": "trellis-heat-continuity-decision-v0",
+  "configuration": "V1_CLEAN_PROSPECTIVE_LIFECYCLE",
+  "causal_unit": "complete_clean_information_to_work_to_verification_lifecycle",
+  "initial_state": {
+    "source": "task_trellis original candidate seed and exact source world",
+    "historical_checkpoint_imported": false,
+    "historical_candidate_imported": false,
+    "e103_resumed": false
+  },
+  "runtime": {
+    "context_window_tokens": 25088,
+    "actor_response_reserve_tokens": 4096,
+    "actor_seed": 884219,
+    "checkpoint_every_completed_actor_calls": 12,
+    "maximum_cumulative_actor_calls": 48,
+    "maximum_cumulative_maintenance_calls": 18,
+    "maximum_cumulative_provider_calls": 66,
+    "maximum_cumulative_serialized_tokens": 1500000,
+    "attempts_per_call": 1,
+    "retries": 0,
+    "automatic_continuation": false
+  },
+  "information_lifecycle": {
+    "exact_external_custody": true,
+    "deterministic_first_fit_relief": true,
+    "exact_reopen": true,
+    "fallible_anchored_scaffold_during_construction": true,
+    "scaffold_demoted_at_verification": true,
+    "exact_incremental_candidate": true,
+    "candidate_effect_binding_and_turnover": true,
+    "candidate_bound_check": true,
+    "delivered_check_binding_and_turnover": true,
+    "pending_results_remain_exact": true,
+    "bounded_section_repair": true,
+    "corrected_section_boundary_transport": true,
+    "external_readiness_actor_visible": false
+  },
+  "first_live_tranche": {
+    "maximum_actor_calls": 12,
+    "maximum_maintenance_calls": 6,
+    "maximum_provider_calls": 18,
+    "maximum_serialized_tokens": 400000,
+    "mandatory_review": true
+  },
+  "review_fields": [
+    "literal actor and maintenance transcripts",
+    "visible exact and semantic state per call",
+    "pressure relief, reopens, and repeat demand",
+    "candidate changes and exact effect uptake",
+    "check currency, repair, and recheck",
+    "artifact quality and readiness",
+    "failure migration"
+  ],
+  "claim_limits": [
+    "Provider-free completion is apparatus evidence only.",
+    "The live causal unit is the full evolving configuration.",
+    "A checkpoint pause is not useful completion.",
+    "No policy change or continuation occurs without review and a new freeze when required."
+  ]
+}

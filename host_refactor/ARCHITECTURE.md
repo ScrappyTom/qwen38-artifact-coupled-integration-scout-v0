@@ -110,6 +110,12 @@ verification state. This preserves the semantic-free host boundary while the
 project studies evidence, semantic residue, exact work, effects, checks,
 repair, and checkpoints as one interaction.
 
+`whole_lifecycle/` is the prospective clean composition. It uses the corrected
+Trellis verification adapter and both exact lifecycle policies from a fresh
+task seed. It owns no new semantic authority: the scaffold remains in the
+interaction layer, while external readiness is a frozen candidate/evaluator
+binding outside the actor prompt.
+
 ## Historical cut line
 
 The existing `reactive_runtime` and historical `tools/run_*` files remain as

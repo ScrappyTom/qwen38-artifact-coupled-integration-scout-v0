@@ -30,6 +30,14 @@ duplicate check body may become an exact reopenable receipt. The authentic
 E103 boundary projects from 21,301 to 20,548 offline tokens while pending
 `RESULT-026` remains exact. This is not yet live behavior evidence.
 
+`whole_lifecycle/` composes those qualified mechanics into the clean E105
+prospective Trellis system. It starts from the original task seed, uses the
+corrected section transport, applies E97 effect and E104 check turnover, and
+freezes twelve-call review checkpoints. Its provider-free fixture completes
+construction, failed check, repair, passing recheck, external readiness, and
+submission across an exact checkpoint. The corresponding live runner remains
+unauthorized.
+
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners
 and sealed experiment outputs remain frozen. New code enters the selected host
@@ -68,6 +76,8 @@ automatic phase inference, loop classification, or model-managed eviction.
   exact replay, and final provider-free qualification.
 - `LIVE_SMOKE_PLAN.md` defines the one-call integrated live qualification and
   its deliberately narrow claim limits.
+- `whole_lifecycle/` contains the E105 prospective system, governance, exact
+  checkpoint resume, external readiness rule, and provider-free qualification.
 
 ## Completion gate
 

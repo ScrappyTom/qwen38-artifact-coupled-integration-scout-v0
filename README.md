@@ -1,5 +1,18 @@
 # Qwen3.8 bounded-work system interaction scouts
 
+Status update, 2026-08-30: E105 freezes a clean prospective whole-lifecycle
+Trellis system rather than repairing or resuming E103. The configuration
+combines exact custody and first-fit relief, temporary anchored scaffolding,
+exact incremental artifacts, corrected section transport, E97 applied-effect
+turnover, E104 delivered-check turnover, current verification, bounded repair,
+and independent readiness. A provider-free exact-checkpoint fixture completes
+in 19 actor and 7 maintenance calls through failed check, repair, passing
+recheck, externally ready adjudication, and submission; all six headings remain
+intact. The first live runner is capped at 12 actor and 6 maintenance calls and
+must stop for review. It is frozen but not GPU-authorized. See
+`TRELLIS_CLEAN_WHOLE_LIFECYCLE_STAGE0.md` and
+`host_refactor/whole_lifecycle/`.
+
 Status update, 2026-08-29: the repaired E99 donor-derived
 verification-lifecycle route is frozen and qualified offline. It begins again
 from the original E96 donor, exposes a readable verification contract aligned

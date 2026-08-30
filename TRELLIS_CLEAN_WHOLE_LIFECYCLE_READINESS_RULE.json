@@ -1,0 +1,17 @@
+{
+  "schema": "trellis-clean-whole-lifecycle-readiness-rule-v0",
+  "task_id": "trellis-heat-continuity-decision-v0",
+  "evaluator_id": "trellis-heat-evaluator-v0",
+  "actor_visible": false,
+  "ready_requires": [
+    "evaluation candidate_sha256 equals the exact current candidate SHA-256",
+    "evaluation passed is true",
+    "mechanical_precheck_passed is true",
+    "blocking_requirements is empty",
+    "every criterion status is pass",
+    "external_readiness_adjudication_required is true"
+  ],
+  "not_ready_if_any_requirement_fails": true,
+  "submission_is_not_readiness_evidence": true,
+  "model_authored_state_is_not_readiness_evidence": true
+}
