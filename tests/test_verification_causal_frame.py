@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from tempfile import TemporaryDirectory
 from pathlib import Path
 
 from reactive_runtime.verification_causal_frame import (
@@ -142,6 +143,47 @@ def test_section_bound_repair_rejects_duplicate_heading_without_mutation() -> No
     assert receipt["code"] == "section_not_unique"
 
 
+def test_section_bound_repair_materializes_safe_successor_boundary() -> None:
+    document = "# Decision\n\n## Alpha\nOld alpha.\n\n## Beta\nOld beta.\n"
+    sections = {row["heading"]: row for row in section_spans(document)}
+    action = {
+        "action": "replace_artifact_section",
+        "candidate_sha256": sha256_text(document),
+        "artifact_sha256": sha256_text(document),
+        "section_heading": "Alpha",
+        "expected_section_sha256": sections["Alpha"]["sha256"],
+        "replacement_section": "## Alpha\n\nNew alpha without a trailing newline.",
+    }
+
+    updated, receipt = apply_bound_section_replacement(document, action)
+
+    assert receipt["status"] == "admitted"
+    assert receipt["boundary_normalized"] is True
+    assert "New alpha without a trailing newline.\n\n## Beta" in updated
+    assert [row["heading"] for row in section_spans(updated)] == ["Alpha", "Beta"]
+
+
+def test_section_bound_repair_rejects_glued_hidden_heading() -> None:
+    document = (
+        "# Decision\n\n## Alpha\nOld alpha.## Beta\nHidden beta body.\n\n"
+        "## Gamma\nVisible gamma.\n"
+    )
+    sections = {row["heading"]: row for row in section_spans(document)}
+    action = {
+        "action": "replace_artifact_section",
+        "candidate_sha256": sha256_text(document),
+        "artifact_sha256": sha256_text(document),
+        "section_heading": "Alpha",
+        "expected_section_sha256": sections["Alpha"]["sha256"],
+        "replacement_section": "## Alpha\n\nReplacement.",
+    }
+
+    updated, receipt = apply_bound_section_replacement(document, action)
+
+    assert updated == document
+    assert receipt["code"] == "section_boundary_invalid"
+
+
 def test_cross_run_audit_passes_and_preserves_claim_limits() -> None:
     assert audit.main() == 0
     result = json.loads(
@@ -168,12 +210,14 @@ def test_cross_run_audit_passes_and_preserves_claim_limits() -> None:
 
 
 def test_provider_free_contract_preflight_passes_without_utility_claim() -> None:
-    assert preflight.main() == 0
-    result = json.loads(
-        (ROOT / "VERIFICATION_CAUSAL_CONTRACT_PREFLIGHT.json").read_text(
-            encoding="utf-8"
-        )
-    )
+    frozen_output = preflight.OUTPUT
+    with TemporaryDirectory(prefix="verification-causal-test-") as temporary:
+        preflight.OUTPUT = Path(temporary) / "PREFLIGHT.json"
+        try:
+            assert preflight.main() == 0
+            result = json.loads(preflight.OUTPUT.read_text(encoding="utf-8"))
+        finally:
+            preflight.OUTPUT = frozen_output
     assert result["passed"] is True
     assert result["new_model_calls"] == 0
     assert result["mechanical_frame"]["initial_tokens"] <= 1400

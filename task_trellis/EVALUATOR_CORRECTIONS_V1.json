@@ -1,0 +1,8 @@
+{
+  "base_evaluator_id": "trellis-heat-evaluator-v0",
+  "corrections": {
+    "T08_currentness.patterns[2]": "independent.{0,100}((authorized|owner).{0,100}(accept|acceptance)|(accept|acceptance).{0,100}(authorized|owner))"
+  },
+  "scope": "prospective_only_not_applied_to_frozen_e99_runs",
+  "schema": "trellis-evaluator-corrections-v1"
+}

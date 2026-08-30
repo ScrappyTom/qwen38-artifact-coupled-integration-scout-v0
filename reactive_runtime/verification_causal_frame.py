@@ -279,6 +279,16 @@ def apply_bound_section_replacement(
             "current_section_sha256": section["sha256"],
         }
 
+    # A prior malformed replacement can glue a later Markdown heading to the
+    # final paragraph of this section.  Such bytes are no longer a safely
+    # isolated section: replacing them would also delete the hidden successor.
+    # Stop instead of compounding the structural corruption.
+    if re.search(r"(?<!^)(?<!\n)## [^\r\n]+", section["text"]):
+        return document, {
+            "status": "rejected",
+            "code": "section_boundary_invalid",
+        }
+
     replacement = str(action["replacement_section"])
     replacement_matches = list(HEADING_RE.finditer(replacement))
     if len(replacement_matches) != 1 or replacement_matches[0].group(1) != section["heading"]:
@@ -286,7 +296,14 @@ def apply_bound_section_replacement(
     if replacement == section["text"]:
         return document, {"status": "rejected", "code": "no_effect"}
 
-    updated = document[: section["start"]] + replacement + document[section["end"] :]
+    # The action supplies one semantic section; the host owns the mechanical
+    # Markdown boundary between that section and its successor.  Canonicalize
+    # only trailing newlines so an otherwise valid replacement cannot glue the
+    # next heading to its last sentence.
+    replacement_body = replacement.rstrip("\r\n")
+    suffix = document[section["end"] :]
+    rendered_replacement = replacement_body + ("\n\n" if suffix else "\n")
+    updated = document[: section["start"]] + rendered_replacement + suffix
     return updated, {
         "status": "admitted",
         "code": None,
@@ -295,5 +312,6 @@ def apply_bound_section_replacement(
         "artifact_sha256_after": sha256_text(updated),
         "section_heading": section["heading"],
         "section_sha256_before": section["sha256"],
-        "section_sha256_after": sha256_text(replacement),
+        "section_sha256_after": sha256_text(rendered_replacement),
+        "boundary_normalized": rendered_replacement != replacement,
     }

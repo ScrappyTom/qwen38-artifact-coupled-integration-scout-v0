@@ -1,0 +1,50 @@
+{
+  "actual": {
+    "actor_calls": 2,
+    "maintenance_calls": 0,
+    "provider_calls": 2,
+    "serialized_tokens": 39865
+  },
+  "apparatus_findings": {
+    "evaluator_t08_word_order_false_negative": true,
+    "section_boundary_corruption": true,
+    "section_replacement_feedback_uptake": true
+  },
+  "authorization": {
+    "actor_calls_max": 6,
+    "maintenance_calls_max": 1,
+    "provider_calls_max": 7,
+    "serialized_tokens_max": 338802
+  },
+  "capacity_stop": {
+    "deficit_tokens": 326,
+    "next_prompt_tokens": 21318,
+    "prompt_allowance": 20992,
+    "remaining_actor_calls": 10,
+    "remaining_serialized_tokens": 298937
+  },
+  "candidate": {
+    "closure_readiness": "not_ready",
+    "corrected_offline_t08_status": "pass",
+    "decision_source_count": 8,
+    "decision_word_count": 871,
+    "frozen_evaluation_passed": false,
+    "sha256": "d3a3d3691a254e8d463d98481977070d3e431180541ca5843a23b4c7d880041f"
+  },
+  "disposition": "capacity_blocked_after_structurally_corrupting_accepted_repair",
+  "freeze_commit": "97d84493ef72d271410ae590f6ead7e86c2b551a",
+  "new_model_calls": 2,
+  "result_hashes": {
+    "checkpoint_sha256": "f0414a331c046d421d0daf79d447a2e1fd047e6f8201055850ce99625772d715",
+    "external_evaluation_sha256": "49eb8c678e33e3c065f9be7e8bcaa23a9df3f02e2529d03196992f10883a5df0",
+    "mechanical_review_sha256": "43186ffae9a41b44bc89382cd70fbf928c16cd41f2ae445236d12ca801cc05a1",
+    "run_seal_sha256": "8d6a9f3274e01a41367ac3fab3c53cdc0e6199c89cc5fb39b53a22644ad9a0da"
+  },
+  "run_id": "2026-08-30-trellis-e99-verification-lifecycle-continuation-v1",
+  "runtime": {
+    "released": true,
+    "sealed": true
+  },
+  "schema": "trellis-e99-verification-lifecycle-continuation-result-v1",
+  "terminal": "capacity_blocked"
+}
