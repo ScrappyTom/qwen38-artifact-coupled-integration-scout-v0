@@ -6,6 +6,7 @@ from typing import Callable, Mapping, Any
 
 from host_refactor.checkpoint import RuntimeCounters
 from host_refactor.effect_lifecycle.policy import CandidateEffectLifecycle
+from host_refactor.effect_lifecycle.verification import VerificationResidencyLifecycle
 from host_refactor.kernel import HostKernel
 from interaction_scout.lifecycle import InteractionOrchestrator, InteractionStep
 
@@ -16,6 +17,7 @@ class EffectLifecycleInteractionOrchestrator(InteractionOrchestrator):
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
         self.effect_lifecycle = CandidateEffectLifecycle()
+        self.verification_lifecycle = VerificationResidencyLifecycle()
 
     def prepare(
         self,
@@ -25,8 +27,9 @@ class EffectLifecycleInteractionOrchestrator(InteractionOrchestrator):
         custody_root: Path | None = None,
     ) -> tuple[HostKernel, RuntimeCounters]:
         reconciled = self.effect_lifecycle.reconcile(kernel)
+        verification = self.verification_lifecycle.reconcile(reconciled.kernel)
         return super().prepare(
-            reconciled.kernel,
+            verification.kernel,
             counters,
             custody_root=custody_root,
         )
@@ -48,7 +51,8 @@ class EffectLifecycleInteractionOrchestrator(InteractionOrchestrator):
         if step.runner_step.kernel.project().terminal is not None:
             return step
         reconciled = self.effect_lifecycle.reconcile(step.runner_step.kernel)
+        verification = self.verification_lifecycle.reconcile(reconciled.kernel)
         return replace(
             step,
-            runner_step=replace(step.runner_step, kernel=reconciled.kernel),
+            runner_step=replace(step.runner_step, kernel=verification.kernel),
         )

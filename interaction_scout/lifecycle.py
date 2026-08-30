@@ -175,13 +175,49 @@ def _demoted_scaffold_state(
     )
 
 
-def _verification_state(adapter: TrellisDomainAdapter) -> ExactStateObject:
+def _verification_state(
+    adapter: TrellisDomainAdapter,
+    kernel: HostKernel,
+) -> ExactStateObject:
     binding = adapter.world.current_check_binding()
+    checks = [
+        row
+        for row in kernel.project().results.values()
+        if row.result.result_kind == "check_observation"
+    ]
+    represented = (
+        None
+        if not checks
+        else max(
+            checks,
+            key=lambda row: (row.result.acquired_call, row.result.result_id),
+        )
+    )
+    check_result_binding = None
+    if represented is not None:
+        exact_projection = represented.result.metadata.get("check_projection")
+        if not isinstance(exact_projection, Mapping):
+            raise ValueError("check observation lacks exact projection metadata")
+        check_result_binding = {
+            "evaluated_candidate_sha256": (
+                represented.result.evaluated_candidate_sha256
+            ),
+            "exact_result_sha256": represented.result.exact_content_sha256,
+            "check_projection_sha256": sha256_bytes(
+                canonical_json_text(exact_projection).encode("utf-8")
+            ),
+            "reopen_action": {
+                "action": "reopen_exact",
+                "result_id": represented.result.result_id,
+            },
+            "result_id": represented.result.result_id,
+        }
     content = canonical_json_text(
         {
             "candidate_sha256": adapter.world.candidate_sha256,
             "candidate_version": adapter.world.candidate_version,
             "check_binding": binding,
+            "check_result_binding": check_result_binding,
             "phase": adapter.world.phase,
             "readiness": "not_adjudicated",
             "schema": "trellis-current-verification-frame-v0",
@@ -195,6 +231,9 @@ def _verification_state(adapter: TrellisDomainAdapter) -> ExactStateObject:
         metadata={
             "candidate_sha256": adapter.world.candidate_sha256,
             "check_currency": None if binding is None else binding.get("currency"),
+            "check_result_id": (
+                None if represented is None else represented.result.result_id
+            ),
             "phase": adapter.world.phase,
         },
     )
@@ -446,7 +485,7 @@ class InteractionOrchestrator:
             self.lifecycle = replace(self.lifecycle, scaffold_active=False)
         return _visible_state(
             kernel,
-            _verification_state(self.adapter),
+            _verification_state(self.adapter, kernel),
             entry_id="INTERACTION-CURRENT-VERIFICATION",
         )
 

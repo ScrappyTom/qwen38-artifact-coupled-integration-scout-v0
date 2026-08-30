@@ -46,3 +46,29 @@ recovery, adversarial failure/lineage/action binding, exact reopen/checkpoint
 round trip, and a provider-free writable lifecycle through current recheck and
 closure. Ruff passes, mypy reports no issues in sixteen host modules, and all
 303 repository tests pass in 422.95 seconds. No GPU or provider call occurred.
+
+## 2026-08-30 — verification-residency reconciliation
+
+The exact E103 pre-terminal packet reconstructed at 21,301 offline tokens; the
+historical live-authoritative count remains 21,318. The packet duplicated the
+latest complete check projection in `RESULT-024` and the replaceable
+`current_verification_frame`, while older `RESULT-021` also remained resident.
+
+The new lifecycle requires exact result, evaluated-candidate, result-content,
+and check-projection bindings in the verification slot before a delivered
+check can become an exact receipt. Applied to E103, it turns over only
+`RESULT-021` and `RESULT-024`, leaves pending `RESULT-026` exact, and projects a
+20,548-token packet. Reopen remains exact.
+
+The historical donor was not fabricated: version-007 candidate bytes are
+uncorrupted, but there is no sealed checkpoint at that state; the next sealed
+checkpoint contains the version-008 heading corruption. A separate
+provider-free full lifecycle reached passing recheck and submission with the
+new turnover policy. Live behavior remains untested. See
+`E104_VERIFICATION_RESIDENCY_RECONCILIATION.md`.
+
+Four focused verification-residency tests and the complete 328-test repository
+suite pass. Ruff passes. Targeted mypy still reaches two pre-existing errors in
+`reactive_runtime/records.py` and additional pre-existing `tools/live_common.py`
+errors when the audit tool's full import graph is included; no new core-module
+type error was identified. No GPU or provider call occurred.

@@ -23,6 +23,13 @@ leave residency only after exact lineage proof, while pending effects remain
 exact and a replaceable mechanical current-effect record remains visible.
 Historical runners and sealed results remain unchanged.
 
+E104 adds a provider-free verification-residency lifecycle. When the current
+verification slot exactly binds a delivered check's result identity, content
+hash, evaluated candidate, projection hash, and complete findings, the
+duplicate check body may become an exact reopenable receipt. The authentic
+E103 boundary projects from 21,301 to 20,548 offline tokens while pending
+`RESULT-026` remains exact. This is not yet live behavior evidence.
+
 This directory is a contained subproject for replacing duplicated host
 lifecycle behavior with one reviewable execution kernel. Historical runners
 and sealed experiment outputs remain frozen. New code enters the selected host

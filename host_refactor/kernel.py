@@ -384,6 +384,53 @@ class HostKernel:
             },
         )
 
+    def externalize_check_observation(
+        self,
+        result_id: str,
+        *,
+        verification_slot_id: str,
+        verification_state_sha256: str,
+        represented_check_result_id: str,
+    ) -> "HostKernel":
+        """Externalize a delivered check after an exact current-state binding.
+
+        This is lifecycle turnover, not semantic pressure relief.  The bound
+        verification slot must retain the complete latest check projection and
+        exact result identity.  Older checks may turn over only after that
+        newer bound check has crossed a completed model invocation.
+        """
+
+        state = self.project()
+        row = self._result(state, result_id)
+        if row.delivery_state is not DeliveryState.DELIVERED_RESIDENT:
+            raise InvalidTransition(
+                f"cannot lifecycle-externalize {result_id} from "
+                f"{row.delivery_state.value}"
+            )
+        if row.result.result_kind != "check_observation":
+            raise InvalidTransition(f"result is not a check observation: {result_id}")
+        slot = state.state_slots.get(verification_slot_id)
+        if slot is None or slot.content_sha256 != verification_state_sha256:
+            raise InvalidTransition("verification-state binding mismatch")
+        represented = self._result(state, represented_check_result_id)
+        if represented.result.result_kind != "check_observation":
+            raise InvalidTransition("represented result is not a check observation")
+        if represented.first_delivered_call is None:
+            raise InvalidTransition("represented check has not crossed a model call")
+        if represented.result.acquired_call < row.result.acquired_call:
+            raise InvalidTransition("older check cannot represent a newer check")
+        self._validate_verification_slot_binding(slot, represented.result)
+        return self._append(
+            EventKind.CHECK_OBSERVATION_EXTERNALIZED,
+            {
+                "reason": "check_projection_bound_in_current_verification_state",
+                "represented_check_result_id": represented_check_result_id,
+                "result_id": result_id,
+                "verification_slot_id": verification_slot_id,
+                "verification_state_sha256": verification_state_sha256,
+            },
+        )
+
     def request_reopen(
         self,
         result_id: str,
@@ -656,6 +703,44 @@ class HostKernel:
                     row,
                     delivery_state=DeliveryState.DELIVERED_EXTERNAL,
                 )
+            elif event.kind is EventKind.CHECK_OBSERVATION_EXTERNALIZED:
+                result_id = str(data["result_id"])
+                row = self._result_map(results, result_id)
+                if row.delivery_state is not DeliveryState.DELIVERED_RESIDENT:
+                    raise InvalidTransition(
+                        f"cannot lifecycle-externalize {result_id} from "
+                        f"{row.delivery_state.value}"
+                    )
+                if row.result.result_kind != "check_observation":
+                    raise InvalidTransition(
+                        f"result is not a check observation: {result_id}"
+                    )
+                slot_id = str(data["verification_slot_id"])
+                try:
+                    slot = state_slots[slot_id]
+                except KeyError as exc:
+                    raise InvalidTransition(
+                        "verification lifecycle lacks bound state slot"
+                    ) from exc
+                if slot.content_sha256 != str(data["verification_state_sha256"]):
+                    raise InvalidTransition("verification-state binding mismatch")
+                represented_id = str(data["represented_check_result_id"])
+                represented = self._result_map(results, represented_id)
+                if represented.result.result_kind != "check_observation":
+                    raise InvalidTransition(
+                        "represented result is not a check observation"
+                    )
+                if represented.first_delivered_call is None:
+                    raise InvalidTransition(
+                        "represented check has not crossed a model call"
+                    )
+                if represented.result.acquired_call < row.result.acquired_call:
+                    raise InvalidTransition("older check cannot represent a newer check")
+                self._validate_verification_slot_binding(slot, represented.result)
+                results[result_id] = replace(
+                    row,
+                    delivery_state=DeliveryState.DELIVERED_EXTERNAL,
+                )
             elif event.kind is EventKind.REOPEN_REQUESTED:
                 result_id = str(data["result_id"])
                 row = self._result_map(results, result_id)
@@ -841,6 +926,42 @@ class HostKernel:
             return None
         value = candidate.metadata.get("candidate_sha256")
         return None if value is None else str(value)
+
+    @staticmethod
+    def _validate_verification_slot_binding(
+        slot: ExactStateObject,
+        represented: ExactResult,
+    ) -> None:
+        import json
+
+        try:
+            content = json.loads(slot.exact_content)
+        except (TypeError, ValueError) as exc:
+            raise InvalidTransition("verification state is not canonical JSON") from exc
+        binding = content.get("check_result_binding")
+        if not isinstance(binding, Mapping):
+            raise InvalidTransition("verification state lacks exact check binding")
+        expected = {
+            "check_projection_sha256": sha256_bytes(
+                canonical_json_text(
+                    represented.metadata.get("check_projection")
+                ).encode("utf-8")
+            ),
+            "evaluated_candidate_sha256": represented.evaluated_candidate_sha256,
+            "exact_result_sha256": represented.exact_content_sha256,
+            "result_id": represented.result_id,
+        }
+        for key, value in expected.items():
+            if binding.get(key) != value:
+                raise InvalidTransition(
+                    f"verification check binding mismatch: {key}"
+                )
+        projection = represented.metadata.get("check_projection")
+        visible = content.get("check_binding")
+        if not isinstance(projection, Mapping) or not isinstance(visible, Mapping):
+            raise InvalidTransition("verification state lacks exact check projection")
+        if any(visible.get(key) != value for key, value in projection.items()):
+            raise InvalidTransition("verification state does not retain exact check projection")
 
     @staticmethod
     def _effect_is_ancestor_of_current(

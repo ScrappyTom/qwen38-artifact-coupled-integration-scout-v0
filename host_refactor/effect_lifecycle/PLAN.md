@@ -34,3 +34,18 @@ This slice does not make a full-document action fit before its pending effect
 has crossed a model call. That one-call transport envelope remains a separate
 action-granularity constraint. The lifecycle bounds already-applied history; it
 does not retroactively shrink a response that has not yet been delivered.
+
+## 2026-08-30 addendum — verification-result residency
+
+E103 exposed a later phase-specific duplication: a delivered check result
+remained exact-resident while the replaceable current-verification state also
+carried its complete candidate-bound findings. The prospective extension is
+strictly narrower than general chronology folding:
+
+- bind the verification state to the exact check result, result hash,
+  evaluated candidate, and check-projection hash;
+- turn over only delivered check observations represented by that state;
+- retain exact receipts and reopen;
+- leave pending effects, rejections, and phase effects unchanged.
+
+The aim is to keep verification actionable, not to make all history small.

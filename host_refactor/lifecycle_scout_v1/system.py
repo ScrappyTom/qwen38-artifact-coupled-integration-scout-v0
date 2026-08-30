@@ -47,6 +47,7 @@ def execution_manifest(repository_root: Path) -> dict[str, Any]:
         root / "RUNTIME_ASSET_MANIFEST.json",
         root / "host_refactor" / "effect_lifecycle" / "orchestrator.py",
         root / "host_refactor" / "effect_lifecycle" / "policy.py",
+        root / "host_refactor" / "effect_lifecycle" / "verification.py",
         root / "host_refactor" / "lifecycle_scout" / "adapter.py",
         root / "host_refactor" / "lifecycle_scout" / "fixtures.py",
         root / "host_refactor" / "lifecycle_scout" / "migration.py",

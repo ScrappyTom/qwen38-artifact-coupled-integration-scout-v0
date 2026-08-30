@@ -92,6 +92,15 @@ invocations, and failed invocations separately.
 Converts frozen E83 custody into common events and supplies provider-free
 acceptance fixtures. It is a migration boundary, not a general task policy.
 
+### `effect_lifecycle/`
+
+Future-only lifecycle projections for exact task work. Candidate mutation
+action/effect pairs can turn over after completed delivery and exact lineage
+proof. Delivered check observations can turn over after their complete
+candidate-bound projection is exactly bound in the replaceable verification
+slot. Both retain append-only custody and exact reopen; neither policy infers
+meaning, progress, or readiness.
+
 ## Whole-system consumer
 
 `interaction_scout` is the first experiment-scoped consumer of this host. It
